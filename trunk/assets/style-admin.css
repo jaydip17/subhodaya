@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	margin:0px;
+}
+.admin-header{
+	padding-top:20px;
+	padding-left:50px;
+	font-size:24px;
+	font-style:oblique;
+	font-weight:bold;
+	background-image:url(imgs/admin-bg.jpg);
+	background-repeat:repeat-x;
+	width:945px;
+	height:95px;
+}
+.star{
+	 color: red;
+}
+#tableadmin {
+border: 1px solid #595959;
+}
+#tableadmin th {
+ background-color: #595959;
+ color: white;
+ padding: 3px;
+}
+#tableadmin tr {
+ border: 1px solid #FEFEFE;
+ padding: 3px;
+}
+#tableadmin td {
+ border: 1px solid #FEFEFE;
+ padding: 2px;
+}

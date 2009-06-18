@@ -1,0 +1,183 @@
+
+body{
+padding:0px;
+margin:0px;
+margin-left:0px;
+margin-right:0px;
+margin-top:0px;
+margin-bottom:0px;
+}
+.topline{
+      background-image:url(imgs/top-line.jpg);
+	  background-repeat:repeat-x;
+	  height:80px;
+}
+
+#buttion{
+background-image:url(imgs/home.jpg);
+background-repeat:no-repeat;
+
+height:23px;
+
+}
+#buttion1{
+background-image:url(imgs/about-buttion.jpg);
+background-repeat:no-repeat;
+height:23px;
+}
+
+#buttion2{
+background-image:url(imgs/cinima.jpg);
+background-repeat:no-repeat;
+height:23px;
+}
+#buttion3{
+background-image:url(imgs/vidio.jpg);
+background-repeat:no-repeat;
+height:23px;
+}
+#buttion4{
+background-image:url(imgs/galleri.jpg);
+background-repeat:no-repeat;
+height:23px;
+}
+#buttion5{
+background-image:url(imgs/gratings.jpg);
+background-repeat:no-repeat;
+height:23px;
+}
+#buttion6{
+background-image:url(imgs/mahila.jpg);
+background-repeat:no-repeat;
+height:23px;
+}
+#buttion7{
+background-image:url(imgs/sahethi.jpg);
+background-repeat:no-repeat;
+height:23px;
+}
+#buttionline{
+      background-image:url(imgs/buttion-line.jpg);
+	  background-repeat:repeat-x;
+	  height:7px;
+	  
+}
+#scrollingnews{
+border-left:2px solid #0a70b8; 
+border-right:2px solid #0a70b8; 
+height:37px;
+}
+#leftline{
+background-image:url(imgs/crow-line.jpg);
+background-repeat:no-repeat;
+height:318px;
+}
+#rightline{
+background-image:url(imgs/crow-line1.jpg);
+background-repeat:no-repeat;
+height:318px;
+}
+#poli{
+      background-image:url(imgs/policioal-buttion.jpg);
+	  background-repeat:repeat-x;
+	  height:26px;
+}
+#cri1{
+      background-image:url(imgs/cridalu.jpg);
+	  background-repeat:repeat-x;
+	  height:26px;
+}
+#cinima2{
+      background-image:url(imgs/cinima-poli.jpg);
+	  background-repeat:repeat-x;
+	  height:26px;
+}
+#vido3{
+      background-image:url(imgs/vidio-poli.jpg);
+	  background-repeat:repeat-x;
+	  height:26px;
+}
+#tock-line-center{
+      background-image:url(imgs/tock-line-center.jpg);
+	  background-repeat:repeat-x;
+	  height:34;
+}
+#tock-botom-center{
+      background-image:url(imgs/tock-botom-center.jpg);
+	  background-repeat:repeat-x;
+	  height:281;
+}
+#add-line{
+      background-image:url(imgs/add-line-center.jpg);
+	  background-repeat:repeat-x;
+	  height:456;
+}
+#gmail-img{
+      background-image:url(imgs/tock-line-center.jpg);
+	  background-repeat:repeat-x;
+	  height:35;
+}
+#center-line{
+      background-image:url(imgs/gmail-seline.jpg);
+	  background-repeat:repeat-x;
+	  height:166;
+}
+#img-senter{
+      background-image:url(imgs/tock-line-center.jpg);
+	  background-repeat:repeat-x;
+	  height:34;
+}
+#center-img{
+      background-image:url(imgs/center-nizio.jpg);
+	  background-repeat:repeat-x;
+	  height:220;
+}
+#senter3{
+      background-image:url(imgs/serter-3.jpg);
+	  background-repeat:repeat-x;
+	  height:31;
+}
+#senterbotom{
+      background-image:url(imgs/senter-botom.jpg);
+	  background-repeat:repeat-x;
+	  height:102;
+}
+#botomtop{
+      background-image:url(imgs/serter-3.jpg);
+	  background-repeat:repeat-x;
+	  height:31;
+}
+#botom-ser{
+      background-image:url(imgs/botom-med.jpg);
+	  background-repeat:repeat-x;
+	  height:109;
+}
+#political{
+      border-left:1px solid #0474b6;
+	  border-right:1px solid #0474b6;
+}
+#poli_td{
+    border-left:1px solid red;  
+}
+#poli_td{
+margin-left:1px;
+}
+#photigalleri{
+    border-left:1px solid #3daff6;
+	border-right:1px solid #3daff6;
+}
+#photocenter{
+    border-left:1px solid #3daff6;
+	border-right:1px solid #3daff6;
+}
+#phogalleri-sr{
+      background-image:url(imgs/poli-inr-ser.png);
+	  background-repeat:repeat-x;
+	  height:160;
+}
+#photog-md{
+     margin-bottom:7px;
+}
+#img-center{
+border-right:0px solid #000099;
+}     

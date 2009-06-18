@@ -16,11 +16,11 @@ class Openwysiwyg_Model extends Model {
 	{
 		if($enable == TRUE)
 		{
-		
 		//$textarea[]= array('textarea' => 'test',
 		//				   'skin'	  => '');
 		$url = base_url()."assets/openwysiwyg/";
-		$links = "<script type=\"text/javascript\" src=\"".$url."scripts/wysiwyg.js\"></script>\n";
+		$links = "<script type=\"text/javascript\">  var base_url='".base_url()."'; </script>";
+		$links .= "<script type=\"text/javascript\" src=\"".$url."scripts/wysiwyg.js\"></script>\n";
 		$links .= "<script type=\"text/javascript\" src=\"".$url."scripts/wysiwyg-settings.js\"></script>\n";
 		
 		$links .="<script type=\"text/javascript\">\n";
@@ -30,30 +30,8 @@ class Openwysiwyg_Model extends Model {
 		else:
 		$links .= "WYSIWYG.attach('".$text['textarea']."');\n";
 		endif;
-		endforeach; 
+		endforeach;
 		$links .= "</script>\n";
-		
-		return $links;
-		}
-	}
-	function setRtf($enable,$textarea=array())
-	{
-		if($enable == 'true')
-		{
-			$url = base_url()."assets/rte/";
-			
-		$links['0'] = "<script type=\"text/javascript\" src=\"".$url."richtext_compressed.js\"></script>\n";
-        $links['1']="<script type=\"text/javascript\">\n";
-        //Usage: initRTE(imagesPath, includesPath, cssFile)
-        $links['1'] .="initRTE(\"".$url."/images/\", \"$url\",\"\");";
-        //-->
-        $links['1'] .="</script>";
-		$links['2']="<script type=\"text/javascript\">\n";
-		//Usage: writeRichText(fieldname, html, width, height, buttons, readOnly)
-       $links['2'] .="writeRichText('description', 'here&#39;s the \"<em>preloaded</em> <b>content</b>\"', 400, 200, true, false);";
-       $links['2'] .= "</script>\n";
-          
-		
 		return $links;
 		}
 	}

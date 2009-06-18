@@ -7,7 +7,7 @@
 <script type="text/javascript" src="<?=base_url();?>assets/js/jquery-min.js"></script>
 <script type="text/javascript" src="<?=base_url();?>assets/js/ddsmoothmenu.js"></script>
 <link rel="stylesheet" href="<?=base_url();?>assets/openwysiwyg/docs/style.css" type="text/css">
-
+<? if(isset($jslinks)): echo $jslinks; endif;?>
 <script type="text/javascript">
 ddsmoothmenu.init({
 	mainmenuid: "smoothmenu1", //menu DIV id
@@ -19,7 +19,6 @@ ddsmoothmenu.init({
 </script>
 <title>Admin</title>
 </head>
-
 <body >
 
 <table width="945" border="0" cellpadding="0" cellspacing="0" align="center" >
@@ -38,13 +37,13 @@ ddsmoothmenu.init({
 </li>
 <li><a href="#">Movies</a>
   <ul>
-  <li><a href="#">Insert</a></li>
+  <li><a href="<?=base_url();?>admin/cinema">Insert</a></li>
   <li><a href="#">Edit/update</a></li>
   </ul>
 </li>
 <li><a href="#">Video</a>
 	<ul>
-  	<li><a href="#">Manage</a></li>
+  	<li><a href="<?=base_url();?>admin/videos">Insert</a></li>
   	<li><a href="#">Add</a></li>
   	</ul>
 </li>

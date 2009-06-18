@@ -14,7 +14,7 @@
 var ddsmoothmenu={
 
 //Specify full URL to down and right arrow images (23 is padding-right added to top level LIs with drop downs):
-arrowimages: {down:['downarrowclass', 'http://localhost/maascreen/assets/js/down.gif', 23], right:['rightarrowclass', 'http://localhost/maascreen/assets/js/right.gif']},
+arrowimages: {down:['downarrowclass', 'http://localhost/subhodaya/assets/js/down.gif', 23], right:['rightarrowclass', 'http://localhost/subhodaya/assets/js/right.gif']},
 
 transition: {overtime:300, outtime:300}, //duration of slide in/ out animation, in milliseconds
 shadow: {enabled:true, offsetx:5, offsety:5},

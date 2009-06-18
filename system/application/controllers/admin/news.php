@@ -18,5 +18,8 @@ class News extends Controller {
 		);
 		$this->load->view('admin/news_view',$data);
 	}
+	function insert(){
+		
+	}
 }
 ?>

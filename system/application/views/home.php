@@ -165,7 +165,7 @@
             <tr>
               <td width="8"><img src="assets/imgs/tock-line.jpg" width="8" height="34" /></td>
               <td  width="337" valign="top" id="tock-line-center" align="left">
-              <img src="assets/imgs/001.jpg" width="21" height="24"  style="padding-top: 5px;"/></td>
+              <img src="<?=base_url(); ?>assets/imgs/001.jpg" width="21" height="24"  style="padding-top: 5px;"/></td>
               <td width="8" align="right"><img src="assets/imgs/tock-line-right.jpg" width="8" height="34" /></td>
             </tr>
           </table>
@@ -257,7 +257,7 @@
                     </tr>
                       <tr>
                         <td  valign="top" id="center-img"><img src="assets/imgs/new1.jpg" width="5" height="214" /></td>
-                        <td width="200" id="center-img" align="left" valign="top">dfhgfjghj</td>
+                        <td width="200" id="center-img" align="left" valign="top">malleswari</td>
                         <td  valign="top" id="center-img"><img src="assets/imgs/new.jpg" width="5" height="214" /></td>
                     </tr>
                   </table>
@@ -284,8 +284,9 @@
          <td width="217" valign="top" align="right"><table width="214"  border="0" align="center" cellpadding="0" cellspacing="0">
          <tr>
              <td width="6" valign="top"><img src="assets/imgs/tock-line.jpg" width="6" height="35" /></td>
-             <td  valign="top" id="img-senter" align="left">
+             <td  id="img-senter" align="left">
                 	<img src="<?=base_url(); ?>assets/imgs/001.jpg" style="margin:4px 0px 0px 0px;"></img>
+                	<span style="font-size: 14px;font-weight: bold;">Envite Friends via Email</span>
              </td>
              <td valign="top"><img src="assets/imgs/tock-line-right.jpg" width="6" height="35" /></td>
          </tr>
@@ -293,7 +294,25 @@
              <td valign="top" id="center-line"><img src="assets/imgs/tock-line-boyom.jpg" width="5" height="166" /></td>
              <td valign="top" width="100%" id="center-line"><table width="100%" border="0" cellpadding="0" cellspacing="0">
          <tr>
-             <td height="165" valign="top">dfhfhg</td>
+             <td height="165" valign="top">
+
+             	<table>
+             		<tr>
+             			<td>1</td>
+             			<td>2</td>
+             		</tr>
+             		<tr>
+             			<td>3</td>
+             			<td>4</td>
+             		</tr>
+             		<tr>
+             			<td colspan='2'>1</td>
+             		</tr>
+             		<tr>
+             			<td colspan='2'>2</td>
+             		</tr>
+             	</table>
+             </td>
          </tr>
        </table>
      </td>

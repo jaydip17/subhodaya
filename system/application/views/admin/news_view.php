@@ -1,5 +1,5 @@
 <?
-echo form_open_multipart(base_url()."admin/film_news/add/") ?>
+echo form_open_multipart(base_url()."admin/news/insert/") ?>
 <center><?
 if(isset($message) && !is_array($message) ) echo($message);?>
 		<? 
@@ -39,8 +39,8 @@ if(isset($message) && !is_array($message) ) echo($message);?>
 		<td align="left"><?=form_checkbox('breaking_news','1') ?></td>
 	</tr>
 	<tr>
-		<td>Insert_Date</td>
-		<td align="left"><?=form_input('int_date') ?></td>
+		<td>Active</td>
+		<td align="left"><?=form_checkbox('active','1') ?></td>
 	</tr>
 	<tr>
 		<td colspan="2" align="right"><?=form_submit('add','Add') ?></td>

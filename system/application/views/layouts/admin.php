@@ -32,7 +32,7 @@ ddsmoothmenu.init({
 <li><a href="#">News</a>
 	<ul>
 		<li><a href="<?=base_url();?>admin/news/">Add News</a></li>
-		<li><a href="#">Edit News</a></li>
+		<li><a href="<?=base_url();?>admin/news/getnews">Edit News</a></li>
 	</ul>
 </li>
 <li><a href="#">Movies</a>
@@ -49,31 +49,31 @@ ddsmoothmenu.init({
 </li>
 <li><a href="#">Greetings</a>
 	<ul>
-		<li><a href="#">Trailors</a></li>
+		<li><a href="<?=base_url();?>admin/greetings">Insert</a></li>
 		<li><a href="#">Edit</a></li>
 	</ul>
 </li>
 <li><a href="#">Mahila</a>
 <ul>
-  <li><a href="#">Add</a></li>
+  <li><a href="<?=base_url();?>admin/mahila">Insert</a></li>
   <li><a href="#">View/Edit</a></li>
  </ul> 
 </li>
 
 <li><a href="#">Sahithi</a>
   <ul>
-  <li><a href="#">Add Categeory</a></li>
+  <li><a href="<?=base_url();?>admin/sahithi">Add Categeory</a></li>
 <li><a href="#">Add Wall Paper Images</a></li>
 <li><a href="#">View/Edit Categeories</a></li>
   </ul>
   </li> 
-<li><a href="#">Flash Video</a>
+<li><a href="#">Gallery</a>
   <ul>
-  <li><a href="#">Add Categeory</a></li>
-<li><a href="#">Add Video</a></li>
-<li><a href="#">View/Edit Videos</a></li>
+  	<li><a href="<?=base_url();?>admin/gallery">Add Categeory</a></li>
+	<li><a href="#">edit</a></li>
+	<li><a href="#">View/Edit Videos</a></li>
   </ul>
-  </li>
+</li>
   <li><a href="#">Other</a>
 <ul>
 	<li> <a href="#">Newsletter's</a> 

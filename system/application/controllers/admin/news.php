@@ -8,6 +8,11 @@ class News extends Controller {
 	}
 	function index(){
 		$message = $this->session->flashdata('message');
+		$details=$this->News_Model->get_newstype();
+		foreach ($details as $res )
+				{
+					$options[$res->id] = $res->news_cat;
+				}
 		$this->load->model('admin/Openwysiwyg_Model');
 		$textarea[]= array('textarea' => 'description',
 						   'skin'	  => 'full');
@@ -17,19 +22,27 @@ class News extends Controller {
 		$data=array(
 							'jslinks'   => $links,
 							'message'	=> $message,
+							'options'   => $options
 		);
 		$this->load->view('admin/news_view',$data);
 	}
 	function insert(){
 		if(!isset($_POST['breaking_news'])){
+			
 			$breaking_news=0;
 		}else{
 			$breaking_news=$_POST['breaking_news'];
 		}
-		$data=array('heading'=>$_POST['heading'],
-					'summery'=>$_POST['summary'],
-				'description'=>$_POST['description'],
-				'breking_news'=>$breaking_news);
+		$type=$this->input->post('type');
+		$heading=$this->input->post('heading');
+		$summery=$this->input->post('summary');
+		$description=$this->input->post('description');
+		$data=array('type'    => $type,
+					'heading' => $heading,
+					'summery' => $summery,
+				'description' => $description,
+				'breking_news'=> $breaking_news
+		);
 		if(!empty($data))
 		{
 		$result=$this->db->insert('news',$data);
@@ -60,7 +73,6 @@ class News extends Controller {
 		}
 			$filename = 'news_img'.$id.'.jpg';
 			$image_path='assets/news/';
-	    	
 	    	$config['image_library'] = 'gd2';
 	        $config['source_image'] = $image_path.$filename;
 			$config['create_thumb'] = TRUE;
@@ -83,5 +95,43 @@ class News extends Controller {
 		$data=array('details'=>$details);
 		$this->load->view('admin/news_edit',$data);
 	}
+	function delete(){
+	$this->load->model('admin/News_Model');
+	$id=$this->uri->segment(4,0);
+	$result=$this->News_Model->delete($id);
+	redirect(base_url()."admin/news/getnews");
+	}
+	function edit(){
+	 $id =$this->uri->segment(4,0);
+    $edit = $this->News_Model->getdetails($id);
+   
+    $message = $this->session->flashdata('message');
+		$this->load->model('admin/Openwysiwyg_Model');
+		$textarea[]= array('textarea' => 'description',
+						   'skin'	  => 'full');
+		$textarea[]= array('textarea' => 'summary',
+						   'skin'	  => 'small');
+		$links = $this->Openwysiwyg_Model->setEditor($enable=TRUE,$textarea);
+		$data=array(
+							'jslinks'   => $links,
+							'message'	=> $message,
+		                    'edit'      =>  $edit
+		);
+    $this->load->view('admin/editnews',$data);
+	}
+  function edit1()
+   {
+   	echo $_POST['id'];
+   	if(!isset($_POST['breaking_news']))
+   	{
+		$breaking=0;
+   	}else{
+   		$breaking=$_POST['breaking_news'];
+   	}
+	  	echo $id=$_POST['id'];
+   	 $this->News_Model->edit1($id,$breaking);
+   	redirect(base_url().'admin/news/getnews');
+   }
+
 }
 ?>

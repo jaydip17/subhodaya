@@ -24,8 +24,7 @@ ddsmoothmenu.init({
 <table width="945" border="0" cellpadding="0" cellspacing="0" align="center" >
 	<tr>
      	<td>
-        <div class="admin-header" >Subhodaya</div>
-        
+        <div class="admin-header" >Subhodaya</div> 
 <div id="smoothmenu1" class="ddsmoothmenu">
 <ul>
 <li><a href="<?=base_url();?>admin/">Home</a></li>

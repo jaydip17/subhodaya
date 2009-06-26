@@ -60,11 +60,8 @@ height:23px;
       background-image:url(imgs/buttion-line.jpg);
 	  background-repeat:repeat-x;
 	  height:7px;
-	  
 }
 #scrollingnews{
-border-left:2px solid #0a70b8; 
-border-right:2px solid #0a70b8; 
 height:37px;
 }
 #leftline{
@@ -101,6 +98,7 @@ height:318px;
       background-image:url(imgs/tock-line-center.jpg);
 	  background-repeat:repeat-x;
 	  height:34;
+	  border-top:1px solid #1D77B3
 }
 #tock-botom-center{
       background-image:url(imgs/tock-botom-center.jpg);
@@ -180,4 +178,9 @@ margin-left:1px;
 }
 #img-center{
 border-right:0px solid #000099;
-}     
+} 
+#mainborder{
+border-left: 2px solid #0A70BB;
+border-bottom:  2px solid #0A70BB;
+border-right:  2px solid #0A70BB;	
+}    

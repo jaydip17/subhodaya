@@ -12,7 +12,14 @@ if(isset($message) && !is_array($message) ) echo($message);?>
 		</center>
 <table align="center">
 	<tr>
-		<td style="font-size: 18px;" colspan='2' align='center'>Film News</td>
+		<td style="font-size: 18px;" colspan='2' align='center'>News</td>
+	</tr>
+	<tr>
+		<td>Select type</td>
+		
+		<td>
+		<?=form_dropdown('type',$options)?></td>
+		
 	</tr>
 	<tr>
 		<td>Heading</td>

@@ -23,7 +23,8 @@ if(isset($message) && !is_array($message) ) echo($message);?>
 	</tr>
 	<tr>
 		<td>Heading</td>
-		<td align="left"><?=form_input('heading') ?></td>
+		<!--<td align="left"><?=form_input('heading') ?></td>-->
+		<td><textarea rows="3" cols="50" name="heading" id="heading"></textarea></td>
 	</tr>
 	<tr>
 		<td>Summery</td>

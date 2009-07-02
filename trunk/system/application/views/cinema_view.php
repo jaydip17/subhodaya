@@ -64,37 +64,80 @@
           </tr>
           <tr>
           	<td valign="top" align="left"  colspan="2">
+  
           		<table width="100%" cellspacing="10" height="500">
           			<tr>
           				<td width="375" style="border: 1px solid #50BCFC;" id="newstable" valign="top" height="235">
-          				<div style="width:100%;" id="news_heading"></div>
+          				<div style="width:100%;" id="news_heading"><span id="newsheading"><?=$cinema_type1['0']->cinema_type?></span></div>
+          				<div>
+          					<ul id="mainnews">
+          					<? foreach ($cinema_type1 as $row): ?>
+          						<li><a href="#"><?=$row->heading?></a></li>
+          					<? endforeach; ?>
+          					</ul>
+          				<div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>news/details/<?=$news_type1['0']->type?>"><?=$more['0']->matter?></a></span></div>
+          				</div>
           				</td>
           				<td style="border: 1px solid #50BCFC;" valign="top" id="newstable" height="235">
-          				<div style="width:100%;" id="news_heading"></div>
+          				<div style="width:100%;" id="news_heading"><span id="newsheading"><?=$cinema_type2['0']->cinema_type?></span></div>
+          				<div>
+          					<ul id="mainnews">
+          					<? foreach ($cinema_type2 as $row): ?>
+          						<li><a href="#"><?=$row->heading?></a></li>
+          					<? endforeach; ?>
+          					</ul>
+          				</div>
           				</td>
           			</tr>
           			<tr>
           				<td width="375" style="border: 1px solid #50BCFC;" valign="top" id="newstable" height="235">
           				<div id="TabbedPanels1" class="TabbedPanels" style="padding-left: 0px;">
 							  <ul class="TabbedPanelsTabGroup">
-							    <li class="TabbedPanelsTab" tabindex="0">Tab 1</li>
-							    <li class="TabbedPanelsTab" tabindex="0">Tab 3</li>
+							    <li class="TabbedPanelsTab" tabindex="0"><span id="newsheading"><?=$cinema_type3['0']->cinema_type?></span></li>
+							    <li class="TabbedPanelsTab" tabindex="0"><span id="newsheading"><?=$cinema_type4['0']->cinema_type?></span></li>
 							  </ul>
 							  <div class="TabbedPanelsContentGroup">
-							    <div class="TabbedPanelsContent">Content 1</div>
-							    <div class="TabbedPanelsContent">Content 3</div>
+							    <div class="TabbedPanelsContent">	
+							   <div>
+          					<ul id="mainnews">
+          					<? foreach ($cinema_type3 as $row): ?>
+          						<li><a href="#"><?=$row->heading?></a></li>
+          					<? endforeach; ?>
+          					</ul>
+          				</div></div>
+							    <div class="TabbedPanelsContent">
+							    	<div>
+          					<ul id="mainnews">
+          					<? foreach ($cinema_type4 as $row): ?>
+          						<li><a href="#"><?=$row->heading?></a></li>
+          					<? endforeach; ?>
+          					</ul>
+          				</div>
+								</div>
 							  </div>
 							</div>
           				</td>
           				<td style="border: 1px solid #50BCFC;" id="newstable" valign="top" height="235">
           				<div id="TabbedPanels2" class="TabbedPanels" style="padding-left: 0px;">
 							  <ul class="TabbedPanelsTabGroup">
-							    <li class="TabbedPanelsTab" tabindex="0">Tab 1</li>
-							    <li class="TabbedPanelsTab" tabindex="0">Tab 3</li>
+							    <li class="TabbedPanelsTab" tabindex="0"><span id="newsheading"><?=$cinema_type5['0']->cinema_type?></span></li>
+							    <li class="TabbedPanelsTab" tabindex="0"><span id="newsheading"><?=$cinema_type6['0']->cinema_type?></span></li>
 							  </ul>
 							  <div class="TabbedPanelsContentGroup">
-							    <div class="TabbedPanelsContent">Content 1</div>
-							    <div class="TabbedPanelsContent">Content 3</div>
+							    <div class="TabbedPanelsContent">	<div>
+          					<ul id="mainnews">
+          					<? foreach ($cinema_type5 as $row): ?>
+          						<li><a href="#"><?=$row->heading?></a></li>
+          					<? endforeach; ?>
+          					</ul>
+          				</div></div>
+							    <div class="TabbedPanelsContent">	<div>
+          					<ul id="mainnews">
+          					<? foreach ($cinema_type6 as $row): ?>
+          						<li><a href="#"><?=$row->heading?></a></li>
+          					<? endforeach; ?>
+          					</ul>
+          				</div></div>
 							  </div>
 							</div>
 <script type="text/javascript">

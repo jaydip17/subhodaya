@@ -217,6 +217,8 @@ text-decoration: none;
 	}
 #newsheading{
 	padding-left: 8px;
+	font-size: 14px;
+	font-weight: bold;
 }
 #changeview{
 padding-left: 160px;
@@ -261,10 +263,10 @@ border:1px solid #9FA0A0;
 #mainnews a:link{
 text-decoration:none;
 color:	#556B2F;
-font-size: 13px;
+font-size: 14px;
 }
 #mainnews a:active{
 text-decoration:none;
 color:	#556B2F;
-font-size: 13px;
+font-size: 14px;
 }

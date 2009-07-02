@@ -1,27 +1,50 @@
-<?=form_open_multipart('admin/cinema/') ?>
-<table>
+<?=form_open_multipart('admin/cinema/insert') ?>
+<center><?
+if(isset($message) && !is_array($message) ) echo($message);?>
+		<? 
+		if(isset($message))
+		if(is_array($message) ) {
+			foreach ($message as $mess){
+				echo $mess['error'];
+			}
+		}?>
+		</center>
+<table align="center">
 	<tr>
-		<th colspan='2' style="font-size: 16px">Cinema</th>
+		<td style="font-size: 18px;" colspan='2' align='center'>Cinema</td>
 	</tr>
 	<tr>
-		<td>Cinema</td>
-		<td><?=form_input();?></td>
+		<td>Select type</td>
+		
+		<td>
+		<?=form_dropdown('type',$options)?></td>
 	</tr>
 	<tr>
-		<td>Trailor</td>
-		<td><?=form_input();?></td>
+		<td>Heading</td>
+		<td><textarea rows="3" cols="50" name="heading" id="heading"></textarea></td>
 	</tr>
 	<tr>
-		<td>Privew Image</td>
-		<td><?=form_upload();?></td>
+		<td>Summery</td>
+		<td style="text-align: left;">
+			<textarea rows="3" cols="50" name="summary" id="summary"></textarea> 
+		</td>
 	</tr>
 	<tr>
-		<td>Preview Image</td>
-		<td><?=form_upload();?></td>
+		<td>Description</td>
+		<td style="text-align: left;">
+			<textarea rows="3" cols="60" id="description" name="description"></textarea> 
+		</td>
+	</tr>
+	<tr>
+		<td>Image</td>
+		<td align="left"><?=form_upload('image') ?></td>
 	</tr>
 	<tr>
 		<td>Active</td>
-		<td><?=form_checkbox();?></td>
+		<td align="left"><?=form_checkbox('active','1') ?></td>
+	</tr>
+	<tr>
+		<td colspan="2" align="right"><?=form_submit('add','Add') ?></td>
 	</tr>
 </table>
 <?=form_close() ?>

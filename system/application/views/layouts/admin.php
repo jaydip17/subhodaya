@@ -37,7 +37,7 @@ ddsmoothmenu.init({
 <li><a href="#">Movies</a>
   <ul>
   <li><a href="<?=base_url();?>admin/cinema">Insert</a></li>
-  <li><a href="#">Edit/update</a></li>
+  <li><a href="<?=base_url();?>admin/cinema/getcinema">Edit News</a></li>
   </ul>
 </li>
 <li><a href="#">Video</a>

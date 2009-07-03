@@ -65,7 +65,7 @@
  * to style this tab container.
  */
 .TabbedPanelsTab {
-	width:80px;
+	width:96px;
 	height:20px;
 	position: relative;
 	top: 1px;
@@ -73,7 +73,7 @@
 	padding: 4px 10px;
 	margin: 0px 1px 0px 0px;
 	font: bold 0.7em sans-serif;
-	background-image: url(../imgs/buttion1.jpg);
+	background-image: url(../imgs/sprytabe2.jpg);
 	background-repeat:no-repeat;
 	list-style: none;
 	border-left: solid 0px #50BCFC;
@@ -91,7 +91,7 @@
  * and exits the container.
  */
 .TabbedPanelsTabHover {
-	background-image: url(../imgs/buttion.jpg);
+	background-image: url(../imgs/sprytabe1.jpg);
 	background-repeat:no-repeat;
 }
 
@@ -107,7 +107,7 @@
  * content panel so that it looks like the tab is part of the content panel.
  */
 .TabbedPanelsTabSelected {
-	background-image: url(../imgs/buttion.jpg);
+	background-image: url(../imgs/sprytabe1.jpg);
 	background-repeat:no-repeat
 	
 }
@@ -118,7 +118,7 @@
  * ring around it, instead of the focus ring around the entire tab.
  */
 .TabbedPanelsTab a {
-	background-image:url(../imgs/buttion.jpg);
+	background-image:url(../imgs/sprytabe1.jpg);
 	text-decoration: none;
 }
 

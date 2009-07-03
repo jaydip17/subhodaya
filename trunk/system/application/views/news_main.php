@@ -91,9 +91,18 @@
           				 <div  id="news_heading"><span id="newsheading"><?=$news_type1['0']->news_cat ?></span></div>
           				 <div >
           				 	<ul id="mainnews">
-          				 	<? foreach ($news_type1 as $row): ?>
+          				 	<? $count=0; foreach ($news_type1 as $row): ?>
           					<li><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>"><?=$row->heading ?></a></li>
-          				 	<? endforeach; ?>
+          				 	<? if($count==8){
+          						break;
+          					}else{
+          						$count++;
+          					}
+          					endforeach; 
+          					if($count==0){
+          						echo 'No data found';
+          					}
+          					?>
           				 </ul>
           				 <div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>news/details/<?=$news_type1['0']->type?>"><?=$more['0']->matter?></a></span></div>
           				 </div>
@@ -102,10 +111,19 @@
           				 <div  id="news_heading"><span id="newsheading"><?=$news_type2['0']->news_cat ?></span></div>
           				 <div>
           				 <ul id="mainnews">
-          				 <? foreach($news_type2 as $row): ?>
+          				 <? $count=0; foreach($news_type2 as $row): ?>
           					<li><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>"><?=$row->heading ?></a></li>
           				
-          				 <? endforeach; ?>
+          				 <? if($count==8){
+          						break;
+          					}else{
+          						$count++;
+          					}
+          					endforeach; 
+          					if($count==0){
+          						echo 'No data found';
+          					}
+          					?>
           				 </ul>
           				 <div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>news/details/<?=$news_type2['0']->type?>"><?=$more['0']->matter?></a></span></div>
           				 </div>
@@ -116,9 +134,18 @@
           				  <div  id="news_heading"><span id="newsheading"><?=$news_type3['0']->news_cat?></span></div>
           				 <div >
           				 <ul id="mainnews">
-          				 <? foreach($news_type3 as $row): ?>
+          				 <? $count=0; foreach($news_type3 as $row): ?>
           					<li><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>"><?=$row->heading ?></a></li>
-          				 <? endforeach; ?>
+          				 <? if($count==8){
+          						break;
+          					}else{
+          						$count++;
+          					}
+          					endforeach; 
+          					if($count==0){
+          						echo 'No data found';
+          					}
+          					?>
           				 </ul>
           				 <div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>news/details/<?=$news_type3['0']->type?>"><?=$more['0']->matter?></a></span></div>
           				 </div>
@@ -129,10 +156,19 @@
           				  </div>
           				 <div>
           				 <ul id="mainnews">
-          				 <? foreach ($news_type4 as $row): ?>
+          				 <? $count=0; foreach ($news_type4 as $row): ?>
           					<li><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>"><?=$row->heading ?></a></li>
           				
-          				 	<? endforeach; ?>
+          				 	<? if($count==8){
+          						break;
+          					}else{
+          						$count++;
+          					}
+          					endforeach; 
+          					if($count==0){
+          						echo 'No data found';
+          					}
+          					?>
           				 </ul>
           				 <div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>news/details/<?=$news_type4['0']->type?>"><?=$more['0']->matter?></a></span></div>
           				 </div>
@@ -144,24 +180,27 @@
           <table width="99%"  border="0" cellpadding="0" cellspacing="0">
         <tr>
           <td width="5" valign="top" id="botomtop"><img src="<?=base_url();?>assets/imgs/senter-1.jpg" width="5" height="31" /></td>
-          <td width="295" valign="top" id="botomtop" align="left"><img src="<?=base_url();?>assets/imgs/001.gif" style="margin:4px 0px 0px 0px;"></img></td>
+          <td width="295" valign="top" id="botomtop" align="left"><!--<img src="<?=base_url();?>assets/imgs/001.gif" style="margin:4px 0px 0px 0px;"></img>-->
+          	<div style="padding-top: 6px;"><span id="newsheading"><?=$news_type5['0']->news_cat?></span></div></td>
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter2.jpg" width="5" height="31" /></td>
           <td width="8">&nbsp; </td>
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter-1.jpg" width="5" height="31" /></td>
-          <td width="295" valign="top" id="botomtop" align="left"><img src="<?=base_url();?>assets/imgs/001.gif" style="margin:4px 0px 0px 0px;"></img></td>
+          <td width="295" valign="top" id="botomtop" align="left"><!--<img src="<?=base_url();?>assets/imgs/001.gif" style="margin:4px 0px 0px 0px;"></img>-->
+          	<div style="padding-top: 6px;"><span id="newsheading"><?=$news_type6['0']->news_cat?></span></div></td>
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter2.jpg" width="5" height="31" /></td>
           <td width="8">&nbsp; </td>
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter-1.jpg" width="5" height="31" /></td>
-          <td width="295" valign="top"  id="botomtop" align="left"><img src="<?=base_url();?>assets/imgs/001.gif" style="margin:4px 0px 0px 0px;"></img></td>
+          <td width="295" valign="top"  id="botomtop" align="left"><!--<img src="<?=base_url();?>assets/imgs/001.gif" style="margin:4px 0px 0px 0px;"></img>-->
+          	<div style="padding-top: 6px;"><span id="newsheading"><?=$news_type4['0']->news_cat?></span></div></td>
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter2.jpg" width="5" height="31" /></td>
         </tr>
         <tr>
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="109" /></td>
-          <td valign="top" id="botom-ser"><img src="<?=base_url();?>assets/imgs/ys-img.jpg"></td>
+          <td valign="top" id="botom-ser"><img src="<?=base_url();?>assets/news/news_img<?=$news_type5['0']->id ?>_thumb.jpg" ></td>
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="109" /></td>
           <td width="8">&nbsp;</td>
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="109" /></td>
-          <td valign="top" id="botom-ser"><img src="<?=base_url();?>assets/imgs/ys-img.jpg"></td>
+          <td valign="top" id="botom-ser"><img src="<?=base_url();?>assets/news/news_img<?=$news_type6['0']->id ?>_thumb.jpg"></td>
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="109" /></td>
           <td width="8">&nbsp;</td>
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="109" /></td>

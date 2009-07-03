@@ -11,10 +11,14 @@ class News extends Controller {
 		$news_type2=$this->News_Model->get_newstype2();
 		$news_type3=$this->News_Model->get_newstype3();
 		$news_type4=$this->News_Model->get_newstype4();
+		$news_type5=$this->News_Model->get_newstype5();
+		$news_type6=$this->News_Model->get_newstype6();
 		$data=array('news_type1'=>$details,
 					'news_type2'=>$news_type2,
 					'news_type3'=>$news_type3,
 					'news_type4'=>$news_type4,
+					'news_type5'=>$news_type5,
+					'news_type6'=>$news_type6,
 					'more'      =>$more
 		);
 		$this->load->view("news_main",$data);

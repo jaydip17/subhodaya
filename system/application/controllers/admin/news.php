@@ -79,8 +79,8 @@ class News extends Controller {
 	        $config['source_image'] = $image_path.$filename;
 			$config['create_thumb'] = TRUE;
 			$config['maintain_ratio'] = TRUE;
-			$config['width'] = 143;
-			$config['height'] = 148;
+			$config['width'] = 120;
+			$config['height'] = 123;
 	    	$this->load->library('image_lib');      
 	    	$this->image_lib->initialize($config);
 	    	if(!$this->image_lib->resize())

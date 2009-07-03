@@ -80,6 +80,22 @@ class News_Model extends Model {
 		$query = $this->db->get_where();
 		return $query->result();
     }
+    function get_newstype5(){
+    	$this->db->select('*');
+    	$this->db->where('type','5');
+		$this->db->from('news_types');
+		$this->db->join('news', 'news.type= news_types.id');
+		$query = $this->db->get_where();
+		return $query->result();
+    }
+    function get_newstype6(){
+    	$this->db->select('*');
+    	$this->db->where('type','6');
+		$this->db->from('news_types');
+		$this->db->join('news', 'news.type= news_types.id');
+		$query = $this->db->get_where();
+		return $query->result();
+    }
     function more_news(){
     	$result=$this->db->get('more');
     	return $result->result();

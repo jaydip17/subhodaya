@@ -44,53 +44,14 @@ class Cinema_Model extends Model {
     		unlink('./assets/cinema/ceni_img'.$item.'_thumb.jpg');
     	}
 	}
-    function get_cinematype1(){
+    function get_cinematype($type=""){
    		$this->db->select('*');
-   		$this->db->where('type','1');
+   		$this->db->where('type',$type);
 		$this->db->from('cinema_cat');
 		$this->db->join('cinema','cinema.type=cinema_cat.id');
 		$details = $this->db->get_where();
     	return $details->result();
     }
-    function get_cinematype2(){
-   		$this->db->select('*');
-   		$this->db->where('type','2');
-		$this->db->from('cinema_cat');
-		$this->db->join('cinema','cinema.type=cinema_cat.id');
-		$details = $this->db->get_where();
-    	return $details->result();
-    }
-    function get_cinematype3(){
-   		$this->db->select('*');
-   		$this->db->where('type','3');
-		$this->db->from('cinema_cat');
-		$this->db->join('cinema','cinema.type=cinema_cat.id');
-		$details = $this->db->get_where();
-    	return $details->result();
-    }
-    function get_cinematype4(){
-   		$this->db->select('*');
-   		$this->db->where('type','4');
-		$this->db->from('cinema_cat');
-		$this->db->join('cinema','cinema.type=cinema_cat.id');
-		$details = $this->db->get_where();
-    	return $details->result();
-    }
-    function get_cinematype5(){
-   		$this->db->select('*');
-   		$this->db->where('type','5');
-		$this->db->from('cinema_cat');
-		$this->db->join('cinema','cinema.type=cinema_cat.id');
-		$details = $this->db->get_where();
-    	return $details->result();
-    }
-    function get_cinematype6(){
-   		$this->db->select('*');
-   		$this->db->where('type','6');
-		$this->db->from('cinema_cat');
-		$this->db->join('cinema','cinema.type=cinema_cat.id');
-		$details = $this->db->get_where();
-    	return $details->result();
-    }
+    
 }
 ?>

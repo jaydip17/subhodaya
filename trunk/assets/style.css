@@ -284,6 +284,10 @@ font-size: 14px;
 #maintable-border{
 	border-bottom: 2px solid #0A70BB;
 	}
+#telugufont{
+font-weight: bold;
+font-size: 14px;
+	}
 /*-------main manu tabs------ */
 #tabs {
 	float:left;
@@ -310,7 +314,7 @@ font-size: 14px;
 
 #tabs a {
 	float:left;
-	width:77px;
+	width:70px;
 	background:url(imgs/left.png) no-repeat left top;
 	margin:0;
 	padding:0 0 0 6px;
@@ -342,3 +346,4 @@ font-size: 14px;
 #tabs a:hover span{
 	background-position:100% -42px;
 	}
+

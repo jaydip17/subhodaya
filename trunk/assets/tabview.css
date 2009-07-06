@@ -164,7 +164,9 @@ border-width:1px 1px 0px 1px;
 color:#000;
 position:relative;
 text-decoration:none;
-width:82px
+width:82px;
+font-weight: bold;
+
 }
 .yui-skin-sam .yui-navset .yui-nav a em,
 .yui-skin-sam .yui-navset .yui-navset-top .yui-nav a em
@@ -186,7 +188,8 @@ width: 50px;
 .yui-skin-sam .yui-navset .yui-nav .selected a:hover
 {
 background:#2647a0 url(sprite.png) repeat-x left -1400px;
-color:#fff;
+color:#000;
+font-weight: bold;
 }
 .yui-skin-sam .yui-navset .yui-nav a:hover,
 .yui-skin-sam .yui-navset .yui-nav a:focus{

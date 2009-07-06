@@ -69,7 +69,7 @@
           			<tr>
           				<td width="375" style="border: 1px solid #50BCFC;" id="newstable" valign="top" height="235">
           				<div style="width:100%;" id="news_heading"><span id="newsheading"><?=$cinema_type1['0']->cinema_type?></span></div>
-          				<img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type1['0']->id?>_thumb.jpg" style="float: left;padding:3px 20px 3px 3px;"></img>
+          				<a href="#"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type1['0']->id?>_thumb.jpg" style="float: left;padding:3px 20px 3px 3px; border:0px;"></img></a>
           					<ul id="mainnews">
           					<? $count=0; foreach ($cinema_type1 as $row): ?>
           						<li><a href="#"><?=$row->heading?></a></li>
@@ -88,7 +88,7 @@
           				</td>
           				<td style="border: 1px solid #50BCFC;" valign="top" id="newstable" height="235">
           				<div style="width:100%;" id="news_heading"><span id="newsheading"><?=$cinema_type2['0']->cinema_type?></span></div>
-          				<img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type2['0']->id?>_thumb.jpg" style="float: left;padding:4px 20px 3px 3px;"></img>
+          				<a href="#"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type2['0']->id?>_thumb.jpg" style="float: left;padding:4px 20px 3px 3px;border: 0px;"></img></a>
           					<ul id="mainnews">
           					<? $count=0; foreach ($cinema_type2 as $row): ?>
           						<li><a href="#"><?=$row->heading?></a></li>
@@ -115,7 +115,7 @@
 							  </ul>
 							  <div class="TabbedPanelsContentGroup">
 							    <div class="TabbedPanelsContent">	
-							  <img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type3['0']->id?>_thumb.jpg" style="float: left;padding:4px 20px 3px 3px;"></img>
+							  <a href="#"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type3['0']->id?>_thumb.jpg" style="float: left;padding:4px 20px 3px 3px;border:0px;"></img></a>
           					<ul id="mainnews">
           					<? $count=0; foreach ($cinema_type3 as $row): ?>
           						<li><a href="#"><?=$row->heading?></a></li>
@@ -133,7 +133,7 @@
           					<div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>cinema/details/<?=$cinema_type3['0']->type?>"><?=$more['0']->matter?></a></span></div>
           				</div>
 							    <div class="TabbedPanelsContent">
-							   <img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type4['0']->id?>_thumb.jpg" style="float: left;padding:4px 20px 3px 3px;"></img> 
+							   <a href="#"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type4['0']->id?>_thumb.jpg" style="float: left;padding:4px 20px 3px 3px;border: 0px;"></img></a>
           					<ul id="mainnews">
           					<? $count=0; foreach ($cinema_type4 as $row): ?>
           						<li><a href="#"><?=$row->heading?></a></li>
@@ -161,7 +161,7 @@
 							  </ul>
 							  <div class="TabbedPanelsContentGroup">
 							    <div class="TabbedPanelsContent">
-							    <img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type5['0']->id?>_thumb.jpg" style="float: left;padding:4px 20px 3px 3px"></img>	
+							    <a href="#"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type5['0']->id?>_thumb.jpg" style="float: left;padding:4px 20px 3px 3px; border: 0px;"></img></a>
           					<ul id="mainnews">
           					<? $count=0; foreach ($cinema_type5 as $row): ?>
           						<li><a href="#"><?=$row->heading?></a></li>
@@ -177,7 +177,7 @@
           					<div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>cinema/details/<?=$cinema_type5['0']->type?>"><?=$more['0']->matter?></a></span></div>
           				</div>
 							 <div class="TabbedPanelsContent">
-									<img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type6['0']->id?>_thumb.jpg" style="float: left;padding:3px 20px 3px 3px;"></img>
+									<a href="#"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type6['0']->id?>_thumb.jpg" style="float: left;padding:3px 20px 3px 3px;border: 0px;"></img></a>
 				          					<ul id="mainnews">
 				          					<? $count=0; foreach ($cinema_type6 as $row): ?>
 				          						<li><a href="#"><?=$row->heading?></a></li>

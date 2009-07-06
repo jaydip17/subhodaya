@@ -152,7 +152,7 @@
           				</td>
           				<td  id="newstable" valign="top" >
           				  <div  id="news_heading">
-          				  	<span id="newsheading"><?=$news_type4['0']->news_cat?></span>
+          				  	<span id="newsheading" ><?=$news_type4['0']->news_cat?></span>
           				  </div>
           				 <div>
           				 <ul id="mainnews">
@@ -196,11 +196,26 @@
         </tr>
         <tr>
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="109" /></td>
-          <td valign="top" id="botom-ser"><img src="<?=base_url();?>assets/news/news_img<?=$news_type5['0']->id ?>_thumb.jpg" ></td>
+          <td valign="top" id="botom-ser">
+          	<!--<a href="#"><img src="<?=base_url();?>assets/news/news_img<?=$news_type5['0']->id ?>_thumb.jpg" style="padding: 3px 3px 3px 3px; border: 0px; height: 100px; width: 90px;"></a>
+          	--><ul id="mainnews">
+          		<? foreach ($news_type5 as $row): ?>
+          		<li><a href="#"><?=$row->heading ?></a></li>
+          		<? endforeach; ?>
+          	</ul>
+          </td>
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="109" /></td>
           <td width="8">&nbsp;</td>
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="109" /></td>
-          <td valign="top" id="botom-ser"><img src="<?=base_url();?>assets/news/news_img<?=$news_type6['0']->id ?>_thumb.jpg"></td>
+          <td valign="top" id="botom-ser">
+          <div>
+          	<ul id="mainnews">
+          	<? foreach ($news_type6 as $type): ?>
+          		<li><a href=""><?=$type->heading ?></a></li>
+          	<? endforeach; ?>
+          	</ul>
+          </div>
+          </td>
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="109" /></td>
           <td width="8">&nbsp;</td>
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="109" /></td>

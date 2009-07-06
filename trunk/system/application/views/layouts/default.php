@@ -14,6 +14,14 @@
 <!-- tabs -->
 <script src="<?=base_url();?>assets/SpryAssets/SpryTabbedPanels.js" type="text/javascript"></script>
 <link href="<?=base_url();?>assets/SpryAssets/SpryTabbedPanels.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+
+/*Credits: Dynamic Drive CSS Library */
+/*URL: http://www.dynamicdrive.com/style/ */
+
+
+
+</style>
 </head>
 <body>
 
@@ -24,39 +32,30 @@
         <td width="936" valign="top" class="topline"></td>
       </tr>
 </table>
-
-      <table width="95%"  border="0" cellpadding="0" cellspacing="0">
+      <table width="96%"  border="0" align="center" cellpadding="0" cellspacing="0" >
         <tr>
-          <td width="252" rowspan="2" align="center"  ><img src="<?=base_url();?>assets/imgs/logo.jpg" width="252" height="60" /></td>
-          <td width="84" height="32" valign="bottom"></td>
-          <td width="85" valign="bottom"></td>
-          <td valign="top">&nbsp;</td>
-          <td valign="top">&nbsp;</td>
-          <td valign="top">&nbsp;</td>
-          <td valign="top">&nbsp;</td>
-          <td valign="top">&nbsp;</td>
-          <td valign="top">&nbsp;</td>
-        </tr>
-        <tr>
-        
-          <td width="85" valign="bottom" id="buttion"></td>
-          <td width="87" valign="bottom" id="buttion1"></td>
-          <td width="87" valign="bottom" id="buttion2"></td>
-          <td width="87" valign="bottom" id="buttion3"></td>
-          <td width="86" valign="bottom" id="buttion4"></td>
-          <td width="86" valign="bottom" id="buttion5"></td>
-          <td width="87" valign="bottom" id="buttion6"></td>
-          <td width="87" valign="bottom" id="buttion6"></td>
-        </tr>
-      </table>
-      <table width="96%"  border="0" align="center" cellpadding="0" cellspacing="0" style="border: 2px solid #0A70BB;" >
-        <tr>
-          <td width="100%" valign="top" id="buttionline" align="center"></td>
+          <td  height="0px" style="padding-bottom: 0px;">
+          <div id="tabs" style="padding-top:0px;">
+          <img src="<?=base_url();?>assets/imgs/logo.jpg" style="padding: 0px 20px 0px 5px;float: left;"></img>
+			  <ul style="padding-top: 35px;">
+			    <li></li>
+			    <li id="maintab"><a href="#"><span><?=$more['2']->matter?></span></a></li>
+			    <li><a href="#"><span><?=$more['3']->matter?></span></a></li>
+			    <li><a href="#"><span><?=$more['4']->matter?></span></a></li>
+			    <li><a href="#"><span><?=$more['5']->matter?></span></a></li>
+			    <li><a href="#"><span><?=$more['6']->matter?></span></a></li>
+			    <li><a href="#"><span><?=$more['7']->matter?></span></a></li>
+			    <li><a href="#"><span><?=$more['8']->matter?></span></a></li>
+			    <li><a href="#"><span><?=$more['9']->matter?></span></a></li>
+			  </ul>
+			</div>
+          </td>
         </tr>
           <tr>
-          <td id="scrollingnews" ></td>
+          <td id="scrollingnews" style="border-left: 2px solid #0A70BB;
+border-right: 2px solid #0A70BB;"></td>
         </tr>
-     <tr><td width="100%"  align="center">
+     <tr><td width="100%"  align="center" style="border: 2px solid #0A70BB;border-top: 0px solid #0A70BB">
 {yield}
       
  </table>

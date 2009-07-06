@@ -48,49 +48,9 @@ class News_Model extends Model {
     	$result=$this->db->get('news_types');
     	return $result->result();
     }
-    function get_newstype1(){
+    function get_newstype1($type){
     	$this->db->select('*');
-    	$this->db->where('type','1');
-		$this->db->from('news_types');
-		$this->db->join('news', 'news.type= news_types.id');
-		$query = $this->db->get_where();
-		return $query->result();
-    }
-    function get_newstype2(){
-    	$this->db->select('*');
-    	$this->db->where('type','2');
-		$this->db->from('news_types');
-		$this->db->join('news', 'news.type= news_types.id');
-		$query = $this->db->get_where();
-		return $query->result();
-    }
-    function get_newstype3(){
-    	$this->db->select('*');
-    	$this->db->where('type','3');
-		$this->db->from('news_types');
-		$this->db->join('news', 'news.type= news_types.id');
-		$query = $this->db->get_where();
-		return $query->result();
-    }
-    function get_newstype4(){
-    	$this->db->select('*');
-    	$this->db->where('type','4');
-		$this->db->from('news_types');
-		$this->db->join('news', 'news.type= news_types.id');
-		$query = $this->db->get_where();
-		return $query->result();
-    }
-    function get_newstype5(){
-    	$this->db->select('*');
-    	$this->db->where('type','5');
-		$this->db->from('news_types');
-		$this->db->join('news', 'news.type= news_types.id');
-		$query = $this->db->get_where();
-		return $query->result();
-    }
-    function get_newstype6(){
-    	$this->db->select('*');
-    	$this->db->where('type','6');
+    	$this->db->where('type',$type);
 		$this->db->from('news_types');
 		$this->db->join('news', 'news.type= news_types.id');
 		$query = $this->db->get_where();
@@ -101,13 +61,11 @@ class News_Model extends Model {
     	return $result->result();
     }
     function get_news($type){
-    
  		$this->db->select('*');
     	$this->db->where('type',$type);
 		$this->db->from('news_types');
 		$this->db->join('news', 'news.type= news_types.id');
 		$query = $this->db->get_where();
-		
 			return $query->result();
 		
 		

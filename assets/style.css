@@ -61,6 +61,7 @@ height:23px;
 }
 #scrollingnews{
 height:37px;
+
 }
 #leftline{
 background-image:url(imgs/crow-line.jpg);
@@ -262,11 +263,82 @@ border:1px solid #9FA0A0;
 }
 #mainnews a:link{
 text-decoration:none;
-color:	#556B2F;
+color:	#000000;
 font-size: 14px;
 }
 #mainnews a:active{
 text-decoration:none;
-color:	#556B2F;
+color:	#000000;
 font-size: 14px;
 }
+#mainnews a:visited{
+text-decoration:none;
+color:	#000000;
+font-size: 14px;
+}
+#mainnews a:hover{
+text-decoration:none;
+color:	red;
+font-size: 14px;
+}
+#maintable-border{
+	border-bottom: 2px solid #0A70BB;
+	}
+/*-------main manu tabs------ */
+#tabs {
+	float:left;
+	width:100%;
+	font-size:93%;
+	line-height:normal;
+	border-bottom:7px solid #0772b9;
+	margin-bottom:0em; /*margin between menu and rest of page*/
+	overflow:hidden;
+	}
+
+#tabs ul {
+	margin:0;
+	padding:10px 10px 0px 253px;
+	list-style:none;
+	
+	}
+
+#tabs li {
+	display:inline;
+	margin:0;
+	padding:0;
+	}
+
+#tabs a {
+	float:left;
+	width:77px;
+	background:url(imgs/left.png) no-repeat left top;
+	margin:0;
+	padding:0 0 0 6px;
+	text-decoration:none;
+	}
+
+
+#tabs a span {
+	float:1;
+	font-size:17px;
+	height:21px;
+	display:block;
+	background:url(imgs/right.png) no-repeat right top;
+	padding:6px 15px 4px 12px;
+	margin-right:0px;
+	color:#FFF;
+	font-weight: bolder;
+	}
+
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+#tabs a span {float:none;}
+
+/* End IE5-Mac hack */
+#tabs a:hover span {
+	}
+#tabs a:hover{
+	background-position:0% -42px;
+	}
+#tabs a:hover span{
+	background-position:100% -42px;
+	}

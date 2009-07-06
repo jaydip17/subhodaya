@@ -39,14 +39,14 @@
           <img src="<?=base_url();?>assets/imgs/logo.jpg" style="padding: 0px 20px 0px 5px;float: left;"></img>
 			  <ul style="padding-top: 35px;">
 			    <li></li>
-			    <li id="maintab"><a href="#"><span><?=$more['2']->matter?></span></a></li>
-			    <li><a href="#"><span><?=$more['3']->matter?></span></a></li>
-			    <li><a href="#"><span><?=$more['4']->matter?></span></a></li>
-			    <li><a href="#"><span><?=$more['5']->matter?></span></a></li>
-			    <li><a href="#"><span><?=$more['6']->matter?></span></a></li>
-			    <li><a href="#"><span><?=$more['7']->matter?></span></a></li>
-			    <li><a href="#"><span><?=$more['8']->matter?></span></a></li>
-			    <li><a href="#"><span><?=$more['9']->matter?></span></a></li>
+			    <li><a href="<?=base_url();?>"><span><?=$more['2']->matter?></span></a></li>
+			    <li><a href="<?=base_url();?>news/"><span><?=$more['3']->matter?></span></a></li>
+			    <li><a href="<?=base_url();?>cinema"><span><?=$more['4']->matter?></span></a></li>
+			    <li><a href="<?=base_url();?>"><span><?=$more['5']->matter?></span></a></li>
+			    <li><a href="<?=base_url();?>"><span><?=$more['6']->matter?></span></a></li>
+			    <li><a href="<?=base_url();?>"><span><?=$more['7']->matter?></span></a></li>
+			    <li><a href="<?=base_url();?>"><span><?=$more['8']->matter?></span></a></li>
+			    <li><a href="<?=base_url();?>"><span><?=$more['9']->matter?></span></a></li>
 			  </ul>
 			</div>
           </td>

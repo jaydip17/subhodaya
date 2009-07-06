@@ -1,3 +1,4 @@
+
 <table width="99%"  border="0" cellpadding="0" cellspacing="0">
         <tr>
           <td width="350" valign="top" height="329"><table width="100%" border="0" cellpadding="0" cellspacing="0">
@@ -14,10 +15,10 @@
                           <td width="100%" height="310" valign="top" align="left" class=" yui-skin-sam" >
                           	<div id="demo" class="yui-navset" style="color: #EDF5FF;">
 	    						<ul class="yui-nav">
-							        <li class="selected"><a href="#tab1"><em>Politics</em></a></li>
-							        <li><a href="#tab2"><em>Games</em></a></li>
-							        <li><a href="#tab3"><em>cinemas</em></a></li>
-									<li><a href="#tab3"><em>videos</em></a></li>
+							        <li class="selected"><a href="#tab1"><em style="padding: 5px 2px 0px 4px;"><span id="telugufont"><?=$more['10']->matter ?></span></em></a></li>
+							        <li><a href="#tab2"><em style="padding:5px 5px 0px 25px;"><span id="telugufont"><?=$more['11']->matter ?></span></em></a></li>
+							        <li><a href="#tab3"><em style="padding:5px 5px 0px 20px;"><span id="telugufont"><?=$more['4']->matter ?></span></em></a></li>
+									<li><a href="#tab3"><em style="padding:5px 5px 0px 25px;"><span id="telugufont"><?=$more['5']->matter ?></span></em></a></li>
 	    						</ul>            
     							<div class="yui-content">
 							        <div id="tab1"><p><img src="<?=base_url();?>assets/imgs/move-img4.jpg" align="top"></img>
@@ -86,8 +87,8 @@
           <td width="0" valign="top" style="margin-left:5px;"><table width="350" align="center" border="0" cellpadding="0" cellspacing="0">
             <tr>
               <td width="10"><img src="<?=base_url();?>assets/imgs/tock-line.jpg" width="10" height="34" style="border-left:1px solid #1D77B3; border-top:1px solid #1D77B3;"/></td>
-              <td  width="337" valign="top" id="tock-line-center" align="left">
-              <img src="<?=base_url(); ?>assets/imgs/001.jpg" width="21" height="24"  style="padding-top: 5px;"/></td>
+              <td  width="337" valign="top" id="tock-line-center" align="left" >
+              <img src="<?=base_url(); ?>assets/imgs/001.jpg" width="21" height="24" align="middle" style="padding-top: 5px;"/><span id="telugufont"><?=$more['12']->matter ?></span></td>
               <td width="8" align="right"><img src="<?=base_url();?>assets/imgs/tock-line-right.jpg" width="8" height="34" style="border-right:1px solid #1D77B3; border-top:1px solid #1D77B3;"/></td>
             </tr>
           </table>
@@ -137,18 +138,16 @@
                     <tr><td valign="bottom" class=" yui-skin-sam" align="left">
                       	<div id="demo1" class="yui-navset" style="color: #EDF5FF;">
 	    						<ul class="yui-nav">
-							        <li style="text-align: center;"><a href="#tab1"><em>Politics</em></a></li>
-							        <li class="selected" style="text-align: center;"><a href="#tab2"><em>Games</em></a></li>
-							        <li style="text-align: center;"><a href="#tab3"><em>cinemas</em></a></li>
-									<li style="text-align: center;"><a href="#tab3"><em>videos</em></a></li>
-									<li style="text-align: center;"><a href="#tab3"><em>TabThreesddgfdf</em></a></li>
+							        <li class="selected" style="text-align: center;"><a href="#tab1"><em style="width: 80px;">Politics</em></a></li>
+							        <li style="text-align: center;"><a href="#tab2"><em style="width: 80px;"><span id="telugufont"><?=$more['13']->matter ?></span></em></a></li>
+							        <li style="text-align: center;"><a href="#tab3"><em style="width: 80px;"><span id="telugufont"><?=$more['14']->matter ?></span></em></a></li>
+									<li style="text-align: center;"><a href="#tab3"><em style="width: 80px;"><span id="telugufont"><?=$more['15']->matter ?></span></em></a></li>
 	    						</ul>            
     							<div class="yui-content" style="height: 150px;text-align: center;">
 							        <div id="tab1"><p>Tab four Content</p></div>
 							        <div id="tab2"><p>Tab Two ContentTab One ContentTab One Content</p></div>
 							        <div id="tab3"><p>Tab Three Content</p></div>
 									<div id="tab3"><p>Tab four Content</p></div>
-									<div id="tab3"><p>Tab five Content</p></div>
     							</div>
 <script>
 (function() {
@@ -189,13 +188,16 @@
                       <tr>
                         <td width="6"  valign="top" id="img-senter"><img src="<?=base_url();?>assets/imgs/tock-line.jpg" width="7" height="34" /></td>
                         <td width="200" valign="bottom" id="img-senter" align="left" style="margin-bottom: 10px;">
-                        	<img src="<?=base_url();?>assets/imgs/001.jpg" style="margin:0px 0px 5px 0px;"></img>
+                        	<img src="<?=base_url();?>assets/imgs/001.jpg" style="margin:0px 0px 5px 0px;" align="middle"><span id="telugufont"><?=$cinema_type2['0']->cinema_type ?></span></img>
                         </td>
                         <td width="6" valign="top"><img src="<?=base_url();?>assets/imgs/tock-line-right.jpg" width="6" height="34" /></td>
              		 </tr>
                       <tr>
                         <td height="214"  valign="top" id="center-img"><img src="<?=base_url();?>assets/imgs/new1.jpg" width="5" height="214" /></td>
-                        <td width="200" id="center-img" align="left" valign="top" ><img src="<?=base_url();?>assets/imgs/cini-img.jpg" style="margin: 5px 0px 0px 0px;"></img></td>
+                        <td width="200" id="center-img" align="left" valign="top" >
+                        <img src="<?=base_url();?>assets/cinema/ceni_img1_thumb.jpg" style="float: left;padding: 2px 8px 1px 2px;"></img>
+                        <?=$cinema_type2['0']->summary ?><a href="#"><span id="news-more"><?=$more['1']->matter ?></span></a>
+                        </td>
                          <td height="214"  valign="top" id="center-img"><img src="<?=base_url();?>assets/imgs/new.jpg" width="5" height="214" /></td>
                     </tr>
                   </table>
@@ -207,9 +209,9 @@
          <table width="210"  border="0" align="center" cellpadding="0" cellspacing="0" >
          <tr>
              <td width="6" valign="top"><img src="<?=base_url();?>assets/imgs/tock-line.jpg" width="6" height="35" /></td>
-             <td  id="img-senter" align="left">
-                	<img src="<?=base_url(); ?>assets/imgs/001.jpg" style="margin:4px 0px 0px 0px;"></img>
-                	<span style="font-size: 14px;font-weight: bold;">Envite Friends via Email</span>
+             <td  id="img-senter" align="left" valign="middle">
+                	<img src="<?=base_url(); ?>assets/imgs/001.jpg" style="margin:1px 0px 0px 0px;" align="middle"></img>
+                	<span style="font-size: 14px;font-weight: bold;">jhgj</span>
              </td>
              <td valign="top"><img src="<?=base_url();?>assets/imgs/tock-line-right.jpg" width="6" height="35" /></td>
          </tr>
@@ -244,7 +246,7 @@
     	<table width="217" border="0" cellpadding="0" cellspacing="0" style="margin-top:6px;">
         	<tr>
                 <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter-1.jpg" width="5" height="31" /></td>
-                <td width="208" valign="top" id="senter3" align="left"><img src="<?=base_url();?>assets/imgs/001.gif" style="margin:4px 0px 0px 0px;"></img></td>
+                <td width="208" valign="top" id="senter3" align="left"><img src="<?=base_url();?>assets/imgs/001.gif" style="margin:3px 0px 0px 0px;" align="middle"></img><span style="font-weight: bold;font-size: 14px;"><?=$more['16']->matter ?></span></td>
                 <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter2.jpg" width="5" height="31" /></td>
               </tr>
               <tr>
@@ -261,15 +263,15 @@
       <table width="99%"  border="0" cellpadding="0" cellspacing="0">
         <tr>
           <td width="5" valign="top" id="botomtop"><img src="<?=base_url();?>assets/imgs/senter-1.jpg" width="5" height="31" /></td>
-          <td width="295" valign="top" id="botomtop" align="left"><img src="<?=base_url();?>assets/imgs/001.gif" style="margin:4px 0px 0px 0px;"></img></td>
+          <td width="295" valign="top" id="botomtop" align="left"><img src="<?=base_url();?>assets/imgs/001.gif" style="margin:4px 0px 0px 0px;" align="middle"></img><span id="telugufont"><?=$more['5']->matter ?>|<?=$more['7']->matter ?></span></td>
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter2.jpg" width="5" height="31" /></td>
           <td width="8">&nbsp; </td>
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter-1.jpg" width="5" height="31" /></td>
-          <td width="295" valign="top" id="botomtop" align="left"><img src="<?=base_url();?>assets/imgs/001.gif" style="margin:4px 0px 0px 0px;"></img></td>
+          <td width="295" valign="top" id="botomtop" align="left"><img src="<?=base_url();?>assets/imgs/001.gif" style="margin:4px 0px 0px 0px;" align="middle"></img><span id="telugufont"><?=$more['8']->matter ?>|<?=$more['9']->matter ?></span></td>
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter2.jpg" width="5" height="31" /></td>
           <td width="8">&nbsp; </td>
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter-1.jpg" width="5" height="31" /></td>
-          <td width="295" valign="top"  id="botomtop" align="left"><img src="<?=base_url();?>assets/imgs/001.gif" style="margin:4px 0px 0px 0px;"></img></td>
+          <td width="295" valign="top"  id="botomtop" align="left"><img src="<?=base_url();?>assets/imgs/001.gif" style="margin:4px 0px 0px 0px;" align="middle"></img><span id="telugufont">sdfgf</span></td>
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter2.jpg" width="5" height="31" /></td>
         </tr>
         <tr>

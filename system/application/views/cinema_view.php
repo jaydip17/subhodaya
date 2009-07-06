@@ -29,7 +29,7 @@
      <td width="185" align="center" valign="top" rowspan="3">
 		<table width="100%" style="border:1px solid #50BCFC;">
 			<tr>
-				<td style="border:1px solid #50BCFC;height: 25px;" id="news_heading">Latest Gallery</td>
+				<td style="border:1px solid #50BCFC;height: 25px;" id="news_heading" align="center"><span id="telugufont"><?=$more['17']->matter ?></span></td>
 			</tr>
 			<tr>
 				<td align="center">
@@ -212,10 +212,10 @@ var TabbedPanels2 = new Spry.Widget.TabbedPanels("TabbedPanels2");
          <div class=" yui-skin-sam" style="width: 470px; border: 1px solid #50BCFC; height: 190px" >
                       	<div id="demo1" class="yui-navset" style="color: #EDF5FF;">
 	    						<ul class="yui-nav">
-							        <li style="text-align: center;"><a href="#tab1"><em>PoliticsPolitics</em></a></li>
-							        <li class="selected" style="text-align: center;"><a href="#tab2"><em>Games</em></a></li>
-							        <li style="text-align: center;"><a href="#tab3"><em>cinemas</em></a></li>
-									<li style="text-align: center;"><a href="#tab3"><em>videos</em></a></li>
+							       <li class="selected" style="text-align: center;"><a href="#tab1"><em style="width: 80px;">Politics</em></a></li>
+							        <li style="text-align: center;"><a href="#tab2"><em style="width: 80px;"><span id="telugufont"><?=$more['13']->matter ?></span></em></a></li>
+							        <li style="text-align: center;"><a href="#tab3"><em style="width: 80px;"><span id="telugufont"><?=$more['14']->matter ?></span></em></a></li>
+									<li style="text-align: center;"><a href="#tab3"><em style="width: 80px;"><span id="telugufont"><?=$more['15']->matter ?></span></em></a></li>
 	    						</ul>            
     							<div class="yui-content" style="height: 150px;text-align: center;">
 							        <div id="tab1"><p>Tab four Content</p></div>

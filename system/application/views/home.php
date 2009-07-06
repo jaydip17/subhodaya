@@ -24,48 +24,51 @@
 							        	dgdgdfgdfgfsgdfg</p>
 							        	<div style="height: 45px">sdgfghfghfghghjgjh<br>asfdsgdfg</div>
 							        	<div style="padding:5px 5px 5px 5px; border: 1px solid #D9EBF7; background-image: url(assets/imgs/123.jpg);background-repeat: repeat-x; height: 70px">
-							        	<div><img src="<?=base_url();?>assets/imgs/tdp-img.jpg" align="middle" ></img>
-							        	<span>chandrababu</span></div>
-							        	<div style="margin: -45px 0px 0px 150px;">
-							        	<img src="<?=base_url();?>assets/imgs/ys-img2.jpg" align="middle" ></img>
-							        	<span>chandrababu</span></div>
-							         </div></div>
+							        	<table width="100%">
+							        		<tr>
+							        			<td width="50%" valign="top"><img src="<?=base_url();?>assets/imgs/tdp-img.jpg" style="padding: 0px 10px 0px 0px;float: left;" align="top">chandra babu chandra babu naidu</td>
+							        			<td width="50%" valign="top"><img src="<?=base_url();?>assets/imgs/ys-img2.jpg" style="padding: 0px 10px 0px 0px;float: left;" align="top">ys ys ys ysys ys ys ysys ys ys ysys ys ys ysys ys ys ysys ys ys ysys ys ys ys </td>
+							        		</tr>
+							        	</table>
+							        	</div></div>
 							        <div id="tab2">
-							        <p><img src="<?=base_url();?>assets/imgs/mov-img2.jpg" align="top"></img>
+							        <p><img src="<?=base_url();?>assets/imgs/move-img4.jpg" align="top"></img>
 							        	dgdgdfgdfgfsgdfg</p>
-							        	<div style="height: 70px">sdgfghfghfghghjgjh<br>asfdsgdfg</div>
-							        	<div style="padding:5px 5px 5px 5px; border: 1px solid #D9EBF7; background-image: url(assets/imgs/news-bg.gif);background-repeat: repeat-x;">
-							        	<div><img src="<?=base_url();?>assets/imgs/tdp-img.jpg" align="middle" ></img>
-							        	<span>chandrababu</span></div>
-							        	<div style="margin: -45px 0px 0px 150px;">
-							        	<img src="<?=base_url();?>assets/imgs/ys-img2.jpg" align="middle" ></img>
-							        	<span>chandrababu</span></div>
-							         </div>
+							        	<div style="height: 45px">sdgfghfghfghghjgjh<br>asfdsgdfg</div>
+							        	<div style="padding:5px 5px 5px 5px; border: 1px solid #D9EBF7; background-image: url(assets/imgs/123.jpg);background-repeat: repeat-x; height: 70px">
+							        	<table width="100%">
+							        		<tr>
+							        			<td width="50%" valign="top"><img src="<?=base_url();?>assets/imgs/tdp-img.jpg" style="padding: 0px 10px 0px 0px;float: left;" align="top">chandra babu chandra babu naidu</td>
+							        			<td width="50%" valign="top"><img src="<?=base_url();?>assets/imgs/ys-img2.jpg" style="padding: 0px 10px 0px 0px;float: left;" align="top">ys ys ys ysys ys ys ysys ys ys ysys ys ys ysyss </td>
+							        		</tr>
+							        	</table>
+							        	</div>
 							        </div>
 							        <div id="tab3">
-							        <p><img src="<?=base_url();?>assets/imgs/mov-img3.jpg" align="top"></img>
+							        <p><img src="<?=base_url();?>assets/imgs/move-img4.jpg" align="top"></img>
 							        	dgdgdfgdfgfsgdfg</p>
-							        	<div style="height: 70px">sdgfghfghfghghjgjh<br>asfdsgdfg</div>
-							        	<div style="padding:5px 5px 5px 5px; border: 1px solid #D9EBF7; background-image: url(assets/imgs/news-bg.gif);background-repeat: repeat-x;">
-							        	<div><img src="<?=base_url();?>assets/imgs/tdp-img.jpg" align="middle" ></img>
-							        	<span>chandrababu</span></div>
-							        	<div style="margin: -45px 0px 0px 150px;">
-							        	<img src="<?=base_url();?>assets/imgs/tdp-img.jpg" align="middle" ></img>
-							        	<span>chandrababu</span></div>
-							         </div>
+							        	<div style="height: 45px">sdgfghfghfghghjgjh<br>asfdsgdfg</div>
+							        	<div style="padding:5px 5px 5px 5px; border: 1px solid #D9EBF7; background-image: url(assets/imgs/123.jpg);background-repeat: repeat-x; height: 70px">
+							        	<table width="100%">
+							        		<tr>
+							        			<td width="50%" valign="top"><img src="<?=base_url();?>assets/imgs/tdp-img.jpg" style="padding: 0px 10px 0px 0px;float: left;" align="top">chandra babu chandra babu naidu</td>
+							        			<td width="50%" valign="top"><img src="<?=base_url();?>assets/imgs/ys-img2.jpg" style="padding: 0px 10px 0px 0px;float: left;" align="top">ys ys ys ysys ys ys </td>
+							        		</tr>
+							        	</table>
+							        	</div>
 							        </div>
 									<div id="tab3">
-									<p><img src="<?=base_url();?>assets/imgs/mov-img.jpg" align="top"></img>
+									<p><img src="<?=base_url();?>assets/imgs/move-img4.jpg" align="top"></img>
 							        	dgdgdfgdfgfsgdfg</p>
-							        	<div style="height: 70px">sdgfghfghfghghjgjh<br>asfdsgdfg</div>
-							        	<div style="padding:5px 5px 5px 5px; border: 1px solid #D9EBF7; background-image: url(assets/imgs/news-bg.gif);background-repeat: repeat-x;">
-							        	<div><img src="<?=base_url();?>assets/imgs/ys-img2.jpg" align="middle" ></img>
-							        	<span>chandrababu</span></div>
-							        	<div style="margin: -45px 0px 0px 150px;">
-							        	<img src="<?=base_url();?>assets/imgs/ys-img2.jpg" align="middle" ></img>
-							        	<span>chandrababu</span></div>
-							         </div>
-									</div>
+							        	<div style="height: 45px">sdgfghfghfghghjgjh<br>asfdsgdfg</div>
+							        	<div style="padding:5px 5px 5px 5px; border: 1px solid #D9EBF7; background-image: url(assets/imgs/123.jpg);background-repeat: repeat-x; height: 70px">
+							        	<table width="100%">
+							        		<tr>
+							        			<td width="50%" valign="top"><img src="<?=base_url();?>assets/imgs/tdp-img.jpg" style="padding: 0px 10px 0px 0px;float: left;" align="top">chandra babu chandra babu naidu</td>
+							        			<td width="50%" valign="top"><img src="<?=base_url();?>assets/imgs/ys-img2.jpg" style="padding: 0px 10px 0px 0px;float: left;" align="top">ys ys ys ysys </td>
+							        		</tr>
+							        	</table>
+							        	</div>
     							</div>
 <script>
 (function() {

@@ -4,11 +4,12 @@ class Subhodaya extends Controller {
 	function Subhodaya(){
 		parent::Controller();
 		$this->load->helper('directory');
-		
+		$this->load->model('admin/News_Model');
 	}
 	function index(){
-		
-		$this->load->view('home');
+		$more=$this->News_Model->more_news();
+		$data=array('more'=>$more);
+		$this->load->view('home',$data);
 	}
 }
 ?>

@@ -7,12 +7,12 @@ class News extends Controller {
 	}
 	function index(){
 		$more=$this->News_Model->more_news();
-		$details=$this->News_Model->get_newstype1();
-		$news_type2=$this->News_Model->get_newstype2();
-		$news_type3=$this->News_Model->get_newstype3();
-		$news_type4=$this->News_Model->get_newstype4();
-		$news_type5=$this->News_Model->get_newstype5();
-		$news_type6=$this->News_Model->get_newstype6();
+		$details=$this->News_Model->get_newstype1(1);
+		$news_type2=$this->News_Model->get_newstype1(2);
+		$news_type3=$this->News_Model->get_newstype1(3);
+		$news_type4=$this->News_Model->get_newstype1(4);
+		$news_type5=$this->News_Model->get_newstype1(5);
+		$news_type6=$this->News_Model->get_newstype1(6);
 		$data=array('news_type1'=>$details,
 					'news_type2'=>$news_type2,
 					'news_type3'=>$news_type3,

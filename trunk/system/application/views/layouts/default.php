@@ -33,20 +33,25 @@
       </tr>
 </table>
       <table width="96%"  border="0" align="center" cellpadding="0" cellspacing="0" >
+	  
         <tr>
           <td  height="0px" style="padding-bottom: 0px;">
-          <div id="tabs" style="padding-top:0px;">
+          <div id="tabs"  style="padding-top:0px;">
           <img src="<?=base_url();?>assets/imgs/logo.jpg" style="padding: 0px 20px 0px 5px;float: left;"></img>
 			  <ul style="padding-top: 35px;">
+			
+			<? $current_url= current_url();?>
 			    <li></li>
+
 			    <li><a href="<?=base_url();?>"><span><?=$more['2']->matter?></span></a></li>
-			    <li><a href="<?=base_url();?>news/"><span><?=$more['3']->matter?></span></a></li>
-			    <li><a href="<?=base_url();?>cinema"><span><?=$more['4']->matter?></span></a></li>
-			    <li><a href="<?=base_url();?>"><span><?=$more['5']->matter?></span></a></li>
-			    <li><a href="<?=base_url();?>"><span><?=$more['6']->matter?></span></a></li>
-			    <li><a href="<?=base_url();?>"><span><?=$more['7']->matter?></span></a></li>
-			    <li><a href="<?=base_url();?>"><span><?=$more['8']->matter?></span></a></li>
-			    <li><a href="<?=base_url();?>"><span><?=$more['9']->matter?></span></a></li>
+			    <li <?if (eregi('news', $current_url)) {echo "id='current'";} ?> ><a href="<?=base_url();?>news/"><span><?=$more['3']->matter?></span></a></li>
+			    <li <?if (eregi('cinema', $current_url)) {echo "id='current'";} ?> ><a href="<?=base_url();?>cinema/"><span><?=$more['4']->matter?></span></a></li>
+			    <li <?if (eregi('video', $current_url)) {echo "id='current'";} ?>><a href="<?=base_url();?>video/"><span><?=$more['5']->matter?></span></a></li>
+			    <li <?if (eregi('gallery', $current_url)) {echo "id='current'";} ?>><a href="<?=base_url();?>gallery/"><span><?=$more['6']->matter?></span></a></li>
+			    <li <?if (eregi('greetings', $current_url)) {echo "id='current'";} ?>><a href="<?=base_url();?>greetings/"><span><?=$more['7']->matter?></span></a></li>
+			    <li <?if (eregi('mahila', $current_url)) {echo "id='current'";} ?>><a href="<?=base_url();?>mahila/"><span><?=$more['8']->matter?></span></a></li>
+			    <li <?if (eregi('sahithi', $current_url)) {echo "id='current'";} ?>><a href="<?=base_url();?>sahithi/"><span><?=$more['9']->matter?></span></a></li>
+
 			  </ul>
 			</div>
           </td>
@@ -59,8 +64,6 @@ border-right: 2px solid #0A70BB;"></td>
 {yield}
       
  </table>
-
-
 </table>
 </body>
 </html>

@@ -338,12 +338,22 @@ font-size: 14px;
 #tabs a span {float:none;}
 
 /* End IE5-Mac hack */
-#tabs a:hover span {
-	}
-#tabs a:hover{
+
+
+#tabs a:hover {
 	background-position:0% -42px;
+	
 	}
-#tabs a:hover span{
+#tabs a:hover  span{
 	background-position:100% -42px;
+	
 	}
+#current a span{
+background-position:100% -42px;
+}
+#current a {
+background-position:0% -42px;
+}
+
+ 
 

@@ -134,10 +134,10 @@ height:318px;
 	  background-repeat:repeat-x;
 	  height:31;
 }
-#senterbotom{
+.senterbotom{
       background-image:url(imgs/senter-botom.jpg);
 	  background-repeat:repeat-x;
-	  height:102;
+	  height:;
 }
 #botomtop{
       background-image:url(imgs/serter-3.jpg);
@@ -200,6 +200,7 @@ border-right:0px solid #000099;
 #news-more{
 color:red;
 }
+
 #more-news-div{
 text-align: right;
 text-decoration: none;
@@ -298,23 +299,19 @@ font-size: 14px;
 	margin-bottom:0em; /*margin between menu and rest of page*/
 	overflow:hidden;
 	}
-
 #tabs ul {
 	margin:0;
-	padding:10px 10px 0px 253px;
+	padding:10px 10px 0px 235px;
 	list-style:none;
-	
 	}
-
 #tabs li {
 	display:inline;
 	margin:0;
 	padding:0;
 	}
-
 #tabs a {
 	float:left;
-	width:70px;
+	width:81px;
 	background:url(imgs/left.png) no-repeat left top;
 	margin:0;
 	padding:0 0 0 6px;

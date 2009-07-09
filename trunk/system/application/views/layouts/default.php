@@ -14,16 +14,52 @@
 <!-- tabs -->
 <script src="<?=base_url();?>assets/SpryAssets/SpryTabbedPanels.js" type="text/javascript"></script>
 <link href="<?=base_url();?>assets/SpryAssets/SpryTabbedPanels.css" rel="stylesheet" type="text/css" />
-<style type="text/css">
+<script type="text/javascript"><!--
 
-/*Credits: Dynamic Drive CSS Library */
-/*URL: http://www.dynamicdrive.com/style/ */
+var xmlhttp;
 
+function loadPoll(url,somevalue)
+{
 
+ url = url+'/'+somevalue;
+xmlhttp=null;
+if (window.XMLHttpRequest)
+  {// code for IE7, Firefox, Mozilla, etc.
+  xmlhttp=new XMLHttpRequest();
+  }
+else if (window.ActiveXObject)
+  {// code for IE5, IE6
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+if (xmlhttp!=null)
+  {
+  xmlhttp.onreadystatechange=get_Poll;
+  xmlhttp.open("GET",url,true);
+  xmlhttp.send(null);
+  }
+else
+  {
+  alert("Your browser does not support XMLHTTP.");
+  }
+}
+function get_Poll()
+{
+if (xmlhttp.readyState==4)
+  {// 4 = "loaded"
+  if (xmlhttp.status==200)
+    {// 200 = "OK"
+    document.getElementById('home_poll').innerHTML=xmlhttp.responseText;
+    }
+  else
+    {
+    alert("Problem retrieving XML data:" + xmlhttp.statusText);
+    }
+  }
+}
 
-</style>
+--></script>
 </head>
-<body>
+<body >
 
 <table width="999" height="1330"  border="0" align="center" cellpadding="0" cellspacing="0" >
   <tr>
@@ -37,13 +73,13 @@
         <tr>
           <td  height="0px" style="padding-bottom: 0px;">
           <div id="tabs"  style="padding-top:0px;">
-          <img src="<?=base_url();?>assets/imgs/logo.jpg" style="padding: 0px 20px 0px 5px;float: left;"></img>
+          <img src="<?=base_url();?>assets/imgs/logo.jpg" style="padding: 0px 1px 0px 1px;float: left;width: 235px;"></img>
 			  <ul style="padding-top: 35px;">
 			
 			<? $current_url= current_url();?>
 			    <li></li>
 
-			    <li><a href="<?=base_url();?>"><span><?=$more['2']->matter?></span></a></li>
+			    <li ><a href="<?=base_url();?>"><span><?=$more['2']->matter?></span></a></li>
 			    <li <?if (eregi('news', $current_url)) {echo "id='current'";} ?> ><a href="<?=base_url();?>news/"><span><?=$more['3']->matter?></span></a></li>
 			    <li <?if (eregi('cinema', $current_url)) {echo "id='current'";} ?> ><a href="<?=base_url();?>cinema/"><span><?=$more['4']->matter?></span></a></li>
 			    <li <?if (eregi('video', $current_url)) {echo "id='current'";} ?>><a href="<?=base_url();?>video/"><span><?=$more['5']->matter?></span></a></li>

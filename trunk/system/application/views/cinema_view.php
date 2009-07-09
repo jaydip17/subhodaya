@@ -54,11 +54,32 @@
 				<tr>
 					<td align="center"><div><img src="<?=base_url();?>assets/imgs/add-img2.jpg"></div></td>
 				</tr>
-				<tr>
-					<td align="center"><div><img src="<?=base_url();?>assets/imgs/2.jpg"></div></td>
-				</tr>
+				
 			</table>
-			<img src="<?=base_url();?>assets/imgs/3.jpg" style="padding: 4px;">
+			<table style="border:1px solid #50BCFC;"  width="100%" >
+				<tr>
+					<td id="news_heading" colspan="3" align="left"><span style="font-weight: bold;font-size: 14px;"><?=$more['16']->matter ?></span></td>
+				</tr>
+				<tr>
+					<td>
+					<div id="home_poll" >
+                 	<div><?=$cinemapoll['0']->question?></div>
+     				<table width="100%">
+              			<tr>
+              				<td align="right">
+              					<input type="hidden" name="poll_id" value="<?=$cinemapoll['0']->id?>">
+              					<? $attributes = 'onClick= "loadPoll(\''.base_url().'poll/index/'.$cinemapoll[0]->id.'\',this.value)";' ?>
+              					<?=form_radio('answer','a',True,$attributes) ?>
+              				</td>
+              				<td align="left"><?=$more['18']->matter ?></td></tr>
+              			<tr><td align="right"><?=form_radio('answer','b',FALSE,$attributes) ?></td><td align="left"><?=$more['19']->matter ?></td></tr>
+              			<tr><td align="right"><?=form_radio('answer','c',FALSE,$attributes) ?></td><td align="left"><?=$more['20']->matter ?></td></tr>
+     				</table>
+                </div>
+					</td>
+				</tr>
+				
+			</table>
 			</div>
           </td>
           </tr>

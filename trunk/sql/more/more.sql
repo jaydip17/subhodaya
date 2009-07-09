@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 06, 2009 at 12:31 PM
+-- Generation Time: Jul 09, 2009 at 05:55 AM
 -- Server version: 5.1.32
 -- PHP Version: 5.2.9-1
 
@@ -25,13 +25,12 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- Table structure for table `more`
 --
 
-DROP TABLE IF EXISTS `more`;
 CREATE TABLE IF NOT EXISTS `more` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `matter` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `active` int(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=19 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
 
 --
 -- Dumping data for table `more`
@@ -43,7 +42,7 @@ INSERT INTO `more` (`id`, `matter`, `active`) VALUES
 (3, 'హొమ్', 0),
 (4, 'వార్తలు', 0),
 (5, 'సినిమా ', 0),
-(6, 'వీడియో ', 0),
+(6, 'వీడియో', 0),
 (7, 'గ్యాలరీ ', 0),
 (8, 'గ్రీటింగ్స్ ', 0),
 (9, 'మహిళ', 0),
@@ -55,4 +54,7 @@ INSERT INTO `more` (`id`, `matter`, `active`) VALUES
 (15, 'టాప్ వ్యూ ', 0),
 (16, 'టాప్ రేటెడ్', 0),
 (17, 'మీ అభిప్రాయం', 0),
-(18, 'వీడియోస్ ', 0);
+(18, 'వీడియోస్ ', 0),
+(19, 'అవును', 0),
+(20, 'కాదు', 0),
+(21, 'తెలియదు', 0);

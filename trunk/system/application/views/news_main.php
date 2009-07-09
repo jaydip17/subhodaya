@@ -191,7 +191,7 @@
           <td width="8">&nbsp; </td>
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter-1.jpg" width="5" height="31" /></td>
           <td width="295" valign="top"  id="botomtop" align="left"><!--<img src="<?=base_url();?>assets/imgs/001.gif" style="margin:4px 0px 0px 0px;"></img>-->
-          	<div style="padding-top: 6px;"><span id="newsheading"><?=$news_type4['0']->news_cat?></span></div></td>
+          	<div style="padding-top: 6px;"><span id="newsheading"><?=$more['16']->matter?></span></div></td>
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter2.jpg" width="5" height="31" /></td>
         </tr>
         <tr>
@@ -219,7 +219,22 @@
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="109" /></td>
           <td width="8">&nbsp;</td>
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="109" /></td>
-          <td valign="top" id="botom-ser">dshfgjh</td>
+          <td valign="top" id="botom-ser">
+          <div id="home_poll" >
+               <div><?=$newspoll['0']->question?></div>
+     				<table width="100%">
+              			<tr>
+              				<td align="right">
+              					<input type="hidden" name="poll_id" value="<?=$newspoll['0']->id?>">
+              					<? $attributes = 'onClick= "loadPoll(\''.base_url().'poll/index/'.$newspoll[0]->id.'\',this.value)";' ?>
+              					<?=form_radio('answer','a',True,$attributes) ?>
+              				</td>
+              				<td align="left"><?=$more['18']->matter ?></td></tr>
+              			<tr><td align="right"><?=form_radio('answer','b',FALSE,$attributes) ?></td><td align="left"><?=$more['19']->matter ?></td></tr>
+              			<tr><td align="right"><?=form_radio('answer','c',FALSE,$attributes) ?></td><td align="left"><?=$more['20']->matter ?></td></tr>
+     				</table>
+                </div>
+          </td>
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="109" /></td>
         </tr>
     </table>

@@ -4,6 +4,7 @@ class News extends Controller {
 	function News(){
 		parent::Controller();
 		$this->load->model("admin/News_Model");
+		$this->load->model("admin/Poll_Model");
 	}
 	function index(){
 		$more=$this->News_Model->more_news();
@@ -13,13 +14,15 @@ class News extends Controller {
 		$news_type4=$this->News_Model->get_newstype1(4);
 		$news_type5=$this->News_Model->get_newstype1(5);
 		$news_type6=$this->News_Model->get_newstype1(6);
+		$newspoll=$this->Poll_Model->get_newspolls(4);
 		$data=array('news_type1'=>$details,
 					'news_type2'=>$news_type2,
 					'news_type3'=>$news_type3,
 					'news_type4'=>$news_type4,
 					'news_type5'=>$news_type5,
 					'news_type6'=>$news_type6,
-					'more'      =>$more
+					'more'      =>$more,
+					'newspoll'=>$newspoll
 		);
 		$this->load->view("news_main",$data);
 	}

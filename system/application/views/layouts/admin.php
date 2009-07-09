@@ -73,30 +73,30 @@ ddsmoothmenu.init({
 	<li><a href="#">View/Edit Videos</a></li>
   </ul>
 </li>
-  <li><a href="#">Other</a>
-<ul>
-	<li> <a href="#">Newsletter's</a> 
-		<ul>
-			<li><a href="#" >Subscriber's</a>
-			</li>
-		</ul>
-	</li>
-<li><a href="#">Ads</a>
+<li><a href="#">Poll</a>
   <ul>
+  	<li><a href="<?=base_url();?>admin/poll">Poll Add</a></li>
+	<li><a href="<?=base_url();?>admin/poll/getpoll">Edit/Change</a></li>
+  </ul>
+</li>
+  <!--<li><a href="#">Other</a>
+<ul>
+<li><a href="#">Poll</a>
 
-  <li><a href="# ">Edit/Change</a></li>
+  <ul>
+   <li><a >poll add</a></li>
+  <li><a href="<?=base_url();?>admin/poll/newspoll_view"">Edit/Change</a></li>
   </ul>
   </li>
-  <li> <a href="#">MP3 Songs</a> 
+  <li> <a href="#">cinemapoll</a> 
 		<ul>
-			<li><a href="#" >Add song</a>
+			<li><a href="#" >Edit/Change</a>
 			</li>
-			<li><a href="#" >View/Manage</a>
-			</li>
+			
 		</ul>
 	</li>
   </ul>
-  </li>
+  </li>-->
 <? $logout = $this->Login_Model->login_validate('logout'); if($logout!="no"):?>
 
 <li><a href="<?=base_url()."admin/login/logout" ?>">Logout</a></li>

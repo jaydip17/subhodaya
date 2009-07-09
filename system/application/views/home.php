@@ -195,8 +195,9 @@
                       <tr>
                         <td height="214"  valign="top" id="center-img"><img src="<?=base_url();?>assets/imgs/new1.jpg" width="5" height="214" /></td>
                         <td width="200" id="center-img" align="left" valign="top" >
-                        <img src="<?=base_url();?>assets/cinema/ceni_img1_thumb.jpg" style="float: left;padding: 2px 8px 1px 2px;"></img>
-                        <?=$cinema_type2['0']->summary ?><a href="#"><span id="news-more"><?=$more['1']->matter ?></span></a>
+                        <a href="#"><img src="<?=base_url();?>assets/cinema/ceni_img16_thumb.jpg" style="float: left;padding:2px 5px 2px 2px;border: 0px;" ></img></a>
+                   		<?=$cinema_type2['0']->summary ?> 
+                        <a href="#"><span id="news-more"><?=$more['1']->matter ?></span></a>
                         </td>
                          <td height="214"  valign="top" id="center-img"><img src="<?=base_url();?>assets/imgs/new.jpg" width="5" height="214" /></td>
                     </tr>
@@ -251,12 +252,26 @@
               </tr>
               <tr>
                 <td valign="top"><img src="<?=base_url();?>assets/imgs/new1.jpg" width="5" height="102" /></td>
-                <td width="208" valign="top" id="senterbotom">hhrt</td>
-                <td valign="top"><img src="<?=base_url();?>assets/imgs/new.jpg" width="5" height="102" /></td>
+                <td  align="center" class="senterbotom" valign="top" style="width: 208;">
+                <div id="home_poll" >
+                 	<div><?=$newspoll['0']->question?></div>
+     				<table width="100%">
+              			<tr>
+              				<td align="right">
+              					<input type="hidden" name="poll_id" value="<?=$newspoll['0']->id?>">
+              					<? $attributes = 'onClick= "loadPoll(\''.base_url().'poll/index/'.$newspoll[0]->id.'\',this.value)";' ?>
+              					<?=form_radio('answer','a',True,$attributes) ?>
+              				</td>
+              				<td align="left"><?=$more['18']->matter ?></td></tr>
+              			<tr><td align="right"><?=form_radio('answer','b',FALSE,$attributes) ?></td><td align="left"><?=$more['19']->matter ?></td></tr>
+              			<tr><td align="right"><?=form_radio('answer','c',FALSE,$attributes) ?></td><td align="left"><?=$more['20']->matter ?></td></tr>
+     				</table>
+                </div>
+                </td>
               </tr>
-              <tr>
+              
                 <td height="123" colspan="3" valign="top"><div align="right" style="padding-top:6px"><img src="<?=base_url();?>assets/imgs/add-fun.jpg" width="215" height="107"></img></div></td>
-              </tr>
+             
           </table></td>
         </tr>
       </table>

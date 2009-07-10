@@ -16,10 +16,7 @@ if(isset($message) && !is_array($message) ) echo($message);?>
 	</tr>
 	<tr>
 		<td>Select type</td>
-		
-		<td>
-		<?=form_dropdown('type',$options)?></td>
-		
+		<td><?=form_dropdown('type',$options)?></td>
 	</tr>
 	<tr>
 		<td>Heading</td>
@@ -45,6 +42,10 @@ if(isset($message) && !is_array($message) ) echo($message);?>
 	<tr>
 		<td>Breaking News</td>
 		<td align="left"><?=form_checkbox('breaking_news','1') ?></td>
+	</tr>
+	<tr>
+		<td>For Homepage</td>
+		<td align="left"><?=form_checkbox('homenews','1') ?></td>
 	</tr>
 	<tr>
 		<td>Active</td>

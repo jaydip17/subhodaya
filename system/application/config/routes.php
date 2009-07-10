@@ -42,6 +42,7 @@
 
 $route['default_controller'] = "subhodaya";
 $route['scaffolding_trigger'] = "";
+$route['admin'] = 'admin/login';
 
 
 /* End of file routes.php */

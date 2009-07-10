@@ -27,6 +27,7 @@ class News extends Controller {
 		$this->load->view("news_main",$data);
 	}
 	function details(){
+		$more=$this->News_Model->more_news();
 		$type=$this->uri->segment(3,0);
 		$totel_rows=$this->News_Model->get_news($type,$count=true,$limit=0);
 	/*	$this->load->library('pagination');
@@ -37,13 +38,16 @@ class News extends Controller {
 		$pagination=$this->pagination->create_links();*/
 		$news=$this->News_Model->get_news($type,$count=false);
 		$data=array(	'news'  =>$news,
+						'more'=>$more
 					/*'pagination'=>$pagination*/);
 		$this->load->view("news_content",$data);
 	}
 	function newsdetails(){
+		$more=$this->News_Model->more_news();
 		$id=$this->uri->segment(3,0);
 		$result=$this->News_Model->inner_news($id);
-		$data=array('result'=>$result);
+		$data=array('result'=>$result,
+					'more'=>$more);
 		$this->load->view('news_inner',$data);
 	}
 }

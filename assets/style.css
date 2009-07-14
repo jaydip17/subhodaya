@@ -289,6 +289,11 @@ font-size: 14px;
 font-weight: bold;
 font-size: 14px;
 	}
+#result a:link{
+text-decoration: none;
+color: maroon;
+font-weight: bold;
+}
 /*-------main manu tabs------ */
 #tabs {
 	float:left;

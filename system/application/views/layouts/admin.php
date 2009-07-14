@@ -79,6 +79,11 @@ ddsmoothmenu.init({
 	<li><a href="<?=base_url();?>admin/poll/getpoll">Edit/Change</a></li>
   </ul>
 </li>
+<li><a href="#">Other</a>
+  <ul>
+  	<li><a href="<?=base_url();?>admin/contacts">Contacts</a></li>
+  </ul>
+</li>
   <!--<li><a href="#">Other</a>
 <ul>
 <li><a href="#">Poll</a>

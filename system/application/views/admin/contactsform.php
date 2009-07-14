@@ -4,17 +4,23 @@
 
     <tr> 
       <td colspan="2" style="padding:6"><div align="center" class="formheading"><strong>Import 
-            Gmail Contacts<br>
+            Contacts<br>
            </strong></div></td>
     </tr>
     <tr> 
-      <td width="50%" style="padding:6"><div align="left"><strong>Gmail Username:</strong></div></td>
-      <td width="50%" style="padding:6"><input name="username" value="" type="text" class="text" id="username" style="width:100%"></td>
+      <td  style="padding:6"><div align="left"><strong>Username:</strong></div></td>
+      <td  style="padding:6"><input name="username" value="" type="text" class="text" id="username">
+      <select name="type">
+      <option value="yahoo">Yahoo.com</option>
+      <option value="gmail">Gmail.com</option>
+      </select>
+      </td>
     </tr>
     <tr> 
-      <td width="50%" style="padding:6"><div align="left"><strong>Gmail Password:</strong></div></td>
+      <td style="padding:6"><div align="left"><strong>Password:</strong></div></td>
 
-      <td width="50%" style="padding:6"><input name="password" type="password" class="text" id="password" style="width:100%"></td>
+      <td style="padding:6"><input name="password" type="password" class="text" id="password">
+      </td>
     </tr>
     <tr> 
       <td colspan="2" style="padding:6">*Your username and password will not be stored on this server.</td>
@@ -22,6 +28,9 @@
     <tr> 
       <td colspan="2" style="padding:6"><input type="submit" name="Submit" value="Import Contacts" class="button" style="width:100%"></td>
     </tr>
+    <tr> 
+      <td colspan="2" style="padding:6" align="center"><?=$message;?></td>
+    </tr>
   </table>
-
+    
 </form>

@@ -357,5 +357,15 @@ background-position:100% -42px;
 background-position:0% -42px;
 }
 
- 
-
+ #video_heading{
+	background-image: url(imgs/img-center-slic.jpg);
+	background-repeat: repeat-x;
+	height: 28px;
+	width:100%;
+	} 
+#vi_heading{
+	background-image: url(imgs/img-center-slic.jpg);
+	background-repeat: repeat-x;
+	height: 8px;
+	width:100%;
+	} 

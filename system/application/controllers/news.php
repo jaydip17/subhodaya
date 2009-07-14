@@ -36,7 +36,7 @@ class News extends Controller {
 		$config['base_url'] = base_url()."news/details/";
 		$config['total_rows'] = $totel_rows;
 		$config['per_page'] = '13';
-		$this->pagination->initialize($config);
+		$this->pagination->initialize($config); 
 		$pagination=$this->pagination->create_links();*/
 		$news=$this->News_Model->get_news($type,$count=false);
 		$data=array(	'news'  =>$news,

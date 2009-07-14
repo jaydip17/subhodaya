@@ -1,3 +1,5 @@
+<html>
+<body>
 <div><?=$newspoll['0']->question ?></div>
 <table width="100%">
 	<tr>
@@ -23,3 +25,5 @@
 		<? } ?>
 	</tr>
 </table>
+</body>
+</html>

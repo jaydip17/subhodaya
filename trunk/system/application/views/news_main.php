@@ -1,4 +1,3 @@
-
 <table width="99%"  border="0" cellpadding="0" cellspacing="0">
 <tr>
     <td width="420" valign="top" >
@@ -221,7 +220,10 @@
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="109" /></td>
           <td valign="top" id="botom-ser">
           <div id="home_poll" >
-               <div><?=$newspoll['0']->question?></div>
+               <div><? if(!empty($newspoll['0']->question)){
+                echo $newspoll['0']->question;
+               	?></div>
+
      				<table width="100%">
               			<tr>
               				<td align="right">
@@ -233,6 +235,16 @@
               			<tr><td align="right"><?=form_radio('answer','b',FALSE,$attributes) ?></td><td align="left"><?=$more['19']->matter ?></td></tr>
               			<tr><td align="right"><?=form_radio('answer','c',FALSE,$attributes) ?></td><td align="left"><?=$more['20']->matter ?></td></tr>
      				</table>
+     				<? }else echo 'to day no poll'; ?>
+     			<span style="font-weight: bold;font-size: 14px;color:maroon;">yesterday poll</span>
+                <div><?if(!empty($yes_poll['0']->question)){
+                	echo $yes_poll['0']->question;
+                	?></div>
+                       <div align="right" id="result"><A HREF="javascript:void(0)"
+					onclick="window.open('<?=base_url();?>poll/yes_result/<?=$yes_poll['0']->id?>',
+						'welcome','width=300,height=150')">
+						Result</A></div>
+                <?} else echo 'Yesterday no poll.'; ?>
                 </div>
           </td>
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="109" /></td>

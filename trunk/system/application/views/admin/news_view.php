@@ -44,10 +44,6 @@ if(isset($message) && !is_array($message) ) echo($message);?>
 		<td align="left"><?=form_checkbox('breaking_news','1') ?></td>
 	</tr>
 	<tr>
-		<td>For Homepage</td>
-		<td align="left"><?=form_checkbox('homenews','1') ?></td>
-	</tr>
-	<tr>
 		<td>Active</td>
 		<td align="left"><?=form_checkbox('active','1') ?></td>
 	</tr>

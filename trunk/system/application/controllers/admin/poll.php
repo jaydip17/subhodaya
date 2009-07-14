@@ -3,7 +3,6 @@ class  Poll extends Controller {
 	var $layout = 'admin'; 
 	function Poll(){
 		parent::Controller();
-		$this->load->helper(array('form','url','file'));
 		$this->load->model('admin/Poll_Model');
 	}
 	function index(){

@@ -63,7 +63,10 @@
 				<tr>
 					<td>
 					<div id="home_poll" >
-                 	<div><?=$cinemapoll['0']->question?></div>
+                 	<div><? if(!empty($cinemapoll['0']->question)){
+						echo   $cinemapoll['0']->question;               		
+                 	     ?></div>
+
      				<table width="100%">
               			<tr>
               				<td align="right">
@@ -75,10 +78,20 @@
               			<tr><td align="right"><?=form_radio('answer','b',FALSE,$attributes) ?></td><td align="left"><?=$more['19']->matter ?></td></tr>
               			<tr><td align="right"><?=form_radio('answer','c',FALSE,$attributes) ?></td><td align="left"><?=$more['20']->matter ?></td></tr>
      				</table>
+     				<? }else echo 'to day no poll'; ?>
+     			<br><span style="font-weight: bold;font-size: 14px;color:maroon;">yesterday poll</span>
+                <div><?if(!empty($yes_poll['0']->question)){
+                	echo $yes_poll['0']->question;
+                	?></div>
+		                <div align="right" id="result"><A HREF="javascript:void(0)"
+					onclick="window.open('<?=base_url();?>poll/yes_result/<?=$yes_poll['0']->id?>',
+						'welcome','width=300,height=200')">
+						Result</A></div>
+              
+                <?} else echo 'Yesterday no no poll.';?>
                 </div>
 					</td>
 				</tr>
-				
 			</table>
 			</div>
           </td>

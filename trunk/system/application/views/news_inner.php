@@ -4,12 +4,12 @@
 		<td width="185" height="100%" valign="top" ><div id="newsinnerleft" ></div></td>
 		<td valign="top" >
 			<div><table cellpadding="1px" width="100%">
-			<tr><td><div id="news_heading" class="heading"><?=$result['0']->heading ?></div></td></tr>
+			<tr><td><div id="news_heading" class="heading"><span id="newsheading"><?=$result['0']->heading ?></span></div></td></tr>
 			<tr><td align="center"><div  id="maindiv-news">
 			<div class="help"></div>
 			<div class="content"><?=$result['0']->description ?></div>
 			</div></td></tr>
-			<tr><td><div id="news_heading" class="heading"></div></td></tr>
+			<tr><td><div id="news_heading" class="heading"><span id="newsheading">Rate this Article</span></div></td></tr>
 			<tr><td align="center"><div style="border:1px solid #9FA0A0;">
 			<form>
 			<table id="formdiv">
@@ -24,7 +24,7 @@
 			</table>
 			</form>
 			</div></td></tr>
-			<tr><td><div id="news_heading" class="heading" style="height: 23px"></div></td></tr>
+			<tr><td><div id="news_heading" class="heading" style="height: 23px"><span id="newsheading">More...</span></div></td></tr>
 			<tr><td>
 				<div style="border:1px solid #9FA0A0;">
 					<ul>

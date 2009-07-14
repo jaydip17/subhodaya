@@ -3,7 +3,6 @@ class News extends Controller {
 	var $layout = 'admin'; 
 	function News(){
 		parent::Controller();
-		$this->load->helper(array('form','url','file'));
 		$this->load->model('admin/News_Model');
 	}
 	function index(){

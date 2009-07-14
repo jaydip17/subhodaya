@@ -66,10 +66,25 @@ class News_Model extends Model {
 		$this->db->from('news_types');
 		$this->db->join('news', 'news.type= news_types.id');
 		$query = $this->db->get_where();
+		
 			return $query->result();
+	}
+	function get_news1($type)
+	{
+		$query=" from news where type=$type";
+		return $query;
+	}
+	
+	function count($type)
+	{
+		
+    	$this->db->where('type',$type);
+		$this->db->from('news');
+		$count =$this->db->count_all_results();
+		return $count;
 		
 		
-    }
+	}
     function inner_news($id){
     	$this->db->select('*');
     	$this->db->where('news.id',$id);

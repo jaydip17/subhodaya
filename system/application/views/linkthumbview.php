@@ -13,4 +13,4 @@
 }else{
 	$count++;
 }
-endforeach; ?>
+endforeach; echo $paginate; ?>

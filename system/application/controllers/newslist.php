@@ -6,18 +6,54 @@ class Newslist extends Controller {
 	}
 	function listview(){
 		$more=$this->News_Model->more_news();
-		 $q=$this->uri->segment(3,0);
-		 $details=$this->News_Model->get_news($q);
+		 $type=$this->uri->segment(3,0);
+		 $query=$this->News_Model->get_news1($type);
+		 $a =base_url().'newslist/listview/'.$type;
+		 //pagination
+    	$this->load->library('paginationnew');
+    	
+    	$this->paginationnew->start = ($this->uri->segment(4)) ? $this->uri->segment(4) : '0';
+    	$this->paginationnew->limit =1;
+        $this->paginationnew->filePath ='javascript:loadNews(\''.$a.'';
+      
+        $this->paginationnew->select_what = '*';
+        $this->paginationnew->nbItems = $this->News_Model->count($type);
+        $this->paginationnew->add_query = $query;
+        
+   		$result = $this->paginationnew->getQuery(TRUE);
+   		$details=$result->result();
+   		 		
+  	    $paginate = $this->paginationnew->paginate(); 
+   		//pagination
 		 $data=array('details'=>$details,
-		 				'more'=>$more);
+		 				'more'=>$more,
+		                'paginate'=>$paginate);
 		$this->load->view('linklistview',$data);
 	}
 	function thumbview(){
 		$more=$this->News_Model->more_news();
-		 $q=$this->uri->segment(3,0);
-		 $details=$this->News_Model->get_news($q);
+		 $type=$this->uri->segment(3,0);
+		  $query=$this->News_Model->get_news1($type);
+		 $a =base_url().'newslist/thumbview/'.$type;
+		 //pagination
+    	$this->load->library('paginationnew');
+    	
+    	$this->paginationnew->start = ($this->uri->segment(4)) ? $this->uri->segment(4) : '0';
+    	$this->paginationnew->limit =1;
+        $this->paginationnew->filePath ='javascript:loadNews(\''.$a.'';
+      
+        $this->paginationnew->select_what = '*';
+        $this->paginationnew->nbItems = $this->News_Model->count($type);
+        $this->paginationnew->add_query = $query;
+        
+   		$result = $this->paginationnew->getQuery(TRUE);
+   		$details=$result->result();
+   		 		
+  	    $paginate = $this->paginationnew->paginate(); 
+   		//pagination
 		 $data=array('details'=>$details,
-		 			'more'=>$more);
+		 			'more'=>$more,
+		            'paginate' => $paginate);
 		$this->load->view('linkthumbview',$data);
 	}
 }

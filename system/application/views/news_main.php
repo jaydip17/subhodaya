@@ -87,7 +87,7 @@
           		<table width="100%" cellspacing="10" height="505">
           			<tr>
           				<td id="newstable" valign="top" >
-          				 <div  id="news_heading"><span id="newsheading"><?=$news_type1['0']->news_cat ?></span></div>
+          				 <div  id="news_heading"><span id="newsheading"><?if(isset($news_type1['0'])){echo $news_type1['0']->news_cat;} ?></span></div>
           				 <div >
           				 	<ul id="mainnews">
           				 	<? $count=0; foreach ($news_type1 as $row): ?>
@@ -107,7 +107,7 @@
           				 </div>
           				</td>
           				<td  valign="top" id="newstable">
-          				 <div  id="news_heading"><span id="newsheading"><?=$news_type2['0']->news_cat ?></span></div>
+          				 <div  id="news_heading"><span id="newsheading"><? if(isset($news_type2['0'])){ echo $news_type2['0']->news_cat;}?></span></div>
           				 <div>
           				 <ul id="mainnews">
           				 <? $count=0; foreach($news_type2 as $row): ?>
@@ -124,13 +124,13 @@
           					}
           					?>
           				 </ul>
-          				 <div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>news/details/<?=$news_type2['0']->type?>"><?=$more['0']->matter?></a></span></div>
+          				 <div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>news/details/<?if(isset($news_type2['0'])){ echo $news_type2['0']->type; }?>"><?=$more['0']->matter?></a></span></div>
           				 </div>
           				</td>
           			</tr>
           			<tr>
           				<td  valign="top" id="newstable" >
-          				  <div  id="news_heading"><span id="newsheading"><?=$news_type3['0']->news_cat?></span></div>
+          				  <div  id="news_heading"><span id="newsheading"><?if(isset($news_type3['0'])){ echo $news_type3['0']->news_cat; }?></span></div>
           				 <div >
           				 <ul id="mainnews">
           				 <? $count=0; foreach($news_type3 as $row): ?>
@@ -146,12 +146,12 @@
           					}
           					?>
           				 </ul>
-          				 <div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>news/details/<?=$news_type3['0']->type?>"><?=$more['0']->matter?></a></span></div>
+          				 <div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>news/details/<?if(isset($news_type3['0'])){ echo $news_type3['0']->type;}?>"><?=$more['0']->matter?></a></span></div>
           				 </div>
           				</td>
           				<td  id="newstable" valign="top" >
           				  <div  id="news_heading">
-          				  	<span id="newsheading" ><?=$news_type4['0']->news_cat?></span>
+          				  	<span id="newsheading" ><? if(isset($news_type4['0'])){ echo $news_type4['0']->news_cat; }?></span>
           				  </div>
           				 <div>
           				 <ul id="mainnews">
@@ -169,7 +169,7 @@
           					}
           					?>
           				 </ul>
-          				 <div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>news/details/<?=$news_type4['0']->type?>"><?=$more['0']->matter?></a></span></div>
+          				 <div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>news/details/<?if(isset($news_type4['0'])){ echo $news_type4['0']->type; }?>"><?=$more['0']->matter?></a></span></div>
           				 </div>
           				</td>
           			</tr>
@@ -180,12 +180,12 @@
         <tr>
           <td width="5" valign="top" id="botomtop"><img src="<?=base_url();?>assets/imgs/senter-1.jpg" width="5" height="31" /></td>
           <td width="295" valign="top" id="botomtop" align="left"><!--<img src="<?=base_url();?>assets/imgs/001.gif" style="margin:4px 0px 0px 0px;"></img>-->
-          	<div style="padding-top: 6px;"><span id="newsheading"><?=$news_type5['0']->news_cat?></span></div></td>
+          	<div style="padding-top: 6px;"><span id="newsheading"><?if(isset($news_type5['0'])) { echo $news_type5['0']->news_cat; }?></span></div></td>
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter2.jpg" width="5" height="31" /></td>
           <td width="8">&nbsp; </td>
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter-1.jpg" width="5" height="31" /></td>
           <td width="295" valign="top" id="botomtop" align="left"><!--<img src="<?=base_url();?>assets/imgs/001.gif" style="margin:4px 0px 0px 0px;"></img>-->
-          	<div style="padding-top: 6px;"><span id="newsheading"><?=$news_type6['0']->news_cat?></span></div></td>
+          	<div style="padding-top: 6px;"><span id="newsheading"><?if(isset($news_type6['0'])){ echo $news_type6['0']->news_cat; }?></span></div></td>
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter2.jpg" width="5" height="31" /></td>
           <td width="8">&nbsp; </td>
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter-1.jpg" width="5" height="31" /></td>
@@ -196,11 +196,12 @@
         <tr>
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="109" /></td>
           <td valign="top" id="botom-ser">
-          	<!--<a href="#"><img src="<?=base_url();?>assets/news/news_img<?=$news_type5['0']->id ?>_thumb.jpg" style="padding: 3px 3px 3px 3px; border: 0px; height: 100px; width: 90px;"></a>
+          	<!--<a href="#"><img src="<?=base_url();?>assets/news/news_img<?if(isset($news_type5['0'])){ echo $news_type5['0']->id;} ?>_thumb.jpg" style="padding: 3px 3px 3px 3px; border: 0px; height: 100px; width: 90px;"></a>
           	--><ul id="mainnews">
-          		<? foreach ($news_type5 as $row): ?>
+          	<?if(isset($news_type5['0'])){
+          		foreach ($news_type5 as $row): ?>
           		<li><a href="#"><?=$row->heading ?></a></li>
-          		<? endforeach; ?>
+          		<? endforeach; }?>
           	</ul>
           </td>
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="109" /></td>
@@ -209,9 +210,10 @@
           <td valign="top" id="botom-ser">
           <div>
           	<ul id="mainnews">
-          	<? foreach ($news_type6 as $type): ?>
+          	<?if(isset($news_type6['0'])){
+          	  foreach ($news_type6 as $type): ?>
           		<li><a href=""><?=$type->heading ?></a></li>
-          	<? endforeach; ?>
+          	<? endforeach; }?>
           	</ul>
           </div>
           </td>

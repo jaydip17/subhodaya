@@ -1,46 +1,3 @@
-
-<script type="text/javascript"><!--
-
-var xmlhttp;
-
-function loadNews(url)
-{
-xmlhttp=null;
-if (window.XMLHttpRequest)
-  {// code for IE7, Firefox, Mozilla, etc.
-  xmlhttp=new XMLHttpRequest();
-  }
-else if (window.ActiveXObject)
-  {// code for IE5, IE6
-  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-  }
-if (xmlhttp!=null)
-  {
-  xmlhttp.onreadystatechange=get_Newslist;
-  xmlhttp.open("GET",url,true);
-  xmlhttp.send(null);
-  }
-else
-  {
-  alert("Your browser does not support XMLHTTP.");
-  }
-}
-function get_Newslist()
-{
-if (xmlhttp.readyState==4)
-  {// 4 = "loaded"
-  if (xmlhttp.status==200)
-    {// 200 = "OK"
-    document.getElementById('news_content').innerHTML=xmlhttp.responseText;
-    }
-  else
-    {
-    alert("Problem retrieving XML data:" + xmlhttp.statusText);
-    }
-  }
-}
-
---></script>
 <table width="99%"  border="0" cellpadding="0" cellspacing="0">
 <tr>
     <td width="430" valign="top"  align="left">
@@ -133,7 +90,7 @@ if (xmlhttp.readyState==4)
           				<td width="450" style="border: 1px solid #3789C3;"  valign="top">
           				 <div style="width:100%;"id="news_heading"><span id="newsheading"><?=$news['0']->news_cat?></span>
           				 <? $count=1; foreach($news as $row): ?>
-          				 <span id="changeview">Change View:<button onclick="loadNews('<?=base_url()?>newslist/listview/<?=$row->type ?>')">get</button>
+          				 <span id="changeview">Change View:<button onclick="loadNews('<?=base_url()?>newslist/listview/<?=$row->type?>')">get</button>
           				 <button onclick="loadNews('<?=base_url()?>newslist/thumbview/<?=$row->type ?>')">get1</button></span>
           				 <? if($count==1){
           				 	break;

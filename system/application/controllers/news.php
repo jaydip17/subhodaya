@@ -14,7 +14,8 @@ class News extends Controller {
 		$news_type4=$this->News_Model->get_newstype1(4);
 		$news_type5=$this->News_Model->get_newstype1(5);
 		$news_type6=$this->News_Model->get_newstype1(6);
-		$newspoll=$this->Poll_Model->get_newspolls(4);
+		$newspoll=$this->Poll_Model->get_newspolls($type=4);
+		$yes_poll=$this->Poll_Model->get_yes_newspoll($type=4);
 		$data=array('news_type1'=>$details,
 					'news_type2'=>$news_type2,
 					'news_type3'=>$news_type3,
@@ -22,7 +23,8 @@ class News extends Controller {
 					'news_type5'=>$news_type5,
 					'news_type6'=>$news_type6,
 					'more'      =>$more,
-					'newspoll'=>$newspoll
+					'newspoll'=>$newspoll,
+					'yes_poll'=>$yes_poll
 		);
 		$this->load->view("news_main",$data);
 	}

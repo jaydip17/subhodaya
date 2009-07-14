@@ -11,11 +11,15 @@ class Poll_Model extends Model {
 		return $result->result();
 	}
 	function get_newspolls($type){
-		$this->db->where('cat_id',$type);
+		$datestring = " %Y-%m-%d ";
+		$today=mdate($datestring);
+		$array=array('cat_id'=>$type,'displaydate'=>$today);
+		$this->db->where($array);
 		$result=$this->db->get('poll');
 		return $result->result();	
 	}
 	function get_newspolls1($type){
+		
 		$this->db->where('id',$type);
 		$result=$this->db->get('poll');
 		return $result->result();	
@@ -102,6 +106,9 @@ class Poll_Model extends Model {
 		    $b=$result[0]['optionb'];
 		    $c=$result[0]['optionc'];
 		    $t=$a+$b+$c;
+		    if($t==0){
+		    	$t=1;
+		    }
 		    $y=$a/$t*100;
 		    $n=$b/$t*100;
 		    $yn=$c/$t*100;
@@ -109,6 +116,19 @@ class Poll_Model extends Model {
 		}
 		return $data;
 	}
-	
+	function get_yes_newspoll($type)
+	{
+		if($type!="")
+			{
+				$result=$this->db->query('SELECT DATE_SUB(current_date, INTERVAL 1 day) as yday');
+	 			$yes=$result->result();
+	 			$yday=$yes['0']->yday;
+	 			$array=array('cat_id'=>$type,'displaydate'=>$yday);
+	 			$this->db->where($array);
+	 			$details=$this->db->get('poll');
+	 			return $details->result();
+	 			
+			}
+	}
 }
 ?>

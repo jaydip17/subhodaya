@@ -1,4 +1,3 @@
-
 <table width="99%"  border="0" cellpadding="0" cellspacing="0">
         <tr>
           <td width="350" valign="top" height="329"><table width="100%" border="0" cellpadding="0" cellspacing="0">
@@ -221,22 +220,34 @@
              <td valign="top" width="100%" id="center-line"><table width="100%" border="0" cellpadding="0" cellspacing="0">
          <tr>
              <td height="165" valign="top">
-             	<table>
-             		<tr>
-             			<td>1</td>
-             			<td>2</td>
-             		</tr>
-             		<tr>
-             			<td>3</td>
-             			<td>4</td>
-             		</tr>
-             		<tr>
-             			<td colspan='2'>1</td>
-             		</tr>
-             		<tr>
-             			<td colspan='2'>2</td>
-             		</tr>
-             	</table>
+         <!--<form action="<?=base_url() ?>contacts" method="POST" onSubmit="return checkEmpty(this);" name="loginForm">
+	<table border="0" align="center" cellpadding="2" cellspacing="0">
+	  <tr>
+		<td colspan="3" align="center">Enter login detais</td>
+	  </tr>
+	  <tr>
+	  	<td>Uname</></td>
+	  	<td><input type="text" name="username" size="10" value="<?php echo @$_POST['username']; ?>" /></td>
+	    <td>	
+	    <?php $selected='selected'; ?>
+	      <select name="domain" size="1">
+			
+			<option value="yahoo.com" >yahoo</option>
+			</select>
+	        </td>
+	  </tr>
+	  <tr>
+	  	  <td>Pwd</td>
+	      <td colspan="2"><input type="password" name="password" size="10"/></td>
+	  </tr>
+	  <tr>
+	  	  <td colspan="3" align="center"><input type="submit" name="submit" value="Fetch My Contacts" /></td>
+	  </tr>    
+	  <tr>
+	  	 <td colspan="3" align="center"><small>No details are stored</small></td>
+	  </tr>    
+	</table>
+	</form>-->
              </td>
          </tr>
        </table>
@@ -252,9 +263,11 @@
               </tr>
               <tr>
                 <td valign="top"><img src="<?=base_url();?>assets/imgs/new1.jpg" width="5" height="102" /></td>
-                <td  align="center" class="senterbotom" valign="top" style="width: 208;">
+                <td  align="left" class="senterbotom" valign="top" style="width: 208;">
                 <div id="home_poll" >
-                 	<div><?=$newspoll['0']->question?></div>
+                 	<div><? if(!empty($newspoll['0']->question)){
+                 	   echo $newspoll['0']->question;
+                 	   ?></div>
      				<table width="100%">
               			<tr>
               				<td align="right">
@@ -266,13 +279,24 @@
               			<tr><td align="right"><?=form_radio('answer','b',FALSE,$attributes) ?></td><td align="left"><?=$more['19']->matter ?></td></tr>
               			<tr><td align="right"><?=form_radio('answer','c',FALSE,$attributes) ?></td><td align="left"><?=$more['20']->matter ?></td></tr>
      				</table>
+     				<? }else echo 'today no poll'; ?>
                 </div>
+                <span style="font-weight: bold;font-size: 14px;color:maroon;">yesterday poll</span>
+                <div><?if(!empty($yes_poll['0']->question)){
+					echo  $yes_poll['0']->question;   ?>            	
+               </div>
+                <div align="right" id="result"><A HREF="javascript:void(0)"
+					onclick="window.open('<?=base_url();?>poll/yes_result/<?=$yes_poll['0']->id?>',
+						'welcome','width=300,height=200')">
+						Result</A></div>
+                
+                <?} else echo 'Yesterday no poll'; ?>
                 </td>
-              </tr>
+              </tr><!--
               
                 <td height="123" colspan="3" valign="top"><div align="right" style="padding-top:6px"><img src="<?=base_url();?>assets/imgs/add-fun.jpg" width="215" height="107"></img></div></td>
              
-          </table></td>
+          --></table></td>
         </tr>
       </table>
       <table width="99%"  border="0" cellpadding="0" cellspacing="0">

@@ -17,7 +17,7 @@
 <script src="<?=base_url();?>assets/SpryAssets/SpryTabbedPanels.js" type="text/javascript"></script>
 <link href="<?=base_url();?>assets/SpryAssets/SpryTabbedPanels.css" rel="stylesheet" type="text/css" />
 
-<link href="<?=base_url();?>assets/videojq.css" rel="stylesheet" type="text/css" />
+<link href="<?=base_url();?>assets/vistyle.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="<?=base_url();?>assets/js/jquery.js"></script>
 <script type="text/javascript" src="<?=base_url();?>assets/js/stepcarousel.js"></script>
 <script type="text/javascript" src="<?=base_url();?>assets/js/pollLoader.js"></script>

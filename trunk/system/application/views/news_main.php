@@ -88,11 +88,12 @@
           			<tr>
           				<td id="newstable" valign="top" >
           				 <div  id="news_heading"><span id="newsheading"><?if(isset($news_type1['0'])){echo $news_type1['0']->news_cat;} ?></span></div>
-          				 <div >
-          				 	<ul id="mainnews">
-          				 	<? $count=0; foreach ($news_type1 as $row): ?>
+          				 <div>
+          				 <ul id="mainnews">
+          				 <? $count=0; foreach($news_type1 as $row): ?>
           					<li><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>"><?=$row->heading ?></a></li>
-          				 	<? if($count==8){
+          				
+          				 <? if($count==8){
           						break;
           					}else{
           						$count++;
@@ -103,7 +104,7 @@
           					}
           					?>
           				 </ul>
-          				 <div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>news/details/<?=$news_type1['0']->type?>"><?=$more['0']->matter?></a></span></div>
+          				 <div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>news/details/<?if(isset($news_type2['0'])){ echo $news_type2['0']->type; }?>"><?=$more['0']->matter?></a></span></div>
           				 </div>
           				</td>
           				<td  valign="top" id="newstable">

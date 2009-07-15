@@ -13,7 +13,7 @@ class Newslist extends Controller {
     	$this->load->library('paginationnew');
     	
     	$this->paginationnew->start = ($this->uri->segment(4)) ? $this->uri->segment(4) : '0';
-    	$this->paginationnew->limit =1;
+    	$this->paginationnew->limit =5;
         $this->paginationnew->filePath ='javascript:loadNews(\''.$a.'';
       
         $this->paginationnew->select_what = '*';
@@ -39,7 +39,7 @@ class Newslist extends Controller {
     	$this->load->library('paginationnew');
     	
     	$this->paginationnew->start = ($this->uri->segment(4)) ? $this->uri->segment(4) : '0';
-    	$this->paginationnew->limit =1;
+    	$this->paginationnew->limit =5;
         $this->paginationnew->filePath ='javascript:loadNews(\''.$a.'';
       
         $this->paginationnew->select_what = '*';

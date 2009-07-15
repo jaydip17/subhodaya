@@ -1,4 +1,3 @@
-
 <form name="form1" method="post" action="<?=base_url()?>admin/contacts/import">
   <table width="340" border="0" cellspacing="0" cellpadding="0" >
 

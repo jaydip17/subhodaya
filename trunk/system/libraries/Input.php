@@ -244,12 +244,22 @@ class CI_Input {
 
 		if ($xss_clean === TRUE)
 		{
+		
 			return $this->xss_clean($array[$index]);
 		}
-
-		return $array[$index];
+		$value = $array[$index];
+		$result = $this->text_filter($value);
+		return $result;
 	}
-
+	// text filter 
+	function text_filter($value ='')
+		{
+			$string = $value;
+			$pattern =array('/&lt;script&gt;/i','/&lt;script&gt;/i','/alert/i','/location/i','/&lt;?php/i','/&lt;?/i','/&lt;!--/i','/&lt;!/i');
+			$replacement='';
+		 	$text = preg_replace($pattern, $replacement, $string);
+		 	return $text; 
+		}
 	// --------------------------------------------------------------------
 
 	/**

@@ -137,7 +137,7 @@ height:318px;
 .senterbotom{
       background-image:url(imgs/senter-botom.jpg);
 	  background-repeat:repeat-x;
-	  height:;
+	  
 }
 #botomtop{
       background-image:url(imgs/serter-3.jpg);
@@ -223,7 +223,7 @@ text-decoration: none;
 	font-weight: bold;
 }
 #changeview{
-padding-left: 160px;
+	padding-left: 135px;
 }
 #news_inner{
 	width:100%;

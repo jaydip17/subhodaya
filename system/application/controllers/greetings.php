@@ -7,7 +7,7 @@ class Greetings extends Controller {
 	}
 	function index(){
 		
-		$this->load->view('greetings_view',$data);
+		$this->load->view('greetings_view');
   }
 }
 ?>

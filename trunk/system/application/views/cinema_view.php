@@ -78,7 +78,7 @@
               			<tr><td align="right"><?=form_radio('answer','b',FALSE,$attributes) ?></td><td align="left"><?=$more['19']->matter ?></td></tr>
               			<tr><td align="right"><?=form_radio('answer','c',FALSE,$attributes) ?></td><td align="left"><?=$more['20']->matter ?></td></tr>
      				</table>
-     				<? }else echo 'to day no poll'; ?>
+     				<? }else echo 'To day no poll.'; ?>
      			<br><span style="font-weight: bold;font-size: 14px;color:maroon;">yesterday poll</span>
                 <div><?if(!empty($yes_poll['0']->question)){
                 	echo $yes_poll['0']->question;

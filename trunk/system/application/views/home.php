@@ -15,14 +15,14 @@
                           	<div id="demo" class="yui-navset" style="color: #EDF5FF;">
 	    						<ul class="yui-nav">
 							        <li class="selected"><a href="#tab1"><em style="padding: 5px 2px 0px 4px;"><span id="telugufont"><?=$more['10']->matter ?></span></em></a></li>
-							        <li><a href="#tab2"><em style="padding:5px 5px 0px 25px;"><span id="telugufont"><?=$more['11']->matter ?></span></em></a></li>
-							        <li><a href="#tab3"><em style="padding:5px 5px 0px 20px;"><span id="telugufont"><?=$more['4']->matter ?></span></em></a></li>
-									<li><a href="#tab3"><em style="padding:5px 5px 0px 25px;"><span id="telugufont"><?=$more['5']->matter ?></span></em></a></li>
+							        <li><a href="#tab2"><em style="padding:5px 4px 0px 25px;"><span id="telugufont"><?=$more['11']->matter ?></span></em></a></li>
+							        <li><a href="#tab3"><em style="padding:5px 4px 0px 20px;"><span id="telugufont"><?=$more['4']->matter ?></span></em></a></li>
+									<li><a href="#tab3"><em style="padding:5px 4px 0px 25px;"><span id="telugufont"><?=$more['5']->matter ?></span></em></a></li>
 	    						</ul>            
     							<div class="yui-content">
-							        <div id="tab1"><p><img src="<?=base_url();?>assets/imgs/move-img4.jpg" align="top"></img>
-							        	dgdgdfgdfgfsgdfg</p>
-							        	<div style="height: 45px">sdgfghfghfghghjgjh<br>asfdsgdfg</div>
+    							<div id="tab1">
+    							<? $count=0; foreach ($news_type7 as $row):?><div style="height: 187px;"><img src="<?=base_url();?>assets/news/news_img39_thumb.jpg" align="top" style="padding: 0px 5px 1px 2px;float: left;"></img>
+							        	<font style="font-size: 14px;"><?=$row->summery?></font></div>
 							        	<div style="padding:5px 5px 5px 5px; border: 1px solid #D9EBF7; background-image: url(assets/imgs/123.jpg);background-repeat: repeat-x; height: 70px">
 							        	<table width="100%">
 							        		<tr>
@@ -31,6 +31,9 @@
 							        		</tr>
 							        	</table>
 							        	</div></div>
+							        	<? if($count==0)
+							        	break;
+							        	endforeach;?>
 							        <div id="tab2">
 							        <p><img src="<?=base_url();?>assets/imgs/move-img4.jpg" align="top"></img>
 							        	dgdgdfgdfgfsgdfg</p>
@@ -87,7 +90,7 @@
             <tr>
               <td width="10"><img src="<?=base_url();?>assets/imgs/tock-line.jpg" width="10" height="34" style="border-left:1px solid #1D77B3; border-top:1px solid #1D77B3;"/></td>
               <td  width="337" valign="top" id="tock-line-center" align="left" >
-              <img src="<?=base_url(); ?>assets/imgs/001.jpg" width="21" height="24" align="middle" style="padding-top: 5px;"/><span id="telugufont"><?=$more['12']->matter ?></span></td>
+              <img src="<?=base_url(); ?>assets/imgs/001.jpg" width="21" height="24" align="middle" style="padding-top: 5px;"/><span id="telugufont" style="padding-top: 4px;"><?=$more['12']->matter ?></span></td>
               <td width="8" align="right"><img src="<?=base_url();?>assets/imgs/tock-line-right.jpg" width="8" height="34" style="border-right:1px solid #1D77B3; border-top:1px solid #1D77B3;"/></td>
             </tr>
           </table>
@@ -171,7 +174,7 @@
                   <tr>
                         <td width="6"  valign="top" id="img-senter"><img src="<?=base_url();?>assets/imgs/tock-line.jpg" width="6" height="34" /></td>
                         <td width="200" valign="bottom" id="img-senter" align="left" style="margin-bottom: 5px;">
-                        	<img src="<?=base_url(); ?>assets/imgs/001.jpg" style="margin:0px 0px 5px 0px;"></img>
+                        	<img src="<?=base_url(); ?>assets/imgs/001.jpg" style="margin:0px 0px 5px 0px;"></img><?php echo $more['21']->matter;?>
                         </td>
                         <td width="6" valign="top"><img src="<?=base_url();?>assets/imgs/tock-line-right.jpg" width="6" height="34" /></td>
                     </tr>
@@ -210,8 +213,8 @@
          <tr>
              <td width="6" valign="top"><img src="<?=base_url();?>assets/imgs/tock-line.jpg" width="6" height="35" /></td>
              <td  id="img-senter" align="left" valign="middle">
-                	<img src="<?=base_url(); ?>assets/imgs/001.jpg" style="margin:1px 0px 0px 0px;" align="middle"></img>
-                	<span style="font-size: 14px;font-weight: bold;">jhgj</span>
+<!--                	<img src="<?=base_url(); ?>assets/imgs/001.jpg" style="margin:1px 0px 0px 0px;" align="middle"></img>-->
+                	<span id="telugufont" style="padding: 0px 0px 8px 5px;"><?php echo $more['21']->matter;?></span>
              </td>
              <td valign="top"><img src="<?=base_url();?>assets/imgs/tock-line-right.jpg" width="6" height="35" /></td>
          </tr>
@@ -258,11 +261,11 @@
     	<table width="217" border="0" cellpadding="0" cellspacing="0" style="margin-top:6px;">
         	<tr>
                 <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter-1.jpg" width="5" height="31" /></td>
-                <td width="208" valign="top" id="senter3" align="left"><img src="<?=base_url();?>assets/imgs/001.gif" style="margin:3px 0px 0px 0px;" align="middle"></img><span style="font-weight: bold;font-size: 14px;"><?=$more['16']->matter ?></span></td>
+                <td width="208" valign="bottom" id="senter3" align="left"><img src="<?=base_url();?>assets/imgs/001.gif" style="margin:3px 0px 6px 0px;" align="middle"></img><span id="telugufont" style="margin-bottom: "><?=$more['16']->matter ?></span></td>
                 <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter2.jpg" width="5" height="31" /></td>
               </tr>
               <tr>
-                <td valign="top"><img src="<?=base_url();?>assets/imgs/new1.jpg" width="5" height="102" /></td>
+                <td valign="top"><img src="<?=base_url();?>assets/imgs/new1.jpg" width="5" height="225" /></td>
                 <td  align="left" class="senterbotom" valign="top" style="width: 208;">
                 <div id="home_poll" >
                  	<div><? if(!empty($newspoll['0']->question)){

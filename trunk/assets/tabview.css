@@ -164,7 +164,7 @@ border-width:1px 1px 0px 1px;
 color:#000;
 position:relative;
 text-decoration:none;
-width:82px;
+
 font-weight: bold;
 
 }
@@ -181,7 +181,7 @@ right:0;
 bottom:0;
 top:-1px;
 position:relative;
-width: 50px;
+
 }
 .yui-skin-sam .yui-navset .yui-nav .selected a,
 .yui-skin-sam .yui-navset .yui-nav .selected a:focus,

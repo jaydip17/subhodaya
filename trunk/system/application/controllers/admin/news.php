@@ -80,8 +80,21 @@ class News extends Controller {
 			$config['maintain_ratio'] = TRUE;
 			$config['width'] = 100;
 			$config['height'] = 88;
-	    	$this->load->library('image_lib');      
+			$this->load->library('image_lib');      
 	    	$this->image_lib->initialize($config);
+			if(!$this->image_lib->resize())
+	    	{
+	    		$error = array('error' => $this->image_lib->display_errors());	
+	    	}
+			$filename1= 'news_img'.$id.'t.jpg';
+	    	$config1['image_library'] = 'gd2';
+	        $config1['source_image'] = $image_path.$filename1;
+			$config1['create_thumb'] = TRUE;
+			$config1['maintain_ratio'] = TRUE;
+			$config1['width'] = 80;
+			$config1['height'] = 60;
+	    	$this->load->library('image_lib');      
+	    	$this->image_lib->initialize($config1);
 	    	if(!$this->image_lib->resize())
 	    	{
 	    		$error = array('error' => $this->image_lib->display_errors());	

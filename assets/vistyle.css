@@ -43,7 +43,7 @@ padding-bottom:6px;
 
 .stepcarousel .panel{
 	float: left; /*leave this value alone*/
-	overflow: hidden; /*clip content that go outside dimensions of holding panel DIV*/
+	overflow: hidden; /*clip content that go  outside dimensions of holding panel DIV*/
 	top: 20px;
 	margin-left: 35px; /*margin around each panel*/
 	margin-right: 15px;

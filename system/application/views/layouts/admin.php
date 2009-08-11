@@ -42,8 +42,9 @@ ddsmoothmenu.init({
 </li>
 <li><a href="#">Video</a>
 	<ul>
-  	<li><a href="<?=base_url();?>admin/videos">Insert</a></li>
-  	<li><a href="#">Add</a></li>
+  	<li><a href="<?=base_url();?>admin/videos/addcategeory">Add Categeory</a></li>
+  	<li><a href="<?=base_url();?>admin/videos/">Add Video</a></li>
+  	<li><a href="#">View/Edit Video</a></li>
   	</ul>
 </li>
 <li><a href="#">Greetings</a>

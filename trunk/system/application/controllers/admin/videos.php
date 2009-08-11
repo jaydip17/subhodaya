@@ -5,7 +5,20 @@ class Videos extends Controller {
 		parent::Controller();
 	}
 	function index(){
-		$this->load->view('admin/video_view');
+		$data['options'] = array(
+                  'small'  => 'Small Shirt',
+                  'med'    => 'Medium Shirt',
+                  'large'   => 'Large Shirt',
+                  'xlarge' => 'Extra Large Shirt',
+                );
+
+
+		
+		$this->load->view('admin/video_view',$data);
 	}
+	function addcategeory(){
+		$this->load->view('admin/addvideocategeory');
+	}
+	
 }
 ?>

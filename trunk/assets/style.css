@@ -281,6 +281,22 @@ text-decoration:none;
 color:	red;
 font-size: 14px;
 }
+#mainnews1 a:link{
+text-decoration:none;
+color:	#000000;
+}
+#mainnews1 a:active{
+text-decoration:none;
+color:	#000000;
+}
+#mainnews1 a:visited{
+text-decoration:none;
+color:	#000000;
+}
+#mainnews1 a:hover{
+text-decoration:none;
+color:	red;
+}
 #maintable-border{
 	border-bottom: 2px solid #0A70BB;
 	}

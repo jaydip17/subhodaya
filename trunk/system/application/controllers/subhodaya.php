@@ -11,6 +11,7 @@ class Subhodaya extends Controller {
 	function index(){
 		$news_type7=$this->News_Model->get_newstype1(7);
 		$active_news=$this->News_Model->active_news(2);
+		$active_news1=$this->News_Model->active_news(7);
 		$news_type4=$this->News_Model->get_newstype1(4);
 		$cinema_type2=$this->Cinema_Model->get_cinematype(2);
 		$cinema_type1=$this->Cinema_Model->get_cinematype(1);
@@ -24,7 +25,8 @@ class Subhodaya extends Controller {
 					'cinema_type1'=>$cinema_type1,
 					'newspoll'=>$newspoll,
 					'yes_poll'=>$yes_poll,
-					'active_news'=>$active_news
+					'active_news'=>$active_news,
+		            'active_news1'=>$active_news1
 					);
 		$this->load->view('home',$data);
 	}

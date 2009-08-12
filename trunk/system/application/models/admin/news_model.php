@@ -105,7 +105,7 @@ class News_Model extends Model
     {
     	$this->db->select('*');
     	$array=array('news.type'=>$id,'news.active'=>1);
-    	$this->db->where('news.type',$id);
+    	$this->db->where($array);
 		$this->db->from('news_types');
 		$this->db->join('news', 'news.type= news_types.id');
 		$query = $this->db->get_where();

@@ -7,7 +7,9 @@
 			<tr><td><div id="news_heading" class="heading"><span id="newsheading"><?=$result['0']->heading ?></span></div></td></tr>
 			<tr><td align="center"><div  id="maindiv-news">
 			<div class="help"></div>
-			<div class="content"><?=$result['0']->description ?></div>
+			<div class="content" >
+			<img src="<?=base_url();?>assets/news/news_img<?=$result['0']->id?>.jpg" style="float: left;padding:2px 2px 2px 2px;border: 1px solid  #9FA0A0; margin: 10px 0px 0px 10px;" ></img>
+			<?=$result['0']->description ?></div>
 			</div></td></tr>
 			<tr><td><div id="news_heading" class="heading"><span id="newsheading">Rate this Article</span></div></td></tr>
 			<tr><td align="center"><div style="border:1px solid #9FA0A0;">

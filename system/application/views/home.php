@@ -21,44 +21,49 @@
 	    						</ul>            
     							<div class="yui-content">
     							<div id="tab1">
-    							<div style="height: 187px;"><a href="<?=base_url();?>news/newsdetails/<?=$news_type7['0']->id?>"><img src="<?=base_url();?>assets/news/news_img39_thumb.jpg" align="top" style="padding: 0px 5px 1px 2px;float: left;border: 0px;"></img></a>
+    							<div style="height: 187px;" id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?=$news_type7['0']->id?>"><img src="<?=base_url();?>assets/news/news_img39_thumb.jpg" align="top" style="padding: 0px 5px 1px 2px;float: left;border: 0px;"></img></a>
     									<font id="telugufont"><a href="<?=base_url();?>news/newsdetails/<?=$news_type7['0']->id?>"><?=$news_type7['0']->heading?></a></font><br>
-							        	<font style="font-size: 14px;"><?=$news_type7['0']->summery?></font>
-							        	<table>
+							        	<font style="font-size: 14px;text-align: justify;"><?=$news_type7['0']->summery?></font>
+							        	<table height="100px;" >
 								        	<tr><td><font id="telugufont"><a href="<?=base_url();?>news/newsdetails/<?=$news_type7['1']->id?>"><?=$news_type7['1']->heading?></a></font></td></tr>
 								        	<tr><td><font id="telugufont"><a href="<?=base_url();?>news/newsdetails/<?=$news_type7['2']->id?>"><?=$news_type7['2']->heading?></a></font></td></tr>
 								        	<tr><td><font id="telugufont"><a href="<?=base_url();?>news/newsdetails/<?=$news_type7['3']->id?>"><?=$news_type7['3']->heading?></a></font></td></tr>
-								        	<tr><td><font id="telugufont"><a href="<?=base_url();?>news/newsdetails/<?=$news_type7['3']->id?>"><?=$news_type7['3']->heading?></a></font></td></tr>
 							        	</table>
-							        	<?php echo $more['0']->matter;?>
+							        	<font style="padding-left: 260px;"><a href="<?=base_url();?>news/"><?php echo $more['0']->matter;?></a></font>
 							        	</div>
 							        	<div style="padding:5px 5px 5px 5px; border: 1px solid #D9EBF7; background-image: url(assets/imgs/123.jpg);background-repeat: repeat-x; height: 70px">
-							        	<table width="100%">
+							        	<table width="100%" >
 							        		<tr>
-							        			<td width="50%" valign="top"><a href="<?=base_url();?>news/newsdetails/<?=$news_type7['4']->id?>"><img src="<?=base_url();?>assets/news/news_img<?=$news_type7['4']->id?>_thumb.jpg" style="padding: 0px 10px 0px 0px;float: left; height: 40px;width: 60px;border: 0px;" align="top"></a><div id="tulugufont" style="height: 40px"><a href="<?=base_url();?>news/newsdetails/<?=$news_type7['4']->id?>"><?=$news_type7['4']->heading?></a></div><div style="padding:5px 0px 0px 70px;"><a href="<?=base_url();?>news/newsdetails/<?=$news_type7['4']->id?>"><?=$more['1']->matter?></a></div></td>
-							        			<td width="50%" valign="top"><a href="<?=base_url();?>news/newsdetails/<?=$news_type7['5']->id?>"><img src="<?=base_url();?>assets/news/news_img<?=$news_type7['5']->id?>_thumb.jpg" style="padding: 0px 10px 0px 0px;float: left; height: 40px;width: 60px;border: 0px;" align="top"></a><div id="tulugufont" style="height: 40px"><a href="<?=base_url();?>news/newsdetails/<?=$news_type7['5']->id?>"><?=$news_type7['5']->heading?></a></div><div style="padding:5px 0px 0px 70px;"><a href="<?=base_url();?>news/newsdetails/<?=$news_type7['5']->id?>"><?=$more['1']->matter?></a></div></td>
+							        			<td width="50%" valign="top">
+							        			<a href="<?=base_url();?>news/newsdetails/<?=$news_type7['4']->id?>"><img src="<?=base_url();?>assets/news/news_img<?=$news_type7['4']->id?>_thumb.jpg" style="padding: 0px 10px 0px 0px;float: left; height: 40px;width: 60px;border: 0px;" align="top" ></a>
+							        				<div id="mainnews1" style="height: 40px"><a href="<?=base_url();?>news/newsdetails/<?=$news_type7['4']->id?>"><?=$news_type7['4']->heading?></a></div>
+							        				<div style="padding:5px 0px 0px 70px;" id="more-news-div"><a href="<?=base_url();?>news/newsdetails/<?=$news_type7['4']->id?>"><?=$more['1']->matter?></a></div>
+							        			</td>
+							        			<td width="50%" valign="top">
+							        			<a href="<?=base_url();?>news/newsdetails/<?=$news_type7['5']->id?>"><img src="<?=base_url();?>assets/news/news_img<?=$news_type7['5']->id?>_thumb.jpg" style="padding: 0px 10px 0px 0px;float: left; height: 40px;width: 60px;border: 0px;" align="top"></a>
+							        			<div id="mainnews1" style="height: 40px"><a href="<?=base_url();?>news/newsdetails/<?=$news_type7['5']->id?>"><?=$news_type7['5']->heading?></a></div>
+							        			<div style="padding:5px 0px 0px 70px;" id="more-news-div"><a href="<?=base_url();?>news/newsdetails/<?=$news_type7['5']->id?>"><?=$more['1']->matter?></a></div></td>
 							        		</tr>
 							        	</table>
 							        	</div></div>
 							        	
 							        <div id="tab2">
-							        	<div style="height: 187px;"><img src="<?=base_url();?>assets/news/news_img<?=$news_type4['0']->id?>_thumb.jpg" align="top" style="padding: 0px 5px 1px 2px;float: left;"></img>
-    									<font id="telugufont"><?=$news_type4['0']->heading?></font><br>
-							        	<font style="font-size: 14px;"><?=$news_type4['0']->summery?></font>
+							        	<div style="height: 187px;" id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?=$news_type4['0']->id?>"><img src="<?=base_url();?>assets/news/news_img<?=$news_type4['0']->id?>_thumb.jpg" align="top" style="padding: 0px 5px 1px 2px;float: left;border: 0px;"></img></a>
+    									<font id="telugufont"><a href="<?=base_url();?>news/newsdetails/<?=$news_type4['0']->id?>"><?=$news_type4['0']->heading?></a></font><br>
+							        	<font style="font-size: 14px;text-align: justify;"><?=$news_type4['0']->summery?></font>
 							        	
-							        	<table>
-								        	<tr><td><font id="telugufont"><?=$news_type4['1']->heading?></font></td></tr>
-								        	<tr><td><font id="telugufont"><?=$news_type4['2']->heading?></font></td></tr>
-								        	<tr><td><font id="telugufont"><?=$news_type4['3']->heading?></font></td></tr>
+							        	<table  height="100px;">
+								        	<tr><td><font id="telugufont"><a href="<?=base_url();?>news/newsdetails/<?=$news_type4['1']->id?>"><?=$news_type4['1']->heading?></a></font></td></tr>
+								        	<tr><td><font id="telugufont"><a href="<?=base_url();?>news/newsdetails/<?=$news_type4['2']->id?>"><?=$news_type4['2']->heading?></a></font></td></tr>
+								        	<tr><td><font id="telugufont"><a href="<?=base_url();?>news/newsdetails/<?=$news_type4['3']->id?>"><?=$news_type4['3']->heading?></a></font></td></tr>
 							        	</table>
 							        	</div>
 							        	<div style="padding:5px 5px 5px 5px; border: 1px solid #D9EBF7; background-image: url(assets/imgs/123.jpg);background-repeat: repeat-x; height: 70px">
 							        	<table width="100%">
 							        	
 							        		<tr>
-							        			<td width="50%" valign="top"><img src="<?=base_url();?>assets/news/news_img<?=$news_type4['4']->id?>_thumb.jpg" style="padding: 0px 10px 0px 0px;float: left; height: 40px;width: 60px;" align="top"><div id="tulugufont" style="height: 40px"><?=$news_type4['1']->heading?></div><div style="padding:5px 0px 0px 70px;"><?=$more['1']->matter?></div></td>
-							        			<td width="50%" valign="top"><img src="<?=base_url();?>assets/news/news_img<?=$news_type4['5']->id?>_thumb.jpg" style="padding: 0px 10px 0px 0px;float: left; height: 40px;width: 60px;" align="top"><div id="tulugufont" style="height: 40px"><?=$news_type4['1']->heading?></div><div style="padding:5px 0px 0px 70px;"><?=$more['1']->matter?></div></td>
-							        	
+							        			<td width="50%" valign="top"><a href="<?=base_url();?>news/newsdetails/<?=$news_type4['4']->id?>"><img src="<?=base_url();?>assets/news/news_img<?=$news_type4['4']->id?>_thumb.jpg" style="padding: 0px 10px 0px 0px;float: left; height: 40px;width: 60px;border: 0px;" align="top"></a><div id="mainnews1" style="height: 40px"><a href="<?=base_url();?>news/newsdetails/<?=$news_type4['4']->id?>"><?=$news_type4['4']->heading?></a></div><div style="padding:5px 0px 0px 70px;" id="more-news-div"><a href="<?=base_url();?>news/newsdetails/<?=$news_type4['4']->id?>"><?=$more['1']->matter?></a></div></td>
+							        			<td width="50%" valign="top"><a href="<?=base_url();?>news/newsdetails/<?=$news_type4['5']->id?>"><img src="<?=base_url();?>assets/news/news_img<?=$news_type4['5']->id?>_thumb.jpg" style="padding: 0px 10px 0px 0px;float: left; height: 40px;width: 60px;border: 0px;" align="top"></a><div id="mainnews1" style="height: 40px"><a href="<?=base_url();?>news/newsdetails/<?=$news_type4['5']->id?>"><?=$news_type4['5']->heading?></a></div><div style="padding:5px 0px 0px 70px;" id="more-news-div"><a href="<?=base_url();?>news/newsdetails/<?=$news_type4['5']->id?>"><?=$more['1']->matter?></a></div></td>
 							        		</tr>
 							        		
 							        	</table>
@@ -66,7 +71,7 @@
 							        <div id="tab3">
 							        <div style="height: 187px;"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type1['0']->id?>_thumb.jpg" align="top" style="padding: 0px 5px 1px 2px;float: left;"></img>
     									<font id="telugufont"><?=$cinema_type1['0']->heading?></font><br>
-							        	<font style="font-size: 14px;"><?=$cinema_type1['0']->summary?></font>
+							        	<font style="font-size: 14px;text-align: justify;"><?=$cinema_type1['0']->summary?></font>
 							        	<table>
 							        		<tr><td><font id="telugufont"><?=$cinema_type1['1']->heading?></font></td></tr>
 							        		<tr><td><font id="telugufont"><?=$cinema_type1['2']->heading?></font></td></tr>
@@ -87,7 +92,7 @@
 									<div id="tab4">
 									    <div style="height: 187px;"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type1['0']->id?>_thumb.jpg" align="top" style="padding: 0px 5px 1px 2px;float: left;"></img>
     									<font id="telugufont"><?=$cinema_type1['0']->heading?></font><br>
-							        	<font style="font-size: 14px;"><?=$cinema_type1['0']->summary?></font>
+							        	<font style="font-size: 14px;text-align: justify;"><?=$cinema_type1['0']->summary?></font>
 							        	<table>
 							        		<tr><td><font id="telugufont"><?=$cinema_type1['1']->heading?></font></td></tr>
 							        		<tr><td><font id="telugufont"><?=$cinema_type1['2']->heading?></font></td></tr>
@@ -131,15 +136,16 @@
               <tr>
                 <td   valign="top" id="img-center"><img src="<?=base_url();?>assets/imgs/tock-line-boyom.jpg" width="5" height="283" /></td>
                 <td width="340" valign="top" id="tock-botom-center" align="left">
-                <div style="padding-top: 5px;"><img src="<?=base_url();?>assets/imgs/ys-img.jpg" style="margin:2px 5px 0px 2px;float: left;" align="top"></img>
-                <font id="telugufont"><?php echo $active_news['0']->heading;?></font><br>
+                <div style="padding-top: 5px;" id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?=$active_news['0']->id?>"><img src="<?=base_url();?>assets/news/news_img<?=$active_news['0']->id?>_thumb.jpg" style="margin:2px 5px 0px 2px;float: left;border: 0px;" align="top"></img></a>
+                <font id="telugufont"><a href="<?=base_url();?>news/newsdetails/<?=$active_news['0']->id?>"><?php echo $active_news['0']->heading;?></a></font><br>
                <?php echo $active_news['0']->summery;?>
                <table width="100%">
-            <?php for($i=1;$i<8;$i++){?>
+            <?php 
+            foreach ($active_news as $row): ?>
                		<tr>
-               			<td width="50%" align="left" style="padding-left: 10px;"><a href="#"><?php echo $active_news['0']->heading;?></a></td>
+               			<td width="100%" align="left" style="padding-left: 10px;" ><a href="<?=base_url();?>news/newsdetails/<?=$active_news['0']->id?>"><?php echo $row->heading;?></a></td>
                		</tr>
-          <?php }?>
+          <?php endforeach;?>
                </table>
                 </div>
                 </td>
@@ -220,7 +226,13 @@
                     </tr>
                       <tr>
                         <td  valign="top" id="center-img"><img src="<?=base_url();?>assets/imgs/new1.jpg" width="5" height="214" /></td>
-                        <td width="200" id="center-img" align="left" valign="top"><div style="padding-top: 2px;">malleswarivhnjgfj ghjkfghfgjhg jfgjhfgjhf gjhgfjhghjfgjh afsdfgsdfg</div></td>
+                        <td width="200" id="center-img" align="left" valign="top">
+                        	<div style="padding-top: 2px; text-align: justify;">
+                        		<img src="<?=base_url();?>assets/news/news_img<?=$active_news1['0']->id?>_thumb.jpg" style="padding: 0px 3px 2px 0px;float: left;"/>
+                        		<font id="telugufont"><?=$active_news1['0']->heading?></font><br>
+                        		<?=$active_news1['0']->summery?>
+                        	</div>
+                        </td>
                         <td  valign="top" id="center-img"><img src="<?=base_url();?>assets/imgs/new.jpg" width="5" height="214" /></td>
                     </tr>
                   </table>
@@ -237,9 +249,11 @@
                       <tr>
                         <td height="214"  valign="top" id="center-img"><img src="<?=base_url();?>assets/imgs/new1.jpg" width="5" height="214" /></td>
                         <td width="200" id="center-img" align="left" valign="top" height="100%">
-	                        <div style="height: 190px;"><a href="#"><img src="<?=base_url();?>assets/cinema/ceni_img16_thumb.jpg" style="float: left;padding:2px 5px 2px 2px;border: 0px;" ></img></a>
+	                        <div style="height: 190px;text-align: justify;padding-top: 3px;" id="mainnews">
+	                        <a href="#"><img src="<?=base_url();?>assets/cinema/ceni_img16_thumb.jpg" style="float: left;padding:2px 5px 2px 2px;border: 0px;" ></img></a>
+	                        <a href="#"><?=$cinema_type2['0']->heading?></a><br>
 	                   		<?=$cinema_type2['0']->summary ?></div>
-	                        <div style="padding: 0px 0px 0px 140px;"><a href="#"><span id="news-more"><?=$more['1']->matter ?>...</span></a></div>
+	                        <div style="padding: 0px 0px 0px 120px;" id="mainnews"><a href="#"><span id="news-more"><?=$more['1']->matter ?>...</span></a></div>
                         </td>
                          <td height="214"  valign="top" id="center-img"><img src="<?=base_url();?>assets/imgs/new.jpg" width="5" height="214" /></td>
                     </tr>
@@ -342,32 +356,65 @@
           --></table></td>
         </tr>
       </table>
-      <table width="99%"  border="0" cellpadding="0" cellspacing="0">
-        <tr>
-          <td width="5" valign="top" id="botomtop"><img src="<?=base_url();?>assets/imgs/senter-1.jpg" width="5" height="31" /></td>
-          <td width="295" valign="bottom" id="botomtop" align="left"><table><tr><td width="20%"><img src="<?=base_url(); ?>assets/imgs/001.jpg"></img></td><td width="50%" id="telugufont"><?php echo $more['6']->matter;?></td><td width="30%" id="telugufont"><?php echo $more['7']->matter;?></td></tr></table></td>
-          <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter2.jpg" width="5" height="31" /></td>
-          <td width="8">&nbsp; </td>
-          <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter-1.jpg" width="5" height="31" /></td>
-          <td width="295" valign="bottom" id="botomtop" align="left"><table><tr><td width="20%"><img src="<?=base_url(); ?>assets/imgs/001.jpg"></img></td><td width="50%" id="telugufont"><?php echo $more['8']->matter;?></td><td width="30%" id="telugufont"><?php echo $more['9']->matter;?></td></tr></table></td>
-          <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter2.jpg" width="5" height="31" /></td>
-          <td width="8">&nbsp; </td>
-          <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter-1.jpg" width="5" height="31" /></td>
-          <td width="295" valign="bottom"  id="botomtop" align="left"><table><tr><td width="20%"><img src="<?=base_url(); ?>assets/imgs/001.jpg"></img></td><td width="80%" id="telugufont"><?=$more['8']->matter ?></td></tr></table></td>
-          <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter2.jpg" width="5" height="31" /></td>
-        </tr>
-        <tr>
-          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="109" /></td>
-          <td valign="top" id="botom-ser">fgjhgj</td>
-          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="109" /></td>
-          <td width="8">&nbsp;</td>
-          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="109" /></td>
-          <td valign="top" id="botom-ser">sdgfhj</td>
-          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="109" /></td>
-          <td width="8">&nbsp;</td>
-          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="109" /></td>
-          <td valign="top" id="botom-ser">dshfgjh</td>
-          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="109" /></td>
-        </tr>
-    </table>
+   <table width="100%" align="left"><tr>
+   <td><table width="35%"  border="0" cellpadding="0" cellspacing="0">
+     		<tr><td valign="bottom" align="left" width="32" >
+        		 <div class=" yui-skin-sam" style="width: 310px; border: 1px solid #50BCFC;" >
+                      	<div id="demo2" class="yui-navset" style="color: #EDF5FF;">
+	    						<ul class="yui-nav">
+							       <li class="selected" style="text-align: center;"><a href="#tab1"><em style="width: 80px;padding-top: 2px" id="telugufont"><?=$more['5']->matter?></em></a></li>
+							        <li style="text-align: center;"><a href="#tab2"><em style="width: 80px;padding-top: 2px""><span id="telugufont"><?=$more['7']->matter ?></span></em></a></li>
+	    						</ul>            
+    							<div class="yui-content" style="height: 150px;text-align: center;">
+							        <div id="tab1"><p>Tab four Content</p></div>
+							        <div id="tab2"><p>Tab Two ContentTab One ContentTab One Content</p></div>
+    							</div>
+<script>
+(function() {
+    var tabView = new YAHOO.widget.TabView('demo2');
+    YAHOO.log("The example has finished loading; as you interact with it, you'll see log messages appearing here.", "info", "example");
+})();
+</script>
+						</div>
+						</div>
+        </td></tr></table></td>
+	<td><table width="35%"  border="0" cellpadding="0" cellspacing="0">
+     		<tr><td valign="bottom" align="left" width="32" >
+        		 <div class=" yui-skin-sam" style="width: 310px; border: 1px solid #50BCFC;" >
+                      	<div id="demo3" class="yui-navset" style="color: #EDF5FF;">
+	    						<ul class="yui-nav">
+							       <li class="selected" style="text-align: center;"><a href="#tab1"><em style="width: 80px;padding-top: 2px"" id="telugufont"><?=$more['8']->matter?></em></a></li>
+							        <li style="text-align: center;"><a href="#tab2"><em style="width: 80px;padding-top: 2px""><span id="telugufont"><?=$more['9']->matter ?></span></em></a></li>
+	    						</ul>            
+    							<div class="yui-content" style="height: 150px;text-align: center;">
+							        <div id="tab1"><p>Tab four Content</p></div>
+							        <div id="tab2"><p>Tab Two ContentTab One ContentTab One Content</p></div>
+    							</div>
+<script>
+(function() {
+    var tabView = new YAHOO.widget.TabView('demo3');
+    YAHOO.log("The example has finished loading; as you interact with it, you'll see log messages appearing here.", "info", "example");
+})();
+</script>
+						</div>
+						</div>
+        </td></tr></table></td>
+	<td width="35%" ><table  width="98%" align="left" style="margin-left:6px;" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td width="6" id="img-senter"><img src="<?=base_url();?>assets/imgs/tock-line.jpg" width="7" /></td>
+                        <td valign="bottom" id="img-senter" align="left" style="margin-bottom: 10px;">
+                        <table><tr><td width="20%"><img src="<?=base_url(); ?>assets/imgs/001.jpg"></img></td><td width="80%" id="telugufont"><?=$cinema_type2['0']->cinema_type ?></td></tr></table>
+                        </td>
+                        <td width="6"><img src="<?=base_url();?>assets/imgs/tock-line-right.jpg" width="6" height="34" /></td>
+             		 </tr>
+                      <tr>
+                        <td  valign="top" id="center-img1"><img src="<?=base_url();?>assets/imgs/new1.jpg" width="5" /></td>
+                        <td id="center-img1" align="left" style="border-bottom: 1px solid #50BCFC;">
+	                        <div style="text-align: justify;padding-top: 3px;" id="mainnews"></div>
+                        </td>
+                         <td id="center-img1"><img src="<?=base_url();?>assets/imgs/new.jpg" width="5"/></td>
+                    </tr>
+                  </table>
+    </td></tr>
+</table>
 				

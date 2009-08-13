@@ -384,3 +384,27 @@ background-position:0% -42px;
 	height: 8px;
 	width:100%;
 	} 
+
+#hotimg{
+ background-image:url(imgs/rating-image.jpg);
+ background-repeat:no-repeat;
+ margin-left: 128px; 
+	}
+	
+#topimg{
+background-image:url(imgs/topvideo-rating.jpg);
+background-repeat:no-repeat;
+	
+	}	
+	
+#backimg{
+background-image:url(imgs/middle-video-line.jpg);
+background-repeat:repeat-x;
+height:558px;
+
+	}	
+#allimg{
+background-image:url(imgs/all-video-middleline.jpg);
+background-repeat:repeat-x;
+height:116px;
+	}	

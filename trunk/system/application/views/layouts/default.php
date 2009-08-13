@@ -24,14 +24,16 @@
 <script type="text/javascript" src="<?=base_url();?>assets/js/newsLoader.js"></script>
 
 
-<?if($this->uri->segment(2)=='details'){;
+<?if($this->uri->segment(1)=='news'){;
 $type=$this->uri->segment(3);
 ?>
 <body onload="loadNews('<?=base_url()?>newslist/listview/<?=$type?>')">
+<?}else{ if($this->uri->segment(1)=='cinema'){;
+$type=$this->uri->segment(3);?>
+<body onload="loadNews('<?=base_url()?>cinemalist/listview/<?=$type?>')">
 <?}else{ ?>
 <body>
-<?} ?>
-
+<?php }}?>
 <table width="999" height="1330"  border="0" align="center" cellpadding="0" cellspacing="0" >
   <tr>
     <td width="985"  align="center" valign="top"><table width="988"  border="0" align="center" cellpadding="0" cellspacing="0">

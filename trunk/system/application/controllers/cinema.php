@@ -29,5 +29,22 @@ class Cinema extends Controller {
 		);
 		$this->load->view('cinema_view',$data);
 	}
+	function details(){
+		$more=$this->News_Model->more_news();
+		$id=$this->uri->segment(3,0);
+		$result=$this->Cinema_Model->get_all($id);
+		$data=array('more'=>$more,
+					'result'=>$result);
+		$this->load->view('cinema_content',$data);
+	}
+	function inner(){
+		$more=$this->News_Model->more_news();
+		$id=$this->uri->segment(3,0);
+		$result=$this->Cinema_Model->inner($id);
+		$data=array('more'=>$more,
+					'result'=>$result
+					);
+		$this->load->view('cinema_inner',$data);
+	}
 }
 ?>

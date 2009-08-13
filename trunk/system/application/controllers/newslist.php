@@ -25,6 +25,7 @@ class Newslist extends Controller {
    		 		
   	    $paginate = $this->paginationnew->paginate(); 
    		//pagination
+   		
 		 $data=array('details'=>$details,
 		 				'more'=>$more,
 		                'paginate'=>$paginate);

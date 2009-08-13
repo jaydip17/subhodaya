@@ -130,9 +130,11 @@
          <td><div><div style="float:left; padding-right:10px;"><img src="<?=base_url();?>assets/imgs/hotvideo6.jpg"></div>
               <span style=" font-size:12px;font-weight:bold;">12/08/09 Peter shiff<br/>The end show..<br/><span style="color:#FF6507;">650 views</span><br/>Philde carolis<br/><div id="hotimg" style="height:19px;width:128px; padding-top:2px;">rating: <span style="color:#FF6507;">2.5/5</span></div></div></span></td>
        
-        </tr> 
+        </tr>
+        </table> 
+         <table>
         <tr  style="padding-top:6px;height:23;">
-          <td colspan="2" style="background-color:#93D7FA; border:1px solid #9D9D9D;" align="right">music videos>></td>
+          <td  style="background-color:#93D7FA; border:1px solid #9D9D9D; width:640px;" align="right">music videos>></td>
         
         </tr>
        
@@ -169,8 +171,10 @@
               <span style=" font-size:12px;font-weight:bold;">12/08/09 Peter shiff<br/>The end show..<br/><span style="color:#FF6507;">650 views</span><br/>Philde carolis<br/><div id="hotimg" style="height:19px;width:128px; padding-top:2px;">rating: <span style="color:#FF6507;">2.5/5</span></div></div></span></td>
        
         </tr> 
-        <tr height="25" style="padding-top:6px;">
-         <td colspan="2" style="background-color:#93D7FA; border:1px solid #9D9D9D;" align="right" width="100%">comedy videos>></td>
+         </table>
+         <table>
+        <tr height="23" style="padding-top:6px;">
+         <td  style="background-color:#93D7FA; border:1px solid #9D9D9D; width:640px;" align="right">comedy videos>></td>
         </tr>
        
        </table>
@@ -205,8 +209,10 @@
               <span style=" font-size:12px;font-weight:bold;">12/08/09 Peter shiff<br/>The end show..<br/><span style="color:#FF6507;">650 views</span><br/>Philde carolis<br/><div id="hotimg" style="height:19px;width:128px; padding-top:2px;">rating: <span style="color:#FF6507;">2.5/5</span></div></div></span></td>
        
         </tr> 
-        <tr height="25" style="padding-top:6px;">
-         <td colspan="2" style="background-color:#93D7FA; border:1px solid #9D9D9D;" align="right">movies & filmmakers>></td>
+         </table>
+         <table>
+        <tr height="23" style="padding-top:6px;">
+         <td  style="background-color:#93D7FA; border:1px solid #9D9D9D; width:640px;" align="right">Movies & Filmmakers>></td>
         </tr>
        
        </table>

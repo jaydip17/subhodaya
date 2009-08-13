@@ -46,11 +46,43 @@ class Cinema_Model extends Model {
 	}
     function get_cinematype($type=""){
    		$this->db->select('*');
+   		$this->db->order_by("cinema.insert_date", "desc");
    		$this->db->where('type',$type);
 		$this->db->from('cinema_cat');
 		$this->db->join('cinema','cinema.type=cinema_cat.id');
 		$details = $this->db->get_where();
     	return $details->result();
+    }
+    function get_all($type){
+    	$this->db->select('*');
+    	$this->db->order_by("cinema.insert_date", "desc");
+    	$this->db->where('type',$type);
+		$this->db->from('cinema_cat');
+		$this->db->join('cinema', 'cinema.type=cinema_cat.id');
+		$query = $this->db->get_where();
+			return $query->result();
+		
+    }
+	function get_cinema1($type)
+	{
+		$query="from cinema where type=$type order by cinema.insert_date desc";
+		return $query;
+	}
+	function count($type)
+	{
+    	$this->db->where('type',$type);
+		$this->db->from('cinema');
+		$count =$this->db->count_all_results();
+		return $count;
+	}
+    function inner($id)
+    {
+    	$this->db->select('*');
+    	$this->db->where('cinema.id',$id);
+		$this->db->from('cinema_cat');
+		$this->db->join('cinema', 'cinema.type= cinema_cat.id');
+		$query = $this->db->get_where();
+		return $query->result();
     }
     
 }

@@ -56,6 +56,7 @@ class News_Model extends Model
     function get_newstype1($type)
     {
     	$this->db->select('*');
+    	$this->db->order_by("news.insert_date", "desc");
     	$this->db->where('type',$type);
 		$this->db->from('news_types');
 		$this->db->join('news', 'news.type= news_types.id');
@@ -69,6 +70,7 @@ class News_Model extends Model
     function get_news($type)
     {
  		$this->db->select('*');
+ 		$this->db->order_by("news.insert_date", "desc");
     	$this->db->where('type',$type);
 		$this->db->from('news_types');
 		$this->db->join('news', 'news.type= news_types.id');
@@ -78,7 +80,7 @@ class News_Model extends Model
 	}
 	function get_news1($type)
 	{
-		$query=" from news where type=$type";
+		$query="from news where type=$type order by news.insert_date desc";
 		return $query;
 	}
 	

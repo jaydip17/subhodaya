@@ -11,7 +11,7 @@
 		     			<tr><td height="4" valign="bottom"><img src="<?=base_url();?>assets/imgs/top-cor-line.jpg" width="500" height="4" /></td></tr>
 		            </table>
 	                <table width="100%"  border="0" style="border-left:1px solid #0872BC; border-right:1px solid #0872BC;" cellpadding="0" cellspacing="0">
-	                    <tr><td height="378"></td>
+	                    <tr><td height="360"></td>
 	                    </tr>
 	                </table></td></tr>
 	                <tr><td><img src="<?=base_url();?>assets/imgs/top-crow-botom.jpg" width="500"/></td></tr>
@@ -20,30 +20,34 @@
      </tr>
      </table>
      </td>
-     <td width="240" valign="top" align="center" height="378">
-        <table width="100%" align="center" style="border:1px solid #0872BC;" "padding-left:9px; padding-right:9px; cellspacing:0px cellpadding:0px;">
+     <td  valign="top" align="center" height="370">
+        <table width="240" height="370" align="center" style="border:1px solid #0872BC;  cellspacing:0px cellpadding:0px;">
+            <tr>
+           <td colspan="2"  style="border:1px solid #50BFC;height:25px;" id="video_heading" align="center">Latest Video</td>
+            </tr>
           <tr>
-           <td  colspan="2" style="border:1px solid #50BFC;height:25px;" id="video_heading" align="center">Latest Video</td>
+           <td align="center"><div  margin-left:4px;"><img src="<?=base_url();?>assets/imgs/latest1.jpg"></div></td>
+           <td><div style="font-size:10px; font-weight:bold; padding-left:4px;">Jeevi Rating:<span style="color:#FF6507;">2.5/5</span><br/>Genre:Action/Family<br/><span style="color:#FF6507;"><u>Drama</u></span><br/>Type:Bilingual<br/>(Thorani in Tamil)</div></td>
           </tr>
           <tr>
-           <td><div style="border:1px solid; margin-left:4px;"><img src="<?=base_url();?>assets/imgs/1.jpg"></div></td>
-           <td><div style="font-size:11px font-weight:bold; padding-left:4px;">Jeevi Rating:<span style="color:#F8874F;">2.5/5</span><br/>Punchline:<span style="color:#F8874F;">routine commercial</span><br/>Genre:Action/Family<br/><u>Drama</u><br/>Type:Bilingual<br/>(Thorani in Tamil)</div></td>
-          </tr>
-          <tr>
-           <td><div style="border:1px solid;margin-left:4px;"><img src="<?=base_url();?>assets/imgs/4.jpg"></div></td>
-           <td><div style="font-size:11px font-weight:bold; padding-left:4px;" >Jeevi Rating:<span style="color:#F8874F;">2.5/5</span><br/>Punchline:<span style="color:#F8874F;">routine commercial</span><br/>Genre:Action/Family<br/><u>Drama</u><br/>Type:Bilingual<br/>(Thorani in Tamil)</div></td>
+           <td align="center"><div margin-left:4px;"><img src="<?=base_url();?>assets/imgs/latest2.jpg"></div></td>
+           <td><div style="font-size:10px; font-weight:bold; padding-left:4px;" >Jeevi Rating:<span style="color:#FF6507;">2.5/5</span><br/>Genre:Action/Family<br/><span style="color:#FF6507;"><u>Drama</u></span><br/>Type:Bilingual<br/>(Thorani in Tamil)</div></td>
          </tr>
           <tr>
-           <td><div style="border:1px solid;margin-left:4px;"><img src="<?=base_url();?>assets/imgs/5.jpg"></div></td>
-           <td><div style="font-size:11px font-weight:bold; padding-left:4px;">Jeevi Rating:<span style="color:#F8874F;">2.5/5</span><br/>Punchline:<span style="color:#F8874F;">routine commercial</span><br/>Genre:Action/Family<br/><u>Drama</u><br/>Type:Bilingual<br/>(Thorani in Tamil)</div></td>
+           <td align="center"><div margin-left:4px;"><img src="<?=base_url();?>assets/imgs/latest3.jpg"></div></td>
+           <td><div style="font-size:10px; font-weight:bold; padding-left:4px;">Jeevi Rating:<span style="color:#FF6507;">2.5/5</span><br/>Genre:Action/Family<br/><span style="color:##FF6507;"><u>Drama</u></span><br/>Type:Bilingual<br/>(Thorani in Tamil)</div></td>
           </tr>
-          <tr><td colspan="2" align="right" id="vi_heading">Next>></td></tr>
+           <tr>
+           <td align="center"><div margin-left:4px;"><img src="<?=base_url();?>assets/imgs/latest4.jpg"></div></td>
+           <td><div style="font-size:10px; font-weight:bold; padding-left:4px;">Jeevi Rating:<span style="color:#FF6507;">2.5/5</span><br/>Genre:Action/Family<br/><span style="color:##FF6507;"><u>Drama</u></span><br/>Type:Bilingual<br/>(Thorani in Tamil)</div></td>
+          </tr>
+          <tr><td colspan="2" align="right" id="vi_heading">More>></td></tr>
         </table>
-     
+       
      </td>
    
-     <td width="185" align="center" valign="top" rowspan="3">
-		<table width="100%" style="border:1px solid #50BCFC;">
+     <td  align="center" valign="top">
+		<table width="185" style="border:1px solid #50BCFC;">
 			<tr>
 				<td align="center"><div><img src="<?=base_url();?>assets/imgs/11.jpg"></div></td>
 			</tr>
@@ -52,270 +56,279 @@
 			    </tr>
 			    
 			</table>
-			 <div style="padding-top: 10px">
-			 <table style="border:1px solid #50BCFC;" bgcolor="#9CD8FC" width="97%" >
-				<tr>
-					<td align="center">
-					<div style="border:1px solid;"><img src="<?=base_url();?>assets/imgs/16.jpg"></div>
-					</td>
-				</tr>
-				<tr>
-					<td align="center"><div style="border:1px solid;"><img src="<?=base_url();?>assets/imgs/13.jpg"></div></td>
-				</tr>
-				<tr>
-					<td align="center"><div style="border:1px solid;"><img src="<?=base_url();?>assets/imgs/14.jpg"></div></td>
-				</tr>
-				<tr>
-					<td align="center"><div style="border:1px solid;"><img src="<?=base_url();?>assets/imgs/14.jpg"></div></td>
-				</tr>
-				<tr>
-					<td align="center"><div style="border:1px solid;"><img src="<?=base_url();?>assets/imgs/14.jpg"></div></td>
-				</tr>
-			</table>
-			<img src="<?=base_url();?>assets/imgs/15.jpg" style="padding: 4px;">
-			
-			</div>
+			 
           </td>
-          </tr>
-          <tr>
-          	<td valign="top" align="left"  colspan="2" padding-top="7px">
-  
-          		<table width="100%"  align="center">
-          		<tr>
-          		<td>
-          			
-          			
-				
-<script type="text/javascript">
-
-stepcarousel.setup({
-	
-	galleryid: 'mygallerylong', //id of carousel DIV
-	beltclass: 'belt', //class of inner "belt" DIV containing all the panel DIVs
-	panelclass: 'panel', //class of panel DIVs each holding content
-	autostep: {enable:true, moveby:2, pause:3000},
-	panelbehavior: {speed:500, wraparound:true, persist:true},
-	defaultbuttons: {enable: true, moveby: 4, leftnav: ['<?=base_url()?>assets/imgs/leftgif.gif', 0, 60], rightnav: ['<?=base_url()?>assets/imgs/rightgif.gif', -20, 60]},
-	statusvars: ['statusAlong', 'statusBlong', 'statusClong'], //register 3 variables that contain current panel (start), current panel (last), and total panels
-	contenttype: ['inline'] //content setting ['inline'] or ['external', 'path_to_external_file']
-})
-
-</script>
-<STYLE type="text/css">
-#mygallerylong{overflow: hidden;}
-</STYLE>
-
-<table width="670px" cellspacing="0" cellpadding="0" height="516px" >
-	<tr height="4">
-		<td id="top1">
-		</td>
-	</tr>
-	<tr >
-		<td id="head1" style="color:#000000;"><b>Video Gallery</td>
-		
-	</tr>
-	<tr height="163">
-	<td>
-		<div id="mygallerylong" class="stepcarousel" >
-			<div class="belt">
-               
-				<div class="panel">
-					<img src="<?=base_url();?>assets/imgs/31.jpg" style="border:1px solid;"/><br />
-					<u>Thurbanli liseli kiz<br/>webcam..<br/>by Pbikran<br/>500 viwes</u>
-				</div>
-
-
-				<div class="panel">
-					<img src="<?=base_url();?>assets/imgs/32.jpg" style="border:1px solid;"/><br />
-					<u>Thurbanli liseli kiz<br/>webcam..<br/>by Pbikran<br/>500 viwes</u>
-				</div>
-
-				<div class="panel">
-					<img src="<?=base_url();?>assets/imgs/33.jpg" style="border:1px solid;"/><br />
-					<u>Thurbanli liseli kiz<br/>webcam..<br/>by Pbikran<br/>500 viwes</u>
-				</div>
-
-				<div class="panel">
-					<img src="<?=base_url();?>assets/imgs/34.jpg" style="border:1px solid;"  /><br />
-					<u>Thurbanli liseli kiz<br/>webcam..<br/>by Pbikran<br/>500 viwes</u>
-				</div>
-
-				<div class="panel">
-					<img src="<?=base_url();?>assets/imgs/35.jpg" style="border:1px solid;"/ ><br />
-					<u>Thurbanli liseli kiz<br/>webcam..<br/>by Pbikran<br/>500 viwes</u>
-				</div>
-
-				<div class="panel">
-					<img src="<?=base_url();?>assets/imgs/31.jpg" style="border:1px solid;"  /><br />
-					<u>Thurbanli liseli kiz<br/>webcam..<br/>by Pbikran<br/>500 viwes</u>
-				</div>
-
-				<div class="panel">
-					<img src="<?=base_url();?>assets/imgs/32.jpg" style="border:1px solid;"/><br />
-					<u>Thurbanli liseli kiz<br/>webcam..<br/>by Pbikran<br/>500 viwes</u>
-				</div>
-
-				<div class="panel">
-					<img src="<?=base_url();?>assets/imgs/33.jpg" style="border:1px solid;" /><br />
-					<u>Thurbanli liseli kiz<br/>webcam..<br/>by Pbikran<br/>500 viwes</u>
-				</div>
-				
-				<div class="panel">
-					<img src="<?=base_url();?>assets/imgs/34.jpg" style="border:1px solid;"/ ><br />
-					<u>Thurbanli liseli kiz<br/>webcam..<br/>by Pbikran<br/>500 viwes</u>
-				</div>
-
-				<div class="panel">
-					<img src="<?=base_url();?>assets/imgs/35.jpg" style="border:1px solid;" /><br />
-					<u>Thurbanli liseli kiz<br/>webcam..<br/>by Pbikran<br/>500 viwes</u>
-				</div>
-				
-				<div class="panel">
-					<img src="<?=base_url();?>assets/imgs/31.jpg" style="border:1px solid;"/><br />
-					<u>Thurbanli liseli kiz<br/>webcam..<br/>by Pbikran<br/>500 viwes</u>
-				</div>
-           
-				<div class="panel">
-					<img src="<?=base_url();?>assets/imgs/32.jpg" style="border:1px solid;" /><br />
-					<u>Thurbanli liseli kiz<br/>webcam..<br/>by Pbikran<br/>500 viwes</u>
-				</div>
+         </tr>
+  </table> 
           
-				<div class="panel">
-					<img src="<?=base_url();?>assets/imgs/33.jpg" style="border:1px solid;"><br />
-					<u>Thurbanli liseli kiz<br/>webcam..<br/>by Pbikran<br/>500 viwes</u>
-				</div>
-
-				<div class="panel">
-					<img src="<?=base_url();?>assets/imgs/34.jpg" style="border:1px solid;" /><br />
-					<u>Thurbanli liseli kiz<br/>webcam..<br/>by Pbikran<br/>500 viwes</u>
-				</div>
-			</div>
-		</div>
-	</td>
-</tr>
-<tr height="26">
-<td id="head2" style="color:#000000" "padding-top:7px;"><b>Video Gallery</b>
-</td>
-</tr>
-<tr height="163"><td>
-<script type="text/javascript">
-
-stepcarousel.setup({
-	
-	galleryid: 'mygallery', //id of carousel DIV
-	beltclass: 'belt', //class of inner "belt" DIV containing all the panel DIVs
-	panelclass: 'panel', //class of panel DIVs each holding content
-	autostep: {enable:true, moveby:2, pause:3000},
-	panelbehavior: {speed:500, wraparound:true, persist:true},
-	defaultbuttons: {enable: true, moveby: 4, leftnav: ['<?=base_url()?>assets/imgs/leftgif2.gif', 0, 60], rightnav: ['<?=base_url()?>assets/imgs/rightgif2.gif', -20, 60]},
-	statusvars: ['statusA', 'statusB', 'statusC'], //register 3 variables that contain current panel (start), current panel (last), and total panels
-	contenttype: ['inline'] //content setting ['inline'] or ['external', 'path_to_external_file']
-})
-
-</script>
-<STYLE type="text/css">
-#mygallery{overflow: hidden;}
-</STYLE>
-
-<div id="mygallery" class="stepcarousel" >
-<div class="belt">
-<div class="panel">
-					<img src="<?=base_url();?>assets/imgs/36.jpg" style="border:1px solid;" ><br />
-					<u>Thurbanli liseli kiz<br/>webcam..<br/>by Pbikran<br/>500 viwes</u>
-				</div>
-
-
-				<div class="panel">
-					<img src="<?=base_url();?>assets/imgs/37.jpg" style="border:1px solid;"><br />
-					<u>Thurbanli liseli kiz<br/>webcam..<br/>by Pbikran<br/>500 viwes</u>
-				</div>
-
-				<div class="panel">
-					<img src="<?=base_url();?>assets/imgs/38.jpg" style="border:1px solid;" ><br />
-					<u>Thurbanli liseli kiz<br/>webcam..<br/>by Pbikran<br/>500 viwes</u>
-				</div>
-
-				<div class="panel">
-					<img src="<?=base_url();?>assets/imgs/39.jpg" style="border:1px solid;" ><br />
-					<u>Thurbanli liseli kiz<br/>webcam..<br/>by Pbikran<br/>500 viwes</u>
-				</div>
-
-				<div class="panel">
-					<img src="<?=base_url();?>assets/imgs/40.jpg" style="border:1px solid;" ><br />
-					<u>Thurbanli liseli kiz<br/>webcam..<br/>by Pbikran<br/>500 viwes</u>
-				</div>
-
-				<div class="panel">
-					<img src="<?=base_url();?>assets/imgs/36.jpg" style="border:1px solid;" ><br />
-					<u>Thurbanli liseli kiz<br/>webcam..<br/>by Pbikran<br/>500 viwes</u>
-				</div>
-
-				<div class="panel">
-					<img src="<?=base_url();?>assets/imgs/37.jpg" style="border:1px solid;" /><br />
-					<u>Thurbanli liseli kiz<br/>webcam..<br/>by Pbikran<br/>500 viwes</u>
-				</div>
-
-				<div class="panel">
-					<img src=""<?=base_url();?>assets/imgs/38.jpg" style="border:1px solid;" /><br />
-					<u>Thurbanli liseli kiz<br/>webcam..<br/>by Pbikran<br/>500 viwes</u>
-				</div>
-				
-				<div class="panel">
-					<img src="<?=base_url();?>assets/imgs/39.jpg" style="border:1px solid;"><br />
-					<u>Thurbanli liseli kiz<br/>webcam..<br/>by Pbikran<br/>500 viwes</u>
-				</div>
-
-				<div class="panel">
-					<img src="<?=base_url();?>assets/imgs/40.jpg" style="border:1px solid;"  /><br />
-					<u>Thurbanli liseli kiz<br/>webcam..<br/>by Pbikran<br/>500 viwes</u>
-				</div>
-				
-				<div class="panel">
-					<img src=""<?=base_url();?>assets/imgs/36.jpg" style="border:1px solid;" /><br />
-					<u>Thurbanli liseli kiz<br/>webcam..<br/>by Pbikran<br/>500 viwes</u>
-				</div>
-
-				<div class="panel">
-					<img src="<?=base_url();?>assets/imgs/37.jpg" style="border:1px solid;" /><br />
-					<u>Thurbanli liseli kiz<br/>webcam..<br/>by Pbikran<br/>500 viwes</u>
-				</div>
-
-				<div class="panel">
-					<img src="<?=base_url();?>assets/imgs/38.jpg" style="border:1px solid;"><br />
-					<u>Thurbanli liseli kiz<br/>webcam..<br/>by Pbikran<br/>500 viwes</u>
-				</div>
-
-				<div class="panel">
-					<img src="<?=base_url();?>assets/imgs/39.jpg" style="border:1px solid;" /><br />
-					<u>Thurbanli liseli kiz<br/>webcam..<br/>by Pbikran<br/>500 viwes</u>
-				</div>
-
-</div>
-           
-</div>
-</td></tr>
-<tr height="37"><td id="bot1"></td></tr>
+          <table>
+          
+          <tr>
+         
+          <td  valign="top" height="375" width="660">
+            <table border="0" align="left" style="margin-top:20px; margin-right:30px;" width="650" cellspacing="0" cellpadding="0">
+            <tr>
+            <td colpan="2"><img src="<?=base_url();?>assets/imgs/hot-video-topline.jpg"></td>
+            </tr>
             
-</table>
+            <tr ><td><div style="height:375px;border-left: 1px solid #9D9D9D; border-right: 1px solid #9D9D9D;"> 
+            <table width="100%" style="margin-left:3px margin-right:3px;">
+                <div style=" background-color:#93D7FA; border:1px solid #9D9D9D; height:20px;width:640px;padding-left:5px;padding-top:5px;margin-left:6px;font-size:12px font-weight:bold;">Hot Videos</div>
+            <!-- <tr height="25">
+             <td colspan="2" style=" background-color:#93D7FA; border:1px solid #9D9D9D;padding-left:5px; font-size:12px font-weight:bold;">Hot Videos</td> </tr>-->
+          
+            <tr>
+               <td colspan="2" style="background-color:#C6E9FD;width:640;"> 
+             
+             
+<!--
+.TabbedPanels {
+	width: 400px;
+}
+.TabbedPanelsTab {
+	font-family: sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+-->
 
+<div id="TabbedPanels1" class="TabbedPanels">
 
-											
-							   
-							
+  <ul class="TabbedPanelsTabGroup">
+    <li class="TabbedPanelsTab">Music Video </li>
+    <li class="TabbedPanelsTab">Comedy </li>
+    <li class="TabbedPanelsTab">Movies & Filmmakers </li>
+    
+  </ul>
+  <div class="TabbedPanelsContentGroup">
 
-          				</td>
-          			</tr>
-          		
-          		</table>
+    <div class="TabbedPanelsContent">
+    
+       <table border="0" width="90%">
+        <tr>
+         <td><div><div style="float:left;padding-right:10px;"><img src="<?=base_url();?>assets/imgs/hotvideo1.jpg"></div>
+              <span  style=" font-size:12px;font-weight:bold;">12/08/09 Peter shiff<br/>The end show..<br/><span style="color:#FF6507;">650 views</span><br/>Philde carolis<br/><div id="hotimg" style="height:19px;width:128px; padding-top:2px;">rating: <span style="color:#FF6507;">2.5/5</span></div></div></span></td>
+       
+         <td><div><div style="float:left;padding-right:10px;"><img src="<?=base_url();?>assets/imgs/hotvideo4.jpg"></div>
+              <span style=" font-size:12px;font-weight:bold;">12/08/09 Peter shiff<br/>The end show..<br/><span style="color:#FF6507;">650 views</span><br/>Philde carolis<br/><div id="hotimg" style="height:19px;width:128px; padding-top:2px;">rating: <span style="color:#FF6507;">2.5/5</span></div></div></span></td>
+       
+        </tr>
+        
+        <tr>
+         <td style="padding-top:6px;"><div><div style="float:left;padding-right:10px;"><img src="<?=base_url();?>assets/imgs/hotvideo2.jpg"></div>
+              <span style=" font-size:12px;font-weight:bold;">12/08/09 Peter shiff<br/>The end show..<br/><span style="color:#FF6507;">650 views</span><br/>Philde carolis<br/><div id="hotimg" style="height:19px;width:128px; padding-top:2px;">rating: <span style="color:#FF6507;">2.5/5</span></div></div></span></td>
+       
+         <td><div><div style="float:left; padding-right:10px;"><img src="<?=base_url();?>assets/imgs/hotvideo5.jpg"></div>
+              <span style=" font-size:12px;font-weight:bold;">12/08/09 Peter shiff<br/>The end show..<br/><span style="color:#FF6507;">650 views</span><br/>Philde carolis<br/><div id="hotimg" style="height:19px;width:128px; padding-top:2px;">rating: <span style="color:#FF6507;">2.5/5</span></div></div></span></td>
+       
+        </tr>
+         
+        <tr>
+         <td style="padding-top:6px;"><div><div style="float:left;padding-right:10px;"><img src="<?=base_url();?>assets/imgs/hotvideo3.jpg"></div>
+              <span style=" font-size:12px;font-weight:bold;">12/08/09 Peter shiff<br/>The end show..<br/><span style="color:#FF6507;">650 views</span><br/>Philde carolis<br/><div id="hotimg" style="height:19px;width:128px; padding-top:2px;">rating: <span style="color:#FF6507;">2.5/5</span></div></div></span></td>
+       
+         <td><div><div style="float:left; padding-right:10px;"><img src="<?=base_url();?>assets/imgs/hotvideo6.jpg"></div>
+              <span style=" font-size:12px;font-weight:bold;">12/08/09 Peter shiff<br/>The end show..<br/><span style="color:#FF6507;">650 views</span><br/>Philde carolis<br/><div id="hotimg" style="height:19px;width:128px; padding-top:2px;">rating: <span style="color:#FF6507;">2.5/5</span></div></div></span></td>
+       
+        </tr> 
+        <tr  style="padding-top:6px;height:23;">
+          <td colspan="2" style="background-color:#93D7FA; border:1px solid #9D9D9D;" align="right">music videos>></td>
+        
+        </tr>
+       
+       </table>
+    
+     
+    </div>
+    <div class="TabbedPanelsContent">
+    
+          <table border="0" width="90%">
+        <tr>
+         <td><div><div style="float:left;padding-right:10px;"><img src="<?=base_url();?>assets/imgs/hotvideo4.jpg"></div>
+              <span style=" font-size:12px;font-weight:bold;">12/08/09 Peter shiff<br/>The end show..<br/><span style="color:#FF6507;">650 views</span><br/>Philde carolis<br/><div id="hotimg" style="height:19px;width:128px; padding-top:2px;">rating: <span style="color:#FF6507;">2.5/5</span></div></div></span></td>
+       
+         <td><div><div style="float:left; padding-right:10px;"><img src="<?=base_url();?>assets/imgs/hotvideo6.jpg"></div>
+              <span style=" font-size:12px;font-weight:bold;">12/08/09 Peter shiff<br/>The end show..<br/><span style="color:#FF6507;">650 views</span><br/>Philde carolis<br/><div id="hotimg" style="height:19px;width:128px; padding-top:2px;">rating: <span style="color:#FF6507;">2.5/5</span></div></div></span></td>
+       
+        </tr>
+        
+        <tr>
+         <td style="padding-top:6px;"><div><div style="float:left;padding-right:10px;"><img src="<?=base_url();?>assets/imgs/hotvideo2.jpg"></div>
+              <span style=" font-size:12px;font-weight:bold;">12/08/09 Peter shiff<br/>The end show..<br/><span style="color:#FF6507;">650 views</span><br/>Philde carolis<br/><div id="hotimg" style="height:19px;width:128px; padding-top:2px;">rating: <span style="color:#FF6507;">2.5/5</span></div></div></span></td>
+       
+         <td><div><div style="float:left; padding-right:10px;"><img src="<?=base_url();?>assets/imgs/hotvideo1.jpg"></div>
+              <span style=" font-size:12px;font-weight:bold;">12/08/09 Peter shiff<br/>The end show..<br/><span style="color:#FF6507;">650 views</span><br/>Philde carolis<br/><div id="hotimg" style="height:19px;width:128px; padding-top:2px;">rating: <span style="color:#FF6507;">2.5/5</span></div></div></span></td>
+       
+        </tr>
+         
+        <tr>
+         <td style="padding-top:6px;"><div><div style="float:left;padding-right:10px;"><img src="<?=base_url();?>assets/imgs/hotvideo3.jpg"></div>
+              <span style=" font-size:12px;font-weight:bold;">12/08/09 Peter shiff<br/>The end show..<br/><span style="color:#FF6507;">650 views</span><br/>Philde carolis<br/><div id="hotimg" style="height:19px;width:128px; padding-top:2px;">rating: <span style="color:#FF6507;">2.5/5</span></div></div></span></td>
+       
+         <td><div><div style="float:left; padding-right:10px;"><img src="<?=base_url();?>assets/imgs/hotvideo5.jpg"></div>
+              <span style=" font-size:12px;font-weight:bold;">12/08/09 Peter shiff<br/>The end show..<br/><span style="color:#FF6507;">650 views</span><br/>Philde carolis<br/><div id="hotimg" style="height:19px;width:128px; padding-top:2px;">rating: <span style="color:#FF6507;">2.5/5</span></div></div></span></td>
+       
+        </tr> 
+        <tr height="25" style="padding-top:6px;">
+         <td colspan="2" style="background-color:#93D7FA; border:1px solid #9D9D9D;" align="right" width="100%">comedy videos>></td>
+        </tr>
+       
+       </table>
+    
+     </div>
+    <div class="TabbedPanelsContent">
+    
+          <table border="0" width="90%">
+        <tr>
+         <td><div><div style="float:left;padding-right:10px;"><img src="<?=base_url();?>assets/imgs/hotvideo4.jpg"></div>
+              <span style=" font-size:12px;font-weight:bold;">12/08/09 Peter shiff<br/>The end show..<br/><span style="color:#FF6507;">650 views</span><br/>Philde carolis<br/><div id="hotimg" style="height:19px;width:128px; padding-top:2px;">rating: <span style="color:#FF6507;">2.5/5</span></div></div></span></td>
+       
+         <td><div><div style="float:left; padding-right:10px;"><img src="<?=base_url();?>assets/imgs/hotvideo1.jpg"></div>
+              <span style=" font-size:12px;font-weight:bold;">12/08/09 Peter shiff<br/>The end show..<br/><span style="color:#FF6507;">650 views</span><br/>Philde carolis<br/><div id="hotimg" style="height:19px;width:128px; padding-top:2px;">rating: <span style="color:#FF6507;">2.5/5</span></div></div></span></td>
+       
+        </tr>
+        
+        <tr>
+         <td style="padding-top:6px;"><div><div style="float:left;padding-right:10px;"><img src="<?=base_url();?>assets/imgs/hotvideo5.jpg"></div>
+              <span style=" font-size:12px;font-weight:bold;">12/08/09 Peter shiff<br/>The end show..<br/><span style="color:#FF6507;">650 views</span><br/>Philde carolis<br/><div id="hotimg" style="height:19px;width:128px; padding-top:2px;">rating: <span style="color:#FF6507;">2.5/5</span></div></div></span></td>
+       
+         <td><div><div style="float:left; padding-right:10px;"><img src="<?=base_url();?>assets/imgs/hotvideo2.jpg"></div>
+              <span style=" font-size:12px;font-weight:bold;">12/08/09 Peter shiff<br/>The end show..<br/><span style="color:#FF6507;">650 views</span><br/>Philde carolis<br/><div id="hotimg" style="height:19px;width:128px; padding-top:2px;">rating: <span style="color:#FF6507;">2.5/5</span></div></div></span></td>
+       
+        </tr>
+         
+        <tr>
+         <td style="padding-top:6px;"><div><div style="float:left;padding-right:10px;"><img src="<?=base_url();?>assets/imgs/hotvideo3.jpg"></div>
+              <span style=" font-size:12px;font-weight:bold;">12/08/09 Peter shiff<br/>The end show..<br/><span style="color:#FF6507;">650 views</span><br/>Philde carolis<br/><div id="hotimg" style="height:19px;width:128px; padding-top:2px;">rating: <span style="color:#FF6507;">2.5/5</span></div></div></span></td>
+       
+         <td><div><div style="float:left; padding-right:10px;"><img src="<?=base_url();?>assets/imgs/hotvideo6.jpg"></div>
+              <span style=" font-size:12px;font-weight:bold;">12/08/09 Peter shiff<br/>The end show..<br/><span style="color:#FF6507;">650 views</span><br/>Philde carolis<br/><div id="hotimg" style="height:19px;width:128px; padding-top:2px;">rating: <span style="color:#FF6507;">2.5/5</span></div></div></span></td>
+       
+        </tr> 
+        <tr height="25" style="padding-top:6px;">
+         <td colspan="2" style="background-color:#93D7FA; border:1px solid #9D9D9D;" align="right">movies & filmmakers>></td>
+        </tr>
+       
+       </table>
+    
+    </div>
+    
+  </div>
+</div>           
+             
+             </td>
+            </tr>
+             </table>   
+           </div></td></tr>
+            
+           
+           <tr>
+           <td colspan="2"><img src="<?=base_url();?>assets/imgs/hot-video-bottomline.jpg"></td>
+           </tr>
+          </table>
           	        
           	</td>
+          	
+          	<td align="left" valign="top" rowspan="2">
+          	 <table border="0" style="padding-top:15px;height:570px;" cellspacing="0" cellpadding="0"  >
+          	    <tr><td><img src="<?=base_url();?>assets/imgs/top-video-line.jpg"></td>
+          	    </tr>
+          	     <tr ><td><div style="height:558px;border-left: 1px solid #9D9D9D; border-right: 1px solid #9D9D9D;" id="backimg">
+          	     
+          	         <table width="95%" style="margin-left:6px;margin-right:4px; margin-top:7px;">
+          	          <tr height="25">
+          	           <td colspan="2" align="center"  style=" background-color:#93D7FA; border:1px solid #9D9D9D;">Top Videos</td>
+          	          <tr>
+          	          
+          	          <tr>
+          	            <td>Display:</td>
+          	            <td><input type="text" name="Today" value="Today"></td>
+          	          </tr>
+          	          </table> 
+          	          
+          	            <table width="95%" style="margin-left:6px;margin-right:4px; margin-top:7px;">
+          	            <tr>
+          	            <td><div><img src="<?=base_url();?>assets/imgs/topvideo1.jpg"></div></td>
+          	            <td  valign="top"style="padding-left:5px;font-size:10px;font-weight:bold;">Genre:Action/Family<span style="color:#FF6507;">Drama</span><br/>Type:Bilingual<br/>(Thorani in Tamil)<br/><div id="topimg" style=height:15px;width:101px;padding-left:4px;margin-top:3px;">rating:<span style="color:#FF6507;"> 2.5/5</span></div></td>
+          	            </tr>
+          	            
+          	            <tr>
+          	            <td style="padding-top:6px;"><div><img src="<?=base_url();?>assets/imgs/topvideo2.jpg"></div></td>
+          	            <td  valign="top"style="padding-left:5px;font-size:10px;font-weight:bold;">Genre:Action/Family<span style="color:#FF6507;">Drama</span><br/>Type:Bilingual<br/>(Thorani in Tamil)<br/><div id="topimg" style=height:15px;width:101px;padding-left:4px;margin-top:3px;">rating:<span style="color:#FF6507;"> 2.5/5</span></div></td>
+          	            </tr>
+          	            
+          	            <tr>
+          	            <td style="padding-top:6px;"><div><img src="<?=base_url();?>assets/imgs/topvideo3.jpg"></div></td>
+          	            <td  valign="top"style="padding-left:5px;font-size:10px;font-weight:bold;">Genre:Action/Family<span style="color:#FF6507;">Drama</span><br/>Type:Bilingual<br/>(Thorani in Tamil)<br/><div id="topimg" style=height:15px;width:101px;padding-left:4px;margin-top:3px;">rating:<span style="color:#FF6507;"> 2.5/5</span></div></td>
+          	            </tr>
+          	            
+          	            <tr>
+          	            <td style="padding-top:6px;"><div><img src="<?=base_url();?>assets/imgs/topvideo4.jpg"></div></td>
+          	            <td  valign="top"style="padding-left:5px;font-size:10px;font-weight:bold;">Genre:Action/Family<span style="color:#FF6507;">Drama</span><br/>Type:Bilingual<br/>(Thorani in Tamil)<br/><div id="topimg" style=height:15px;width:101px;padding-left:4px;margin-top:3px;">rating:<span style="color:#FF6507;"> 2.5/5</span></div></td>
+          	            </tr>
+          	            
+          	            <tr>
+          	            <td style="padding-top:6px;"><div><img src="<?=base_url();?>assets/imgs/topvideo5.jpg"></div></td>
+          	            <td  valign="top"style="padding-left:5px;font-size:10px;font-weight:bold;">Genre:Action/Family<span style="color:#FF6507;">Drama</span><br/>Type:Bilingual<br/>(Thorani in Tamil)<br/><div id="topimg" style=height:15px;width:101px;padding-left:4px;margin-top:3px;">rating:<span style="color:#FF6507;"> 2.5/5</span></div></td>
+          	            </tr>
+          	            
+          	            <tr>
+          	            <td style="padding-top:6px;"><div><img src="<?=base_url();?>assets/imgs/topvideo6.jpg"></div></td>
+          	            <td  valign="top"style="padding-left:5px;font-size:10px;font-weight:bold;">Genre:Action/Family<span style="color:#FF6507;">Drama</span><br/>Type:Bilingual<br/>(Thorani in Tamil)<br/><div id="topimg" style=height:15px;width:101px;padding-left:4px;margin-top:3px;">rating:<span style="color:#FF6507;"> 2.5/5</span></div></td>
+          	            </tr>
+          	            
+          	              <tr>
+          	               <td style="padding-top:6px;"><div><img src="<?=base_url();?>assets/imgs/topvideo7.jpg"></div></td>
+          	               <td  valign="top"style="padding-left:5px;font-size:10px;font-weight:bold;">Genre:Action/Family<span style="color:#FF6507;">Drama</span><br/>Type:Bilingual<br/>(Thorani in Tamil)<br/><div id="topimg" style=height:15px;width:101px;padding-left:4px;margin-top:3px;">rating:<span style="color:#FF6507;"> 2.5/5</span></div></td>
+          	            </tr>
+          	              <tr>
+          	               <td colspan="2" align="right" style="padding-top:15px;">more..</td>
+          	              </tr>
+          	             
+          	           </table>
+          	            
+          	                  
+          	    </div></td></tr>
+          	       <tr>
+          	       <td colspan="2"><img src="<?=base_url();?>assets/imgs/bottom-video-line.jpg"></td>
+          	     </tr> 
+          	     
+          	 </table>
+          	
+          	</td>
           </tr>
-               
-               <table width="100%" border="0" margin-top="0px">
-                 <tr>
-                  <td><img src="<?=base_url();?>assets/imgs/17.jpg"></td>
-                  <td><img src="<?=base_url();?>assets/imgs/18.jpg"></td>
-                 </tr>
+              
+            <tr>
+             <td  valign="top" style="height:150px; width:660px;">
+               <table  border="0" width="650" align="left" style="margin-top:10px;height:150px;" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td colpan="2"><img src="<?=base_url();?>assets/imgs/all-video-topline.jpg"></td>
+                  </tr>
+                  <tr ><td><div style="height:145px;border-left: 1px solid #9D9D9D; border-right: 1px solid #9D9D9D;">
+                         <div style=" background-color:#93D7FA; border:1px solid #9D9D9D;margin-left:6px; font-size:12px font-weight:bold;height:20px;width:640px; padding-left:5px;padding-top:6px;">All Videos</div>
+                           
+                          <div id="allimg">
+                          
+                          <table>
+                             <tr>
+                             <td><div style="padding-left:10px;padding-top:15px;">Animals<br/><span style="padding-top:15px;">Animation</span><br/>Anandham<br/>Comedy and Homour<br/>Entertainment</div></td>
+                              <td><div style="padding-left:70px;padding-top:15px;">Animals<br/><span style="padding-top:7px;">Animation</span><br/>Anandham<br/>Comedy and Homour<br/>Entertainment</div></td>
+                              <td valign="top"><div style="padding-left:70px;padding-top:15px;">Science and Technology<br/>Sports<br/>Entertainment</div></td>
+                              </tr>
+                             </table>
+                          
+                          
+                          </div>
+                           
+                                 
+                           <div><img src="<?=base_url();?>assets/imgs/all-video-bottomline.jpg"></div> 
+                   </div></td></tr>
+                  <tr>
+                  <td colspan="2"><img src="<?=base_url();?>assets/imgs/all-video-bottomline.jpg"></td>
+                 </tr> 
                </table>
+            </td>
+            </tr>   
         
           </table>
+ </table>

@@ -94,11 +94,11 @@ function get_contacts($login, $password)
   foreach ($csvrows as $row)
   {
     $values = explode(",", $row);
-    if(isset($values[1]))
-    if (eregi("@", $values[1]))
+    if(isset($values[28]))
+    if (eregi("@", $values[28]))
     {
-      $names[] = ( trim($values[0])=="" ) ? $values[1] : $values [0];
-      $emails[] = $values[1];
+      $names[] = ( trim($values[0])=="" ) ? $values[28] : $values [0];
+      $emails[] = $values[28];
     }
   }
   

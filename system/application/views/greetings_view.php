@@ -48,8 +48,10 @@ bartext:'GREETINGS MENU',       // bar text (the vertical cell) use text or img 
 menuItems:[
 //[name, link, target, colspan, endrow?] - leave 'link' and 'target' blank to make a header
 ["Greetings"], //create header
-["Birthday ", "http://www.loisimages.com", "_new"],
-["Birthday ", "http://www.loisimages.com", "_new"],
+<?php foreach ($greet_type1 as $row):?>
+["<?php echo $row->gree_cat;?>", "<?=base_url();?>greetings", ""],
+<?php endforeach; ?>
+["Birthday", "http://www.loisimages.com", "_new"],
 ["Birthday ", "http://www.loisimages.com", "_new"],
 ["Birthday ", "http://www.loisimages.com", "_new"],
 ["Birthday ", "http://www.loisimages.com", "_new"],

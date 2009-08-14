@@ -29,13 +29,11 @@
 <script type="text/javascript" src="<?=base_url();?>assets/js/newsLoader.js"></script>
 <script type="text/javascript" src="<?=base_url();?>assets/js/mmenu.js"></script>
 
-<<<<<<< .mine<?if($this->uri->segment(1)=='news'){;
-=======
-<?if($this->uri->segment(1)=='news'){;
->>>>>>> .theirs$type=$this->uri->segment(3);
+<?if($this->uri->segment(1)=='news'){
+$type=$this->uri->segment(3);
 ?>
 <body onload="loadNews('<?=base_url()?>newslist/listview/<?=$type?>')">
-<?}else{ if($this->uri->segment(1)=='cinema'){;
+<?}else{ if($this->uri->segment(1)=='cinema'){
 $type=$this->uri->segment(3);?>
 <body onload="loadNews('<?=base_url()?>cinemalist/listview/<?=$type?>')">
 <?}else{ ?>

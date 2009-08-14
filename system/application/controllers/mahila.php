@@ -7,7 +7,16 @@ class Mahila extends Controller {
 	}
 	function index(){
 		
-		$this->load->view('mahila_view',$data);
+		$this->load->view('mahila_main');
   }
+  function content()
+  {
+  	$this->load->view('mahila_content',$data);
+  }
+  function inner()
+  {
+  	$this->load->view('mahila_inner',$data);
+  }
+
 }
 ?>

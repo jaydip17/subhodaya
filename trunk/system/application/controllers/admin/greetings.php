@@ -37,8 +37,8 @@ class Greetings extends Controller {
 		$summery=$this->input->post('summery');
 
 		$data=array('type'    => $type,
-					'heading' => $heading,
-					'summary' => $summery,
+					'name' => $heading,
+					'summery' => $summery,
 					'active'   => $active
 				
 		);
@@ -67,10 +67,10 @@ class Greetings extends Controller {
 		{
 			$data = array('upload_data' => $this->upload->data());
 			$this->Greeting_Model->rename($data,$id);
-			$message='CinemaNews Added Successfully';
+			$message='Greeting card Added Successfully';
 			$this->session->set_flashdata('message',$message);
 		}
-			$filename = 'ceni_img'.$id.'.jpg';
+			$filename = 'gree_img'.$id.'.jpg';
 			$image_path='assets/greetings/';
 	    	$config['image_library'] = 'gd2';
 	        $config['source_image'] = $image_path.$filename;

@@ -18,7 +18,7 @@ if(isset($message) && !is_array($message) ) echo($message);?>
 		<td><?=form_dropdown('type',$options)?></td>
 	</tr>
 	<tr>
-		<td>Heading</td>
+		<td>Name</td>
 		<td><textarea rows="3" cols="50" name="name" id="name"></textarea></td>
 	</tr>
 	<tr>
@@ -30,11 +30,6 @@ if(isset($message) && !is_array($message) ) echo($message);?>
 	<tr>
 		<td>Greeting_Image</td>
 		<td align="left"><?=form_upload('image') ?>Size:200x300</td>
-	</tr>
-	</tr>
-		<tr>
-		<td>Insert_Date</td>
-		<td><?=form_input()?></td>
 	</tr>
 	</tr>
 		<tr>

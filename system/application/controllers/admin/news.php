@@ -34,6 +34,12 @@ class News extends Controller {
 		}else{
 			$breaking_news=$_POST['breaking_news'];
 		}
+		if(!isset($_POST['active'])){
+			
+			$active=0;
+		}else{
+			$active=$_POST['active'];
+		}
 		$type=$this->input->post('type');
 		$heading=$this->input->post('heading');
 		$summery=$this->input->post('summary');
@@ -42,7 +48,8 @@ class News extends Controller {
 					'heading' => $heading,
 					'summery' => $summery,
 				'description' => $description,
-				'breking_news'=> $breaking_news
+				'breking_news'=> $breaking_news,
+				'active'      =>$active
 		);
 		if(!empty($data))
 		{

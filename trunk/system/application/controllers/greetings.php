@@ -7,21 +7,35 @@ class Greetings extends Controller {
 		$this->load->model("admin/News_Model");
 	}
 	function index(){
+		$type=$this->Greeting_Model->get_type();
+		$greetings1=$this->Greeting_Model->get_greetings(1);
+		$greetings2=$this->Greeting_Model->get_greetings(2);
+		$greetings12=$this->Greeting_Model->get_greetings(12);
+		$greetings10=$this->Greeting_Model->get_greetings(10);
 		$more=$this->News_Model->more_news();
-		$greet_type1=$this->Greeting_Model->get_greetingtype(1);
-		print_r($greet_type1);
-		$data=array('more'=>$more,
-					'greet_type1'=>$greet_type1);
-		$this->load->view('greetings_view',$data);
+		$data=array('greetings1'=>$greetings1,
+					'greetings2'=>$greetings2,
+					'greetings12'=>$greetings12,
+					'greetings10'=>$greetings10,
+					'more' => $more,
+					'type' => $type,
+			);
+		$this->load->view('greetings_content',$data);
+  }
+  function content()
+  {
+  	$more=$this->News_Model->more_news();
+  	$id=$this->uri->segment(3,0);
+  	$greetings=$this->Greeting_Model->get_greetings($id);
+  	$data=array('greetings'  =>  $greetings,
+  					'more'  =>  $more);
+  	$this->load->view('greetings_view',$data);
   }
   function inner()
   {
   	$this->load->view('greetings_inner');
   }
-  function content()
-  {
-  	$this->load->view('greetings_content');
-  }
+
 
 }
 ?>

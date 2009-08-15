@@ -132,6 +132,8 @@
 	clear: both;
 	height:329px;
 	background-color: #FFFFFF;
+	border-left: none;
+	border-right: none;
 }
 
 /* This is the selector for the Content panel. The Content panel holds the
@@ -145,6 +147,8 @@
  */
 .TabbedPanelsContent {
 	padding: 4px;
+	border-left: none;
+	border-right: none;
 }
 
 /* This selector is an example of how to change the appearnce of the currently
@@ -153,6 +157,7 @@
  * is activated/deactivated.
  */
 .TabbedPanelsContentVisible {
+	
 }
 
 /* Vertical Tabbed Panels

@@ -1,4 +1,4 @@
-<?=form_open_multipart('admin/video')?>
+<?=form_open_multipart('admin/videos')?>
 <table>
 	<tr>
 		<th colspan='2' style="font-size: 16px">Videos</th>
@@ -9,34 +9,34 @@
 		<? echo form_label('Select Categeory','video_cat_id');?>
 		</td>
 		
-		<td><?echo form_dropdown('video_cat_id',$options); ?></td>
+		<td><?echo form_dropdown('video_cat_id',$options);?></td>
 	</tr>
 	
 	<tr>
-		<td><? echo form_label('Video Name','name'); ?></td>
-		<td><?=form_input('name'); ?></td>
+		<td><? echo form_label('Video Name','name');?></td>
+		<td><?=form_input('name');?></td>
 	</tr>
 	<tr>
-		<td><? echo form_label('Video Duration','time'); ?></td>
-		<td><?=form_input('time'); ?></td>
+		<td><? echo form_label('Video Duration','time');?></td>
+		<td><?=form_input('time');?></td>
 	</tr>
 	 
 	 <tr>
-		<td><? echo form_label('Number of Views','no_of_views'); ?></td>
-		<td><?=form_input('no_of_views'); ?></td>
+		<td><? echo form_label('Number of Views','no_of_views');?></td>
+		<td><?=form_input('no_of_views');?></td>
 	</tr>
 	 
 	<tr>
-		<td><? echo form_label('Video','video'); ?></td>
-		<td><?=form_upload('video'); ?></td>
+		<td><? echo form_label('Video','video');?></td>
+		<td><?=form_upload('video');?></td>
 	</tr>
 	<tr>
-		<td><? echo form_label('Preview Image','image'); ?></td>
-		<td><?=form_upload('image'); ?></td>
+		<td><? echo form_label('Preview Image','image');?></td>
+		<td><?=form_upload('image');?></td>
 	</tr>
 	<tr>
 		<td colspan="2" align="center">
-		<? echo form_submit('submit','upload'); ?>
+		<? echo form_submit('submit','upload');?>
 		</td>
 	</tr>
 </table>

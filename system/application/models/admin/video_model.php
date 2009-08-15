@@ -6,24 +6,24 @@ class Video_Model extends Model {
     	return $result->result();
     } 
        
-	 function addcategeory(){
+	// function addcategeory(){
 	 	
 		
-		$this->db->insert('videos_categeory',array('name'=>$_POST['name']));
-	 }
+		//$this->db->insert('videos_categeory',array('name'=>$_POST['name']));
+	// }
 	 
   	//function getvideocategeories(){
 		//$query=$this->db->get('videos_categeory');
 		//return $query->result();
 	//}
 	
-	// function addvideo(){
-		//$this->db->insert('videos',array('name'=>$_POST['name'],'time'=>$_POST['time'],'no_of_views'=>$_POST['no_of_views'],
-		                  // 'video_cat_id'=>$_POST['video_cat_id']));
+	 function addvideo(){
+		$this->db->insert('videos',array('name'=>$_POST['name'],'time'=>$_POST['time'],'no_of_views'=>$_POST['no_of_views'],
+		                 'video_cat_id'=>$_POST['video_cat_id']));
 		
-	//	$id=$this->db->insert_id();
-		//$this->uploadvideo($id);
-	// }
+		$id=$this->db->insert_id();
+		$this->uploadvideo($id);
+	 }
 	
       //  function rename($data,$id){
 	//	$oldname='assets/video/'.$data['upload_data']['file_name'];

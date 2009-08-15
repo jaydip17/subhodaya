@@ -14,12 +14,12 @@ class Videos extends Controller {
                 );
             
          
-		//$this->Video_Model->addvideo();
+		$this->Video_Model->addvideo();
 		$this->load->view('admin/video_view',$data);
 	}
 	
 	function addcategeory(){
-		$this->Video_Model->addcategeory();
+		//$this->Video_Model->addcategeory();
 		 $this->load->view('admin/addvideocategeory');
 		
 	}

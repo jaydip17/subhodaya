@@ -1,12 +1,15 @@
 <table align="left"   cellpadding="0" cellspacing="0">
 	<tr>
-		<td colspan='3' align="left" valign="top" style="padding: 5px;"><div id="gree_bar1" style="width:630px;height: 25px;"></div></td>
+		<td colspan='3' align="left" valign="top" style="padding: 5px;"><div id="gree_bar1" style="width:689px;height: 25px;"></div></td>
 		<td rowspan='2'></td>
 	</tr>
   	<?php $count=0; foreach ($greetings as $row):?>
-		<td style="padding: 5px;">
-			<div id="gree_inner">
-			<img src="<?=base_url();?>assets/greetings/gree_img5_thumb.jpg"</div>
+		<td style="padding: 5px;" align="center">
+			<div id="gree_inner" style="width: 220px;height: 259px;">
+			<a href="#"><img src="<?=base_url();?>assets/greetings/gree_img<?=$row->id?>_thumb.jpg" style="margin-top:10px;border: 1px solid red;"></a>
+			<div style="font: "><a href="#"><?=$row->name;?></a></div>
+			<?=$row->summery?>
+			</div>
 		</td>
 	<?php  
 	if($count==2)
@@ -44,7 +47,7 @@
 		</td>
 	</tr>
 	--><tr>
-	  <td colspan='3' align="left" valign="top" style="padding: 5px;"><div id="gree_bar1" style="width:630px;height: 25px;"></div></td>
+	  <td colspan='3' align="left" valign="top" style="padding: 5px;"><div id="gree_bar1" style="width:691px;height: 25px;"></div></td>
 	</tr>
 	   <tr>
 	   <td colspan='3' height="50px" bgcolor="#D003A6">t14</td>

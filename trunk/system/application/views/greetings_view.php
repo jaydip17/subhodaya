@@ -12,8 +12,9 @@
 			</div>
 		</td>
 	<?php  
-	if($count==2)
-		echo '</tr><tr>'; 
+	if($count==2){
+	continue;
+		echo '</tr><tr>'; }
 	else{
 		if($count==8)
 		break;
@@ -22,6 +23,7 @@
 	</tr>
 	
 	<!--
+	
 	<tr>
 		<td style="padding: 5px;">
 			<div id="gree_inner"></div>

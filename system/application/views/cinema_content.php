@@ -79,7 +79,7 @@
 				</tr>
 			</table>
 			</div>
-			<div style="width:100%"><img src="<?=base_url();?>assets/imgs/3.jpg" style="padding: 4px;"></div>
+			<div style="width:100%"><!--<img src="<?=base_url();?>assets/imgs/3.jpg" style="padding: 4px;">--></div>
           </td>
           </tr>
           <tr>

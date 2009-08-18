@@ -50,7 +50,7 @@ ddsmoothmenu.init({
 <li><a href="#">Greetings</a>
 	<ul>
 		<li><a href="<?=base_url();?>admin/greetings">Insert</a></li>
-		<li><a href="#">Edit</a></li>
+		<li><a href="<?=base_url();?>admin/greetings/editpage/">Edit</a></li>
 	</ul>
 </li>
 <li><a href="#">Mahila</a>

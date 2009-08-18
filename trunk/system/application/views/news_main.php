@@ -78,8 +78,8 @@
 					<td align="center"><div><img src="<?=base_url();?>assets/imgs/2.jpg"></div></td>
 				</tr>
 			</table>
-			<img src="<?=base_url();?>assets/imgs/3.jpg" style="padding: 4px;">
-			</div>
+			<!--<img src="<?=base_url();?>assets/imgs/3.jpg" style="padding: 4px;">
+			--></div>
           </td>
           </tr>
           <tr>

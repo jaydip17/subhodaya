@@ -1,55 +1,34 @@
 <table align="left"   cellpadding="0" cellspacing="0">
 	<tr>
-		<td colspan='3' align="left" valign="top" style="padding: 5px;"><div id="gree_bar1" style="width:689px;height: 25px;"></div></td>
+		<td colspan='3' align="left" valign="top" style="padding: 5px;"><div id="gree_bar1" style="width:689px;height: 25px;"><div style="padding-right: 10px;" id="more-news-div1" ><? echo $pagination; ?></div></div></td>
 		<td rowspan='2'></td>
 	</tr>
-  	<?php $count=0; foreach ($greetings as $row):?>
-		<td style="padding: 5px;" align="center">
-			<div id="gree_inner" style="width: 220px;height: 259px;">
-			<a href="#"><img src="<?=base_url();?>assets/greetings/gree_img<?=$row->id?>_thumb.jpg" style="margin-top:10px;border: 1px solid red;"></a>
-			<div style="font: "><a href="#"><?=$row->name;?></a></div>
-			<?=$row->summery?>
-			</div>
-		</td>
-	<?php  
-	if($count==2){
-	continue;
-		echo '</tr><tr>'; }
-	else{
-		if($count==8)
-		break;
-	}
-	endforeach;?>
-	</tr>
-	
-	<!--
-	
 	<tr>
-		<td style="padding: 5px;">
-			<div id="gree_inner"></div>
+		<td valign="top">
+			<table width="100%" border="0" cellpadding="0" cellspacing="5">
+			<tr>
+			<? $count = 1; foreach ($greetings as $data): ?>
+					<td align='center' width="222" height="250" id="gree_inner" valign="top">
+						<div style="padding:8px 0px 2px 0px;">
+								<a href="<?=base_url();?>greetings/inner/<?=$data->id?>"><img src="<?=base_url();?>assets/greetings/gree_img<?=$data->id?>_thumb.jpg" border="0"/></a>
+								<div style="padding: 5px 50px 0px 0px;" id="more-news-div"><a href="<?=base_url();?>greetings/inner/<?=$data->id?>"><?=$data->name?></a></div>
+								<div style="text-align: justify;padding: 5px 5px 0px 15px;"><?=$data->summery?></a></div>
+						</div>
+					</td>
+			<? if ($count==3)
+			{
+				$count = 0;
+				echo "</tr><tr>";
+			}
+			$count++;
+			endforeach; ?>
+				
+			</table>
 		</td>
-		<td style="padding: 5px;">
-			<div id="gree_inner"></div>
-		</td>
-		<td style="padding: 5px;">
-			<div id="gree_inner"></div>
-		</td>
-		<td rowspan='5' valign="top">
-		</td>
-	</tr>
-	<tr>
-		<td style="padding: 5px;">
-			<div id="gree_inner"></div>
-		</td>
-		<td style="padding: 5px;">
-			<div id="gree_inner"></div>
-		</td>
-		<td style="padding: 5px;">
-			<div id="gree_inner"></div>
-		</td>
-	</tr>
-	--><tr>
-	  <td colspan='3' align="left" valign="top" style="padding: 5px;"><div id="gree_bar1" style="width:691px;height: 25px;"></div></td>
+		</tr>
+	
+<tr>
+	  <td colspan='3' align="left" valign="top" style="padding: 5px;"><div id="gree_bar1" style="width:691px;height: 25px;"><div style="padding-right: 10px;" id="more-news-div1" ><? echo $pagination; ?></div></div></td>
 	</tr>
 	   <tr>
 	   <td colspan='3' height="50px" bgcolor="#D003A6">t14</td>

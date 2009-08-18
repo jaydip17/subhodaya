@@ -37,8 +37,26 @@ class Greetings extends Controller {
   	$more=$this->News_Model->more_news();
   	$type=$this->uri->segment(3,0);
   	$greetings=$this->Greeting_Model->get_greetings($type);
-  	$data=array('greetings'  =>  $greetings,
-  					'more'  =>  $more);
+  	$query=$this->Greeting_Model->greeings_pagi($type);
+	$a =base_url().'greetings/content/'.$type;
+		 //pagination
+    	$this->load->library('paginationnew');
+    	
+    	$this->paginationnew->start = ($this->uri->segment(4)) ? $this->uri->segment(4) : '0';
+    	$this->paginationnew->limit =9;
+        $this->paginationnew->filePath =$a;
+      
+        $this->paginationnew->select_what = '*';
+        $this->paginationnew->nbItems = $this->Greeting_Model->count($type);
+        $this->paginationnew->add_query = $query;
+        
+   		$result = $this->paginationnew->getQuery(TRUE);
+   		$details=$result->result();
+   		 		
+  	    $paginate = $this->paginationnew->paginate1(); 
+  	$data=array('greetings'  =>  $details,
+  					'more'   =>  $more,
+  				'pagination'   =>   $paginate);
   	$this->load->view('greetings_view',$data);
   }
   function inner()

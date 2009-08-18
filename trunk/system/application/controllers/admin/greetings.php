@@ -87,7 +87,50 @@ class Greetings extends Controller {
 	    	$this->image_lib->clear();
 			redirect(base_url().'admin/greetings',$message);
 		}
-		
 	}
+	function editpage()
+	{
+		$details=$this->Greeting_Model->greeting_details();
+		$data=array('details'=>$details);
+		$this->load->view('admin/edit_greetings',$data);
+	}
+	function delete()
+	{
+		$id=$this->uri->segment(4,0);
+		$result=$this->Greeting_Model->delete($id);
+		redirect(base_url()."admin/greetings/editpage");
+	}
+	function edit()
+	{
+	    $id =$this->uri->segment(4,0);
+        $edit = $this->Greeting_Model->get_details($id);
+   		$message = $this->session->flashdata('message');
+        $this->load->model('admin/Openwysiwyg_Model');
+		$textarea[]= array('textarea' => 'summery',
+						   'skin'	  => 'small');
+		$textarea[]= array('textarea' => 'name',
+						   'skin'	  => 'small');
+		$links = $this->Openwysiwyg_Model->setEditor($enable=TRUE,$textarea);
+		$data=array(
+							'jslinks'   => $links,
+							'message'	=> $message,
+							'edit'     => $edit
+							
+		);
+    $this->load->view('admin/gree_editview',$data);
+	}
+ function edit1()
+   {
+   	echo $_POST['id'];
+   	if(!isset($_POST['active']))
+   	{
+		$active=0;
+   	}else{
+   		$active=$_POST['active'];
+   	}
+	  	echo $id=$_POST['id'];
+   	 $this->Greeting_Model->edit1($id,$active);
+   	redirect(base_url().'admin/greetings/editpage');
+   }
 }
 ?>

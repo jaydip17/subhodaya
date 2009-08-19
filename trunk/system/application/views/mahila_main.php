@@ -67,15 +67,15 @@
 	            </tr>
 	            <tr>
 	             <td width="50%" valign="top" height="219px" style="background-image:url(<?=base_url();?>assets/imgs/Pandugalu-cr.gif);background-repeat-y;">
-	              <div style="float:left;padding:4px 4px 4px 4px"><img src="<?=base_url();?>assets/imgs/sahithi2.jpg" width="105px" height="113px" align="top"  /></div>
+	              <img src="<?=base_url();?>assets/imgs/sahithi2.jpg" style="float:left;padding:4px 15px 4px 4px;text-align: justify;" width="105px" height="113px" align="top"  />
 	               hofisjdjfnsnjThe border-top-width property sets the width of an element's top border. ... medium, Specifies a medium top
 	              
-	              <ul style="margin-right: 20px;padding-right: 20px;">
-	              <li>News in shubhodaya</li>
-	              <li>News in shubhodaya</li>
-	               <li>News in shubhodaya</li>
-	                <li>News in shubhodaya</li>
-	                 <li>News in shubhodaya</li>
+	              <ul>
+	              <?if(!empty($details_more['1'])){
+	              foreach($details_more['1'] as $item) {?>
+
+	              <li><?=$item->heading?></li>
+	              <?}} ?>
 	                 </ul>
 	                 
 	                  </td>
@@ -91,14 +91,14 @@
 	            </tr>
 	            <tr>
 	             <td width="50%" valign="top" height="219px" style="background-image:url(<?=base_url();?>assets/imgs/Pandugalu-cr.gif);background-repeat-y;">
-	              <div style="float:left;padding:4px 4px 4px 4px"><img src="<?=base_url();?>assets/imgs/sahithi2.jpg" width="105px" height="113px" align="top" /></div>
+	              <img src="<?=base_url();?>assets/imgs/sahithi2.jpg" style="float:left;padding:4px 15px 4px 4px;text-align: justify;" width="105px" height="113px" align="top" />
 	              hofisjdjfnsnjThe border-top-width property sets the width of an element's top border. ... medium, Specifies a medium top 
 	              <ul>
-	              <li>News in shubhodaya</li>
-	              <li>News in shubhodaya</li>
-	               <li>News in shubhodaya</li>
-	                <li>News in shubhodaya</li>
-	                 <li>News in shubhodaya</li>
+	             <?if(!empty($details_more['2'])){
+	              foreach($details_more['2'] as $item) {?>
+
+	              <li><?=$item->heading?></li>
+	              <?}} ?>
 	                 </ul>
 	            </td>
 	            </tr>
@@ -116,11 +116,11 @@
 	            <tr>
 	             <td height="116px" style="background-image:url(<?=base_url();?>assets/imgs/Mathru Basha-cr.gif);background-repeat-y;">
 	              <ul>
-	              <li>News in shubhodaya</li>
-	              <li>News in shubhodaya</li>
-	               <li>News in shubhodaya</li>
-	                <li>News in shubhodaya</li>
-	                 <li>News in shubhodaya</li>
+	              <?if(!empty($details_more['3'])){
+	              foreach($details_more['3'] as $item) {?>
+
+	              <li><?=$item->heading?></li>
+	              <?}} ?>
 	                 </ul>
 	                   </td>
 	            </tr>
@@ -137,12 +137,11 @@
 	             <td height="116px" style="background-image:url(<?=base_url();?>assets/imgs/Mathru Basha-cr.gif);background-repeat-y;">
 	              
 	             <ul>
-	              <li>News in shubhodaya</li>
-	              <li>News in shubhodaya</li>
-	               <li>News in shubhodaya</li>
-	                <li>News in shubhodaya</li>
-	                 <li>News in shubhodaya</li>
-	                 </ul>     </td>
+	              <?if(!empty($details_more['4'])){
+	              foreach($details_more['4'] as $item) {?>
+
+	              <li><?=$item->heading?></li>
+	              <?}} ?>	                 </ul>     </td>
 	            </tr>
 	            </table>
 	            </td>
@@ -159,11 +158,11 @@
 	            <tr>
 	             <td  height="116px" style="background-image:url(<?=base_url();?>assets/imgs/Mathru Basha-cr.gif);background-repeat-y;">
 	              <ul>
-	              <li>News in shubhodaya</li>
-	              <li>News in shubhodaya</li>
-	               <li>News in shubhodaya</li>
-	                <li>News in shubhodaya</li>
-	                 <li>News in shubhodaya</li>
+	             <?if(!empty($details_more['5'])){
+	              foreach($details_more['5'] as $item) {?>
+
+	              <li><?=$item->heading?></li>
+	              <?}} ?>
 	                 </ul>
 	                   </td>
 	            </tr>
@@ -180,11 +179,11 @@
 	             <td height="116px" style="background-image:url(<?=base_url();?>assets/imgs/Mathru Basha-cr.gif);background-repeat-y;">
 	              
 	             <ul>
-	              <li>News in shubhodaya</li>
-	              <li>News in shubhodaya</li>
-	               <li>News in shubhodaya</li>
-	                <li>News in shubhodaya</li>
-	                 <li>News in shubhodaya</li>
+	              <?if(!empty($details_more['6'])){
+	              foreach($details_more['6'] as $item) {?>
+
+	              <li><?=$item->heading?></li>
+	              <?}} ?>
 	                 </ul>     </td>
 	            </tr>
 	            </table>
@@ -203,11 +202,11 @@
 	            <tr>
 	             <td  height="163px" style="background-image:url(<?=base_url();?>assets/imgs/Janapadalu-cr.gif);background-repeat-x;">
 	              <ul>
-	              <li>News in shubhodaya</li>
-	              <li>News in shubhodaya</li>
-	               <li>News in shubhodaya</li>
-	                <li>News in shubhodaya</li>
-	                 <li>News in shubhodaya</li>
+	             <?if(!empty($details_more['7'])){
+	              foreach($details_more['7'] as $item) {?>
+
+	              <li><?=$item->heading?></li>
+	              <?}} ?>
 	                 </ul>
 	                   </td>
 	            </tr>
@@ -224,11 +223,11 @@
 	             <td height="163px" style="background-image:url(<?=base_url();?>assets/imgs/Janapadalu-cr.gif);background-repeat-x;">
 	              
 	             <ul>
-	              <li>News in shubhodaya</li>
-	              <li>News in shubhodaya</li>
-	               <li>News in shubhodaya</li>
-	                <li>News in shubhodaya</li>
-	                 <li>News in shubhodaya</li>
+	             <?if(!empty($details_more['8'])){
+	              foreach($details_more['8'] as $item) {?>
+
+	              <li><?=$item->heading?></li>
+	              <?}} ?>
 	                 </ul>     </td>
 	            </tr>
 	            </table>

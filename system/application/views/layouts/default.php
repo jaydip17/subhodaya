@@ -74,7 +74,7 @@ $type=$this->uri->segment(3);?>
           <td id="scrollingnews" style="border-left: 2px solid #0A70BB;
 border-right: 2px solid #0A70BB;"></td>
         </tr>
-     <tr><td width="100%"  align="center" style="border: 2px solid #0A70BB;border-top: 0px solid #0A70BB">
+     <tr><td width="100%"  align="left" style="border: 2px solid #0A70BB;border-top: 0px solid #0A70BB;padding-left:5px;">
 {yield}
       
  </table>

@@ -112,18 +112,28 @@ class Sahithi extends Controller {
 			redirect(base_url().'admin/sahithi',$message);
 		}
 	}
-   function getsahithi(){
+   function getsahithitype(){
    		
-		$details=$this->Sahithi_Model->getnews_details();
+		$details=$this->Sahithi_Model-> get_sahithitype();
 		$data=array('details'=>$details);
+		//print_r($deatails);
+		$this->load->view('admin/sahithitypes',$data);
+	}
+function getsahithi(){
+   		
+		$details=$this->Sahithi_Model->getdetails($this->uri->segment(4),'no');
+		$data=array('details'=>$details,
+		              'cat_id' =>$this->uri->segment(4));
+		//print_r($deatails);
 		$this->load->view('admin/sahithi_edit',$data);
 	}
 	
 	function delete(){
 	$this->load->model('admin/Sahithi_Model');
 	$id=$this->uri->segment(4,0);
+	$cat_id=$this->uri->segment(5);
 	$result=$this->Sahithi_Model->delete($id);
-	redirect(base_url()."admin/sahithi/getsahithi");
+	redirect(base_url()."admin/sahithi/getsahithi/".$cat_id);
 	}
 	
 	function edit(){

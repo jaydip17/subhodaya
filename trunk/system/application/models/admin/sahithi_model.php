@@ -46,9 +46,13 @@ class Sahithi_Model extends Model {
   		$this->db->where('id',$id);	
   		$this->db->update('sahithi',$data);		
     }
-    function getdetails($id)
+    function getdetails($id,$headingonly)
 	{
-		$result=$this->db->get_where('sahithi',array('id'=>$id));
+		if($headingonly=='yes')
+		{
+			$this->db->select('id,heading');
+		}
+		$result=$this->db->get_where('sahithi',array('cat_id'=>$id));
 		return $result->result();
 		
 	}

@@ -103,9 +103,9 @@
           			<tr>
           				<td width="375" style="border: 1px solid #50BCFC;" id="newstable" valign="top" height="235">
           				<div style="width:100%;" id="news_heading"><span id="newsheading"><?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->cinema_type;}?></span></div>
-          				<a href="#"><img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->id;}?>_thumb.jpg" style="float: left;padding:3px 20px 3px 3px; border:0px;text-align: justify;"></img></a>
+          				<a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->id;}?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->id;}?>_thumb.jpg" style="float: left;padding:3px 20px 3px 3px; border:0px;text-align: justify;"></img></a>
           					<div style="height: 180px;">
-          					<font id="telugufont"><?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->heading;}?><br></font>
+          					<font id="telugufont"><span id="mainnews"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->id;}?>"><?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->heading;}?></a></span></font><br>
           					<?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->summary;}?>
           					<ul id="mainnews">
           					<? $count=0; foreach ($cinema_type1 as $row):
@@ -114,7 +114,7 @@
 	          							$count++;
 	          							continue;
           							} ?>
-          						<li><a href="#"><?=$row->heading?></a></li>
+          						<li><a href="<?=base_url();?>cinema/inner/<?=$row->id?>"><?=$row->heading?></a></li>
           					<? if($count==6){
           						break;
           					}else{
@@ -131,9 +131,9 @@
           				</td>
           				<td style="border: 1px solid #50BCFC;" valign="top" id="newstable" height="235">
           				<div style="width:100%;" id="news_heading"><span id="newsheading"><?php if(isset($cinema_type2['0'])){echo $cinema_type2['0']->cinema_type;}?></span></div>
-          				<a href="#"><img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($cinema_type2['0'])){echo $cinema_type2['0']->id;}?>_thumb.jpg" style="float: left;padding:4px 20px 3px 3px;border: 0px;text-align: justify;"></img></a>
+          				<a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type2['0'])){echo $cinema_type2['0']->id;}?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($cinema_type2['0'])){echo $cinema_type2['0']->id;}?>_thumb.jpg" style="float: left;padding:4px 20px 3px 3px;border: 0px;text-align: justify;"></img></a>
           					<div style="height: 180px;">
-          					<font id="telugufont"><?php if(isset($cinema_type2['0'])){echo $cinema_type2['0']->heading;}else echo 'nodatafound';?><br></font>
+          					<font id="telugufont"><span id="mainnews"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type2['0'])){echo $cinema_type2['0']->id;}?>"><?php if(isset($cinema_type2['0'])){echo $cinema_type2['0']->heading;}else echo 'nodatafound';?></a></span></font><br>
           					<?php if(isset($cinema_type2['0'])){echo $cinema_type2['0']->summary;}else echo 'nodatafound';?>
           					<ul id="mainnews">
           					<?
@@ -143,7 +143,7 @@
 	          							$count++;
 	          							continue;
           							} ?>
-          						<li><a href="#"><?=$row->heading?></a></li>
+          						<li><a href="<?=base_url();?>cinema/inner/<?=$row->id?>"><?=$row->heading?></a></li>
           					<? if($count==6){
           						break;
           					}else{
@@ -168,9 +168,9 @@
 							  </ul>
 							  <div class="TabbedPanelsContentGroup">
 							    <div class="TabbedPanelsContent">	
-							  <a href="#"><img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($cinema_type3['0'])){echo $cinema_type3['0']->id;}?>_thumb.jpg" style="float: left;padding:4px 20px 3px 3px;border:0px;text-align: justify;"></img></a>
+							  <a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type3['0'])){echo $cinema_type3['0']->id;}?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($cinema_type3['0'])){echo $cinema_type3['0']->id;}?>_thumb.jpg" style="float: left;padding:4px 20px 3px 3px;border:0px;text-align: justify;"></img></a>
           					<div style="height: 180px;">
-          					<font id="telugufont"><?php if(isset($cinema_type3['0'])){echo $cinema_type3['0']->heading;}?><br></font>
+          					<font id="telugufont"><span id="mainnews"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type3['0'])){echo $cinema_type3['0']->id;}?>"><?php if(isset($cinema_type3['0'])){echo $cinema_type3['0']->heading;}?></a></span><br></font>
           				<?php if(isset($cinema_type3['0'])){echo $cinema_type3['0']->summary;}?>
           					<ul id="mainnews">
           					<? $count=0; foreach ($cinema_type3 as $row): 
@@ -180,7 +180,7 @@
           					continue;
           					}
           					?>
-          						<li><a href="#"><?=$row->heading?></a></li>
+          						<li><a href="<?=base_url();?>cinema/inner/<?=$row->id?>"><?=$row->heading?></a></li>
           					<? if($count==5){
           						break;
           					}else{
@@ -196,9 +196,9 @@
           					<div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>cinema/details/<?php if(isset($cinema_type3['0'])){echo $cinema_type3['0']->type;}?>"><?=$more['0']->matter?></a></span></div>
           				</div>
 							    <div class="TabbedPanelsContent">
-							   <a href="#"><img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($cinema_type4['0'])){echo $cinema_type4['0']->id;}?>_thumb.jpg" style="float: left;padding:4px 20px 3px 3px;border: 0px;text-align: justify;"></img></a>
+							   <a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type4['0'])){echo $cinema_type4['0']->id;}?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($cinema_type4['0'])){echo $cinema_type4['0']->id;}?>_thumb.jpg" style="float: left;padding:4px 20px 3px 3px;border: 0px;text-align: justify;"></img></a>
           					<div style="height: 180px;">
-          					<font id="telugufont"><?php if(isset($cinema_type4['0'])){echo $cinema_type4['0']->heading;}?><br></font>
+          					<font id="telugufont"><span id="mainnews"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type4['0'])){echo $cinema_type4['0']->id;}?>"><?php if(isset($cinema_type4['0'])){echo $cinema_type4['0']->heading;}?></a></span><br></font>
           					<?php if(isset($cinema_type4['0'])){echo $cinema_type4['0']->summary;}?>
           					<ul id="mainnews">
           					<? $count=0; foreach ($cinema_type4 as $row):
@@ -207,7 +207,7 @@
           					$count++;
           					continue;
           					} ?>
-          						<li><a href="#"><?=$row->heading?></a></li>
+          						<li><a href="<?=base_url();?>cinema/inner/<?=$row->id?>"><?=$row->heading?></a></li>
           					<? if($count==5){
           						break;
           					}else{
@@ -233,9 +233,9 @@
 							  </ul>
 							  <div class="TabbedPanelsContentGroup">
 							    <div class="TabbedPanelsContent">
-							    <a href="#"><img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($cinema_type5['0'])){echo $cinema_type5['0']->id;}?>_thumb.jpg" style="float: left;padding:4px 20px 3px 3px; border: 0px;text-align: justify;"></img></a>
+							    <a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type5['0'])){echo $cinema_type5['0']->id;}?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($cinema_type5['0'])){echo $cinema_type5['0']->id;}?>_thumb.jpg" style="float: left;padding:4px 20px 3px 3px; border: 0px;text-align: justify;"></img></a>
           					<div style="height: 180px;">
-          					<font id="telugufont"><?php if(isset($cinema_type5['0'])){echo $cinema_type5['0']->heading;}?><br></font>
+          					<font id="telugufont"><span id="mainnews"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type5['0'])){echo $cinema_type5['0']->id;}?>"><?php if(isset($cinema_type5['0'])){echo $cinema_type5['0']->heading;}?></a></span><br></font>
           					<?php if(isset($cinema_type5['0'])){echo $cinema_type5['0']->summary;}?>
           					<ul id="mainnews">
           					<? $count=0; foreach ($cinema_type5 as $row): 
@@ -244,7 +244,7 @@
 	          						$count++;
 	          						continue;
           						}?>
-          						<li><a href="#"><?=$row->heading?></a></li>
+          						<li><a href="<?=base_url();?>cinema/inner/<?=$row->id?>"><?=$row->heading?></a></li>
           					<? if($count==5){
           						break;
           					}else{
@@ -258,9 +258,9 @@
           					<div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>cinema/details/<?php if(isset($cinema_type5['0'])){echo $cinema_type5['0']->type;}?>"><?=$more['0']->matter?></a></span></div>
           				</div>
 							 <div class="TabbedPanelsContent" >
-									<a href="#"><img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($cinema_type6['0'])){echo $cinema_type6['0']->id;}?>_thumb.jpg" style="float: left;padding:3px 20px 3px 3px;border: 0px;text-align: justify;"></img></a>
+									<a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type6['0'])){echo $cinema_type6['0']->id;}?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($cinema_type6['0'])){echo $cinema_type6['0']->id;}?>_thumb.jpg" style="float: left;padding:3px 20px 3px 3px;border: 0px;text-align: justify;"></img></a>
 									<div style="height: 180px;">
-									<font id="telugufont"><?php if(isset($cinema_type6['0'])){echo $cinema_type6['0']->heading;}?><br></font>
+									<font id="telugufont"><span id="mainnews"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type6['0'])){echo $cinema_type6['0']->id;}?>"><?php if(isset($cinema_type6['0'])){echo $cinema_type6['0']->heading;}?></a></span><br></font>
           					<?php if(isset($cinema_type6['0'])){echo $cinema_type6['0']->summary;}?>
 				          					<ul id="mainnews">
 				          					<? $count=0; foreach ($cinema_type6 as $row):
@@ -269,7 +269,7 @@
 	          										$count++;
 	          										continue;
           										} ?>
-				          						<li><a href="#"><?=$row->heading?></a></li>
+				          						<li><a href="<?=base_url();?>cinema/inner/<?=$row->id?>"><?=$row->heading?></a></li>
 				          					<? 
 				          					if($count==5){
 				          						break;

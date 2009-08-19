@@ -254,6 +254,13 @@ width: 89%;
 .content{
 width: 100%;
 }
+#sahithi-table
+{
+ margin-top:0px;
+ padding-top:0px;
+
+}
+
 #maindiv-news{
 border:1px solid #9FA0A0;
 }
@@ -430,6 +437,7 @@ font-weight:bold;
  padding-top:6px;
  tex-align:left;
 }
+
 
 #hotvideo{
  background-color:#93D7FA;

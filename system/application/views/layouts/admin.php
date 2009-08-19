@@ -63,7 +63,7 @@ ddsmoothmenu.init({
 <li><a href="#">Sahithi</a>
   <ul>
   <li><a href="<?=base_url();?>admin/sahithi">Add</a></li>
-<li><a href="<?=base_url();?>admin/sahithi/getsahithi">Edit</a></li>
+<li><a href="<?=base_url();?>admin/sahithi/getsahithitype">Edit</a></li>
   </ul>
   </li> 
 <li><a href="#">Gallery</a>

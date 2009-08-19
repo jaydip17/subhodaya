@@ -40,7 +40,7 @@ if(isset($message) && !is_array($message) ) echo($message);?>
 	</tr>
 	<tr>
 		<td>For Homepage</td>
-		<td align="left"><?=form_checkbox('home_news','1') ?></td>
+		<td align="left"><?=form_checkbox('homepage','1') ?></td>
 	</tr>
 	<tr>
 		<td>Active</td>

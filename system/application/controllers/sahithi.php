@@ -12,7 +12,7 @@ class Sahithi extends Controller {
 		$details_more=array();
 		foreach($details as $item)
 		$details_more[$item->id]=$this->Sahithi_Model->getdetails($item->id,'yes');
-		print_r($details_more);
+		//print_r($details_more);
 		$data=array('more'      =>$more,
 		            'details'   =>$details,
 		            'details_more' => $details_more);

@@ -41,8 +41,9 @@ class Cinema extends Controller {
 		$more=$this->News_Model->more_news();
 		$id=$this->uri->segment(3,0);
 		$result=$this->Cinema_Model->inner($id);
-		$data=array('more'=>$more,
-					'result'=>$result
+		$data=array('more'   		=> $more,
+					'result' 		=> $result,
+					
 					);
 		$this->load->view('cinema_inner',$data);
 	}

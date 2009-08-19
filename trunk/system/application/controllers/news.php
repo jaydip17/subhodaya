@@ -5,6 +5,7 @@ class News extends Controller {
 		parent::Controller();
 		$this->load->model("admin/News_Model");
 		$this->load->model("admin/Poll_Model");
+		$this->load->model("admin/Cinema_Model");
 	}
 	function index(){
 		$more=$this->News_Model->more_news();
@@ -48,10 +49,13 @@ class News extends Controller {
 	}
 	function newsdetails(){
 		$more=$this->News_Model->more_news();
+		$cinema_type1=$this->Cinema_Model->get_cinematype(1);
 		$id=$this->uri->segment(3,0);
 		$result=$this->News_Model->inner_news($id);
-		$data=array('result'=>$result,
-					'more'=>$more);
+		$data=array('result'   =>   $result,
+					 'more'    =>   $more,
+				'cinema_type1' =>   $cinema_type1);
+				
 		$this->load->view('news_inner',$data);
 	}
 }

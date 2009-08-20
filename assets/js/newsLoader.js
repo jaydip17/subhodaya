@@ -36,4 +36,3 @@ if (xmlhttp.readyState==4)
     }
   }
 }
-

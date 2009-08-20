@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 19, 2009 at 10:57 AM
+-- Generation Time: Aug 20, 2009 at 11:42 AM
 -- Server version: 5.1.32
 -- PHP Version: 5.2.9-1
 
@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `more` (
   `matter` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `active` int(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=26 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=28 ;
 
 --
 -- Dumping data for table `more`
@@ -62,4 +62,6 @@ INSERT INTO `more` (`id`, `matter`, `active`) VALUES
 (22, 'ఇన్వైట్ ఫ్రెండ్స్ వయా ఇ-మెయిల్ ', 0),
 (23, 'ఇది నిజం', 0),
 (24, 'ముఖ్యమైన  గ్రీటింగ్స్ ', 0),
-(25, 'మునుపటి పేజి', 0);
+(25, 'మునుపటి పేజి', 0),
+(26, 'ఆడ వాళ్ళ  కోసం శుభోదయ అందిస్తోంది స్పెషల్ పేజి ', 0),
+(27, 'ఆడ వాళ్ళ  కోసం శుభోదయ అందిస్తోంది స్పెష', 0);

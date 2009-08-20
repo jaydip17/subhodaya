@@ -61,7 +61,7 @@ class Mahila extends Controller {
 			echo "hello";
 		$config['upload_path'] ='assets/mahila/';
 		$config['allowed_types'] = 'gif|jpg|png';
-		$config['max_size']	= '1000';
+		$config['max_size']	= '2000';
 		$config['max_width']  = '1024';
 		$config['max_height']  = '768';
 		
@@ -115,7 +115,7 @@ class Mahila extends Controller {
 	}
 	 function getmahilatype(){
    		
-		$details=$this->Mahila_Model-> get_sahithitype();
+		$details=$this->Mahila_Model-> get_mahilatype();
 		$data=array('details'=>$details);
 		//print_r($deatails);
 		$this->load->view('admin/mahilatypes',$data);
@@ -139,9 +139,9 @@ class Mahila extends Controller {
 	
 	function edit(){
 	 $id =$this->uri->segment(4,0);
-    $edit = $this->Mahila_Model->getdetails($id);
-   
-    $message = $this->session->flashdata('message');
+     $edit = $this->Mahila_Model->getmahila_details($id);
+    
+     $message = $this->session->flashdata('message');
 		$this->load->model('admin/Openwysiwyg_Model');
 		$textarea[]= array('textarea' => 'description',
 						   'skin'	  => 'full');
@@ -164,9 +164,10 @@ class Mahila extends Controller {
    	}else{
    		$homepage=$_POST['homepage'];
    	}
-	  	echo $id=$_POST['id'];
+	  $cat_id =$_POST['cat_id'];
+	  $id =$_POST['id'];
    	 $this->Mahila_Model->edit1($id,$homepage);
-   	redirect(base_url().'admin/mahila/getmahila');
+   	redirect(base_url().'admin/mahila/getmahila/'.$cat_id);
    }
 	
 }

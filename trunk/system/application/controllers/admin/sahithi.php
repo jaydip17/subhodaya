@@ -138,9 +138,9 @@ function getsahithi(){
 	
 	function edit(){
 	 $id =$this->uri->segment(4,0);
-    $edit = $this->Sahithi_Model->getdetails($id);
-   
-    $message = $this->session->flashdata('message');
+     $edit = $this->Sahithi_Model->getsahithi_details($id);
+    
+     $message = $this->session->flashdata('message');
 		$this->load->model('admin/Openwysiwyg_Model');
 		$textarea[]= array('textarea' => 'description',
 						   'skin'	  => 'full');
@@ -152,7 +152,7 @@ function getsahithi(){
 							'message'	=> $message,
 		                    'edit'      =>  $edit
 		);
-    $this->load->view('admin/editsahithi',$data);
+		$this->load->view('admin/editsahithi',$data);
 	}
 	
   function edit1()
@@ -163,9 +163,10 @@ function getsahithi(){
    	}else{
    		$homepage=$_POST['homepage'];
    	}
-	  	echo $id=$_POST['id'];
+   	 $cat_id =$_POST['cat_id'];
+	 $id=$_POST['id'];
    	 $this->Sahithi_Model->edit1($id,$homepage);
-   	redirect(base_url().'admin/sahithi/getsahithi');
+   	redirect(base_url().'admin/sahithi/getsahithi/'.$cat_id);
    }
 	
 }

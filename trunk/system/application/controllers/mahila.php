@@ -15,7 +15,7 @@ class Mahila extends Controller {
 		$data=array('more'      =>$more,
 		            'details'   =>$details,
 		            'details_more' => $details_more);
-		$this->load->view('mahila_main',$data);
+		$this->load->view('sahithi_view',$data);
   }
     function content()
   {

@@ -1,19 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.1.3
+-- version 2.11.5
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 14, 2009 at 04:50 AM
--- Server version: 5.1.32
--- PHP Version: 5.2.9-1
+-- Generation Time: Aug 20, 2009 at 06:35 AM
+-- Server version: 5.0.51
+-- PHP Version: 5.2.5
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `subhodaya`
@@ -25,19 +19,35 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- Table structure for table `mahila`
 --
 
+DROP TABLE IF EXISTS `mahila`;
 CREATE TABLE IF NOT EXISTS `mahila` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `id` int(10) NOT NULL auto_increment,
   `cat_id` int(10) NOT NULL,
-  `heading` varchar(150) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `summary` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `description` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `insert_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `homepage` int(1) NOT NULL DEFAULT '0',
-  `active` int(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+  `heading` varchar(150) character set utf8 collate utf8_unicode_ci NOT NULL,
+  `summary` text character set utf8 collate utf8_unicode_ci NOT NULL,
+  `description` text character set utf8 collate utf8_unicode_ci NOT NULL,
+  `insert_date` timestamp NOT NULL default CURRENT_TIMESTAMP,
+  `homepage` int(1) NOT NULL default '0',
+  `active` int(1) NOT NULL default '0',
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=31 ;
 
 --
 -- Dumping data for table `mahila`
 --
 
+INSERT INTO `mahila` (`id`, `cat_id`, `heading`, `summary`, `description`, `insert_date`, `homepage`, `active`) VALUES
+(17, 1, 'ఆడ వాళ్ళ హక్కులు మీ శుభోదయలో<br>', 'ఆడ వాళ్ళ హక్కులు మీ శుభోదయలో', 'ఆడ వాళ్ళ హక్కులు మీ శుభోదయలో', '2009-08-20 11:00:49', 0, 0),
+(18, 1, 'ఆడ వాళ్ళ హక్కులు మీ శుభోదయలో', 'ఆడ వాళ్ళ హక్కులు మీ శుభోదయలో', 'ఆడ వాళ్ళ హక్కులు మీ శుభోదయలో', '2009-08-20 11:01:00', 0, 0),
+(19, 1, 'ఆడ వాళ్ళ హక్కులు మీ శుభోదయలో', 'ఆడ వాళ్ళ హక్కులు మీ శుభోదయలో', 'ఆడ వాళ్ళ హక్కులు మీ శుభోదయలో', '2009-08-20 11:01:07', 0, 0),
+(20, 1, 'ఆడ వాళ్ళ హక్కులు మీ శుభోదయలో', 'ఆడ వాళ్ళ హక్కులు మీ శుభోదయలో', 'ఆడ వాళ్ళ హక్కులు మీ శుభోదయలో', '2009-08-20 11:01:17', 0, 0),
+(21, 2, 'ఆడ వాళ్ళ హక్కులు మీ శుభోదయలో', 'ఆడ వాళ్ళ హక్కులు మీ శుభోదయలో', 'ఆడ వాళ్ళ హక్కులు మీ శుభోదయలో', '2009-08-20 11:01:31', 0, 0),
+(22, 1, 'ఆడ వాళ్ళ హక్కులు మీ శుభోదయలో', 'ఆడ వాళ్ళ హక్కులు మీ శుభోదయలో', 'ఆడ వాళ్ళ హక్కులు మీ శుభోదయలో', '2009-08-20 11:01:40', 0, 0),
+(23, 3, 'ఆడ వాళ్ళ హక్కులు మీ శుభోదయలో', 'ఆడ వాళ్ళ హక్కులు మీ శుభోదయలో', 'ఆడ వాళ్ళ హక్కులు మీ శుభోదయలో', '2009-08-20 11:02:11', 0, 0),
+(24, 4, 'ఆడ వాళ్ళ హక్కులు మీ శుభోదయలో', 'ఆడ వాళ్ళ హక్కులు మీ శుభోదయలో', 'ఆడ వాళ్ళ హక్కులు మీ శుభోదయలో', '2009-08-20 11:02:26', 0, 0),
+(25, 5, 'ఆడ వాళ్ళ హక్కులు మీ శుభోదయలో', 'ఆడ వాళ్ళ హక్కులు మీ శుభోదయలో', 'ఆడ వాళ్ళ హక్కులు మీ శుభోదయలో', '2009-08-20 11:02:39', 0, 0),
+(26, 6, 'ఆడ వాళ్ళ హక్కులు మీ శుభోదయలో', 'ఆడ వాళ్ళ హక్కులు మీ శుభోదయలో', 'ఆడ వాళ్ళ హక్కులు మీ శుభోదయలో', '2009-08-20 11:02:49', 0, 0),
+(27, 7, 'ఆడ వాళ్ళ హక్కులు మీ శుభోదయలో', 'ఆడ వాళ్ళ హక్కులు మీ శుభోదయలో', 'ఆడ వాళ్ళ హక్కులు మీ శుభోదయలో', '2009-08-20 11:03:01', 0, 0),
+(28, 8, 'ఆడ వాళ్ళ హక్కులు మీ శుభోదయలో', 'ఆడ వాళ్ళ హక్కులు మీ శుభోదయలో', 'ఆడ వాళ్ళ హక్కులు మీ శుభోదయలో', '2009-08-20 11:03:11', 0, 0),
+(29, 9, 'ఆడ వాళ్ళ హక్కులు మీ శుభోదయలో', 'ఆడ వాళ్ళ హక్కులు మీ శుభోదయలో', 'ఆడ వాళ్ళ హక్కులు మీ శుభోదయలో', '2009-08-20 11:03:19', 0, 0),
+(30, 10, 'ఆడ వాళ్ళ హక్కులు మీ శుభోదయలో', 'ఆడ వాళ్ళ హక్కులు మీ శుభోదయలో', 'ఆడ వాళ్ళ హక్కులు మీ శుభోదయలో', '2009-08-20 11:03:29', 0, 0);

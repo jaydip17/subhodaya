@@ -6,7 +6,7 @@
 <!-- main style sheet -->
 <link href="<?=base_url();?>assets/style.css" rel="stylesheet" type="text/css" />
 <!-- for tabs js ans css -->
-
+<script src="<?=base_url();?>assets/Scripts/swfobject_modified.js" type="text/javascript"></script>
 <script type="text/javascript" src="<?=base_url();?>assets/js/yahoo-dom-event.js"></script>
 <script type="text/javascript" src="<?=base_url();?>assets/js/element-min.js"></script>
 <script type="text/javascript" src="<?=base_url();?>assets/js/tabview-min.js"></script>

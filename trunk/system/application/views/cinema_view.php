@@ -1,3 +1,12 @@
+<script language="javascript">
+//<!--
+function display(value)
+{
+  document.getElementById('flash-content').innerHTML = value;
+}
+
+//-->
+</script> 
 <table width="99%"  border="0" cellpadding="0" cellspacing="0">
 <tr>
     <td width="420" valign="top" >
@@ -6,15 +15,46 @@
        	<td valign="top">
        	<table width="0"  border="0" cellpadding="0" cellspacing="0">
     		<tr>
-	       		<td  valign="top" width="500">
-		       		<table width="100%"  border="0" cellpadding="0" cellspacing="0">
-		     			<tr><td height="4" valign="bottom"><img src="<?=base_url();?>assets/imgs/top-cor-line.jpg" width="500" height="4" /></td></tr>
-		            </table>
-	                <table width="100%"  border="0" style="border-left:1px solid #0872BC; border-right:1px solid #0872BC;" cellpadding="0" cellspacing="0">
-	                    <tr><td height="330"></td>
+	       		<td  valign="top" width="486">
+		       		
+	                <table width="100%"  border="0"  cellpadding="0" cellspacing="0">
+	                    <tr><td height="341">
+	                   <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="486" height="341">
+  <param name="movie" value="<?=base_url();?>assets/subh.swf" />
+  <param name="quality" value="high" />
+  <param name="wmode" value="opaque" />
+  <param name="swfversion" value="9.0.45.0" />
+  <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don’t want users to see the prompt. -->
+  <param name="expressinstall" value="<?=base_url();?>assets/Scripts/expressInstall.swf" />
+  <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
+  <!--[if !IE]>-->
+  <object type="application/x-shockwave-flash" data="<?=base_url();?>assets/subh.swf" width="486" height="341">
+    <!--<![endif]-->
+    <param name="quality" value="high" />
+    <param name="wmode" value="opaque" />
+    <param name="swfversion" value="9.0.45.0" />
+    <param name="expressinstall" value="<?=base_url();?>assets/Scripts/expressInstall.swf" />
+    <!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
+    <div>
+      <h4>Content on this page requires a newer version of Adobe Flash Player.</h4>
+      <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" /></a></p>
+    </div>
+    <!--[if !IE]>-->
+  </object>
+  <!--<![endif]-->
+</object>
+<script type="text/javascript">
+<!--
+swfobject.registerObject("FlashID");
+//-->
+</script>
+<div id="flash-content" style=" background:transparent url(<?=base_url();?>assets/imgs/onepx.png) repeat scroll 0 0; position:absolute; width:484px; top: 416px; left:31px; height: 20px;text-align: left;"> 
+sample sf dsfsd fdsf
+</div>
+	                    
+	                    </td>
 	                    </tr>
 	                </table></td></tr>
-	                <tr><td><img src="<?=base_url();?>assets/imgs/top-crow-botom.jpg" width="500"/></td></tr>
          </table>
          </td>
      </tr>

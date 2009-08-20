@@ -1,9 +1,35 @@
 <table width="99%">
 	<tr>
-		<td width="185" height="100%" valign="top" ><div id="newsinnerleft" ></div></td>
+		<td width="185" height="100%" valign="top" >
+			<table>
+					<tr>
+						<td align="left"><div class="heading" style="width: 181px;" id="news_heading"><div style="padding-top:5px;" id="newsheading"><?php if(isset($news_type4['0'])){echo $news_type4['0']->news_cat;}?></div></div>
+						<div style="" id="left_news">
+							<img src="<?=base_url();?>assets/news/news_img<?=$news_type4['0']->id?>_thumb.jpg" style="padding:5px 0px 0px 20px; ">
+							<ul >
+								<?php
+								if(!empty($news_type4))
+								{ 
+								$count=0; foreach ($news_type4 as $row):?>
+								<li id="mainnews"><a href="<?=base_url();?>news/inner/<?=$row->id?>"><?=$row->heading?></a></li>
+								<?php
+								if($count==2){
+								break;}
+								else{$count++;}
+								 endforeach;
+								 }
+								else
+								echo 'No data found';?>
+								<div id="more-news-div" ><a href="<?=base_url();?>cinema/details/<?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->type;}?>"><?php if(isset($more['0'])){echo $more['0']->matter;}?></a></div>
+							</ul>
+						</div>
+						</td>
+					</tr>
+				</table>
+		</td>
 		<td valign="top" >
 			<div><table cellpadding="1px" width="100%">
-			<tr><td><div id="news_heading" class="heading"><span id="newsheading"><?php if(isset($result['0'])){echo $result['0']->heading;}?></span></div></td></tr>
+			<tr><td align="left"><div id="news_heading" class="heading"><div id="newsheading" style="padding-top: 5px;"><?php if(isset($result['0'])){echo $result['0']->heading;}?></div></div></td></tr>
 			<tr><td align="center"><div  id="maindiv-news">
 			<div class="help"></div>
 			<div class="content" >
@@ -53,23 +79,31 @@
 		</div>
 		</td>
 		 <td width="185" align="center" valign="top">
-			<table width="100%" style="border:1px solid #3789C3;">
-			<tr>
-				<td style="border:1px solid #3789C3;height: 25px;" id="news_heading">Latest Gallery</td>
-			</tr>
-			<tr>
-				<td align="center">
-						<table style="padding-left: 5px" >
-					<tr><td><div><img src="<?=base_url();?>assets/imgs/cini-img.jpg"></div></td></tr>
-					<tr><td>sometext sometext sometext sometext</td></tr>
-					<tr><td><div><img src="<?=base_url();?>assets/imgs/cini-img.jpg"></div></td></tr>
-					<tr><td>sometext sometext sometext sometext</td></tr>
-					<tr><td><div><img src="<?=base_url();?>assets/imgs/cini-img.jpg"></div></td></tr>
-					<tr><td>sometext sometext sometext sometext</td></tr>
-					</table>
-				</td>
-			</tr>
-			</table>
+				<table>
+					<tr>
+						<td align="left"><div class="heading" style="width: 181px;" id="news_heading"><div style="padding-top:5px;" id="newsheading"><?php if(isset($news_type4['0'])){echo $news_type4['0']->news_cat;}?></div></div>
+						<div style="" id="left_news">
+							<img src="<?=base_url();?>assets/news/news_img<?=$news_type4['0']->id?>_thumb.jpg" style="padding:5px 0px 0px 20px; ">
+							<ul >
+								<?php
+								if(!empty($news_type4))
+								{ 
+								$count=0; foreach ($news_type4 as $row):?>
+								<li id="mainnews"><a href="<?=base_url();?>news/inner/<?=$row->id?>"><?=$row->heading?></a></li>
+								<?php
+								if($count==2){
+								break;}
+								else{$count++;}
+								 endforeach;
+								 }
+								else
+								echo 'No data found';?>
+								<div id="more-news-div" ><a href="<?=base_url();?>cinema/details/<?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->type;}?>"><?php if(isset($more['0'])){echo $more['0']->matter;}?></a></div>
+							</ul>
+						</div>
+						</td>
+					</tr>
+				</table>
 			<div style="padding-top: 5px">
 			<table style="border:1px solid #3789C3;" bgcolor="#9CB8FB" width="100%">
 				<tr>

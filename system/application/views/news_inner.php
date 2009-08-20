@@ -2,18 +2,17 @@
 <table width="99%">
 	<tr>
 		<td width="185" height="100%" valign="top" >
-			<div>
 				<table>
 					<tr>
 						<td align="left"><div class="heading" style="width: 181px;" id="news_heading"><div style="padding-top:5px;" id="newsheading"><?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->cinema_type;}?></div></div>
 						<div style="" id="left_news">
 							<img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type1['0']->id?>_thumb.jpg" style="padding:5px 0px 0px 20px; ">
-							<ul id="mainnews">
+							<ul >
 								<?php
 								if(!empty($cinema_type1))
 								{ 
 								$count=0; foreach ($cinema_type1 as $row):?>
-								<li><a href="<?=base_url();?>cinema/inner/<?=$row->id?>"><?=$row->heading?></a></li>
+								<li id="mainnews"><a href="<?=base_url();?>cinema/inner/<?=$row->id?>"><?=$row->heading?></a></li>
 								<?php
 								if($count==2){
 								break;}
@@ -22,13 +21,12 @@
 								 }
 								else
 								echo 'No data found';?>
+								<div id="more-news-div" ><a href="<?=base_url();?>cinema/details/<?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->type;}?>"><?php if(isset($more['0'])){echo $more['0']->matter;}?></a></div>
 							</ul>
-							<div id="more-news-div"><a href="<?=base_url();?>cinema/details/<?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->type;}?>"><?php if(isset($more['0'])){echo $more['0']->matter;}?></a></div>
 						</div>
 						</td>
 					</tr>
 				</table>
-			</div>
 		</td>
 		<td valign="top" >
 			<div><table cellpadding="1px" width="100%">

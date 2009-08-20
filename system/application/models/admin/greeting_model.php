@@ -80,6 +80,7 @@ class Greeting_Model extends Model {
   					'active'=>$active
   					);
   					print_r($data);
+  					
   		$this->db->where('id',$id);	
   		$this->db->update('greetings',$data);		
     }

@@ -39,10 +39,12 @@ class Cinema extends Controller {
 	}
 	function inner(){
 		$more=$this->News_Model->more_news();
+		$news_type4=$this->News_Model->get_newstype1(4);
 		$id=$this->uri->segment(3,0);
 		$result=$this->Cinema_Model->inner($id);
 		$data=array('more'   		=> $more,
 					'result' 		=> $result,
+					'news_type4'	=> $news_type4
 					
 					);
 		$this->load->view('cinema_inner',$data);

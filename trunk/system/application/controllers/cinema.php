@@ -47,5 +47,6 @@ class Cinema extends Controller {
 					);
 		$this->load->view('cinema_inner',$data);
 	}
+	
 }
 ?>

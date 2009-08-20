@@ -56,7 +56,7 @@ ddsmoothmenu.init({
 <li><a href="#">Mahila</a>
 <ul>
   <li><a href="<?=base_url();?>admin/mahila">Insert</a></li>
-  <li><a href="#">View/Edit</a></li>
+  <li><a href="<?=base_url();?>admin/mahila/getmahilatype">View/Edit</a></li>
  </ul> 
 </li>
 

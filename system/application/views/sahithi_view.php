@@ -1,3 +1,15 @@
+<style type="text/css">
+ul{
+list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
+}
+#tdmahila
+{
+padding-left:5px;
+background-image:url(<?=base_url();?>assets/imgs/sahithi-top.gif);
+background-repeat-x;
+padding-top:0px;
+}
+</style>
 <table width="99%"  border="0" cellpadding="0" cellspacing="0" style="padding-bottom:20px">
 <tr>
         <td  valign="top">
@@ -12,12 +24,12 @@
 					<td><img src="<?=base_url();?>assets/imgs/beauty-top-right.gif" width="8" height="23" alt="gg" /></td>
 					</tr>
 					<tr>
-					<td height="151px" colspan="3" style="background-image:url(<?=base_url();?>assets/imgs/KitchenTips-cr.gif);background-repeat-x;border:1px solid #0A70BB;border-bottom:0px;"><ul>
-	              <li>News in shubhodaya</li>
-	              <li>News in shubhodaya</li>
-	               <li>News in shubhodaya</li>
-	                <li>News in shubhodaya</li>
-	                 <li>News in shubhodaya</li>
+					<td height="151px" valign="top" colspan="3" style="background-image:url(<?=base_url();?>assets/imgs/KitchenTips-cr.gif);background-repeat-x;border:1px solid #0A70BB;border-bottom:0px;"><ul>
+	              <?if(!empty($details_more['8'])){
+	              foreach($details_more['8'] as $item) {?>
+
+	              <li><?=$item->heading?></li>
+	              <?}} ?>
 	                 </ul></td>
 					</tr>
 					<tr>
@@ -31,12 +43,12 @@
 					<td><img src="<?=base_url();?>assets/imgs/beauty-top-right.gif" width="8" height="23" alt="gg" /></td>
 					</tr>
 					<tr>
-					<td height="151px" colspan="3" style="background-image:url(<?=base_url();?>assets/imgs/KitchenTips-cr.gif);background-repeat-x;border: 1px solid #0A70BB;border-bottom: 0px;"><ul>
-	              <li>News in shubhodaya</li>
-	              <li>News in shubhodaya</li>
-	               <li>News in shubhodaya</li>
-	                <li>News in shubhodaya</li>
-	                 <li>News in shubhodaya</li>
+					<td height="151px" valign="top" colspan="3" style="background-image:url(<?=base_url();?>assets/imgs/KitchenTips-cr.gif);background-repeat-x;border: 1px solid #0A70BB;border-bottom: 0px;"><ul>
+	              <?if(!empty($details_more['9'])){
+	              foreach($details_more['9'] as $item) {?>
+
+	              <li><?=$item->heading?></li>
+	              <?}} ?>
 	                 </ul></td>
 					</tr>
 					<tr>
@@ -62,15 +74,13 @@
 	            <td>
 	            <table width="332px" align="center" style="border: 1px solid #0A70BB;" cellpadding="0" cellspacing="0">
 	            <tr>
-	            <td height="22px" style="background-image:url(<?=base_url();?>assets/imgs/sahithi-top.gif);background-repeat-x; padding:top:0px;"><?=$details['0']->cat_name?></td>
+	            <td height="22px" id="tdmahila"><?=$details['0']->cat_name?></td>
 	           
 	            </tr>
 	            <tr>
 	             <td width="50%" valign="top" height="219px" style="background-image:url(<?=base_url();?>assets/imgs/Pandugalu-cr.gif);background-repeat-y;">
 	              <img src="<?=base_url();?>assets/imgs/sahithi2.jpg" style="float:left;padding:4px 15px 4px 4px;text-align: justify;" width="105px" height="113px" align="top"  />
-	               hofisjdjfnsnjThe border-top-width property sets the width of an element's top border. ... medium, Specifies a medium top
-	              
-	              <ul>
+	             <?=$more['23']->matter?>    <ul>
 	              <?if(!empty($details_more['1'])){
 	              foreach($details_more['1'] as $item) {?>
 
@@ -85,15 +95,14 @@
 	            <td>
 	            <table width="332px" align="center" style="border: 1px solid #0A70BB;" cellpadding="0" cellspacing="0">
 	            <tr>
-	            <td height="22px" style="background-image:url(<?=base_url();?>assets/imgs/sahithi-top.gif);background-repeat-x;"><?=$details['1']->cat_name?>
+	            <td height="22px" id="tdmahila"><?=$details['1']->cat_name?>
 	            </td>
 	           
 	            </tr>
 	            <tr>
 	             <td width="50%" valign="top" height="219px" style="background-image:url(<?=base_url();?>assets/imgs/Pandugalu-cr.gif);background-repeat-y;">
-	              <img src="<?=base_url();?>assets/imgs/sahithi2.jpg" style="float:left;padding:4px 15px 4px 4px;text-align: justify;" width="105px" height="113px" align="top" />
-	              hofisjdjfnsnjThe border-top-width property sets the width of an element's top border. ... medium, Specifies a medium top 
-	              <ul>
+	              <img src="<?=base_url();?>assets/imgs/sahithi2.jpg" style="float:left;padding:4px 15px 4px 4px;text-align: justify;" width="105px" height="113px" align="top" /><?=$more['23']->matter?>
+	               <ul>
 	             <?if(!empty($details_more['2'])){
 	              foreach($details_more['2'] as $item) {?>
 
@@ -109,12 +118,12 @@
 	            <td>
 	            <table width="332px" align="center" style="border: 1px solid #0A70BB;" cellpadding="0" cellspacing="0">
 	            <tr>
-	            <td height="22px" style="background-image:url(<?=base_url();?>assets/imgs/sahithi-top.gif);background-repeat-x;"><?=$details['2']->cat_name?>
+	            <td height="22px" id="tdmahila"><?=$details['2']->cat_name?>
 	            </td>
 	           
 	            </tr>
 	            <tr>
-	             <td height="116px" style="background-image:url(<?=base_url();?>assets/imgs/Mathru Basha-cr.gif);background-repeat-y;">
+	             <td height="116px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/Mathru Basha-cr.gif);background-repeat-y;">
 	              <ul>
 	              <?if(!empty($details_more['3'])){
 	              foreach($details_more['3'] as $item) {?>
@@ -129,12 +138,12 @@
 	            <td>
 	            <table width="332px" align="center" style="border: 1px solid #0A70BB;" cellpadding="0" cellspacing="0">
 	            <tr>
-	            <td height="22px" style="background-image:url(<?=base_url();?>assets/imgs/sahithi-top.gif);background-repeat-x;"><?=$details['3']->cat_name?>
+	            <td height="22px" id="tdmahila"><?=$details['3']->cat_name?>
 	            </td>
 	           
 	            </tr>
 	            <tr>
-	             <td height="116px" style="background-image:url(<?=base_url();?>assets/imgs/Mathru Basha-cr.gif);background-repeat-y;">
+	             <td height="116px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/Mathru Basha-cr.gif);background-repeat-y;">
 	              
 	             <ul>
 	              <?if(!empty($details_more['4'])){
@@ -151,12 +160,12 @@
 	            <td>
 	            <table width="332px" align="center" style="border: 1px solid #0A70BB;" cellpadding="0" cellspacing="0">
 	            <tr>
-	            <td height="22px" style="background-image:url(<?=base_url();?>assets/imgs/sahithi-top.gif);background-repeat-x;"><?=$details['4']->cat_name?>
+	            <td height="22px" id="tdmahila"><?=$details['4']->cat_name?>
 	            </td>
 	           
 	            </tr>
 	            <tr>
-	             <td  height="116px" style="background-image:url(<?=base_url();?>assets/imgs/Mathru Basha-cr.gif);background-repeat-y;">
+	             <td  height="116px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/Mathru Basha-cr.gif);background-repeat-y;">
 	              <ul>
 	             <?if(!empty($details_more['5'])){
 	              foreach($details_more['5'] as $item) {?>
@@ -171,12 +180,12 @@
 	            <td>
 	            <table width="332px" align="center" style="border: 1px solid #0A70BB;" cellpadding="0" cellspacing="0">
 	            <tr>
-	            <td height="22px" style="background-image:url(<?=base_url();?>assets/imgs/sahithi-top.gif);background-repeat-x;"><?=$details['5']->cat_name?>
+	            <td height="22px" id="tdmahila"><?=$details['5']->cat_name?>
 	            </td>
 	           
 	            </tr>
 	            <tr>
-	             <td height="116px" style="background-image:url(<?=base_url();?>assets/imgs/Mathru Basha-cr.gif);background-repeat-y;">
+	             <td height="116px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/Mathru Basha-cr.gif);background-repeat-y;">
 	              
 	             <ul>
 	              <?if(!empty($details_more['6'])){
@@ -195,12 +204,12 @@
 				<div style="float:left;padding-right:4px;">
 	            <table width="450px" align="center" style="border: 1px solid #0A70BB;" cellpadding="0" cellspacing="0">
 	            <tr>
-	            <td height="22px" style="background-image:url(<?=base_url();?>assets/imgs/sahithi-top.gif);background-repeat-x;"><?=$details['6']->cat_name?>
+	            <td height="22px" id="tdmahila"><?=$details['6']->cat_name?>
 	            </td>
 	           
 	            </tr>
 	            <tr>
-	             <td  height="163px" style="background-image:url(<?=base_url();?>assets/imgs/Janapadalu-cr.gif);background-repeat-x;">
+	             <td  height="163px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/Janapadalu-cr.gif);background-repeat-x;">
 	              <ul>
 	             <?if(!empty($details_more['7'])){
 	              foreach($details_more['7'] as $item) {?>
@@ -215,12 +224,12 @@
 	           
 	            <table width="213px" align="center" style="border: 1px solid #0A70BB;" cellpadding="0" cellspacing="0">
 	            <tr>
-	            <td height="22px" style="background-image:url(<?=base_url();?>assets/imgs/sahithi-top.gif);background-repeat-x;"><?=$details['7']->cat_name?>
+	            <td height="22px" id="tdmahila"><?=$details['7']->cat_name?>
 	            </td>
 	           
 	            </tr>
 	            <tr>
-	             <td height="163px" style="background-image:url(<?=base_url();?>assets/imgs/Janapadalu-cr.gif);background-repeat-x;">
+	             <td height="163px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/Janapadalu-cr.gif);background-repeat-x;">
 	              
 	             <ul>
 	             <?if(!empty($details_more['8'])){

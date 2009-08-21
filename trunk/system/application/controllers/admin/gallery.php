@@ -11,25 +11,44 @@
     //displaying root categeories from database	
    function categeory1()
 	{  	 
+	$message = $this->session->flashdata('message');
+		$this->load->model('admin/Openwysiwyg_Model');
+	
+		$textarea[]= array('textarea' => 'id',
+						   'skin'	  => 'small');
+		$links = $this->Openwysiwyg_Model->setEditor($enable=TRUE,$textarea);
 	   $parentid=0;	    
-       $data['options'] =$this->Gallery_model->Categeory($parentid);
+       $options =$this->Gallery_model->Categeory($parentid);
+       $data=array('options'=>$options,
+       				'jslinks'   => $links,);
        $this->load->view('admin/gallery_admin_categeory',$data);
 	}
 	//displaying categeories for adding images
 	function root_forimages()
 	{
+		$message = $this->session->flashdata('message');
+		$this->load->model('admin/Openwysiwyg_Model');
+	
+		$textarea[]= array('textarea' => 'id',
+						   'skin'	  => 'small');
+		$links = $this->Openwysiwyg_Model->setEditor($enable=TRUE,$textarea);
 	   $parentid=0;	
-	   $data['options1'] = $this->Gallery_model->Categeory($parentid);
-	   $data['options'] = array(''=>'');
-	   $data['parentid']= 0;
+	  $options1= $this->Gallery_model->Categeory($parentid);
+	  $options= array(''=>'');
+	  $parentid= 0;
        
        if($this->input->post('parentid'))
        {
        $parentid = $this->input->post('parentid');
-       $data['options']= $this->Gallery_model->Categeory($this->input->post('parentid'));
-       $data['parentid']= $parentid;
+        $options= $this->Gallery_model->Categeory($this->input->post('parentid'));
+       $parentid= $parentid;
        
        }
+       $data=array('jslinks'   => $links,
+       				'message '  => $message,
+       				'parentid' =>$parentid,
+       				'options1'=>$options1,
+       				'options'=>$options);
 	   $this->load->view('admin/gallery_admin_images',$data);
 	}
 		//adding categeories

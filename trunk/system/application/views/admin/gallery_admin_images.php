@@ -83,14 +83,14 @@ echo form_dropdown ( 'parentid', $options1, $parentid, $js );
 <?
 echo form_open_multipart( 'admin/gallery/addImage' );
 ?>
-<table align="center" width="430" id="tableadmin">
+<table align="center" width="530" id="tableadmin">
 	<tr>
-		<td align="left" width="150">
+		<td align="left" width="250">
 <?
 echo form_label ( 'Select sub categeory', 'id' );
 ?>
 </td>
-		<td width="290">
+		<td width="300">
 <?
 echo form_dropdown ( 'parentid1', $options );
 ?>
@@ -104,7 +104,8 @@ echo form_label ( 'Select title for image', 'title[]' );
 </td>
 		<td>
 <?
-echo form_input ( 'title[]', '' );
+$array=array('name'=>'title[]','value'=>'','id'=>'id');
+echo form_textarea ($array);
 ?>
 
 </td>

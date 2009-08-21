@@ -48,7 +48,7 @@ class Sahithi extends Controller {
 		$this->pagination->initialize($config); 
 		$pagination=$this->pagination->create_links();
 		$sahithi=$this->Sahithi_Model->get_sahithi($type,$count=false);
-		print_r($sahithi);
+		//print_r($sahithi);
 		$data=array(	'news'  =>$sahithi,
 						'more'=>$more,
 					'pagination'=>$pagination);

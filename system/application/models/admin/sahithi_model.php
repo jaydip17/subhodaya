@@ -57,13 +57,13 @@ class Sahithi_Model extends Model {
 		
 	}
    
-    function get_newstype1($type)
+    function get_sahithitype1($type)
     {
     	$this->db->select('*');
-    	$this->db->order_by("news.insert_date", "desc");
+    	$this->db->order_by("sahithi.insert_date", "desc");
     	$this->db->where('type',$type);
-		$this->db->from('news_types');
-		$this->db->join('news', 'news.type= news_types.id');
+		$this->db->from('sahithi_cat');
+		$this->db->join('sahithi', 'sahithi.cat_id= sahithi_cat.id');
 		$query = $this->db->get_where();
 		return $query->result();
     }
@@ -72,27 +72,27 @@ class Sahithi_Model extends Model {
     	return $result->result();
     }
     function get_sahithi($type)
-    {
+    {   
  		$this->db->select('*');
- 		$this->db->order_by("news.insert_date", "desc");
-    	$this->db->where('type',$type);
-		$this->db->from('news_types');
-		$this->db->join('news', 'news.type= news_types.id');
+ 		$this->db->order_by("sahithi.insert_date", "desc");
+    	$this->db->where('cat_id',$type);
+		$this->db->from('sahithi_cat');
+		$this->db->join('sahithi', 'sahithi.cat_id= sahithi_cat.id');
 		$query = $this->db->get_where();
 		
 			return $query->result();
 	}
 	function get_sahithi1($type)
 	{
-		$query="from news where type=$type order by news.insert_date desc";
+		$query="from sahithi where cat_id=$type order by sahithi.insert_date desc";
 		return $query;
 	}
 	
 	function count($type)
 	{
 		
-    	$this->db->where('type',$type);
-		$this->db->from('news');
+    	$this->db->where('cat_id',$type);
+		$this->db->from('sahithi');
 		$count =$this->db->count_all_results();
 		return $count;
 		
@@ -101,19 +101,19 @@ class Sahithi_Model extends Model {
     function inner_sahithi($id)
     {
     	$this->db->select('*');
-    	$this->db->where('news.id',$id);
-		$this->db->from('news_types');
-		$this->db->join('news', 'news.type= news_types.id');
+    	$this->db->where('sahithi.id',$id);
+		$this->db->from('sahithi_cat');
+		$this->db->join('sahithi', 'sahithi.cat_id= sahithi_cat.id');
 		$query = $this->db->get_where();
 		return $query->result();
     }
     function active_sahithi($id)
     {
     	$this->db->select('*');
-    	$array=array('news.type'=>$id,'news.active'=>1);
+    	$array=array('sahithi.cat_id'=>$id,'sahithi.active'=>1);
     	$this->db->where($array);
-		$this->db->from('news_types');
-		$this->db->join('news', 'news.type= news_types.id');
+		$this->db->from('sahithi_cat');
+		$this->db->join('sahithi', 'sahithi.cat_id= sahithi_cat.id');
 		$query = $this->db->get_where();
 		return $query->result();
     }

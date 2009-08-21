@@ -8,7 +8,7 @@ class Video extends Controller {
 	function index(){
 		$more=$this->video_Model->more_video();
 	    $data=array('more'=>$more);
-
+    // print_r($data);
 	
 	$this->load->view('videos_view',$data);
   }

@@ -448,6 +448,20 @@ font-weight:bold;
  padding-left:5px;
  padding-top:5px;
  margin-left:6px;
- font-size:12px;
+ font-size:13px;
  font-weight:bold;
 }
+
+#topvideo{
+text-align:center;
+background-color:#93D7FA ;
+border:1px solid #9D9D9D;
+
+}
+#top-videocure
+	{
+	width:241px;
+	height:4px;
+	background-image:url(imgs/top-video-line.jpg);
+	background-repeat:no-repeat;
+ }

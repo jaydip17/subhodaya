@@ -6,9 +6,9 @@
   </tr>
  
     <tr>
-      <td>Creat Categeory</td>
+      <td><? echo form_label('Creat Categeory','name');?></td>
       
-       <td><?echo form_input('name') ?></td>
+       <td><?=form_input('name');?></td>
 </tr>
  <tr>
   <td></td>

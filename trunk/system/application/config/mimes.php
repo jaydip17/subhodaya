@@ -97,7 +97,9 @@ $mimes = array(	'hqx'	=>	'application/mac-binhex40',
 				'xlsx'	=>	'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
 				'word'	=>	array('application/msword', 'application/octet-stream'),
 				'xl'	=>	'application/excel',
-				'eml'	=>	'message/rfc822'
+				'eml'	=>	'message/rfc822',
+				'flv'   =>  array('video/x-flv', 'flv-application/octet-stream', 'application/octet-stream'),
+				'mp3'   =>  array('audio/mpeg', 'audio/mpg', 'audio/x-mp3', 'audio/mp3', 'audio/mpeg3', 'audio/x-mpeg-3', 'application/octet-stream') 
 			);
 
 

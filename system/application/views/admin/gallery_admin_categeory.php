@@ -44,7 +44,7 @@ echo form_label ( 'categeory', 'catname' );
 <?
 $id = 'display';
 $js = array ('name' => 'catname', 'id' => 'id', 'onFocus' => "focusthis('$id')" );
-echo form_input($js);
+echo form_textarea($js);
 ?>
 </td>
 		

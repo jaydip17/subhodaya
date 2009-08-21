@@ -76,10 +76,10 @@ ddsmoothmenu.init({
 			</li>
 			<li><a href="#">Gallery</a>
 			 <ul>
-  <li><a href="<?=base_url()."admin/" ?>gallery/categeory1">Add Categeory</a></li>
-<li><a href="<?=base_url()."admin/" ?>gallery/root_forimages">Add Gallery</a></li>
-<li><a href="<?=base_url()."admin/" ?>gallery/categeoryview/0">View/Edit Categeories</a></li>
-  </ul>
+ 		 		<li><a href="<?=base_url()."admin/" ?>gallery/categeory1">Add Categeory</a></li>
+				<li><a href="<?=base_url()."admin/" ?>gallery/root_forimages">Add Gallery</a></li>
+				<li><a href="<?=base_url()."admin/" ?>gallery/categeoryview/0">View/Edit Categeories</a></li>
+  			</ul>
 			</li>
 			<li><a href="#">Poll</a>
 			<ul>

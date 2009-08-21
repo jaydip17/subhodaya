@@ -91,7 +91,7 @@
           				 <div style="height:190px;">
           				 <img src="<?=base_url();?>assets/news/news_img43_thumb.jpg" style="float: left;padding: 1px 10px 2px 1px;text-align: justify;"></img>
           				 <font id="telugufont"><?php echo $news_type1['0']->heading;?></font><br>
-          				 <?php echo $news_type1['0']->summery;?>
+          				 <?php echo $news_type1['0']->summary;?>
           				 <ul id="mainnews">
           				 <? $count=0; foreach($news_type1 as $row): ?>
           					<li><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>"><?=$row->heading ?></a></li>
@@ -114,7 +114,7 @@
           				 <div style="height: 190px;">
           				 <img src="<?=base_url();?>assets/news/news_img43_thumb.jpg" style="float: left;padding: 1px 10px 2px 1px;text-align: justify;"></img>
           				 <font id="telugufont"><?php echo $news_type2['0']->heading;?></font><br>
-          				 <?php echo $news_type2['0']->summery;?>
+          				 <?php echo $news_type2['0']->summary;?>
           				 <ul id="mainnews">
           				 <? $count=0; foreach($news_type2 as $row): ?>
           					<li><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>"><?=$row->heading ?></a></li>
@@ -140,7 +140,7 @@
           				 <div style="height:190px;">
           				 <img src="<?=base_url();?>assets/news/news_img43_thumb.jpg" style="float: left;padding: 1px 10px 2px 1px;text-align: justify;"></img>
           				 <font id="telugufont"><?php echo $news_type3['0']->heading;?></font><br>
-          				 <?php echo $news_type3['0']->summery;?>
+          				 <?php echo $news_type3['0']->summary;?>
           				 <ul id="mainnews">
           				 <? $count=0; foreach($news_type3 as $row): ?>
           					<li><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>"><?=$row->heading ?></a></li>
@@ -165,7 +165,7 @@
           				 <div style="height:190px;">
           				 <img src="<?=base_url();?>assets/news/news_img43_thumb.jpg" style="float: left;padding: 1px 10px 2px 1px;text-align: justify;"></img>
           				 <font id="telugufont"><?php echo $news_type4['0']->heading;?></font><br>
-          				 <?php echo $news_type4['0']->summery;?>
+          				 <?php echo $news_type4['0']->summary;?>
           				 <ul id="mainnews">
           				 <? $count=0; foreach ($news_type4 as $row): ?>
           					<li><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>"><?=$row->heading ?></a></li>

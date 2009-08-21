@@ -6,7 +6,7 @@
 </tr>
 <tr>
 <td><a href="<?=base_url()?>news/newsdetails/<?=$row->id?>"><img src="<?=base_url();?>assets/news/news_img<?=$row->id ?>_thumb.jpg" border="0"></img></a></td>
-<td valign="top"><? echo $row->summery; ?></td>
+<td valign="top"><? echo $row->summary; ?></td>
 </tr>
 <?if($count==3){
 	break;

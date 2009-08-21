@@ -56,6 +56,66 @@ class Mahila_Model extends Model {
 		return $result->result();
 		
 	}
+ function get_mahilatype1($type)
+    {
+    	$this->db->select('*');
+    	$this->db->order_by("mahila.insert_date", "desc");
+    	$this->db->where('type',$type);
+		$this->db->from('mahila_cat');
+		$this->db->join('mahila', 'mahila.cat_id= mahila_cat.id');
+		$query = $this->db->get_where();
+		return $query->result();
+    }
+    function more_mahila(){
+    	$result=$this->db->get('more');
+    	return $result->result();
+    }
+    function get_mahila($type)
+    {   
+ 		$this->db->select('*');
+ 		$this->db->order_by("mahila.insert_date", "desc");
+    	$this->db->where('cat_id',$type);
+		$this->db->from('mahila_cat');
+		$this->db->join('mahila', 'mahila.cat_id= mahila_cat.id');
+		$query = $this->db->get_where();
+		
+			return $query->result();
+	}
+	function get_mahila1($type)
+	{
+		$query="from mahila where cat_id=$type order by mahila.insert_date desc";
+		return $query;
+	}
+	
+	function count($type)
+	{
+		
+    	$this->db->where('cat_id',$type);
+		$this->db->from('mahila');
+		$count =$this->db->count_all_results();
+		return $count;
+		
+		
+	}
+    function inner_mahila($id)
+    {
+    	$this->db->select('*');
+    	$this->db->where('mahila.id',$id);
+		$this->db->from('mahila_cat');
+		$this->db->join('mahila', 'mahila.cat_id= mahila_cat.id');
+		$query = $this->db->get_where();
+		return $query->result();
+    }
+    function active_mahila($id)
+    {
+    	$this->db->select('*');
+    	$array=array('mahila.cat_id'=>$id,'mahila.active'=>1);
+    	$this->db->where($array);
+		$this->db->from('mahila_cat');
+		$this->db->join('mahila', 'mahila.cat_id= mahila_cat.id');
+		$query = $this->db->get_where();
+		return $query->result();
+    }
 
 }
 ?>

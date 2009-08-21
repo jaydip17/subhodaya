@@ -1,4 +1,4 @@
-<?=form_open_multipart('admin/videos')?>
+<?=form_open_multipart('admin/videos/addvideo')?>
 <table>
 	<tr>
 		<th colspan='2' style="font-size: 16px">Videos</th>
@@ -24,6 +24,16 @@
 	 <tr>
 		<td><? echo form_label('Number of Views','no_of_views');?></td>
 		<td><?=form_input('no_of_views');?></td>
+	</tr>
+	 
+	 <tr>
+		<td><? echo form_label('Rating','rating');?></td>
+		<td><?=form_input('rating');?></td>
+	</tr>
+	 
+	 <tr>
+		<td><? echo form_label('Date','insert_date');?></td>
+		<td><?=form_input('insert_date');?></td>
 	</tr>
 	 
 	<tr>

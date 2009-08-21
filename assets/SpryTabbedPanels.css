@@ -73,7 +73,7 @@
 	font: bold 0.7em sans-serif;
 	background-color: #C6E9FD;
 	height:15px;
-	font-size:11px;
+	font-size:12px;
 	list-style: none;
 	border-left: solid 1px #CCC;
 	border-bottom: solid 1px #999;
@@ -130,7 +130,7 @@
  */
 .TabbedPanelsContentGroup {
 	clear: both;
-	height:329px;
+	height:330px;
 	background-color: #FFFFFF;
 	border-left: none;
 	border-right: none;

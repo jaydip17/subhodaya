@@ -7,6 +7,9 @@ class Subhodaya extends Controller {
 		$this->load->model('admin/News_Model');
 		$this->load->model("admin/Cinema_Model");
 		$this->load->model("admin/Poll_Model");
+		$this->load->model("admin/Mahila_Model");
+		$this->load->model("admin/Sahithi_Model");
+		
 	}
 	function index(){
 		$news_type7=$this->News_Model->get_newstype1(7);

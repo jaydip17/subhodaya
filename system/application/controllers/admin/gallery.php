@@ -1,235 +1,253 @@
 <?php
-class Gallery extends Controller {
-	var $layout='admin';
-	function Gallery()
-	{
+  class Gallery extends Controller {
+  	  var $layout = 'admin';
+	function Gallery(){
 		parent::Controller();
-		$this->load->model('admin/Gallery_Model');
+		$this->load->model('admin/Gallery_model');
+		$this->load->helper(array('form','url','file'));
+		//if not logged in go to login page
+	   $this->Login_Model->login_validate();
 	}
-	function index()
+    //displaying root categeories from database	
+   function categeory1()
+	{  	 
+	   $parentid=0;	    
+       $data['options'] =$this->Gallery_model->Categeory($parentid);
+       $this->load->view('admin/gallery_admin_categeory',$data);
+	}
+	//displaying categeories for adding images
+	function root_forimages()
 	{
-		$message = $this->session->flashdata('message');
-		$this->load->model('admin/Openwysiwyg_Model');
-		$textarea[]= array('textarea' => 'categeory',
-						   'skin'	  => 'small');
-		$links = $this->Openwysiwyg_Model->setEditor($enable=TRUE,$textarea);
-		$data= array('jslinks'   => $links,
-					 'message'   => $message);
-		$this->load->view('admin/gallery_view',$data);
-	}
-	function add_gallery()
-	{
-		$this->load->view('admin/add_gallery');
-		
-	}
-	function cat_insert()
-	{
-		
-		$cate=$this->input->post('categeory');
-		$data=array('cat_name'=>$cate);
-		$result=$this->db->insert('gallery_cat',$data);
-		if($result==1){
-		$message = 'Gallery Categeory added succssfully';
-		$this->session->set_flashdata('message',$message);
-		redirect(base_url().'admin/gallery',$message);
-		}
-	}
-	function sub_cate()
-	{
-		$message = $this->session->flashdata('message');
-		$this->load->model('admin/Openwysiwyg_Model');
-		$textarea[]= array('textarea' => 'sub-categeory',
-						   'skin'	  => 'small');
-		$links = $this->Openwysiwyg_Model->setEditor($enable=TRUE,$textarea);
-		
-		$result=$this->Gallery_Model->get_cate();
-		
-		foreach ($result as $res )
-				{
-					$options[$res->id] = $res->cat_name;
-				}
-			$data= array(	'jslinks'   => $links,
-					 		'message'   => $message,
-							'options'   => $options);
-		$this->load->view('admin/gall_addsub',$data);
-	}
-	function subcat_insert()
-	{
-		if(!isset($_POST['active'])){
-			$active=0;
-		}else{
-			$active=$_POST['active'];
-		}
-		$cateid=$this->input->post('cate-id');
-		$subcate=$this->input->post('subcategeory');
-		$data= array('cat_id'     => $cateid,
-					 'subcat_name'=> $subcate,
-					'active'      =>  $active
-		);
-		$result=$this->db->insert('gall_subcat',$data);
-		if($result==1){
-			$message = 'Gallery sub-Categeory added succssfully';
-			$this->session->set_flashdata('message',$message);
-			redirect(base_url().'admin/gallery/sub_cate',$message);
-		}
-	}
-	function gallery_image(){
-		$message = $this->session->flashdata('message');
-		$this->load->model('admin/Openwysiwyg_Model');
-		$textarea[]= array('textarea' => 'imagename',
-						   'skin'	  => 'small');
-		$links = $this->Openwysiwyg_Model->setEditor($enable=TRUE,$textarea);
-		$options=array();
-		$options1=array();
-		$result=$this->Gallery_Model->get_cate();
-		$options['0'] = '--select--';
-		$options1['0']='--select--';
-		foreach ($result as $res )
-				{
-					$options[$res->id] = $res->cat_name;
-				}
-	
-			$data= array(	'jslinks'   => $links,
-					 		'message'   => $message,
-							'options'   => $options,
-							'options1' => $options1
-							);
-		$this->load->view('admin/gallery_image',$data);
-	}
-function cate_fordropdoun()
-	{
-       if($this->input->post('catid'))
+	   $parentid=0;	
+	   $data['options1'] = $this->Gallery_model->Categeory($parentid);
+	   $data['options'] = array(''=>'');
+	   $data['parentid']= 0;
+       
+       if($this->input->post('parentid'))
        {
-       	$message = $this->session->flashdata('message');
-		$this->load->model('admin/Openwysiwyg_Model');
-		$textarea[]= array('textarea' => 'imagename',
-						   'skin'	  => 'small');
-		$links = $this->Openwysiwyg_Model->setEditor($enable=TRUE,$textarea);
-		
-        $catid = $this->input->post('catid');
-      	$result=$this->Gallery_Model->categeory($catid);
-        $cat=$result->result();
-       $options=array();
-		$result=$this->Gallery_Model->get_cate();
-		$options['0'] = '--select--';
-		foreach ($result as $res )
-				{
-					$options[$res->id] = $res->cat_name;
-				}
-        $options1=array();
-        
-       	foreach ($cat as $res )
-				{
-					$options1[$res->id] = $res->subcat_name;
-				}
-       $data=array('options1'  =>  $options1,
-                  'options'    =>  $options,
-       				'jslinks'  =>   $links,
-					 'message' =>  $message, );
+       $parentid = $this->input->post('parentid');
+       $data['options']= $this->Gallery_model->Categeory($this->input->post('parentid'));
+       $data['parentid']= $parentid;
+       
        }
-	   $this->load->view('admin/gallery_image',$data);
+	   $this->load->view('admin/gallery_admin_images',$data);
 	}
-	function insert_image(){
-		if(!isset($_POST['active'])){
-			
-			$active=0;
-		}else{
-			$active=$_POST['active'];
-		}
-		$sub_id=$this->input->post('subcate-id');
-		$imagename=$this->input->post('imagename');
-
-		$data=array('subcat_id'    => $sub_id,
-					'name'         => $imagename,
-					'active'       => $active
-		);
-		if(!empty($data))
-		{
-		$result=$this->db->insert('gallery_imag',$data);
-		$id=$this->db->insert_id();
-		}
-		if($result==1){
-		$config['upload_path'] ='assets/gallery/';
-		$config['allowed_types'] = 'gif|jpg|png';
-		$config['max_size']	= '1000';
-		$config['max_width']  = '1024';
-		$config['max_height']  = '768';
+		//adding categeories
+   function addCategeory()
+	{ 
+	 
+	 $this->Gallery_model->addCategeory($this->input->post('catname'),$this->input->post('parentid'));
+     redirect('admin/gallery/categeory1');
+    }
+	
+	//extracting categeory info and displaying in edit form for categeory
+	function catedit()
+	{
+		$query = $this->Gallery_model->cat($this->uri->segment(4));
+		$data['cat'] = $query->result();
 		
-		$this->load->library('upload', $config);
+		$this->load->view('admin/gallery_edit',$data);
+		
+	}
 	
-		if ( ! $this->upload->do_upload('image'))
-		{
-			$this->db->where('id',$id);
-			$this->db->delete('gallery_imag');
-			$error[]= array('error' => $this->upload->display_errors());
-			$this->session->set_flashdata('message',$error);
-		}	
-		else
-		{
-			$data = array('upload_data' => $this->upload->data());
-			$this->Gallery_Model->rename($data,$id);
-			$message='Gallery image Added Successfully';
-			$this->session->set_flashdata('message',$message);
-		}
-			$filename = 'galle_img'.$id.'.jpg';
-			$image_path='assets/gallery/';
-	    	$config['image_library'] = 'gd2';
-	        $config['source_image'] = $image_path.$filename;
-			$config['create_thumb'] = TRUE;
-			$config['maintain_ratio'] = TRUE;
-			$config['width'] = 130;
-			$config['height'] = 95;
-	    	$this->load->library('image_lib');      
-	    	$this->image_lib->initialize($config);
-	    	if(!$this->image_lib->resize())
-	    	{
-	    		$error = array('error' => $this->image_lib->display_errors());	
-	    	}
-	    	$this->image_lib->clear();
-			redirect(base_url().'admin/gallery/gallery_image',$message);
-		}
+	//adding images into the categeory
+	function addImage()
+	{ 
+		$title = array();
+		$title =$_POST['title'];
+	 //print_r($title);
+		
+	  $this->Gallery_model->addImage($title,$_POST['parentid1']);
+	   redirect('admin/gallery/root_forimages');
 	}
-	function edit_view(){
-		$result=$this->Gallery_Model->get_allgallery();
-		$data=array('details'=>$result);
-		$this->load->view('admin/gallery_editview',$data);
-	}
-	function delete()
-	{
-		$id=$this->uri->segment(4,0);
-		$result=$this->Gallery_Model->delete($id);
-		redirect(base_url()."admin/gallery/edit_view");
-	}
-	function edit()
-	{
-	    $id =$this->uri->segment(4,0);
-        $edit = $this->Gallery_Model->get_details($id);
-   		$message = $this->session->flashdata('message');
-        $this->load->model('admin/Openwysiwyg_Model');
-		$textarea[]= array('textarea' => 'imagename',
-						   'skin'	  => 'small');
-		$links = $this->Openwysiwyg_Model->setEditor($enable=TRUE,$textarea);
-		$data=array(
-							'jslinks'   => $links,
-							'message'	=> $message,
-							'edit'     => $edit
-							
-		);
-    $this->load->view('admin/edit_gallery',$data);
-	}
- function edit1()
-   {
- 
-   	if(!isset($_POST['active']))
-   	{
-		$active=0;
-   	}else{
-   		$active=$_POST['active'];
-   	}
-	   $id=$_POST['gall_id'];
-   	 $this->Gallery_Model->edit1($id,$active);
-   	redirect(base_url().'admin/gallery/edit_view');
-   }
 	
-}
+	//displaying categeories and sub categeories
+	function categeoryview()
+    {
+    	//pagination
+        $parentid = $this->uri->segment(4);
+    	$this->load->library('paginationnew');
+    	$this->paginationnew->start = ($this->uri->segment(5)) ? $this->uri->segment(5) : '0';
+    	$this->paginationnew->limit =10;
+   $this->paginationnew->filePath = base_url().'admin/Gallery/categeoryview/'.$this->uri->segment(4);
+   $this->paginationnew->select_what = '*';
+   
+   //$this->paginationnew->the_table = 'gallery_categeory';
+   $this->paginationnew->add_query = 'from gallery_categeory WHERE parentid = '.$parentid.' order by update_date desc';
+        
+     $data['query'] = $this->paginationnew->getQuery(TRUE);
+  // print_r($data['query']->result());
+   $data['paginate'] = $this->paginationnew->paginate1(); 
+	  	if($this->uri->segment(4,0)!=0)
+	{
+		//if it is subcategeory
+	   $data['sub']='yes';
+	}
+      $this->load->view('admin/gallery_categeory-view',$data);
+		
+	}
+	//view all images for the specified categeory
+    function image_view()
+    {
+    	$parentid = $this->uri->segment(4);
+    	$this->load->library('paginationnew');
+    	$this->paginationnew->start = ($this->uri->segment(5)) ? $this->uri->segment(5) : '0';
+    	$this->paginationnew->limit =10;
+    $this->paginationnew->filePath = base_url().'admin/gallery/image_view/'.$this->uri->segment(4);
+   $this->paginationnew->select_what = '*';
+    
+   $this->paginationnew->add_query = 'from gallery_images WHERE parentid = '.$parentid.' order by id desc';
+        
+    	$data['query'] = $this->paginationnew->getQuery(TRUE);
+   $data['paginate'] = $this->paginationnew->paginate1(); 
+    	
+    	
+    	$this->load->view('admin/gallery_image-view',$data);
+     }
+    //edit categeory info in database 
+	function editcategeory()
+	{   
+		 $id = $this->input->post('id');
+		 $parentid = $this->input->post('parentid');
+		 $catname = $this->input->post('catname');
+		 $this->Gallery_model->editcategeory($id,$catname);
+		 redirect('admin/gallery/categeoryview/'.$parentid);
+		 
+	}	   
+	//delete categeory from database	
+	function deletecategeory()
+	{
+		
+     //if check boxes are selected for deleting
+	 if (isset($_POST['remove']) && $_POST['remove']=='remove selected')
+	 {//get the values 
+ 	  $id1 = array();
+ 	  $id1 = $_POST['removeid'];
+ 	  $parentid = $_POST['parentid'];
+ 	  
+ 	  
+ 	  //if no of check boxes selected > 0
+ 	 if (count($id1) > 0)
+ 	  { //fetch each and every one check box item
+    	 foreach ($id1 as $id)
+    	 
+   	    {
+   	    	$isroot = $this->Gallery_model->isrootcategeory($id);
+	    //check whether the wallpaper is root	
+	   if($isroot)
+	  {
+		//fetch all sub categeories
+	    $query1 = $this->Gallery_model->subcat($id);
+	    foreach ($query1->result() as $item1):	
+        //fetch and delete all images in each and every sub wallpaper
+        $query2 = $this->Gallery_model->image_view($item1->id); 		 
+	  	  foreach ($query2->result() as $item2):	
+	    $this->Gallery_model->deleteimage($item2->id);
+		  
+	    endforeach;
+	    endforeach;
+	    //delete all subcategeories
+	    $this->Gallery_model->deletesubcategeory($id);				  
+	 }	
+	else{//sub categeory
+		 //fetch all images
+		 $query2 = $this->Gallery_model->image_view($id); 		 
+         //fetch and delete all images
+         foreach ($query2->result() as $item2):	
+	     $this->Gallery_model->deleteimage($item2->id);
+	     
+         endforeach;
+	    }
+	    
+	    
+	   //delete wallpaper	
+	   $this->Gallery_model->deletecategeory($id);
+  	  }//foreach
+ 	  }//if
+   }//if
+
+   else{		
+		
+		$id = $this->uri->segment(4);
+		
+		$parentid = $this->uri->segment(5);
+	    $isroot = $this->Gallery_model->isrootcategeory($id);
+	  //check whether the wallpaper is root	
+	if($isroot)
+	{
+		//fetch all sub categeories
+	    $query1 = $this->Gallery_model->subcat($id);
+	    foreach ($query1->result() as $item1):	
+        //fetch and delete all images in each and every sub wallpaper
+        $query2 = $this->Gallery_model->image_view($item1->id); 		 
+	  	  foreach ($query2->result() as $item2):	
+	    $this->Gallery_model->deleteimage($item2->id);
+		  
+	    endforeach;
+	    endforeach;
+	    //delete all subcategeories
+	    $this->Gallery_model->deletesubcategeory($id);				  
+	 }	
+	else{//sub wallpaper
+		 //fetch all images
+		 $query2 = $this->Gallery_model->image_view($item1->id); 		 
+         //fetch and delete all images
+         foreach ($query2->result() as $item2):	
+	     $this->Gallery_model->deleteimage($item2->id);
+         endforeach;
+	  }
+	    
+	   //delete wallpaper	
+	   $this->Gallery_model->deletecategeory($id);
+	  
+	  
+    }//else
+    redirect('admin/gallery/categeoryview/'.$parentid);
+	}
+    //display info of image in edit form
+ 	 function imageedit()
+	{
+		$data['img'] = $this->Gallery_model->imageedit($this->uri->segment(4));
+		$this->load->view('admin/gallery_image-edit',$data);
+	}
+	//edit image in database
+	function editImage()
+	{   
+		  $id = $this->input->post('id');
+		  $parentid = $this->input->post('parentid'); 
+		  $title = $this->input->post('title');
+		  $this->Gallery_model->editimage($id,$title);
+		  redirect('admin/gallery/image_view/'.$parentid);
+		   
+	}
+	//delete image from database
+	function deleteimage()
+	{   	
+		
+		if (isset($_POST['remove']) && $_POST['remove']=='remove selected')
+	 {//get the values 
+ 	  $id1 = array();
+ 	  $id1 = $_POST['removeid'];
+ 	  $parentid = $_POST['parentid'];
+ 	  if (count($id1) > 0)
+ 	  { //fetch each and every one check box item
+    	 foreach ($id1 as $id)
+    	 {
+    	 	$this->Gallery_model->deleteimage($id);
+    	 	
+    	 }
+ 	    
+	 }
+	 }
+	 else{
+	 	
+		$id = $this->uri->segment(4);
+		$parentid = $this->uri->segment(5);
+		$this->Gallery_model->deleteimage($id);
+		
+	   }
+	redirect('admin/gallery/image_view/'.$parentid);
+	}
+	
+ }
 ?>

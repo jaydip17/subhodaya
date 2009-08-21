@@ -177,8 +177,8 @@ function cate_fordropdoun()
 	        $config['source_image'] = $image_path.$filename;
 			$config['create_thumb'] = TRUE;
 			$config['maintain_ratio'] = TRUE;
-			$config['width'] = 143;
-			$config['height'] = 148;
+			$config['width'] = 130;
+			$config['height'] = 95;
 	    	$this->load->library('image_lib');      
 	    	$this->image_lib->initialize($config);
 	    	if(!$this->image_lib->resize())

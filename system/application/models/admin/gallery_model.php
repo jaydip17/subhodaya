@@ -62,6 +62,24 @@ class Gallery_Model extends Model{
   		$this->db->where('id',$id);	
   		$this->db->update('gallery_imag',$data);		
     }
+    function get_categeory()
+    {
+    	
+ 		$this->db->select('*');
+		$this->db->from('gall_subcat');
+		$this->db->join('gallery_cat', 'gallery_cat.id=gall_subcat.cat_id');
+
+			$query = $this->db->get();
+			return $query->result();
+    }
+    function get_gallery($cat_id)
+    {
+    	$this->select('*');
+    	$this->db->where('gall_subcat.cat_id',$cat_id);
+    	$this->db->form('');
+    	
+    }
+
 	 
 }
 ?>

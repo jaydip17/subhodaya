@@ -32,6 +32,8 @@ class News extends Controller {
 		$this->load->view("news_main",$data);
 	}
 	function details(){
+		$type=$this->uri->segment(3);
+		$onload = "loadNews('".base_url()."newslist/listview/".$type."')";
 		$more=$this->News_Model->more_news();
 		$type=$this->uri->segment(3,0);
 		$totel_rows=$this->News_Model->get_news($type,$count=true,$limit=0);
@@ -43,7 +45,8 @@ class News extends Controller {
 		$pagination=$this->pagination->create_links();*/
 		$news=$this->News_Model->get_news($type,$count=false);
 		$data=array(	'news'  =>$news,
-						'more'=>$more
+						'more'=>$more,
+						'onload' => $onload
 					/*'pagination'=>$pagination*/);
 		$this->load->view("news_content",$data);
 	}

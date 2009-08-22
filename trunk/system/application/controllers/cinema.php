@@ -25,16 +25,20 @@ class Cinema extends Controller {
 					'cinema_type6'=>$cinema_type6,
 						'more'=>$more,
 						'cinemapoll'=>$cinemapoll,
-						'yes_poll'=>$yes_poll
+						'yes_poll'=>$yes_poll,
+						'onload' => "display_text_1()",
 		);
 		$this->load->view('cinema_view',$data);
 	}
 	function details(){
+		$type=$this->uri->segment(3);
+		$onload = "loadNews('".base_url()."cinemalist/listview/".$type."')";
 		$more=$this->News_Model->more_news();
 		$id=$this->uri->segment(3,0);
 		$result=$this->Cinema_Model->get_all($id);
 		$data=array('more'=>$more,
-					'result'=>$result);
+					'result'=>$result,
+					'onload' => $onload);
 		$this->load->view('cinema_content',$data);
 	}
 	function inner(){

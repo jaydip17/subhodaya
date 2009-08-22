@@ -17,8 +17,8 @@ echo "<images>
 <thumb3>images/3.jpg</thumb3>
 <thumb4>images/4.jpg</thumb4>
 <thumb5>images/5.jpg</thumb5>
-<content1>content1</content1>
-<content2>content2</content2>
+<content1>content1 dsf sdf dsfdsf dsf dsfdsf dsf dsfds f dsf ds</content1>
+<content2>content2f dsf dsf dsdsf dsf sdfdsf dsf dsf dfsdf dfsdfdsfdsf fdg fd gfdg fdg fdg fdg fdg fdg fdg fdg fdg fd gfg dfg df</content2>
 <content3>content3</content3>
 <content4>content4</content4>
 <content5>content5</content5>

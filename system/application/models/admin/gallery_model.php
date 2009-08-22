@@ -156,8 +156,8 @@
       	//echo $dir.'/'.$filename;
 		$config['create_thumb'] = TRUE;
 		$config['maintain_ratio'] = TRUE;
-		$config['width'] = 140;
-		$config['height'] = 110;
+		$config['width'] = 130;
+		$config['height'] = 95;
 	
 		      
    	$this->image_lib->initialize($config);
@@ -220,6 +220,66 @@
  		$this->db->where('id',$id);
  		$this->db->delete('gallery_images');
   	}
-  	
+  	//get categeories for main page
+	function get_categeory()
+	{
+		$this->db->order_by('update_date','desc');
+		$this->db->where('parentid',0);
+		$query=$this->db->get('gallery_categeory');
+		return $query->result();
+	}
+	function get_cateimage($type)
+	{
+		$this->db->order_by('id','desc');
+		$this->db->limit(12);
+		$array=array('parentid'=>$type);
+		$this->db->where($array);
+		$quary=$this->db->get('gallery_categeory');
+		
+		return $quary->result();
+		
+	}
+	function getimage($id)
+	{
+		$this->db->order_by('id','desc');
+		//$this->db->select('id,title','parentid');
+		$this->db->limit(1);
+		$array=array('parentid'=>$id);
+		$this->db->where($array);
+		$query=$this->db->get('gallery_images');
+		return $query->result_array();
+	}
+  	function get_subcate()
+  	{
+  		$id=0;
+  		$this->db->where('parentid !=', $id);
+  		$this->db->order_by('id','desc');
+		$quary=$this->db->get('gallery_categeory');
+		return $quary->result();
+  	}
+  	function get_gallery($id,$limit)
+  	{
+  
+  	  if(isset($limit) && $limit>=0 )
+  	   	{
+  	  		$this->db->limit(9,$limit);
+  	    } 
+  		$this->db->where('parentid',$id);
+  		$quary=$this->db->get('gallery_images');
+  		return $quary->result();
+  	}
+  	function count($id)
+  	{
+  		$this->db->like('parentid',$id);
+		$this->db->from('gallery_images');
+		$count =$this->db->count_all_results();
+		return $count;
+  	}
+  	function get_image($id)
+  	{
+  		$this->db->where('id',$id);
+  		$query=$this->db->get_where('gallery_images');
+  		return $query->result();
+  	}
  }
 ?>

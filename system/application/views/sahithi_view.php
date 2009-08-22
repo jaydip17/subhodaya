@@ -93,11 +93,11 @@ padding-top:0px;
 					<table cellpadding="0" cellspacing="0">
 					<tr>
 					<td><img src="<?=base_url();?>assets/imgs/beauty-top-left.gif" width="8" height="23" /></td>
-					<td width="208px" style="background-image:url(<?=base_url();?>assets/imgs/beauty-top-center.gif);background-repeat-x;"><span id="newsheading"><?=$details['8']->cat_name?></span></td>
+					<td width="208px" style="background-image:url(<?=base_url();?>assets/imgs/beauty-top-center.gif);background-repeat-x;"><span id="newsheading"><span id="newsheading"><?=$details['8']->cat_name?></span></td>
 					<td><img src="<?=base_url();?>assets/imgs/beauty-top-right.gif" width="8" height="23" alt="gg" /></td>
 					</tr>
 					<tr>
-					<td height="151px" valign="top" colspan="3" style="background-image:url(<?=base_url();?>assets/imgs/KitchenTips-cr.gif);background-repeat-x;border:1px solid #0A70BB;border-bottom:0px;"><ul>
+					<td height="151px" valign="top" colspan="3" style="background-image:url(<?=base_url();?>assets/imgs/KitchenTips-cr.gif);background-repeat-x;border:1px solid #0A70BB;border-bottom:0px;"><ul id="mainnews">
 	              <?if(!empty($details_more['8'])){
 	              foreach($details_more['8'] as $item) {?>
 
@@ -114,11 +114,11 @@ padding-top:0px;
 					<table cellpadding="0" cellspacing="0" style="margin:7px 0px 7px 0px;">
 					<tr>
 					<td><img src="<?=base_url();?>assets/imgs/beauty-top-left.gif" width="8" height="23" /></td>
-					<td width="208px" style="background-image:url(<?=base_url();?>assets/imgs/beauty-top-center.gif);background-repeat-x;"><?=$details['9']->cat_name?></td>
+					<td width="208px" style="background-image:url(<?=base_url();?>assets/imgs/beauty-top-center.gif);background-repeat-x;"><span id="newsheading"><?=$details['9']->cat_name?></span></td>
 					<td><img src="<?=base_url();?>assets/imgs/beauty-top-right.gif" width="8" height="23" alt="gg" /></td>
 					</tr>
 					<tr>
-					<td height="151px" valign="top" colspan="3" style="background-image:url(<?=base_url();?>assets/imgs/KitchenTips-cr.gif);background-repeat-x;border: 1px solid #0A70BB;border-bottom: 0px;"><ul>
+					<td height="151px" valign="top" colspan="3" style="background-image:url(<?=base_url();?>assets/imgs/KitchenTips-cr.gif);background-repeat-x;border: 1px solid #0A70BB;border-bottom: 0px;"><ul id="mainnews">
 	              <?if(!empty($details_more['9'])){
 	              foreach($details_more['9'] as $row) {?>
 
@@ -151,13 +151,13 @@ padding-top:0px;
 	            <td>
 	            <table width="332px" align="center" style="border: 1px solid #0A70BB;" cellpadding="0" cellspacing="0">
 	            <tr>
-	            <td height="22px" id="tdmahila"><?=$details['0']->cat_name?></td>
+	            <td height="22px" id="tdmahila"><span id="newsheading"><?=$details['0']->cat_name?></span></td>
 	           
 	            </tr>
 	            <tr>
 	             <td width="50%" valign="top" height="219px" style="background-image:url(<?=base_url();?>assets/imgs/Pandugalu-cr.gif);background-repeat-y;">
 	              <img src="<?=base_url();?>assets/imgs/sahithi2.jpg" style="float:left;padding:4px 15px 4px 4px;text-align: justify;" width="105px" height="113px" align="top"  />
-	             <?=$more['23']->matter?>    <ul>
+	             <?=$more['23']->matter?>    <ul id="mainnews">
 	              <?if(!empty($details_more['1'])){
 	              foreach($details_more['1'] as $item) {?>
 
@@ -172,14 +172,14 @@ padding-top:0px;
 	            <td>
 	            <table width="332px" align="center" style="border: 1px solid #0A70BB;" cellpadding="0" cellspacing="0">
 	            <tr>
-	            <td height="22px" id="tdmahila"><?=$details['1']->cat_name?>
+	            <td height="22px" id="tdmahila"><span id="newsheading"><?=$details['1']->cat_name?></span>
 	            </td>
 	           
 	            </tr>
 	            <tr>
 	             <td width="50%" valign="top" height="219px" style="background-image:url(<?=base_url();?>assets/imgs/Pandugalu-cr.gif);background-repeat-y;">
 	              <img src="<?=base_url();?>assets/imgs/sahithi2.jpg" style="float:left;padding:4px 15px 4px 4px;text-align: justify;" width="105px" height="113px" align="top" /><?=$more['23']->matter?>
-	               <ul>
+	               <ul id="mainnews">
 	             <?if(!empty($details_more['2'])){
 	              foreach($details_more['2'] as $item) {?>
 
@@ -196,13 +196,13 @@ padding-top:0px;
 	            <td>
 	            <table width="332px" align="center" style="border: 1px solid #0A70BB;" cellpadding="0" cellspacing="0">
 	            <tr>
-	            <td height="22px" id="tdmahila"><?=$details['2']->cat_name?>
+	            <td height="22px" id="tdmahila"><span id="newsheading"><?=$details['2']->cat_name?></span>
 	            </td>
 	           
 	            </tr>
 	            <tr>
 	             <td height="116px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/Mathru Basha-cr.gif);background-repeat-y;">
-	              <ul>
+	              <ul id="mainnews">
 	              <?if(!empty($details_more['3'])){
 	              foreach($details_more['3'] as $item) {?>
 
@@ -217,14 +217,14 @@ padding-top:0px;
 	            <td>
 	            <table width="332px" align="center" style="border: 1px solid #0A70BB;" cellpadding="0" cellspacing="0">
 	            <tr>
-	            <td height="22px" id="tdmahila"><?=$details['3']->cat_name?>
+	            <td height="22px" id="tdmahila"><span id="newsheading"><?=$details['3']->cat_name?></span>
 	            </td>
 	           
 	            </tr>
 	            <tr>
 	             <td height="116px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/Mathru Basha-cr.gif);background-repeat-y;">
 	              
-	             <ul>
+	             <ul id="mainnews">
 	              <?if(!empty($details_more['4'])){
 	              foreach($details_more['4'] as $item) {?>
 
@@ -240,13 +240,13 @@ padding-top:0px;
 	            <td>
 	            <table width="332px" align="center" style="border: 1px solid #0A70BB;" cellpadding="0" cellspacing="0">
 	            <tr>
-	            <td height="22px" id="tdmahila"><?=$details['4']->cat_name?>
+	            <td height="22px" id="tdmahila"><span id="newsheading"><?=$details['4']->cat_name?></span>
 	            </td>
 	           
 	            </tr>
 	            <tr>
 	             <td  height="116px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/Mathru Basha-cr.gif);background-repeat-y;">
-	              <ul>
+	              <ul id="mainnews">
 	             <?if(!empty($details_more['5'])){
 	              foreach($details_more['5'] as $item) {?>
 
@@ -261,14 +261,14 @@ padding-top:0px;
 	            <td>
 	            <table width="332px" align="center" style="border: 1px solid #0A70BB;" cellpadding="0" cellspacing="0">
 	            <tr>
-	            <td height="22px" id="tdmahila"><?=$details['5']->cat_name?>
+	            <td height="22px" id="tdmahila"><span id="newsheading"><?=$details['5']->cat_name?></span>
 	            </td>
 	           
 	            </tr>
 	            <tr>
 	             <td height="116px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/Mathru Basha-cr.gif);background-repeat-y;">
 	              
-	             <ul>
+	             <ul id="mainnews">
 	              <?if(!empty($details_more['6'])){
 	              foreach($details_more['6'] as $item) {?>
 
@@ -286,13 +286,13 @@ padding-top:0px;
 				<div style="float:left;padding-right:4px;">
 	            <table width="450px" align="center" style="border: 1px solid #0A70BB;" cellpadding="0" cellspacing="0">
 	            <tr>
-	            <td height="22px" id="tdmahila"><?=$details['6']->cat_name?>
+	            <td height="22px" id="tdmahila"><span id="newsheading"><?=$details['6']->cat_name?></span>
 	            </td>
 	           
 	            </tr>
 	            <tr>
 	             <td  height="163px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/Janapadalu-cr.gif);background-repeat-x;">
-	              <ul>
+	              <ul id="mainnews">
 	             <?if(!empty($details_more['7'])){
 	              foreach($details_more['7'] as $item) {?>
 
@@ -307,14 +307,14 @@ padding-top:0px;
 	           
 	            <table width="213px" align="center" style="border: 1px solid #0A70BB;" cellpadding="0" cellspacing="0">
 	            <tr>
-	            <td height="22px" id="tdmahila"><?=$details['7']->cat_name?>
+	            <td height="22px" id="tdmahila"><span id="newsheading"><?=$details['7']->cat_name?></span>
 	            </td>
 	           
 	            </tr>
 	            <tr>
 	             <td height="163px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/Janapadalu-cr.gif);background-repeat-x;">
 	              
-	             <ul>
+	             <ul id="mainnews">
 	             <?if(!empty($details_more['8'])){
 	              foreach($details_more['8'] as $item) {?>
 

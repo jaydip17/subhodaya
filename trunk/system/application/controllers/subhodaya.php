@@ -21,6 +21,9 @@ class Subhodaya extends Controller {
 		$more=$this->News_Model->more_news();
 		$yes_poll=$this->Poll_Model->get_yes_newspoll($type=4);
 		$newspoll=$this->Poll_Model->get_newspolls($type=4);
+		$sahithi_details=$this->Sahithi_Model->active_sahithi(1);
+		$mahila_details=$this->Mahila_Model->active_mahila(1);
+		//print_r($sahithi_details);
 		$data=array('more'=>$more,
 		            'news_type7'=>$news_type7,
 					'news_type4'=>$news_type4,
@@ -29,7 +32,9 @@ class Subhodaya extends Controller {
 					'newspoll'=>$newspoll,
 					'yes_poll'=>$yes_poll,
 					'active_news'=>$active_news,
-		            'active_news1'=>$active_news1
+		            'active_news1'=>$active_news1,
+		            'sahithi_details'=>$sahithi_details,
+		           'mahila_details'=>$mahila_details
 					);
 		$this->load->view('home',$data);
 	}

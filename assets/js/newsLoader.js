@@ -21,6 +21,7 @@ else
   {
   alert("Your browser does not support XMLHTTP.");
   }
+
 }
 function get_Newslist()
 {

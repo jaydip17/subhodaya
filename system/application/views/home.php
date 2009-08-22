@@ -396,11 +396,11 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 							          
 							           if($i>5)
 							           break;?>
-							        	               <ul> <li><a href="<?=base_url();?>mahila/mahiladetails/<?=$item->id?>"><?=$item->summary?></a></li></ul><?$i++;} ?></p></div>
+							        	               <ul id="mainnews"> <li><a href="<?=base_url();?>mahila/mahiladetails/<?=$item->id?>"><?=$item->summary?></a></li></ul><?$i++;} ?></p></div>
 							        <div id="tab2"><p><?$i=1; foreach($sahithi_details as $item){
 							             if($i>5)
 							           break;?>
-							        	               <ul> <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>"><?=$item->summary?></a></li></ul><? $i++;} ?></p></div>
+							        	               <ul id="mainnews"> <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>"><?=$item->summary?></a></li></ul><? $i++;} ?></p></div>
     							</div>
 <script>
 (function() {

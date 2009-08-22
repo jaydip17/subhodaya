@@ -1,10 +1,6 @@
 <?php
 class Video_Model extends Model {
 	
-	  function more_video(){
-    	$result=$this->db->get('more');
-    	return $result->result();
-    } 
        
 	 function addcategeory(){
 	 	
@@ -54,7 +50,7 @@ class Video_Model extends Model {
 		//uploading image
 		$dir1 =  './assets/videos/image_preview';   
 	    $config1['upload_path'] = $dir1;
-		$config1['allowed_types'] = 'gif|jpg|png|bmp';
+		$config1['allowed_types'] = 'gif|jpg|png';
 		$config1['max_size']	= '90000000';
     	//$config['max_width']  = '1024';
     	//$config['max_height']  = '768';
@@ -73,20 +69,22 @@ class Video_Model extends Model {
 		   $data = array('upload_data' => $this->upload->data());
 	       $filepath = $data['upload_data']['file_name'];
 	      rename($dir1.'/'.$filepath , $dir1.'/image'.$i.'.jpg');	
-	       
+	      
+	      //generating image to display in recent list 
+	      
 		$this->load->library('image_lib');
     	$filename = 'image'.$i.'.jpg';
     	
-    	$config3['image_library'] = 'gd2';
-        $config3['source_image'] = $dir1.'/'.$filename;
-        $config3['new_image'] = 'home_image'.$i.'.jpg';
-      	$config3['create_thumb'] = TRUE;
-		$config3['maintain_ratio'] = TRUE;
-		$config3['width'] = 80;
-		$config3['height'] = 65;
+    	$config2['image_library'] = 'gd2';
+        $config2['source_image'] = $dir1.'/'.$filename;
+        $config2['new_image'] = 'home_image'.$i.'.jpg';
+      	$config2['create_thumb'] = TRUE;
+		$config2['maintain_ratio'] = TRUE;
+		$config2['width'] = 86;
+		$config2['height'] = 66;
     	
     	      
-    	$this->image_lib->initialize($config3);
+    	$this->image_lib->initialize($config2);
     	
     	if(!$this->image_lib->resize())
     	{
@@ -94,20 +92,43 @@ class Video_Model extends Model {
 			print_r($error);
     	}
     	$this->image_lib->clear();
-	       
-		//generating image to display in recent list
+
+    	//generating image to display in categeory list
+    	$this->load->library('image_lib');
+    	$filename = 'image'.$i.'.jpg';
+    	
+    	$config4['image_library'] = 'gd2';
+        $config4['source_image'] = $dir1.'/'.$filename;
+        $config4['new_image'] = 'home_image'.$i.'.jpg';
+      	$config4['create_thumb'] = TRUE;
+		$config4['maintain_ratio'] = TRUE;
+		$config4['width'] = 122;
+		$config4['height'] = 89;
+    	
+    	      
+    	$this->image_lib->initialize($config4);
+    	
+    	if(!$this->image_lib->resize())
+    	{
+    		$error = array('error' => $this->image_lib->display_errors());
+			print_r($error);
+    	}
+    	$this->image_lib->clear();
+    	
+    	
+		//generating image to display in top list
 		$this->load->library('image_lib');
     	$filename = 'image'.$i.'.jpg';
     	
-    	$config2['image_library'] = 'gd2';
-        $config2['source_image'] = $dir1.'/'.$filename;
-      	$config2['create_thumb'] = TRUE;
-		$config2['maintain_ratio'] = TRUE;
-		$config2['width'] = 150;
-		$config2['height'] = 110;
+    	$config3['image_library'] = 'gd2';
+        $config3['source_image'] = $dir1.'/'.$filename;
+      	$config3['create_thumb'] = TRUE;
+		$config3['maintain_ratio'] = TRUE;
+		$config3['width'] = 82;
+		$config3['height'] =56;
     	
     	      
-    	$this->image_lib->initialize($config2);
+    	$this->image_lib->initialize($config3);
     	
     	if(!$this->image_lib->resize())
     	{
@@ -121,7 +142,7 @@ class Video_Model extends Model {
 	
       function getvideos($id,$table)
         {
-      	$this->db->where('video_uploaded');
+      	$this->db->where('video_uploaded',1);
       	$this->db->where('video_cat_id',$id);
       	$query=$this->db->get($table);
       	return $query;

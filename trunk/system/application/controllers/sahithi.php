@@ -39,6 +39,7 @@ class Sahithi extends Controller {
    function details(){
 		$more=$this->Sahithi_Model->more_sahithi();
 		$type=$this->uri->segment(3,0);
+		$onload = "loadNews('".base_url()."sahithilist/listview/".$type."')";
 		$total_rows=$this->Sahithi_Model->count($type);
 		//echo $total_rows;
 	    $this->load->library('pagination');
@@ -51,7 +52,8 @@ class Sahithi extends Controller {
 		//print_r($sahithi);
 		$data=array(	'news'  =>$sahithi,
 						'more'=>$more,
-					'pagination'=>$pagination);
+					'pagination'=>$pagination,
+		             'onload' =>$onload);
 		$this->load->view("sahithi_content",$data);
 	}
 }

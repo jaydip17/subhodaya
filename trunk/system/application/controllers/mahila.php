@@ -36,6 +36,8 @@ class Mahila extends Controller {
    function details(){
 		$more=$this->mahila_Model->more_mahila();
 		$type=$this->uri->segment(3,0);
+		$onload = "loadNews('".base_url()."mahilalist/listview/".$type."')";
+		
 		$total_rows=$this->mahila_Model->count($type);
 		//echo $total_rows;
 	    $this->load->library('pagination');
@@ -48,7 +50,8 @@ class Mahila extends Controller {
 		//print_r($mahila);
 		$data=array(	'news'  =>$mahila,
 						'more'=>$more,
-					'pagination'=>$pagination);
+					'pagination'=>$pagination,
+		             'onload' =>$onload);
 		$this->load->view("mahila_content",$data);
 	}
 

@@ -90,6 +90,14 @@ ddsmoothmenu.init({
 			<li><a href="#">Other</a>
 			<ul>
 				<li><a href="<?=base_url();?>admin/contacts">Contacts</a></li>
+				<li> <a href="#">Slide Images</a>
+	<ul>
+			<li><a href="<?=base_url()?>admin/slideimages/add" >Add Image</a>
+			</li>
+			<li><a href="<?=base_url()."admin/slideimages" ?>">View/Manage</a>
+			</li>
+		</ul>
+	</li>
 			</ul>
 			</li>
 			<!--<li><a href="#">Other</a>

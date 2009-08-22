@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 19, 2009 at 10:59 AM
+-- Generation Time: Aug 22, 2009 at 02:06 PM
 -- Server version: 5.0.51
 -- PHP Version: 5.2.5
 
@@ -30,12 +30,13 @@ CREATE TABLE IF NOT EXISTS `sahithi` (
   `homepage` int(1) NOT NULL default '0',
   `active` int(1) NOT NULL default '0',
   PRIMARY KEY  (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `sahithi`
 --
 
 INSERT INTO `sahithi` (`id`, `cat_id`, `heading`, `summary`, `description`, `insert_date`, `homepage`, `active`) VALUES
-(2, 1, 'సంక్రాంతి', 'సంక్రాంతి పండగ జరుపుకోవడానికి', 'సంక్రాంతి పండగ జరుపుకోవడానికి', '2009-08-19 13:35:08', 0, 0),
-(4, 1, 'hgf', 'h', 'hg', '2009-08-19 14:28:55', 0, 0);
+(2, 1, 'సంక్రాంతి', 'సంక్రాంతి పండగ జరుపుకోవడానిక', 'సంక్రాంతి పండగ జరుపుకోవడానికి', '2009-08-19 13:35:08', 0, 1),
+(4, 1, 'సంక్రాంతి పండగ', 'సంక్రాంతి పండగ జరుపుకోవడానికి', 'సంక్రాంతి పండగ జరుపుకోవడానికి', '2009-08-19 14:28:55', 0, 1),
+(5, 1, 'దసరా పండుగ', 'దసరా పండుగ జరుపుకోవడానికి', 'దసరా పండుగ జరుపుకోవడానికి', '2009-08-19 16:38:30', 0, 1);

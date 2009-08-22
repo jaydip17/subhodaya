@@ -29,24 +29,10 @@
 <script type="text/javascript" src="<?=base_url();?>assets/js/newsLoader.js"></script>
 <script type="text/javascript" src="<?=base_url();?>assets/js/mmenu.js"></script>
 
-<?if($this->uri->segment(1)=='news'){
-$type=$this->uri->segment(3);
-?>
-<body onload="loadNews('<?=base_url()?>newslist/listview/<?=$type?>')">
-<?}else{ if($this->uri->segment(1)=='cinema'){
-$type=$this->uri->segment(3);?>
-<body onload="loadNews('<?=base_url()?>cinemalist/listview/<?=$type?>')">
-<?}
-else if($this->uri->segment(1)=='sahithi'){
-$type=$this->uri->segment(3);
-?><body onload="loadNews('<?=base_url()?>sahithilist/listview/<?=$type?>')">
-<?}
-else if($this->uri->segment(1)=='mahila'){
-$type=$this->uri->segment(3);
-?><body onload="loadNews('<?=base_url()?>mahilalist/listview/<?=$type?>')">
-<?}else{ ?>
-<body>
-<?php }}?>
+
+
+<body onload="<? if(isset($onload)) echo $onload; ?>">
+
 <table width="999" height="1330"  border="0" align="center" cellpadding="0" cellspacing="0" >
   <tr>
     <td width="985"  align="center" valign="top"><table width="988"  border="0" align="center" cellpadding="0" cellspacing="0">

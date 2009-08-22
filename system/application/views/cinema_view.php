@@ -1,5 +1,58 @@
 <script language="javascript">
 //<!--
+function detectBrowser()
+{
+var browser=navigator.appName;
+var b_version=navigator.appVersion;
+var version=parseFloat(b_version);
+
+}
+function getFlexApp(appName) {
+	  if (navigator.appName.indexOf ("Microsoft") !=-1) {
+	    return window[appName];
+	  } else {
+	    return document[appName];
+	  }
+	}
+
+var sample;
+function display_text(sample) {
+	var browser=navigator.appName;
+	if(browser == 'Netscape')
+	{
+    getFlexApp("sample123").display_text(sample);
+	}
+	else
+	{
+    getFlexApp("FlashID").display_text(sample);
+	}	
+}
+var limit_time = 2000;
+function display_text_1(){
+	detectBrowser();
+	display_text(1);
+		window.setTimeout("display_text_2(2)",limit_time);
+}
+function display_text_2(ss){
+	display_text(ss);
+	window.setTimeout("display_text_3(3)",limit_time);
+}
+function display_text_3(ss){
+	display_text(ss);
+	window.setTimeout("display_text_4(4)",limit_time);
+}
+function display_text_4(ss){
+	display_text(ss);
+	window.setTimeout("display_text_5(5)",limit_time);
+}
+function display_text_5(ss){
+	display_text(ss);
+	window.setTimeout("display_text_34(1)",limit_time);
+}
+function display_text_34(ss){
+	display_text(ss);
+	window.setTimeout("display_text_1()",limit_time);
+}
 function display(value)
 {
   document.getElementById('flash-content').innerHTML = value;
@@ -28,7 +81,7 @@ function display(value)
   <param name="expressinstall" value="<?=base_url();?>assets/Scripts/expressInstall.swf" />
   <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
   <!--[if !IE]>-->
-  <object type="application/x-shockwave-flash" data="<?=base_url();?>assets/subh.swf" width="486" height="341">
+  <object id="sample123" type="application/x-shockwave-flash" data="<?=base_url();?>assets/subh.swf" width="486" height="341">
     <!--<![endif]-->
     <param name="quality" value="high" />
     <param name="wmode" value="opaque" />
@@ -45,10 +98,10 @@ function display(value)
 </object>
 <script type="text/javascript">
 <!--
-swfobject.registerObject("FlashID");
+swfobject.registerObject("sample123");
 //-->
 </script>
-<div id="flash-content" style=" background:transparent url(<?=base_url();?>assets/imgs/onepx.png) repeat scroll 0 0; position:absolute; width:484px; top: 416px; left:31px; height: 20px;text-align: left;"> 
+<div id="flash-content" style="position:absolute; width:480px; top: 390px; color:white; padding:5px 5px 5px 5px; vertical-align:top; left:31px; height: 40px;text-align: left;"> 
 sample sf dsfsd fdsf
 </div>
 	                    
@@ -64,7 +117,7 @@ sample sf dsfsd fdsf
      	<img src="<?=base_url();?>assets/imgs/18.jpg" style="border: 1px solid #50BCFC;"></img>
      	<div align="center" style="padding-top: 8px">
      		<img src="<?=base_url();?>assets/imgs/19.jpg" style="border: 1px solid #50BCFC;"></img>
-     	<div>
+     	</div>
      </td>
      <td width="185" align="center" valign="top" rowspan="3">
 		<table width="100%" style="border:1px solid #50BCFC;">

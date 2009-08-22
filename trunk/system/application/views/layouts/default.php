@@ -36,6 +36,14 @@ $type=$this->uri->segment(3);
 <?}else{ if($this->uri->segment(1)=='cinema'){
 $type=$this->uri->segment(3);?>
 <body onload="loadNews('<?=base_url()?>cinemalist/listview/<?=$type?>')">
+<?}
+else if($this->uri->segment(1)=='sahithi'){
+$type=$this->uri->segment(3);
+?><body onload="loadNews('<?=base_url()?>sahithilist/listview/<?=$type?>')">
+<?}
+else if($this->uri->segment(1)=='mahila'){
+$type=$this->uri->segment(3);
+?><body onload="loadNews('<?=base_url()?>mahilalist/listview/<?=$type?>')">
 <?}else{ ?>
 <body>
 <?php }}?>

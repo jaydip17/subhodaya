@@ -1,3 +1,8 @@
+<style type="text/css">
+ul{
+list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
+}
+</style>
 <table width="99%"  border="0" cellpadding="0" cellspacing="0">
         <tr>
           <td width="350" valign="top" height="329"><table width="100%" border="0" cellpadding="0" cellspacing="0">
@@ -387,8 +392,15 @@
 							        <li style="text-align: center;"><a href="#tab2"><em style="width: 80px;padding-top: 2px""><span id="telugufont"><?=$more['9']->matter ?></span></em></a></li>
 	    						</ul>            
     							<div class="yui-content" style="height: 150px;text-align: center;">
-							        <div id="tab1"><p>Tab four Content</p></div>
-							        <div id="tab2"><p>Tab Two ContentTab One ContentTab One Content</p></div>
+							        <div id="tab1"><p><? $i=1;foreach($mahila_details as $item){
+							          
+							           if($i>5)
+							           break;?>
+							        	               <ul> <li><a href="<?=base_url();?>mahila/mahiladetails/<?=$item->id?>"><?=$item->summary?></a></li></ul><?$i++;} ?></p></div>
+							        <div id="tab2"><p><?$i=1; foreach($sahithi_details as $item){
+							             if($i>5)
+							           break;?>
+							        	               <ul> <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>"><?=$item->summary?></a></li></ul><? $i++;} ?></p></div>
     							</div>
 <script>
 (function() {

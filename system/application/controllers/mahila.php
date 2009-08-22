@@ -14,7 +14,6 @@ class Mahila extends Controller {
 		foreach($details as $item)
 		$details_more[$item->id]=$this->mahila_Model->getdetails($item->id,'yes');
 		$types = array_keys($details_more);
-		//print_r($details_more);
 		$data=array('more'      =>$more,
 		            'details'   =>$details,
 		            'details_more' => $details_more,

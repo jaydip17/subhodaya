@@ -71,14 +71,7 @@ menuItems:[
 ]}; // REQUIRED!! do not edit or remove
 make_menus();
 </script>
-<style type="text/css">
 
-#menu2 a {color:black;background-color:white;text-decoration:none;text-indent:1ex;}
-#menu2 a:active	{color:black;text-decoration:none;}
-#menu2 a:visited {color:black;text-decoration:none;}
-#menu2 a:hover {color:red;background-color:#ffffff}
-                    
-</style>
 
 <table width="99%"  border="0" cellpadding="0" cellspacing="0">
 	<tr>

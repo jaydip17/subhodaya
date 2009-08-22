@@ -198,7 +198,19 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 	    						</ul>            
     							<div class="yui-content" style="height: 150px;text-align: center;">
 							        <div id="tab1"><p>Tab four Content</p></div>
-							        <div id="tab2"><p>Tab Two ContentTab One ContentTab One Content</p></div>
+							        <div id="tab2"><p>
+							        <table>
+							        	<tr>
+							        	  <?php foreach ($images as $cat):
+							        foreach ($cat as $item):
+							        ?>
+							        		<td><img src="<?=base_url();?>assets/gallery/image<?=$item[id]?>_thumb.jpg"></td>
+							        	<?php 
+							        	endforeach; 
+							        	endforeach;?>
+							        	</tr>
+							        </table>
+							        </p></div>
 							        <div id="tab3"><p>Tab Three Content</p></div>
 									<div id="tab3"><p>Tab four Content</p></div>
     							</div>

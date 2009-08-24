@@ -31,6 +31,7 @@ class Subhodaya extends Controller {
 		{
 			$images[$item->id]=$this->Gallery_Model->getimage($item->id);
 		}
+		print_r($images);
 		//print_r($sahithi_details);
 		$data=array('more'=>$more,
 		            'news_type7'=>$news_type7,

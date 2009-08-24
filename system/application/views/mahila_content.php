@@ -14,24 +14,34 @@
                     <tr><td width="100%" height="310" valign="top" align="left" class=" yui-skin-sam" >
                           <div id="demo" class="yui-navset" style="color: #EDF5FF;">
 	    					<ul class="yui-nav">
-							        <li class="selected"><a href="#tab1"><em>Politics</em></a></li>
-							        <li><a href="#tab2"><em>Games</em></a></li>
-							        <li><a href="#tab3"><em>cinemas</em></a></li>
-									<li><a href="#tab3"><em>videos</em></a></li>
+							        <li class="selected"><a href="#tab1"><em><?=$details['0']->cat_name?></em></a></li>
+							        <li><a href="#tab2"><em><?=$details['1']->cat_name?></em></a></li>
+							        <li><a href="#tab3"><em><?=$details['2']->cat_name?></em></a></li>
+									<li><a href="#tab3"><em><?=$details['3']->cat_name?></em></a></li>
 	    					</ul>            
     						<div class="yui-content">
-							 <div id="tab1"><img src="<?=base_url();?>assets/imgs/move-img4.jpg" align="top"></img>
-							        	</div>
-							        <div id="tab2">
-							        <img src="<?=base_url();?>assets/imgs/mov-img2.jpg" align="top"></img>
-							        </div>
-							        <div id="tab3">
-							        <img src="<?=base_url();?>assets/imgs/mov-img3.jpg" align="top"></img>
-							        </div>
-									<div id="tab3">
-									<img src="<?=base_url();?>assets/imgs/mov-img.jpg" align="top"></img>
-									</div>
-    							</div>
+    						<?for($i=1;$i<=4;$i++){?>
+							 <div id="tab<?=$i?>">
+							        	<div style="padding-top: 5px;" >
+	              <img src="<?=base_url();?>assets/imgs/mahila<?=$i?>.jpg" style="float:left;padding:4px 15px 4px 4px;text-align: justify;" width="105px" height="86px" align="top" />
+	             <?if(!empty($details_more[$i])){?>
+	             <font id="telugufont"><a href="<?=base_url();?>mahila/mahiladetails/<?=$details_more[$i]['0']->id?>"><?php echo $details_more[$i]['0']->heading?></a></font><br>
+	              <?=$details_more[$i]['0']->summary; }?>
+	              <div style="height: 120px;" id="telugufont">
+	            
+	                 <ul id="mainnews">
+	              <?if(!empty($details_more[$i])){
+	              	$j=1;
+	              foreach($details_more[$i] as $item) {
+                   if($j==9) break;?>
+	             <li><a href="<?=base_url();?>mahila/mahiladetails/<?=$item->id?>"><?=$item->heading ?></a></li>
+	                <?$j++;}} ?>
+	                 </ul>
+	                 </div>
+	                 </div>
+					 </div>
+					 	<?} ?>
+						</div>
 <script>
 (function() {
     var tabView = new YAHOO.widget.TabView('demo');
@@ -88,13 +98,13 @@
           		<table width="100%" cellspacing="10" height="520px" >
           			<tr>
           				<td width="450" style="border: 1px solid #3789C3;"  valign="top">
-          				 <div style="width:100%;"id="news_heading"><span id="newsheading"><? if (isset($news['0']->cat_name)){ echo $news['0']->cat_name;}?></span>
+          				 <div style="width:100%"id="news_heading"><span id="newsheading" style="padding-right:30px"><? if (isset($news['0']->cat_name)){ echo $news['0']->cat_name;}?></span>
           				 <? $count=1; foreach($news as $row): ?>
-          				 <span id="changeview">Change View:<button onclick="loadNews('<?=base_url()?>mahilalist/listview/<?=$row->cat_id?>')">get</button>
-          				 <button onclick="loadNews('<?=base_url()?>mahilalist/thumbview/<?=$row->cat_id ?>')">get1</button></span>
+          				Change View:<button style="background-color:#93D7FA;" onclick="loadNews('<?=base_url()?>mahilalist/listview/<?=$row->cat_id?>')">topics</button>
+          				 <button style="background-color:#93D7FA;" onclick="loadNews('<?=base_url()?>mahilalist/thumbview/<?=$row->cat_id ?>')">details</button>
           				 <? if($count==1){
           				 	break;
-          				 }
+          				 } 
           				 endforeach;	 
           				 	?>
           				 </div>

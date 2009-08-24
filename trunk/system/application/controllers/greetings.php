@@ -29,6 +29,7 @@ class Greetings extends Controller {
 					'greetings7'=>$greetings7,
 					'more'       => $more,
 					'type'       => $type,
+					'onload' => "display_text_1()",
 			);
 		$this->load->view('greetings_content',$data);
   }

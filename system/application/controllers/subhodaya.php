@@ -10,6 +10,7 @@ class Subhodaya extends Controller {
 		$this->load->model("admin/Mahila_Model");
 		$this->load->model("admin/Sahithi_Model");
 		$this->load->Model("admin/Gallery_Model");
+		$this->load->Model('admin/Greeting_Model');
 		
 	}
 	function index(){
@@ -24,7 +25,9 @@ class Subhodaya extends Controller {
 		$newspoll=$this->Poll_Model->get_newspolls($type=4);
 		$sahithi_details=$this->Sahithi_Model->active_sahithi(1);
 		$mahila_details=$this->Mahila_Model->active_mahila(1);
-	
+	   // print_r($sahithi_details);
+	    $greetings1=$this->Greeting_Model->get_main_greetings(1);
+
 		$details=$this->Gallery_Model->get_cateimage(11);
 		$images=array();
 		foreach($details as $item)
@@ -44,7 +47,8 @@ class Subhodaya extends Controller {
 		            'active_news1'=>$active_news1,
 		            'sahithi_details'=>$sahithi_details,
 		           'mahila_details'=>$mahila_details,
-					'images'=>$images
+					'images'=>$images,
+					'greetings1'=>$greetings1
 					);
 		$this->load->view('home',$data);
 	}

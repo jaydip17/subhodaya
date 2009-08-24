@@ -1,6 +1,6 @@
 <table width="99%"  border="0" cellpadding="0" cellspacing="0">
 <tr>
-    <td width="420" valign="top" >
+    <td width="480" valign="top" >
     <table width="100%" border="0" cellpadding="0" cellspacing="0">
    	<tr>
        	<td valign="top">
@@ -8,7 +8,7 @@
     		<tr>
        		<td  valign="top">
 	       		<table width="100%"  border="0" cellpadding="0" cellspacing="0">
-	     			<tr><td height="4" valign="bottom"><img src="<?=base_url();?>assets/imgs/top-cor-line.jpg" width="460" height="4" /></td></tr>
+	     			<tr><td height="4" valign="bottom"><img src="<?=base_url();?>assets/imgs/top-cor-line.jpg" width="480" height="4" /></td></tr>
 	            </table>
                  <table width="100%"  border="0" style="border-left:1px solid #0872BC; border-right:1px solid #0872BC;"cellpadding="0" cellspacing="0">
                     <tr><td width="100%" height="310" valign="top" align="left" class=" yui-skin-sam" >
@@ -20,8 +20,10 @@
 									<li><a href="#tab3"><em><?if(isset($news_type4['0'])){echo $news_type4['0']->news_cat;} ?></em></a></li>
 	    					</ul>            
     						<div class="yui-content">
-							 <div id="tab1"><img src="<?=base_url();?>assets/imgs/move-img4.jpg" align="top"></img>
-							        	</div>
+							 <div id="tab1">
+								 <img src="<?=base_url();?>assets/imgs/move-img4.jpg" align="top"></img>
+						
+							 </div>
 							        <div id="tab2">
 							        <img src="<?=base_url();?>assets/imgs/mov-img2.jpg" align="top"></img>
 							        </div>
@@ -40,7 +42,7 @@
 })();
 </script>
 							</table>
-                      <img src="<?=base_url();?>assets/imgs/top-crow-botom.jpg" width="460"/></td>
+                      <img src="<?=base_url();?>assets/imgs/top-crow-botom.jpg" width="480"/></td>
                   </tr>
                 </table></td>
             </tr>
@@ -86,16 +88,22 @@
           	<td valign="top" align="left"  colspan="2">
           		<table width="100%" cellspacing="10" height="505">
           			<tr>
-          				<td id="newstable" valign="top" >
+          				<td id="newstable" valign="top">
           				 <div  id="news_heading"><span id="newsheading"><?if(isset($news_type1['0'])){echo $news_type1['0']->news_cat;} ?></span></div>
-          				 <div style="height:190px;">
-          				 <img src="<?=base_url();?>assets/news/news_img43_thumb.jpg" style="float: left;padding: 1px 10px 2px 1px;text-align: justify;"></img>
-          				 <font id="telugufont"><?php echo $news_type1['0']->heading;?></font><br>
+          				 <div style="height:190px;" id="telugufont1">
+          				 <a href="<?=base_url();?>news/newsdetails/<?=$news_type1['0']->id?>"><img src="<?=base_url();?>assets/news/news_img<?=$news_type1['0']->id?>_thumb.jpg" style="float: left;padding: 2px 19px 2px 1px;text-align: justify;" height="121" width="93" border="0"></img></a>
+          				 <font id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?=$news_type1['0']->id?>"><?php echo $news_type1['0']->heading;?></a></font><br>
           				 <?php echo $news_type1['0']->summary;?>
           				 <ul id="mainnews">
-          				 <? $count=0; foreach($news_type1 as $row): ?>
-          					<li><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>"><?=$row->heading ?></a></li>
-          				 <? if($count==6){
+          				 	<?
+          						$count=0; foreach($news_type1 as $row):
+          						  if($count==0)
+          							{
+	          							$count++;
+	          							continue;
+          							} ?>
+          					<li style="padding: 2px;"><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>"><?=$row->heading ?></a></li>
+          				 <? if($count==3){
           						break;
           					}else{
           						$count++;
@@ -107,17 +115,23 @@
           					?>
           				 </ul>
           				 </div>
-          				 <div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>news/details/<?if(isset($news_type2['0'])){ echo $news_type2['0']->type; }?>"><?=$more['0']->matter?></a></span></div>
+          				 <div id="more-news-div" style="padding-right: 2px;"><span id="news-more"><a href="<?=base_url();?>news/details/<?if(isset($news_type1['0'])){ echo $news_type1['0']->type; }?>"><?=$more['0']->matter?></a></span></div>
           				</td>
           				<td  valign="top" id="newstable">
           				 <div  id="news_heading"><span id="newsheading"><? if(isset($news_type2['0'])){ echo $news_type2['0']->news_cat;}?></span></div>
-          				 <div style="height: 190px;">
-          				 <img src="<?=base_url();?>assets/news/news_img43_thumb.jpg" style="float: left;padding: 1px 10px 2px 1px;text-align: justify;"></img>
-          				 <font id="telugufont"><?php echo $news_type2['0']->heading;?></font><br>
+          				 <div style="height: 190px;padding-top:2px; " id="telugufont1" >
+          				 <a href="<?=base_url();?>news/newsdetails/<?=$news_type2['0']->id?>"><img src="<?=base_url();?>assets/news/news_img43_thumb.jpg" style="float: left;padding: 1px 10px 2px 1px;text-align: justify;" height="121" width="92" border="0"></img></a>
+          				 <font id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?=$news_type2['0']->id?>"><?php echo $news_type2['0']->heading;?></a></font><br>
           				 <?php echo $news_type2['0']->summary;?>
           				 <ul id="mainnews">
-          				 <? $count=0; foreach($news_type2 as $row): ?>
-          					<li><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>"><?=$row->heading ?></a></li>
+          				<?
+          						$count=0; foreach($news_type2 as $row):
+          						  if($count==0)
+          							{
+	          							$count++;
+	          							continue;
+          							} ?>
+          					<li style="padding: 2px;"><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>"><?=$row->heading ?></a></li>
           				
           				 <? if($count==6){
           						break;
@@ -137,14 +151,20 @@
           			<tr>
           				<td  valign="top" id="newstable" >
           				  <div  id="news_heading"><span id="newsheading"><?if(isset($news_type3['0'])){ echo $news_type3['0']->news_cat; }?></span></div>
-          				 <div style="height:190px;">
-          				 <img src="<?=base_url();?>assets/news/news_img43_thumb.jpg" style="float: left;padding: 1px 10px 2px 1px;text-align: justify;"></img>
-          				 <font id="telugufont"><?php echo $news_type3['0']->heading;?></font><br>
+          				 <div style="height:190px;padding-top:2px;" id="telugufont1">
+          				 <a href="<?=base_url();?>news/newsdetails/<?=$news_type3['0']->id?>"><img src="<?=base_url();?>assets/news/news_img43_thumb.jpg" style="float: left;padding: 1px 17px 2px 1px;text-align: justify;" height="120" width="92" border="0"></img></a>
+          				 <font id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?=$news_type3['0']->id?>"><?php echo $news_type3['0']->heading;?></a></font><br>
           				 <?php echo $news_type3['0']->summary;?>
           				 <ul id="mainnews">
-          				 <? $count=0; foreach($news_type3 as $row): ?>
+          				<?
+          						$count=0; foreach($news_type3 as $row):
+          						  if($count==0)
+          							{
+	          							$count++;
+	          							continue;
+          							} ?>
           					<li><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>"><?=$row->heading ?></a></li>
-          				 <? if($count==8){
+          				 <? if($count==3){
           						break;
           					}else{
           						$count++;
@@ -162,15 +182,21 @@
           				  <div  id="news_heading">
           				  	<span id="newsheading" ><? if(isset($news_type4['0'])){ echo $news_type4['0']->news_cat; }?></span>
           				  </div>
-          				 <div style="height:190px;">
-          				 <img src="<?=base_url();?>assets/news/news_img43_thumb.jpg" style="float: left;padding: 1px 10px 2px 1px;text-align: justify;"></img>
-          				 <font id="telugufont"><?php echo $news_type4['0']->heading;?></font><br>
+          				 <div style="height:190px;padding-top:2px;" id="telugufont1">
+          				 <a href="<?=base_url();?>news/newsdetails/<?=$news_type4['0']->id?>"><img src="<?=base_url();?>assets/news/news_img<?=$news_type4['0']->id?>_thumb.jpg" style="float: left;padding: 1px 17px 2px 1px;text-align: justify;" height="120" width="92" border="0"></img></a>
+          				 <font id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?=$news_type4['0']->id?>"><?php echo $news_type4['0']->heading;?></a></font><br>
           				 <?php echo $news_type4['0']->summary;?>
           				 <ul id="mainnews">
-          				 <? $count=0; foreach ($news_type4 as $row): ?>
-          					<li><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>"><?=$row->heading ?></a></li>
+          				 	<?
+          						$count=0; foreach($news_type4 as $row):
+          						  if($count==0)
+          							{
+	          							$count++;
+	          							continue;
+          							} ?>
+          					<li style="padding: 1px;"><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>"><?=$row->heading ?></a></li>
           				
-          				 	<? if($count==8){
+          				 	<? if($count==4){
           						break;
           					}else{
           						$count++;
@@ -208,14 +234,14 @@
         <tr>
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="109" /></td>
           <td valign="top" id="botom-ser" align="left">
-          <div style="height: 70px;">
+          <div style="height: 70px;padding-top:2px;">
           <ul>
           	<?php if(isset($news_type5))
           	{
           		$count=0;
           		foreach ($news_type5 as $row):
           	?>
-          		<li id="mainnews"><?=$row->heading?></li>
+          		<li id="mainnews" style="padding: 1px;"><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>"><?=$row->heading?></a></li>
           		<?php 
           		if($count==3)
           		{
@@ -234,12 +260,12 @@
           <td width="8">&nbsp;</td>
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="109" /></td>
           <td valign="top" id="botom-ser" align="left">
-          <div style="height: 70px">
+          <div style="height: 70px;padding-top:2px;">
           	<ul>
           	<?php if(isset($news_type6)){
           		foreach($news_type6 as $row):
           	?>
-          		<li id="mainnews"><a href=""><?=$row->heading?></a></li>
+          		<li id="mainnews" style="padding: 1px;"><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>"><?=$row->heading?></a></li>
           			<?php 
           		if($count==3)
           		{

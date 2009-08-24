@@ -5,13 +5,13 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 </style>
 <table width="99%"  border="0" cellpadding="0" cellspacing="0">
         <tr>
-          <td width="350" valign="top" height="329"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+          <td width="389" valign="top" height="329"><table width="100%" border="0" cellpadding="0" cellspacing="0">
             <tr>
               <td valign="top"><table width="0"  border="0" cellpadding="0" cellspacing="0">
                   <tr>
                     <td  valign="top"><table width="100%"  border="0" cellpadding="0" cellspacing="0">
                       <tr>
-                        <td height="4" valign="bottom"><img src="<?=base_url();?>assets/imgs/top-cor-line.jpg" width="352" height="4" /></td>
+                        <td height="4" valign="bottom"><img src="<?=base_url();?>assets/imgs/top-cor-line.jpg" width="389" height="4" /></td>
                       </tr>
                     </table>
                       <table width="100%"  border="0" style="border-left:1px solid #0872BC; border-right:1px solid #0872BC;"cellpadding="0" cellspacing="0">
@@ -26,18 +26,19 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 	    						</ul>            
     							<div class="yui-content">
     							<div id="tab1">
-    							<div style="height: 187px;" id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type7['0'])){echo $news_type7['0']->id;}?>"><img src="<?=base_url();?>assets/news/news_img39_thumb.jpg" align="top" style="padding: 0px 5px 1px 2px;float: left;border: 0px;"></img></a>
-    									<font id="telugufont"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type7['0'])){echo $news_type7['0']->id;}?>"><?php if(isset($news_type7['0'])){echo $news_type7['0']->heading;}?></a></font><br>
-							        	<font style="font-size: 14px;text-align: justify;"><?php if(isset($news_type7['0'])){echo $news_type7['0']->summary;}?></font>
-							        	<table height="85px;">
-								        	<tr><td><font id="telugufont"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type7['1'])){echo $news_type7['1']->id;}?>"><?php if(isset($news_type7['1'])){echo $news_type7['1']->heading;}?></a></font></td></tr>
-								        	<tr><td><font id="telugufont"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type7['2'])){echo $news_type7['2']->id;}?>"><?php if(isset($news_type7['2'])){echo $news_type7['2']->heading;}?></a></font></td></tr>
-								        	<tr><td><font id="telugufont"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type7['3'])){echo $news_type7['3']->id;}?>"><?php if(isset($news_type7['3'])){echo $news_type7['3']->heading;}?></a></font></td></tr>
-							        	</table>
-							        	<font style="padding-left: 260px;"><a href="<?=base_url();?>news/"><?php if(isset($more['0'])){echo $more['0']->matter;}?></a></font>
+    							<div style="height: 185px;" id="telugufont1"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type7['0'])){echo $news_type7['0']->id;}?>"><img src="<?=base_url();?>assets/news/news_img39_thumb.jpg" align="top" style="padding: 0px 18px 1px 2px;float: left;border: 0px;" height="121" width="93"></img></a>
+    									<font id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type7['0'])){echo $news_type7['0']->id;}?>"><?php if(isset($news_type7['0'])){echo $news_type7['0']->heading;}?></a></font><br>
+							        	<font style="text-align: justify;"><?php if(isset($news_type7['0'])){echo $news_type7['0']->summary;}?></font>
+							        	<div id="more-news-div"><a href="<?=base_url();?>news/details/<?=$news_type7['0']->id?>"><?php if(isset($more['0'])){echo $more['1']->matter;}?></a></div>
+							        	<ul id="mainnews" >
+								        	<li style="padding: 1px"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type7['1'])){echo $news_type7['1']->id;}?>"><?php if(isset($news_type7['1'])){echo $news_type7['1']->heading;}?></a></li>
+								        	<li style="padding: 1px"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type7['2'])){echo $news_type7['2']->id;}?>"><?php if(isset($news_type7['2'])){echo $news_type7['2']->heading;}?></a></li>
+								        	<li style="padding: 1px"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type7['3'])){echo $news_type7['3']->id;}?>"><?php if(isset($news_type7['3'])){echo $news_type7['3']->heading;}?></a></li>
+							        	</ul>
 							        	</div>
+							        	<div id="more-news-div"><a href="<?=base_url();?>news/details/<?=$news_type7['0']->type?>"><?php if(isset($more['0'])){echo $more['0']->matter;}?></a></div>
 							        	<div style="padding:5px 5px 5px 5px; border: 1px solid #D9EBF7; background-image: url(assets/imgs/123.jpg);background-repeat: repeat-x; height: 70px">
-							        	<table width="80%" >
+							        	<table width="100%" >
 							        		<tr>
 							        			<td width="50%" valign="top">
 							        			<a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type7['4'])){echo $news_type7['4']->id;}?>"><img src="<?=base_url();?>assets/news/news_img<?php if(isset($news_type7['4'])){echo $news_type7['4']->id;}?>_thumb.jpg" style="padding: 0px 10px 0px 0px;float: left; height: 40px;width: 60px;border: 0px;" align="top" ></a>
@@ -53,18 +54,19 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 							        	</div></div>
 							        	
 							        <div id="tab2">
-							        	<div style="height: 187px;" id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type4['0'])){echo $news_type4['0']->id;}?>"><img src="<?=base_url();?>assets/news/news_img<?php if(isset($news_type4['0'])){echo $news_type4['0']->id;}?>_thumb.jpg" align="top" style="padding: 0px 5px 1px 2px;float: left;border: 0px;"></img></a>
-    									<font id="telugufont"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type4['0'])){echo $news_type4['0']->id;}?>"><?php if(isset($news_type4['0'])){echo $news_type4['0']->heading;}?></a></font><br>
+							        	<div style="height: 187px;" id="telugufont1"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type4['0'])){echo $news_type4['0']->id;}?>"><img src="<?=base_url();?>assets/news/news_img<?php if(isset($news_type4['0'])){echo $news_type4['0']->id;}?>_thumb.jpg" align="top" style="padding: 0px 18px 1px 2px;float: left;border: 0px;" height="120" width="92"></img></a>
+    									<font id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type4['0'])){echo $news_type4['0']->id;}?>"><?php if(isset($news_type4['0'])){echo $news_type4['0']->heading;}?></a></font><br>
 							        	<font style="font-size: 14px;text-align: justify;"><?php if(isset($news_type4['0'])){echo $news_type4['0']->summary;}?></font>
-							        	
-							        	<table  height="80px;">
-								        	<tr><td><font id="telugufont"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type4['1'])){echo $news_type4['1']->id;}?>"><?php if(isset($news_type4['1'])){echo $news_type4['1']->heading;}?></a></font></td></tr>
-								        	<tr><td><font id="telugufont"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type4['2'])){echo $news_type4['2']->id;}?>"><?php if(isset($news_type4['2'])){echo $news_type4['2']->heading;}?></a></font></td></tr>
-								        	<tr><td><font id="telugufont"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type4['3'])){echo $news_type4['3']->id;}?>"><?php if(isset($news_type4['3'])){echo $news_type4['3']->heading;}?></a></font></td></tr>
-							        	</table>
+							        	<div id="more-news-div"><a href="<?=base_url();?>news/details/<?=$news_type4['0']->id?>"><?php if(isset($more['0'])){echo $more['1']->matter;}?></a></div>
+							        	<ul height="80px;" id="mainnews">
+								        	<li style="padding: 2px"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type4['1'])){echo $news_type4['1']->id;}?>"><?php if(isset($news_type4['1'])){echo $news_type4['1']->heading;}?></a></li>
+								        	<li style="padding: 2px"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type4['2'])){echo $news_type4['2']->id;}?>"><?php if(isset($news_type4['2'])){echo $news_type4['2']->heading;}?></a></li>
+								        	<li style="padding: 2px"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type4['3'])){echo $news_type4['3']->id;}?>"><?php if(isset($news_type4['3'])){echo $news_type4['3']->heading;}?></a></li>
+							        	</ul>
+							        	<div id="more-news-div"><a href="<?=base_url();?>news/"><?php if(isset($more['0'])){echo $more['0']->matter;}?></a></div>
 							        	</div>
 							        	<div style="padding:5px 5px 5px 5px; border: 1px solid #D9EBF7; background-image: url(assets/imgs/123.jpg);background-repeat: repeat-x; height: 70px">
-							        	<table width="80%">
+							        	<table width="100%">
 							        	
 							        		<tr>
 							        			<td width="50%" valign="top"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type4['4'])){echo $news_type4['4']->id;}?>"><img src="<?=base_url();?>assets/news/news_img<?php if(isset($news_type4['4'])){echo $news_type4['4']->id;}?>_thumb.jpg" style="padding: 0px 10px 0px 0px;float: left; height: 40px;width: 60px;border: 0px;" align="top"></a><div id="mainnews1" style="height: 40px"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type4['4'])){echo $news_type4['4']->id;}?>"><?php if(isset($news_type4['4'])){echo $news_type4['4']->heading;}?></a></div><div style="padding:5px 0px 0px 70px;" id="more-news-div"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type4['4'])){echo $news_type4['4']->id;}?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div></td>
@@ -74,28 +76,30 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 							        	</table>
 							        	</div></div>
 							        <div id="tab3">
-							        <div style="height: 187px;" id="mainnews"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->id;}?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->id;}?>_thumb.jpg" align="top" style="padding: 0px 5px 1px 2px;float: left;border: 0px;"></img></a>
-    									<font id="telugufont"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->id;}?>"><?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->heading;}?></a></font><br>
+							        <div style="height: 187px;" id="telugufont1"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->id;}?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->id;}?>_thumb.jpg" align="top" style="padding: 0px 18px 1px 2px;float: left;border: 0px;" height="120" width="92"></img></a>
+    									<font id="mainnews"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->id;}?>"><?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->heading;}?></a></font><br>
 							        	<font style="font-size: 14px;text-align: justify;"><?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->summary;}?></font>
-							        	<table id="mainnews">
-							        		<tr><td><font id="telugufont"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['1'])){echo $cinema_type1['1']->id;}?>"><?php if(isset($cinema_type1['1'])){echo $cinema_type1['1']->heading;}?></a></font></td></tr>
-							        		<tr><td><font id="telugufont"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['2'])){echo $cinema_type1['2']->id;}?>"><?php if(isset($cinema_type1['2'])){echo $cinema_type1['2']->heading;}?></a></font></td></tr>
-							        		<tr><td><font id="telugufont"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['3'])){echo $cinema_type1['3']->id;}?>"><?php if(isset($cinema_type1['3'])){echo $cinema_type1['3']->heading;}?></a></font></td></tr>
-							        	</table>
+							        	<div id="more-news-div"><a href="<?=base_url();?>news/details/<?=$cinema_type1['0']->id?>"><?php if(isset($more['0'])){echo $more['1']->matter;}?></a></div>
+							        	<ul id="mainnews">
+							        		<li style="padding: 2px"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['1'])){echo $cinema_type1['1']->id;}?>"><?php if(isset($cinema_type1['1'])){echo $cinema_type1['1']->heading;}?></a></li>
+							        		<li style="padding: 2px"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['2'])){echo $cinema_type1['2']->id;}?>"><?php if(isset($cinema_type1['2'])){echo $cinema_type1['2']->heading;}?></a></li>
+							        		<li style="padding: 2px"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['3'])){echo $cinema_type1['3']->id;}?>"><?php if(isset($cinema_type1['3'])){echo $cinema_type1['3']->heading;}?></a></li>
+							        	</ul>
+							        	<div id="more-news-div"><a href="<?=base_url();?>news/"><?php if(isset($more['0'])){echo $more['0']->matter;}?></a></div>
 							        	</div>
 							        	<div style="padding:5px 5px 5px 5px; border: 1px solid #D9EBF7; background-image: url(assets/imgs/123.jpg);background-repeat: repeat-x; height: 70px">
-							        	<table width="80%">
+							        	<table width="100%">
 							        	
 							        		<tr>
 							        			<td width="50%" valign="top"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['4'])){echo $cinema_type1['4']->id;}?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($cinema_type1['4'])){echo $cinema_type1['4']->id;}?>_thumb.jpg" style="padding: 0px 10px 0px 0px;float: left; height: 15px;width: 60px;border: 0px;" align="top"></a><div id="mainnews1" style="height: 40px" ><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['4'])){echo $cinema_type1['4']->id;}?>"><?php if(isset($cinema_type1['4'])){echo $cinema_type1['4']->heading;}?></a></div><div style="padding:5px 0px 0px 70px;" id="more-news-div"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['4'])){echo $cinema_type1['4']->id;}?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div></td>
-							        			<td width="50%" valign="top"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['5'])){echo $cinema_type1['5']->id;}?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($cinema_type1['5'])){echo $cinema_type1['5']->id;}?>_thumb.jpg" style="padding: 0px 10px 0px 0px;float: left; height: 15px;width: 60px;border: 0px;" align="top"></a><div id="mainnews1" style="height: 40px"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['5'])){echo $cinema_type1['4']->id;}?>"><?php if(isset($cinema_type1['5'])){echo $cinema_type1['5']->heading;}?></a></div><div style="padding:5px 0px 0px 70px;" id="more-news-div"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['4'])){echo $cinema_type1['4']->id;}?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div></td>
+							        			<td width="50%" valign="top"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['5'])){echo $cinema_type1['5']->id;}?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($cinema_type1['5'])){echo $cinema_type1['5']->id;}?>_thumb.jpg" style="padding: 0px 10px 0px 0px;float: left; height: 15px;width: 60px;border: 0px;" align="top"></a><div id="mainnews1" style="height: 40px"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['5'])){echo $cinema_type1['4']->id;}?>"><?php if(isset($cinema_type1['5'])){echo $cinema_type1['5']->heading;}?></a></div><div style="padding:5px 0px 0px 70px;" id="more-news-div"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['5'])){echo $cinema_type1['5']->id;}?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div></td>
 							        		
 							        		</tr>
 							        		
 							        	</table>
 							        	</div></div>
 									<div id="tab4">
-									    <div style="height: 187px;" id="mainnews"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->id;}?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->id;}?>_thumb.jpg" align="top" style="padding: 0px 5px 1px 2px;float: left;border: 0px;"></img></a>
+									    <div style="height: 187px;" id="mainnews"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->id;}?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->id;}?>_thumb.jpg" align="top" style="padding: 0px 18px 1px 2px;float: left;border: 0px;" height="120" width="92"></img></a>
     									<font id="telugufont"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->id;}?>"><?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->heading;}?></a></font><br>
 							        	<font style="font-size: 14px;text-align: justify;"><?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->summary;}?></font>
 							        	<table id="mainnews">
@@ -105,7 +109,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 							        	</table>
 							        	</div>
 							        	<div style="padding:5px 5px 5px 5px; border: 1px solid #D9EBF7; background-image: url(assets/imgs/123.jpg);background-repeat: repeat-x; height: 70px">
-							        	<table width="80%">
+							        	<table width="100%">
 							        	
 							        		<tr>
 							        			<td width="50%" valign="top"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['4'])){echo $cinema_type1['4']->id;}?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($cinema_type1['4'])){echo $cinema_type1['4']->id;}?>_thumb.jpg" style="padding: 0px 10px 0px 0px;float: left; height: 15px;width: 60px;border: 0px;" align="top"></a><div id="mainnews1" style="height: 40px" ><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['4'])){echo $cinema_type1['4']->id;}?>"><?php if(isset($cinema_type1['4'])){echo $cinema_type1['4']->heading;}?></a></div><div style="padding:5px 0px 0px 70px;" id="more-news-div"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['4'])){echo $cinema_type1['4']->id;}?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div></td>
@@ -124,34 +128,51 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 })();
 </script>
 							</table>
-                      <img src="<?=base_url();?>assets/imgs/top-crow-botom.jpg" /></td>
+                      <img src="<?=base_url();?>assets/imgs/top-crow-botom.jpg" width="389"/></td>
                   </tr>
                 </table></td>
             </tr>
           </table></td>
-          <td width="0" valign="top" style="margin-left:5px;"><table width="350" align="center" border="0" cellpadding="0" cellspacing="0">
+          <td width="0" valign="top" style="margin-left:5px;"><table width="320" align="center" border="0" cellpadding="0" cellspacing="0">
             <tr>
               <td width="10"><img src="<?=base_url();?>assets/imgs/tock-line.jpg" width="10" height="34" style="border-left:1px solid #1D77B3; border-top:1px solid #1D77B3;"/></td>
-              <td  width="337" valign="top" id="tock-line-center" align="left" >
-              <table><tr><td width="20%"><img src="<?=base_url(); ?>assets/imgs/001.jpg"></img></td><td width="80%" id="telugufont"><?=$more['12']->matter ?></td></tr></table>
+              <td  width="327" valign="top" id="tock-line-center" align="left" >
+              <table><tr><td width="20%"><img src="<?=base_url(); ?>assets/imgs/001.png"></img></td><td width="80%" id="telugufont"><?=$more['12']->matter ?></td></tr></table>
               <td width="8" align="right"><img src="<?=base_url();?>assets/imgs/tock-line-right.jpg" width="8" height="34" style="border-right:1px solid #1D77B3; border-top:1px solid #1D77B3;"/></td>
             </tr>
           </table>
-            <table width="350"  align="center" cellpadding="0" cellspacing="0" >
+            <table width="320"  align="center" cellpadding="0" cellspacing="0" id="telugufont1">
               <tr>
-                <td   valign="top" id="img-center"><img src="<?=base_url();?>assets/imgs/tock-line-boyom.jpg" width="5" height="283" /></td>
+                <td  valign="top" id="img-center"><img src="<?=base_url();?>assets/imgs/tock-line-boyom.jpg" width="5" height="283" /></td>
                 <td width="340" valign="top" id="tock-botom-center" align="left">
-                <div style="padding-top: 5px;" id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?=$active_news['0']->id?>"><img src="<?=base_url();?>assets/news/news_img<?=$active_news['0']->id?>_thumb.jpg" style="margin:2px 5px 0px 2px;float: left;border: 0px;" align="top"></img></a>
-                <font id="telugufont"><a href="<?=base_url();?>news/newsdetails/<?=$active_news['0']->id?>"><?php echo $active_news['0']->heading;?></a></font><br>
+                <div style="padding: 5px;text-align: justify;" ><a href="<?=base_url();?>news/newsdetails/<?=$active_news['0']->id?>"><img src="<?=base_url();?>assets/news/news_img<?=$active_news['0']->id?>_thumb.jpg" style="margin:2px 5px 0px 2px;float: left;border: 0px;" align="top"></img></a>
+                <font id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?=$active_news['0']->id?>"><?php echo $active_news['0']->heading;?></a></font><br>
                <?php echo $active_news['0']->summary;?>
-               <table width="100%">
+               <div style="height: 120px;" id="telugufont">
+               <ul id="mainnews">
             <?php 
-            foreach ($active_news as $row): ?>
-               		<tr>
-               			<td width="100%" align="left" style="padding-left: 10px;" ><a href="<?=base_url();?>news/newsdetails/<?=$active_news['0']->id?>"><?php echo $row->heading;?></a></td>
-               		</tr>
-          <?php endforeach;?>
-               </table>
+          		$count=0;  foreach ($active_news as $row):
+          		if($count==0)
+          		{
+	          	$count++;
+	          	continue;
+          		} ?>
+               		
+               			<li style="padding:3px;" ><a href="<?=base_url();?>news/newsdetails/<?=$active_news['0']->id?>"><?php echo $row->heading;?></a></li>
+               		
+          	<? if($count==6){
+          	break;
+          		}else{
+          	$count++;
+          		}
+          	endforeach; 
+          	if($count==0){
+          	echo 'No data found';
+          		}
+          		?>
+               </ul>
+               </div>
+               		 <div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>news/details/<?if(isset($active_news['0'])){ echo $active_news['0']->type; }?>"><?=$more['0']->matter?></a></span></div>
                 </div>
                 </td>
                 <td valign="top" id="img-center"><img src="<?=base_url();?>assets/imgs/tock-line-boyom1.jpg" width="5" height="283" /></td>
@@ -198,19 +219,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 	    						</ul>            
     							<div class="yui-content" style="height: 150px;text-align: center;">
 							        <div id="tab1"><p>Tab four Contentfsdf</p></div>
-							        <div id="tab2"><p>
-							        <table>
-							        	<tr>
-							        	  <?php foreach ($images as $cat):
-							        foreach ($cat as $item):
-							        ?>
-							        		<td><img src="<?=base_url();?>assets/gallery/image<?=$item[id]?>_thumb.jpg"></td>
-							        	<?php 
-							        	endforeach; 
-							        	endforeach;?>
-							        	</tr>
-							        </table>
-							        </p></div>
+							        <div id="tab2"><p>dfgdgf</p></div>
 							        <div id="tab3"><p>Tab Three Content</p></div>
 									<div id="tab3"><p>Tab four Content</p></div>
     							</div>
@@ -237,18 +246,19 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
                   <tr>
                         <td width="6"  valign="top" id="img-senter"><img src="<?=base_url();?>assets/imgs/tock-line.jpg" width="6" height="34" /></td>
                         <td width="200" valign="bottom" id="img-senter" align="left" >
-                        <table><tr><td width="20%"><img src="<?=base_url(); ?>assets/imgs/001.jpg" style="padding: 0px 5px 3px 2px;" align="middle"></img></td><td width="80%"><span id="telugufont"><?php echo $more['22']->matter;?></span></td></tr></table>
+                        <table><tr><td width="20%"><img src="<?=base_url(); ?>assets/imgs/001.png" style="padding: 0px 5px 3px 2px;" align="middle"></img></td><td width="80%"><span id="telugufont"><?php echo $more['22']->matter;?></span></td></tr></table>
                         </td>
                         <td width="6" valign="top"><img src="<?=base_url();?>assets/imgs/tock-line-right.jpg" width="6" height="34" /></td>
                     </tr>
                       <tr>
                         <td  valign="top" id="center-img"><img src="<?=base_url();?>assets/imgs/new1.jpg" width="5" height="214" /></td>
                         <td width="200" id="center-img" align="left" valign="top">
-                        	<div style="padding-top: 2px; text-align: justify;">
-                        		<img src="<?=base_url();?>assets/news/news_img<?=$active_news1['0']->id?>_thumb.jpg" style="padding: 0px 3px 2px 0px;float: left;"/>
-                        		<font id="telugufont"><?=$active_news1['0']->heading?></font><br>
+                        	<div style="text-align: justify; height: 190px;width: 225px;padding-top: 5px;" id="telugufont1">
+                        		<a href="<?=base_url();?>news/newsdetails/<?=$active_news1['0']->id?>"><img src="<?=base_url();?>assets/news/news_img<?=$active_news1['0']->id?>_thumb.jpg" style="padding: 0px 3px 2px 0px;float: left;" border="0"/></a>
+                        		<font id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?=$active_news1['0']->id?>"><?=$active_news1['0']->heading?></a></font><br>
                         		<?=$active_news1['0']->summary?>
                         	</div>
+                        	<div id="more-news-div" style="width: 220px;"><span ><a href="<?=base_url();?>cinema/inner/<?=$cinema_type2['0']->id?>"><?=$more['1']->matter ?>...</a></span></div>
                         </td>
                         <td  valign="top" id="center-img"><img src="<?=base_url();?>assets/imgs/new.jpg" width="5" height="214" /></td>
                     </tr>
@@ -259,18 +269,18 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
                       <tr>
                         <td width="6"  valign="top" id="img-senter"><img src="<?=base_url();?>assets/imgs/tock-line.jpg" width="7" height="34" /></td>
                         <td width="200" valign="bottom" id="img-senter" align="left" style="margin-bottom: 10px;">
-                        <table><tr><td width="20%"><img src="<?=base_url(); ?>assets/imgs/001.jpg"></img></td><td width="80%" id="telugufont"><?=$cinema_type2['0']->cinema_type ?></td></tr></table>
+                        <table><tr><td width="20%"><img src="<?=base_url(); ?>assets/imgs/001.png"></img></td><td width="80%" id="telugufont"><?=$cinema_type2['0']->cinema_type ?></td></tr></table>
                         </td>
                         <td width="6" valign="top"><img src="<?=base_url();?>assets/imgs/tock-line-right.jpg" width="6" height="34" /></td>
              		 </tr>
                       <tr>
                         <td height="214"  valign="top" id="center-img"><img src="<?=base_url();?>assets/imgs/new1.jpg" width="5" height="214" /></td>
                         <td width="200" id="center-img" align="left" valign="top" height="100%">
-	                        <div style="height: 190px;text-align: justify;padding-top: 3px;" id="mainnews">
-	                        <a href="#"><img src="<?=base_url();?>assets/cinema/ceni_img16_thumb.jpg" style="float: left;padding:2px 5px 2px 2px;border: 0px;" ></img></a>
-	                        <a href="#"><?=$cinema_type2['0']->heading?></a><br>
+	                        <div style="height: 190px;text-align: justify;padding-top: 3px;width: 220px;" id="telugufont1">
+	                        <a href="<?=base_url();?>cinema/inner/<?=$cinema_type2['0']->id?>"><img src="<?=base_url();?>assets/cinema/ceni_img16_thumb.jpg" style="float: left;padding:2px 5px 2px 2px;border: 0px;" ></img></a>
+	                        <font id="mainnews"><a href="<?=base_url();?>cinema/inner/<?=$cinema_type2['0']->id?>"><?=$cinema_type2['0']->heading?></a></font><br>
 	                   		<?=$cinema_type2['0']->summary ?></div>
-	                        <div style="padding: 0px 0px 0px 120px;" id="mainnews"><a href="#"><span id="news-more"><?=$more['1']->matter ?>...</span></a></div>
+	                        <div id="more-news-div" style="width: 220px;" ><span ><a href="<?=base_url();?>cinema/inner/<?=$cinema_type2['0']->id?>"><?=$more['1']->matter ?>...</a></span></div>
                         </td>
                          <td height="214"  valign="top" id="center-img"><img src="<?=base_url();?>assets/imgs/new.jpg" width="5" height="214" /></td>
                     </tr>
@@ -284,7 +294,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
          <tr>
              <td width="6" valign="top"><img src="<?=base_url();?>assets/imgs/tock-line.jpg" width="6" height="35" /></td>
              <td  id="img-senter" align="left" valign="middle">
-<!--                	<img src="<?=base_url(); ?>assets/imgs/001.jpg" style="margin:1px 0px 0px 0px;" align="middle"></img>-->
+<!--                	<img src="<?=base_url(); ?>assets/imgs/001.png" style="margin:1px 0px 0px 0px;" align="middle"></img>-->
                 	<span id="telugufont" style="padding: 0px 0px 8px 5px;"><?php echo $more['21']->matter;?></span>
              </td>
              <td valign="top"><img src="<?=base_url();?>assets/imgs/tock-line-right.jpg" width="6" height="35" /></td>
@@ -332,7 +342,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
     	<table width="217" border="0" cellpadding="0" cellspacing="0" style="margin-top:6px;">
         	<tr>
                 <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter-1.jpg" width="5" height="31" /></td>
-                <td width="208" valign="bottom" id="senter3" align="left"><table><tr><td width="20%"><img src="<?=base_url(); ?>assets/imgs/001.jpg" style="padding: 0px 5px 3px 2px;" align="middle"></img></td><td width="80%"><span id="telugufont"><?php echo $more['16']->matter;?></span></td></tr></table></td>
+                <td width="208" valign="bottom" id="senter3" align="left"><table><tr><td width="20%"><img src="<?=base_url(); ?>assets/imgs/001.png" style="padding: 0px 5px 3px 2px;" align="middle"></img></td><td width="80%"><span id="telugufont"><?php echo $more['16']->matter;?></span></td></tr></table></td>
                 <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter2.jpg" width="5" height="31" /></td>
               </tr>
               <tr>
@@ -384,7 +394,25 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 	    						</ul>            
     							<div class="yui-content" style="height: 150px;text-align: center;">
 							        <div id="tab1"><p>Tab four Content</p></div>
-							        <div id="tab2"><p>Tab Two ContentTab One ContentTab One Content</p></div>
+							        <div id="tab2"><p>
+							        <?php ?>
+							        <table cellspacing="5" align="left">
+							        	<tr>
+							        	<?php 
+							        	$count=0;
+							        	foreach ($greetings1 as $item):?>
+							        		<td><div style="padding: 5px;"><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings1['0'])) {echo $greetings1['0']->type;}?>"><img src="<?=base_url();?>assets/greetings/gree_img<?=$item->id?>_thumb.jpg" height="100px" border="0"></a></div>
+							        		<div id="gall_names"><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings1['0'])) {echo $greetings1['0']->type;}?>"><?=$item->gree_cat?></a></div></td>
+							        		<?php 
+							        		if($count==1){
+							        			break;
+							        		}else{
+							        			$count++;
+							        		}
+							        		endforeach;?>
+							        	</tr>
+							        </table>
+							        </p></div>
     							</div>
 <script>
 (function() {
@@ -405,7 +433,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 	    						</ul>            
     							<div class="yui-content" style="height: 150px;text-align: center;">
 							        <div id="tab1"><p><? $i=1;foreach($mahila_details as $item){
-							          
+							        
 							           if($i>5)
 							           break;?>
 							        	               <ul id="mainnews"> <li><a href="<?=base_url();?>mahila/mahiladetails/<?=$item->id?>"><?=$item->summary?></a></li></ul><?$i++;} ?></p></div>
@@ -427,7 +455,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
                       <tr>
                         <td width="6" id="img-senter"><img src="<?=base_url();?>assets/imgs/tock-line.jpg" width="7" /></td>
                         <td valign="bottom" id="img-senter" align="left" style="margin-bottom: 10px;">
-                        <table><tr><td width="20%"><img src="<?=base_url(); ?>assets/imgs/001.jpg"></img></td><td width="80%" id="telugufont"><?=$cinema_type2['0']->cinema_type ?></td></tr></table>
+                        <table><tr><td width="20%"><img src="<?=base_url(); ?>assets/imgs/001.png"></img></td><td width="80%" id="telugufont"><?=$cinema_type2['0']->cinema_type ?></td></tr></table>
                         </td>
                         <td width="6"><img src="<?=base_url();?>assets/imgs/tock-line-right.jpg" width="6" height="34" /></td>
              		 </tr>

@@ -22,14 +22,9 @@
 <script src="<?=base_url();?>assets/js/SpryDOMUtils.js"></script>
 <script src="<?=base_url();?>assets/js/tp_unobtrusive.js"></script>
 
-
-
-
 <script type="text/javascript" src="<?=base_url();?>assets/js/pollLoader.js"></script>
 <script type="text/javascript" src="<?=base_url();?>assets/js/newsLoader.js"></script>
 <script type="text/javascript" src="<?=base_url();?>assets/js/mmenu.js"></script>
-
-
 
 <body onload="<? if(isset($onload)) echo $onload; ?>">
 

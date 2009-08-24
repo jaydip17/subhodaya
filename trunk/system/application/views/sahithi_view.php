@@ -47,7 +47,7 @@ bartext:'SAHITHI MENU',       // bar text (the vertical cell) use text or img ta
 
 menuItems:[
 //[name, link, target, colspan, endrow?] - leave 'link' and 'target' blank to make a header
-["Mahila"], //create header
+["Sahithi"], //create header
 <?php if(!empty($details)){ foreach($details as $row):?>
 ["<?php echo $row->cat_name;?>", "<?=base_url();?>sahithi/details/<?=$row->id?>", ""],
 <?php endforeach;} else 'No data found';?>
@@ -164,7 +164,7 @@ padding-top:0px;
 	             <div style="padding-top:5px;" >
 	              <img src="<?=base_url();?>assets/imgs/pandaga.jpg" style="float:left;padding:4px 20px 4px 4px;text-align: justify;" width="104px" height="111px" align="top"  />
 	            <?if(!empty($details_more['1'])){?>
-	             <font id="telugufont"><a href="<?=base_url();?>mahila/mahiladetails/<?=$details_more['1']['0']->id?>"><?php echo $details_more['1']['0']->heading?></a></font><br>
+	             <font id="telugufont"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['1']['0']->id?>"><?php echo $details_more['1']['0']->heading?></a></font><br>
 	              <?=$details_more['1']['0']->summary; }?> 
 	              <div style="height: 120px;" id="telugufont"><ul id="mainnews">
 	              <?if(!empty($details_more['1'])){

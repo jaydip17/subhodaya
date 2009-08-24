@@ -52,6 +52,19 @@ class Subhodaya extends Controller {
 					);
 		$this->load->view('home',$data);
 	}
+	function sendmail()
+	{
+		$to = "$_POST[email]";
+        $subject = "Hai your friend".$_POST['name']." sent u an article on shubhodaya";
+        $message = $_POST['url'];
+        $message.="\n";
+        $message.= $_POST['description'];
+        $headers = "From:";
+//        if( mail($to,$subject,$message,$headers))
+//         echo "sent successfully";
+//        else
+//         echo "we cant send mail";
+	    }
 
 }
 ?>

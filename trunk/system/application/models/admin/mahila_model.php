@@ -86,16 +86,23 @@ class Mahila_Model extends Model {
 		$query="from mahila where cat_id=$type order by mahila.insert_date desc";
 		return $query;
 	}
-	
+	function evenmore($id)
+	{
+		$this->db->select('cat_id');
+		$this->db->where('id',$id);
+		$query=$this->db->get('mahila');
+		$result=$query->result();
+		$cat_id=$result['0']->cat_id;
+		$evenmore=$this->active_mahila($cat_id);
+		return $evenmore;	
+	}
 	function count($type)
 	{
-		
-    	$this->db->where('cat_id',$type);
+		$this->db->where('cat_id',$type);
 		$this->db->from('mahila');
 		$count =$this->db->count_all_results();
 		return $count;
-		
-		
+			
 	}
     function inner_mahila($id)
     {

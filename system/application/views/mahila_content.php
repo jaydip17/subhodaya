@@ -1,3 +1,8 @@
+<style type="text/css">
+ul{
+list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
+}
+</style>
 <table width="99%"  border="0" cellpadding="0" cellspacing="0">
 <tr>
     <td width="430" valign="top"  align="left">
@@ -121,18 +126,13 @@
           				 <div style="width:100%;" id="news_heading"></div>
           				  <div >
           				 	<ul>
-          					<li>Rastriya Varthalu</li>
-          				 	<li>Rastriya Varthalu</li>
-          				 	<li>Rastriya Varthalu</li>
-          					<li>Rastriya Varthalu</li>
-          				 	<li>Rastriya Varthalu</li>
-          				 	<li>Rastriya Varthalu</li>
-          					<li>Rastriya Varthalu</li>
-          				 	<li>Rastriya Varthalu</li>
-          				 	<li>Rastriya Varthalu</li>
-          				 	<li>Rastriya Varthalu</li>
-          				 	<li>Rastriya Varthalu</li>
-          				 	
+          				 	<?foreach($details_more as $item){
+          				 		$i=1;
+          				         foreach($item as $article){?>
+          				         <li><a href="<?=base_url();?>mahila/mahiladetails/<?=$article->id?>"><? echo $article->summary;?></a></li>
+          				         <?if($i==1)break; $i++;}?>
+          				 		   <?}?>
+	
           				 </ul>
           				 </div>
 

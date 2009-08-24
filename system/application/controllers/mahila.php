@@ -22,19 +22,22 @@ class Mahila extends Controller {
 		$this->load->view('mahila_view',$data);
   }
  function mahiladetails(){
- 	$details=$this->mahila_Model->get_mahilatype();
-		foreach($details as $item)
-		$details_more[$item->id]=$this->mahila_Model->getdetails($item->id,'yes');
+ 	   
 		$more=$this->mahila_Model->more_mahila();
 		$cinema_type1=$this->Cinema_Model->get_cinematype(1);
 		$id=$this->uri->segment(3,0);
 		$result=$this->mahila_Model->inner_mahila($id);
+		$details=$this->mahila_Model->get_mahilatype();
 		
-		//print_r($result);
+		//more from same categeory
+		$evenmore=$this->mahila_Model->evenmore($id);
+		//print_r($details);
 		$data=array('result'   =>   $result,
 					 'more'    =>   $more,
 				'cinema_type1' =>   $cinema_type1,
-		         'details_more' =>$details_more
+		         'evenmore' =>$evenmore,
+		        'details' =>$details
+		        
 				);
 				
 		$this->load->view('mahila_inner',$data);
@@ -46,7 +49,7 @@ class Mahila extends Controller {
 		$more=$this->mahila_Model->more_mahila();
 		$type=$this->uri->segment(3,0);
 		$onload = "loadNews('".base_url()."mahilalist/listview/".$type."')";
-		
+		//print_r($details_more);
 		$total_rows=$this->mahila_Model->count($type);
 		//echo $total_rows;
 	    $this->load->library('pagination');

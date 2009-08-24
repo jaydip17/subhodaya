@@ -37,6 +37,10 @@ class Sahithi extends Controller {
 		$this->load->view('sahithi_inner',$data);
 	}
    function details(){
+   	$details=$this->Sahithi_Model->get_sahithitype();
+   	$details_more=array();
+		foreach($details as $item)
+		$details_more[$item->id]=$this->Sahithi_Model->getdetails($item->id,'yes');
 		$more=$this->Sahithi_Model->more_sahithi();
 		$type=$this->uri->segment(3,0);
 		$onload = "loadNews('".base_url()."sahithilist/listview/".$type."')";
@@ -53,7 +57,9 @@ class Sahithi extends Controller {
 		$data=array(	'news'  =>$sahithi,
 						'more'=>$more,
 					'pagination'=>$pagination,
-		             'onload' =>$onload);
+		             'onload' =>$onload,
+		             'details' =>$details,
+		             'details_more' =>$details_more);
 		$this->load->view("sahithi_content",$data);
 	}
 }

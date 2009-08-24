@@ -127,7 +127,7 @@ padding-top:0px;
 	              <?if(!empty($details_more['9'])){
 	              foreach($details_more['9'] as $row) {?>
 
-	              <li><a href="<?=base_url();?>mahila/mahiladetails/<?=$row->id?>"><?=$row->heading ?></a></li>
+	              <li><a href="<?=base_url();?>mahila/mahiladetails/<?=$row->id?>"><?=$row->heading?></a></li>
 	              <?}} ?>
 	                 </ul>
 	                 </div>

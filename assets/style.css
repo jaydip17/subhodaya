@@ -6,6 +6,7 @@ margin-left:0px;
 margin-right:0px;
 margin-top:0px;
 margin-bottom:0px;
+font-size:14px;
 }
 .topline{
       background-image:url(imgs/top-line.jpg);
@@ -252,7 +253,10 @@ border-bottom: 2px solid #9FA0A0;
 width: 89%; 
 }
 .content{
-width: 100%;
+width: 98%;
+padding:30px 10px 10px 10px;
+font-size:14px;
+letter-spacing:2px;
 }
 #sahithi-table
 {

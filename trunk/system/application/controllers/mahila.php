@@ -14,6 +14,7 @@ class Mahila extends Controller {
 		foreach($details as $item)
 		$details_more[$item->id]=$this->mahila_Model->getdetails($item->id,'yes');
 		$types = array_keys($details_more);
+		//print_r($details_more);
 		$data=array('more'      =>$more,
 		            'details'   =>$details,
 		            'details_more' => $details_more,
@@ -21,19 +22,27 @@ class Mahila extends Controller {
 		$this->load->view('mahila_view',$data);
   }
  function mahiladetails(){
+ 	$details=$this->mahila_Model->get_mahilatype();
+		foreach($details as $item)
+		$details_more[$item->id]=$this->mahila_Model->getdetails($item->id,'yes');
 		$more=$this->mahila_Model->more_mahila();
 		$cinema_type1=$this->Cinema_Model->get_cinematype(1);
 		$id=$this->uri->segment(3,0);
 		$result=$this->mahila_Model->inner_mahila($id);
+		
 		//print_r($result);
 		$data=array('result'   =>   $result,
 					 'more'    =>   $more,
-				'cinema_type1' =>   $cinema_type1
+				'cinema_type1' =>   $cinema_type1,
+		         'details_more' =>$details_more
 				);
 				
 		$this->load->view('mahila_inner',$data);
 	}
    function details(){
+      	$details=$this->mahila_Model->get_mahilatype();
+		foreach($details as $item)
+		$details_more[$item->id]=$this->mahila_Model->getdetails($item->id,'yes');
 		$more=$this->mahila_Model->more_mahila();
 		$type=$this->uri->segment(3,0);
 		$onload = "loadNews('".base_url()."mahilalist/listview/".$type."')";
@@ -51,7 +60,9 @@ class Mahila extends Controller {
 		$data=array(	'news'  =>$mahila,
 						'more'=>$more,
 					'pagination'=>$pagination,
-		             'onload' =>$onload);
+		             'onload' =>$onload,
+		            'details' =>$details,
+		            'details_more' =>$details_more);
 		$this->load->view("mahila_content",$data);
 	}
 

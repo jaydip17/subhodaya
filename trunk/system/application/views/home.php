@@ -197,7 +197,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 									<li style="text-align: center;"><a href="#tab3"><em style="width: 100px;"><span id="telugufont"><?=$more['15']->matter ?></span></em></a></li>
 	    						</ul>            
     							<div class="yui-content" style="height: 150px;text-align: center;">
-							        <div id="tab1"><p>Tab four Content</p></div>
+							        <div id="tab1"><p>Tab four Contentfsdf</p></div>
 							        <div id="tab2"><p>
 							        <table>
 							        	<tr>

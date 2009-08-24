@@ -50,7 +50,7 @@ class Sahithi_Model extends Model {
 	{
 		if($headingonly=='yes')
 		{
-			$this->db->select('id,heading');
+			$this->db->select('id,heading,summary');
 		}
 		$result=$this->db->get_where('sahithi',array('cat_id'=>$id));
 		return $result->result();

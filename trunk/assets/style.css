@@ -202,11 +202,13 @@ color:red;
 }
 
 #more-news-div{
-text-align: right;
-text-decoration: none;
+padding-right:5px;
+text-align:right;
+text-decoration:none;
 }
 #more-news-div a:link{
 	text-decoration: none;
+	
 	color: red;
 	}
 #more-news-div a:hover{
@@ -249,14 +251,15 @@ height: 27px;
 }
 .help{
 height: 30px;
-border-bottom: 2px solid #9FA0A0; 
+border-bottom: 2px solid #9FA0A0;  
 width: 89%; 
 }
 .content{
-width: 98%;
-padding:30px 10px 10px 10px;
+ 
+padding:10px;
 font-size:14px;
 letter-spacing:2px;
+
 }
 #sahithi-table
 {
@@ -271,6 +274,7 @@ letter-spacing:2px;
                     
 #maindiv-news{
 border:1px solid #9FA0A0;
+padding-bottom:20px;
 }
 #formdiv{
 	border: 1px solid #B5E8FD; width:80%;

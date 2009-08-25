@@ -1,4 +1,13 @@
+<style type="text/css">
+ul{
+list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
+font-size:14px;
 
+}
+li{
+padding-bottom:5px;
+}
+</style>
 <table width="99%">
 	<tr>
 		<td width="185" height="100%" valign="top" >
@@ -33,9 +42,9 @@
 							<img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type1['0']->id?>_thumb.jpg" style="padding:5px 0px 0px 20px; ">
 							<ul id="mainnews">
 								<?php
-								if(!empty($cinema_type1))
+								if(!empty($news_type1))
 								{ 
-								$count=0; foreach ($cinema_type1 as $row):?>
+								$count=0; foreach ($news_type1 as $row):?>
 								<li><a href="<?=base_url();?>cinema/inner/<?=$row->id?>"><?=$row->heading?></a></li>
 								<?php
 								if($count==2){
@@ -56,17 +65,25 @@
 		<td valign="top" >
 			<table cellpadding="1px" width="100%">
 			<tr><td><div id="news_heading" class="heading"><span id="newsheading"><?=$result['0']->heading ?></span></div></td></tr>
-			<tr><td align="center"  width="80%"><div  id="maindiv-news">
-			<div  id="maindiv-news">
-			<div class="help"></div>
+			<tr><td align="center">
+			<div id="maindiv-news">
+			<div class="help">
+			</div>
+			</div>
+			</tr>
+			<tr>
+			<td>
+			
 			<div class="content" align="left">
-			<img src="<?=base_url();?>assets/mahila/news_img<?=$result['0']->id?>.jpg" style="float: left;padding:0px 30px 30px 0px;border: 0px solid  #9FA0A0; margin: 10px 0px 0px 10px;" ></img>
+			<img src="<?=base_url();?>assets/<?=$type?>/news_img<?=$result['0']->id?>.jpg" style="float: left;padding:0px 30px 30px 0px;border: 0px solid  #9FA0A0; margin: 10px 0px 0px 10px;" ></img>
 			<?=$result['0']->description ?></div>
+		
 		</td></tr>
 			<tr><td><div id="news_heading" class="heading"><span id="newsheading"><?=$more['25']->matter;?></span></div></td></tr>
 			<tr><td align="center"><div style="border:1px solid #9FA0A0;">
 			<form method="post" action="<?=base_url();?>subhodaya/sendmail">
-			<input type="hidden" name="url" value="<?=base_url()?>subhodaya/mahila/mahiladetails/<?=$result['0']->id?>">
+			
+			<input type="hidden" name="url" value="<?=base_url()?>subhodaya/<?=$type?>/<?=$type?>details/<?=$result['0']->id?>">
 			<table id="formdiv">
 				<tr><td valign="top" colspan="2"><div style="background-color: #B5E8FD;height:20px;"></div></td></tr>
 				<tr><td width="150px" align="left"><?=$more['27']->matter;?></td><td><input type="text" name="name" size="30"></td></tr>
@@ -85,7 +102,7 @@
 					<? $i=1; 
 					foreach($evenmore as $item){
 					?>
-					<li><a href="mahila/mahiladetails/<?$item->id?>"><?echo $item->heading;?></a></li>
+					<li><a href="<?=$type?>/<?=$type?>details/<?$item->id?>"><?echo $item->heading;?></a></li>
 					<?if($i>=5)
 					break;
 					$i++;} ?>
@@ -97,7 +114,7 @@
 				<div style="border:1px solid #9FA0A0;">
 					<ul>
 					<?foreach($details as $item){ ?>
-					<li><a href="<?=base_url()?>/mahila/details/<?=$item->id?>"><?=$item->cat_name;?></li>
+					<li><a href="<?=base_url()?>/<?=$type?>/details/<?=$item->id?>"><?=$item->cat_name;?></li>
 					<?} ?>
 					</ul>
 				</div>
@@ -113,16 +130,15 @@
 							<img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type1['0']->id?>_thumb.jpg" style="padding:5px 0px 0px 20px; ">
 							<ul id="mainnews">
 								<?php
-								if(!empty($cinema_type1))
-								{ 
-								$count=0; foreach ($cinema_type1 as $row):?>
-								<li><a href="<?=base_url();?>cinema/inner/<?=$row->id?>"><?=$row->heading?></a></li>
-								<?php
-								if($count==2){
-								break;}
-								else{$count++;}
-								 endforeach;
-								 }
+								if(!empty($details_more)){
+								
+          				        foreach($details_more as $item){
+          				 		$i=1;
+          				         foreach($item as $article){?>
+          				         <li><a href="<?=base_url();?><?=$type?>/<?=$type?>details/<?=$article->id?>"><? echo $article->heading;?></a></li>
+          				         <?if($i==1)break; $i++;}?>
+          				 		   <?} }
+	       											
 								else
 								echo 'No data found';?>
 							</ul>

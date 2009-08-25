@@ -24,17 +24,28 @@ class Sahithi extends Controller {
 		$this->load->view('sahithi_view',$data);
    }
    function sahithidetails(){
+       	$this->load->model('admin/mahila_Model');
 		$more=$this->Sahithi_Model->more_sahithi();
 		$cinema_type1=$this->Cinema_Model->get_cinematype(1);
 		$id=$this->uri->segment(3,0);
 		$result=$this->Sahithi_Model->inner_sahithi($id);
+		$evenmore=$this->Sahithi_Model->evenmore($id);
+		$details=$this->Sahithi_Model->get_sahithitype();
+		$details_mahila=$this->mahila_Model->get_mahilatype();
+		$details_more=array();
+		foreach($details_mahila as $item)
+		$details_more[$item->id]=$this->mahila_Model->getdetails($item->id,'yes');
 		//print_r($result);
 		$data=array('result'   =>   $result,
 					 'more'    =>   $more,
-				'cinema_type1' =>   $cinema_type1
+				'cinema_type1' =>   $cinema_type1,
+		        'details'   =>  $details,
+		        'evenmore'  =>$evenmore,
+		        'details_more'  => $details_more,
+		         'type'=>'sahithi'
 				);
 				
-		$this->load->view('sahithi_inner',$data);
+		$this->load->view('mahila_inner',$data);
 	}
    function details(){
    	$details=$this->Sahithi_Model->get_sahithitype();

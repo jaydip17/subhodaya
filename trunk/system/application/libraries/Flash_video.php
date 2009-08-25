@@ -25,16 +25,16 @@
  */
 class CI_Flash_video {
 	var $id				= 'n0'; 
-	var $author  		= 'MindTech Softwares'; // The Author of the video
+	var $author  		= 'Techpundits'; // The Author of the video
 	var $date	 		= ''; // The date of video published
 	var $description	= ''; // Description of the video
 	var $captions	 	= ''; // The current page being viewed
 	var $controlbar   	= 'bottom';
-	var $height			= '280';
-	var $previewimage 	= 'http://localhost/andhrahome/assets/video/image_preview/andhrahome.jpg';  //preview image 
+	var $height			= '360';
+	var $previewimage 	= 'http://localhost/subhodaya/assets/videos/image_preview/subhodaya.jpg';  //preview image 
 	var $playlist		= 'none';
 	var $skin			= '';			//bright , nacht,overlay,silverywhite,simple,stylish,swift,thin
-	var $width			= '400';
+	var $width			= '500';
 	var $autostart		= 'false';
 	var $bufferlength	= '1';
 	var $displayclick	= 'play';
@@ -48,8 +48,8 @@ class CI_Flash_video {
 	var $shuffle		= 'false';
 	var $stretching		= 'uniform';
 	var $volume			= '90';
-	var $aboutlink		= 'http://mindtechsoftwares.com/';
-	var $file			= '';
+	var $aboutlink		= 'http://techpundits.com/';
+	var $file			= 'http://localhost/subhodaya/assets/players/video.flv';
 
 	/**
 	 * Constructor

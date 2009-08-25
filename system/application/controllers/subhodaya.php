@@ -23,9 +23,8 @@ class Subhodaya extends Controller {
 		$more=$this->News_Model->more_news();
 		$yes_poll=$this->Poll_Model->get_yes_newspoll($type=4);
 		$newspoll=$this->Poll_Model->get_newspolls($type=4);
-		$sahithi_details=$this->Sahithi_Model->active_sahithi(1);
-		$mahila_details=$this->Mahila_Model->active_mahila(1);
-	   // print_r($sahithi_details);
+		$sahithi_details=$this->Sahithi_Model->active_sahithi(1,$type='home');
+		$mahila_details=$this->Mahila_Model->active_mahila(1,$type='home');
 	    $greetings1=$this->Greeting_Model->get_main_greetings(1);
 
 		$details=$this->Gallery_Model->get_cateimage(11);
@@ -34,7 +33,7 @@ class Subhodaya extends Controller {
 		{
 			$images[$item->id]=$this->Gallery_Model->getimage($item->id);
 		}
-		print_r($images);
+		//print_r($images);
 		//print_r($sahithi_details);
 		$data=array('more'=>$more,
 		            'news_type7'=>$news_type7,

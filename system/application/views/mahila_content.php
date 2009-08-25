@@ -150,11 +150,11 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter2.jpg" width="5" height="31" /></td>
           <td width="8">&nbsp; </td>
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter-1.jpg" width="5" height="31" /></td>
-          <td width="295" valign="top" id="botomtop" align="left"><img src="<?=base_url();?>assets/imgs/001.gif" style="margin:4px 0px 0px 0px;"></img></td>
+          <td width="295" valign="top" id="botomtop" align="left"><img src="<?=base_url();?>assets/imgs/001.gif" style="float:left;margin:4px 4px 0px 0px;"></img><div style="padding-top:5px;" id="newsheading"><?php {echo $more['31']->matter;}?></div></td>
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter2.jpg" width="5" height="31" /></td>
           <td width="8">&nbsp; </td>
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter-1.jpg" width="5" height="31" /></td>
-          <td width="295" valign="top"  id="botomtop" align="left"><img src="<?=base_url();?>assets/imgs/001.gif" style="margin:4px 0px 0px 0px;"></img></td>
+          <td width="295" valign="top" id="botomtop" align="left"><img src="<?=base_url();?>assets/imgs/001.gif" style="float:left;margin:4px 4px 0px 0px;"></img><div style="padding-top:5px;" id="newsheading"><?php {echo $more['30']->matter;}?></div></td>
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter2.jpg" width="5" height="31" /></td>
         </tr>
         <tr>
@@ -164,7 +164,34 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="109" /></td>
           <td width="8">&nbsp;</td>
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="109" /></td>
-          <td valign="top" id="botom-ser"><img src="<?=base_url();?>assets/imgs/ys-img.jpg"></td>
+          <td valign="top" id="botom-ser"><div id="home_poll" >
+                 	<div><? if(!empty($cinemapoll['0']->question)){
+						echo   $cinemapoll['0']->question;               		
+                 	     ?></div>
+
+     				<table width="100%">
+              			<tr>
+              				<td align="right">
+              					<input type="hidden" name="poll_id" value="<?=$cinemapoll['0']->id?>">
+              					<? $attributes = 'onClick= "loadPoll(\''.base_url().'poll/index/'.$cinemapoll[0]->id.'\',this.value)";' ?>
+              					<?=form_radio('answer','a',True,$attributes) ?>
+              				</td>
+              				<td align="left"><?=$more['18']->matter ?></td></tr>
+              			<tr><td align="right"><?=form_radio('answer','b',FALSE,$attributes) ?></td><td align="left"><?=$more['19']->matter ?></td></tr>
+              			<tr><td align="right"><?=form_radio('answer','c',FALSE,$attributes) ?></td><td align="left"><?=$more['20']->matter ?></td></tr>
+     				</table>
+     				<? }else echo 'To day no poll.'; ?>
+     			<br><span style="font-weight: bold;font-size: 14px;color:maroon;">yesterday poll</span>
+                <div><?if(!empty($yes_poll['0']->question)){
+                	echo $yes_poll['0']->question;
+                	?></div>
+		                <div align="right" id="result"><A HREF="javascript:void(0)"
+					onclick="window.open('<?=base_url();?>poll/yes_result/<?=$yes_poll['0']->id?>',
+						'welcome','width=300,height=200')">
+						Result</A></div>
+              
+                <?} else echo 'Yesterday no no poll.';?>
+                </div></td>
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="109" /></td>
           <td width="8">&nbsp;</td>
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="109" /></td>

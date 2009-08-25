@@ -122,9 +122,15 @@ class Sahithi_Model extends Model {
 		$query = $this->db->get_where();
 		return $query->result();
     }
-    function active_sahithi($id)
+    function active_sahithi($id,$type)
     {
+    	if($type=="home")
+    	{
+    		$this->db->select('sahithi.id,heading,summary');
+    	}
+    	else {
     	$this->db->select('*');
+    	}
     	$array=array('sahithi.cat_id'=>$id,'sahithi.active'=>1);
     	$this->db->where($array);
 		$this->db->from('sahithi_cat');

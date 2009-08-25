@@ -125,7 +125,7 @@ padding-bottom:5px;
 		 <td width="185" align="center" valign="top">
 			<table>
 				<tr>
-					<td valign="top" align="left" height="295px"><div class="heading" style="width: 181px;" id="news_heading"><div style="padding-top:5px;" id="newsheading"><?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->cinema_type;}?></div></div>
+					<td valign="top" align="left" height="295px"><div class="heading" style="width: 181px;" id="news_heading"><div style="padding-top:5px;" id="newsheading"><?php if($type=="mahila"){echo $more['9']->matter;}else {echo $more['8']->matter;}?></div></div>
 						<div style="height: 265px;border:1px solid #9FA0A0;" id="left_news">
 							<img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type1['0']->id?>_thumb.jpg" style="padding:5px 0px 0px 20px; ">
 							<ul id="mainnews">
@@ -135,14 +135,14 @@ padding-bottom:5px;
           				        foreach($details_more as $item){
           				 		$i=1;
           				         foreach($item as $article){?>
-          				         <li><a href="<?=base_url();?><?=$type?>/<?=$type?>details/<?=$article->id?>"><? echo $article->heading;?></a></li>
+          				         <li><a href="<?=base_url();?><?=$link?>/<?=$link?>details/<?=$article->id?>"><? echo $article->heading;?></a></li>
           				         <?if($i==1)break; $i++;}?>
           				 		   <?} }
 	       											
 								else
 								echo 'No data found';?>
 							</ul>
-							<div id="more-news-div"><a href="<?=base_url();?>cinema/details/<?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->type;}?>"><?php if(isset($more['0'])){echo $more['0']->matter;}?></a></div>
+							<div id="more-news-div"><a href="<?=base_url();?><?=$link;?>/details/<?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->type;}?>"><?php if(isset($more['0'])){echo $more['0']->matter;}?></a></div>
 						
 						</td>
 					</tr>

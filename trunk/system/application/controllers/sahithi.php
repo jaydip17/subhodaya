@@ -42,7 +42,8 @@ class Sahithi extends Controller {
 		        'details'   =>  $details,
 		        'evenmore'  =>$evenmore,
 		        'details_more'  => $details_more,
-		         'type'=>'sahithi'
+		         'type'=>'sahithi',
+		         'link' =>'mahila'
 				);
 				
 		$this->load->view('mahila_inner',$data);

@@ -46,6 +46,7 @@ class Mahila extends Controller {
 		        'details' =>$details,
 		        'details_more' =>$details_more,
 		            'type'=>'mahila',
+		            'link' => 'sahithi'
 		            
 		        
 				);

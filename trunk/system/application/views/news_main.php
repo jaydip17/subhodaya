@@ -8,7 +8,7 @@
     		<tr>
        		<td  valign="top">
 	       		<table width="100%"  border="0" cellpadding="0" cellspacing="0">
-	     			<tr><td height="4" valign="bottom"><img src="<?=base_url();?>assets/imgs/top-cor-line.jpg" width="480" height="4" /></td></tr>
+	     			<tr><td height="4" valign="bottom"><img src="<?=base_url();?>assets/imgs/top-cor-line.jpg" width="482" height="4" /></td></tr>
 	            </table>
                  <table width="100%"  border="0" style="border-left:1px solid #0872BC; border-right:1px solid #0872BC;"cellpadding="0" cellspacing="0">
                     <tr><td width="100%" height="310" valign="top" align="left" class=" yui-skin-sam" >
@@ -16,24 +16,70 @@
 	    					<ul class="yui-nav">
 							        <li class="selected"><a href="#tab1"><em><?if(isset($news_type1['0'])){echo $news_type1['0']->news_cat;} ?></em></a></li>
 							        <li><a href="#tab2"><em><?if(isset($news_type2['0'])){echo $news_type2['0']->news_cat;} ?></em></a></li>
-							        <li><a href="#tab3"><em><?if(isset($news_type3['0'])){echo $news_type3['0']->news_cat;} ?></em></a></li>
-									<li><a href="#tab3"><em><?if(isset($news_type4['0'])){echo $news_type4['0']->news_cat;} ?></em></a></li>
+							       <li><a href="#tab3"><em><?if(isset($news_type3['0'])){echo $news_type3['0']->news_cat;} ?></em></a></li>
+									 <li><a href="#tab4"><em><?if(isset($news_type4['0'])){echo $news_type4['0']->news_cat;} ?></em></a></li>
 	    					</ul>            
     						<div class="yui-content">
-							 <div id="tab1">
-								 <img src="<?=base_url();?>assets/imgs/move-img4.jpg" align="top"></img>
-						
-							 </div>
-							        <div id="tab2">
-							        <img src="<?=base_url();?>assets/imgs/mov-img2.jpg" align="top"></img>
-							        </div>
-							        <div id="tab3">
-							        <img src="<?=base_url();?>assets/imgs/mov-img3.jpg" align="top"></img>
-							        </div>
-									<div id="tab3">
-									<img src="<?=base_url();?>assets/imgs/mov-img.jpg" align="top"></img>
+							 		<div id="tab1"> 
+							 			<div id="telugufont1">
+								 			<img src="<?=base_url();?>assets/news/news_img<?=$active_news1['0']->id?>_thumb.jpg.jpg" align="top" style="float: left;"></img>
+											<font id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?=$active_news1['0']->id?>"><?=$active_news1['0']->heading?></a></font><br>
+												<?=$active_news1['0']->summary?>
+												<ul id="mainnews">
+												<?php
+          											$count=0; foreach($active_news1 as $row):
+          						  					if($count==0)
+          											{
+					          							$count++;
+					          							continue;
+          											} ?>
+													<li><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>"><?=$row->heading?></a></li>
+									 			<? if($count==3){
+          											break;
+          												}else{
+          												$count++;
+          												}
+          											endforeach; 
+          											if($count==0){
+          											echo 'No data found';
+          											}
+          										?>
+												</ul>
+										</div>
 									</div>
-    							</div>
+							        <div id="tab2"> 
+							        	<div id="telugufont1">
+											 <img src="<?=base_url();?>assets/news/news_img<?=$active_news2['0']->id?>_thumb.jpg.jpg" align="top" style="float: left;"></img>
+											 <font id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?=$active_news2['0']->id?>"><?=$active_news2['0']->heading?></a></font><br>
+											<?=$active_news2['0']->summary?>
+											<ul id="mainnews">
+												<?php
+          										$count=0; foreach($active_news2 as $row):
+          						  				if($count==0)
+          										{
+	          										$count++;
+	          										continue;
+          										} ?>
+												<li><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>"><?=$row->heading?></a></li>
+									 			<? if($count==3){
+          												break;
+          											}else{
+          											$count++;
+          											}
+          											endforeach; 
+          										if($count==0){
+          										echo 'No data found';
+          										}
+          									?>
+									</ul>
+								</div>
+							</div>
+							<div id="tab3">sfdsfg</div>
+							<div id="tab4">jku</div>  
+									
+									
+							</div>
+    					</div>
 <script>
 (function() {
     var tabView = new YAHOO.widget.TabView('demo');

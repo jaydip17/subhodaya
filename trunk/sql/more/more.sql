@@ -1,19 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.1.3
+-- version 2.11.5
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 20, 2009 at 11:42 AM
--- Server version: 5.1.32
--- PHP Version: 5.2.9-1
+-- Generation Time: Aug 25, 2009 at 10:31 AM
+-- Server version: 5.0.51
+-- PHP Version: 5.2.5
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `subhodaya`
@@ -27,11 +21,11 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
 DROP TABLE IF EXISTS `more`;
 CREATE TABLE IF NOT EXISTS `more` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
-  `matter` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `active` int(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=28 ;
+  `id` int(10) NOT NULL auto_increment,
+  `matter` varchar(100) character set utf8 collate utf8_unicode_ci NOT NULL,
+  `active` int(1) NOT NULL default '0',
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=33 ;
 
 --
 -- Dumping data for table `more`
@@ -63,5 +57,10 @@ INSERT INTO `more` (`id`, `matter`, `active`) VALUES
 (23, 'ఇది నిజం', 0),
 (24, 'ముఖ్యమైన  గ్రీటింగ్స్ ', 0),
 (25, 'మునుపటి పేజి', 0),
-(26, 'ఆడ వాళ్ళ  కోసం శుభోదయ అందిస్తోంది స్పెషల్ పేజి ', 0),
-(27, 'ఆడ వాళ్ళ  కోసం శుభోదయ అందిస్తోంది స్పెష', 0);
+(26, 'మిత్రునికి పంపించు', 0),
+(27, 'సంబంధిత సంగతులు', 0),
+(28, 'మీ  పేరు', 0),
+(29, 'మీ మిత్రుని ఈమెయిలు ', 0),
+(30, 'ఇవి కూడా చదవండి', 0),
+(31, 'వార్తల పోల్ ', 0),
+(32, 'సినిమా పోల్', 0);

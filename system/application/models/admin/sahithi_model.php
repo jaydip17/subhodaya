@@ -15,6 +15,12 @@ class Sahithi_Model extends Model {
 		$result=$this->db->get('sahithi');
 		return $result->result();
 	}
+ function get_sahithi_details($id)
+	{
+		$this->db->where('id',$id);
+		$result=$this->db->get('sahithi');
+		return $result->result();
+	}
     function delete($id)
 	{
 		  $remove=array();

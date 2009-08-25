@@ -25,7 +25,7 @@ class Sahithi extends Controller {
    }
    function sahithidetails(){
        	$this->load->model('admin/mahila_Model');
-		$more=$this->Sahithi_Model->more_sahithi();
+       	$more=$this->Sahithi_Model->more_sahithi();
 		$cinema_type1=$this->Cinema_Model->get_cinematype(1);
 		$id=$this->uri->segment(3,0);
 		$result=$this->Sahithi_Model->inner_sahithi($id);
@@ -49,6 +49,9 @@ class Sahithi extends Controller {
 		$this->load->view('mahila_inner',$data);
 	}
    function details(){
+   	   $this->load->model('admin/Poll_Model');
+   	 $newspoll=$this->Poll_Model->get_newspolls($type=4);
+		$yes_poll=$this->Poll_Model->get_yes_newspoll($type=4);
    	$details=$this->Sahithi_Model->get_sahithitype();
    	$details_more=array();
 		foreach($details as $item)
@@ -70,9 +73,12 @@ class Sahithi extends Controller {
 						'more'=>$more,
 					'pagination'=>$pagination,
 		             'onload' =>$onload,
+				     'newspoll'    =>  $newspoll,
+				      'yes_poll'    =>  $yes_poll,
 		             'details' =>$details,
-		             'details_more' =>$details_more);
-		$this->load->view("sahithi_content",$data);
+		              'details_more' =>$details_more,
+		               'type'=>'sahithi');
+		$this->load->view("mahila_content",$data);
 	}
 }
 ?>

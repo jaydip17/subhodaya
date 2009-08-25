@@ -28,9 +28,11 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
     						<?for($i=1;$i<=4;$i++){?>
 							 <div id="tab<?=$i?>">
 							        	<div style="padding-top: 5px;" >
+							        <?if($type=="mahila"){?>
 	              <img src="<?=base_url();?>assets/imgs/mahila<?=$i?>.jpg" style="float:left;padding:4px 15px 4px 4px;text-align: justify;" width="105px" height="86px" align="top" />
+	              <?} ?>
 	             <?if(!empty($details_more[$i])){?>
-	             <font id="telugufont"><a href="<?=base_url();?>mahila/mahiladetails/<?=$details_more[$i]['0']->id?>"><?php echo $details_more[$i]['0']->heading?></a></font><br>
+	             <font id="telugufont"><a href="<?=base_url();?><?=$type?>/<?=$type?>details/<?=$details_more[$i]['0']->id?>"><?php echo $details_more[$i]['0']->heading?></a></font><br>
 	              <?=$details_more[$i]['0']->summary; }?>
 	              <div style="height: 120px;" id="telugufont">
 	            
@@ -39,7 +41,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 	              	$j=1;
 	              foreach($details_more[$i] as $item) {
                    if($j==9) break;?>
-	             <li><a href="<?=base_url();?>mahila/mahiladetails/<?=$item->id?>"><?=$item->heading ?></a></li>
+	             <li><a href="<?=base_url();?><?=$type?>/<?=$type?>details/<?=$item->id?>"><?=$item->heading ?></a></li>
 	                <?$j++;}} ?>
 	                 </ul>
 	                 </div>
@@ -105,8 +107,8 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
           				<td width="450" style="border: 1px solid #3789C3;"  valign="top">
           				 <div style="width:100%"id="news_heading"><span id="newsheading" style="padding-right:30px"><? if (isset($news['0']->cat_name)){ echo $news['0']->cat_name;}?></span>
           				 <? $count=1; foreach($news as $row): ?>
-          				Change View:<button style="background-color:#93D7FA;" onclick="loadNews('<?=base_url()?>mahilalist/listview/<?=$row->cat_id?>')">topics</button>
-          				 <button style="background-color:#93D7FA;" onclick="loadNews('<?=base_url()?>mahilalist/thumbview/<?=$row->cat_id ?>')">details</button>
+          				Change View:<button style="background-color:#93D7FA;" onclick="loadNews('<?=base_url()?><?=$type?>list/listview/<?=$row->cat_id?>')">topics</button>
+          				 <button style="background-color:#93D7FA;" onclick="loadNews('<?=base_url()?><?=$type?>list/thumbview/<?=$row->cat_id ?>')">details</button>
           				 <? if($count==1){
           				 	break;
           				 } 
@@ -129,7 +131,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
           				 	<?foreach($details_more as $item){
           				 		$i=1;
           				         foreach($item as $article){?>
-          				         <li><a href="<?=base_url();?>mahila/mahiladetails/<?=$article->id?>"><? echo $article->summary;?></a></li>
+          				         <li><a href="<?=base_url();?><?=$type?>/<?=$type?>details/<?=$article->id?>"><? echo $article->summary;?></a></li>
           				         <?if($i==1)break; $i++;}?>
           				 		   <?}?>
 	
@@ -166,7 +168,33 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="109" /></td>
           <td width="8">&nbsp;</td>
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="109" /></td>
-          <td valign="top" id="botom-ser">dshfgjh</td>
-          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="109" /></td>
+          <td valign="top" id="botom-ser"> <div id="home_poll" >
+               <div><? if(!empty($newspoll['0']->question)){
+                echo $newspoll['0']->question;
+               	?></div>
+
+     				<table width="100%">
+              			<tr>
+              				<td align="right">
+              					<input type="hidden" name="poll_id" value="<?=$newspoll['0']->id?>">
+              					<? $attributes = 'onClick= "loadPoll(\''.base_url().'poll/index/'.$newspoll[0]->id.'\',this.value)";' ?>
+              					<?=form_radio('answer','a',True,$attributes) ?>
+              				</td>
+              				<td align="left"><?=$more['18']->matter ?></td></tr>
+              			<tr><td align="right"><?=form_radio('answer','b',FALSE,$attributes) ?></td><td align="left"><?=$more['19']->matter ?></td></tr>
+              			<tr><td align="right"><?=form_radio('answer','c',FALSE,$attributes) ?></td><td align="left"><?=$more['20']->matter ?></td></tr>
+     				</table>
+     				<? }else echo 'to day no poll'; ?>
+     			<span style="font-weight: bold;font-size: 14px;color:maroon;">yesterday poll</span>
+                <div><?if(!empty($yes_poll['0']->question)){
+                	echo $yes_poll['0']->question;
+                	?></div>
+                       <div align="right" id="result"><A HREF="javascript:void(0)"
+					onclick="window.open('<?=base_url();?>poll/yes_result/<?=$yes_poll['0']->id?>',
+						'welcome','width=300,height=150')">
+						Result</A></div>
+                <?} else echo 'Yesterday no poll.'; ?>
+                </div></td>
+          <td valign="top">  </td>
         </tr>
     </table>

@@ -3,7 +3,7 @@
 <tr>
 	<td colspan="2" align="center" style="font-weight: bold;font-size: 14px;"><div id="ga_topmenu"><?=$more['6']->matter?></div></td>
 	<td rowspan="4" valign="top">
-	<div style="width: 174px;border: 1px solid red;height: 200px;">
+	<div style="width: 174px;border: 1px solid red;height: 890px;">
 	</div></td>
 </tr>
 <tr>
@@ -11,7 +11,7 @@
 		 <div class="content">
       <div id="info3"><img src="<?=base_url();?>assets/imgs/info-left.gif" width="7" height="34" style="float:left" />
        <img src="<?=base_url();?>assets/imgs/info-right.gif" width="7" height="34" style="float:right" />
-      <div id="information"><?php if(isset($more['27'])){echo $more['27']->matter;}?></div>
+      <div id="information"></div>
      
         <div id="menu">
 		<ul style="list-style: none;margin: 0;padding: 0;">

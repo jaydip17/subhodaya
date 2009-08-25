@@ -103,66 +103,21 @@
           			<tr>
           				<td width="375" style="border: 1px solid #50BCFC;" id="newstable" valign="top" height="235">
           				<div style="width:100%;" id="news_heading"><span id="newsheading"><?=$cinema_type1['0']->cinema_type?></span></div>
-          				<a href="#"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type1['0']->id?>_thumb.jpg" style="float: left;padding:3px 20px 3px 3px; border:0px;"></img></a>
-          					<div style="height: 180px;">
-          					<ul id="mainnews">
-          					<? $count=0; foreach ($cinema_type1 as $row): ?>
-          						<li><a href="#"><?=$row->heading?></a></li>
-          					<? if($count==8){
-          						break;
-          					}else{
-          						$count++;
-          					}
-          					endforeach; 
-          					if($count==0){
-          						echo 'No data found';
-          					}
-          					?>
-          					</ul>
-          					</div>
-          				<div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>cinema/details/<?=$cinema_type1['0']->type?>"><?=$more['0']->matter?></a></span></div>
-          				</td>
-          				<td style="border: 1px solid #50BCFC;" valign="top" id="newstable" height="235">
-          				<div style="width:100%;" id="news_heading"><span id="newsheading"><?=$cinema_type2['0']->cinema_type?></span></div>
-          				<a href="#"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type2['0']->id?>_thumb.jpg" style="float: left;padding:4px 20px 3px 3px;border: 0px;"></img></a>
-          					<div style="height: 180px;">
-          					<ul id="mainnews">
-          					<? $count=0; foreach ($cinema_type2 as $row): ?>
-          						<li><a href="#"><?=$row->heading?></a></li>
-          					<? if($count==8){
-          						break;
-          					}else{
-          						$count++;
-          					}
-          					endforeach; 
-          					if($count==0){
-          						echo 'No data found';
-          					}
-          					?>
-          					</ul>
-          					</div>
-          				<div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>cinema/details/<?=$cinema_type2['0']->type?>"><?=$more['0']->matter?></a></span></div>
-          				</td>
-          			</tr>
-          			<tr>
-          				<td width="375" style="border: 1px solid #50BCFC;" valign="top" id="newstable">
-          				<div id="TabbedPanels1" class="TabbedPanels" style="padding-left: 0px;">
-							  <ul class="TabbedPanelsTabGroup">
-							    <li class="TabbedPanelsTab" tabindex="0"><span id="newsheading"><?=$cinema_type3['0']->cinema_type?></span></li>
-							    <li class="TabbedPanelsTab" tabindex="0"><span id="newsheading"><?=$cinema_type4['0']->cinema_type?></span></li>
-							  </ul>
-							  <div class="TabbedPanelsContentGroup">
-							    <div class="TabbedPanelsContent">
-							    <div  >
-							 		<a href="#"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type3['0']->id?>_thumb.jpg" style="float: left;padding:4px 20px 3px 3px;border: 0px;"></img></a>
-							 		<?=$cinema_type3['0']->heading?>
-							 		<?=$cinema_type3['0']->summary?>
-							 		<ul>
+          				<div id='telugufont1' style="height: 200px">
+							 		<a href="<?=base_url();?>cinema/inner/<?=$cinema_type1['0']->id?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type1['0']->id?>_thumb.jpg" style="float: left;padding:4px 20px 3px 3px;border: 0px;"></img></a>
+							 		<div id="mainnews"><a href="<?=base_url();?>cinema/inner/<?=$cinema_type1['0']->id?>"><?=$cinema_type1['0']->heading?></a></div>
+							 		<?=$cinema_type1['0']->summary?>
+							 		<ul id="mainnews">
 							 			<?php
           									$count=0; 
-          									foreach($cinema_type3 as $row):
+          									foreach($cinema_type1 as $row):
+          									if($count==0)
+          											{
+					          							$count++;
+					          							continue;
+          											}
           						  		?>
-							 			<li><?=$row->heading?></li>
+							 			<li style="padding: 1px;"><a href="<?=base_url();?>cinema/inner/<?=$row->id?>"><?=$row->heading?></a></li>
 							 			<? if($count==3)
 							 			 {
           									break;
@@ -177,9 +132,113 @@
           								?>
 							 		</ul>
 							 		</div>
+							 			<div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>cinema/details/<?=$cinema_type1['0']->type?>"><?=$more['0']->matter?></a></span></div>
+          				</td>
+          				<td style="border: 1px solid #50BCFC;" valign="top" id="newstable" height="235">
+          				<div style="width:100%;" id="news_heading"><span id="newsheading"><?=$cinema_type2['0']->cinema_type?></span></div>
+          				<div id='telugufont1' style="height: 200px">
+							 		<a href="<?=base_url();?>cinema/inner/<?=$cinema_type2['0']->id?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type2['0']->id?>_thumb.jpg" style="float: left;padding:4px 20px 3px 3px;border: 0px;"></img></a>
+							 		<div id="mainnews"><a href="<?=base_url();?>cinema/inner/<?=$cinema_type2['0']->id?>"><?=$cinema_type2['0']->heading?></a></div>
+							 		<?=$cinema_type2['0']->summary?>
+							 		<ul id="mainnews">
+							 			<?php
+          									$count=0; 
+          									foreach($cinema_type2 as $row):
+          									if($count==0)
+          											{
+					          							$count++;
+					          							continue;
+          											}
+          						  		?>
+							 			<li style="padding: 1px;"><a href="<?=base_url();?>cinema/inner/<?=$cinema_type2['0']->id?>"><?=$row->heading?></a></li>
+							 			<? if($count==3)
+							 			 {
+          									break;
+          								 }else{
+          										$count++;
+          									 }
+          								 endforeach; 
+          									if($count==0)
+          									{
+          									echo 'No data found';
+          									}
+          								?>
+							 		</ul>
+							 		</div>
+							 			<div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>cinema/details/<?=$cinema_type2['0']->type?>"><?=$more['0']->matter?></a></span></div>
+          				</td>
+          			</tr>
+          			<tr>
+          				<td width="375" style="border: 1px solid #50BCFC;" valign="top" id="newstable">
+          				<div id="TabbedPanels1" class="TabbedPanels" style="padding-left: 0px;">
+							  <ul class="TabbedPanelsTabGroup">
+							    <li class="TabbedPanelsTab" tabindex="0"><span id="newsheading"><?=$cinema_type3['0']->cinema_type?></span></li>
+							    <li class="TabbedPanelsTab" tabindex="0"><span id="newsheading"><?=$cinema_type4['0']->cinema_type?></span></li>
+							  </ul>
+							  <div class="TabbedPanelsContentGroup">
+							    <div class="TabbedPanelsContent">
+							    <div id='telugufont1' style="height: 200px">
+							 		<a href="<?=base_url();?>cinema/inner/<?=$cinema_type3['0']->id?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type3['0']->id?>_thumb.jpg" style="float: left;padding:4px 20px 3px 3px;border: 0px;"></img></a>
+							 		<div id="mainnews"><a href="<?=base_url();?>cinema/inner/<?=$cinema_type3['0']->id?>"><?=$cinema_type3['0']->heading?></a></div>
+							 		<?=$cinema_type3['0']->summary?>
+							 		<ul id="mainnews">
+							 			<?php
+          									$count=0; 
+          									foreach($cinema_type3 as $row):
+          									if($count==0)
+          											{
+					          							$count++;
+					          							continue;
+          											}
+          						  		?>
+							 			<li style="padding: 1px;"><a href="<?=base_url();?>cinema/inner/<?=$cinema_type3['0']->id?>"><?=$row->heading?></a></li>
+							 			<? if($count==3)
+							 			 {
+          									break;
+          								 }else{
+          										$count++;
+          									 }
+          								 endforeach; 
+          									if($count==0)
+          									{
+          									echo 'No data found';
+          									}
+          								?>
+							 		</ul>
+							 		</div>
+							 		<div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>cinema/details/<?=$cinema_type3['0']->type?>"><?=$more['0']->matter?></a></span></div>
           						</div>
 							    <div class="TabbedPanelsContent">
-							   		fg
+							   		 <div id='telugufont1' style="height: 200px">
+							 		<a href="<?=base_url();?>cinema/inner/<?=$cinema_type4['0']->id?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type4['0']->id?>_thumb.jpg" style="float: left;padding:4px 20px 3px 3px;border: 0px;"></img></a>
+							 		<div id="mainnews"><a href="<?=base_url();?>cinema/inner/<?=$cinema_type4['0']->id?>"><?=$cinema_type4['0']->heading?></a></div>
+							 		<?=$cinema_type4['0']->summary?>
+							 		<ul id="mainnews">
+							 			<?php
+          									$count=0; 
+          									foreach($cinema_type4 as $row):
+          									if($count==0)
+          											{
+					          							$count++;
+					          							continue;
+          											}
+          						  		?>
+							 			<li style="padding: 1px;"><a href="<?=base_url();?>cinema/inner/<?=$cinema_type4['0']->id?>"><?=$row->heading?></a></li>
+							 			<? if($count==3)
+							 			 {
+          									break;
+          								 }else{
+          										$count++;
+          									 }
+          								 endforeach; 
+          									if($count==0)
+          									{
+          									echo 'No data found';
+          									}
+          								?>
+							 		</ul>
+							 		</div>
+							 			<div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>cinema/details/<?=$cinema_type4['0']->type?>"><?=$more['0']->matter?></a></span></div>
 								</div>
 							  </div>
 							</div>
@@ -192,10 +251,68 @@
 							  </ul>
 							  <div class="TabbedPanelsContentGroup">
 							    <div class="TabbedPanelsContent">
-							   
+							   		  <div id='telugufont1' style="height: 200px">
+							 		<a href="<?=base_url();?>cinema/inner/<?=$cinema_type5['0']->id?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type5['0']->id?>_thumb.jpg" style="float: left;padding:4px 20px 3px 3px;border: 0px;"></img></a>
+							 		<div id="mainnews"><a href="<?=base_url();?>cinema/inner/<?=$cinema_type5['0']->id?>"><?=$cinema_type5['0']->heading?></a></div>
+							 		<?=$cinema_type5['0']->summary?>
+							 		<ul id="mainnews">
+							 			<?php
+          									$count=0; 
+          									foreach($cinema_type5 as $row):
+          									if($count==0)
+          											{
+					          							$count++;
+					          							continue;
+          											}
+          						  		?>
+							 			<li style="padding: 1px;"><a href="<?=base_url();?>cinema/inner/<?=$cinema_type5['0']->id?>"><?=$row->heading?></a></li>
+							 			<? if($count==3)
+							 			 {
+          									break;
+          								 }else{
+          										$count++;
+          									 }
+          								 endforeach; 
+          									if($count==0)
+          									{
+          									echo 'No data found';
+          									}
+          								?>
+							 		</ul>
+							 		</div>
+							 			<div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>cinema/details/<?=$cinema_type5['0']->type?>"><?=$more['0']->matter?></a></span></div>
           						</div>
 							 	<div class="TabbedPanelsContent">
-									
+									  <div id='telugufont1' style="height: 200px">
+							 		<a href="<?=base_url();?>cinema/inner/<?=$cinema_type6['0']->id?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type6['0']->id?>_thumb.jpg" style="float: left;padding:4px 20px 3px 3px;border: 0px;"></img></a>
+							 		<div id="mainnews"><a href="<?=base_url();?>cinema/inner/<?=$cinema_type6['0']->id?>"><?=$cinema_type6['0']->heading?></a></div>
+							 		<?=$cinema_type6['0']->summary?>
+							 		<ul id="mainnews">
+							 			<?php
+          									$count=0; 
+          									foreach($cinema_type6 as $row):
+          									if($count==0)
+          											{
+					          							$count++;
+					          							continue;
+          											}
+          						  		?>
+							 			<li style="padding: 1px;"><a href="<?=base_url();?>cinema/inner/<?=$cinema_type6['0']->id?>"><?=$row->heading?></a></li>
+							 			<? if($count==3)
+							 			 {
+          									break;
+          								 }else{
+          										$count++;
+          									 }
+          								 endforeach; 
+          									if($count==0)
+          									{
+          									echo 'No data found';
+          									}
+          								?>
+							 		</ul>
+							 		</div>
+							 			<div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>cinema/details/<?=$cinema_type6['0']->type?>"><?=$more['0']->matter?></a></span></div>
 							 	</div>
 							
 <script type="text/javascript">

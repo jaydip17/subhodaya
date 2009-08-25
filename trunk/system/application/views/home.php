@@ -431,16 +431,20 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 							       <li class="selected" style="text-align: center;"><a href="#tab1"><em style="width: 80px;padding-top: 2px"" id="telugufont"><?=$more['8']->matter?></em></a></li>
 							        <li style="text-align: center;"><a href="#tab2"><em style="width: 80px;padding-top: 2px""><span id="telugufont"><?=$more['9']->matter ?></span></em></a></li>
 	    						</ul>            
-    							<div class="yui-content" style="height: 150px;text-align: center;">
-							        <div id="tab1"><p><? $i=1;foreach($mahila_details as $item){
+    							<div class="yui-content" style="height: 150px;text-align: left;">
+							        <div id="tab1"><p><img style="float:left;padding:0px 20px 5px 0px;" src="<?=base_url();?>/assets/mahila/news_img<?=$mahila_details['0']->id?>_thumb.jpg" /><a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details['0']->id?>"><?=$mahila_details['0']->heading?></a><br>
+							        <?php echo $mahila_details['0']->summary; ?>
+							       <?php  $i=1;foreach($mahila_details as $item){
 							        
-							           if($i>5)
+							           if($i>3)
 							           break;?>
-							        	               <ul id="mainnews"> <li><a href="<?=base_url();?>mahila/mahiladetails/<?=$item->id?>"><?=$item->summary?></a></li></ul><?$i++;} ?></p></div>
-							        <div id="tab2"><p><?$i=1; foreach($sahithi_details as $item){
-							             if($i>5)
+							        	               <ul id="mainnews"> <li><a href="<?=base_url();?>mahila/mahiladetails/<?=$item->id?>"><?=$item->heading?></a></li></ul><?$i++;} ?></p></div>
+							        <div id="tab2"><p><img style="float:left;padding:0px 20px 5px 0px;" src="<?=base_url();?>/assets/sahithi/news_img<?=$sahithi_details['0']->id?>_thumb.jpg" alt="hh"/><a href="<?=base_url();?>sahithi/sahithidetails/<?=$sahithi_details['0']->id?>"><?=$sahithi_details['0']->heading?></a><br>
+							        <?php echo $sahithi_details['0']->summary; ?>
+							        <?$i=1; foreach($sahithi_details as $item){
+							             if($i>3)
 							           break;?>
-							        	               <ul id="mainnews"> <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>"><?=$item->summary?></a></li></ul><? $i++;} ?></p></div>
+							        	               <ul id="mainnews"> <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>"><?=$item->heading?></a></li></ul><? $i++;} ?></p></div>
     							</div>
 <script>
 (function() {

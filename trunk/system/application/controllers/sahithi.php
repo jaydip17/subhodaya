@@ -51,6 +51,7 @@ class Sahithi extends Controller {
    function details(){
    	   $this->load->model('admin/Poll_Model');
    	 $newspoll=$this->Poll_Model->get_newspolls($type=4);
+   	 $cinemapoll=$this->Poll_Model->get_newspolls($type=5);
 		$yes_poll=$this->Poll_Model->get_yes_newspoll($type=4);
    	$details=$this->Sahithi_Model->get_sahithitype();
    	$details_more=array();
@@ -77,7 +78,8 @@ class Sahithi extends Controller {
 				      'yes_poll'    =>  $yes_poll,
 		             'details' =>$details,
 		              'details_more' =>$details_more,
-		               'type'=>'sahithi');
+		               'type'=>'sahithi',
+		              'cinemapoll'  => $cinemapoll);
 		$this->load->view("mahila_content",$data);
 	}
 }

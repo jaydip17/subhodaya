@@ -138,8 +138,8 @@ function getsahithi(){
 	
 	function edit(){
 	 $id =$this->uri->segment(4,0);
-     $edit = $this->Sahithi_Model->getsahithi_details($id);
-    
+	  $edit = $this->Sahithi_Model->get_sahithi_details($id);
+        
      $message = $this->session->flashdata('message');
 		$this->load->model('admin/Openwysiwyg_Model');
 		$textarea[]= array('textarea' => 'description',

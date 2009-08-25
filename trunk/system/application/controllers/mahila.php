@@ -47,13 +47,14 @@ class Mahila extends Controller {
 		        'details_more' =>$details_more,
 		            'type'=>'mahila',
 		            'link' => 'sahithi'
-		            
-		        
-				);
+		     	);
 				
 		$this->load->view('mahila_inner',$data);
 	}
    function details(){
+   	    $this->load->model('admin/Poll_Model');
+   	    $newspoll=$this->Poll_Model->get_newspolls($type=4);
+		$yes_poll=$this->Poll_Model->get_yes_newspoll($type=4);
       	$details=$this->mahila_Model->get_mahilatype();
 		foreach($details as $item)
 		$details_more[$item->id]=$this->mahila_Model->getdetails($item->id,'yes');
@@ -76,7 +77,10 @@ class Mahila extends Controller {
 					'pagination'=>$pagination,
 		             'onload' =>$onload,
 		            'details' =>$details,
-		            'details_more' =>$details_more);
+		              'newspoll'    =>  $newspoll,
+				 'yes_poll'    =>  $yes_poll,
+		            'details_more' =>$details_more,
+		            'type'  =>'mahila');
 		$this->load->view("mahila_content",$data);
 	}
 

@@ -19,6 +19,7 @@ class News extends Controller {
 		$newspoll=$this->Poll_Model->get_newspolls($type=4);
 		$yes_poll=$this->Poll_Model->get_yes_newspoll($type=4);
 		$active_news1=$this->News_Model->active_news(1);
+		
 		$active_news2=$this->News_Model->active_news(2);
 		$active_news3=$this->News_Model->active_news(3);
 		$active_news4=$this->News_Model->active_news(4);

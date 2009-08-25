@@ -22,13 +22,20 @@ class Mahila extends Controller {
 		$this->load->view('mahila_view',$data);
   }
  function mahiladetails(){
- 	   
+ 	   $this->load->model('admin/Sahithi_Model');
 		$more=$this->mahila_Model->more_mahila();
 		$cinema_type1=$this->Cinema_Model->get_cinematype(1);
+		$this->load->model("admin/News_Model");
+		$details=array();
+		//$news_type1=$this->News_Model->get_newstype(5);
+		//print_r($news_type1);
 		$id=$this->uri->segment(3,0);
 		$result=$this->mahila_Model->inner_mahila($id);
 		$details=$this->mahila_Model->get_mahilatype();
-		
+		$details_sahithi=$this->Sahithi_Model->get_sahithitype();
+		$details_more=array();
+		foreach($details_sahithi as $item)
+		$details_more[$item->id]=$this->Sahithi_Model->getdetails($item->id,'yes');
 		//more from same categeory
 		$evenmore=$this->mahila_Model->evenmore($id);
 		//print_r($details);
@@ -36,7 +43,10 @@ class Mahila extends Controller {
 					 'more'    =>   $more,
 				'cinema_type1' =>   $cinema_type1,
 		         'evenmore' =>$evenmore,
-		        'details' =>$details
+		        'details' =>$details,
+		        'details_more' =>$details_more,
+		            'type'=>'mahila',
+		            
 		        
 				);
 				

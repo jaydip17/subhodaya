@@ -87,7 +87,16 @@ class Sahithi_Model extends Model {
 		$query="from sahithi where cat_id=$type order by sahithi.insert_date desc";
 		return $query;
 	}
-	
+    function evenmore($id)
+	{
+		$this->db->select('cat_id');
+		$this->db->where('id',$id);
+		$query=$this->db->get('sahithi');
+		$result=$query->result();
+		$cat_id=$result['0']->cat_id;
+		$evenmore=$this->active_sahithi($cat_id);
+		return $evenmore;	
+	}
 	function count($type)
 	{
 		

@@ -123,7 +123,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
           				 --></div>
           				</td>
           				<td style="border: 1px solid #3789C3;" valign="top">
-          				 <div style="width:100%;" id="news_heading"></div>
+          				 <div style="width:100%" id="news_heading"><span id="newsheading" style="padding-right:30px"><?=$more['29']->matter;?></span></div>
           				  <div >
           				 	<ul>
           				 	<?foreach($details_more as $item){

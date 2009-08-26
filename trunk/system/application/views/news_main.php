@@ -159,34 +159,8 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
           </table></td>
           <td width="235" valign="top" align="center"><div style="border: 1px solid red;height: 315px;width: 230px;background-color: gray;">315x240 add</div></td>
           <td width="185" align="center" valign="top" rowspan="3">
-			<table width="100%" style="border:1px solid #3789C3;">
-			<tr>
-				<td style="border:1px solid #3789C3;height: 25px;font-weight: bold;" id="news_heading" align="center" ><span id="telugufont1"><?=$more['6']->matter?></span></td>
-			</tr>
-			<tr>
-				<td align="center">
-						<div style="border: 1px solid red;height: 383px;width: 180px;"></div>
-					
-				</td>
-			</tr>
-			</table>
-			<div style="padding-top: 10px">
-			<table style="border:1px solid #3789C3;" bgcolor="#9CD8FC" width="100%" >
-				<tr>
-					<td align="center">
-					<div><img src="<?=base_url();?>assets/imgs/add-img1.jpg"></div>
-					</td>
-				</tr>
-				<tr>
-					<td align="center"><div><img src="<?=base_url();?>assets/imgs/add-img2.jpg"></div></td>
-				</tr>
-				<tr>
-					<td align="center"><div><img src="<?=base_url();?>assets/imgs/2.jpg"></div></td>
-				</tr>
-			</table>
-			<!--<img src="<?=base_url();?>assets/imgs/3.jpg" style="padding: 4px;">
-			--></div>
-          </td>
+          <div style="background-color: gray;border: 1px solid red;height: 820px;width:  191px;"> google add space</div>
+			</td>
           </tr>
           <tr>
           	<td valign="top" align="left"  colspan="2">

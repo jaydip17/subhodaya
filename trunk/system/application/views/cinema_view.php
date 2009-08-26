@@ -26,10 +26,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
      </table>
      </td>
      <td width="245" valign="top" align="center">
-     	<img src="<?=base_url();?>assets/imgs/18.jpg" style="border: 1px solid #50BCFC;"></img>
-     	<div align="center" style="padding-top: 8px">
-     		<img src="<?=base_url();?>assets/imgs/19.jpg" style="border: 1px solid #50BCFC;"></img>
-     	<div>
+     	<div style="width: 237px;height: 337px;border: 1px solid red;" ></div>
      </td>
      <td width="185" align="center" valign="top" rowspan="3">
 		<table width="100%" style="border:1px solid #50BCFC;">
@@ -331,9 +328,9 @@ var TabbedPanels2 = new Spry.Widget.TabbedPanels("TabbedPanels2");
           		</table>
           	</td>
           </tr>
-          <table width="99%"  border="0" cellpadding="0" cellspacing="0">
-          <tr><td valign="bottom" align="left" width="200">
-         <div class=" yui-skin-sam" style="width: 470px; border: 1px solid #50BCFC; height: 190px" >
+          <table width="99%"  border="0" cellpadding="0" cellspacing="5">
+          <tr><td valign="bottom" align="left" width="200" >
+         <div class=" yui-skin-sam" style="width: 470px; border: 1px solid #50BCFC; " >
                       	<div id="demo1" class="yui-navset" style="color: #EDF5FF;">
 	    						<ul class="yui-nav">
 							       <li class="selected" style="text-align: center;"><a href="#tab1"><em style="width: 80px;">Politics</em></a></li>
@@ -356,4 +353,5 @@ var TabbedPanels2 = new Spry.Widget.TabbedPanels("TabbedPanels2");
 						</div>
 						</div>
                       </td>
+                      <td><div style="border: 1px solid red;height: 190px;width: 450px;background-color: gray;">add space</div></td>
 </table>

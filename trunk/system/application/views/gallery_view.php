@@ -1,9 +1,14 @@
+<style type="text/css">
+ul{
+list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
+}
+</style>
 
 <table width="100%" cellpadding="5" cellspacing="0">
 <tr>
 	<td colspan="2" align="center" style="font-weight: bold;font-size: 14px;"><div id="ga_topmenu"><?=$more['6']->matter?></div></td>
 	<td rowspan="4" valign="top">
-	<div style="width: 174px;border: 1px solid red;height: 890px;">
+	<div style="width: 174px;border: 1px solid red;height: 890px;background-color: gray;">
 	</div></td>
 </tr>
 <tr>
@@ -32,7 +37,7 @@
       </div>
 	</td>
 	<td valign="top">
-		<div style="width: 595px;height: 198px;border:"><img src="<?=base_url()?>assets/imgs/banner.jpg"></div>
+		<div style="width: 595px;height: 198px;"><img src="<?=base_url()?>assets/imgs/banner.jpg"></div>
 		<div style="width: 595;height: 420px;margin-top: 5px;">
 			<table cellpadding="0" cellspacing="0">
 				<tr>
@@ -75,8 +80,7 @@
 			<table cellpadding="0" cellspacing="0">
 				<tr>
 					<td id="gal_leftslide"></td>
-					<td id="gal_menucen">
-					</td>
+					<td id="gal_menucen"></td>
 					<td id="gal_rightslide"></td>
 				</tr>
 				<tr>
@@ -86,7 +90,7 @@
 							<?php
 							$count=1; 
 							 foreach($result1 as $variable):?>
-							<td height="10px" width="129px" id="gall_names"><a href="<?=base_url();?>gallery/inner/<?=$variable->id?>"><?=$variable->catname?></a></td>
+							<td height="10px" width="129px" id="gall_names" style="padding-left: 10px;"><a href="<?=base_url();?>gallery/inner/<?=$variable->id?>"><li><?=$variable->catname?></li></a></td>
 						<? if ($count==4)
 									{
 										$count = 0;

@@ -22,7 +22,7 @@ class News extends Controller {
 		$active_news2=$this->News_Model->active_news(2);
 		$active_news3=$this->News_Model->active_news(3);
 		$active_news4=$this->News_Model->active_news(4);
-		//print_r($active_news1);
+		
 		$data=array('news_type1'  =>  $details,
 					'news_type2'  =>  $news_type2,
 					'news_type3'  =>  $news_type3,

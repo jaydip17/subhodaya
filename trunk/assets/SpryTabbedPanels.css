@@ -27,6 +27,7 @@
  * want to style the TabbedPanels container.
  */
 .TabbedPanels {
+	height:250px;
 	margin: 0px;
 	padding: 0px;
 	float: left;
@@ -130,8 +131,6 @@
  */
 .TabbedPanelsContentGroup {
 	clear: both;
-	height:330px;
-	background-color: #FFFFFF;
 	border-left: none;
 	border-right: none;
 }
@@ -219,6 +218,6 @@
 	float: left;
 	padding: 0px;
 	width: 30em;
-	height: 20em;
+	height: 10em;
 }
 

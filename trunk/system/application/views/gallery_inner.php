@@ -1,10 +1,10 @@
 <table cellpadding="0" cellspacing="5px;" width="926">
 	<tr>
 		<td width="742" height="93" align="left" valign="top"><div style="width: 742px;height: 93px;border: 1px solid red;"></div></td>
-		<td rowspan="2" width="180" align="center" valign="top"><div style="width: 180px;height: 200px;border: 1px solid red;"></div></td>
+		<td rowspan="2" width="180" align="center" valign="top"><div style="width: 180px;height: 900px;border: 1px solid red;background-color: gray;">addspace</div></td>
 	</tr>
 	<tr>
-		<td valign="top" height="820">
+		<td valign="top" height="800">
 		<div style="width: ;height: 413px;margin-top: 5px;">
 			<table cellpadding="0" cellspacing="0">
 				<tr>
@@ -13,7 +13,7 @@
 					<td id="gal_rightslide"></td>
 				</tr>
 				<tr>
-					<td colspan="3" height="770"  id="gal_center1" valign="top" width="742">
+					<td colspan="3" height="760"  id="gal_center1" valign="top" width="742">
 					<table cellspacing="10" height="">
 							<tr>
 							<?php $count=1; foreach ($result as $row):?>
@@ -42,9 +42,5 @@
 		</div>
 			
 	</td>
-	</tr>
-	<tr>
-		<td width="926" height="37" style="border: 1px solid red;" colspan="2">
-		</td>
 	</tr>
 </table>

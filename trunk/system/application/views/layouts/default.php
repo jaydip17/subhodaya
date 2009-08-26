@@ -63,15 +63,22 @@
           <td id="scrollingnews" style="border-left: 2px solid #0A70BB;
 border-right: 2px solid #0A70BB;"></td>
         </tr>
-     <tr><td width="100%"  align="left" style="border: 2px solid #0A70BB;border-top: 0px solid #0A70BB;padding:0px 0px 50px 5px">
+     <tr><td width="100%"  align="left" style="border: 2px solid #0A70BB;border-top: 0px solid #0A70BB;padding:0px 0px 25px 5px">
 {yield}
-  <table width="100%" style="margin-top:25px;">
-    <tr>
-    <td id="footer1" width="100%">
-    
-    </td>
-    </tr>
-  </table>
+  
+    <div id="footer">
+
+    <a href="<?=base_url();?>"><?=$more['2']->matter?></a>|
+    <a href="<?=base_url();?>news/"><?=$more['3']->matter?></a>|
+     <a href="<?=base_url();?>cinema/"><?=$more['4']->matter?></a>|
+      <a href="<?=base_url();?>video/"><?=$more['5']->matter?></a>|
+      <a href="<?=base_url();?>gallery/"><?=$more['6']->matter?></a>|
+      <a href="<?=base_url();?>greetings/"><?=$more['7']->matter?></a>|
+      <a href="<?=base_url();?>mahila/"><?=$more['8']->matter?></a>|
+      <a href="<?=base_url();?>sahithi/"><?=$more['9']->matter?></a>
+      
+    </div>
+   
  </td>
  </tr>
 

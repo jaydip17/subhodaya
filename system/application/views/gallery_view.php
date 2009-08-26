@@ -12,7 +12,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 	</div></td>
 </tr>
 <tr>
-	<td rowspan="3" valign="top">
+	<td rowspan="3" valign="top" width="150">
 		 <div class="content">
       <div id="info3"><img src="<?=base_url();?>assets/imgs/info-left.gif" width="7" height="34" style="float:left" />
        <img src="<?=base_url();?>assets/imgs/info-right.gif" width="7" height="34" style="float:right" />
@@ -22,7 +22,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 		<ul style="list-style: none;margin: 0;padding: 0;">
 		<?php if(!empty($result)){ 
 		foreach ($result as $catname):?>
-			<li "><a href="<?=base_url()?>gallery/categeory/<?=$catname->id?>"><?=$catname->catname;?></a></li>
+			<li ><a href="<?=base_url()?>gallery/categeory/<?=$catname->id?>"><?=$catname->catname;?></a></li>
 		<?php endforeach;
 		} else{
 			echo 'No data found';

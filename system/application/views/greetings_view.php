@@ -5,11 +5,11 @@
 		<td rowspan='4'><div style="height: 900px;width: 240px;border: 1px solid red;background-color: gray;">google adds</div ></div></td>
 	</tr>
 	<tr>
-		<td valign="top">
-			<table width="100%" border="0" cellpadding="0" cellspacing="5">
+		<td valign="top" height="790px" align="left">
+			<table  border="0" cellpadding="0" cellspacing="5" >
 			<tr>
 			<? $count = 1; foreach ($greetings as $data): ?>
-					<td align='center' width="222" height="250" id="gree_inner" valign="top">
+					<td align='center' height="250" id="gree_inner" valign="top">
 						<div style="padding:8px 0px 2px 0px;">
 								<a href="<?=base_url();?>greetings/inner/<?=$data->id?>"><img src="<?=base_url();?>assets/greetings/gree_img<?=$data->id?>_thumb.jpg" border="0"/></a>
 								<div style="padding: 5px 50px 0px 0px;" id="more-news-div"><a href="<?=base_url();?>greetings/inner/<?=$data->id?>"><?=$data->name?></a></div>

@@ -287,21 +287,25 @@ padding-bottom:20px;
 text-decoration:none;
 color:	#000000;
 font-size: 14px;
+font-weight: bold;
 }
 #mainnews a:active{
 text-decoration:none;
 color:	#000000;
 font-size: 14px;
+font-weight: bold;
 }
 #mainnews a:visited{
 text-decoration:none;
 color:	#000000;
 font-size: 14px;
+font-weight: bold;
 }
 #mainnews a:hover{
 text-decoration:none;
 color:	red;
 font-size: 14px;
+font-weight: bold;
 }
 #mainnews1 a:link{
 text-decoration:none;
@@ -539,7 +543,7 @@ padding-top:0px;
 	}
 /* =-=-=-=-=-=-=-[greetins Menu One]-=-=-=-=-=-=-=- */
 #menu {
-	width: 163px;
+	
 	border-style: solid solid none solid;
 	font-family:"Trebuchet MS";
 	font-size:13px;
@@ -574,14 +578,14 @@ padding-top:0px;
 #menu li a:active {
 	color: #26370A;
 	background: url(imgs/li-img2.gif) repeat-x;
-	padding: 2px 0 0 10px;
+	padding: 2px 0 0 0px;
 	}
 
 .content #info3 #Left-footer {
 	background-image: url(imgs/left-footer.jpg);
 	background-repeat: no-repeat;
 	height: 34px;
-	width: 165px;
+
 }
 #information {
 	text-align:center;
@@ -593,7 +597,6 @@ padding-top:0px;
 	height:33px;
 	background-image: url(imgs/left-footer.jpg); 
 	margin: 0px;
-	width: 158px;
 }
 #ga_topmenu
 {
@@ -688,6 +691,7 @@ font-size: 14px;
 border: 1px solid #939393;
 background-image: url(imgs/senter-botom.jpg);
 background-repeat: repeat-x;
+width: 222px;
 }
 #gree_cen
 {

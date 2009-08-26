@@ -8,36 +8,30 @@
 			<table width="685px" height="700px" align="center" >
 				<tr>
 					<td align="center" width="685px" valign="top">
-						<div style="width:600px; margin:3px;">
 							<img src="<?=base_url();?>assets/greetings/gree_img<?php if(isset($result)){echo $result['0']->id;}?>.jpg">
-						</div>
 					</td>
 				</tr>
 				<tr>
 					<td valign="top">
+					<form method="post" action="<?=base_url();?>subhodaya/sendmail">
 						<table align="center" width="550px" border="0">
 							<tr>
-								<td colspan='2'>ad</td>
+								<td colspan='2' align="center"><div  id="gree_bar1"><?=$more['25']->matter?></div></td>
 							</tr>
 							<tr>
-								<td align="left" width="30%">Your Name</td><td align="left" width="70%"><input type="text"></td>
+								<td align="left" width="30%"><?=$more['27']->matter?></td><td align="left" width="70%"><input type="text" name="name" size="30"></td>
 							</tr>
 							<tr>
-								<td align="left">Your Email</td><td align="left"><input type="text"></td>
+								<td align="left"><?=$more['28']->matter?></td><td align="left"><input type="text" name="email" size="30"></td>
 							</tr>
 							<tr>
-								<td align="left">Recipient Name</td><td align="left"><input type="text"></td>
+							<td align="center" colspan="2"><textarea style="height: 190px;width: 95%" name="description"></textarea></td>
 							</tr>
 							<tr>
-								<td align="left">Recipient Email</td><td align="left"><input type="text" ></td>
-							</tr>
-							<tr>
-								<td align="left">Your Message</td><td align="left"><textarea style="height: 200px;width: 350px;"></textarea></td>
-							</tr>
-							<tr>
-								<td align="center" colspan="2"><input type="submit" name="send" value="SEND"></td>
+								<td align="center" colspan="2"><input type="submit" name="send" value="Send"><input type="reset" ></td>
 							</tr>
 						</table>
+						</form>
 					</td>
 				</tr>
 				
@@ -45,6 +39,6 @@
 		</div>
 		<div style="height: 25px;width: 694px;background-color: #137ABC"></div>
 		</td>
-		<td width="310" style="border: 1px solid red;" rowspan="2"></td>
+		<td width="310" style="border: 1px solid red;background-color: gray;" rowspan="2">add space</td>
 	</tr>
 </table>

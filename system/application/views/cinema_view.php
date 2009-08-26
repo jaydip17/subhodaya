@@ -26,9 +26,10 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
      </table>
      </td>
      <td width="245" valign="top" align="center">
-     	<div style="width: 237px;height: 337px;border: 1px solid red;" ></div>
-     </td>
-     <td width="185" align="center" valign="top" rowspan="3">
+     	<div style="width: 237px;height: 337px;border: 1px solid red;" >
+            <img src="<?=base_url();?>assets/ads/Cinema1.jpg" style="border: 1px solid #50BCFC;"></img>
+<img src="<?=base_url();?>assets/ads/Cinema2.jpg" style="border: 1px solid #50BCFC;"></img></div>
+     </td>     <td width="185" align="center" valign="top" rowspan="3">
 		<table width="100%" style="border:1px solid #50BCFC;">
 			<tr>
 				<td style="border:1px solid #50BCFC;height: 25px;" id="news_heading" align="center"><span id="telugufont"><?=$more['17']->matter ?></span></td>
@@ -50,11 +51,11 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 			<table style="border:1px solid #50BCFC;" bgcolor="#9CD8FC" width="100%" >
 				<tr>
 					<td align="center">
-					<div><img src="<?=base_url();?>assets/imgs/add-img1.jpg"></div>
+					<div><img src="<?=base_url();?>assets/ads/Side_right1.jpg"></div>
 					</td>
 				</tr>
 				<tr>
-					<td align="center"><div><img src="<?=base_url();?>assets/imgs/add-img2.jpg"></div></td>
+					<td align="center"><div><img src="<?=base_url();?>assets/ads/Side_right2.jpg"></div></td>
 				</tr>
 				
 			</table>

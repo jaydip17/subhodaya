@@ -60,10 +60,10 @@
        <td  align="center" valign="top">
 		<table width="185" style="border:1px solid #50BCFC;">
 			<tr>
-				<td align="center"><div><img src="<?=base_url();?>assets/imgs/11.jpg"></div></td>
+				<td align="center"><div><img src="<?=base_url();?>assets/ads/Videos_page1.jpg"></div></td>
 			</tr>
 			    <tr>
-			    <td align="center"><div><img src="<?=base_url();?>assets/imgs/12.jpg"></div></td>
+			    <td align="center"><div><img src="<?=base_url();?>assets/ads/Videos_page2.jpg"></div></td>
 			    </tr>
 			    
 			</table>

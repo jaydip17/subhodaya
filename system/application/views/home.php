@@ -3,7 +3,7 @@ ul{
 list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 }
 </style>
-<table width="99%"  border="0" cellpadding="0" cellspacing="0">
+<table width="99%" height="99%"  border="0" cellpadding="0" cellspacing="0">
         <tr>
           <td width="389" valign="top" height="329"><table width="100%" border="0" cellpadding="0" cellspacing="0">
             <tr>
@@ -182,8 +182,8 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
             </table>
           </td>
           <td width="217" valign="top" align="right">
-           <img src="<?=base_url();?>assets/imgs/care-add.jpg" width="215" height="196" />
-            <img src="<?=base_url();?>assets/imgs/add.jpg" width="215" height="117"/>
+           <img src="<?=base_url();?>assets/ads/Home1.jpg" width="215" height="196" />
+            <img src="<?=base_url();?>assets/ads/Home2.jpg" width="215" height="117"/>
           </td>
           </tr>
       </table>
@@ -195,10 +195,10 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
                 <td height="67" valign="middle"><div align="center"><img src="<?=base_url();?>assets/imgs/newsletter-img.jpg" width="199" height="59" /></div></td>
               </tr>
               <tr>
-                <td height="193" valign="top"><img src="<?=base_url();?>assets/imgs/bootles-img.jpg" width="199" height="177" /></td>
+                <td height="193" valign="top"><img src="<?=base_url();?>assets/ads/Home3.jpg" width="199" height="177" /></td>
               </tr>
               <tr>
-                <td valign="top"><img src="<?=base_url();?>assets/imgs/add-dog.jpg" width="199" height="179" /></td>
+                <td valign="top"><img src="<?=base_url();?>assets/ads/Home4.jpg" width="199" height="179" /></td>
               </tr>
           </table></td>
           <td width="4" valign="top"><img src="<?=base_url();?>assets/imgs/add-line-right.jpg" width="4" height="456" /></td>

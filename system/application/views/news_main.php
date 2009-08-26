@@ -157,7 +157,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
                 </table></td>
             </tr>
           </table></td>
-          <td width="235" valign="top" align="center"><div style="border: 1px solid red;height: 315px;width: 230px;background-color: gray;">315x240 add</div></td>
+          <td width="235" valign="top" align="center"><div style="border: 1px solid red;height: 315px;width: 230px;background-color: gray;"><img src="<?=base_url();?>/assets/ads/News1.jpg" /></div></td>
           <td width="185" align="center" valign="top" rowspan="3">
           <div style="background-color: gray;border: 1px solid red;height: 820px;width:  191px;"> google add space</div>
 			</td>

@@ -83,7 +83,7 @@ background-repeat-x;
 padding-top:0px;
 }
 </style>
-<table width="99%"  border="0" cellpadding="0" cellspacing="0" style="padding-bottom:20px">
+<table width="99%"  border="0" cellpadding="0" cellspacing="0" >
 <tr>
         <td  valign="top">
 	       		
@@ -157,14 +157,19 @@ padding-top:0px;
 	            <tr>
 	            <td width="50%" valign="top" height="219px" style="background-image:url(<?=base_url();?>assets/imgs/Pandugalu-cr.gif);background-repeat-y;">
 	            <div style="padding-top: 5px;" >
-	              <img src="<?=base_url();?>assets/imgs/mahila1.jpg" style="float:left;padding:4px 15px 4px 4px;text-align: justify;" width="105px" height="86px" align="top" />
+	              <img src="<?=base_url();?>assets/imgs/mahila1.jpg" style="float:left;padding:4px 20px 4px 4px;text-align: justify;" width="105px" height="86px" align="top" />
 	             <?if(!empty($details_more['1'])){?>
 	             <font id="telugufont"><a href="<?=base_url();?>mahila/mahiladetails/<?=$details_more['1']['0']->id?>"><?php echo $details_more['1']['0']->heading?></a></font><br>
 	              <?=$details_more['1']['0']->summary; }?>
 	              <div style="height: 120px;" id="telugufont">
 	            
 	                 <ul id="mainnews">
-	              <?if(!empty($details_more['1'])){foreach($details_more['1'] as $item) {?>
+	              <?if(!empty($details_more['1'])){
+	              	$count=0;
+	              foreach($details_more['1'] as $item) {if($count==0)
+							           {$count++;
+							            continue;
+							           }?>
 
 	             <li><a href="<?=base_url();?>mahila/mahiladetails/<?=$item->id?>"><?=$item->heading ?></a></li>
 	                <?}} ?>
@@ -186,7 +191,7 @@ padding-top:0px;
 	            <tr>
 	             <td width="50%" valign="top" height="219px" style="background-image:url(<?=base_url();?>assets/imgs/Pandugalu-cr.gif);background-repeat-y;">
 	              <div style="padding-top:5px;" >
-	              <img src="<?=base_url();?>assets/imgs/mahila2.jpg" style="float:left;padding:4px 15px 4px 4px;text-align: justify;" width="105px" height="86px" align="top" />
+	              <img src="<?=base_url();?>assets/imgs/mahila2.jpg" style="float:left;padding:4px 20px 4px 4px;text-align: justify;" width="105px" height="86px" align="top" />
 	            <?if(!empty($details_more['2'])){?>
 	             <font id="telugufont"><a href="<?=base_url();?>mahila/mahiladetails/<?=$details_more['2']['0']->id?>"><?php echo $details_more['2']['0']->heading?></a></font><br>
 	              <?=$details_more['2']['0']->summary; }?>

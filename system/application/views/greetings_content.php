@@ -194,16 +194,8 @@ sample sf dsfsd fdsf
     	 </tr>
      	</table>
      	</td>
-     	<td width="300" align="center" valign="top" style="padding:10px 6px 0px 0px;">
-		<table width="100%" style="border:1px solid #50BCFC;">
-			<tr>
-				<td style="border:1px solid #50BCFC;height: 25px;" id="news_heading" align="center"><span id="telugufont"><?=$more['17']->matter ?></span></td>
-			</tr>
-			<tr>
-				<td align="center">
-				</td>
-			</tr>
-			</table>
+     	<td width="300" align="center" valign="top" style="padding:10px 6px 0px 0px;background-color: gray;">
+	
 		</td>
 		</tr>
 	<tr>

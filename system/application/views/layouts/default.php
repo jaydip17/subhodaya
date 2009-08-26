@@ -30,7 +30,7 @@
 
 <table width="999" height="1330"  border="0" align="center" cellpadding="0" cellspacing="0" >
   <tr>
-    <td width="985"  align="center" valign="top"><table width="988"  border="0" align="center" cellpadding="0" cellspacing="0">
+    <td width="985"  align="center" valign="top"><table width="988" border="0" align="center" cellpadding="0" cellspacing="0">
       <tr>
         <td width="936" valign="top" class="topline"></td>
       </tr>
@@ -63,10 +63,20 @@
           <td id="scrollingnews" style="border-left: 2px solid #0A70BB;
 border-right: 2px solid #0A70BB;"></td>
         </tr>
-     <tr><td width="100%"  align="left" style="border: 2px solid #0A70BB;border-top: 0px solid #0A70BB;padding-left:5px;">
+     <tr><td width="100%"  align="left" style="border: 2px solid #0A70BB;border-top: 0px solid #0A70BB;padding:0px 0px 50px 5px">
 {yield}
-      
- </table>
+  <table width="100%" style="margin-top:25px;">
+    <tr>
+    <td id="footer1" width="100%">
+    
+    </td>
+    </tr>
+  </table>
+ </td>
+ </tr>
+
+
+</table>
 </table>
 </body>
 </html>

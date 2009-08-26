@@ -402,6 +402,12 @@ background-position:100% -42px;
 #current a {
 background-position:0% -42px;
 }
+#image
+{
+float:left;
+padding:0px 20px 5px 0px;
+border:0px;
+}
 #footer {
 background:transparent url(imgs/footer-img.jpg) repeat-x scroll 0 0;
 border-color:#BEBEBE;

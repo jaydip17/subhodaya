@@ -198,7 +198,11 @@ padding-top:0px;
 	             <div style="height: 120px;" id="telugufont">
 	               <ul id="mainnews">
 	             <?if(!empty($details_more['2'])){
-	              foreach($details_more['2'] as $item) {?>
+	             	$count=0;
+	              foreach($details_more['2'] as $item) {if($count==0)
+							           {$count++;
+							            continue;
+							           }?>
 
 	              <li><a href="<?=base_url();?>mahila/mahiladetails/<?=$item->id?>"><?=$item->heading ?></a></li>
 	              <?}} ?>
@@ -223,14 +227,18 @@ padding-top:0px;
 	            <tr>
 	             <td height="116px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/Mathru Basha-cr.gif);background-repeat-y;">
 	             <div style="padding-top: 5px;" >
-	             <img src="<?=base_url();?>assets/imgs/mahila3.jpg" style="float:left;padding:4px 15px 4px 4px;text-align: justify;" width="106px" height="90px" align="top" />
+	             <img src="<?=base_url();?>assets/imgs/mahila3.jpg" style="float:left;padding:4px 20px 4px 4px;text-align: justify;" width="106px" height="90px" align="top" />
 	              <?if(!empty($details_more['3'])){?>
 	              <font id="telugufont"><a href="<?=base_url();?>mahila/mahiladetails/<?=$details_more['3']['0']->id?>"><?php echo $details_more['3']['0']->heading?></a></font><br>
 	              <?=$details_more['3']['0']->summary; }?>
 	             <div style="height: 60px;" id="telugufont">
 	              <ul id="mainnews">
 	              <?if(!empty($details_more['3'])){
-	              foreach($details_more['3'] as $item) {?>
+	              	$count=0;
+	              foreach($details_more['3'] as $item) {if($count==0)
+							           {$count++;
+							            continue;
+							           }?>
 
 	             <li><a href="<?=base_url();?>mahila/mahiladetails/<?=$item->id?>"><?=$item->heading ?></a></li>
 	               <?}} ?>
@@ -251,14 +259,18 @@ padding-top:0px;
 	            <tr>
 	             <td height="116px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/Mathru Basha-cr.gif);background-repeat-y;">
 	              <div style="padding-top: 5px;" > 
-	             <img src="<?=base_url();?>assets/imgs/mahila4.jpg" style="float:left;padding:4px 15px 4px 4px;text-align: justify;" width="106px" height="86px" align="top" />
+	             <img src="<?=base_url();?>assets/imgs/mahila4.jpg" style="float:left;padding:4px 20px 4px 4px;text-align: justify;" width="106px" height="86px" align="top" />
 	             <?if(!empty($details_more['4'])){?>
 	              <font id="telugufont"><a href="<?=base_url();?>mahila/mahiladetails/<?=$details_more['4']['0']->id?>"><?php echo $details_more['4']['0']->heading?></a></font><br>
 	              <?=$details_more['4']['0']->summary; }?>
 	              <div style="height: 60px;" id="telugufont">
 	             <ul id="mainnews">
 	              <?if(!empty($details_more['4'])){
-	              foreach($details_more['4'] as $item) {?>
+	              	$count=0;
+	              foreach($details_more['4'] as $item) {if($count==0)
+							           {$count++;
+							            continue;
+							           }?>
 
 	              <li><a href="<?=base_url();?>mahila/mahiladetails/<?=$item->id?>"><?=$item->heading ?></a></li>
 	              <?}} ?>	                 </ul> 
@@ -281,14 +293,18 @@ padding-top:0px;
 	            <tr>
 	             <td  height="116px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/Mathru Basha-cr.gif);background-repeat-y;"> 
 	              <div style="padding-top: 5px;" >
-	              <img src="<?=base_url();?>assets/imgs/mahila5.jpg" style="float:left;padding:4px 15px 4px 4px;text-align: justify;" width="107px" height="85px" align="top" />
+	              <img src="<?=base_url();?>assets/imgs/mahila5.jpg" style="float:left;padding:4px 20px 4px 4px;text-align: justify;" width="107px" height="85px" align="top" />
 	              <?if(!empty($details_more['5'])){?>
 	              <font id="telugufont"><a href="<?=base_url();?>mahila/mahiladetails/<?=$details_more['5']['0']->id?>"><?php echo $details_more['5']['0']->heading?></a></font><br>
 	              <?=$details_more['5']['0']->summary; }?>
 	             <div style="height: 60px;" id="telugufont">
 	              <ul id="mainnews">
 	             <?if(!empty($details_more['5'])){
-	              foreach($details_more['5'] as $item) {?>
+	             	$count=0;
+	              foreach($details_more['5'] as $item) {if($count==0)
+							           {$count++;
+							            continue;
+							           }?>
 
 	             <li><a href="<?=base_url();?>mahila/mahiladetails/<?=$item->id?>"><?=$item->heading ?></a></li>
 	              <?}} ?>
@@ -309,7 +325,7 @@ padding-top:0px;
 	            <tr>
 	             <td height="116px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/Mathru Basha-cr.gif);background-repeat-y;">
 	              <div style="padding-top: 5px;" >
-                 <img src="<?=base_url();?>assets/imgs/mahila6.jpg" style="float:left;padding:4px 15px 4px 4px;text-align: justify;" width="111px" height="93px" align="top" />
+                 <img src="<?=base_url();?>assets/imgs/mahila6.jpg" style="float:left;padding:4px 20px 4px 4px;text-align: justify;" width="111px" height="93px" align="top" />
                  <?if(!empty($details_more['6'])){?>
 	              <font id="telugufont"><a href="<?=base_url();?>mahila/mahiladetails/<?=$details_more['6']['0']->id?>"><?php echo $details_more['6']['0']->heading?></a></font><br>
 	              <?=$details_more['6']['0']->summary; }?>
@@ -317,7 +333,11 @@ padding-top:0px;
 	            
 	             <ul id="mainnews">
 	              <?if(!empty($details_more['6'])){
-	              foreach($details_more['6'] as $item) {?>
+	              	$count=0;
+	              foreach($details_more['6'] as $item) {if($count==0)
+							           {$count++;
+							            continue;
+							           }?>
 
 	             <li><a href="<?=base_url();?>mahila/mahiladetails/<?=$item->id?>"><?=$item->heading ?></a></li>
 	              <?}} ?>
@@ -342,7 +362,7 @@ padding-top:0px;
 	            <tr>
 	             <td  height="163px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/Janapadalu-cr.gif);background-repeat-x;">
 	              <div style="padding-top: 5px;" >
-	              <img src="<?=base_url();?>assets/imgs/mahila9.jpg" style="float:left;padding:4px 15px 4px 4px;text-align: justify;" width="121px" height="105px" align="top" />
+	              <img src="<?=base_url();?>assets/imgs/mahila9.jpg" style="float:left;padding:4px 20px 4px 4px;text-align: justify;" width="121px" height="105px" align="top" />
 	               <?if(!empty($details_more['7'])){?>
 	              <font id="telugufont"><a href="<?=base_url();?>mahila/mahiladetails/<?=$details_more['7']['0']->id?>"><?php echo $details_more['7']['0']->heading?></a></font><br>
 	              <?=$details_more['7']['0']->summary; }?>
@@ -350,7 +370,11 @@ padding-top:0px;
 	            
 	              <ul id="mainnews">
 	             <?if(!empty($details_more['7'])){
-	              foreach($details_more['7'] as $item) {?>
+	             	$count=0;
+	              foreach($details_more['7'] as $item) {if($count==0)
+							           {$count++;
+							            continue;
+							           }?>
 
 	              <li><a href="<?=base_url();?>mahila/mahiladetails/<?=$item->id?>"><?=$item->heading ?></a></li>
 	             <?}} ?>
@@ -372,14 +396,18 @@ padding-top:0px;
 	            <tr>
 	             <td height="163px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/Janapadalu-cr.gif);background-repeat-x;"> 
 	             <div style="padding-top: 5px;" >
-	             <img src="<?=base_url();?>assets/imgs/mahila8.jpg" style="float:left;padding:4px 15px 4px 4px;text-align: justify;" width="112px" height="86px" align="top" />
+	             <img src="<?=base_url();?>assets/imgs/mahila8.jpg" style="float:left;padding:4px 20px 4px 4px;text-align: justify;" width="112px" height="86px" align="top" />
 	              <?if(!empty($details_more['8'])){?>
 	              <font id="telugufont"><a href="<?=base_url();?>mahila/mahiladetails/<?=$details_more['8']['0']->id?>"><?php echo $details_more['8']['0']->heading?></a></font><br>
 	              <?=$details_more['8']['0']->summary; }?>
 	              <div style="height: 107px;" id="telugufont">
 	             <ul id="mainnews" >
 	             <?if(!empty($details_more['8'])){
-	              foreach($details_more['8'] as $item) {?>
+	             	$count=0;
+	              foreach($details_more['8'] as $item) {if($count==0)
+							           {$count++;
+							            continue;
+							           }?>
 
 	              <li><a href="<?=base_url();?>mahila/mahiladetails/<?=$item->id?>"><?=$item->heading?></a></li>
 	              <?}} ?>

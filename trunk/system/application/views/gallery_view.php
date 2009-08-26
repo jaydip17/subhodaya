@@ -16,7 +16,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 		 <div class="content">
       <div id="info3"><img src="<?=base_url();?>assets/imgs/info-left.gif" width="7" height="34" style="float:left" />
        <img src="<?=base_url();?>assets/imgs/info-right.gif" width="7" height="34" style="float:right" />
-      <div id="information"></div>
+      <div id="information"><?=$more['37']->matter?></div>
      
         <div id="menu">
 		<ul style="list-style: none;margin: 0;padding: 0;">

@@ -390,7 +390,13 @@ background-position:100% -42px;
 #current a {
 background-position:0% -42px;
 }
-
+#footer1
+{
+  background-image:url(imgs/footer-img.jpg);
+  background-repeat:repeat-x;
+  height:37px;
+        
+}
  #video_heading{
 	background-image: url(imgs/img-center-slic.jpg);
 	background-repeat: repeat-x;

@@ -100,7 +100,7 @@ class Sahithi_Model extends Model {
 		$query=$this->db->get('sahithi');
 		$result=$query->result();
 		$cat_id=$result['0']->cat_id;
-		$evenmore=$this->active_sahithi($cat_id);
+		$evenmore=$this->active_sahithi($cat_id,$type="normal");
 		return $evenmore;	
 	}
 	function count($type)
@@ -137,6 +137,16 @@ class Sahithi_Model extends Model {
 		$this->db->join('sahithi', 'sahithi.cat_id= sahithi_cat.id');
 		$query = $this->db->get_where();
 		return $query->result();
+    }
+    function get_home_stories()
+    {
+    	$this->db->select('id,heading,summary');
+    	$where=array('homepage'=>'1','cat_id'=>'2');
+    	$this->db->where($where);
+    	$this->db->limit(2);
+    	$this->db->order_by('id');
+    	$query=$this->db->get('sahithi');
+    	return $query->result();
     }
 }
 ?>

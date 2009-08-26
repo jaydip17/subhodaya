@@ -459,14 +459,17 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
                       <tr>
                         <td width="6" id="img-senter"><img src="<?=base_url();?>assets/imgs/tock-line.jpg" width="7" /></td>
                         <td valign="bottom" id="img-senter" align="left" style="margin-bottom: 10px;">
-                        <table><tr><td width="20%"><img src="<?=base_url(); ?>assets/imgs/001.png"></img></td><td width="80%" id="telugufont"><?=$cinema_type2['0']->cinema_type ?></td></tr></table>
+                        <table><tr><td width="20%"><img src="<?=base_url();?>assets/imgs/001.jpg"></img></td><td width="80%" id="telugufont"><?if(isset($home_stories['0'])){echo $home_stories['0']->heading;}?></td></tr></table>
                         </td>
                         <td width="6"><img src="<?=base_url();?>assets/imgs/tock-line-right.jpg" width="6" height="34" /></td>
              		 </tr>
                       <tr>
                         <td  valign="top" id="center-img1"><img src="<?=base_url();?>assets/imgs/new1.jpg" width="5" /></td>
                         <td id="center-img1" align="left" style="border-bottom: 1px solid #50BCFC;">
-	                        <div style="text-align: justify;padding-top: 3px;" id="mainnews"></div>
+	                        <div style="text-align: justify;padding-top: 3px;" id="mainnews">
+	                       <?echo $home_stories['0']->summary;?>
+	                       
+	                        </div>
                         </td>
                          <td id="center-img1"><img src="<?=base_url();?>assets/imgs/new.jpg" width="5"/></td>
                     </tr>

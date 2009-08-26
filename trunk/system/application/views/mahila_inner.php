@@ -102,7 +102,7 @@ padding-bottom:5px;
 					<? $i=1; 
 					foreach($evenmore as $item){
 					?>
-					<li><a href="<?=$type?>/<?=$type?>details/<?$item->id?>"><?echo $item->heading;?></a></li>
+					<li><a href="<?=base_url();?><?=$type?>/<?=$type?>details/<?=$item->id?>"><?echo $item->heading;?></a></li>
 					<?if($i>=5)
 					break;
 					$i++;} ?>

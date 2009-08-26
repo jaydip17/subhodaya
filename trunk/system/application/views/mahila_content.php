@@ -28,9 +28,9 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
     						<?for($i=1;$i<=4;$i++){?>
 							 <div id="tab<?=$i?>">
 							        	<div style="padding-top: 5px;" >
-							        <?if($type=="mahila"){?>
-	              <img src="<?=base_url();?>assets/imgs/mahila<?=$i?>.jpg" style="float:left;padding:4px 15px 4px 4px;text-align: justify;" width="105px" height="86px" align="top" />
-	              <?} ?>
+							        
+	              <img src="<?=base_url();?>assets/<?=$type?>/news_img<?php if(isset($details_more[$i]['0'])){echo $details_more[$i]['0']->id;}?>_thumb.jpg" style="float:left;padding:4px 20px 4px 4px;text-align: justify;" width="105px" height="86px" align="top" />
+	            
 	             <?if(!empty($details_more[$i])){?>
 	             <font id="telugufont"><a href="<?=base_url();?><?=$type?>/<?=$type?>details/<?=$details_more[$i]['0']->id?>"><?php echo $details_more[$i]['0']->heading?></a></font><br>
 	              <?=$details_more[$i]['0']->summary; }?>
@@ -146,7 +146,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
           <table width="99%"  border="0" cellpadding="0" cellspacing="0">
         <tr>
           <td width="5" valign="top" id="botomtop"><img src="<?=base_url();?>assets/imgs/senter-1.jpg" width="5" height="31" /></td>
-          <td width="295" valign="top" id="botomtop" align="left"><img src="<?=base_url();?>assets/imgs/001.gif" style="margin:4px 0px 0px 0px;"></img></td>
+          <td width="295" valign="top" id="botomtop" align="left"><img src="<?=base_url();?>assets/imgs/001.gif" style="float:left;margin:4px 4px 0px 0px;"></img><div style="padding-top:5px;" id="newsheading"><?php {echo $more['29']->matter;}?></div></td>
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter2.jpg" width="5" height="31" /></td>
           <td width="8">&nbsp; </td>
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter-1.jpg" width="5" height="31" /></td>
@@ -159,7 +159,11 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
         </tr>
         <tr>
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="109" /></td>
-          <td valign="top" id="botom-ser"><img src="<?=base_url();?>assets/imgs/ys-img.jpg">
+          <td valign="top" id="botom-ser"><ul><?for($i=5;$i<=9;$i++)
+          {?>
+         <li><a href="<?=base_url();?><?=$type;?>/details/<?=$details[$i]->id?>"><? echo $details[$i]->cat_name;?></li>
+         <?}?>
+         </ul>
           </td>
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="109" /></td>
           <td width="8">&nbsp;</td>

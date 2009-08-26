@@ -26,15 +26,15 @@ class Subhodaya extends Controller {
 		$sahithi_details=$this->Sahithi_Model->active_sahithi(1,$type='home');
 		$mahila_details=$this->Mahila_Model->active_mahila(1,$type='home');
 	    $greetings1=$this->Greeting_Model->get_main_greetings(1);
-
-		$details=$this->Gallery_Model->get_cateimage(11);
+        $details=$this->Gallery_Model->get_cateimage(11);
+        $home_stories=$this->Sahithi_Model->get_home_stories();
 		$images=array();
 		foreach($details as $item)
 		{
 			$images[$item->id]=$this->Gallery_Model->getimage($item->id);
 		}
 		//print_r($images);
-		//print_r($sahithi_details);
+		//print_r($home_stories);
 		$data=array('more'=>$more,
 		            'news_type7'=>$news_type7,
 					'news_type4'=>$news_type4,
@@ -47,7 +47,8 @@ class Subhodaya extends Controller {
 		            'sahithi_details'=>$sahithi_details,
 		           'mahila_details'=>$mahila_details,
 					'images'=>$images,
-					'greetings1'=>$greetings1
+					'greetings1'=>$greetings1,
+		            'home_stories' =>$home_stories
 					);
 		$this->load->view('home',$data);
 	}

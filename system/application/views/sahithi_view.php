@@ -75,7 +75,7 @@ make_menus();
 ul{
 list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 }
-#tdmahila
+#tdsahithi
 {
 padding-left:5px;
 background-image:url(<?=base_url();?>assets/imgs/sahithi-top.gif);
@@ -156,7 +156,7 @@ padding-top:0px;
 	            <td>
 	            <table width="332px" align="center" style="border: 1px solid #0A70BB;" cellpadding="0" cellspacing="0">
 	            <tr>
-	            <td height="22px" id="tdmahila"><span id="newsheading"><?=$details['0']->cat_name?></span></td>
+	            <td height="22px" id="tdsahithi"><span id="newsheading"><?=$details['0']->cat_name?></span></td>
 	           
 	            </tr>
 	            <tr>
@@ -182,7 +182,7 @@ padding-top:0px;
 	            <td>
 	            <table width="332px" align="center" style="border: 1px solid #0A70BB;" cellpadding="0" cellspacing="0">
 	            <tr>
-	            <td height="22px" id="tdmahila"><span id="newsheading"><?=$details['1']->cat_name?></span>
+	            <td height="22px" id="tdsahithi"><span id="newsheading"><?=$details['1']->cat_name?></span>
 	            </td>
 	           
 	            </tr>
@@ -191,7 +191,7 @@ padding-top:0px;
 	              <div style="padding-top:5px;" >
 	              <img src="<?=base_url();?>assets/imgs/kadhalu.jpg" style="float:left;padding:4px 20px 4px 4px;text-align: justify;" width="107px" height="111px" align="top" />
 	              <?if(!empty($details_more['2'])){?>
-	             <font id="telugufont"><a href="<?=base_url();?>mahila/mahiladetails/<?=$details_more['2']['0']->id?>"><?php echo $details_more['2']['0']->heading?></a></font><br>
+	             <font id="telugufont"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['2']['0']->id?>"><?php echo $details_more['2']['0']->heading?></a></font><br>
 	              <?=$details_more['2']['0']->summary; }?> 
 	              <div style="height: 120px;" id="telugufont">
 	               <ul id="mainnews">
@@ -212,16 +212,16 @@ padding-top:0px;
 	            <td>
 	            <table width="332px" align="center" style="border: 1px solid #0A70BB;" cellpadding="0" cellspacing="0">
 	            <tr>
-	            <td height="22px" id="tdmahila"><span id="newsheading"><?=$details['2']->cat_name?></span>
+	            <td height="22px" id="tdsahithi"><span id="newsheading"><?=$details['2']->cat_name?></span>
 	            </td>
 	           
 	            </tr>
 	            <tr>
 	             <td height="116px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/Mathru Basha-cr.gif);background-repeat-y;">
 	             <div style="padding-top:5px;" >
-	             <?if(!empty($details_more['2'])){?>
-	             <font id="telugufont"><a href="<?=base_url();?>mahila/mahiladetails/<?=$details_more['2']['0']->id?>"><?php echo $details_more['2']['0']->heading?></a></font><br>
-	              <?=$details_more['2']['0']->summary; }?> 
+	             <?if(!empty($details_more['3'])){?>
+	             <font id="telugufont"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['3']['0']->id?>"><?php echo $details_more['3']['0']->heading?></a></font><br>
+	              <?=$details_more['3']['0']->summary; }?> 
 	              <div style="height: 60px;" id="telugufont">
 	              <ul id="mainnews">
 	              <?if(!empty($details_more['3'])){
@@ -239,16 +239,16 @@ padding-top:0px;
 	            <td>
 	            <table width="332px" align="center" style="border: 1px solid #0A70BB;" cellpadding="0" cellspacing="0">
 	            <tr>
-	            <td height="22px" id="tdmahila"><span id="newsheading"><?=$details['3']->cat_name?></span>
+	            <td height="22px" id="tdsahithi"><span id="newsheading"><?=$details['3']->cat_name?></span>
 	            </td>
 	           
 	            </tr>
 	            <tr>
 	             <td height="116px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/Mathru Basha-cr.gif);background-repeat-y;">
 	             <div style="padding-top:5px;" >
-	             <?if(!empty($details_more['2'])){?>
-	             <font id="telugufont"><a href="<?=base_url();?>mahila/mahiladetails/<?=$details_more['2']['0']->id?>"><?php echo $details_more['2']['0']->heading?></a></font><br>
-	              <?=$details_more['2']['0']->summary; }?> 
+	             <?if(!empty($details_more['4'])){?>
+	             <font id="telugufont"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['4']['0']->id?>"><?php echo $details_more['4']['0']->heading?></a></font><br>
+	              <?=$details_more['4']['0']->summary; }?> 
 	              <div style="height: 60px;" id="telugufont"> 
 	             <ul id="mainnews">
 	              <?if(!empty($details_more['4'])){
@@ -257,7 +257,8 @@ padding-top:0px;
 	              <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>"><?=$item->heading?></a></li>
 	              <?}} ?>	                 </ul>
 	              </div>
-	              <div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>sahithi/details/<?if(isset($types['3'])){ echo $types['3']; }?>"><?=$more['0']->matter?></a></span></div>     </td>
+	              <div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>sahithi/details/<?if(isset($types['3'])){ echo $types['3']; }?>"><?=$more['0']->matter?></a></span></div> 
+	                  </td>
 	            </tr>
 	            </table>
 	            </td>
@@ -267,16 +268,16 @@ padding-top:0px;
 	            <td>
 	            <table width="332px" align="center" style="border: 1px solid #0A70BB;" cellpadding="0" cellspacing="0">
 	            <tr>
-	            <td height="22px" id="tdmahila"><span id="newsheading"><?=$details['4']->cat_name?></span>
+	            <td height="22px" id="tdsahithi"><span id="newsheading"><?=$details['4']->cat_name?></span>
 	            </td>
 	           
 	            </tr>
 	            <tr>
 	             <td  height="116px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/Mathru Basha-cr.gif);background-repeat-y;">
 	             <div style="padding-top:5px;" >
-	             <?if(!empty($details_more['2'])){?>
-	             <font id="telugufont"><a href="<?=base_url();?>mahila/mahiladetails/<?=$details_more['2']['0']->id?>"><?php echo $details_more['2']['0']->heading?></a></font><br>
-	              <?=$details_more['2']['0']->summary; }?> 
+	             <?if(!empty($details_more['5'])){?>
+	             <font id="telugufont"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['5']['0']->id?>"><?php echo $details_more['5']['0']->heading?></a></font><br>
+	              <?=$details_more['5']['0']->summary; }?> 
 	              <div style="height: 60px;" id="telugufont">
 	              <ul id="mainnews">
 	             <?if(!empty($details_more['5'])){
@@ -294,16 +295,16 @@ padding-top:0px;
 	            <td>
 	            <table width="332px" align="center" style="border: 1px solid #0A70BB;" cellpadding="0" cellspacing="0">
 	            <tr>
-	            <td height="22px" id="tdmahila"><span id="newsheading"><?=$details['5']->cat_name?></span>
+	            <td height="22px" id="tdsahithi"><span id="newsheading"><?=$details['5']->cat_name?></span>
 	            </td>
 	           
 	            </tr>
 	            <tr>
 	             <td height="116px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/Mathru Basha-cr.gif);background-repeat-y;">
 	              <div style="padding-top:5px;" >
-	             <?if(!empty($details_more['2'])){?>
-	             <font id="telugufont"><a href="<?=base_url();?>mahila/mahiladetails/<?=$details_more['2']['0']->id?>"><?php echo $details_more['2']['0']->heading?></a></font><br>
-	              <?=$details_more['2']['0']->summary; }?> 
+	             <?if(!empty($details_more['6'])){?>
+	             <font id="telugufont"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['6']['0']->id?>"><?php echo $details_more['6']['0']->heading?></a></font><br>
+	              <?=$details_more['6']['0']->summary; }?> 
 	              <div style="height: 60px;" id="telugufont">
 	             <ul id="mainnews">
 	              <?if(!empty($details_more['6'])){
@@ -324,16 +325,16 @@ padding-top:0px;
 				<div style="float:left;padding-right:4px;">
 	            <table width="450px" align="center" style="border: 1px solid #0A70BB;" cellpadding="0" cellspacing="0">
 	            <tr>
-	            <td height="22px" id="tdmahila"><span id="newsheading"><?=$details['6']->cat_name?></span>
+	            <td height="22px" id="tdsahithi"><span id="newsheading"><?=$details['6']->cat_name?></span>
 	            </td>
 	           
 	            </tr>
 	            <tr>
 	             <td  height="163px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/Janapadalu-cr.gif);background-repeat-x;">
 	             <div style="padding-top:5px;" >
-	             <?if(!empty($details_more['2'])){?>
-	             <font id="telugufont"><a href="<?=base_url();?>mahila/mahiladetails/<?=$details_more['2']['0']->id?>"><?php echo $details_more['2']['0']->heading?></a></font><br>
-	              <?=$details_more['2']['0']->summary; }?> 
+	             <?if(!empty($details_more['7'])){?>
+	             <font id="telugufont"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['7']['0']->id?>"><?php echo $details_more['7']['0']->heading?></a></font><br>
+	              <?=$details_more['7']['0']->summary; }?> 
 	              <div style="height:107px;" id="telugufont">
 	              <ul id="mainnews">
 	             <?if(!empty($details_more['7'])){
@@ -350,16 +351,16 @@ padding-top:0px;
 	           
 	            <table width="213px" align="center" style="border: 1px solid #0A70BB;" cellpadding="0" cellspacing="0">
 	            <tr>
-	            <td height="22px" id="tdmahila"><span id="newsheading"><?=$details['7']->cat_name?></span>
+	            <td height="22px" id="tdsahithi"><span id="newsheading"><?=$details['7']->cat_name?></span>
 	            </td>
 	           
 	            </tr>
 	            <tr>
 	             <td height="163px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/Janapadalu-cr.gif);background-repeat-x;">
 	              <div style="padding-top:5px;" >
-	             <?if(!empty($details_more['2'])){?>
-	             <font id="telugufont"><a href="<?=base_url();?>mahila/mahiladetails/<?=$details_more['2']['0']->id?>"><?php echo $details_more['2']['0']->heading?></a></font><br>
-	              <?=$details_more['2']['0']->summary; }?> 
+	             <?if(!empty($details_more['8'])){?>
+	             <font id="telugufont"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['8']['0']->id?>"><?php echo $details_more['8']['0']->heading?></a></font><br>
+	              <?=$details_more['8']['0']->summary; }?> 
 	              <div style="height: 107px;" id="telugufont">
 	             <ul id="mainnews">
 	             <?if(!empty($details_more['8'])){

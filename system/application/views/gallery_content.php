@@ -1,7 +1,7 @@
 <table cellpadding="0" cellspacing="5px;" width="926">
 	<tr>
 		<td width="742" height="93" align="left" valign="top"><div style="width: 742px;height: 93px;border: 1px solid red;"></div></td>
-		<td rowspan="2" width="180" align="center" valign="top"><div style="width: 180px;height: 200px;border: 1px solid red;"></div></td>
+		<td rowspan="2" width="180" align="center" valign="top"><div style="width: 180px;height: 890px;border: 1px solid red;"></div></td>
 	</tr>
 	<tr>
 		<td valign="top" height="820">

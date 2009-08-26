@@ -239,12 +239,12 @@
 		return $quary->result();
 		
 	}
-	function getimage($id)
+	function getimage($parentid)
 	{
 		$this->db->order_by('id','desc');
 		//$this->db->select('id,title','parentid');
 		$this->db->limit(1);
-		$array=array('parentid'=>$id);
+		$array=array('parentid'=>$parentid);
 		$this->db->where($array);
 		$query=$this->db->get('gallery_images');
 		return $query->result_array();
@@ -281,5 +281,7 @@
   		$query=$this->db->get_where('gallery_images');
   		return $query->result();
   	}
+  
+  	
  }
 ?>

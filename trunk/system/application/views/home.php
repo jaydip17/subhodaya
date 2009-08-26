@@ -432,7 +432,8 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 							        <li style="text-align: center;"><a href="#tab2"><em style="width: 80px;padding-top: 2px""><span id="telugufont"><?=$more['9']->matter ?></span></em></a></li>
 	    						</ul>            
     							<div class="yui-content" style="height: 150px;text-align: left;">
-							        <div id="tab1"><p><a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details['0']->id?>"><img id="image" src="<?=base_url();?>/assets/mahila/news_img<?=$mahila_details['0']->id?>_thumb.jpg" /></a><a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details['0']->id?>"><?=$mahila_details['0']->heading?></a><br>
+							        <div id="tab1"><p><a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details['0']->id?>"><img id="image" src="<?=base_url();?>/assets/mahila/news_img<?=$mahila_details['0']->id?>_thumb.jpg" /></a>
+							        <div id="mainnews"><a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details['0']->id?>"><?=$mahila_details['0']->heading?></a></div>
 							        <?php echo $mahila_details['0']->summary; ?>
 							       <?php  $i=1;$count=0;foreach($mahila_details as $item){
 							           if($count==0)
@@ -444,7 +445,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 							           break;?>
                                     <ul id="mainnews"> 
 							        <li><a href="<?=base_url();?>mahila/mahiladetails/<?=$item->id?>"><?=$item->heading?></a></li></ul><?$i++;} ?></p></div>
-							        <div id="tab2"><p><img style="float:left;padding:0px 20px 5px 0px;" src="<?=base_url();?>/assets/sahithi/news_img<?=$sahithi_details['0']->id?>_thumb.jpg" alt="hh"/>
+							        <div id="tab2"><p><a href="<?=base_url();?>sahithi/sahithidetails/<?=$sahithi_details['0']->id?>"><img id="image" src="<?=base_url();?>/assets/sahithi/news_img<?=$sahithi_details['0']->id?>_thumb.jpg" alt="hh"/></a>
 							        <div id="mainnews"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$sahithi_details['0']->id?>"><?=$sahithi_details['0']->heading?></a></div>
 							        <?php echo $sahithi_details['0']->summary; ?>
 							        <?$i=1;$count=0; foreach($sahithi_details as $item){

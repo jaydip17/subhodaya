@@ -62,7 +62,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
                 </table></td>
             </tr>
           </table></td>
-          <td width="245" valign="top"><img src="<?=base_url();?>assets/imgs/add-img.jpg"></img></td>
+          <td width="245" valign="top"><img src="<?=base_url();?>assets/ads/Inner.jpg"></img></td>
           <td width="185" align="center" valign="top" rowspan="3">
 			<table width="100%" style="border:1px solid #3789C3;">
 			<tr>

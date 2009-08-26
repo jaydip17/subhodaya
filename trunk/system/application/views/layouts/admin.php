@@ -98,6 +98,15 @@ ddsmoothmenu.init({
 			</li>
 		</ul>
 	</li>
+	
+	<li> <a href="#">Ads</a>
+	<ul>
+			<li><a href="<?=base_url()?>admin/ads">Add</a>
+			</li>
+			<li><a href="<?=base_url()."admin/ads"?>">View/Manage</a>
+			</li>
+		</ul>
+	</li>
 			</ul>
 			</li>
 			<!--<li><a href="#">Other</a>

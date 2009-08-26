@@ -137,9 +137,9 @@ padding-top:0px;
 					<td colspan="3" width="224" height="7"><img src="<?=base_url();?>assets/imgs/beauty-bottom-img.gif" width="224px" height="7px "  /></td>
 					</tr>
 					</table>
-					<img src="<?=base_url();?>assets/imgs/sahithi3.jpg" width="221px" height="132px" style="padding-bottom:7px;" />
-					<img src="<?=base_url();?>assets/imgs/sahithi4.jpg" width="221px" height="132px" style="padding-bottom:6px;" />
-					<img src="<?=base_url();?>assets/imgs/sahithi5.jpg" width="224px" height="227px"/>
+					<img src="<?=base_url();?>assets/ads/Side_right1.jpg" width="221px" height="132px" style="padding-bottom:7px;" />
+					<img src="<?=base_url();?>assets/ads/Side_right2.jpg" width="221px" height="132px" style="padding-bottom:6px;" />
+					<img src="<?=base_url();?>assets/ads/Side_right3.jpg" width="224px" height="227px"/>
 					
 					</td>
 					</tr>

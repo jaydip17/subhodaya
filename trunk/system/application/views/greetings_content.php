@@ -194,18 +194,15 @@ sample sf dsfsd fdsf
     	 </tr>
      	</table>
      	</td>
-     	<td width="300" align="center" valign="top" style="padding:10px 6px 0px 0px;background-color: gray;">
-	
+     	<td width="300" align="center" valign="top" >
+		<div style="background-color: gray;width: 290px;height: 330px;">google adds</div>
 		</td>
 		</tr>
-	<tr>
-		<td width="100%" colspan="2" style="padding: 4px;"><div id="gree_main_bar"></div></td>
-	</tr>
 	<tr>
 		<td align="left">
 			<table>
 				<tr>
-					<td colspan="2"><div id="gree_bar" style="padding: 4px 0px 0px 10px;"><?php if(isset($more['23'])){echo $more['23']->matter;}?></div></td>
+					<td colspan="2" valign="top"><div id="gree_bar" style="padding: 0px 0px 0px 10px;"><?php if(isset($more['23'])){echo $more['23']->matter;}?></div></td>
 				</tr>
 				<tr>
 					<td width="50%" align="left" valign="top">
@@ -225,7 +222,6 @@ sample sf dsfsd fdsf
 							<div style="" id="more-news-div"><span><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings9['0'])) {echo $greetings9['0']->type;}?>"><?php if(isset($more['0'])){ echo $more['0']->matter;}?></a></span></div>
 						</div>
 						<div id="gree_bar1" ><span style="padding: 5px 10px 0px 100px;"><?php if(isset($greetings9['0'])){echo $greetings9['0']->gree_cat;}?></span></div>
-						
 					</td>
 				</tr>
 				<tr>
@@ -273,7 +269,7 @@ sample sf dsfsd fdsf
 				</tr>
 			</table>
 		</td>
-		<td rowspan="5" align="left">
+		<td rowspan="5" align="left" valign="top">
 		<div id="gre_tabs_div">
 		         <div class=" yui-skin-sam" style="width: 299px; border: 1px solid #50BCFC; height: 590px;padding: 2px;" >
                       	<div id="demo1" class="yui-navset" style="color: #EDF5FF;">

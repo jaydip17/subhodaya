@@ -2,7 +2,7 @@
 	<tr>
 		<td  width="px">
 		<div style="height: 25px;width: 691px;background-color: #137ABC" id="more-news-div1">
-			<span style="font-weight: bold;font-size: 14px;"><a href="<?=base_url();?>greetings/content/<?php if(isset($result['0'])){echo $result['0']->type;}?>"><?php if(isset($more[24])){echo $more['24']->matter;}?></a></span>
+			<span ><a href="<?=base_url();?>greetings/content/<?php if(isset($result['0'])){echo $result['0']->type;}?>"><?php if(isset($more[24])){echo $more['24']->matter;}?></a></span>
 		</div>
 		<div style="border: 1px solid #137ABC;">
 			<table width="685px" height="700px" align="center" >
@@ -43,9 +43,8 @@
 				
 			</table>
 		</div>
-		<div style="height: 25px;width: 691px;background-color: #137ABC"></div>
+		<div style="height: 25px;width: 694px;background-color: #137ABC"></div>
 		</td>
 		<td width="310" style="border: 1px solid red;" rowspan="2"></td>
 	</tr>
-	<tr><td style="border: 1px solid red;"> dg</td></tr>
 </table>

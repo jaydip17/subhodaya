@@ -22,7 +22,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 		<ul style="list-style: none;margin: 0;padding: 0;">
 		<?php if(!empty($result)){ 
 		foreach ($result as $catname):?>
-			<li><a href="<?=base_url()?>gallery/categeory/<?=$catname->id?>"><?=$catname->catname;?></a></li>
+			<li "><a href="<?=base_url()?>gallery/categeory/<?=$catname->id?>"><?=$catname->catname;?></a></li>
 		<?php endforeach;
 		} else{
 			echo 'No data found';

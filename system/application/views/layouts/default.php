@@ -28,7 +28,7 @@
 
 <body onload="<? if(isset($onload)) echo $onload; ?>">
 
-<table width="999" height="1330"  border="0" align="center" cellpadding="0" cellspacing="0" >
+<table width="999"  border="0" align="center" cellpadding="0" cellspacing="0" >
   <tr>
     <td width="985"  align="center" valign="top"><table width="988" border="0" align="center" cellpadding="0" cellspacing="0">
       <tr>

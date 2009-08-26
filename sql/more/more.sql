@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 25, 2009 at 10:31 AM
+-- Generation Time: Aug 26, 2009 at 06:22 AM
 -- Server version: 5.0.51
 -- PHP Version: 5.2.5
 
@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `more` (
   `matter` varchar(100) character set utf8 collate utf8_unicode_ci NOT NULL,
   `active` int(1) NOT NULL default '0',
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=33 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=38 ;
 
 --
 -- Dumping data for table `more`
@@ -63,4 +63,9 @@ INSERT INTO `more` (`id`, `matter`, `active`) VALUES
 (29, 'మీ మిత్రుని ఈమెయిలు ', 0),
 (30, 'ఇవి కూడా చదవండి', 0),
 (31, 'వార్తల పోల్ ', 0),
-(32, 'సినిమా పోల్', 0);
+(32, 'సినిమా పోల్', 0),
+(33, 'లేటెస్ట్ వీడియోస్', 0),
+(34, 'హాట్  వీడియోస్', 0),
+(35, 'టాప్  వీడియోస్', 0),
+(36, 'మొత్తం వీడియోస్', 0),
+(37, 'రేటింగ్', 0);

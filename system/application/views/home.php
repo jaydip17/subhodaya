@@ -434,14 +434,22 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
     							<div class="yui-content" style="height: 150px;text-align: left;">
 							        <div id="tab1"><p><img style="float:left;padding:0px 20px 5px 0px;" src="<?=base_url();?>/assets/mahila/news_img<?=$mahila_details['0']->id?>_thumb.jpg" /><a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details['0']->id?>"><?=$mahila_details['0']->heading?></a><br>
 							        <?php echo $mahila_details['0']->summary; ?>
-							       <?php  $i=1;foreach($mahila_details as $item){
-							        
+							       <?php  $i=1;$count=0;foreach($mahila_details as $item){
+							           if($count==0)
+							           {$count++;
+							            continue;
+							           }
+							            
 							           if($i>3)
 							           break;?>
 							        	               <ul id="mainnews"> <li><a href="<?=base_url();?>mahila/mahiladetails/<?=$item->id?>"><?=$item->heading?></a></li></ul><?$i++;} ?></p></div>
 							        <div id="tab2"><p><img style="float:left;padding:0px 20px 5px 0px;" src="<?=base_url();?>/assets/sahithi/news_img<?=$sahithi_details['0']->id?>_thumb.jpg" alt="hh"/><a href="<?=base_url();?>sahithi/sahithidetails/<?=$sahithi_details['0']->id?>"><?=$sahithi_details['0']->heading?></a><br>
 							        <?php echo $sahithi_details['0']->summary; ?>
-							        <?$i=1; foreach($sahithi_details as $item){
+							        <?$i=1;$count=0; foreach($sahithi_details as $item){
+							        	 if($count==0)
+							        	 {$count++;
+							            continue;
+							        	 }
 							             if($i>3)
 							           break;?>
 							        	               <ul id="mainnews"> <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>"><?=$item->heading?></a></li></ul><? $i++;} ?></p></div>
@@ -467,7 +475,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
                         <td  valign="top" id="center-img1"><img src="<?=base_url();?>assets/imgs/new1.jpg" width="5" /></td>
                         <td id="center-img1" align="left" style="border-bottom: 1px solid #50BCFC;">
 	                        <div style="text-align: justify;padding-top: 3px;" id="mainnews">
-	                       <?echo $home_stories['0']->summary;?>
+	                       <?if(isset($home_stories['0'])){ echo $home_stories['0']->summary;}?>
 	                       
 	                        </div>
                         </td>

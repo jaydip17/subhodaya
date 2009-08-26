@@ -83,7 +83,7 @@ background-repeat-x;
 padding-top:0px;
 }
 </style>
-<table width="99%"  border="0" cellpadding="0" cellspacing="0" style="padding-bottom:20px">
+<table width="99%"  border="0" cellpadding="0" cellspacing="0" >
 <tr>
         <td  valign="top">
 	       		
@@ -168,8 +168,12 @@ padding-top:0px;
 	              <?=$details_more['1']['0']->summary; }?> 
 	              <div style="height: 120px;" id="telugufont"><ul id="mainnews">
 	              <?if(!empty($details_more['1'])){
-	              foreach($details_more['1'] as $item) {?>
-
+	              	 $count=0;
+	              foreach($details_more['1'] as $item) {
+                     if($count==0)
+							           {$count++;
+							            continue;
+							           }?>
 	             <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>"><?=$item->heading ?></a></li>
 	                <?}} ?>
 	                 </ul>
@@ -196,7 +200,11 @@ padding-top:0px;
 	              <div style="height: 120px;" id="telugufont">
 	               <ul id="mainnews">
 	             <?if(!empty($details_more['2'])){
-	              foreach($details_more['2'] as $item) {?>
+	             	$count=0;
+	              foreach($details_more['2'] as $item) { if($count==0)
+							           {$count++;
+							            continue;
+							           }?>
 
 	              <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>"><?=$item->heading ?></a></li>
 	              <?}} ?>
@@ -225,7 +233,12 @@ padding-top:0px;
 	              <div style="height: 60px;" id="telugufont">
 	              <ul id="mainnews">
 	              <?if(!empty($details_more['3'])){
-	              foreach($details_more['3'] as $item) {?>
+	              	$count=0;
+	              foreach($details_more['3'] as $item) {if($count==0)
+							           {$count++;
+							            continue;
+							           }?>
+	            
 
 	             <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>"><?=$item->heading ?></a></li>
 	               <?}} ?>
@@ -252,7 +265,11 @@ padding-top:0px;
 	              <div style="height: 60px;" id="telugufont"> 
 	             <ul id="mainnews">
 	              <?if(!empty($details_more['4'])){
-	              foreach($details_more['4'] as $item) {?>
+	              	$count=0;
+	              foreach($details_more['4'] as $item) {if($count==0)
+							           {$count++;
+							            continue;
+							           }?>
 
 	              <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>"><?=$item->heading?></a></li>
 	              <?}} ?>	                 </ul>
@@ -281,7 +298,11 @@ padding-top:0px;
 	              <div style="height: 60px;" id="telugufont">
 	              <ul id="mainnews">
 	             <?if(!empty($details_more['5'])){
-	              foreach($details_more['5'] as $item) {?>
+	             	$count=0;
+	              foreach($details_more['5'] as $item) {if($count==0)
+							           {$count++;
+							            continue;
+							           }?>
 
 	             <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>"><?=$item->heading ?></a></li>
 	              <?}} ?>
@@ -308,7 +329,11 @@ padding-top:0px;
 	              <div style="height: 60px;" id="telugufont">
 	             <ul id="mainnews">
 	              <?if(!empty($details_more['6'])){
-	              foreach($details_more['6'] as $item) {?>
+	              	$count=0;
+	              foreach($details_more['6'] as $item) {if($count==0)
+							           {$count++;
+							            continue;
+							           }?>
 
 	             <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>"><?=$item->heading ?></a></li>
 	              <?}} ?>
@@ -338,7 +363,11 @@ padding-top:0px;
 	              <div style="height:107px;" id="telugufont">
 	              <ul id="mainnews">
 	             <?if(!empty($details_more['7'])){
-	              foreach($details_more['7'] as $item) {?>
+	             	$count=0;
+	              foreach($details_more['7'] as $item) {if($count==0)
+							           {$count++;
+							            continue;
+							           }?>
 
 	              <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>"><?=$item->heading ?></a></li>
 	             <?}} ?>
@@ -364,7 +393,11 @@ padding-top:0px;
 	              <div style="height: 107px;" id="telugufont">
 	             <ul id="mainnews">
 	             <?if(!empty($details_more['8'])){
-	              foreach($details_more['8'] as $item) {?>
+	             	$count=0;
+	              foreach($details_more['8'] as $item) {if($count==0)
+							           {$count++;
+							            continue;
+							           }?>
 
 	              <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>"><?=$item->heading?></a></li>
 	              <?}} ?>

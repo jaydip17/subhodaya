@@ -431,9 +431,9 @@
 							        <li style="text-align: center;"><a href="#tab2"><em style="width: 80px;padding-top: 2px""><span id="telugufont"><?=$more['9']->matter ?></span></em></a></li>
 	    						</ul>            
     							<div class="yui-content" style="height: 150px;text-align: left;">
-							        <div id="tab1"><p><a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details['0']->id?>"><img id="image" src="<?=base_url();?>/assets/mahila/news_img<?=$mahila_details['0']->id?>_thumb.jpg" /></a>
-							        <div id="mainnews"><a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details['0']->id?>"><?=$mahila_details['0']->heading?></a></div>
-							        <?php echo $mahila_details['0']->summary; ?>
+							        <div id="tab1"><p><a href="<?=base_url();?>mahila/mahiladetails/<?if(!empty($mahila_details)){$mahila_details['0']->id;}?>"><img id="image" src="<?=base_url();?>/assets/mahila/news_img<?if(!empty($mahila_details)){echo $mahila_details['0']->id;}?>_thumb.jpg" /></a>
+							        <div id="mainnews"><a href="<?=base_url();?>mahila/mahiladetails/<?if(!empty($mahila_details)){echo $mahila_details['0']->id;}?>"><?if(!empty($mahila_details)){echo $mahila_details['0']->heading;}?></a></div>
+							        <?php if(!empty($mahila_details)){ echo $mahila_details['0']->summary; ?>
 							       <?php  $i=1;$count=0;foreach($mahila_details as $item){
 							           if($count==0)
 							           {$count++;
@@ -443,7 +443,7 @@
 							           if($i>3)
 							           break;?>
                                     <ul id="mainnews"> 
-							        <li><a href="<?=base_url();?>mahila/mahiladetails/<?=$item->id?>"><?=$item->heading?></a></li></ul><?$i++;} ?></p></div>
+							        <li><a href="<?=base_url();?>mahila/mahiladetails/<?=$item->id?>"><?=$item->heading?></a></li></ul><?$i++;}} ?></p></div>
 							        <div id="tab2"><p><a href="<?=base_url();?>sahithi/sahithidetails/<?=$sahithi_details['0']->id?>"><img id="image" src="<?=base_url();?>/assets/sahithi/news_img<?=$sahithi_details['0']->id?>_thumb.jpg" alt="hh"/></a>
 							        <div id="mainnews"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$sahithi_details['0']->id?>"><?=$sahithi_details['0']->heading?></a></div>
 							        <?php echo $sahithi_details['0']->summary; ?>

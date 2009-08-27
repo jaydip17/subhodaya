@@ -11,14 +11,39 @@ class Video_model extends Model
     	return $result->result();
     } 
 	
-	function getvideocategeories()
+    function get_videos($type,$limit)
+    {
+    	$this->db->where('video_uploaded',1);
+		$this->db->order_by('no_of_views','desc');
+		$this->db->limit($limit);
+		if($type=='latest')
+		{
+			$this->db->order_by('id','desc');
+		}
+		else if($type=='top')
+		{
+			$this->db->order_by('rating','desc');
+		}
+		else if($type=='active')
+		{
+			$this->db->where('active',$type);
+		}
+		else
+		{
+			$this->db->where('video_cat_id',$type);
+		}
+		$query = $this->db->get('videos');
+		return $query;
+		
+    }
+	function getvideocategeories($limit)
 	{
 	//if($limit!=0)
 	//{
-	//  $this->db->limit($limit);
+	  $this->db->limit($limit);
 	// }
 	   $query=$this->db->get('videos_categeory');
-	   return $query->result();
+	   return $query;
 	}
 	
   function getvideos($id,$bywhat)

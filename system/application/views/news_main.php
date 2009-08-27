@@ -310,7 +310,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter2.jpg" width="5" height="31" /></td>
         </tr>
         <tr>
-          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="109" /></td>
+          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="120" /></td>
           <td valign="top" id="botom-ser" align="left">
           <div style="height: 80px;padding-top:2px;">
           <ul>
@@ -334,9 +334,9 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
           	</div>
           	<div id="more-news-div"><a href="<?=base_url();?>news/details/<?if(isset($news_type5['0'])){ echo $news_type5['0']->type; }?>"><?=$more['0']->matter?></a></div>
           </td>
-          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="109" /></td>
+          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="120" /></td>
           <td width="8">&nbsp;</td>
-          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="109" /></td>
+          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="120" /></td>
           <td valign="top" id="botom-ser" align="left">
           <div style="height: 80px;padding-top:1px;">
           	<ul id="mainnews">
@@ -358,9 +358,9 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
           </div>
           <div id="more-news-div"><a href="<?=base_url();?>news/details/<?if(isset($news_type6['0'])){ echo $news_type6['0']->type; }?>"><?=$more['0']->matter?></a></div>
           </td>
-          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="109" /></td>
+          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="120" /></td>
           <td width="8">&nbsp;</td>
-          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="109" /></td>
+          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="120" /></td>
           <td valign="top" id="botom-ser">
           <div id="home_poll" >
                <div><? if(!empty($newspoll['0']->question)){
@@ -390,6 +390,6 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
                 <?} else echo 'Yesterday no poll.'; ?>
                 </div>
           </td>
-          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="109" /></td>
+          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="120" /></td>
         </tr>
     </table>

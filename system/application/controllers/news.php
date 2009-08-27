@@ -25,6 +25,7 @@ class News extends Controller {
 		$active_news3=$this->News_Model->active_news(3);
 		$active_news4=$this->News_Model->active_news(4);
 		
+		
 		$data=array('news_type1'  =>  $details,
 					'news_type2'  =>  $news_type2,
 					'news_type3'  =>  $news_type3,
@@ -52,13 +53,25 @@ class News extends Controller {
 		$news=$this->News_Model->get_news($type,$count=false);
 		$mahila_details=$this->Mahila_Model->active_mahila($type=2);
 		$mahila_details1=$this->Mahila_Model->active_mahila($type=7);
+		$mahila_details2=$this->Mahila_Model->active_mahila($type=3);
+		$active_news1=$this->News_Model->active_news(1);
+		$active_news2=$this->News_Model->active_news(2);
+		$active_news3=$this->News_Model->active_news(3);
+		$active_news4=$this->News_Model->active_news(4);
+		//print_r($active_news4);
 		
-		$data=array(	'news'  		  =>	$news,
-						'more'			  =>	$more,
-						'onload'    	  => 	$onload,
-						'active_news'	  =>	$active_news,
-						'mahila_details'  =>   $mahila_details,
-						'mahila_details1'  =>  $mahila_details1
+		$data=array(	'news'  		   =>	$news,
+						'more'			   =>	$more,
+						'onload'    	   => 	$onload,
+						'active_news'	   =>	$active_news,
+						'mahila_details'   =>   $mahila_details,
+						'mahila_details1'  =>   $mahila_details1,
+						'active_news1'     =>	$active_news1,
+						'active_news2'	   =>	$active_news2,
+						'active_news3'	   =>	$active_news3,
+						'active_news4'	   =>   $active_news4,
+						'mahila_details2'  =>	$mahila_details2
+						
 						
 						
 				);

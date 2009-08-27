@@ -13,39 +13,145 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
     		<tr>
        		<td  valign="top">
 	       		<table width="100%"  border="0" cellpadding="0" cellspacing="0">
-	     			<tr><td height="4" valign="bottom"><img src="<?=base_url();?>assets/imgs/top-cor-line.jpg" width="460" height="4" /></td></tr>
+	     			<tr><td height="4" valign="bottom"><img src="<?=base_url();?>assets/imgs/top-cor-line.jpg" width="500" height="4" /></td></tr>
 	            </table>
                  <table width="100%"  border="0" style="border-left:1px solid #0872BC; border-right:1px solid #0872BC;"cellpadding="0" cellspacing="0">
-                    <tr><td width="100%" height="310" valign="top" align="left" class=" yui-skin-sam" >
-                          <div id="demo" class="yui-navset" style="color: #EDF5FF;">
-	    					<ul class="yui-nav">
-							        <li class="selected"><a href="#tab1"><em>Politics</em></a></li>
-							        <li><a href="#tab2"><em>Games</em></a></li>
-							        <li><a href="#tab3"><em>cinemas</em></a></li>
-									<li><a href="#tab3"><em>videos</em></a></li>
-	    					</ul>            
-    						<div class="yui-content">
-							 <div id="tab1"><img src="<?=base_url();?>assets/imgs/move-img4.jpg" align="top"></img>
-							        	</div>
-							        <div id="tab2">
-							        <img src="<?=base_url();?>assets/imgs/mov-img2.jpg" align="top"></img>
-							        </div>
-							        <div id="tab3">
-							        <img src="<?=base_url();?>assets/imgs/mov-img3.jpg" align="top"></img>
-							        </div>
-									<div id="tab3">
-									<img src="<?=base_url();?>assets/imgs/mov-img.jpg" align="top"></img>
-									</div>
+                    <tr><td  valign="top" align="left" class=" yui-skin-sam" >
+                          <div class=" yui-skin-sam" style="width: 502px;  height: 100%" >
+                      		<div id="demo1" class="yui-navset" style="color: #EDF5FF;">
+	    						<ul class="yui-nav">
+							       <li class="selected" style="text-align: center;"><a href="#tab1"><em style="width: 90px;"><?php if(isset($active_news1['0'])){echo $active_news1['0']->news_cat;}?></em></a></li>
+							        <li style="text-align: center;"><a href="#tab2"><em style="width: 92px;"><span id="telugufont"><?php if(isset($active_news2['0'])){echo $active_news2['0']->news_cat;}?></span></em></a></li>
+							        <li style="text-align: center;"><a href="#tab3"><em style="width: 120px;"><span id="telugufont"><?php if(isset($active_news3['0'])){echo $active_news3['0']->news_cat;}?></span></em></a></li>
+									<li style="text-align: center;"><a href="#tab4"><em style="width: 90px;"><span id="telugufont"><?php if(isset($active_news4['0'])){echo $active_news4['0']->news_cat;}?></span></em></a></li>
+	    						</ul>            
+    							<div class="yui-content" >
+							        <div id="tab1"><p>
+							        		<div style="height:235px;" id="telugufont1">
+          				 						<a href="<?=base_url();?>news/newsdetails/<?=$active_news1['0']->id?>"><img src="<?=base_url();?>assets/news/news_img<?=$active_news1['0']->id?>_thumb.jpg" style="float: left;padding: 2px 19px 2px 1px;text-align: left;text-align: justify;"  border="0"></img></a>
+          				 						<font id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?=$active_news1['0']->id?>"><?php echo $active_news1['0']->heading;?></a></font><br>
+          				 						<?php echo $active_news1['0']->summary;?>
+          				 						<ul id="mainnews">
+          				 						<?
+          											$count=0; foreach($active_news1 as $row):
+          						 					 if($count==0)
+          											{
+	          											$count++;
+	          											continue;
+          											} ?>
+          											<li style="padding: 2px;"><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>"><?=$row->heading ?></a></li>
+          				 							<? if($count==4){
+							          						break;
+							          					}else{
+							          						$count++;
+							          					}
+							          					endforeach; 
+							          					if($count==0){
+							          						echo 'No data found';
+							          					}
+							          					?>
+							          				 </ul>
+          				 						</div>
+          				 						<div id="more-news-div" style="padding-right: 2px;"><span id="news-more"><a href="<?=base_url();?>news/details/<?if(isset($active_news1['0'])){ echo $active_news1['0']->type; }?>"><?=$more['0']->matter?></a></span></div>
+							        	</p></div>
+							        <div id="tab2"><p>
+							        		<div style="height:235px;" id="telugufont1">
+							        		<a href="<?=base_url();?>news/newsdetails/<?=$active_news2['0']->id?>"><img src="<?=base_url();?>assets/news/news_img<?=$active_news2['0']->id?>_thumb.jpg" style="float: left;padding: 2px 19px 2px 1px;text-align: left;text-align: justify;"  border="0"></img></a>
+							        		<div id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?=$active_news2['0']->id?>"><?=$active_news2['0']->heading?></a></div>
+							        		<?php echo $active_news2['0']->summary;?>
+							        			<ul id="mainnews">
+							        			<?php
+							        			$count=0;
+							        			 foreach ($active_news2 as $row):
+							        			 if($count==0){
+							        			 	$count++;
+							        			 	continue;
+							        			 }
+							        			 ?>
+							        				<li style="padding: 1px;"><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>"><?=$row->heading?></a></li>
+							        			<? if($count==4){
+							          						break;
+							          					}else{
+							          						$count++;
+							          					}
+							          					endforeach; 
+							          					if($count==0){
+							          						echo 'No data found';
+							          					}
+							          			?>
+							        			</ul>
+							        		</div>
+							        		<div id="more-news-div" style="padding-right: 2px;"><span id="news-more"><a href="<?=base_url();?>news/details/<?if(isset($active_news2['0'])){ echo $active_news2['0']->type; }?>"><?=$more['0']->matter?></a></span></div>
+							        </p></div>
+							        <div id="tab3"><p>
+							        	<div style="height:235px;" id="telugufont1">
+							        		<a href="<?=base_url();?>news/newsdetails/<?=$active_news3['0']->id?>"><img src="<?=base_url();?>assets/news/news_img<?=$active_news3['0']->id?>_thumb.jpg" style="float: left;padding: 2px 19px 2px 1px;text-align: left;text-align: justify;" border="0"></img></a>
+							        		<div id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?=$active_news3['0']->id?>"><?=$active_news3['0']->heading?></a></div>
+							        		<?php echo $active_news3['0']->summary;?>
+							        			<ul id="mainnews">
+							        			<?php
+							        			$count=0;
+							        			 foreach ($active_news3 as $row):
+							        			 if($count==0){
+							        			 	$count++;
+							        			 	continue;
+							        			 }
+							        			 ?>
+							        				<li style="padding: 1px;"><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>"><?=$row->heading?></a></li>
+							        			<? if($count==4){
+							          						break;
+							          					}else{
+							          						$count++;
+							          					}
+							          					endforeach; 
+							          					if($count==0){
+							          						echo 'No data found';
+							          					}
+							          			?>
+							        			</ul>
+							        		</div>
+							        		<div id="more-news-div" style="padding-right: 2px;"><span id="news-more"><a href="<?=base_url();?>news/details/<?if(isset($active_news3['0'])){ echo $active_news3['0']->type; }?>"><?=$more['0']->matter?></a></span></div>
+							        </p></div>
+									<div id="tab4"><p>
+										<div style="height:235px;" id="telugufont1">
+							        		<a href="<?=base_url();?>news/newsdetails/<?=$active_news4['0']->id?>"><img src="<?=base_url();?>assets/news/news_img<?=$active_news4['0']->id?>_thumb.jpg" style="float: left;padding: 2px 19px 2px 1px;text-align: left;text-align: justify;"  border="0"></img></a>
+							        		<div id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?=$active_news4['0']->id?>"><?=$active_news4['0']->heading?></a></div>
+							        		<?php echo $active_news4['0']->summary;?>
+							        			<ul id="mainnews">
+							        			<?php
+							        			$count=0;
+							        			 foreach ($active_news4 as $row):
+							        			 if($count==0){
+							        			 	$count++;
+							        			 	continue;
+							        			 }
+							        			 ?>
+							        				<li style="padding: 1px;"><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>"><?=$row->heading?></a></li>
+							        			<? if($count==4){
+							          						break;
+							          					}else{
+							          						$count++;
+							          					}
+							          					endforeach; 
+							          					if($count==0){
+							          						echo 'No data found';
+							          					}
+							          			?>
+							        			</ul>
+							        		</div>
+							        		<div id="more-news-div" style="padding-right: 2px;"><span id="news-more"><a href="<?=base_url();?>news/details/<?if(isset($active_news4['0'])){ echo $active_news4['0']->type; }?>"><?=$more['0']->matter?></a></span></div>
+									</p></div>
     							</div>
 <script>
 (function() {
-    var tabView = new YAHOO.widget.TabView('demo');
-
+    var tabView = new YAHOO.widget.TabView('demo1');
     YAHOO.log("The example has finished loading; as you interact with it, you'll see log messages appearing here.", "info", "example");
 })();
 </script>
+						</div>
+						</div> 
 							</table>
-                      <img src="<?=base_url();?>assets/imgs/top-crow-botom.jpg" width="460"/></td>
+                      <img src="<?=base_url();?>assets/imgs/top-crow-botom.jpg" width="503"/></td>
                   </tr>
                 </table></td>
             </tr>
@@ -148,7 +254,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter2.jpg" width="5" height="31" /></td>
           <td width="8">&nbsp; </td>
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter-1.jpg" width="5" height="31" /></td>
-          <td width="295" valign="top"  id="botomtop" align="left"><img src="<?=base_url();?>assets/imgs/001.png" style="margin:4px 0px 0px 0px;"></img></td>
+          <td width="295" valign="middle"  id="botomtop" align="left"><img src="<?=base_url();?>assets/imgs/001.png" align="middle"></img><span id="newsheading"><?=$mahila_details2['0']->cat_name?></span></td>
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter2.jpg" width="5" height="31" /></td>
         </tr>
         <tr>
@@ -179,7 +285,14 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="120" /></td>
           <td width="8">&nbsp;</td>
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="120" /></td>
-          <td valign="top" id="botom-ser">dshfgjh</td>
+          <td valign="top" id="botom-ser"> <div id="telugufont1" style="height: 86px;">
+          	<? if(isset($mahila_details2['0'])){ ?>  
+          	<a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details2['0']->id?>"><img border="0px" id="image" src="<?=base_url();?>assets/mahila/news_img<?=$mahila_details2['0']->id?>_thumb.jpg" style="float: left;padding: 2px 5px 2px 1px;"></a>
+	               <div id="mainnews"> <a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details2['0']->id?>"><? echo $mahila_details2['0']->heading;?></a></div>
+	               <?=$mahila_details2['0']->summary?>
+	               <?} ?>
+	          </div>
+	          <div id="more-news-div"><a href="<?=base_url()?>mahila/mahiladetails/<?=$mahila_details2['0']->id?>"><?=$more['1']->matter?></a></div></td>
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="120" /></td>
         </tr>
     </table>

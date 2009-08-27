@@ -47,7 +47,7 @@
 	
 	<tr>
 		<td>Active</td>
-		<td align="left"><input type="checkbox" name="active" value="1"  /></td>
+		<td align="left"><?=form_checkbox('active','1') ?></td>
 	</tr>
 	
 	<tr>

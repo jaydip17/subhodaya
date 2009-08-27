@@ -207,7 +207,7 @@
           	               <td valign="top" id="topvi">Genre:Action/Family<span style="color:#FF6507;">Drama</span><br/>Type:Bilingual<br/>(Thorani in Tamil)<br/><div id="topimg" style=height:15px;width:101px;padding-left:4px;margin-top:4px;padding-top:2px;"><?=$more['29']->matter?>:<span style="color:#FF6507;"> 2.5/5</span></div></td>
           	            </tr>
           	              --><tr>
-          	               <td colspan="2" align="right" style="padding-top:15px;linkdecoration:none;"><a href="#"><?=$more['0']->matter?></td>
+          	               <td colspan="2" align="right" style="padding-top:15px;font-weight:bold;color:red;text-decoration:none;"><a href="#"><?=$more['0']->matter?></td>
           	              </tr>
           	             
           	           </table>

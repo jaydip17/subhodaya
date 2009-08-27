@@ -23,7 +23,7 @@
      <td  valign="top" align="center" height="370">
         <table width="240" height="370" align="center" style="border:1px solid #0872BC;  cellspacing:0px cellpadding:0px;">
             <tr>
-           <td colspan="2"  style="border:1px solid #50BFC;height:25px; padding-top:0px;font-size:14px;font-weight:bold;text-align:center" id="video_heading"><?=$more['25']->matter ?></td>
+           <td colspan="2"  style="border:1px solid #50BFC;height:25px; padding-top:0px;font-size:14px;font-weight:bold;text-align:center" id="video_heading"><?=$more['32']->matter ?></td>
             </tr>
             <?
             $count=0;
@@ -32,7 +32,7 @@
            
            <tr>
            <td align="center"><div style="margin-left:4px;"><a href="<?=base_url();?>video/index/<?=$item->id?>/<?=$item->video_cat_id?>"><img src="<?=base_url();?>assets/videos/image_preview/image<?=$item->id?>_thumb.jpg"></a></div></td>
-           <td><div id="li-vi"><?=$item->insert_date?><br/><?=$item->name?><br/><span style="color:#FF6507; font-size:12px;"><?=$item->no_of_views?> views</span><br/><?=$more['29']->matter?>:<span style="color:#FF6507;"><?=$item->rating?></span></div></td>
+           <td><div id="li-vi"><?=$item->insert_date?><br/><?=$item->name?><br/><span style="color:#FF6507;"><?=$item->no_of_views?> views</span><br/><?=$more['36']->matter?>:<span style="color:#FF6507;"><?=$item->rating?></span></div></td>
           </tr>
            
 	<?
@@ -42,15 +42,15 @@
           
          <tr>
            <td align="center"><div margin-left:4px;"><img src="<?=base_url();?>assets/imgs/latest2.jpg"></div></td>
-           <td><div id="li-vi">12/08/09<br/><?=$more['31']->matter?><br/><span style="color:#FF6507;font-size:12px;">650 views</span><br/><?=$more['29']->matter?>:<span style="color:#FF6507;">2.5/5</span></div></td>
+           <td><div id="li-vi">12/08/09<br/><?=$more['31']->matter?><br/><span style="color:#FF6507;font-size:12px;">650 views</span><br/><?=$more['36']->matter?>:<span style="color:#FF6507;">2.5/5</span></div></td>
          </tr>
           <tr>
            <td align="center"><div margin-left:4px;"><img src="<?=base_url();?>assets/imgs/latest3.jpg"></div></td>
-           <td><div id="li-vi">12/08/09<br/><?=$more['31']->matter?><br/><span style="color:#FF6507;font-size:12px;">650 views</span><br/><?=$more['29']->matter?>:<span style="color:#FF6507;">2.5/5</span></div></td>
+           <td><div id="li-vi">12/08/09<br/><?=$more['31']->matter?><br/><span style="color:#FF6507;font-size:12px;">650 views</span><br/><?=$more['36']->matter?>:<span style="color:#FF6507;">2.5/5</span></div></td>
           </tr>
            <tr>
            <td align="center"><div margin-left:4px;"><img src="<?=base_url();?>assets/imgs/latest4.jpg"></div></td>
-           <td><div id="li-vi">12/08/09<br/><?=$more['31']->matter?><br/><span style="color:#FF6507;font-size:12px;">650 views</span><br/><?=$more['29']->matter?>:<span style="color:#FF6507;">2.5/5</span></div></td>
+           <td><div id="li-vi">12/08/09<br/><?=$more['31']->matter?><br/><span style="color:#FF6507;font-size:12px;">650 views</span><br/><?=$more['36']->matter?>:<span style="color:#FF6507;">2.5/5</span></div></td>
           </tr>
           --><tr><td colspan="2" align="right" id="vi_heading"><a href="#"><?=$more['0']->matter?></a></td></tr>
         </table>
@@ -84,7 +84,7 @@
             
             <tr ><td><div style="height:375px;border-left: 1px solid #9D9D9D; border-right: 1px solid #9D9D9D;"> 
             <table width="99%" style="margin-left:4px margin-right:2px;padding-left:3px;">
-                <div id="hotvideo"><?=$more['26']->matter ?></div>
+                <div id="hotvideo"><?=$more['33']->matter ?></div>
           
             <tr>
                <td  style="width:660px;"> 
@@ -110,49 +110,35 @@
     
   </ul>
   <div class="TabbedPanelsContentGroup">
-
+ <?php  foreach($videos as $item){
+ 
+ 	?>
     <div class="TabbedPanelsContent">
-    
+ 
        <table border="0" width="90%">
        <?
-       $count=0;
+       $count=1;
        
-       	foreach($relatedvideos as $item){
-       
-       ?>
-       
-        <tr>
-         <td><div><div style="float:left;padding-right:10px;"><a href="<?=base_url();?>video/index/<?=$item->id?>/<?=$item->video_cat_id?>"><img src="<?=base_url();?>assets/videos/image_preview/home_image<?=$item->id?>_thumb.jpg"></a></div>
-              <div id="hotvi"><?=$item->insert_date?> <br/><?=$item->name?><br/><span style="color:#FF6507;padding-top:5px;"><?=$item->no_of_views?> views</span><br/><?=$item->time?><br/><div id="hotimg" style="height:19px;width:128px;margin-top:9px;padding-top:2px;padding-left:5px;"><?=$more['29']->matter?>: <span style="color:#FF6507;"><?=$item->rating?></span></div></div></div></td>
-       
-         <td><div><div style="float:left;padding-right:10px;"><a href="<?=base_url();?>video/index/<?=$item->id?>/<?=$item->video_cat_id?>"><img src="<?=base_url();?>assets/videos/image_preview/home_image<?=$item->id?>_thumb.jpg"></a></div>
-              <div id="hotvi"><?=$item->insert_date?> <br/><?=$item->name?><br/><span style="color:#FF6507;padding-top:5px;"><?=$item->no_of_views?> views</span><br/><?=$item->time?><br/><div id="hotimg" style="height:19px;width:128px;margin-top:9px;padding-top:2px;padding-left:5px;"><?=$more['29']->matter?>: <span style="color:#FF6507;"><?=$item->rating?></span></div></div></div></td>
-       
-        </tr>
-        
-  <?
-  $count ++;
+       	foreach($item->result() as $video1){
+         ?>
+      
+        <div><div style="float:left;padding-right:10px;">
+        <a href="<?=base_url();?>video/index/<?=$video1->id?>/<?=$video1->video_cat_id?>">
+        <img src="<?=base_url();?>assets/videos/image_preview/home_image<?=$video1->id?>_thumb.jpg"></a>
+        </div>
+           <div id="hotvi"><?=$video1->insert_date?> <br/><?=$video1->name?><br/>
+           <span style="color:#FF6507;padding-top:5px;"><?=$video1->no_of_views?> views</span>
+           <br/><?=$video1->time?><br/>
+           <div id="hotimg" style="height:19px;width:128px;margin-top:9px;padding-top:2px;padding-left:5px;"><?=$more['36']->matter?>: <span style="color:#FF6507;"><?=$video1->rating?></span></div>
+           </div></div>
+           </td>
+              
+    <?php echo $count; if($count%4==0){ echo "</tr><tr>"; }
+   
+       $count++;
    }
-  ?><!--      
         
-        <tr>
-         <td style="padding-top:6px;"><div><div style="float:left;padding-right:10px;"><img src="<?=base_url();?>assets/imgs/hotvideo2.jpg"></div>
-              <div id="hotvi">12/08/09 <br/>The end show..<br/><span style="color:#FF6507;">650 views</span><br/>Philde carolis<br/><div id="hotimg" style="height:19px;width:128px;margin-top:9px;padding-top:2px;"><?=$more['29']->matter?>: <span style="color:#FF6507;">2.5/5</span></div></div></div></td>
-       
-         <td><div><div style="float:left; padding-right:10px;"><img src="<?=base_url();?>assets/imgs/hotvideo5.jpg"></div>
-              <div id="hotvi">12/08/09 <br/>The end show..<br/><span style="color:#FF6507;">650 views</span><br/>Philde carolis<br/><div id="hotimg" style="height:19px;width:128px;margin-top:9px;padding-top:2px;"><?=$more['29']->matter?>: <span style="color:#FF6507;">2.5/5</span></div></div></div></td>
-       
-        </tr>
-         
-        <tr>
-         <td style="padding-top:6px;"><div><div style="float:left;padding-right:10px;"><img src="<?=base_url();?>assets/imgs/hotvideo3.jpg"></div>
-              <div id="hotvi">12/08/09 <br/>The end show..<br/><span style="color:#FF6507;">650 views</span><br/>Philde carolis<br/><div id="hotimg" style="height:19px;width:128px;margin-top:9px;padding-top:2px;"><?=$more['29']->matter?>: <span style="color:#FF6507;">2.5/5</span></div></div></div></td>
-       
-         <td><div><div style="float:left; padding-right:10px;"><img src="<?=base_url();?>assets/imgs/hotvideo6.jpg"></div>
-              <div id="hotvi">12/08/09 <br/>The end show..<br/><span style="color:#FF6507;">650 views</span><br/>Philde carolis<br/><div id="hotimg" style="height:19px;width:128px;margin-top:9px;padding-top:2px;"><?=$more['29']->matter?>: <span style="color:#FF6507;">2.5/5</span></div></div></div></td>
-       
-        </tr>
-        --></table> 
+  ?></table> 
          <table >
           <tr style="padding-top:6px;height:23px;">
           <td style="background-color:#93D7FA;border:1px solid #9D9D9D;width:650px;height:23px;" align="right"><?=$videocategeories['2']->name ?>>></td>
@@ -163,99 +149,8 @@
     
      
     </div>
-    <div class="TabbedPanelsContent">
-    
-          <table border="0" width="90%">
-          <?
-           $count=0;
-           foreach($relatedvideos as $item){
-          ?>
-        <tr>
-         <td><div><div style="float:left;padding-right:10px;"><a href="<?=base_url();?>video/index/<?=$item->id?>/<?=$item->video_cat_id?>"><img src="<?=base_url();?>assets/videos/image_preview/home_image<?=$item->id?>_thumb.jpg"></a></div>
-              <div id="hotvi"><?=$item->insert_date?> <br/><?=$item->name?><br/><span style="color:#FF6507;padding-top:3px;"><?=$item->no_of_views?> views</span><br/><?=$item->time?><br/><div id="hotimg" style="height:19px;width:128px;margin-top:9px;padding-top:2px;padding-left:5px;"><?=$more['29']->matter?>: <span style="color:#FF6507;"><?=$item->rating?></span></div></div></div></td>
-       
-         <td><div><div style="float:left; padding-right:10px;"><a href="<?=base_url();?>video/index/<?=$item->id?>/<?=$item->video_cat_id?>"><img src="<?=base_url();?>assets/videos/image_preview/home_image<?=$item->id?>_thumb.jpg"></a></div>
-              <div id="hotvi"><?=$item->insert_date?> <br/><?=$item->name?><br/><span style="color:#FF6507;"><?=$item->no_of_views?> views</span><br/><?=$item->time?><br/><div id="hotimg" style="height:19px;width:128px;margin-top:9px;padding-top:2px;padding-left:5px;"><?=$more['29']->matter?>: <span style="color:#FF6507;"><?=$item->rating?></span></div></div></div></td>
-       
-        </tr>
-        
-    <? $count ++;
-     }
-    ?>    
-        
-        <!--<tr>
-         <td style="padding-top:6px;"><div><div style="float:left;padding-right:10px;"><img src="<?=base_url();?>assets/imgs/hotvideo2.jpg"></div>
-              <div id="hotvi">12/08/09 <br/>The end show..<br/><span style="color:#FF6507;">650 views</span><br/>Philde carolis<br/><div id="hotimg" style="height:19px;width:128px;margin-top:9px;padding-top:2px;"><?=$more['29']->matter?>: <span style="color:#FF6507;">2.5/5</span></div></div></div></td>
-       
-         <td><div><div style="float:left; padding-right:10px;"><img src="<?=base_url();?>assets/imgs/hotvideo1.jpg"></div>
-              <div id="hotvi">12/08/09 <br/>The end show..<br/><span style="color:#FF6507;">650 views</span><br/>Philde carolis<br/><div id="hotimg" style="height:19px;width:128px;margin-top:9px;padding-top:2px;"><?=$more['29']->matter?>: <span style="color:#FF6507;">2.5/5</span></div></div></div></td>
-       
-        </tr>
-         
-        <tr>
-         <td style="padding-top:6px;"><div><div style="float:left;padding-right:10px;"><img src="<?=base_url();?>assets/imgs/hotvideo3.jpg"></div>
-              <div id="hotvi">12/08/09 <br/>The end show..<br/><span style="color:#FF6507;">650 views</span><br/>Philde carolis<br/><div id="hotimg" style="height:19px;width:128px;margin-top:9px;padding-top:2px;"><?=$more['29']->matter?>: <span style="color:#FF6507;">2.5/5</span></div></div></div></td>
-       
-         <td><div><div style="float:left; padding-right:10px;"><img src="<?=base_url();?>assets/imgs/hotvideo5.jpg"></div>
-              <div id="hotvi">12/08/09 <br/>The end show..<br/><span style="color:#FF6507;">650 views</span><br/>Philde carolis<br/><div id="hotimg" style="height:19px;width:128px;margin-top:9px;padding-top:2px;"><?=$more['29']->matter?>: <span style="color:#FF6507;">2.5/5</span></div></div></div></td>
-       
-        </tr> 
-         --></table>
-         <table>
-        <tr height="23" style="padding-top:6px;">
-         <td  style="background-color:#93D7FA; border:1px solid #9D9D9D; width:640px;" align="right"><?=$videocategeories['0']->name ?>>></td>
-        </tr>
-       
-       </table>
-    
-     </div>
-    <div class="TabbedPanelsContent">
-    
-          <table border="0" width="90%">
-          <?
-          $count=0;
-          foreach($relatedvideos as $item){
-          ?>
-        <tr>
-         <td><div><div style="float:left;padding-right:10px;"><a href="<?=base_url();?>video/index/<?=$item->id?>/<?=$item->video_cat_id?>"><img src="<?=base_url();?>assets/videos/image_preview/home_image<?=$item->id?>_thumb.jpg"></a></div>
-              <div id="hotvi"><?=$item->insert_date?> <br/><?=$item->name?><br/><span style="color:#FF6507;"><?=$item->no_of_views?> views</span><br/><?=$item->time?><br/><div id="hotimg" style="height:19px;width:128px;margin-top:9px;padding-top:2px;padding-left:5px;"><?=$more['29']->matter?>: <span style="color:#FF6507;"><?=$item->rating?></span></div></div></div></td>
-       
-         <td><div><div style="float:left;padding-right:10px;"><a href="<?=base_url();?>video/index/<?=$item->id?>/<?=$item->video_cat_id?>"><img src="<?=base_url();?>assets/videos/image_preview/home_image<?=$item->id?>_thumb.jpg"></a></div>
-              <div id="hotvi"><?=$item->insert_date?><br/><?=$item->name?><br/><span style="color:#FF6507;"><?=$item->no_of_views?> views</span><br/><?=$item->time?><br/><div id="hotimg" style="height:19px;width:128px;margin-top:9px;padding-top:2px;padding-left:5px;"><?=$more['29']->matter?>: <span style="color:#FF6507;"><?=$item->rating?></span></div></div></div></td>
-       
-        </tr>
-        <?
-        $count ++;
-          }
-        ?>
-        
-        <!--<tr>
-         <td style="padding-top:6px;"><div><div style="float:left;padding-right:10px;"><img src="<?=base_url();?>assets/imgs/hotvideo5.jpg"></div>
-              <div id="hotvi">12/08/09 <br/>The end show..<br/><span style="color:#FF6507;">650 views</span><br/>Philde carolis<br/><div id="hotimg" style="height:19px;width:128px;margin-top:9px;padding-top:2px;"><?=$more['29']->matter?>: <span style="color:#FF6507;">2.5/5</span></div></div></div></td>
-       
-         <td><div><div style="float:left; padding-right:10px;"><img src="<?=base_url();?>assets/imgs/hotvideo2.jpg"></div>
-              <div id="hotvi">12/08/09 <br/>The end show..<br/><span style="color:#FF6507;">650 views</span><br/>Philde carolis<br/><div id="hotimg" style="height:19px;width:128px;margin-top:9px;padding-top:2px;"><?=$more['29']->matter?>: <span style="color:#FF6507;">2.5/5</span></div></div></div></td>
-       
-        </tr>
-         
-        <tr>
-         <td style="padding-top:6px;"><div><div style="float:left;padding-right:10px;"><img src="<?=base_url();?>assets/imgs/hotvideo3.jpg"></div>
-              <div id="hotvi">12/08/09 <br/>The end show..<br/><span style="color:#FF6507;">650 views</span><br/>Philde carolis<br/><div id="hotimg" style="height:19px;width:128px;margin-top:9px;padding-top:2px;"><?=$more['29']->matter?>: <span style="color:#FF6507;">2.5/5</span></div></div></div></td>
-       
-         <td><div><div style="float:left; padding-right:10px;"><img src="<?=base_url();?>assets/imgs/hotvideo6.jpg"></div>
-              <div id="hotvi">12/08/09 <br/>The end show..<br/><span style="color:#FF6507;">650 views</span><br/>Philde carolis<br/><div id="hotimg" style="height:19px;width:128px;margin-top:9px;padding-top:2px;"><?=$more['29']->matter?>: <span style="color:#FF6507;">2.5/5</span></div></div></div></td>
-       
-        </tr> 
-         --></table>
-         <table width="100%">
-        <tr height="23" style="padding-top:6px;">
-         <td  style="background-color:#93D7FA; border:1px solid #9D9D9D; width:640px;" align="right"><?=$videocategeories['1']->name ?>>></td>
-        </tr>
-       
-       </table>
-    
-      </div>
-    
+    <?php } ?>
+  
       </div>
       </div>           
              
@@ -283,7 +178,7 @@
           	     
           	         <table width="95%" style="margin-left:6px;margin-right:4px; margin-top:6px;">
           	          <tr style="height:25px;">
-          	       			<td colspan="2" id="topvideo" style=padding-top:0px;"><?=$more['27']->matter?></td>
+          	       			<td colspan="2" id="topvideo" style=padding-top:0px;"><?=$more['34']->matter?></td>
           	          <tr>
           	          
           	          <tr>
@@ -301,7 +196,7 @@
           	            
           	            <tr>
           	            <td><div><a href="<?=base_url();?>video/index/<?=$item->id?>/<?=$item->video_cat_id?>"><img src="<?=base_url();?>assets/videos/image_preview/image<?=$item->id?>_thumb.jpg"></div></a></td>
-          	            <td  valign="top" id="topvi"><?=$item->name?><br/><?=$item->insert_date?><br/><span style="color:#FF6507;"><?=$item->no_of_views?> Views</span><br/><div id="topimg" style=height:15px;width:101px;padding-left:4px;margin-top:4px;padding-top:2px;"><?=$more['29']->matter?>:<span style="color:#FF6507;"> <?=$item->rating?></span></div></td>
+          	            <td  valign="top" id="topvi"><?=$item->name?><br/><?=$item->insert_date?><br/><span style="color:#FF6507;"><?=$item->no_of_views?> Views</span><br/><div id="topimg" style=height:15px;width:101px;padding-left:4px;margin-top:4px;padding-top:2px;"><?=$more['36']->matter?>:<span style="color:#FF6507;"> <?=$item->rating?></span></div></td>
           	            </tr>
           	          <?
           	          $count ++;
@@ -361,7 +256,7 @@
                     <td ><img src="<?=base_url();?>assets/imgs/all-video-topline.jpg"></td>
                   </tr>
                   <tr ><td><div style="height:144px;width:660px;border-left: 1px solid #9D9D9D; border-right: 1px solid #9D9D9D;">
-                         <div id="allvi"><?=$more['28']->matter?></div>
+                         <div id="allvi"><?=$more['35']->matter?></div>
                            
                           <div id="allimg" style="width:660px;">
                           

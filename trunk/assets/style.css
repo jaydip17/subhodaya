@@ -457,6 +457,9 @@ text-decoration:underline;
 	background-repeat: repeat-x;
 	height: 8px;
 	width:100%;
+	font-weight:bold;
+	color:red;
+	text-decoration:none;
 	} 
 
 #hotimg{
@@ -753,6 +756,13 @@ font-weight: bold;
 	text-align: justify;padding: 5px 5px 0px 15px;
 	font-size: 14px;
 	}
-	
+#vi-name{
+font-size:12px;
+font-weight:bold;
+color:#000000;
+padding-left:25px;
+padding-top:8px;
+
+	}	
 	
  

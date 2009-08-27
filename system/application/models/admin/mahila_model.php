@@ -116,8 +116,9 @@ class Mahila_Model extends Model {
     function active_mahila($id)
     {
     	$this->db->select('*');
-    	$array=array('mahila.cat_id'=>$id,'mahila.active'=>1);
+    	$array=array('mahila.cat_id'=>$id,'mahila.homepage'=>1);
     	$this->db->where($array);
+    	$this->db->order_by("mahila.insert_date", "desc");
 		$this->db->from('mahila_cat');
 		$this->db->join('mahila', 'mahila.cat_id= mahila_cat.id');
 		$query = $this->db->get_where();

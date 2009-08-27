@@ -1,3 +1,67 @@
+
+<script language="javascript">
+//<!--
+function detectBrowser()
+{
+var browser = navigator.appName;
+var b_version=navigator.appVersion;
+var version=parseFloat(b_version);
+
+}
+function getFlexApp(appName) {
+	  if (navigator.appName.indexOf ("Microsoft") !=-1) {
+	    return window[appName];
+	  } else {
+	    return document[appName];
+	  }
+	}
+
+function display_text(sample) {
+	var browser = navigator.appName;
+	if(browser == 'Microsoft Internet Explorer')
+	{
+	getFlexApp("FlashID").display_text(sample);	
+	}
+	if(browser == 'Netscape')
+	{
+    getFlexApp("sample123").display_text(sample);
+	}
+	
+}
+var limit_time = 2000;
+function display_text_1(){
+	detectBrowser();
+	display_text(1);
+		window.setTimeout("display_text_2(2)",limit_time);
+}
+function display_text_2(ss){
+	display_text(ss);
+	window.setTimeout("display_text_3(3)",limit_time);
+}
+function display_text_3(ss){
+	display_text(ss);
+	window.setTimeout("display_text_4(4)",limit_time);
+}
+function display_text_4(ss){
+	display_text(ss);
+	window.setTimeout("display_text_5(5)",limit_time);
+}
+function display_text_5(ss){
+	display_text(ss);
+	window.setTimeout("display_text_34(1)",limit_time);
+}
+function display_text_34(ss){
+	display_text(ss);
+	window.setTimeout("display_text_1()",limit_time);
+}
+function display(value)
+{
+  document.getElementById('flash-content').innerHTML = value;
+}
+
+//-->
+</script> 
+
 <style type="text/css">
 ul{
 list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
@@ -12,14 +76,55 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
        	<table width="0"  border="0" cellpadding="0" cellspacing="0">
     		<tr>
 	       		<td  valign="top" width="500">
-		       		<table width="100%"  border="0" cellpadding="0" cellspacing="0">
-		     			<tr><td height="4" valign="bottom"><img src="<?=base_url();?>assets/imgs/top-cor-line.jpg" width="500" height="4" /></td></tr>
-		            </table>
-	                <table width="100%"  border="0" style="border-left:1px solid #0872BC; border-right:1px solid #0872BC;" cellpadding="0" cellspacing="0">
-	                    <tr><td height="330"></td>
+		       		
+	                <table width="100%"  border="0"  cellpadding="0" cellspacing="0">
+	                    <tr><td >
+	                    
+	                    
+	                   <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="486" height="341">
+  <param name="movie" value="<?=base_url();?>assets/subh.swf" />
+  <param name="quality" value="high" />
+  <param name="wmode" value="opaque" />
+  <param name="swfversion" value="9.0.45.0" />
+  <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don’t want users to see the prompt. -->
+  <param name="expressinstall" value="<?=base_url();?>assets/Scripts/expressInstall.swf" />
+  <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
+  <!--[if !IE]>-->
+  <object id="sample123" type="application/x-shockwave-flash" data="<?=base_url();?>assets/subh.swf" width="486" height="341">
+    <!--<![endif]-->
+    <param name="quality" value="high" />
+    <param name="wmode" value="opaque" />
+    <param name="swfversion" value="9.0.45.0" />
+    <param name="expressinstall" value="<?=base_url();?>assets/Scripts/expressInstall.swf" />
+    <!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
+    <div>
+      <h4>Content on this page requires a newer version of Adobe Flash Player.</h4>
+      <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" /></a></p>
+    </div>
+    <!--[if !IE]>-->
+  </object>
+  <!--<![endif]-->
+</object>
+<script type="text/javascript">
+//<!--
+var browser = navigator.appName;
+if(browser == 'Microsoft Internet Explorer')
+{
+	swfobject.registerObject("FlashID");
+}
+else
+	swfobject.registerObject("sample123");
+//-->
+</script>
+<div id="flash-content" style="position:absolute; width:604px; top: 450px; color:white; padding:5px 5px 5px 5px; vertical-align:top; left:41px; height: 40px;text-align: left;"> 
+sample sf dsfsd fdsf
+</div>
+	                    
+	                    
+	                    
+	                    </td>
 	                    </tr>
 	                </table></td></tr>
-	                <tr><td><img src="<?=base_url();?>assets/imgs/top-crow-botom.jpg" width="500"/></td></tr>
          </table>
          </td>
      </tr>

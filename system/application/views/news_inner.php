@@ -1,4 +1,8 @@
-
+<style type="text/css">
+ul{
+list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
+}
+</style>
 <table width="99%">
 	<tr>
 		<td width="185" height="100%" valign="top" >

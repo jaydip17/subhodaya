@@ -147,7 +147,7 @@ height:318px;
 #botom-ser{
       background-image:url(imgs/botom-med.jpg);
 	  background-repeat:repeat-x;
-	  height:109;
+	  height:150px;
 }
 #political{
       border-left:1px solid #0474b6;
@@ -230,7 +230,8 @@ font-size: 14px;
 	font-weight: bold;
 }
 #changeview{
-	padding-left: 135px;
+	text-align: right;
+	
 }
 #news_inner{
 	width:100%;

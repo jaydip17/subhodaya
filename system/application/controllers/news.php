@@ -6,6 +6,8 @@ class News extends Controller {
 		$this->load->model("admin/News_Model");
 		$this->load->model("admin/Poll_Model");
 		$this->load->model("admin/Cinema_Model");
+		$this->load->model("admin/Sahithi_Model");
+		$this->load->model("admin/Mahila_Model");
 	}
 	function index(){
 		$more=$this->News_Model->more_news();
@@ -45,12 +47,21 @@ class News extends Controller {
 		$onload = "loadNews('".base_url()."newslist/listview/".$type."')";
 		$more=$this->News_Model->more_news();
 		$type=$this->uri->segment(3,0);
+		$active_news=$this->News_Model->active_news1();
 		$totel_rows=$this->News_Model->get_news($type,$count=true,$limit=0);
 		$news=$this->News_Model->get_news($type,$count=false);
-		$data=array(	'news'  =>$news,
-						'more'=>$more,
-						'onload' => $onload
-					/*'pagination'=>$pagination*/);
+		$mahila_details=$this->Mahila_Model->active_mahila($type=2);
+		$mahila_details1=$this->Mahila_Model->active_mahila($type=7);
+		
+		$data=array(	'news'  		  =>	$news,
+						'more'			  =>	$more,
+						'onload'    	  => 	$onload,
+						'active_news'	  =>	$active_news,
+						'mahila_details'  =>   $mahila_details,
+						'mahila_details1'  =>  $mahila_details1
+						
+						
+				);
 		$this->load->view("news_content",$data);
 	}
 	function newsdetails(){

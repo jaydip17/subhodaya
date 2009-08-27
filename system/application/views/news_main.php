@@ -23,7 +23,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 							       <li class="selected" style="text-align: center;"><a href="#tab1"><em style="width: 90px;"><?php if(isset($news_type1['0'])){echo $news_type1['0']->news_cat;}?></em></a></li>
 							        <li style="text-align: center;"><a href="#tab2"><em style="width: 92px;"><span id="telugufont"><?php if(isset($news_type2['0'])){echo $news_type2['0']->news_cat;}?></span></em></a></li>
 							        <li style="text-align: center;"><a href="#tab3"><em style="width: 120px;"><span id="telugufont"><?php if(isset($news_type3['0'])){echo $news_type3['0']->news_cat;}?></span></em></a></li>
-									<li style="text-align: center;"><a href="#tab3"><em style="width: 90px;"><span id="telugufont"><?php if(isset($news_type4['0'])){echo $news_type4['0']->news_cat;}?></span></em></a></li>
+									<li style="text-align: center;"><a href="#tab4"><em style="width: 90px;"><span id="telugufont"><?php if(isset($news_type4['0'])){echo $news_type4['0']->news_cat;}?></span></em></a></li>
 	    						</ul>            
     							<div class="yui-content" >
 							        <div id="tab1"><p>
@@ -112,7 +112,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 							        		</div>
 							        		<div id="more-news-div" style="padding-right: 2px;"><span id="news-more"><a href="<?=base_url();?>news/details/<?if(isset($active_news3['0'])){ echo $active_news3['0']->type; }?>"><?=$more['0']->matter?></a></span></div>
 							        </p></div>
-									<div id="tab3"><p>
+									<div id="tab4"><p>
 										<div style="height:235px;" id="telugufont1">
 							        		<a href="<?=base_url();?>news/newsdetails/<?=$active_news4['0']->id?>"><img src="<?=base_url();?>assets/news/news_img<?=$active_news4['0']->id?>_thumb.jpg" style="float: left;padding: 2px 19px 2px 1px;text-align: left;text-align: justify;" height="121" width="93" border="0"></img></a>
 							        		<div id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?=$active_news4['0']->id?>"><?=$active_news4['0']->heading?></a></div>

@@ -1,8 +1,5 @@
-<style type="text/css">
-ul{
-list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
-}
-</style>
+
+
 <table width="99%" height="99%"  border="0" cellpadding="0" cellspacing="0">
         <tr>
           <td width="389" valign="top" height="329"><table width="100%" border="0" cellpadding="0" cellspacing="0">
@@ -29,7 +26,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
     							<div style="height: 175px;" id="telugufont1"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type7['0'])){echo $news_type7['0']->id;}?>"><img src="<?=base_url();?>assets/news/news_img39_thumb.jpg" align="top" style="padding: 0px 18px 1px 2px;float: left;border: 0px;" height="121" width="93"></img></a>
     									<font id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type7['0'])){echo $news_type7['0']->id;}?>"><?php if(isset($news_type7['0'])){echo $news_type7['0']->heading;}?></a></font><br>
 							        	<font style="text-align: justify;"><?php if(isset($news_type7['0'])){echo $news_type7['0']->summary;}?></font>
-							        	<div id="more-news-div"><a href="<?=base_url();?>news/details/<?=$news_type7['0']->id?>"><?php if(isset($more['0'])){echo $more['1']->matter;}?></a></div>
+							        	<div id="more-news-div"><a href="<?=base_url();?>news/newsdetails/<?=$news_type7['0']->id?>"><?php if(isset($more['0'])){echo $more['1']->matter;}?></a></div>
 							        	<ul id="mainnews" >
 								        	<li style="padding: 1px"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type7['1'])){echo $news_type7['1']->id;}?>"><?php if(isset($news_type7['1'])){echo $news_type7['1']->heading;}?></a></li>
 								        	<li style="padding: 1px"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type7['2'])){echo $news_type7['2']->id;}?>"><?php if(isset($news_type7['2'])){echo $news_type7['2']->heading;}?></a></li>
@@ -472,7 +469,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
                       <tr>
                         <td width="6" id="img-senter"><img src="<?=base_url();?>assets/imgs/tock-line.jpg" width="7" /></td>
                         <td valign="bottom" id="img-senter" align="left" style="margin-bottom: 10px;">
-                        <table><tr><td width="20%"><img src="<?=base_url();?>assets/imgs/001.jpg"></img></td><td width="80%" id="telugufont"><?if(isset($home_stories['0'])){echo $home_stories['0']->heading;}?></td></tr></table>
+                        <table><tr><td width="20%"><img src="<?=base_url();?>assets/imgs/001.png"></img></td><td width="80%" id="telugufont"><?if(isset($home_stories['0'])){echo $home_stories['0']->heading;}?></td></tr></table>
                         </td>
                         <td width="6"><img src="<?=base_url();?>assets/imgs/tock-line-right.jpg" width="6" height="34" /></td>
              		 </tr>

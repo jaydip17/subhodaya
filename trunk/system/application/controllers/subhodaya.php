@@ -45,7 +45,7 @@ class Subhodaya extends Controller {
 					'active_news'=>$active_news,
 		            'active_news1'=>$active_news1,
 		            'sahithi_details'=>$sahithi_details,
-		           'mahila_details'=>$mahila_details,
+		            'mahila_details'=>$mahila_details,
 					'images'=>$images,
 					'greetings1'=>$greetings1,
 		            'home_stories' =>$home_stories

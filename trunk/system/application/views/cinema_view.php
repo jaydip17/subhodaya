@@ -116,7 +116,7 @@ else
 	swfobject.registerObject("sample123");
 //-->
 </script>
-<div id="flash-content" style="position:absolute; width:604px; top: 450px; color:white; padding:5px 5px 5px 5px; vertical-align:top; left:41px; height: 40px;text-align: left;"> 
+<div id="flash-content" style="position:absolute; width:604px; top: 385px; color:white; padding:5px 5px 5px 5px; vertical-align:top; left:41px; height: 40px;text-align: left;"> 
 sample sf dsfsd fdsf
 </div>
 	                    

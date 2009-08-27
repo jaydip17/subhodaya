@@ -159,7 +159,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
         </tr>
         <tr>
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="109" /></td>
-          <td valign="top" id="botom-ser"><ul><?for($i=5;$i<=9;$i++)
+          <td valign="top" id="botom-ser"><ul><?for($i=5;$i<=7;$i++)
           {?>
          <li><a href="<?=base_url();?><?=$type;?>/details/<?=$details[$i]->id?>"><? echo $details[$i]->cat_name;?></li>
          <?}?>

@@ -202,14 +202,16 @@ color:red;
 }
 
 #more-news-div{
-padding-right:5px;
-text-align:right;
-text-decoration:none;
+text-align: right;
+text-decoration: none;
 font-size: 14px;
 }
 #more-news-div a:link{
 	text-decoration: none;
+<<<<<<< .mine
+=======
 	font-size: 14px;
+>>>>>>> .r165
 	color: red;
 	}
 #more-news-div a:hover{
@@ -254,15 +256,14 @@ height: 27px;
 }
 .help{
 height: 30px;
-border-bottom: 2px solid #9FA0A0;  
+border-bottom: 2px solid #9FA0A0; 
 width: 89%; 
 }
 .content{
- 
-padding:10px;
+width: 98%;
+padding:30px 10px 10px 10px;
 font-size:14px;
 letter-spacing:2px;
-
 }
 #sahithi-table
 {
@@ -277,9 +278,8 @@ letter-spacing:2px;
                     
 #maindiv-news{
 border:1px solid #9FA0A0;
-padding-bottom:20px;
 }
-#formdiv{  
+#formdiv{
 	border: 1px solid #B5E8FD; width:80%;
 	
 }
@@ -537,6 +537,9 @@ padding-top:0px;
  font-weight:bold;
   padding-left:4px;
   text-align:left;
+<<<<<<< .mine
+ padding-top:2px;
+ }=======
  }
 #telugufont1{
 	font-size: 14px;

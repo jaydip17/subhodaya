@@ -138,13 +138,13 @@ class Sahithi_Model extends Model {
 		$query = $this->db->get_where();
 		return $query->result();
     }
-    function get_home_stories()
+    function get_home_stories($type)
     {
     	$this->db->select('id,heading,summary');
-    	$where=array('homepage'=>'1','cat_id'=>'2');
+    	$where=array('homepage'=>'1','cat_id'=>$type);
     	$this->db->where($where);
     	$this->db->limit(2);
-    	$this->db->order_by('id');
+    	$this->db->order_by('id','desc');
     	$query=$this->db->get('sahithi');
     	return $query->result();
     }

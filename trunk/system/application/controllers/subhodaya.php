@@ -27,7 +27,7 @@ class Subhodaya extends Controller {
 		$mahila_details=$this->Mahila_Model->active_mahila(1,$type='home');
 	    $greetings1=$this->Greeting_Model->get_main_greetings(1);
         $details=$this->Gallery_Model->get_cateimage(11);
-        $home_stories=$this->Sahithi_Model->get_home_stories();
+        $home_stories=$this->Sahithi_Model->get_home_stories($type=2);
 		$images=array();
 		foreach($details as $item)
 		{

@@ -122,12 +122,12 @@ echo form_label ( 'Select image', 'image0' );
 	</tr>
 	
 	<tr>
-		<td></td>
+		<td>Display for home </td>
 		<td>
-		<div id='tablediv'>
-		<table id='table'>
-		</table>
-		</div>
+		
+		<?=form_checkbox('active',1)?>
+		
+	
 		</td>
 	</tr>
 	

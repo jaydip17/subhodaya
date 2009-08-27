@@ -103,10 +103,21 @@ class News_Model extends Model
 		$query = $this->db->get_where();
 		return $query->result();
     }
-    function active_news($id)
+    function active_news($type)
     {
     	$this->db->select('*');
-    	$array=array('news.type'=>$id,'news.active'=>1);
+    	$array=array('news.type'=>$type,'news.active'=>1);
+    	$this->db->where($array);
+		$this->db->from('news_types');
+		$this->db->join('news', 'news.type= news_types.id');
+		$query = $this->db->get_where();
+		return $query->result();
+    	
+    }
+     function active_news1()
+    {
+    	$this->db->select('*');
+    	$array=array('news.active'=>1);
     	$this->db->where($array);
 		$this->db->from('news_types');
 		$this->db->join('news', 'news.type= news_types.id');

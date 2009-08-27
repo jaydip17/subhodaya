@@ -74,9 +74,15 @@
 	{ 
 		$title = array();
 		$title =$_POST['title'];
+		if(!isset($_POST['active'])){
+			
+			$active=0;
+		}else{
+			$active=$_POST['active'];
+		} 
 	 //print_r($title);
 		
-	  $this->Gallery_model->addImage($title,$_POST['parentid1']);
+	  $this->Gallery_model->addImage($title,$_POST['parentid1'],$active);
 	   redirect('admin/gallery/root_forimages');
 	}
 	

@@ -6,6 +6,7 @@ class Cinema extends Controller {
 		$this->load->model("admin/Cinema_Model");
 		$this->load->model("admin/News_Model");
 		$this->load->model("admin/Poll_Model");
+		$this->load->model("admin/Greeting_Model");
 	}
 	function index(){
 		$more=$this->News_Model->more_news();
@@ -36,9 +37,23 @@ class Cinema extends Controller {
 		$more=$this->News_Model->more_news();
 		$id=$this->uri->segment(3,0);
 		$result=$this->Cinema_Model->get_all($id);
-		$data=array('more'=>$more,
-					'result'=>$result,
-					'onload' => $onload);
+		$active_news=$this->Cinema_Model->get_activenews();
+		$active_news1=$this->Cinema_Model->get_activenews1(1);
+		$active_news2=$this->Cinema_Model->get_activenews1(5);
+		$active_news3=$this->Cinema_Model->get_activenews1(3);
+		$active_news4=$this->Cinema_Model->get_activenews1(4);
+		//greetings
+		$greetings4=$this->Greeting_Model->get_main_greetings(4);
+		//print_r($greetings4);
+		$data=array('more'			=>	$more,
+					'result'		=>	$result,
+					'onload' 		=> 	$onload,
+					'active_news'	=>	$active_news,
+					'active_news1'  =>  $active_news1,
+					'active_news2'	=>  $active_news2,
+					'active_news3'	=>  $active_news3,
+					'active_news4'	=>	$active_news4,
+					'greetings4'	=>  $greetings4);
 		$this->load->view('cinema_content',$data);
 	}
 	function inner(){

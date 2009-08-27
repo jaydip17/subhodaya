@@ -95,12 +95,12 @@
  		return $result->result();
 	}
   	//rename,add image into database and folder assets	
- 	function addImage($title,$parentid) 	{
+ 	function addImage($title,$parentid,$active) 	{
  	   $i=0;
  	   $this->load->library('image_lib');
  	  foreach($title as $item)
  	  {
- 		$this->db->insert('gallery_images',array('title'=>$item, 'parentid'=>$parentid));
+ 		$this->db->insert('gallery_images',array('title'=>$item, 'parentid'=>$parentid,'active'=>$active));
  		
  		
  	    $id = $this->db->insert_id();

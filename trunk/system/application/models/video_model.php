@@ -14,21 +14,22 @@ class Video_model extends Model
 	function getvideocategeories()
 	{
 	//if($limit!=0)
-		//{
-	    //$this->db->limit($limit);
-		//}
+	//{
+	//  $this->db->limit($limit);
+	// }
 	   $query=$this->db->get('videos_categeory');
 	   return $query->result();
 	}
 	
   function getvideos($id,$bywhat)
 	 {
-	 
+	
 		$flag=1;
 		$query='';
 		if($bywhat!='')
 		{
-			$query.= "where to_Days(sysdate())- to_days(insert_date) >=" .$bywhat." and videouploaded=1 order by name asc";
+		
+		$query.= "where to_Days(sysdate())- to_days(insert_date) >=" .$bywhat." and videouploaded=1 order by name asc";
 			$flag=0;
 		}
 		if($id!=0)
@@ -42,7 +43,7 @@ class Video_model extends Model
 		$query.=" order by name asc";
 		}
 			
-		return $query->result();
+		return $query;
 	}
 	
  function getvideoname($id)
@@ -76,7 +77,7 @@ function getlatestvideos($limit,$catid,$id)
 		
 	}
 	
- function getvideosnames($id)
+ function getvideosnames($limit)
 	{
 		//$this->db->where('id',$id);
 		$this->db->select('name');
@@ -95,28 +96,46 @@ function getlatestvideos($limit,$catid,$id)
 		return $query->result();
 	}
 	
-function getmusicvideos($limit,$id)
-{   
-	$this->db->where('videos_categeory',$id);
-	$this->db->where('video_uploaded',1);
-	$this->db->limit($limit);
-	$query =$this->db->get('videos');
-	return $query->result();	
-}
+
 	
-  function getvideo($id,$table){
+ function getvideo($id)
+        {
+      	$this->db->where('video_uploaded',1);
+      	$this->db->where('video_cat_id',$id);
+      	$query=$this->db->get('videos');
+      	return $query;
+       }
   
-  	$this->db->where('video_uploaded',1);
-  	$query=$this->db->get('videos');
-  	return $query->result();
-  }
-	
+       
+function getmusicvideos($limit,$id)	
+{
+	$this->db->where('video_uploaded',1);
+	$this->db->where('video_cat_id',$id);
+	$query=$this->db->get('videos',$limit);
+	return $query;
+}      
+       
+function getcamedyvideos($limit,$id)	
+{
+	$this->db->where('video_uploaded',1);
+	$this->db->where('video_cat_id',$id);
+	$query=$this->db->get('videos',$limit);
+	return $query->result();
+}
+
+ function getmoviesandfilmmakersvideos($limit,$id)
+{
+    $this->db->where('video_uploaded',1);
+	$this->db->where('video_cat_id',$id);
+	$query=$this->db->get('videos',$limit);
+	return $query;
+}
+       
   function increase_viewcount($id)
    
 	 {
 	 	
 		    $this->db->query('update videos set no_of_views=no_of_views+1 where id='.$id);
-		
 	}
 }
 ?>

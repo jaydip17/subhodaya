@@ -93,20 +93,20 @@ padding-top:0px;
 					<table cellpadding="0" cellspacing="0">
 					<tr>
 					<td><img src="<?=base_url();?>assets/imgs/beauty-top-left.gif" width="8" height="23" /></td>
-					<td width="208px" style="background-image:url(<?=base_url();?>assets/imgs/beauty-top-center.gif);background-repeat-x;"><span id="newsheading"><span id="newsheading"><?=$details['8']->cat_name?></span></td>
+					<td width="208px" style="background-image:url(<?=base_url();?>assets/imgs/beauty-top-center.gif);background-repeat-x;"><span id="newsheading"><span id="newsheading"><?=$details_mahila['0']->cat_name?></span></td>
 					<td><img src="<?=base_url();?>assets/imgs/beauty-top-right.gif" width="8" height="23" alt="gg" /></td>
 					</tr>
 					<tr>
 					<td height="151px" valign="top" colspan="3" style="background-image:url(<?=base_url();?>assets/imgs/KitchenTips-cr.gif);background-repeat-x;border:1px solid #0A70BB;border-bottom:0px;">
 					<div style="height: 120px;" id="telugufont"><ul id="mainnews">
-	              <?if(!empty($details_more['8'])){
-	              foreach($details_more['8'] as $item) {?>
+	              <?if(!empty($details_more_mahila['1'])){
+	              foreach($details_more_mahila['1'] as $item) {?>
 
-	              <li><?=$item->heading?></li>
+	              <li><a href="<?=base_url();?>mahila/mahiladetails/<?=$item->id?>"><?=$item->heading?></li>
 	              <?}} ?>
 	                 </ul>
 	                 </div>
-	                 <div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>sahithi/details/<?if(isset($types['8'])){ echo $types['8']; }?>"><?=$more['0']->matter?></a></span></div>
+	                 <div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>mahila/details/<?if(isset($types_mahila['1'])){ echo $types_mahila['1']; }?>"><?=$more['0']->matter?></a></span></div>
 	                </td>
 					</tr>
 					<tr>
@@ -116,21 +116,21 @@ padding-top:0px;
 					<table cellpadding="0" cellspacing="0" style="margin:7px 0px 7px 0px;">
 					<tr>
 					<td><img src="<?=base_url();?>assets/imgs/beauty-top-left.gif" width="8" height="23" /></td>
-					<td width="208px" style="background-image:url(<?=base_url();?>assets/imgs/beauty-top-center.gif);background-repeat-x;"><span id="newsheading"><?=$details['9']->cat_name?></span></td>
+					<td width="208px" style="background-image:url(<?=base_url();?>assets/imgs/beauty-top-center.gif);background-repeat-x;"><span id="newsheading"><?=$details_mahila['1']->cat_name?></span></td>
 					<td><img src="<?=base_url();?>assets/imgs/beauty-top-right.gif" width="8" height="23" alt="gg" /></td>
 					</tr>
 					<tr>
 					<td height="151px" valign="top" colspan="3" style="background-image:url(<?=base_url();?>assets/imgs/KitchenTips-cr.gif);background-repeat-x;border: 1px solid #0A70BB;border-bottom: 0px;">
 					<div style="height: 120px;" id="telugufont">
 					<ul id="mainnews">
-	              <?if(!empty($details_more['9'])){
-	              foreach($details_more['9'] as $row) {?>
+	              <?if(!empty($details_more_mahila['2'])){
+	              foreach($details_more_mahila['2'] as $row) {?>
 
-	              <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$row->id?>"><?=$row->heading ?></a></li>
+	              <li><a href="<?=base_url();?>mahila/mahiladetails/<?=$row->id?>"><?=$row->heading?></a></li>
 	              <?}} ?>
 	                 </ul>
 	                 </div>
-	                 <div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>sahithi/details/<?if(isset($types['9'])){ echo $types['9']; }?>"><?=$more['0']->matter?></a></span></div>
+	                 <div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>mahila/details/<?if(isset($types_mahila['2'])){ echo $types_mahila['2']; }?>"><?=$more['0']->matter?></a></span></div>
 	                </td>
 					</tr>
 					<tr>

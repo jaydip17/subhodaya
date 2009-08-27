@@ -8,18 +8,29 @@ class Sahithi extends Controller {
 		$this->load->model("admin/Cinema_Model");
 	}
 	function index(){
+		$this->load->model('admin/mahila_Model');
 		$more=$this->News_Model->more_news();
 		$details=$this->Sahithi_Model->get_sahithitype();
 		$details_more=array();
 		foreach($details as $item)
 		$details_more[$item->id]=$this->Sahithi_Model->getdetails($item->id,'yes');
+		
+			$details_mahila=$this->mahila_Model->get_mahilatype();
+		$details_more_mahila=array();
+		foreach($details_mahila as $item)
+		$details_more_mahila[$item->id]=$this->mahila_Model->getdetails($item->id,'yes');
+	
 		$types = array_keys($details_more);
+		$types_mahila =array_keys($details_mahila);
 		//print_r($details_more);
 		//print_r($types);
 		$data=array('more'      =>$more,
 		            'details'   =>$details,
 		            'details_more' => $details_more,
-		               'types'           =>   $types);
+		             'types'        =>   $types,        
+		             'details_more_mahila' => $details_more_mahila,
+		             'details_mahila'   => $details_mahila,
+		             'types_mahila'  => $types_mahila);
 		
 		$this->load->view('sahithi_view',$data);
    }

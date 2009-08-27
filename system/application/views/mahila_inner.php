@@ -69,6 +69,7 @@ padding-bottom:5px;
 			<div id="maindiv-news">
 			<div class="help">
 			</div>
+			<font color="red"> <? if($this->uri->segment(4)==-1){echo "can't send mail";}else if($this->uri->segment(4)==1){echo "mail sent succesfully";}?></font>
 			</div>
 			</tr>
 			<tr>
@@ -83,7 +84,7 @@ padding-bottom:5px;
 			<tr><td align="center"><div style="border:1px solid #9FA0A0;">
 			<form method="post" action="<?=base_url();?>subhodaya/sendmail">
 			
-			<input type="hidden" name="url" value="<?=base_url()?>subhodaya/<?=$type?>/<?=$type?>details/<?=$result['0']->id?>">
+			<input type="hidden" name="url" value="<?=base_url()?><?=$type?>/<?=$type?>details/<?=$result['0']->id?>">
 			<table id="formdiv">
 				<tr><td valign="top" colspan="2"><div style="background-color: #B5E8FD;height:20px;"></div></td></tr>
 				<tr><td width="150px" align="left"><?=$more['27']->matter;?></td><td><input type="text" name="name" size="30"></td></tr>

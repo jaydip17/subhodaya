@@ -225,7 +225,7 @@ class Video_Model extends Model {
  function editvideo($id)
    {
    	 $this->db->where('id',$id);
-   	 $this->db->update('videos',array('id' => $_POST['id'], 'name' => $_POST['name'], 'no_of_views' => $_POST['no_of_views']));
+   	 $this->db->update('videos',array('id' => $_POST['id'], 'name' => $_POST['name'], 'no_of_views' => $_POST['no_of_views'] , 'rating' => $_POST['rating']));
    	 	
    }
    	   

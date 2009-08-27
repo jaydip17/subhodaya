@@ -18,7 +18,7 @@
 		
 		<th>Delete</th>
 		
-		</th>Edit</th>
+		<th>Edit</th>
 		
 		</tr>
 		

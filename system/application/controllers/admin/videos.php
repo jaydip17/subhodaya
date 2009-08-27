@@ -20,7 +20,7 @@ class Videos extends Controller {
 		$this->flash_video->initialize($config);
 		$jslinks = $this->flash_video->getcode();
 		$data = array('videoplayer' => $jslinks, 'catid'=>$catid );
-		$this->load->view('admin/player',$data);       
+		$this->load->view('admin/addvideocategeory.php',$data);       
 			 
 		
 	}
@@ -49,9 +49,7 @@ class Videos extends Controller {
 	function addvideo()
 	{
 		$this->Video_Model->addvideo();
-		
-		
-	// redirect(base_url()."admin/videos/viewaddvideo");
+		redirect(base_url()."admin/videos/viewaddvideo");
 		
 	}
 	
@@ -79,7 +77,7 @@ class Videos extends Controller {
 		$id=$this->uri->segment(4);
 		$catid= $this->uri->segment(5);
 		$this->Video_Model->deletevideo($id);
-		redirect(base_url().'admin/videos/categeories');
+		redirect(base_url().'admin/videos/getvideos/'.$catid);
 	} 
 	 
 	 
@@ -90,7 +88,7 @@ class Videos extends Controller {
 			$id=$_POST['id'];
 			$this->Video_Model->editvideo($id);
 			$catid= $_POST['video_cat_id'];
-		    redirect(base_url().'admin/videos/addvideo/'.$catid);
+		    redirect(base_url().'admin/videos/getvideos/'.$catid);
 		}
 		else {
 			
@@ -110,7 +108,7 @@ class Videos extends Controller {
 		redirect(base_url().'admin/videos/categeories');
 	}
 	
-  function editcategeory()
+     function editcategeory()
 	 {
 		if (isset($_POST['edit']))
 		{

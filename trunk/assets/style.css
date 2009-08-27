@@ -147,7 +147,7 @@ height:318px;
 #botom-ser{
       background-image:url(imgs/botom-med.jpg);
 	  background-repeat:repeat-x;
-	  height:150px;
+	  height:120px;
 }
 #political{
       border-left:1px solid #0474b6;
@@ -208,10 +208,7 @@ font-size: 14px;
 }
 #more-news-div a:link{
 	text-decoration: none;
-<<<<<<< .mine
-=======
 	font-size: 14px;
->>>>>>> .r165
 	color: red;
 	}
 #more-news-div a:hover{
@@ -547,9 +544,7 @@ padding-top:0px;
  font-weight:bold;
   padding-left:4px;
   text-align:left;
-<<<<<<< .mine
  padding-top:2px;
- }=======
  }
 #telugufont1{
 	font-size: 14px;

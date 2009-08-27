@@ -101,7 +101,7 @@ class Video_Model extends Model {
         $config4['source_image'] = $dir1.'/'.$filename;
         $config4['new_image'] = 'home_image'.$i.'.jpg';
       	$config4['create_thumb'] = TRUE;
-		$config4['maintain_ratio'] = TRUE;
+		$config4['maintain_ratio'] = TRUE;     
 		$config4['width'] = 122;
 		$config4['height'] = 89;
     	

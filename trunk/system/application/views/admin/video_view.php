@@ -44,10 +44,19 @@
 		<td><? echo form_label('Preview Image','image');?></td>
 		<td><?=form_upload('image');?></td>
 	</tr>
+	
+	<tr>
+		<td>Active</td>
+		<td align="left"><input type="checkbox" name="active" value="1"  /></td>
+	</tr>
+	
 	<tr>
 		<td colspan="2" align="center">
 		<? echo form_submit('submit','upload');?>
 		</td>
 	</tr>
+	
+	
+	
 </table>
 <?=form_close() ?>

@@ -7,18 +7,29 @@ class Mahila extends Controller {
 		$this->load->model("admin/Cinema_Model");
 	}
 	function index(){
-		
+		 $this->load->model('admin/Sahithi_Model');
 		$this->load->model("admin/News_Model");
 		$more=$this->News_Model->more_news();
 		$details=$this->mahila_Model->get_mahilatype();
 		foreach($details as $item)
 		$details_more[$item->id]=$this->mahila_Model->getdetails($item->id,'yes');
+		
+		$details_sahithi=$this->Sahithi_Model->get_sahithitype();
+		$details_more_sahithi=array();
+		foreach($details_sahithi as $item)
+		$details_more_sahithi[$item->id]=$this->Sahithi_Model->getdetails($item->id,'yes');
+	
+		
 		$types = array_keys($details_more);
+		$types_sahithi =array_keys($details_sahithi);
 		//print_r($details_more);
 		$data=array('more'      =>$more,
 		            'details'   =>$details,
 		            'details_more' => $details_more,
-		             'types'       => $types);
+		             'types'       => $types,
+		             'details_more_sahithi'  =>$details_more_sahithi,
+		             'details_sahithi'   => $details_sahithi
+		             );
 		$this->load->view('mahila_view',$data);
   }
  function mahiladetails(){
@@ -36,7 +47,7 @@ class Mahila extends Controller {
 		$details_more=array();
 		foreach($details_sahithi as $item)
 		$details_more[$item->id]=$this->Sahithi_Model->getdetails($item->id,'yes');
-		//more from same categeory
+	
 		$evenmore=$this->mahila_Model->evenmore($id);
 		//print_r($details);
 		$data=array('result'   =>   $result,

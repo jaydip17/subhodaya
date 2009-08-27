@@ -32,6 +32,7 @@ class Video_model extends Model
 		{
 			$this->db->where('video_cat_id',$type);
 		}
+       
 		$query = $this->db->get('videos');
 		return $query;
 		

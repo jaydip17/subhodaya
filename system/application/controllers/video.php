@@ -10,6 +10,7 @@ class Video extends Controller {
 	    	 
 		$latestvideos = $this->video_Model->get_videos('latest',4);
 		$topviewedvideos = $this->video_Model->get_videos('top',7);
+		$videosnames=$this->video_Model->getvideosnames('name',15);
 	    $videocategeories = $this->video_Model->getvideocategeories(3);
 	    $hotvideos=array();
 	    foreach($videocategeories->result() as $item)
@@ -38,7 +39,7 @@ class Video extends Controller {
                   'videocategeories'=>$videocategeories,
                  'topviewedvideos'=>$topviewedvideos,
                          'hotvideos' => $hotvideos,
-	                   
+	                  'videosnames'=>$videosnames,
        
         );
             

@@ -35,21 +35,10 @@
           </tr>
           <?} ?> 
 	
-<!--
-          
-         <tr>
-           <td align="center"><div margin-left:4px;"><img src="<?=base_url();?>assets/imgs/latest2.jpg"></div></td>
-           <td><div id="li-vi">12/08/09<br/><?=$more['31']->matter?><br/><span style="color:#FF6507;font-size:12px;">650 views</span><br/><?=$more['36']->matter?>:<span style="color:#FF6507;">2.5/5</span></div></td>
-         </tr>
+
           <tr>
-           <td align="center"><div margin-left:4px;"><img src="<?=base_url();?>assets/imgs/latest3.jpg"></div></td>
-           <td><div id="li-vi">12/08/09<br/><?=$more['31']->matter?><br/><span style="color:#FF6507;font-size:12px;">650 views</span><br/><?=$more['36']->matter?>:<span style="color:#FF6507;">2.5/5</span></div></td>
+          <td colspan="2" align="right" id="vi_heading"><a href="#"><?=$more['0']->matter?></a></td>
           </tr>
-           <tr>
-           <td align="center"><div margin-left:4px;"><img src="<?=base_url();?>assets/imgs/latest4.jpg"></div></td>
-           <td><div id="li-vi">12/08/09<br/><?=$more['31']->matter?><br/><span style="color:#FF6507;font-size:12px;">650 views</span><br/><?=$more['36']->matter?>:<span style="color:#FF6507;">2.5/5</span></div></td>
-          </tr>
-          --><tr><td colspan="2" align="right" id="vi_heading"><a href="#"><?=$more['0']->matter?></a></td></tr>
         </table>
        
      </td>
@@ -115,31 +104,37 @@
        
        	foreach($item->result() as $video){
          ?>
-       <div style="float:left;vertical-align:middle;">
+       <div style="float:left;vertical-align:middle;padding-right:20px;padding-bottom:10px;">
        <div style="vertical-align:middle;float:left;text-align:justify;padding-right:10px;">
         <a href="<?=base_url();?>video/index/<?=$video->id?>/<?=$video->video_cat_id?>">
         <img id="img" src="<?=base_url();?>assets/videos/image_preview/home_image<?=$video->id?>_thumb.jpg"></a>
         </div>
-          <?=$video->insert_date?> <br/><?=$video->name?><br/>
-           <span style="color:#FF6507;padding-top:5px;"><?=$video->no_of_views?> views</span>
-           <br/><?=$video->time?><br/>
-           <div id="hotimg"><?=$more['36']->matter?>: <span style="color:#FF6507;"><?=$video->rating?></span>
-           </div>
+         <span style="font-size:12px;font-weight:bold;"><?=$video->insert_date?></span><br/><span style="font-size:12px;font-weight:bold;"><?=$video->name?></span><br/>
+           <span style="font-size:12px;font-weight:bold;color:#FF6507;padding-top:7px;"><?=$video->no_of_views?> views</span>
+           <br/><span style="font-size:12px;font-weight:bold;padding-top:3px;"><?=$video->time?></span><br/><div id="hotimg"><?=$more['36']->matter?>: <span style="color:#FF6507;"><?=$video->rating?></span></div>
+           
+           
+          
           </div>
-         
+       
     
  <? }
-        
+   
   ?>
-            
-     
+    <div style="background-color:#93D7FA;border:1px solid #9D9D9D;width:600px;height:23px;"align="right">>></div>  
     </div>
     <?php } ?>
-  
-      </div>
+       
+     
+      
+      </div>             
+     
       </div>           
-             
+         
+                          
+            
              </td>
+            
             </tr>
              </table>   
            </div></td></tr>
@@ -244,22 +239,21 @@
                             
                               <tr>
                             <?
-//                            $count=1;
-//                           foreach($getvideosnames as $item){
-//                            ?>
+                          $count=1;
+                          foreach($videosnames as $item){
+                          ?>
                            
-                             <td><div style="padding-left:25px;padding-top:8px;text-align:left;"><?=$item->name?></div></td>
+                             <td><div style="font-size:12px;font-weight:bold;color:#000000;padding-left:25px;padding-top:8px;text-decoration:none;text-align:left;"><a href="<?=base_url();?>video/index/<?=$video->video_cat_id?>"><?=$item->name?></a></div></td>
       
                                  
                                <?
-//                                if($count==6)
-//                                {
-//                                $count=0;	
-//                               	echo "<tr></tr>";
-//                                }
-//                             $count ++;
-//                             }
-//                             ?>
+                               if($count==6)
+                               {
+                               $count=0;	
+                            	echo "<tr></tr>";                             }
+                          $count ++;
+                         }
+                           ?>
                               </tr>
                              
                              </table>

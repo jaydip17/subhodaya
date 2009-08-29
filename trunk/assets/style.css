@@ -441,22 +441,27 @@ color:black;
 }
 
 #footer a:hover {
-text-decoration:underline;
+text-decoration:none;
+color:red;
 }
- #video_heading{
+
+ 
+
+#video_heading{
 	background-image: url(imgs/img-center-slic.jpg);
 	background-repeat: repeat-x;
 	height: 28px;
 	width:100%;
 	} 
 #vi_heading{
-	background-image: url(imgs/img-center-slic.jpg);
+	background-image: url(imgs/slice.jpg);
 	background-repeat: repeat-x;
 	height: 8px;
 	width:100%;
-	font-weight:bold;
 	color:red;
 	text-decoration:none;
+        padding-bottom:0px;
+        
 	} 
 
 #hotimg{
@@ -499,7 +504,8 @@ font-size:11px;
 font-weight:bold;
 	}		
 #allvi{
- background-color:#93D7FA;
+ background-image:url(imgs/video-top.jpg);
+ background-repeat:repeat-x;
  border:1px solid #9D9D9D;
  margin-left:6px; 
  font-size:14px;
@@ -507,30 +513,47 @@ font-weight:bold;
  height:20px;
  width:640px; 
  padding-left:5px;
- padding-top:6px;
+ padding-top:4px;
  tex-align:left;
+
 }
 
 
 #hotvideo{
- background-color:#93D7FA;
+ background-image:url(imgs/video-top.jpg);
+ background-repeat:repeat-x;
  border:1px solid #9D9D9D;
  height:20px;
  width:640px;
  padding-left:5px;
- padding-top:5px;
+ padding-top:3px;
  margin-left:6px;
  font-size:14px;
  font-weight:bold;
 }
 
-#topvideo{
-text-align:center;
-background-color:#93D7FA ;
+#hotvi{
+background-image:url(imgs/video-top.jpg);
+background-repeat:repeat-x;
+height:20px;
 border:1px solid #9D9D9D;
+height:20px;
+width:640px;
+text-align:right;
+margin-top:290px;
+padding-top:0px;
+}
+
+
+#topvideo{
+background-image:url(imgs/video-top.jpg);
+background-repeat:repeat-x;
+border:1px solid #9D9D9D;
+height:20px;
 font-size:14px;
 font-weight:bold;
 padding-top:0px;
+text-align:center;
 }
 #top-videocure
 	{
@@ -760,4 +783,30 @@ padding-top:8px;
 
 	}	
 	
- 
+.viname a:visited{
+text-decoration:none;
+color:black;
+}
+.viname a:link{
+text-decoration:none;
+font-size:12px;
+font-weight:bold;
+}
+
+.viname a:hover{
+color:red;
+}
+
+.hiname a:visited{
+text-decoration:none;
+color:black;
+}
+.hiname a:link{
+text-decoration:none;
+font-size:12px;
+font-weight:bold;
+}
+
+.hiname a:hover{
+color:red;
+}

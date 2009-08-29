@@ -8,6 +8,7 @@ class Cinema extends Controller {
 		$this->load->model("admin/Poll_Model");
 		$this->load->model("admin/Greeting_Model");
 		$this->load->model("admin/Sahithi_Model");
+		$this->load->model("admin/Mahila_Model");
 		
 	}
 	function index(){
@@ -69,11 +70,22 @@ class Cinema extends Controller {
 		$more=$this->News_Model->more_news();
 		$news_type4=$this->News_Model->get_newstype1(4);
 		$id=$this->uri->segment(3,0);
+		$type=$this->uri->segment(4,0);
+		$result1=$this->Cinema_Model->get_all($type);
 		$result=$this->Cinema_Model->inner($id);
-		$data=array('more'   		=> $more,
-					'result' 		=> $result,
-					'news_type4'	=> $news_type4
-					
+		$mahila_details=$this->Mahila_Model->active_mahila(6);
+		$news_type2=$this->News_Model->get_newstype1(2);
+		$mahila_details1=$this->Mahila_Model->active_mahila(8);
+		$cinema_cat=$this->Cinema_Model->get_cinemanewstype();
+		//print_r($result1);
+		$data=array('more'   		 => $more,
+					'result' 		 => $result,
+					'news_type4'	 => $news_type4,
+					'mahila_details' =>	$mahila_details,
+					'cinema_cat'	 => $cinema_cat,
+					'news_type2'	 =>	$news_type2,
+					'mahila_details1'=>	$mahila_details1,
+					'result1'		 => $result1
 					);
 		$this->load->view('cinema_inner',$data);
 	}

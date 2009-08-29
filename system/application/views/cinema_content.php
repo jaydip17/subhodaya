@@ -29,7 +29,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 							        <div id="tab1"><p>
 							        		<div style="height:235px;" id="telugufont1">
           				 						<a href="<?=base_url();?>cinema/inner/<?=$active_news1['0']->id?>"><img src="<?=base_url();?>assets/news/news_img<?=$active_news1['0']->id?>_thumb.jpg" style="float: left;padding: 2px 19px 2px 1px;text-align: left;text-align: justify;"  border="0"></img></a>
-          				 						<font id="mainnews"><a href="<?=base_url();?>cinema/inner/<?=$active_news1['0']->id?>"><?php echo $active_news1['0']->heading;?></a></font><br>
+          				 						<font id="mainnews"><a href="<?=base_url();?>cinema/inner/<?=$active_news1['0']->id?>/<?=$active_news1['0']->type?>"><?php echo $active_news1['0']->heading;?></a></font><br>
           				 						<?php echo $active_news1['0']->summary;?>
           				 						<ul id="mainnews">
           				 						<?
@@ -39,7 +39,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 	          											$count++;
 	          											continue;
           											} ?>
-          											<li style="padding: 2px;"><a href="<?=base_url();?>cinema/inner/<?=$row->id?>"><?=$row->heading ?></a></li>
+          											<li style="padding: 2px;"><a href="<?=base_url();?>cinema/inner/<?=$row->id?>/<?=$row->type?>"><?=$row->heading ?></a></li>
           				 							<? if($count==4){
 							          						break;
 							          					}else{
@@ -68,7 +68,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 							        			 	continue;
 							        			 }
 							        			 ?>
-							        				<li style="padding: 1px;"><a href="<?=base_url();?>cinema/inner/<?=$row->id?>"><?=$row->heading?></a></li>
+							        				<li style="padding: 1px;"><a href="<?=base_url();?>cinema/inner/<?=$row->id?>/<?=$row->type?>"><?=$row->heading?></a></li>
 							        			<? if($count==4){
 							          						break;
 							          					}else{

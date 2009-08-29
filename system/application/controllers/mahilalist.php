@@ -13,7 +13,7 @@ class mahilalist extends Controller {
     	$this->load->library('paginationnew');
     	
     	$this->paginationnew->start = ($this->uri->segment(4)) ? $this->uri->segment(4) : '0';
-    	$this->paginationnew->limit =5;
+    	$this->paginationnew->limit =10;
         $this->paginationnew->filePath ='javascript:loadNews(\''.$a.'';
       
         $this->paginationnew->select_what = '*';
@@ -41,7 +41,7 @@ class mahilalist extends Controller {
     	$this->load->library('paginationnew');
     	
     	$this->paginationnew->start = ($this->uri->segment(4)) ? $this->uri->segment(4) : '0';
-    	$this->paginationnew->limit =5;
+    	$this->paginationnew->limit =4;
         $this->paginationnew->filePath ='javascript:loadNews(\''.$a.'';
       
         $this->paginationnew->select_what = '*';

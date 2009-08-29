@@ -399,10 +399,10 @@ function reload()
                 <div><?if(!empty($yes_poll['0']->question)){
 					echo  $yes_poll['0']->question;   ?>            	
                </div>
-                <div align="right" id="result"><A HREF="javascript:void(0)"
+                <div align="right" id="result"><a HREF="javascript:void(0)"
 					onclick="window.open('<?=base_url();?>poll/yes_result/<?=$yes_poll['0']->id?>',
 						'welcome','width=300,height=200')">
-						Result</A></div>
+						Result</a></div>
                 
                 <?} else echo 'Yesterday no poll'; ?>
                 </td>
@@ -485,7 +485,7 @@ function reload()
 							        	 }
 							             if($i>3)
 							           break;?>
-							        	               <ul id="mainnews"> <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>"><?=$item->heading?></a></li></ul><? $i++;} ?></p></div>
+							    <ul id="mainnews"> <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>"><?=$item->heading?></a></li></ul><? $i++;} ?></p></div>
     							</div>
 <script>
 (function() {
@@ -507,11 +507,12 @@ function reload()
                       <tr>
                         <td  valign="top" id="center-img1"><img src="<?=base_url();?>assets/imgs/new1.jpg" width="5" /></td>
                         <td valign="top" id="center-img1" align="left" style="border-bottom: 1px solid #50BCFC;">
-	                        <div style="text-align:justify;padding-top:14px;" id="mainnews">
+	                        <div style="text-align:justify;padding-top:14px;height: 132px;" >
 	                     <? if(isset($home_stories['0'])){ ?>  <a href="<?=base_url();?>sahithi/sahithidetails/<?=$home_stories['0']->id?>"><img border="0px" id="image" src="<?=base_url();?>/assets/sahithi/news_img<?=$home_stories['0']->id?>_thumb.jpg"></a>
-	                       <a href="<?=base_url();?>sahithi/sahithidetails/<?=$home_stories['0']->id?>"><? echo $home_stories['0']->summary;?></a><?} ?>
-	                       
+	                      <font id="mainnews"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$home_stories['0']->id?>"><? echo $home_stories['0']->heading;?></a></font>
+	                       <? echo $home_stories['0']->summary;?><?} ?>
 	                        </div>
+	                       <div id="more-news-div"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$home_stories['0']->id?>"><?=$more['1']->matter?></a></div>
                         </td>
                          <td id="center-img1"><img src="<?=base_url();?>assets/imgs/new.jpg" width="5"/></td>
                     </tr>

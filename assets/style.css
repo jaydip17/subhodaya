@@ -188,7 +188,7 @@ border-right:0px solid #000099;
 #news_heading{
 	background-image: url(imgs/img-center-slic.jpg);
 	background-repeat: repeat-x;
-	height: 28px;
+	height: 26px;
 	width:100%;
 	} 
 #news_content{
@@ -774,14 +774,22 @@ font-weight: bold;
 	text-align: justify;padding: 5px 5px 0px 15px;
 	font-size: 14px;
 	}
-#vi-name{
-font-size:12px;
-font-weight:bold;
-color:#000000;
-padding-left:25px;
-padding-top:8px;
+#vi-name
+{
+	font-size:12px;
+	font-weight:bold;
+	color:#000000;
+	padding-left:25px;
+	padding-top:8px;
 
-	}	
+}
+#left_news
+{
+	border: 1px solid #9FA0A0;
+	border-top: 0px solid;
+	background-image: url(imgs/tock-botom-center.jpg);
+	background-repeat: repeat-x;;
+	}
 	
 .viname a:visited{
 text-decoration:none;

@@ -51,24 +51,7 @@ menuItems:[
 <?php if(!empty($type)){ foreach($type as $row):?>
 ["<?php echo $row->gree_cat;?>", "<?=base_url();?>greetings/content/<?=$row->id?>", ""],
 <?php endforeach;} else 'No data found';?>
-//["Birthday", "http://www.loisimages.com", "_new"],
-//["Birthday ", "http://www.loisimages.com", "_new"],
-//["Birthday ", "http://www.loisimages.com", "_new"],
-//["Birthday ", "http://www.loisimages.com", "_new"],
-//["Birthday ", "http://www.loisimages.com", "_new"],
-//["Birthday ", "http://www.loisimages.com", "_new"],
-//["Birthday ", "http://www.loisimages.com", "_new"],
-//["Birthday ", "http://www.loisimages.com", "_new"],
-//["Birthday ", "http://www.loisimages.com", "_new"],
-//["Good morning", "http://www.loisimages.com", "_new"],
-//["State Street Blues", "http://www.statestreetbluesstroll.com/","_new"],
-//["Media Jazz by Night", "http://www.mediajazzbynight.com/", "_new"],
-//["DD Help Forum", "http://www.dynamicdrive.com/forums", "_new"],
-//
-//["Ansi Art Gallery", "http://home.comcast.net/~ansiguy", "_new"],
-//["John's Javascript ", "http://home.comcast.net/~jscheuer1/side", "_new"]  //no comma after last entry
 
-]}; // REQUIRED!! do not edit or remove
 make_menus();
 </script>
 

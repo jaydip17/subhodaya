@@ -1,5 +1,30 @@
-
-
+<script type="text/javascript" src="<?=base_url()?>/assets/js/shubhodaya.js"></script>
+<script type="text/javascript" >
+function reload()
+	 {
+		 //document.getElementById('newsloading').style.display="none";
+		 document.getElementById('newsletter').innerHTML="<img src='<?=base_url();?>assets/imgs/newsletter-img.jpg' onclick='show_subscribe()'/>";
+		// document.getElementById('newsletters').style.display="";
+		 //document.getElementById('subscribe').value="Subscribe here";
+	 }
+	 function subscribe(str)
+	{
+	 var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+			   var address = document.getElementById('subscribe').value;
+			   if(reg.test(address) == false) {
+			      alert('Invalid Email Address');
+				   return false;
+				  }
+	 if(document.getElementById('subscribe').value!="" && document.getElementById('subscribe').value!="Subscribe here")
+		{
+		//document.getElementById('newsletters').style.display="none";
+		//document.getElementById('newsloading').style.display="";	
+		subscribe_ajax(str,'<?=base_url()?>');
+		setTimeout("reload()",3000);
+		}
+	}
+	 
+	 </script>
 <table width="99%" height="99%"  border="0" cellpadding="0" cellspacing="0">
         <tr>
           <td width="389" valign="top" height="329"><table width="100%" border="0" cellpadding="0" cellspacing="0">
@@ -189,7 +214,7 @@
           <td width="4" valign="top"><img src="<?=base_url();?>assets/imgs/add-line-left.jpg" width="4" height="456" /></td>
           <td width="206" valign="top" id="add-line"><table width="100%" height="439" border="0" cellpadding="0" cellspacing="0">
               <tr>
-                <td height="67" valign="middle"><div align="center"><img src="<?=base_url();?>assets/imgs/newsletter-img.jpg" width="199" height="59" /></div></td>
+                <td height="67" valign="middle"><div align="center" id="newsletter"><img src="<?=base_url();?>assets/imgs/newsletter-img.jpg" width="199" height="59" onclick="show_subscribe()" /></div></td>
               </tr>
               <tr>
                 <td height="193" valign="top"><img src="<?=base_url();?>assets/ads/Home3.jpg" width="199" height="177" /></td>
@@ -303,34 +328,40 @@
              <td valign="top" width="100%" id="center-line"><table width="100%" border="0" cellpadding="0" cellspacing="0">
          <tr>
              <td height="165" valign="top">
-         <!--<form action="<?=base_url() ?>contacts" method="POST" onSubmit="return checkEmpty(this);" name="loginForm">
+      <form action="<?=base_url()?>admin/contacts/import" method="POST" onSubmit="return checkEmpty(this);" name="loginForm">
+      <input type="hidden" name="page" value="home" />
 	<table border="0" align="center" cellpadding="2" cellspacing="0">
 	  <tr>
-		<td colspan="3" align="center">Enter login detais</td>
+		<td colspan="3" align="center">Enter details</td>
 	  </tr>
 	  <tr>
-	  	<td>Uname</></td>
-	  	<td><input type="text" name="username" size="10" value="<?php echo @$_POST['username']; ?>" /></td>
+	  	<td>Username</></td>
+	  	<td><input type="text" name="username" size="10" value="" /></td>
+	  	</tr>
+	  
+	  <tr>
+	  	  <td>Password</td>
+	      <td colspan="2"><input type="password" name="password" size="10"/></td>
+	  </tr>
+	  	<tr>
+	  	<td>Domain</td>
 	    <td>	
-	    <?php $selected='selected'; ?>
-	      <select name="domain" size="1">
+	    
+	      <select name="type" size="1">
 			
-			<option value="yahoo.com" >yahoo</option>
+			<option value="yahoo" >Yahoo</option>
+			<option value="gmail" >Gmail</option>
 			</select>
 	        </td>
 	  </tr>
 	  <tr>
-	  	  <td>Pwd</td>
-	      <td colspan="2"><input type="password" name="password" size="10"/></td>
-	  </tr>
-	  <tr>
-	  	  <td colspan="3" align="center"><input type="submit" name="submit" value="Fetch My Contacts" /></td>
+	  	  <td colspan="3" align="center"><input type="submit" name="submit" value="Invite My Contacts" /></td>
 	  </tr>    
 	  <tr>
-	  	 <td colspan="3" align="center"><small>No details are stored</small></td>
+	  	 <td colspan="3" align="center"><small>your info is secured..</small></td>
 	  </tr>    
 	</table>
-	</form>-->
+	</form>
              </td>
          </tr>
        </table>

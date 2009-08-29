@@ -28,8 +28,10 @@ $resultarray = get_contacts($login, $password);
       case 2: #empty username or password
         $formdisclaimer = "<br><b style=\"color:red\">Enter Your Username and Password</b><br>";
         break;
+      
     }
-   redirect(base_url().'admin/contacts/index/1');
+     
+   //redirect(base_url().'admin/contacts/index/1');
   	//include("form.php");
   }
   

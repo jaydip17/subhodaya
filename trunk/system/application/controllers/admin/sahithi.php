@@ -29,6 +29,7 @@ class Sahithi extends Controller {
 		$this->load->view('admin/sahithi_view',$data);
 	}
     function insert(){
+    	//echo "hello";
 		if(!isset($_POST['homepage'])){
 			
 			$homepage=0;
@@ -65,11 +66,11 @@ class Sahithi extends Controller {
 		$config['max_height']  = '768';
 		
 		$this->load->library('upload', $config);
-	
-		if ( ! $this->upload->do_upload('image'))
+	    $this->load->library('image_lib');
+		if (! $this->upload->do_upload('image'))
 		{
 			$this->db->where('id',$id);
-			$this->db->delete('news');
+			$this->db->delete('sahithi');
 			$error[]= array('error' => $this->upload->display_errors());
 			$this->session->set_flashdata('message',$error);
 		}	
@@ -80,33 +81,39 @@ class Sahithi extends Controller {
 		    rename($oldname,'assets/sahithi/news_img'.$id.'.jpg');	
 		    $message='News Added Successfully';
 			$this->session->set_flashdata('message',$message);
+			
 		}
+		     
 			$filename = 'news_img'.$id.'.jpg';
 			$image_path='assets/sahithi/';
-	    	$config['image_library'] = 'gd2';
-	        $config['source_image'] = $image_path.$filename;
-			$config['create_thumb'] = TRUE;
-			$config['maintain_ratio'] = TRUE;
-			$config['width'] = 100;
-			$config['height'] = 88;
-			$this->load->library('image_lib');      
-	    	$this->image_lib->initialize($config);
+	    	$config_resize['image_library'] = 'gd2';
+	    	//$config_resize['new_image']= "new_img_".$id."size1.jpg";
+	        $config_resize['source_image'] = $image_path.$filename;
+			
+			$config_resize['maintain_ratio'] = TRUE;
+			$config_resize['width'] = 320;
+			$config_resize['height'] = 240;
+			    
+	    	$this->image_lib->initialize($config_resize);
 			if(!$this->image_lib->resize())
 	    	{
-	    		$error = array('error' => $this->image_lib->display_errors());	
+	    		$error = array('error' => $this->image_lib->display_errors());
+	    		print_r($error);
 	    	}
-			$filename1= 'news_img'.$id.'t.jpg';
+	    	$this->image_lib->clear();
+	    	$filename= 'news_img'.$id.'.jpg';
 	    	$config1['image_library'] = 'gd2';
-	        $config1['source_image'] = $image_path.$filename1;
+	        $config1['source_image'] = $image_path.$filename;
 			$config1['create_thumb'] = TRUE;
 			$config1['maintain_ratio'] = TRUE;
 			$config1['width'] = 80;
 			$config1['height'] = 60;
-	    	$this->load->library('image_lib');      
+	    	
 	    	$this->image_lib->initialize($config1);
 	    	if(!$this->image_lib->resize())
 	    	{
-	    		$error = array('error' => $this->image_lib->display_errors());	
+	    		$error = array('error' => $this->image_lib->display_errors());
+	    		print_r($error);	
 	    	}
 	    	$this->image_lib->clear();
 			redirect(base_url().'admin/sahithi',$message);
@@ -119,7 +126,7 @@ class Sahithi extends Controller {
 		//print_r($deatails);
 		$this->load->view('admin/sahithitypes',$data);
 	}
-function getsahithi(){
+   function getsahithi(){
    		
 		$details=$this->Sahithi_Model->getdetails($this->uri->segment(4),'no');
 		$data=array('details'=>$details,

@@ -21,8 +21,7 @@ class Contacts extends Controller {
 	}
 	function import()
 	{
-		
-		
+		print_r($_POST);
 		
 		if(isset($_POST['username']))
 		{
@@ -49,20 +48,33 @@ class Contacts extends Controller {
   			list($names,$emails) = grabyahoo($login,$password);
   			
   			}
+  			else {
+  				echo "no fdomain selected";
+  			}
   			
   				   if (!eregi("@", $login))
 				   {
 				   		$login = $login . "@" . strtolower('gmail') . ".com";
 				   }
-			$data = array(
-							'login' 	=> $login,
-							'names'		=> $names,
-							'emails'	=> $emails,
-							'formaction'=> $formaction
-			);
-			$this->load->view('admin/contactslist',$data);
+				   
+	    if(isset($_POST['page']) && $_POST['page']=="home")
+		 {
+			print_r($emails);
+			
+		
+			
+		 }
+		else{	$data = array('login' 	=> $login,
+							  'names'		=> $names,
+							  'emails'	=> $emails,
+						   	  'formaction'=> $formaction
+			          );
+		//$this->load->view('admin/contactslist',$data);
 
+		    }
 		}
-	}
+	
+	
+   }
 }
 ?>

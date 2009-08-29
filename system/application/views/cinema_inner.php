@@ -1,4 +1,13 @@
+<style type="text/css">
+ul{
+list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
+font-size:14px;
 
+}
+li{
+padding-bottom:5px;
+}
+</style>
 <script language="javascript">
 //<!--
 function telugu_typing()
@@ -57,14 +66,14 @@ function telugu_typing()
 			</div></td></tr>
 			<tr><td><div id="news_heading" class="heading"><span id="newsheading">Rate this Article</span></div></td></tr>
 			<tr><td align="center"><div style="border:1px solid #9FA0A0;">
-			<form name="telugu_send">
+			<form name="telugu_send" action="<?=base_url();?>subhodaya/sendmail">
 			<table id="formdiv">
 				<tr><td valign="top" colspan="2"><div style="background-color: #B5E8FD;height:20px;"></div></td></tr>
-				<tr><td width="150px" align="left">Name</td><td><input type="text" name="uname" size="30"></td></tr>
-				<tr><td width="150px" align="left">Email</td><td><input type="text" name="uname" size="30"></td></tr>
+				<tr><td width="150px" align="left">Name</td><td><input type="text" name="name" size="30"></td></tr>
+				<tr><td width="150px" align="left">Email</td><td><input type="text" name="email" size="30"></td></tr>
 				<tr><td valign="top" colspan="2"><div style="background-color: #B5E8FD;height:20px;"></div></td></tr>
 				<tr><td colspan="2" align="left"><input type="checkbox" onclick="telugu_typing()" id="telugu_type" name="telugu_type">Type in telugu</td></tr>
-				<tr><td colspan="2" align="center"><textarea style="height: 190px;width: 95%"></textarea></td></tr>
+				<tr><td colspan="2" align="center"><textarea name="description" style="height: 190px;width: 95%"></textarea></td></tr>
 				<tr><td colspan="2" align="center"><input type="submit" name="send" value="Send"><input type="reset" ></td></tr>
 				<tr><td valign="top" colspan="2"><div style="background-color: #B5E8FD;height:20px;"></div></td></tr>
 			</table>

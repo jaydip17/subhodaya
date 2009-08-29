@@ -50,7 +50,8 @@ class Cinema extends Controller {
 		$greetings4=$this->Greeting_Model->get_main_greetings(4);
 		//sahithi 
 		$sahithi=$this->Sahithi_Model->get_home_stories(2);
-		//print_r($sahithi);
+		$sahithi_cat=$this->Sahithi_Model->get_sahithitype();
+		//print_r($sahithi_cat);
 		$data=array('more'			=>	$more,
 					'result'		=>	$result,
 					'onload' 		=> 	$onload,
@@ -60,7 +61,8 @@ class Cinema extends Controller {
 					'active_news3'	=>  $active_news3,
 					'active_news4'	=>	$active_news4,
 					'greetings4'	=>  $greetings4,
-					'sahithi'      =>  $sahithi);
+					'sahithi'       =>  $sahithi,
+					'sahithi_cat'	=>	$sahithi_cat);
 		$this->load->view('cinema_content',$data);
 	}
 	function inner(){

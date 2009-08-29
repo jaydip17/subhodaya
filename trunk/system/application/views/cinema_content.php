@@ -249,33 +249,33 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter2.jpg" width="5" height="31" /></td>
           <td width="8">&nbsp; </td>
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter-1.jpg" width="5" height="31" /></td>
-          <td width="295" valign="middle" id="botomtop" align="left"><img src="<?=base_url();?>assets/imgs/001.png" align="middle"></img><span id="newsheading"><?=$sahithi['0']->heading?></span></td>
+          <td width="295" valign="middle" id="botomtop" align="left"><img src="<?=base_url();?>assets/imgs/001.png" align="middle"></img><span id="newsheading"><?php if(isset($sahithi_cat['1'])) { echo $sahithi_cat['1']->cat_name ;}?></span></td>
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter2.jpg" width="5" height="31" /></td>
           <td width="8">&nbsp; </td>
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter-1.jpg" width="5" height="31" /></td>
-          <td width="295" valign="top"  id="botomtop" align="left"><img src="<?=base_url();?>assets/imgs/001.png" style="margin:4px 0px 0px 0px;"></img></td>
+          <td width="295" valign="middle"  id="botomtop" align="left"><img src="<?=base_url();?>assets/imgs/001.png" align="middle"></img><span id="newsheading"><?php if(isset($sahithi_cat['3'])) { echo $sahithi_cat['3']->cat_name ;}?></span></td>
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter2.jpg" width="5" height="31" /></td>
         </tr>
         <tr>
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="120" /></td>
           <td valign="top" id="botom-ser" >
           <div style="height: 100px;">
-          		<a href="<?=base_url()?>greetings/content/<?=$greetings4['0']->id?>"><img src="<?=base_url()?>assets/greetings/gree_img<?=$greetings4['0']->id?>_thumb.jpg" style="padding: 1px 1px 1px 1px;float: left;" border="0"/></a>
-          		<div id="mainnews"><a href="<?=base_url()?>greetings/content/<?=$greetings4['0']->id?>"><?=$greetings4['0']->name?></a></div>
-          		<?=$greetings4['0']->summery?>
+          		<a href="<?=base_url()?>greetings/content/<?php if(isset($greetings4['0'])) {echo $greetings4['0']->id;}?>"><img src="<?=base_url()?>assets/greetings/gree_img<?php if(isset($greetings4['0'])) {echo $greetings4['0']->id;}?>_thumb.jpg" style="padding: 1px 1px 1px 1px;float: left;" border="0"/></a>
+          		<div id="mainnews"><a href="<?=base_url()?>greetings/content/<?php if(isset($greetings4['0'])) {echo $greetings4['0']->id;}?>"><?php if(isset($greetings4['0'])) {echo $greetings4['0']->name;}?></a></div>
+          		<?php if(isset($greetings4['0'])) {echo $greetings4['0']->summery;}?>
           </div>
-          		<div id="more-news-div"><a href="<?=base_url()?>greetings/content/<?=$greetings4['0']->id?>"><?=$more['0']->matter?></a></div>
+          		<div id="more-news-div"><a href="<?=base_url()?>greetings/content/<?php if(isset($greetings4['0'])) {echo $greetings4['0']->id;}?>"><?=$more['0']->matter?></a></div>
           </td>
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="120" /></td>
           <td width="8">&nbsp;</td>
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="120" /></td>
           <td valign="top" id="botom-ser">
            <div style="height: 100px;">
-          		<a href="<?=base_url()?>sahithi/sahithidetails/<?=$sahithi['0']->id?>"><img src="<?=base_url()?>assets/sahithi/news_img<?=$sahithi['0']->id?>_thumb.jpg" style="padding: 1px 1px 1px 1px;float: left;" border="0"/></a>
-          		<div id="mainnews"><a href="<?=base_url()?>sahithi/sahithidetails/<?=$sahithi['0']->id?>"><?=$sahithi['0']->heading?></a></div>
-          		<?=$sahithi['0']->summary?>
+          		<a href="<?=base_url()?>sahithi/sahithidetails/<?php if(isset($sahithi['0'])) { echo $sahithi['0']->id;} ?>"><img src="<?=base_url()?>assets/sahithi/news_img<?php if(isset($sahithi['0'])) { echo $sahithi['0']->id;} ?>_thumb.jpg" style="padding: 1px 1px 1px 1px;float: left;" border="0"/></a>
+          		<div id="mainnews"><a href="<?=base_url()?>sahithi/sahithidetails/<?php if(isset($sahithi['0'])) { echo $sahithi['0']->id;} ?>"><?php if(isset($sahithi['0'])) { echo $sahithi['0']->heading;} ?></a></div>
+          		<?php if(isset($sahithi['0'])) { echo $sahithi['0']->summary;} ?>
           </div>
-          		<div id="more-news-div"><a href="<?=base_url()?>sahithi/sahithidetails/<?=$sahithi['0']->id?>"><?=$more['1']->matter?></a></div>
+          		<div id="more-news-div"><a href="<?=base_url()?>sahithi/sahithidetails/<?php if(isset($sahithi['0'])) { echo $sahithi['0']->id;} ?>"><?=$more['1']->matter?></a></div>
           </td>
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="120" /></td>
           <td width="8">&nbsp;</td>

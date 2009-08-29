@@ -1,3 +1,20 @@
+<script language="javascript">
+//<!--
+function telugu_typing()
+{
+	if(document.telugu_send.telugu_type.checked == true)
+	{
+		window.location="javascript:(t13nb=window.t13nb||function(l){var%20t=t13nb,d=document,o=d.body,c=\"createElement\",a=\"appendChild\",w=\"clientWidth\",i=d[c](\"span\"),s=i.style,x=o[a](d[c](\"script\"));if(o){if(!t.l){t.l=x.id=\"t13ns\";o[a](i).id=\"t13n\";i.innerHTML=\"Loading%20transliteration\";s.cssText=\"z-index:99;font-size:18px;background:#FFF1A8;top:0\";s.position=d.all?\"absolute\":\"fixed\";s.left=((o[w]-i[w])/2)+\"px\";x.src=\"http://t13n.googlecode.com/svn/trunk/blet/rt13n.js?l=\"+l}}else%20setTimeout(t,500)})('te')";
+
+	}
+	else
+
+	{
+		window.location="javascript:(t13nb=window.t13nb||function(l){var%20t=t13nb,d=document,o=d.body,c=\"createElement\",a=\"appendChild\",w=\"clientWidth\",i=d[c](\"span\"),s=i.style,x=o[a](d[c](\"script\"));if(o){if(!t.l){t.l=x.id=\"t13ns\";o[a](i).id=\"t13n\";i.innerHTML=\"Loading%20transliteration\";s.cssText=\"z-index:99;font-size:18px;background:#FFF1A8;top:0\";s.position=d.all?\"absolute\":\"fixed\";s.left=((o[w]-i[w])/2)+\"px\";x.src=\"http://t13n.googlecode.com/svn/trunk/blet/rt13n.js?l=\"+l}}else%20setTimeout(t,500)})('te')";
+	}
+}
+//-->
+</script> 
 <table align="left" cellspacing='6' cellpadding="0" >
 	<tr>
 		<td  width="px">
@@ -13,7 +30,7 @@
 				</tr>
 				<tr>
 					<td valign="top">
-					<form method="post" action="<?=base_url();?>subhodaya/sendmail">
+					<form name="telugu_send" method="post" action="<?=base_url();?>subhodaya/sendmail">
 						<table align="center" width="550px" border="0">
 							<tr>
 								<td colspan='2' align="center"><div  id="gree_bar1"><?=$more['25']->matter?></div></td>
@@ -24,6 +41,8 @@
 							<tr>
 								<td align="left"><?=$more['28']->matter?></td><td align="left"><input type="text" name="email" size="30"></td>
 							</tr>
+							<tr><td colspan="2" align="left"><input type="checkbox" onclick="telugu_typing()" id="telugu_type" name="telugu_type">Type in telugu</td></tr>
+				
 							<tr>
 							<td align="center" colspan="2"><textarea style="height: 190px;width: 95%" name="description"></textarea></td>
 							</tr>

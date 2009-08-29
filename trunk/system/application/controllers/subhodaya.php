@@ -25,6 +25,7 @@ class Subhodaya extends Controller {
 		$newspoll=$this->Poll_Model->get_newspolls($type=4);
 		$sahithi_details=$this->Sahithi_Model->active_sahithi(1,$type='home');
 		$mahila_details=$this->Mahila_Model->active_mahila(1,$type='home');
+		//print_r($mahila_details);
 	    $greetings1=$this->Greeting_Model->get_main_greetings(1);
         $details=$this->Gallery_Model->get_cateimage(11);
         $home_stories=$this->Sahithi_Model->get_home_stories($type=2);

@@ -3,6 +3,23 @@ ul{
 list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 }
 </style>
+<script language="javascript">
+//<!--
+function telugu_typing()
+{
+	if(document.telugu_send.telugu_type.checked == true)
+	{
+		window.location="javascript:(t13nb=window.t13nb||function(l){var%20t=t13nb,d=document,o=d.body,c=\"createElement\",a=\"appendChild\",w=\"clientWidth\",i=d[c](\"span\"),s=i.style,x=o[a](d[c](\"script\"));if(o){if(!t.l){t.l=x.id=\"t13ns\";o[a](i).id=\"t13n\";i.innerHTML=\"Loading%20transliteration\";s.cssText=\"z-index:99;font-size:18px;background:#FFF1A8;top:0\";s.position=d.all?\"absolute\":\"fixed\";s.left=((o[w]-i[w])/2)+\"px\";x.src=\"http://t13n.googlecode.com/svn/trunk/blet/rt13n.js?l=\"+l}}else%20setTimeout(t,500)})('te')";
+
+	}
+	else
+
+	{
+		window.location="javascript:(t13nb=window.t13nb||function(l){var%20t=t13nb,d=document,o=d.body,c=\"createElement\",a=\"appendChild\",w=\"clientWidth\",i=d[c](\"span\"),s=i.style,x=o[a](d[c](\"script\"));if(o){if(!t.l){t.l=x.id=\"t13ns\";o[a](i).id=\"t13n\";i.innerHTML=\"Loading%20transliteration\";s.cssText=\"z-index:99;font-size:18px;background:#FFF1A8;top:0\";s.position=d.all?\"absolute\":\"fixed\";s.left=((o[w]-i[w])/2)+\"px\";x.src=\"http://t13n.googlecode.com/svn/trunk/blet/rt13n.js?l=\"+l}}else%20setTimeout(t,500)})('te')";
+	}
+}
+//-->
+</script> 
 <table width="99%">
 	<tr>
 		<td width="185" height="100%" valign="top" >
@@ -43,13 +60,15 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 			</div></td></tr>
 			<tr><td><div id="news_heading" class="heading"><span id="newsheading">Rate this Article</span></div></td></tr>
 			<tr><td align="center"><div style="border:1px solid #9FA0A0;">
-			<form>
+			<form name="telugu_send" action="<?=base_url();?>subhodaya/sendmail" method="post">
+			<input type="hidden" name="url" value="<?=base_url()?>news/newsdetails/<?=$result['0']->id?>">
+			
 			<table id="formdiv">
 				<tr><td valign="top" colspan="2"><div style="background-color: #B5E8FD;height:20px;"></div></td></tr>
 				<tr><td width="150px" align="left">Name</td><td><input type="text" name="uname" size="30"></td></tr>
 				<tr><td width="150px" align="left">Email</td><td><input type="text" name="uname" size="30"></td></tr>
 				<tr><td valign="top" colspan="2"><div style="background-color: #B5E8FD;height:20px;"></div></td></tr>
-				<tr><td colspan="2" align="left"><input type="checkbox">type in english</td></tr>
+				<tr><td colspan="2" align="left"><input type="checkbox" onclick="telugu_typing()" id="telugu_type" name="telugu_type">Type in telugu</td></tr>
 				<tr><td colspan="2" align="center"><textarea style="height: 190px;width: 95%"></textarea></td></tr>
 				<tr><td colspan="2" align="center"><input type="submit" name="send" value="Send"><input type="reset" ></td></tr>
 				<tr><td valign="top" colspan="2"><div style="background-color: #B5E8FD;height:20px;"></div></td></tr>

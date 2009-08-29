@@ -105,10 +105,10 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
           		<table width="100%" cellspacing="10" height="520px" >
           			<tr>
           				<td width="450" style="border: 1px solid #3789C3;"  valign="top">
-          				 <div style="width:100%"id="news_heading"><span id="newsheading" style="padding-right:30px"><? if (isset($news['0']->cat_name)){ echo $news['0']->cat_name;}?></span>
+          				 <div style="width:100%"id="news_heading"><div id="newsheading" style="width:250px;float: left; "><? if (isset($news['0']->cat_name)){ echo $news['0']->cat_name;}?></div>
           				 <? $count=1; foreach($news as $row): ?>
-          				Change View:<button style="background-color:#93D7FA;" onclick="loadNews('<?=base_url()?><?=$type?>list/listview/<?=$row->cat_id?>')">topics</button>
-          				 <button style="background-color:#93D7FA;" onclick="loadNews('<?=base_url()?><?=$type?>list/thumbview/<?=$row->cat_id ?>')">details</button>
+          				Change View:<img src="<?=base_url();?>assets/imgs/LIN.png" style="cursor: pointer"onclick="loadNews('<?=base_url()?><?=$type?>list/listview/<?=$row->cat_id?>')" />
+          				 <img style="cursor: pointer; " src="<?=base_url();?>assets/imgs/FUL.png" onclick="loadNews('<?=base_url()?><?=$type?>list/thumbview/<?=$row->cat_id ?>')" />
           				 <? if($count==1){
           				 	break;
           				 } 

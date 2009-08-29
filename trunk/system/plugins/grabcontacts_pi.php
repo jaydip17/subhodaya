@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-function grabgmail($login,$password)
+function grabgmail($login,$password,$page)
 {
 include_once 'gmail.php';
 $resultarray = get_contacts($login, $password);
@@ -30,8 +30,13 @@ $resultarray = get_contacts($login, $password);
         break;
       
     }
-     
-   //redirect(base_url().'admin/contacts/index/1');
+    if($page=="home")
+    {
+    	redirect(base_url());
+    }
+    else { 
+   redirect(base_url().'admin/contacts/index/1');
+    }
   	//include("form.php");
   }
   

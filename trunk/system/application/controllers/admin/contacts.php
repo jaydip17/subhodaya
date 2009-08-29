@@ -21,21 +21,27 @@ class Contacts extends Controller {
 	}
 	function import()
 	{
-		print_r($_POST);
+		//print_r($_POST);
 		
 		if(isset($_POST['username']))
 		{
 			set_time_limit(0);
 			$login = $_POST['username'];
   			$password = $_POST['password'];
+  			if(isset($_POST['page']))
+  			{
+  			$page=$_POST['page'];
+  			}
+  			else {
+  			$page="";
+  			}
   			$formaction = "sample.php";
   			$this->load->plugin('grabcontacts');
   			
   			if($_POST['type']=="gmail")
-  			list($names,$emails) = grabgmail($login,$password);
+  			//list($names,$emails) = grabgmail($login,$password,$page);
   			if($_POST['type']=="yahoo")
   			{
-				
 				$dir = './assets/csvUpload';
 				$dp = opendir($dir) or die ('Fatal Error: ');
 				while ($file = readdir($dp)) 
@@ -60,9 +66,6 @@ class Contacts extends Controller {
 	    if(isset($_POST['page']) && $_POST['page']=="home")
 		 {
 			print_r($emails);
-			
-		
-			
 		 }
 		else{	$data = array('login' 	=> $login,
 							  'names'		=> $names,
@@ -73,8 +76,6 @@ class Contacts extends Controller {
 
 		    }
 		}
-	
-	
-   }
+     }
 }
 ?>

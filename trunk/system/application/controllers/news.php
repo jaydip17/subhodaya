@@ -81,10 +81,24 @@ class News extends Controller {
 		$more=$this->News_Model->more_news();
 		$cinema_type1=$this->Cinema_Model->get_cinematype(1);
 		$id=$this->uri->segment(3,0);
+		$type=$this->uri->segment(4,0);
 		$result=$this->News_Model->inner_news($id);
-		$data=array('result'   =>   $result,
-					 'more'    =>   $more,
-				'cinema_type1' =>   $cinema_type1);
+		$news=$this->News_Model->get_news($type,$count=false);
+		$mahila_details=$this->Mahila_Model->active_mahila($type=4);
+		$cinema_type5=$this->Cinema_Model->get_cinematype(5);
+		$cinema_type3=$this->Cinema_Model->get_cinematype(3);
+		$news_cat=$this->News_Model->get_newstype();
+		//print_r($news);
+		
+		$data=array('result'   		=>   $result,
+					 'more'    		=>   $more,
+				'cinema_type1' 		=>   $cinema_type1,
+				'mahila_details'	=>	 $mahila_details,
+				'cinema_type5'		=>	 $cinema_type5,
+				'cinema_type3'		=>   $cinema_type3,
+				'news'				=>	 $news,
+				'news_cat'			=>	 $news_cat
+				);
 				
 		$this->load->view('news_inner',$data);
 	}

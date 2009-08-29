@@ -39,7 +39,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 	          											$count++;
 	          											continue;
           											} ?>
-          											<li style="padding: 2px;"><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>"><?=$row->heading ?></a></li>
+          											<li style="padding: 2px;"><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>/<?=$row->type?>"><?=$row->heading ?></a></li>
           				 							<? if($count==4){
 							          						break;
 							          					}else{

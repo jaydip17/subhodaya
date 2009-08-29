@@ -1,5 +1,5 @@
 <div style="height:480px">
-<table cellpadding="0">
+<table cellpadding="0" id="telugufont1">
 <? $count=0; foreach($details as $row):
 if(isset($type) && $type=="sahithi")
 {?>
@@ -19,6 +19,7 @@ else if(isset($type) && $type=="mahila"){?>
 <td><a href="<?=base_url()?>mahila/mahiladetails/<?=$row->id?>"><img src="<?=base_url();?>assets/mahila/news_img<?=$row->id ?>_thumb.jpg" border="0"></img></a></td>
 <td valign="top"><? echo $row->summary; ?></td>
 </tr>
+
 <?}if($count==3){
 	break;
 }else{

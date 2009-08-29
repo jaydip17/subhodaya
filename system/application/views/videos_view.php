@@ -34,10 +34,9 @@
            <td><div id="li-vi"><?=$item->insert_date?><br/><?=$item->name?><br/><span style="color:#FF6507;"><?=$item->no_of_views?> views</span><br/><?=$more['36']->matter?>:<span style="color:#FF6507;"><?=$item->rating?></span></div></td>
           </tr>
           <?} ?> 
-	
-
+	      
           <tr>
-          <td colspan="2" align="right" id="vi_heading"><a href="#"><?=$more['0']->matter?></a></td>
+          <td colspan="2"align="right" id="vi_heading" class="hiname"><a href="#"><?=$more['0']->matter?></a></td>
           </tr>
         </table>
        
@@ -104,38 +103,43 @@
        
        	foreach($item->result() as $video){
          ?>
-       <div style="float:left;vertical-align:middle;padding-right:20px;padding-bottom:10px;">
+       <div style="float:left;vertical-align:middle;padding-right:20px;padding-bottom:5px;padding-top:2px;">
        <div style="vertical-align:middle;float:left;text-align:justify;padding-right:10px;">
         <a href="<?=base_url();?>video/index/<?=$video->id?>/<?=$video->video_cat_id?>">
         <img id="img" src="<?=base_url();?>assets/videos/image_preview/home_image<?=$video->id?>_thumb.jpg"></a>
         </div>
+        
          <span style="font-size:12px;font-weight:bold;"><?=$video->insert_date?></span><br/><span style="font-size:12px;font-weight:bold;"><?=$video->name?></span><br/>
            <span style="font-size:12px;font-weight:bold;color:#FF6507;padding-top:7px;"><?=$video->no_of_views?> views</span>
            <br/><span style="font-size:12px;font-weight:bold;padding-top:3px;"><?=$video->time?></span><br/><div id="hotimg"><?=$more['36']->matter?>: <span style="color:#FF6507;"><?=$video->rating?></span></div>
            
-           
+          
           
           </div>
-       
+     
     
  <? }
    
   ?>
-    <div style="background-color:#93D7FA;border:1px solid #9D9D9D;width:600px;height:23px;"align="right">>></div>  
-    </div>
-    <?php } ?>
+  <div  id="hotvi" class="hiname"><a href="#"><?=$more['0']->matter?></a></div>
+   </div>   
+  
+    <?php } ?> 
        
      
-      
-      </div>             
      
-      </div>           
-         
+     
+                
+      
+      </div>   
+                
+       </div>  
                           
             
              </td>
-            
+           
             </tr>
+            
              </table>   
            </div></td></tr>
                  
@@ -207,7 +211,7 @@
           	               <td valign="top" id="topvi">Genre:Action/Family<span style="color:#FF6507;">Drama</span><br/>Type:Bilingual<br/>(Thorani in Tamil)<br/><div id="topimg" style=height:15px;width:101px;padding-left:4px;margin-top:4px;padding-top:2px;"><?=$more['29']->matter?>:<span style="color:#FF6507;"> 2.5/5</span></div></td>
           	            </tr>
           	              --><tr>
-          	               <td colspan="2" align="right" style="padding-top:15px;font-weight:bold;color:red;text-decoration:none;"><a href="#"><?=$more['0']->matter?></td>
+          	               <td colspan="2" align="right" style="padding-top:15px;"class="hiname"><a href="#"><?=$more['0']->matter?></td>
           	              </tr>
           	             
           	           </table>
@@ -215,7 +219,7 @@
           	                  
           	    </div></td></tr>
           	       <tr>
-          	       <td style="height:10px; width:242px; background-image: url('<?=base_url();?>assets/imgs/bottom-video-line.jpg'); background-repeat: no-repeat;"></td>
+          	       <td style="height:10px;width:242px;background-image: url('<?=base_url();?>assets/imgs/bottom-video-line.jpg'); background-repeat: no-repeat;"></td>
           	     </tr> 
           	     
           	 </table>
@@ -230,7 +234,7 @@
                   <tr>
                     <td ><img src="<?=base_url();?>assets/imgs/all-video-topline.jpg"></td>
                   </tr>
-                  <tr ><td><div style="height:144px;width:660px;border-left: 1px solid #9D9D9D; border-right: 1px solid #9D9D9D;">
+                  <tr ><td><div style="height:142px;width:660px;border-left: 1px solid #9D9D9D; border-right: 1px solid #9D9D9D;">
                          <div id="allvi"><?=$more['35']->matter?></div>
                            
                           <div id="allimg" style="width:660px;">
@@ -243,7 +247,7 @@
                           foreach($videosnames as $item){
                           ?>
                            
-                             <td><div style="font-size:12px;font-weight:bold;color:#000000;padding-left:25px;padding-top:8px;text-decoration:none;text-align:left;"><a href="<?=base_url();?>video/index/<?=$video->video_cat_id?>"><?=$item->name?></a></div></td>
+                             <td><div style="font-size:12px;color:#000000;padding-left:25px;padding-top:8px;text-decoration:none;text-align:left;"class="viname"><a href="<?=base_url();?>video/index/<?=$video->video_cat_id?>"><?=$item->name?></a></div></td>
       
                                  
                                <?
@@ -261,12 +265,12 @@
                           
                           </div>
                            
-                                 
+                         
                         
                    </div></td></tr>
-                  <tr>
+                      <tr>
                   <td style="height:10px;width:662px;background-image:url('<?=base_url();?>assets/imgs/all-video-bottomline.jpg');background-repeat:no-repeat;"></td>
-                 </tr> 
+                 </tr>        
                </table>
             </td>
             </tr>   

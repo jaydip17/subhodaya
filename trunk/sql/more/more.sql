@@ -1,19 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.1.3
+-- version 2.11.5
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 26, 2009 at 06:58 AM
--- Server version: 5.1.32
--- PHP Version: 5.2.9-1
+-- Generation Time: Aug 29, 2009 at 07:37 AM
+-- Server version: 5.0.51
+-- PHP Version: 5.2.5
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `subhodaya`
@@ -27,11 +21,11 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
 DROP TABLE IF EXISTS `more`;
 CREATE TABLE IF NOT EXISTS `more` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
-  `matter` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `active` int(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=39 ;
+  `id` int(10) NOT NULL auto_increment,
+  `matter` varchar(100) character set utf8 collate utf8_unicode_ci NOT NULL,
+  `active` int(1) NOT NULL default '0',
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=41 ;
 
 --
 -- Dumping data for table `more`
@@ -75,4 +69,6 @@ INSERT INTO `more` (`id`, `matter`, `active`) VALUES
 (35, 'టాప్  వీడియోస్', 0),
 (36, 'మొత్తం వీడియోస్', 0),
 (37, 'రేటింగ్', 0),
-(38, 'గ్యాలరీ మెను', 0);
+(38, 'గ్యాలరీ మెను', 0),
+(39, 'మీ ఈమెయిలు', 0),
+(40, 'మీ మిత్రుని పేరు', 0);

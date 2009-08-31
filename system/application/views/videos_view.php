@@ -269,7 +269,7 @@
                         
                    </div></td></tr>
                       <tr>
-                  <td style="height:10px;width:662px;background-image:url('<?=base_url();?>assets/imgs/all-video-bottomline.jpg');background-repeat:no-repeat;"></td>
+                  <td style="height:10px;width:662px;text-align:right;background-image:url('<?=base_url();?>assets/imgs/all-video-bottomline.jpg');background-repeat:no-repeat;">more</td>
                  </tr>        
                </table>
             </td>

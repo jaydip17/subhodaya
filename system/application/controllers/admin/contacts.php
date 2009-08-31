@@ -21,8 +21,6 @@ class Contacts extends Controller {
 	}
 	function import()
 	{
-		//print_r($_POST);
-		
 		if(isset($_POST['username']))
 		{
 			set_time_limit(0);
@@ -39,7 +37,7 @@ class Contacts extends Controller {
   			$this->load->plugin('grabcontacts');
   			
   			if($_POST['type']=="gmail")
-  			//list($names,$emails) = grabgmail($login,$password,$page);
+  			list($names,$emails) = grabgmail($login,$password,$page);
   			if($_POST['type']=="yahoo")
   			{
 				$dir = './assets/csvUpload';
@@ -51,28 +49,51 @@ class Contacts extends Controller {
 						$del=@unlink($dir."/".$file);
 					}
 				}
-  			list($names,$emails) = grabyahoo($login,$password);
+  			list($names,$emails) = grabyahoo($login,$password,$page);
   			
   			}
-  			else {
-  				echo "no fdomain selected";
-  			}
   			
-  				   if (!eregi("@", $login))
+  			       if (!eregi("@", $login))
 				   {
 				   		$login = $login . "@" . strtolower('gmail') . ".com";
 				   }
 				   
-	    if(isset($_POST['page']) && $_POST['page']=="home")
+	    if($page=="home")
 		 {
-			print_r($emails);
+		 	$tomails="";
+		 	$count=0;
+		 	foreach($emails as $item)
+		 	{
+		 		if($count==0)
+		 		{
+		 		 $count++;
+		 		 continue;
+		 		}
+		 		 $tomails.= ",".$item;
+		 	  } 
+		 	$subject="welcome to shubhodaya..";
+		 	$message="hai".$_POST['username']."has invited you for the following website.
+		 		          /n follow the below link to go to the website.\n";
+		 	
+		    $message.=base_url()."shubhodaya";
+		    //echo "hello";
+		  if(mailto($tomails,$subject,$message))
+		  {
+		  	echo "mail sent";
+		  }
+		  else {
+		  	echo "unable to send mail";
+		  }
+		   
+		  redirect(base_url());
 		 }
-		else{	$data = array('login' 	=> $login,
+		else{	
+		         $data = array('login' 	=> $login,
 							  'names'		=> $names,
 							  'emails'	=> $emails,
 						   	  'formaction'=> $formaction
 			          );
-		//$this->load->view('admin/contactslist',$data);
+		$this->load->view('admin/contactslist',$data);
 
 		    }
 		}

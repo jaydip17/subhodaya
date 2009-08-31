@@ -246,15 +246,15 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
           <table width="99%"  border="0" cellpadding="0" cellspacing="0">
         <tr>
           <td width="5" valign="top" id="botomtop"><img src="<?=base_url();?>assets/imgs/senter-1.jpg" width="5" height="31" /></td>
-          <td width="295" valign="middle" id="botomtop" align="left"><img src="<?=base_url();?>assets/imgs/001.png" align="middle"></img><span id="newsheading"><?=$mahila_details['0']->cat_name?></span></td>
+          <td width="295" valign="middle" id="botomtop" align="left"><img src="<?=base_url();?>assets/imgs/001.png" align="middle"></img><span id="newsheading"><?if(isset($mahila_details['0'])){ echo $mahila_details['0']->cat_name;}?></span></td>
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter2.jpg" width="5" height="31" /></td>
           <td width="8">&nbsp; </td>
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter-1.jpg" width="5" height="31" /></td>
-          <td width="295" valign="middle" id="botomtop" align="left"><img src="<?=base_url();?>assets/imgs/001.png" align="middle"></img><span id="newsheading"><?=$mahila_details1['0']->cat_name?></span></td>
+          <td width="295" valign="middle" id="botomtop" align="left"><img src="<?=base_url();?>assets/imgs/001.png" align="middle"></img><span id="newsheading"><?if(isset($mahila_details1['0'])){ echo $mahila_details1['0']->cat_name;}?></span></td>
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter2.jpg" width="5" height="31" /></td>
           <td width="8">&nbsp; </td>
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter-1.jpg" width="5" height="31" /></td>
-          <td width="295" valign="middle"  id="botomtop" align="left"><img src="<?=base_url();?>assets/imgs/001.png" align="middle"></img><span id="newsheading"><?=$mahila_details2['0']->cat_name?></span></td>
+          <td width="295" valign="middle"  id="botomtop" align="left"><img src="<?=base_url();?>assets/imgs/001.png" align="middle"></img><span id="newsheading"><?if(isset($mahila_details2['0'])){ echo $mahila_details2['0']->cat_name;}?></span></td>
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter2.jpg" width="5" height="31" /></td>
         </tr>
         <tr>
@@ -280,7 +280,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 	               <?=$mahila_details1['0']->summary?>
 	               <?} ?>
 	          </div>
-	          <div id="more-news-div"><a href="<?=base_url()?>mahila/mahiladetails/<?=$mahila_details1['0']->id?>"><?=$more['1']->matter?></a></div>
+	          <div id="more-news-div"><a href="<?=base_url()?>mahila/mahiladetails/<?if(isset($mahila_details1['0'])){ echo $mahila_details1['0']->id;}?>"><?=$more['1']->matter?></a></div>
           </td>
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="120" /></td>
           <td width="8">&nbsp;</td>
@@ -288,11 +288,11 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
           <td valign="top" id="botom-ser"> <div id="telugufont1" style="height: 86px;">
           	<? if(isset($mahila_details2['0'])){ ?>  
           	<a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details2['0']->id?>"><img border="0px" id="image" src="<?=base_url();?>assets/mahila/news_img<?=$mahila_details2['0']->id?>_thumb.jpg" style="float: left;padding: 2px 5px 2px 1px;"></a>
-	               <div id="mainnews"> <a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details2['0']->id?>"><? echo $mahila_details2['0']->heading;?></a></div>
+	               <div id="mainnews"> <a href="<?=base_url();?>mahila/mahiladetails/<?if(isset($mahila_details2['0'])){ echo $mahila_details2['0']->id;}?>"><? echo $mahila_details2['0']->heading;?></a></div>
 	               <?=$mahila_details2['0']->summary?>
 	               <?} ?>
 	          </div>
-	          <div id="more-news-div"><a href="<?=base_url()?>mahila/mahiladetails/<?=$mahila_details2['0']->id?>"><?=$more['1']->matter?></a></div></td>
+	          <div id="more-news-div"><a href="<?=base_url()?>mahila/mahiladetails/<?if(isset($mahila_details2['0'])){ echo $mahila_details2['0']->id;}?>"><?=$more['1']->matter?></a></div></td>
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="120" /></td>
         </tr>
     </table>

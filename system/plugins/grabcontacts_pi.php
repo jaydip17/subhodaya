@@ -32,10 +32,10 @@ $resultarray = get_contacts($login, $password);
     }
     if($page=="home")
     {
-    	redirect(base_url());
+    	redirect(base_url().'subhodaya/index/1');
     }
     else { 
-   redirect(base_url().'admin/contacts/index/1');
+        redirect(base_url().'admin/contacts/index/1');
     }
   	//include("form.php");
   }
@@ -45,7 +45,7 @@ $resultarray = get_contacts($login, $password);
 
 //grab yahoo contacts
   
-  function grabyahoo($login,$password)
+  function grabyahoo($login,$password,$page)
   {
   	require 'baseclass/baseclass.php';
   	require("yahoo/class.GrabYahoo.php");
@@ -56,7 +56,13 @@ $resultarray = get_contacts($login, $password);
 		fclose($fp);
 	 	if(!is_array($contacts))
 	 	{
-	 		redirect(base_url().'admin/contacts/index/1');
+	 	 if($page=="home")
+            {
+    	      redirect(base_url().'subhodaya/index/1');
+             }
+         else{
+	 		   redirect(base_url().'admin/contacts/index/1');
+             }
 	 		//die('<p align="center"><font color="#FF0000">No contacts found</font></p>');
 	 	}
 		if(is_array($contacts))

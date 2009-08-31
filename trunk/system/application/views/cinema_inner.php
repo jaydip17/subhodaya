@@ -59,11 +59,12 @@ function telugu_typing()
 						<td align="left"><div class="heading" style="width: 181px;" id="news_heading"><div style="padding-top:5px;" id="newsheading"><?php if(isset($mahila_details['0'])){echo $mahila_details['0']->cat_name;}?></div></div>
 						<div style="height: 275px;" id="left_news">
 						<div style="height: 250px;">
+						<?if(!empty($mahila_details))
+								{?>
 							<a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details['0']->id?>"><img src="<?=base_url();?>assets/mahila/news_img<?=$mahila_details['0']->id?>_thumb.jpg" style="padding:5px 0px 0px 20px;" border="0">
 							<ul >
 								<?php
-								if(!empty($mahila_details))
-								{ 
+								 
 								$count=0; foreach ($mahila_details as $row):?>
 								<li id="mainnews"><a href="<?=base_url();?>mahila/mahiladetails/<?=$row->id?>"><?=$row->heading?></a></li>
 								<?php
@@ -140,11 +141,11 @@ function telugu_typing()
 						<td align="left"><div class="heading" style="width: 181px;" id="news_heading"><div style="padding-top:5px;" id="newsheading"><?php if(isset($mahila_details1['0'])){echo $mahila_details1['0']->cat_name;}?></div></div>
 						<div style="height: 275px;" id="left_news">
 						<div style="height: 250px;">
+						<?if(!empty($mahila_details1))
+								{  ?>
 							<a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details1['0']->id?>"><img src="<?=base_url();?>assets/mahila/news_img<?=$mahila_details1['0']->id?>_thumb.jpg" style="padding:5px 0px 0px 20px;" border="0">
 							<ul >
 								<?php
-								if(!empty($mahila_details1))
-								{ 
 								$count=0; foreach ($mahila_details1 as $row):?>
 								<li id="mainnews"><a href="<?=base_url();?>mahila/mahiladetails/<?=$row->id?>"><?=$row->heading?></a></li>
 								<?php
@@ -165,11 +166,11 @@ function telugu_typing()
 						<td align="left"><div class="heading" style="width: 181px;" id="news_heading"><div style="padding-top:5px;" id="newsheading"><?php if(isset($news_type2['0'])){echo $news_type2['0']->news_cat;}?></div></div>
 						<div style="height: 275px;" id="left_news">
 						<div style="height: 250px">
+						<?if(!empty($news_type2)){?>
+								
 							<img src="<?=base_url();?>assets/news/news_img<?=$news_type2['0']->id?>_thumb.jpg" style="padding:5px 0px 0px 20px; ">
 							<ul >
 								<?php
-								if(!empty($news_type2))
-								{ 
 								$count=0; foreach ($news_type2 as $row):?>
 								<li id="mainnews"><a href="<?=base_url();?>news/inner/<?=$row->id?>"><?=$row->heading?></a></li>
 								<?php

@@ -28,6 +28,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
     							<div class="yui-content" >
 							        <div id="tab1"><p>
 							        		<div style="height:235px;" id="telugufont1">
+							        		<?if(isset($active_news1['0'])){?>
           				 						<a href="<?=base_url();?>cinema/inner/<?=$active_news1['0']->id?>"><img src="<?=base_url();?>assets/news/news_img<?=$active_news1['0']->id?>_thumb.jpg" style="float: left;padding: 2px 19px 2px 1px;text-align: left;text-align: justify;"  border="0"></img></a>
           				 						<font id="mainnews"><a href="<?=base_url();?>cinema/inner/<?=$active_news1['0']->id?>/<?=$active_news1['0']->type?>"><?php echo $active_news1['0']->heading;?></a></font><br>
           				 						<?php echo $active_news1['0']->summary;?>
@@ -51,11 +52,13 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 							          					}
 							          					?>
 							          				 </ul>
+							          				 <?} ?>
           				 						</div>
           				 						<div id="more-news-div" style="padding-right: 2px;"><span id="news-more"><a href="<?=base_url();?>cinema/details/<?if(isset($active_news1['0'])){ echo $active_news1['0']->type; }?>"><?=$more['0']->matter?></a></span></div>
 							        	</p></div>
 							        <div id="tab2"><p>
 							        		<div style="height:235px;" id="telugufont1">
+							        		<?if(isset($active_news2['0'])){?>
 							        		<a href="<?=base_url();?>cinema/inner/<?=$active_news2['0']->id?>"><img src="<?=base_url();?>assets/news/news_img<?=$active_news2['0']->id?>_thumb.jpg" style="float: left;padding: 2px 19px 2px 1px;text-align: left;text-align: justify;"  border="0"></img></a>
 							        		<div id="mainnews"><a href="<?=base_url();?>cinema/inner/<?=$active_news2['0']->id?>"><?=$active_news2['0']->heading?></a></div>
 							        		<?php echo $active_news2['0']->summary;?>
@@ -80,13 +83,17 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 							          					}
 							          			?>
 							        			</ul>
+							        			<?} ?>
 							        		</div>
 							        		<div id="more-news-div" style="padding-right: 2px;"><span id="news-more"><a href="<?=base_url();?>cinema/details/<?if(isset($active_news2['0'])){ echo $active_news2['0']->type; }?>"><?=$more['0']->matter?></a></span></div>
 							        </p></div>
 							        <div id="tab3"><p>
 							        	<div style="height:235px;" id="telugufont1">
+							        	<?if(isset($active_news3['0'])){?>
 							        		<a href="<?=base_url();?>cinema/inner/<?=$active_news3['0']->id?>"><img src="<?=base_url();?>assets/news/news_img<?=$active_news3['0']->id?>_thumb.jpg" style="float: left;padding: 2px 19px 2px 1px;text-align: left;text-align: justify;" border="0"></img></a>
-							        		<div id="mainnews"><a href="<?=base_url();?>cinema/inner/<?=$active_news3['0']->id?>"><?=$active_news3['0']->heading?></a></div>
+							        		<div id="mainnews">
+							        		
+							        		<a href="<?=base_url();?>cinema/inner/<?=$active_news3['0']->id?>"><?=$active_news3['0']->heading?></a></div>
 							        		<?php echo $active_news3['0']->summary;?>
 							        			<ul id="mainnews">
 							        			<?php
@@ -109,13 +116,16 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 							          					}
 							          			?>
 							        			</ul>
+							        			<?} ?>
 							        		</div>
 							        		<div id="more-news-div" style="padding-right: 2px;"><span id="news-more"><a href="<?=base_url();?>cinema/details/<?if(isset($active_news3['0'])){ echo $active_news3['0']->type; }?>"><?=$more['0']->matter?></a></span></div>
 							        </p></div>
 									<div id="tab4"><p>
 										<div style="height:235px;" id="telugufont1">
+										<?if(isset($active_news4['0'])){?>
 							        		<a href="<?=base_url();?>cinema/inner/<?=$active_news4['0']->id?>"><img src="<?=base_url();?>assets/news/news_img<?=$active_news4['0']->id?>_thumb.jpg" style="float: left;padding: 2px 19px 2px 1px;text-align: left;text-align: justify;" border="0"></img></a>
-							        		<div id="mainnews"><a href="<?=base_url();?>cinema/inner/<?=$active_news4['0']->id?>"><?=$active_news4['0']->heading?></a></div>
+							        		<div id="mainnews">
+							        		<a href="<?=base_url();?>cinema/inner/<?=$active_news4['0']->id?>"><?=$active_news4['0']->heading?></a></div>
 							        		<?php echo $active_news4['0']->summary;?>
 							        			<ul id="mainnews">
 							        			<?php
@@ -138,6 +148,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 							          					}
 							          			?>
 							        			</ul>
+							        			<?} ?>
 							        		</div>
 							        		<div id="more-news-div" style="padding-right: 2px;"><span id="news-more"><a href="<?=base_url();?>cinema/details/<?if(isset($active_news4['0'])){ echo $active_news4['0']->type; }?>"><?=$more['0']->matter?></a></span></div>
 									</p></div>

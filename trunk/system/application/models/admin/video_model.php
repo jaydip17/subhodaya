@@ -182,7 +182,8 @@ class Video_Model extends Model {
    	  $query = $this->db->get('videos_categeory');
    	  return $query->result_array();
     }
-       
+
+    
     
  function editcategeory()
    {
@@ -228,6 +229,18 @@ class Video_Model extends Model {
    	 $this->db->update('videos',array('id' => $_POST['id'], 'name' => $_POST['name'], 'no_of_views' => $_POST['no_of_views'] , 'rating' => $_POST['rating']));
    	 	
    }
-   	   
+
+ function active()
+    {
+    	$this->db->select('*');
+    	$array=array('videos.active'=>1);
+    	$this->db->where($array);
+		$this->db->from('videos_categeory');
+		$this->db->join('videos', 'videos.categeory= videos_categeory.id');
+		$query = $this->db->get_where();
+		return $query->result();
+    	
+    }
+   
 }
 ?>

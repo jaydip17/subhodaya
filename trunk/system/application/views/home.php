@@ -7,7 +7,7 @@ function reload()
 		// document.getElementById('newsletters').style.display="";
 		 //document.getElementById('subscribe').value="Subscribe here";
 	 }
-	 function subscribe(str)
+	 function subscribe(str) 
 	{
 	 var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 			   var address = document.getElementById('subscribe').value;

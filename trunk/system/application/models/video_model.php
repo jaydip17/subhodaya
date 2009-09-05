@@ -37,6 +37,14 @@ class Video_model extends Model
 		return $query;
 		
     }
+    function count_videos($catid)
+    {
+    	//echo $catid;
+    	$this->db->where('video_cat_id',$catid);
+    	$count=$this->db->count_all_results('videos');
+    	return $count;
+    	
+    }
 	function getvideocategeories($limit)
 	{
 	//if($limit!=0)
@@ -123,7 +131,6 @@ function getlatestvideos($limit,$catid,$id)
 	}
 	
 
-	
  function getvideo($id)
         {
       	$this->db->where('video_uploaded',1);
@@ -132,30 +139,7 @@ function getlatestvideos($limit,$catid,$id)
       	return $query;
        }
   
-       
-function getmusicvideos($limit,$id)	
-{
-	$this->db->where('video_uploaded',1);
-	$this->db->where('video_cat_id',$id);
-	$query=$this->db->get('videos',$limit);
-	return $query;
-}      
-       
-function getcamedyvideos($limit,$id)	
-{
-	$this->db->where('video_uploaded',1);
-	$this->db->where('video_cat_id',$id);
-	$query=$this->db->get('videos',$limit);
-	return $query->result();
-}
-
- function getmoviesandfilmmakersvideos($limit,$id)
-{
-    $this->db->where('video_uploaded',1);
-	$this->db->where('video_cat_id',$id);
-	$query=$this->db->get('videos',$limit);
-	return $query;
-}
+ 
        
   function increase_viewcount($id)
    

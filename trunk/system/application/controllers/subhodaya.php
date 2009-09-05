@@ -34,8 +34,32 @@ class Subhodaya extends Controller {
 		{
 			$images[$item->id]=$this->Gallery_Model->getimage($item->id);
 		}
-		//print_r($images);
-		//print_r($home_stories);
+		//get all categeories of gallery where active=1
+		$gallery_maincategeories = $this->Gallery_Model->get_categeory($active=1);
+		
+		if(!empty($gallery_maincategeories))//if atleast one main categeory exists..
+		{
+			
+		  foreach($gallery_maincategeories as $item)
+		  {
+			$subcategeories[$item->id]=$this->Gallery_Model->subcat($item->id);
+			//echo "hello";
+		  }
+		//  print_r($subcategeories);
+		 	
+	       foreach($subcategeories as $item)
+	       {  
+	       	$eachone=$item->result();
+	    	if(!empty($eachone))
+	    	{
+	    		print_r($eachone);
+	    	echo "hello";
+	 		//$images[$eachone->id]=$this->Gallery_Model->getimage($eachone->id);
+	    	}
+		   }
+	    }
+	    	
+	
 		$data=array('more'=>$more,
 		            'news_type7'=>$news_type7,
 					'news_type4'=>$news_type4,

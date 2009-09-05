@@ -13,12 +13,12 @@ class Sahithi extends Controller {
 		$details=$this->Sahithi_Model->get_sahithitype();
 		$details_more=array();
 		foreach($details as $item)
-		$details_more[$item->id]=$this->Sahithi_Model->getdetails($item->id,'yes');
+		$details_more[$item->id]=$this->Sahithi_Model->getdetails($item->id,'yes',6);
 		
 			$details_mahila=$this->mahila_Model->get_mahilatype();
 		$details_more_mahila=array();
 		foreach($details_mahila as $item)
-		$details_more_mahila[$item->id]=$this->mahila_Model->getdetails($item->id,'yes');
+		$details_more_mahila[$item->id]=$this->mahila_Model->getdetails($item->id,'yes',8);
 	
 		$types = array_keys($details_more);
 		$types_mahila =array_keys($details_mahila);
@@ -45,7 +45,7 @@ class Sahithi extends Controller {
 		$details_mahila=$this->mahila_Model->get_mahilatype();
 		$details_more=array();
 		foreach($details_mahila as $item)
-		$details_more[$item->id]=$this->mahila_Model->getdetails($item->id,'yes');
+		$details_more[$item->id]=$this->mahila_Model->getdetails($item->id,'yes',6);
 		//print_r($result);
 		$data=array('result'   =>   $result,
 					 'more'    =>   $more,

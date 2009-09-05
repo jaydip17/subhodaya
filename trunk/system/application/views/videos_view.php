@@ -94,7 +94,7 @@
   <?}?>
   </ul>
   <div class="TabbedPanelsContentGroup">
- <?php  foreach($hotvideos as $item){
+ <?php  foreach($hotvideos as $key=>$item){
  
  	?>
     <div class="TabbedPanelsContent">     
@@ -121,7 +121,7 @@
  <? }
    
   ?>
-  <div  id="hotvi" class="hiname"><a href="#"><?=$more['0']->matter?></a></div>
+  <div  id="hotvi" class="hiname"><a href="#"><?echo $pagination[$key]?></a></div>
    </div>   
   
     <?php } ?> 

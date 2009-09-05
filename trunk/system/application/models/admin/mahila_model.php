@@ -46,8 +46,12 @@ class Mahila_Model extends Model {
   		$this->db->where('id',$id);	
   		$this->db->update('mahila',$data);		
     }
-    function getdetails($id,$headingonly)
+    function getdetails($id,$headingonly,$limit)
 	{
+		if($limit==6)
+		{
+			$this->db->limit(6);
+		}
 		if($headingonly=='yes')
 		{
 			$this->db->select('id,heading,summary');

@@ -52,8 +52,16 @@ class Sahithi_Model extends Model {
   		$this->db->where('id',$id);	
   		$this->db->update('sahithi',$data);		
     }
-    function getdetails($id,$headingonly)
+    function getdetails($id,$headingonly,$limit)
 	{
+	
+		switch($limit)
+		{
+			case 6:$this->db->limit(6);
+			        break;
+			case 8:$this->db->limit(8);
+			        break;
+		}
 		if($headingonly=='yes')
 		{
 			$this->db->select('id,heading,summary');

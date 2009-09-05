@@ -85,7 +85,7 @@
  		return $query;
   	}
   	// function to get all sub-categories in movies category
-	
+	 
 	function get_movies($cat = 'movies')
 	{
 		 $query = "SELECT a.catname,a.id FROM

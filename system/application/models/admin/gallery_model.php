@@ -177,8 +177,11 @@
 	//fetching all sub categeories from database
     function subcat($uriseg)
 	{
+		//echo $uriseg;
 		$this->db->where('parentid',$uriseg);
 		$query =$this->db->get('gallery_categeory');
+		if(!empty($query->result))
+		print_r($query->result);
 		return $query;
 	}
 	//editcategeory
@@ -221,8 +224,12 @@
  		$this->db->delete('gallery_images');
   	}
   	//get categeories for main page
-	function get_categeory()
+	function get_categeory($active)
 	{
+		if($active==1)
+		{
+			$this->db->where('active',1);
+		}
 		$this->db->order_by('update_date','desc');
 		$this->db->where('parentid',0);
 		$query=$this->db->get('gallery_categeory');

@@ -68,7 +68,7 @@
 		$this->load->view('admin/gallery_edit',$data);
 		
 	}
-	
+	 
 	//adding images into the categeory
 	function addImage()
 	{ 

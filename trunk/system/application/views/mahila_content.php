@@ -27,10 +27,11 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
     						<div class="yui-content">
     						<?for($i=1;$i<=4;$i++){?>
 							 <div id="tab<?=$i?>">
-							        	<div style="padding-top: 5px;" >
-							        
-	              <img src="<?=base_url();?>assets/<?=$type?>/news_img<?php if(isset($details_more[$i]['0'])){echo $details_more[$i]['0']->id;}?>_thumb.jpg" style="float:left;padding:4px 20px 4px 4px;text-align: justify;" width="105px" height="86px" align="top" />
-	            
+							    <div style="padding-top: 5px;" id="telugufont1">
+							    <?if(!empty($details_more[$i]['0'])){ 
+						 if(file_exists("./assets/mahila/news_img".$details_more[$i]['0']->id."_thumb.jpg")){ ?>	        
+	              	<a href="<?=base_url();?><?=$type?>/<?=$type?>details/<?=$details_more[$i]['0']->id?>"><img src="<?=base_url();?>assets/<?=$type?>/news_img<?php if(isset($details_more[$i]['0'])){echo $details_more[$i]['0']->id;}?>_thumb.jpg" style="float:left;padding:4px 20px 4px 4px;text-align: justify;" align="top" border="0"/></a>
+	            	<? }} ?>
 	             <?if(!empty($details_more[$i])){?>
 	             <font id="telugufont"><a href="<?=base_url();?><?=$type?>/<?=$type?>details/<?=$details_more[$i]['0']->id?>"><?php echo $details_more[$i]['0']->heading?></a></font><br>
 	              <?=$details_more[$i]['0']->summary; }?>
@@ -41,7 +42,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 	              	$j=1;
 	              foreach($details_more[$i] as $item) {
                    if($j==9) break;?>
-	             <li><a href="<?=base_url();?><?=$type?>/<?=$type?>details/<?=$item->id?>"><?=$item->heading ?></a></li>
+	             <li id="telugufont"><a href="<?=base_url();?><?=$type?>/<?=$type?>details/<?=$item->id?>"><?=$item->heading ?></a></li>
 	                <?$j++;}} ?>
 	                 </ul>
 	                 </div>
@@ -126,12 +127,12 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
           				</td>
           				<td style="border: 1px solid #3789C3;" valign="top">
           				 <div style="width:100%" id="news_heading"><span id="newsheading" style="padding-right:30px"><?=$more['29']->matter;?></span></div>
-          				  <div >
+          				  <div id="mainnews">
           				 	<ul>
           				 	<?foreach($details_more as $item){
           				 		$i=1;
           				         foreach($item as $article){?>
-          				         <li><a href="<?=base_url();?><?=$type?>/<?=$type?>details/<?=$article->id?>"><? echo $article->summary;?></a></li>
+          				         <li><a href="<?=base_url();?><?=$type?>/<?=$type?>details/<?=$article->id?>"><? echo $article->heading;?></a></li>
           				         <?if($i==1)break; $i++;}?>
           				 		   <?}?>
 	
@@ -146,28 +147,28 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
           <table width="99%"  border="0" cellpadding="0" cellspacing="0">
         <tr>
           <td width="5" valign="top" id="botomtop"><img src="<?=base_url();?>assets/imgs/senter-1.jpg" width="5" height="31" /></td>
-          <td width="295" valign="top" id="botomtop" align="left"><img src="<?=base_url();?>assets/imgs/001.gif" style="float:left;margin:4px 4px 0px 0px;"></img><div style="padding-top:5px;" id="newsheading"><?php {echo $more['29']->matter;}?></div></td>
+          <td width="295" valign="top" id="botomtop" align="left"><img src="<?=base_url();?>assets/imgs/001.png" style="float:left;margin:4px 4px 0px 0px;"></img><div style="padding-top:5px;" id="newsheading"><?php {echo $more['29']->matter;}?></div></td>
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter2.jpg" width="5" height="31" /></td>
           <td width="8">&nbsp; </td>
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter-1.jpg" width="5" height="31" /></td>
-          <td width="295" valign="top" id="botomtop" align="left"><img src="<?=base_url();?>assets/imgs/001.gif" style="float:left;margin:4px 4px 0px 0px;"></img><div style="padding-top:5px;" id="newsheading"><?php {echo $more['31']->matter;}?></div></td>
+          <td width="295" valign="top" id="botomtop" align="left"><img src="<?=base_url();?>assets/imgs/001.png" style="float:left;margin:4px 4px 0px 0px;"></img><div style="padding-top:5px;" id="newsheading"><?php {echo $more['31']->matter;}?></div></td>
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter2.jpg" width="5" height="31" /></td>
           <td width="8">&nbsp; </td>
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter-1.jpg" width="5" height="31" /></td>
-          <td width="295" valign="top" id="botomtop" align="left"><img src="<?=base_url();?>assets/imgs/001.gif" style="float:left;margin:4px 4px 0px 0px;"></img><div style="padding-top:5px;" id="newsheading"><?php {echo $more['30']->matter;}?></div></td>
+          <td width="295" valign="top" id="botomtop" align="left"><img src="<?=base_url();?>assets/imgs/001.png" style="float:left;margin:4px 4px 0px 0px;"></img><div style="padding-top:5px;" id="newsheading"><?php {echo $more['30']->matter;}?></div></td>
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter2.jpg" width="5" height="31" /></td>
         </tr>
         <tr>
-          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="109" /></td>
-          <td valign="top" id="botom-ser"><ul><?for($i=5;$i<=7;$i++)
+          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="120" /></td>
+          <td valign="top" id="botom-ser" style="padding-top: 3px;"><ul id="mainnews"><?for($i=5;$i<=7;$i++)
           {?>
          <li><a href="<?=base_url();?><?=$type;?>/details/<?=$details[$i]->id?>"><? echo $details[$i]->cat_name;?></li>
          <?}?>
          </ul>
           </td>
-          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="109" /></td>
+          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="120" /></td>
           <td width="8">&nbsp;</td>
-          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="109" /></td>
+          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="120" /></td>
           <td valign="top" id="botom-ser"><div id="home_poll" >
                  	<div><? if(!empty($cinemapoll['0']->question)){
 						echo   $cinemapoll['0']->question;               		
@@ -196,9 +197,9 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
               
                 <?} else echo 'Yesterday no no poll.';?>
                 </div></td>
-          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="109" /></td>
+          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="120" /></td>
           <td width="8">&nbsp;</td>
-          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="109" /></td>
+          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="120" /></td>
           <td valign="top" id="botom-ser"> <div id="home_poll" >
                <div><? if(!empty($newspoll['0']->question)){
                 echo $newspoll['0']->question;

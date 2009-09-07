@@ -68,7 +68,7 @@ class Mahila extends Controller {
 		$yes_poll=$this->Poll_Model->get_yes_newspoll($type=4);
       	$details=$this->mahila_Model->get_mahilatype();
 		foreach($details as $item)
-		$details_more[$item->id]=$this->mahila_Model->getdetails($item->id,'yes');
+		$details_more[$item->id]=$this->mahila_Model->getdetails($item->id,'yes',6);
 		$more=$this->mahila_Model->more_mahila();
 		$type=$this->uri->segment(3,0);
 		$onload = "loadNews('".base_url()."mahilalist/listview/".$type."')";

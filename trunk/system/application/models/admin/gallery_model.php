@@ -279,6 +279,7 @@
   	function get_image($id)
   	{
   		$this->db->where('id',$id);
+  		$this->db->select('id, parentid, title');
   		$query=$this->db->get_where('gallery_images');
   		return $query->result();
   	}
@@ -296,6 +297,13 @@
 	{
 		$query="from gallery_images where parentid=$type order by gallery_images.id desc";
 		return $query;
+	}
+	function get_allimages($parentid)
+	{
+		$this->db->where('parentid',$parentid);
+  		$this->db->select('id, parentid, title');
+  		$query=$this->db->get_where('gallery_images');
+  		return $query;	
 	}
 
   	

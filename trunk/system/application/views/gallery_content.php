@@ -27,20 +27,49 @@ function telugu_typing()
 				<tr>
 					<td id="gal_leftslide"></td>
 					<td id="gal_menucen">
-					
+					<div style="text-align: left;float: left;width: 50%;text-align: left;float: left;width: 50%;padding-left: 3px;font-size: 14px;font-weight: bold;" >
+					<? if(isset($links)):?>
+					<?if(isset($links['first'])){ ?>
+						<a href="<?=base_url();?>gallery/content/<?=$links['first']?>/<?=$image['0']->parentid?>">First</a>!!<?} ?>
+						<?if(isset($links['prev'])){ ?>
+						<a href="<?=base_url();?>gallery/content/<?=$links['prev']?>/<?=$image['0']->parentid?>">Previous</a>						
+					<?}endif; ?>
+					</div>
+					<div style="text-align: right;padding-right: 3px;font-size: 14px;font-weight: bold;">
+					<? if(isset($links)):?>
+					<?if(isset($links['next'])){ ?>
+						<a href="<?=base_url();?>gallery/content/<?=$links['next']?>/<?=$image['0']->parentid?>">Next</a>!!<?} ?>
+						<?if(isset($links['last'])){ ?>
+						<a href="<?=base_url();?>gallery/content/<?=$links['last']?>/<?=$image['0']->parentid?>">Last</a>						
+					<?}endif; ?>
+					</div>
 					</td>
 					<td id="gal_rightslide"></td>
 				</tr>
 				<tr>
 					<td colspan="3"  id="gal_center1"  width="742" align="center" height="590" >
-					<? if(file_exists("./assets/gallery/imge".$image['0']->id.".jpg")){ ?>
 					<img src="<?=base_url()?>assets/gallery/image<?=$image['0']->id?>.jpg"  border="0">
-					<? } ?>
 					</td>
 				</tr>
 				 <tr>
 					<td id="gal_leftslide"></td>
 					<td id="gal_menucen">
+						<div style="text-align: left;float: left;width: 50%;padding-left: 3px;font-size: 14px;font-weight: bold;">
+					<? if(isset($links)):?>
+					<?if(isset($links['first'])){ ?>
+						<a href="<?=base_url();?>gallery/content/<?=$links['first']?>/<?=$image['0']->parentid?>">First</a>!!<?} ?>
+						<?if(isset($links['prev'])){ ?>
+						<a href="<?=base_url();?>gallery/content/<?=$links['prev']?>/<?=$image['0']->parentid?>">Previous</a>						
+					<?}endif; ?>
+					</div>
+					<div style="text-align: right;padding-right: 3px;font-size: 14px;font-weight: bold;">
+					<? if(isset($links)):?>
+					<?if(isset($links['next'])){ ?>
+						<a href="<?=base_url();?>gallery/content/<?=$links['next']?>/<?=$image['0']->parentid?>">Next</a>!!<?} ?>
+						<?if(isset($links['last'])){ ?>
+						<a href="<?=base_url();?>gallery/content/<?=$links['last']?>/<?=$image['0']->parentid?>">Last</a>						
+					<?}endif; ?>
+					</div>
 					</td>
 					<td id="gal_rightslide"></td>
 				</tr>

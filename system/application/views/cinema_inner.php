@@ -34,7 +34,10 @@ function telugu_typing()
 						<td align="left"><div class="heading" style="width: 181px;" id="news_heading"><div style="padding-top:5px;" id="newsheading"><?php if(isset($news_type4['0'])){echo $news_type4['0']->news_cat;}?></div></div>
 						<div style="height: 280px;" id="left_news">
 						<div style="height: 257px">
-							<a href="<?=base_url();?>news/newsdetails/<?=$news_type4['0']->id?>/<?=$news_type4['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?=$news_type4['0']->id?>_thumb.jpg" style="padding:5px 0px 0px 20px;" border="0"/>
+							<? if(!empty($news_type4['0'])){
+							if(file_exists("./assets/news/news_img".$news_type4['0']->id."_thumb.jpg")){ ?>
+							<a href="<?=base_url();?>news/newsdetails/<?=$news_type4['0']->id?>/<?=$news_type4['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?=$news_type4['0']->id?>_thumb.jpg" style="padding:5px 0px 0px 20px;" border="0"/></a>
+							<?}} ?>
 							<ul>
 								<?php
 								if(!empty($news_type4))
@@ -59,9 +62,10 @@ function telugu_typing()
 						<td align="left"><div class="heading" style="width: 181px;" id="news_heading"><div style="padding-top:5px;" id="newsheading"><?php if(isset($mahila_details['0'])){echo $mahila_details['0']->cat_name;}?></div></div>
 						<div style="height: 275px;" id="left_news">
 						<div style="height: 250px;">
-						<?if(!empty($mahila_details))
-								{?>
-							<a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details['0']->id?>"><img src="<?=base_url();?>assets/mahila/news_img<?=$mahila_details['0']->id?>_thumb.jpg" style="padding:5px 0px 0px 20px;" border="0">
+						<?if(!empty($mahila_details)){
+							if(file_exists("./assets/mahila/news_img".$mahila_details['0']->id."_thumb.jpg")){ ?>
+							<a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details['0']->id?>"><img src="<?=base_url();?>assets/mahila/news_img<?=$mahila_details['0']->id?>_thumb.jpg" style="padding:5px 0px 0px 20px;" border="0"></a>
+							<?} ?>
 							<ul >
 								<?php
 								 
@@ -88,7 +92,10 @@ function telugu_typing()
 			<tr><td align="left"><div id="news_heading" class="heading"><div id="newsheading" style="padding-top: 5px;"><?php if(isset($result['0'])){echo $result['0']->heading;}?></div></div></td></tr>
 			<tr><td align="center" id="telugufont1"><div  id="maindiv-news">
 			<div  style="text-align: justify; padding: 7px;font-size: 14px;">
+			<?if(!empty($result)){
+			if(file_exists("./assets/cinema/ceni_img".$result['0']->id."_thumb.jpg")){ ?>
 			<img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($result['0'])){echo $result['0']->id;}?>.jpg" style="float: left;padding:1px 4px 2px 2px;border: 1px solid  #9FA0A0; margin: 10px 10px 10px 10px;" ></img>
+			<?}} ?>
 			<font style="padding: 2px;"><?php if(isset($result['0'])){echo $result['0']->description;}?></font></div>
 			</div></td></tr>
 			<tr><td><div id="news_heading" class="heading"><span id="newsheading"><?php if(isset($more['25'])){echo $more['25']->matter;}?></span></div></td></tr>
@@ -141,9 +148,11 @@ function telugu_typing()
 						<td align="left"><div class="heading" style="width: 181px;" id="news_heading"><div style="padding-top:5px;" id="newsheading"><?php if(isset($mahila_details1['0'])){echo $mahila_details1['0']->cat_name;}?></div></div>
 						<div style="height: 275px;" id="left_news">
 						<div style="height: 250px;">
-						<?if(!empty($mahila_details1))
-								{  ?>
-							<a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details1['0']->id?>"><img src="<?=base_url();?>assets/mahila/news_img<?=$mahila_details1['0']->id?>_thumb.jpg" style="padding:5px 0px 0px 20px;" border="0">
+						<?if(!empty($mahila_details1)){
+						if(file_exists("./assets/mahila/news_img".$mahila_details1['0']->id."_thumb.jpg")){?>
+							<a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details1['0']->id?>"><img src="<?=base_url();?>assets/mahila/news_img<?=$mahila_details1['0']->id?>_thumb.jpg" style="padding:5px 0px 0px 20px;" border="0"></a>
+							<?} ?>
+							
 							<ul >
 								<?php
 								$count=0; foreach ($mahila_details1 as $row):?>
@@ -166,9 +175,10 @@ function telugu_typing()
 						<td align="left"><div class="heading" style="width: 181px;" id="news_heading"><div style="padding-top:5px;" id="newsheading"><?php if(isset($news_type2['0'])){echo $news_type2['0']->news_cat;}?></div></div>
 						<div style="height: 275px;" id="left_news">
 						<div style="height: 250px">
-						<?if(!empty($news_type2)){?>
-								
+						<?if(!empty($news_type2)){
+						if(file_exists("./assets/news/news_img".$news_type2['0']->id."_thumb.jpg")){ ?>
 							<a href="<?=base_url();?>news/newsdetails/<?=$news_type2['0']->id?>/<?=$news_type2['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?=$news_type2['0']->id?>_thumb.jpg" style="padding:5px 0px 0px 20px;" border="0"></a>
+							<?} ?>
 							<ul >
 								<?php
 								$count=0; foreach ($news_type2 as $row):?>

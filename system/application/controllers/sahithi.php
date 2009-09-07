@@ -67,7 +67,7 @@ class Sahithi extends Controller {
    	$details=$this->Sahithi_Model->get_sahithitype();
    	$details_more=array();
 		foreach($details as $item)
-		$details_more[$item->id]=$this->Sahithi_Model->getdetails($item->id,'yes');
+		$details_more[$item->id]=$this->Sahithi_Model->getdetails($item->id,'yes',6);
 		$more=$this->Sahithi_Model->more_sahithi();
 		$type=$this->uri->segment(3,0);
 		$onload = "loadNews('".base_url()."sahithilist/listview/".$type."')";

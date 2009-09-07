@@ -212,7 +212,10 @@ sample sf dsfsd fdsf
           				<td width="375" style="border: 1px solid #50BCFC;" id="newstable" valign="top" height="235">
           				<div style="width:100%;" id="news_heading"><span id="newsheading"><?=$cinema_type1['0']->cinema_type?></span></div>
           				<div id='telugufont1' style="height: 200px">
+          				 <? if(!empty($cinema_type1)){
+           					if(file_exists("./assets/cinema/ceni_img".$cinema_type1['0']->id."_thumb.jpg")){ ?>
 							 		<a href="<?=base_url();?>cinema/inner/<?=$cinema_type1['0']->id?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type1['0']->id?>_thumb.jpg" style="float: left;padding:4px 20px 3px 3px;border: 0px;"></img></a>
+							 		<?} ?>
 							 		<div id="mainnews"><a href="<?=base_url();?>cinema/inner/<?=$cinema_type1['0']->id?>"><?=$cinema_type1['0']->heading?></a></div>
 							 		<?=$cinema_type1['0']->summary?>
 							 		<ul id="mainnews">
@@ -236,7 +239,7 @@ sample sf dsfsd fdsf
           									if($count==0)
           									{
           									echo 'No data found';
-          									}
+          									}}
           								?>
 							 		</ul>
 							 		</div>
@@ -245,7 +248,10 @@ sample sf dsfsd fdsf
           				<td style="border: 1px solid #50BCFC;" valign="top" id="newstable" height="235">
           				<div style="width:100%;" id="news_heading"><span id="newsheading"><?=$cinema_type2['0']->cinema_type?></span></div>
           				<div id='telugufont1' style="height: 200px">
+          				   <? if(!empty($cinema_type2)){
+           					if(file_exists("./assets/cinema/ceni_img".$cinema_type2['0']->id."_thumb.jpg")){ ?>
 							 		<a href="<?=base_url();?>cinema/inner/<?=$cinema_type2['0']->id?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type2['0']->id?>_thumb.jpg" style="float: left;padding:4px 20px 3px 3px;border: 0px;"></img></a>
+							 		<?} ?>
 							 		<div id="mainnews"><a href="<?=base_url();?>cinema/inner/<?=$cinema_type2['0']->id?>"><?=$cinema_type2['0']->heading?></a></div>
 							 		<?=$cinema_type2['0']->summary?>
 							 		<ul id="mainnews">
@@ -269,7 +275,7 @@ sample sf dsfsd fdsf
           									if($count==0)
           									{
           									echo 'No data found';
-          									}
+          									}}
           								?>
 							 		</ul>
 							 		</div>
@@ -286,7 +292,10 @@ sample sf dsfsd fdsf
 							  <div class="TabbedPanelsContentGroup">
 							    <div class="TabbedPanelsContent">
 							    <div id='telugufont1' style="height: 200px">
+							    <? if(!empty($cinema_type3)){
+           					   if(file_exists("./assets/cinema/ceni_img".$cinema_type3['0']->id."_thumb.jpg")){ ?>
 							 		<a href="<?=base_url();?>cinema/inner/<?=$cinema_type3['0']->id?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type3['0']->id?>_thumb.jpg" style="float: left;padding:4px 20px 3px 3px;border: 0px;"></img></a>
+							 		<?} ?>
 							 		<div id="mainnews"><a href="<?=base_url();?>cinema/inner/<?=$cinema_type3['0']->id?>"><?=$cinema_type3['0']->heading?></a></div>
 							 		<?=$cinema_type3['0']->summary?>
 							 		<ul id="mainnews">
@@ -310,7 +319,7 @@ sample sf dsfsd fdsf
           									if($count==0)
           									{
           									echo 'No data found';
-          									}
+          									}}
           								?>
 							 		</ul>
 							 		</div>
@@ -318,7 +327,10 @@ sample sf dsfsd fdsf
           						</div>
 							    <div class="TabbedPanelsContent">
 							   		 <div id='telugufont1' style="height: 200px">
+							   		 <? if(!empty($cinema_type4)){
+           					          if(file_exists("./assets/cinema/ceni_img".$cinema_type4['0']->id."_thumb.jpg")){ ?>
 							 		<a href="<?=base_url();?>cinema/inner/<?=$cinema_type4['0']->id?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type4['0']->id?>_thumb.jpg" style="float: left;padding:4px 20px 3px 3px;border: 0px;"></img></a>
+							 		<?} ?>
 							 		<div id="mainnews"><a href="<?=base_url();?>cinema/inner/<?=$cinema_type4['0']->id?>"><?=$cinema_type4['0']->heading?></a></div>
 							 		<?=$cinema_type4['0']->summary?>
 							 		<ul id="mainnews">
@@ -342,7 +354,7 @@ sample sf dsfsd fdsf
           									if($count==0)
           									{
           									echo 'No data found';
-          									}
+          									}}
           								?>
 							 		</ul>
 							 		</div>
@@ -360,7 +372,10 @@ sample sf dsfsd fdsf
 							  <div class="TabbedPanelsContentGroup">
 							    <div class="TabbedPanelsContent">
 							   		  <div id='telugufont1' style="height: 200px">
+							   		  <? if(!empty($cinema_type5)){
+           					if(file_exists("./assets/cinema/ceni_img".$cinema_type5['0']->id."_thumb.jpg")){ ?>
 							 		<a href="<?=base_url();?>cinema/inner/<?=$cinema_type5['0']->id?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type5['0']->id?>_thumb.jpg" style="float: left;padding:4px 20px 3px 3px;border: 0px;"></img></a>
+							 		<?} ?>
 							 		<div id="mainnews"><a href="<?=base_url();?>cinema/inner/<?=$cinema_type5['0']->id?>"><?=$cinema_type5['0']->heading?></a></div>
 							 		<?=$cinema_type5['0']->summary?>
 							 		<ul id="mainnews">
@@ -384,7 +399,7 @@ sample sf dsfsd fdsf
           									if($count==0)
           									{
           									echo 'No data found';
-          									}
+          									}}
           								?>
 							 		</ul>
 							 		</div>
@@ -392,7 +407,10 @@ sample sf dsfsd fdsf
           						</div>
 							 	<div class="TabbedPanelsContent">
 									  <div id='telugufont1' style="height: 200px">
+									  <? if(!empty($cinema_type6)){
+           					if(file_exists("./assets/cinema/ceni_img".$cinema_type6['0']->id."_thumb.jpg")){ ?>
 							 		<a href="<?=base_url();?>cinema/inner/<?=$cinema_type6['0']->id?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type6['0']->id?>_thumb.jpg" style="float: left;padding:4px 20px 3px 3px;border: 0px;"></img></a>
+							 		<?} ?>
 							 		<div id="mainnews"><a href="<?=base_url();?>cinema/inner/<?=$cinema_type6['0']->id?>"><?=$cinema_type6['0']->heading?></a></div>
 							 		<?=$cinema_type6['0']->summary?>
 							 		<ul id="mainnews">
@@ -416,7 +434,7 @@ sample sf dsfsd fdsf
           									if($count==0)
           									{
           									echo 'No data found';
-          									}
+          									}}
           								?>
 							 		</ul>
 							 		</div>

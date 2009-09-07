@@ -20,7 +20,7 @@
 								<td   width="125" height="110" align="center">
 								<div style="height: 95px;width: 130px;">
 									<a href="<?=base_url();?>gallery/content/<?=$row->id?>"><img src="<?=base_url()?>assets/gallery/image<?=$row->id?>_thumb.jpg" border="0"></a>
-								</div><div id="gall_botto_img"><sapn id="gall_names"><a href="<?=base_url();?>gallery/content/<?=$row->id?>"><?=$row->title?></a></span></div></td>
+								</div><div id="gall_botto_img"><sapn id="gall_names"><a href="<?=base_url();?>gallery/content/<?=$row->id?>/<?=$row->parentid?>"><?=$row->title?></a></span></div></td>
 									<? if ($count==5)
 									{
 										$count = 0;
@@ -35,7 +35,9 @@
 				</tr>
 					<tr>
 					<td id="gal_leftslide"></td>
-					<td id="gal_menucen"><?=$pagination?></td>
+					<td id="gal_menucen">
+					<?=$pagination?>
+					</td>
 					<td id="gal_rightslide"></td>
 				</tr>
 				<tr><td id="gal_bottom" colspan="3"></td></tr>

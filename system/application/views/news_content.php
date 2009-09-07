@@ -28,7 +28,10 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
     							<div class="yui-content" >
 							        <div id="tab1"><p>
 							        		<div style="height:235px;" id="telugufont1">
+							        		<? if(!empty($active_news1)){
+												if(file_exists("./assets/news/news_img".$active_news1['0']->id."_thumb.jpg")){ ?>
           				 						<a href="<?=base_url();?>news/newsdetails/<?=$active_news1['0']->id?>"><img src="<?=base_url();?>assets/news/news_img<?=$active_news1['0']->id?>_thumb.jpg" style="float: left;padding: 2px 19px 2px 1px;text-align: left;text-align: justify;"  border="0"></img></a>
+          				 						<?} ?>
           				 						<font id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?=$active_news1['0']->id?>"><?php echo $active_news1['0']->heading;?></a></font><br>
           				 						<?php echo $active_news1['0']->summary;?>
           				 						<ul id="mainnews">
@@ -49,6 +52,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 							          					if($count==0){
 							          						echo 'No data found';
 							          					}
+														}
 							          					?>
 							          				 </ul>
           				 						</div>
@@ -56,7 +60,10 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 							        	</p></div>
 							        <div id="tab2"><p>
 							        		<div style="height:235px;" id="telugufont1">
+							        		<? if(!empty($active_news2)){
+											if(file_exists("./assets/news/news_img".$active_news2['0']->id."_thumb.jpg")){ ?>
 							        		<a href="<?=base_url();?>news/newsdetails/<?=$active_news2['0']->id?>"><img src="<?=base_url();?>assets/news/news_img<?=$active_news2['0']->id?>_thumb.jpg" style="float: left;padding: 2px 19px 2px 1px;text-align: left;text-align: justify;"  border="0"></img></a>
+							        		<?} ?>
 							        		<div id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?=$active_news2['0']->id?>"><?=$active_news2['0']->heading?></a></div>
 							        		<?php echo $active_news2['0']->summary;?>
 							        			<ul id="mainnews">
@@ -77,7 +84,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 							          					endforeach; 
 							          					if($count==0){
 							          						echo 'No data found';
-							          					}
+							          					}}
 							          			?>
 							        			</ul>
 							        		</div>
@@ -85,7 +92,10 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 							        </p></div>
 							        <div id="tab3"><p>
 							        	<div style="height:235px;" id="telugufont1">
+							        	<? if(!empty($active_news3)){
+											if(file_exists("./assets/news/news_img".$active_news3['0']->id."_thumb.jpg")){ ?>
 							        		<a href="<?=base_url();?>news/newsdetails/<?=$active_news3['0']->id?>"><img src="<?=base_url();?>assets/news/news_img<?=$active_news3['0']->id?>_thumb.jpg" style="float: left;padding: 2px 19px 2px 1px;text-align: left;text-align: justify;" border="0"></img></a>
+							        		<?} ?>
 							        		<div id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?=$active_news3['0']->id?>"><?=$active_news3['0']->heading?></a></div>
 							        		<?php echo $active_news3['0']->summary;?>
 							        			<ul id="mainnews">
@@ -106,7 +116,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 							          					endforeach; 
 							          					if($count==0){
 							          						echo 'No data found';
-							          					}
+							          					}}
 							          			?>
 							        			</ul>
 							        		</div>
@@ -114,7 +124,10 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 							        </p></div>
 									<div id="tab4"><p>
 										<div style="height:235px;" id="telugufont1">
+										<? if(!empty($active_news1)){
+										if(file_exists("./assets/news/news_img".$active_news1['0']->id."_thumb.jpg")){ ?>
 							        		<a href="<?=base_url();?>news/newsdetails/<?=$active_news4['0']->id?>"><img src="<?=base_url();?>assets/news/news_img<?=$active_news4['0']->id?>_thumb.jpg" style="float: left;padding: 2px 19px 2px 1px;text-align: left;text-align: justify;"  border="0"></img></a>
+							        		<?} ?>
 							        		<div id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?=$active_news4['0']->id?>"><?=$active_news4['0']->heading?></a></div>
 							        		<?php echo $active_news4['0']->summary;?>
 							        			<ul id="mainnews">
@@ -135,7 +148,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 							          					endforeach; 
 							          					if($count==0){
 							          						echo 'No data found';
-							          					}
+							          					}}
 							          			?>
 							        			</ul>
 							        		</div>
@@ -261,8 +274,10 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="120" /></td>
           <td valign="top" id="botom-ser">
           <div id="telugufont1" style="height: 86px;">
-          	<? if(isset($mahila_details['0'])){ ?>  
+          	<? if(isset($mahila_details['0'])){
+          	if(file_exists("./assets/mahila/news_img".$mahila_details['0']->id."_thumb.jpg")){?>  
           	<a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details['0']->id?>"><img border="0px" id="image" src="<?=base_url();?>/assets/mahila/news_img<?=$mahila_details['0']->id?>_thumb.jpg" style="float: left;padding: 2px 5px 2px 1px;"></a>
+          	<?} ?>
 	               <div id="mainnews"> <a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details['0']->id?>"><? echo $mahila_details['0']->heading;?></a></div>
 	               <?=$mahila_details['0']->summary?>
 	               <?} ?>
@@ -274,8 +289,11 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="120" /></td>
           <td valign="top" id="botom-ser">
           <div id="telugufont1" style="height: 86px;">
-          	<? if(isset($mahila_details1['0'])){ ?>  
+          	<? if(isset($mahila_details1['0'])){
+          	if(file_exists("./assets/mahila/news_img".$mahila_details1['0']->id."_thumb.jpg")){
+          		?>  
           	<a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details1['0']->id?>"><img border="0px" id="image" src="<?=base_url();?>assets/mahila/news_img<?=$mahila_details1['0']->id?>_thumb.jpg" style="float: left;padding: 2px 5px 2px 1px;"></a>
+          	<?} ?>
 	               <div id="mainnews"> <a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details1['0']->id?>"><? echo $mahila_details1['0']->heading;?></a></div>
 	               <?=$mahila_details1['0']->summary?>
 	               <?} ?>
@@ -286,8 +304,10 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
           <td width="8">&nbsp;</td>
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="120" /></td>
           <td valign="top" id="botom-ser"> <div id="telugufont1" style="height: 86px;">
-          	<? if(isset($mahila_details2['0'])){ ?>  
+          	<? if(isset($mahila_details2['0'])){ 
+				if(file_exists("./assets/mahila/news_img".$mahila_details2['0']->id."_thumb.jpg")){ ?>  
           	<a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details2['0']->id?>"><img border="0px" id="image" src="<?=base_url();?>assets/mahila/news_img<?=$mahila_details2['0']->id?>_thumb.jpg" style="float: left;padding: 2px 5px 2px 1px;"></a>
+          	<?} ?>
 	               <div id="mainnews"> <a href="<?=base_url();?>mahila/mahiladetails/<?if(isset($mahila_details2['0'])){ echo $mahila_details2['0']->id;}?>"><? echo $mahila_details2['0']->heading;?></a></div>
 	               <?=$mahila_details2['0']->summary?>
 	               <?} ?>

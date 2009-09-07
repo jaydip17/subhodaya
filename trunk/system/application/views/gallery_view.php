@@ -6,13 +6,13 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 
 <table width="100%" cellpadding="5" cellspacing="0">
 <tr>
-	<td colspan="2" align="center" style="font-weight: bold;font-size: 14px;"><div id="ga_topmenu"><?=$more['6']->matter?></div></td>
+	<td colspan="2" align="center" style="font-weight: bold;font-size: 14px;color: maroon;"><div id="ga_topmenu"><?=$more['6']->matter?></div></td>
 	<td rowspan="4" valign="top">
 	<div style="width: 174px;border: 1px solid red;height: 890px;background-color: gray;">
 	</div></td>
 </tr>
 <tr>
-	<td rowspan="3" valign="top" width="150">
+	<td rowspan="3" valign="top" width="150" style="background-color: #0772ba;" align="left">
 		 <div class="content">
       <div id="info3"><img src="<?=base_url();?>assets/imgs/info-left.gif" width="7" height="34" style="float:left" />
        <img src="<?=base_url();?>assets/imgs/info-right.gif" width="7" height="34" style="float:right" />
@@ -42,14 +42,15 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 			<table cellpadding="0" cellspacing="0">
 				<tr>
 					<td id="gal_leftslide"></td>
-					<td id="gal_menucen"></td>
+					<td id="gal_menucen" style="font-size: 14px;font-weight: bold;color: maroon;">Recent Gallery</td>
 					<td id="gal_rightslide"></td>
 				</tr>
 				<tr>
 					<td colspan="3" height="388" id="gal_center" valign="top" >
 					<table cellspacing="15">
 							<tr>
-						<?php foreach ($images as $cat):
+						<?php if(!empty($images)){
+						foreach ($images as $cat):
 						$count=1;
 						foreach ($cat as $sub):
 							?>				
@@ -59,14 +60,18 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 									</div>
 									<div id="gall_botto_img"><a href="<?=base_url();?>gallery/inner/<?=$sub['parentid']?>"><?=$sub['title']?></a></div></td>
 									<?php 
-								if ($count==4)
+								if($count==4)
 									{
 										$count = 0;
 										echo "</tr><tr>";
 									}
 									$count++;
+									if($count==12){
+										break;
+									}
 									endforeach; 
-								endforeach;
+								endforeach;}
+								else 'no data found';
 						
 						?>
 							</tr>
@@ -80,7 +85,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 			<table cellpadding="0" cellspacing="0">
 				<tr>
 					<td id="gal_leftslide"></td>
-					<td id="gal_menucen"></td>
+					<td id="gal_menucen" style="font-size: 14px;font-weight: bold;color: maroon;">Gallery</td>
 					<td id="gal_rightslide"></td>
 				</tr>
 				<tr>
@@ -92,12 +97,16 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 							 foreach($result1 as $variable):?>
 							<td height="10px" width="129px" id="gall_names" style="padding-left: 10px;"><a href="<?=base_url();?>gallery/inner/<?=$variable->id?>"><li><?=$variable->catname?></li></a></td>
 						<? if ($count==4)
-									{
-										$count = 0;
-										echo "</tr><tr>";
-									}
-									$count++;
-									endforeach; ?>
+							{
+								$count = 0;
+								echo "</tr><tr>";
+							}
+							else{
+							$count++;
+							}
+							if($count==28)
+							break;
+							endforeach; ?>
 						</tr>
 					</table>
 						

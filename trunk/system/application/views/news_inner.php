@@ -28,13 +28,13 @@ function telugu_typing()
 						<td align="left"><div class="heading" style="width: 181px;" id="news_heading"><div style="padding-top:5px;" id="newsheading"><?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->cinema_type;}?></div></div>
 						<div style="height: 280px;" id="left_news">
 							<div style="height: 248px;">
-							<img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type1['0']->id?>_thumb.jpg" style="padding:5px 0px 0px 20px; ">
+							<a href="<?=base_url();?>cinema/inner/<?=$cinema_type1['0']->id?>/<?=$cinema_type1['0']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type1['0']->id?>_thumb.jpg" style="padding:5px 0px 0px 20px;" border="0"></a>
 							<ul >
 								<?php
 								if(!empty($cinema_type1))
 								{ 
 								$count=0; foreach ($cinema_type1 as $row):?>
-								<li id="mainnews"><a href="<?=base_url();?>cinema/inner/<?=$row->id?>"><?=$row->heading?></a></li>
+								<li id="mainnews"><a href="<?=base_url();?>cinema/inner/<?=$row->id?>/<?=$row->type?>"><?=$row->heading?></a></li>
 								<?php
 								if($count==2){
 								break;}
@@ -53,7 +53,7 @@ function telugu_typing()
 						<td align="left"><div class="heading" style="width: 181px;" id="news_heading"><div style="padding-top:5px;" id="newsheading"><?php if(isset($cinema_type3['0'])){echo $cinema_type3['0']->cinema_type;}?></div></div>
 						<div style="height: 280px;" id="left_news">
 							<div style="height: 248px;">
-							<img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type3['0']->id?>_thumb.jpg" style="padding:5px 0px 0px 20px; ">
+							<a href="<?=base_url();?>cinema/inner/<?=$cinema_type3['0']->id?>/<?=$cinema_type3['0']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type3['0']->id?>_thumb.jpg" style="padding:5px 0px 0px 20px; ">
 							<ul >
 								<?php
 								if(!empty($cinema_type3))
@@ -80,9 +80,8 @@ function telugu_typing()
 			<div><table cellpadding="1px" width="100%">
 			<tr><td><div id="news_heading" class="heading"><span id="newsheading"><?=$result['0']->heading ?></span></div></td></tr>
 			<tr><td align="center"><div  id="maindiv-news">
-			<div class="help"></div>
-			<div class="content" style="text-align: justify;">
-			<img src="<?=base_url();?>assets/news/news_img<?=$result['0']->id?>.jpg" style="float: left;padding:2px 2px 2px 2px;border: 1px solid  #9FA0A0; margin: 10px 0px 0px 10px;" ></img>
+			<div class="maindiv-news" style="text-align: justify;margin: 5px;font-size: 14px;">
+			<img src="<?=base_url();?>assets/news/news_img<?=$result['0']->id?>.jpg" style="float: left;padding:2px 2px 2px 2px;border: 1px solid  #9FA0A0; margin: 10px 10px 10px 10px;" ></img>
 			<?=$result['0']->description ?></div>
 			</div></td></tr>
 			<tr><td><div id="news_heading" class="heading"><span id="newsheading"><?php if(isset($more['25'])){echo $more['25']->matter;}?></span></div></td></tr>

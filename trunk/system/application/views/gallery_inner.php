@@ -9,7 +9,7 @@
 			<table cellpadding="0" cellspacing="0">
 				<tr>
 					<td id="gal_leftslide"></td>
-					<td id="gal_menucen"><?=$pagination?></td>
+					<td id="gal_menucen"><span id="pagenation"><?=$pagination?></span></td>
 					<td id="gal_rightslide"></td>
 				</tr>
 				<tr>

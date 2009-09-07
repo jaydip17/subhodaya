@@ -87,8 +87,8 @@ function telugu_typing()
 			<div><table cellpadding="1px" width="100%">
 			<tr><td align="left"><div id="news_heading" class="heading"><div id="newsheading" style="padding-top: 5px;"><?php if(isset($result['0'])){echo $result['0']->heading;}?></div></div></td></tr>
 			<tr><td align="center" id="telugufont1"><div  id="maindiv-news">
-			<div  style="text-align: justify; padding: 5px;">
-			<img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($result['0'])){echo $result['0']->id;}?>.jpg" style="float: left;padding:1px 4px 2px 2px;border: 1px solid  #9FA0A0; margin: 10px 10px 0px 10px;" ></img>
+			<div  style="text-align: justify; padding: 7px;font-size: 14px;">
+			<img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($result['0'])){echo $result['0']->id;}?>.jpg" style="float: left;padding:1px 4px 2px 2px;border: 1px solid  #9FA0A0; margin: 10px 10px 10px 10px;" ></img>
 			<font style="padding: 2px;"><?php if(isset($result['0'])){echo $result['0']->description;}?></font></div>
 			</div></td></tr>
 			<tr><td><div id="news_heading" class="heading"><span id="newsheading"><?php if(isset($more['25'])){echo $more['25']->matter;}?></span></div></td></tr>
@@ -168,11 +168,11 @@ function telugu_typing()
 						<div style="height: 250px">
 						<?if(!empty($news_type2)){?>
 								
-							<img src="<?=base_url();?>assets/news/news_img<?=$news_type2['0']->id?>_thumb.jpg" style="padding:5px 0px 0px 20px; ">
+							<a href="<?=base_url();?>news/newsdetails/<?=$news_type2['0']->id?>/<?=$news_type2['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?=$news_type2['0']->id?>_thumb.jpg" style="padding:5px 0px 0px 20px;" border="0"></a>
 							<ul >
 								<?php
 								$count=0; foreach ($news_type2 as $row):?>
-								<li id="mainnews"><a href="<?=base_url();?>news/inner/<?=$row->id?>"><?=$row->heading?></a></li>
+								<li id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>/<?=$row->type?>"><?=$row->heading?></a></li>
 								<?php
 								if($count==2){
 								break;}

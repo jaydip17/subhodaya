@@ -124,18 +124,17 @@
 		else
 		{
 		   $data = array('upload_data' => $this->upload->data());
-	       $filepath = $data['upload_data']['file_name'];
-	       rename($dir.$filepath , $dir.'/image'.$id.'.jpg');	
-	   	 
+	       echo $filepath = $data['upload_data']['file_name'];
+	       rename($dir.$filepath , $dir.'image'.$id.'.jpg');	
 		
 		//generating thumnail of image
 		
  	    $filename = 'image'.$id.'.jpg';
  	    
- 	  $config1['image_library'] = 'gd2';
-	  $config1['source_image'] = $dir.'/'.$filename;
+ 	  	$config1['image_library'] = 'gd2';
+	  	$config1['source_image'] = $dir.'/'.$filename;
         $config1['maintain_ratio'] = TRUE;
-     		$config1['width'] = 80;
+     	$config1['width'] = 80;
 	    $config1['height'] = 60;
 		$config1['create_thumb'] = TRUE;
 		//$config['quality'] = '100';
@@ -264,14 +263,9 @@
 		$quary=$this->db->get('gallery_categeory');
 		return $quary->result();
   	}
-  	function get_gallery($id,$limit)
+  	function get_gallery($type)
   	{
-  
-  	  if(isset($limit) && $limit>=0 )
-  	   	{
-  	  		$this->db->limit(9,$limit);
-  	    } 
-  		$this->db->where('parentid',$id);
+  		$this->db->where('parentid',$type);
   		$quary=$this->db->get('gallery_images');
   		return $quary->result();
   	}
@@ -288,7 +282,22 @@
   		$query=$this->db->get_where('gallery_images');
   		return $query->result();
   	}
-  
+ 	function getimage1($parentid)
+	{
+		$this->db->order_by('id','desc');
+		//$this->db->select('id,title','parentid');
+		$this->db->limit(1);
+		$array=array('parentid'=>$parentid,'active'=>1);
+		$this->db->where($array);
+		$query=$this->db->get('gallery_images');
+		return $query->result_array();
+	}
+ 	function gallery_pagi($type)
+	{
+		$query="from gallery_images where parentid=$type order by gallery_images.id desc";
+		return $query;
+	}
+
   	
  }
 ?>

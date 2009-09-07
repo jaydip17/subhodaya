@@ -237,15 +237,36 @@ function reload()
                       	<div id="demo1" class="yui-navset" style="color: #EDF5FF;">
 	    						<ul class="yui-nav">
 							        <li class="selected" style="text-align: center;"><a href="#tab1"><em style="width: 80px;"><span id="telugufont"><?=$more['13']->matter ?></span></em></a></li>
-							        <li style="text-align: center;"><a href="#tab2"><em style="width: 80px;"><span id="telugufont"><?=$more['13']->matter ?></span></em></a></li>
 							        <li style="text-align: center;"><a href="#tab3"><em style="width: 80px;"><span id="telugufont"><?=$more['14']->matter ?></span></em></a></li>
 									<li style="text-align: center;"><a href="#tab3"><em style="width: 100px;"><span id="telugufont"><?=$more['15']->matter ?></span></em></a></li>
 	    						</ul>            
-    							<div class="yui-content" style="height: 150px;text-align: center;">
-							        <div id="tab1"><p>fd</p></div>
+    							<div class="yui-content" style="height: 150px;text-align: center;background-image:url(assets/imgs/gmail-seline.jpg);background-repeat:repeat-x;">
+							        <div id="tab1"><p>
+							        <table width="100%" height="100%"><tr>
+							   			<?php if(!empty($images)){
+							   			foreach ($images as $item):
+							   			$count=1;
+							   			foreach ($item as $sub):
+							   			//print_r($sub);					
+							   			?>
+							   		<td width="125"  align="center" valign="top" >
+									<div style="height: 95px;border: 0px solid red;width: 100%;text-align: left;">
+										<a href="<?=base_url();?>gallery/inner/<?=$sub['parentid']?>"><img src="<?=base_url();?>assets/gallery/image<?=$sub['id']?>_thumb.jpg" height="95px" width="130px" border="0"></a>
+									</div>
+									<div id="gall_botto_img"><a href="<?=base_url();?>gallery/inner/<?=$sub['parentid']?>"><?=$sub['title']?></a></div></td>
+							   			<? if($count==3){
+							   				break;
+							   			}else{
+							   				$count++;
+							   			}
+							   			endforeach;
+							   			endforeach; }
+							   			else 'No data found';?>
+							   			</tr>
+							   			</table><div style="width: 100%;height: 15px;" id="more-news-div"><a href="<?=base_url();?>gallery/inner/<?=$sub['parentid']?>"><?=$more['0']->matter;?></a></div>
+							        </p></div>
 							        <div id="tab2"><p>dfgdgf</p></div>
 							        <div id="tab3"><p>Tab Three Content</p></div>
-									<div id="tab3"><p>Tab four Content</p></div>
     							</div>
 <script>
 (function() {
@@ -422,7 +443,7 @@ function reload()
 							       <li class="selected" style="text-align: center;"><a href="#tab1"><em style="width: 80px;padding-top: 2px" id="telugufont"><?=$more['5']->matter?></em></a></li>
 							        <li style="text-align: center;"><a href="#tab2"><em style="width: 80px;padding-top: 2px""><span id="telugufont"><?=$more['7']->matter ?></span></em></a></li>
 	    						</ul>            
-    							<div class="yui-content" style="height: 150px;text-align: center;">
+    							<div class="yui-content" style="height: 150px;text-align: center;background-image:url(assets/imgs/gmail-seline.jpg);background-repeat:repeat-x;">
 							        <div id="tab1"><p>Tab four Content</p></div>
 							        <div id="tab2"><p>
 							        <?php ?>
@@ -461,7 +482,7 @@ function reload()
 							       <li class="selected" style="text-align: center;"><a href="#tab1"><em style="width: 80px;padding-top: 2px"" id="telugufont"><?=$more['8']->matter?></em></a></li>
 							        <li style="text-align: center;"><a href="#tab2"><em style="width: 80px;padding-top: 2px""><span id="telugufont"><?=$more['9']->matter ?></span></em></a></li>
 	    						</ul>            
-    							<div class="yui-content" style="height: 150px;text-align: left;">
+    							<div class="yui-content" style="height: 150px;text-align: left;background-image:url(assets/imgs/gmail-seline.jpg);background-repeat:repeat-x;">
 							        <div id="tab1"><p><a href="<?=base_url();?>mahila/mahiladetails/<?if(!empty($mahila_details)){$mahila_details['0']->id;}?>"><img id="image" src="<?=base_url();?>/assets/mahila/news_img<?if(!empty($mahila_details)){echo $mahila_details['0']->id;}?>_thumb.jpg" /></a>
 							        <div id="mainnews"><a href="<?=base_url();?>mahila/mahiladetails/<?if(!empty($mahila_details)){echo $mahila_details['0']->id;}?>"><?if(!empty($mahila_details)){echo $mahila_details['0']->heading;}?></a></div>
 							        <?php if(!empty($mahila_details)){ echo $mahila_details['0']->summary; ?>
@@ -506,8 +527,8 @@ function reload()
              		 </tr>
                       <tr>
                         <td  valign="top" id="center-img1"><img src="<?=base_url();?>assets/imgs/new1.jpg" width="5" /></td>
-                        <td valign="top" id="center-img1" align="left" style="border-bottom: 1px solid #50BCFC;">
-	                        <div style="text-align:justify;padding-top:14px;height: 132px;" >
+                        <td valign="top" id="center-img1" align="left">
+	                        <div style="text-align:justify;padding-top:14px;height: 125px;" >
 	                     <? if(isset($home_stories['0'])){ ?>  <a href="<?=base_url();?>sahithi/sahithidetails/<?=$home_stories['0']->id?>"><img border="0px" id="image" src="<?=base_url();?>/assets/sahithi/news_img<?=$home_stories['0']->id?>_thumb.jpg"></a>
 	                      <font id="mainnews"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$home_stories['0']->id?>"><? echo $home_stories['0']->heading;?></a></font>
 	                       <? echo $home_stories['0']->summary;?><?} ?>
@@ -518,5 +539,4 @@ function reload()
                     </tr>
                   </table>
     </td></tr>
-</table>
-				
+</table>				

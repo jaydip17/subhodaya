@@ -26,17 +26,22 @@ function telugu_typing()
 			<table cellpadding="0" cellspacing="0">
 				<tr>
 					<td id="gal_leftslide"></td>
-					<td id="gal_menucen"></td>
+					<td id="gal_menucen">
+					
+					</td>
 					<td id="gal_rightslide"></td>
 				</tr>
 				<tr>
 					<td colspan="3"  id="gal_center1"  width="742" align="center" height="590" >
+					<? if(file_exists("./assets/gallery/imge".$image['0']->id.".jpg")){ ?>
 					<img src="<?=base_url()?>assets/gallery/image<?=$image['0']->id?>.jpg"  border="0">
+					<? } ?>
 					</td>
 				</tr>
 				 <tr>
 					<td id="gal_leftslide"></td>
-					<td id="gal_menucen"></td>
+					<td id="gal_menucen">
+					</td>
 					<td id="gal_rightslide"></td>
 				</tr>
 				

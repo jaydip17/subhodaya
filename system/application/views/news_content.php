@@ -225,7 +225,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
           				 	<?php 
           				 	$count=0;
           				 	foreach ($active_news as $row):?>
-          						<li style="padding: 2px;"><a href="<?=base_url();?>news/newsdetails/<?$row->id?>"><?=$row->heading?></a></li>
+          						<li style="padding: 2px;"><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>"><?=$row->heading?></a></li>
           						<?php
           						if($count==19){
           							break; 

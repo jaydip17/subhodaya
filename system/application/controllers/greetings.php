@@ -55,9 +55,9 @@ class Greetings extends Controller {
    		$details=$result->result();
    		 		
   	    $paginate = $this->paginationnew->paginate1(); 
-  	$data=array('greetings'  =>  $details,
-  					'more'   =>  $more,
-  				'pagination'   =>   $paginate);
+  	    $data=array('greetings'  	=>  $details,
+  					'more'   	 	=>  $more,
+  				'pagination'   		=>   $paginate);
   	$this->load->view('greetings_view',$data);
   }
   function inner()

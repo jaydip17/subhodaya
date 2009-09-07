@@ -14,9 +14,10 @@ class Gallery extends Controller {
 		$images=array();
 		foreach($details as $item)
 		{
+			//print_r($item);
 			$images[$item->id]=$this->Gallery_Model->getimage($item->id);
 		}
-		$result=$this->Gallery_Model->get_categeory();
+		$result=$this->Gallery_Model->get_categeory(0);
 		$result1=$this->Gallery_Model->get_subcate();
 
 		$data=array('more'   => $more,
@@ -35,7 +36,7 @@ class Gallery extends Controller {
 		{
 			$images[$item->id]=$this->Gallery_Model->getimage($item->id);
 		}
-		$result=$this->Gallery_Model->get_categeory();
+		$result=$this->Gallery_Model->get_categeory(0);
 		$result1=$this->Gallery_Model->get_subcate();
 		$data=array('more'   => $more,
 					'result' => $result,
@@ -45,23 +46,32 @@ class Gallery extends Controller {
 		$this->load->view('gallery_view',$data);
   	}
   	function inner(){
-  		$id=$this->uri->segment(3,0);
+  		$type=$this->uri->segment(3,0);
   		$more=$this->News_Model->more_news();
-  		$total_count=$this->Gallery_Model->count($id);
+  		$result=$this->Gallery_Model->get_gallery($type);
+  		$total_count=$this->Gallery_Model->count($type);
+  		$query=$this->Gallery_Model->gallery_pagi($type);
   		//pagination
-  		$this->load->library('pagination');
-		$config['base_url'] = base_url()."gallery/inner/".$id;
-		$config['total_rows'] = $total_count;
-		$config['per_page'] = '9';
-
-		$this->pagination->initialize($config);
-		$pagination= $this->pagination->create_links();
+  		$a =base_url().'gallery/inner/'.$type;
+		 //pagination
+    	$this->load->library('paginationnew');
+    	
+    	$this->paginationnew->start = ($this->uri->segment(4)) ? $this->uri->segment(4) : '0';
+    	$this->paginationnew->limit =2;
+        $this->paginationnew->filePath =$a;
+      
+        $this->paginationnew->select_what = '*';
+        $this->paginationnew->nbItems = $total_count;
+        $this->paginationnew->add_query = $query;
+        
+   		$result = $this->paginationnew->getQuery(TRUE);
+   		$details=$result->result();
+   		 		
+  	    $paginate = $this->paginationnew->paginate1();
 		
-		$limit=$this->uri->segment(4,0);
-		$result=$this->Gallery_Model->get_gallery($id,$limit);
   		$data=array('more'=>$more,
-  					'result'=>$result,
-  					'pagination'=>$pagination);
+  					'result'=>$details,
+  					'pagination'=>$paginate);
   		$this->load->view('gallery_inner',$data);
   	}
   	function content($id){

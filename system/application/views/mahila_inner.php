@@ -84,15 +84,13 @@ function telugu_typing()
 			<tr><td><div id="news_heading" class="heading"><span id="newsheading"><?=$result['0']->heading ?></span></div></td></tr>
 			<tr><td align="center">
 			<div id="maindiv-news">
-			<div class="help">
-			</div>
 			<font color="red"> <? if($this->uri->segment(4)==-1){echo "can't send mail";}else if($this->uri->segment(4)==1){echo "mail sent succesfully";}?></font>
 			</div>
 			</tr>
 			<tr>
 			<td>
 			
-			<div class="content" align="left">
+			<div id="maindiv-news" align="left">
 			<img src="<?=base_url();?>assets/<?=$type?>/news_img<?=$result['0']->id?>.jpg" style="float: left;padding:0px 30px 30px 0px;border: 0px solid  #9FA0A0; margin: 10px 0px 0px 10px;" ></img>
 			<?=$result['0']->description ?></div>
 		

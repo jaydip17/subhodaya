@@ -258,8 +258,8 @@ border-bottom: 2px solid #9FA0A0;
 width: 89%; 
 }
 .content{
-width: 98%;
-padding:30px 10px 10px 10px;
+width: 150px;
+padding:0px 0px 0px 0px;
 font-size:14px;
 letter-spacing:2px;
 }
@@ -426,7 +426,7 @@ margin-bottom:2px;
 margin-left:auto;
 margin-right:auto;
 margin-top:20px;
-width:99%;
+width:100%;
 }
 
 #footer a {
@@ -434,6 +434,10 @@ text-decoration:none;
 padding-left:3px;
 padding-right:3px;
 font-weight:bold;
+color: black;
+}
+#footer a:active {
+color:black;
 }
 
 #footer a:link {
@@ -442,7 +446,7 @@ color:black;
 
 #footer a:hover {
 text-decoration:none;
-color:red;
+color:maroon;
 }
 
  
@@ -597,6 +601,8 @@ text-align:center;
 	color: #000000;
 	display: block;
 	background: url(imgs/li-img.gif) repeat-x;
+	border-left:1px solid #0772ba;
+	border-right:1px solid #0772ba;
 	padding: 0px 0 0 0px;
 	}
 	
@@ -609,7 +615,7 @@ text-align:center;
 #menu li a:active {
 	color: #26370A;
 	background: url(imgs/li-img2.gif) repeat-x;
-	padding: 2px 0 0 0px;
+	padding: 1px 0 0 0px;
 	}
 
 .content #info3 #Left-footer {
@@ -817,4 +823,59 @@ font-weight:bold;
 
 .hiname a:hover{
 color:red;
+}
+.pages {
+	font-weight: bold;
+	text-align: right;
+	margin-right: 5px;
+	padding-right: 5px;
+	text-decoration: none;
+}
+.pages a{
+	color: maroon;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 0px 2px 0px 0px;
+}
+.pages a:link{
+	color: maroon;
+	font-weight: bold;
+	text-decoration: none;
+}
+.pages a:visited{
+	color: maroon;
+	font-weight: bold;
+	text-decoration: none;
+}
+.pages a:hover{
+	color: red;
+	font-weight: bold;
+	text-decoration: none;
+}
+.pages a:active{
+	color:white;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:link{
+	color: maroon;
+	text-decoration: none;
+}
+a:visited{
+	color: maroon;
+	text-decoration: none;
+}
+a:hover{
+	color: red;
+	text-decoration: none;
+}
+a:active{
+	color:white;
+	text-decoration: none;
+}
+#center-img1{
+	border-bottom: 1px solid #50BCFC;
+	background-image:url(imgs/gmail-seline.jpg);
+	background-repeat:repeat-x;
 }

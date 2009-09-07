@@ -27,13 +27,13 @@ class Subhodaya extends Controller {
 		$mahila_details=$this->Mahila_Model->active_mahila(1,$type='home');
 		//print_r($mahila_details);
 	    $greetings1=$this->Greeting_Model->get_main_greetings(1);
-        $details=$this->Gallery_Model->get_cateimage(11);
+        //$details=$this->Gallery_Model->get_cateimage(11);
         $home_stories=$this->Sahithi_Model->get_home_stories($type=2);
 		$images=array();
-		foreach($details as $item)
+		/*foreach($details as $item)
 		{
 			$images[$item->id]=$this->Gallery_Model->getimage($item->id);
-		}
+		}*/
 		//get all categeories of gallery where active=1
 		$gallery_maincategeories = $this->Gallery_Model->get_categeory($active=1);
 		
@@ -43,7 +43,6 @@ class Subhodaya extends Controller {
 		  foreach($gallery_maincategeories as $item)
 		  {
 			$subcategeories[$item->id]=$this->Gallery_Model->subcat($item->id);
-			//echo "hello";
 		  }
 		//  print_r($subcategeories);
 		 	
@@ -52,28 +51,32 @@ class Subhodaya extends Controller {
 	       	$eachone=$item->result();
 	    	if(!empty($eachone))
 	    	{
-	    		print_r($eachone);
-	    	echo "hello";
-	 		//$images[$eachone->id]=$this->Gallery_Model->getimage($eachone->id);
+	    		foreach ($eachone as $row){
+	    			//print_r($row);
+	    			
+	 				$images[$row->id]=$this->Gallery_Model->getimage1($row->id);
+	    		}
+	 		
 	    	}
 		   }
+		 // print_r($images);
 	    }
 	    	
 	
-		$data=array('more'=>$more,
-		            'news_type7'=>$news_type7,
-					'news_type4'=>$news_type4,
-					'cinema_type2'=>$cinema_type2,
-					'cinema_type1'=>$cinema_type1,
-					'newspoll'=>$newspoll,
-					'yes_poll'=>$yes_poll,
-					'active_news'=>$active_news,
-		            'active_news1'=>$active_news1,
-		            'sahithi_details'=>$sahithi_details,
-		            'mahila_details'=>$mahila_details,
-					'images'=>$images,
-					'greetings1'=>$greetings1,
-		            'home_stories' =>$home_stories
+		$data=array('more'				=>	$more,
+		            'news_type7'		=>	$news_type7,
+					'news_type4'		=>	$news_type4,
+					'cinema_type2'		=>	$cinema_type2,
+					'cinema_type1'		=>	$cinema_type1,
+					'newspoll'			=>	$newspoll,
+					'yes_poll'			=>	$yes_poll,
+					'active_news'		=>	$active_news,
+		            'active_news1'		=>	$active_news1,
+		            'sahithi_details'	=>	$sahithi_details,
+		            'mahila_details'	=>	$mahila_details,
+					'greetings1'		=>	$greetings1,
+		            'home_stories' 		=>	$home_stories,
+					'images'			=>	$images
 					);
 		$this->load->view('home',$data);
 	}

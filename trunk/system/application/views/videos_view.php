@@ -21,7 +21,7 @@
      </table>
      </td>
      <td  valign="top" align="center" height="370">
-        <table width="240" height="370" align="center" style="border:1px solid #0872BC;  cellspacing:0px cellpadding:0px;">
+        <table width="240" height="370" align="center" style="border:1px solid #0872BC;cellspacing:0px cellpadding:0px;">
             <tr>
            <td colspan="2"  style="border:1px solid #50BFC;height:25px; padding-top:0px;font-size:14px;font-weight:bold;text-align:center" id="video_heading"><?=$more['32']->matter ?></td>
             </tr>
@@ -35,8 +35,9 @@
           </tr>
           <?} ?> 
 	      
+	      
           <tr>
-          <td colspan="2"align="right" id="vi_heading" class="hiname"><a href="#"><?=$more['0']->matter?></a></td>
+          <td colspan="2" align="right" id="vi_heading" class="hiname"><a href="#"><?=$more['0']->matter?></a></td>
           </tr>
         </table>
        
@@ -69,7 +70,7 @@
             
             <tr ><td><div style="height:375px;border-left: 1px solid #9D9D9D; border-right: 1px solid #9D9D9D;"> 
             <table width="99%" style="margin-left:4px margin-right:2px;padding-left:3px;">
-                <div id="hotvideo"><?=$more['33']->matter ?></div>
+                <div id="hotvideo"><?=$more['33']->matter ?><span style="padding-left:300px;">Search for Videos:<input type="text" name="search" value="" size="13"></span></div>
           
             <tr>
                <td  style="width:660px;"> 
@@ -127,9 +128,7 @@
     <?php } ?> 
        
      
-     
-     
-                
+               
       
       </div>   
                 
@@ -165,11 +164,11 @@
           	       			<td colspan="2" id="topvideo" style=padding-top:0px;"><?=$more['34']->matter?></td>
           	          <tr>
           	          
-          	          <tr>
+          	          <!--<tr>
           	            <td>Display:</td>
           	            <td><input type="text" name="Today" value="Today"></td>
           	          </tr>
-          	          </table> 
+          	          --></table> 
           	          
           	            <table width="95%" style="margin-left:6px;margin-right:4px; margin-top:7px;">
           	            
@@ -247,7 +246,7 @@
                           foreach($videosnames as $item){
                           ?>
                            
-                             <td><div style="font-size:12px;color:#000000;padding-left:25px;padding-top:8px;text-decoration:none;text-align:left;"class="viname"><a href="<?=base_url();?>video/index/<?=$video->video_cat_id?>"><?=$item->name?></a></div></td>
+                             <td><div style="font-size:13px;color:#000000;padding-left:25px;padding-top:8px;text-decoration:none;text-align:left;"class="viname"><a href="<?=base_url();?>video/index/<?=$video->video_cat_id?>"><?=$item->name?></a></div></td>
       
                                  
                                <?
@@ -259,9 +258,10 @@
                          }
                            ?>
                               </tr>
-                             
+                               
+                               
                              </table>
-                          
+                             <div style="text-align:right;margin-top:10px;"class="hiname"><a href="#"><?=$more['0']->matter?></a></div>
                           
                           </div>
                            
@@ -269,7 +269,7 @@
                         
                    </div></td></tr>
                       <tr>
-                  <td style="height:10px;width:662px;text-align:right;background-image:url('<?=base_url();?>assets/imgs/all-video-bottomline.jpg');background-repeat:no-repeat;">more</td>
+                  <td style="height:10px;width:662px;text-align:right;background-image:url('<?=base_url();?>assets/imgs/all-video-bottomline.jpg');background-repeat:no-repeat;"></td>
                  </tr>        
                </table>
             </td>

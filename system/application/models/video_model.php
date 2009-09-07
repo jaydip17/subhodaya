@@ -130,7 +130,6 @@ function getlatestvideos($limit,$catid,$id)
 		return $query->result();
 	}
 	
-
  function getvideo($id)
         {
       	$this->db->where('video_uploaded',1);

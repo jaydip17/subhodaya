@@ -41,7 +41,7 @@ class Videolist extends Controller {
 		 $a =base_url().'videolist/videonamesview';
 		 $this->load->library('paginationnew');
 		 $this->paginationnew->start = ($this->uri->segment(3)) ? $this->uri->segment(3) : '0';
-    	 $this->paginationnew->limit =15;
+    	 $this->paginationnew->limit =16;
          $this->paginationnew->filePath ='javascript:loadNews(\'allimg\',\''.$a;
          $this->paginationnew->select_what = '*';
          $this->paginationnew->nbItems = $this->video_Model->count_videos(0);

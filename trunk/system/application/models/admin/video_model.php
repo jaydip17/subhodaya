@@ -230,7 +230,7 @@ class Video_Model extends Model {
    	 	
    }
 
- function active()
+/* function active()
     {
     	$this->db->select('*');
     	$array=array('videos.active'=>1);
@@ -240,7 +240,7 @@ class Video_Model extends Model {
 		$query = $this->db->get_where();
 		return $query->result();
     	
-    }
+    }*/
    
 }
 ?>

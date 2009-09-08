@@ -71,7 +71,7 @@ class Videos extends Controller {
 	    $this->load->view('admin/viewvideos',$data);
 	 }
 	
-function active(){
+/*function active(){
 
 if(!isset($_POST['active'])){
 			
@@ -80,7 +80,7 @@ if(!isset($_POST['active'])){
 			$active=$_POST['active'];
 		}
 		$this->Video_Model->active();
-}
+}*/
 	 
    function deletevideo()
 	  {

@@ -38,7 +38,7 @@
 	      
 	      
           <tr>
-          <td colspan="2" align="right" id="vi_heading" class="hiname"><a href="#"><?=$more['0']->matter?></a></td>
+          <td colspan="2" align="right" id="vi_heading" class="hiname"><!--<a href="#"><?=$more['0']->matter?></a>--></td>
           </tr>
         </table>
        
@@ -71,23 +71,12 @@
             
             <tr ><td><div style="height:375px;border-left: 1px solid #9D9D9D; border-right: 1px solid #9D9D9D;"> 
             <table width="99%" style="margin-left:4px margin-right:2px;padding-left:3px;">
-                <div id="hotvideo"><?=$more['33']->matter ?><span style="padding-left:300px;">Search for Videos:<input type="text" name="search" value="" size="13"></span></div>
+                <div id="hotvideo"><?=$more['33']->matter ?><!--<span style="padding-left:300px;">Search for Videos:<input type="text" name="search" value="" size="13"></span></div>-->
           
             <tr>
                <td  style="width:660px;"> 
              
              
-<!--
-.TabbedPanels {
-	width: 400px;
-}
-.TabbedPanelsTab {
-	font-family: sans-serif;
-	font-size: 12px;
-	font-weight: bold;
-}
--->
-
 <div id="TabbedPanels1" class="TabbedPanels">
 
   <ul class="TabbedPanelsTabGroup">
@@ -132,11 +121,11 @@
           	</td>
           	
           	<td align="left" valign="top" rowspan="2" style="height:570px;" >
-          	 <table border="0" style="padding-top:15px;margin-top:5px;" cellspacing="0" cellpadding="0"  ><!--
+          	 <table border="0" style="padding-top:10px;margin-top:5px;" cellspacing="0" cellpadding="0"  >
           	    <tr>
           	    <td style="height:4px; width:241;"></td>
           	    </tr>
-          	     --><tr><td>
+          	     <tr><td>
           	     <div id="top-videocure"></div>
           	     
           	     <div style="height:558px;border-left: 1px solid #9D9D9D; border-right: 1px solid #9D9D9D;" id="backimg">
@@ -158,44 +147,16 @@
           	            foreach($topviewedvideos->result() as $item){  
           	            ?>
           	          <tr>
-          	            <td><div><a href="<?=base_url();?>video/index/<?=$item->id?>/<?=$item->video_cat_id?>"><img id="img" src="<?=base_url();?>assets/videos/image_preview/image<?=$item->id?>_thumb.jpg"></div></a></td>
+          	            <td><div style="padding-top:5px;"><a href="<?=base_url();?>video/index/<?=$item->id?>/<?=$item->video_cat_id?>"><img id="img" src="<?=base_url();?>assets/videos/image_preview/image<?=$item->id?>_thumb.jpg"></div></a></td>
           	            <td  valign="top" id="topvi"><?=$item->name?><br/><?=$item->insert_date?><br/><span style="color:#FF6507;"><?=$item->no_of_views?> Views</span><br/><div id="topimg" style=height:15px;width:101px;padding-left:4px;margin-top:4px;padding-top:2px;"><?=$more['36']->matter?>:<span style="color:#FF6507;"> <?=$item->rating?></span></div></td>
           	            </tr>
-          	          <?}?>  
-          	            <!--<tr>
-          	            <td style="padding-top:6px;"><div><img src="<?=base_url();?>assets/imgs/topvideo2.jpg"></div></td>
-          	            <td  valign="top" id="topvi">Genre:Action/Family<span style="color:#FF6507;">Drama</span><br/>Type:Bilingual<br/>(Thorani in Tamil)<br/><div id="topimg" style=height:15px;width:101px;padding-left:4px;margin-top:4px;padding-top:2px;"><?=$more['29']->matter?>:<span style="color:#FF6507;"> 2.5/5</span></div></td>
-          	            </tr>
-          	            
+          	          <?}?><!-- 
+          	           
           	            <tr>
-          	            <td style="padding-top:6px;"><div><img src="<?=base_url();?>assets/imgs/topvideo3.jpg"></div></td>
-          	            <td  valign="top" id="topvi">Genre:Action/Family<span style="color:#FF6507;">Drama</span><br/>Type:Bilingual<br/>(Thorani in Tamil)<br/><div id="topimg" style=height:15px;width:101px;padding-left:4px;margin-top:4px;padding-top:2px;"><?=$more['29']->matter?>:<span style="color:#FF6507;"> 2.5/5</span></div></td>
-          	            </tr>
-          	            
-          	            <tr>
-          	            <td style="padding-top:6px;"><div><img src="<?=base_url();?>assets/imgs/topvideo4.jpg"></div></td>
-          	            <td  valign="top" id="topvi">Genre:Action/Family<span style="color:#FF6507;">Drama</span><br/>Type:Bilingual<br/>(Thorani in Tamil)<br/><div id="topimg" style=height:15px;width:101px;padding-left:4px;margin-top:4px;padding-top:2px;"><?=$more['29']->matter?>:<span style="color:#FF6507;"> 2.5/5</span></div></td>
-          	            </tr>
-          	            
-          	            <tr>
-          	            <td style="padding-top:6px;"><div><img src="<?=base_url();?>assets/imgs/topvideo5.jpg"></div></td>
-          	            <td  valign="top" id="topvi">Genre:Action/Family<span style="color:#FF6507;">Drama</span><br/>Type:Bilingual<br/>(Thorani in Tamil)<br/><div id="topimg" style=height:15px;width:101px;padding-left:4px;margin-top:4px;padding-top:2px;"><?=$more['29']->matter?>:<span style="color:#FF6507;"> 2.5/5</span></div></td>
-          	            </tr>
-          	            
-          	            <tr>
-          	            <td style="padding-top:6px;"><div><img src="<?=base_url();?>assets/imgs/topvideo6.jpg"></div></td>
-          	            <td valign="top" id="topvi">Genre:Action/Family<span style="color:#FF6507;">Drama</span><br/>Type:Bilingual<br/>(Thorani in Tamil)<br/><div id="topimg" style=height:15px;width:101px;padding-left:4px;margin-top:4px;padding-top:2px;"><?=$more['29']->matter?>:<span style="color:#FF6507;"> 2.5/5</span></div></td>
-          	            </tr>
-          	            
-          	              <tr>
-          	               <td style="padding-top:6px;"><div><img src="<?=base_url();?>assets/imgs/topvideo7.jpg"></div></td>
-          	               <td valign="top" id="topvi">Genre:Action/Family<span style="color:#FF6507;">Drama</span><br/>Type:Bilingual<br/>(Thorani in Tamil)<br/><div id="topimg" style=height:15px;width:101px;padding-left:4px;margin-top:4px;padding-top:2px;"><?=$more['29']->matter?>:<span style="color:#FF6507;"> 2.5/5</span></div></td>
-          	            </tr>
-          	              --><tr>
           	               <td colspan="2" align="right" style="padding-top:15px;"class="hiname"><a href="#"><?=$more['0']->matter?></td>
           	              </tr>
           	             
-          	           </table>
+          	           --></table>
           	            
           	                  
           	    </div></td></tr>

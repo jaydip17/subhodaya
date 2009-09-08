@@ -51,7 +51,7 @@ $autoload['libraries'] = array('database', 'session');
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('url', 'file','form','date');
+$autoload['helper'] = array('url', 'file','form','date','directory');
 
 
 /*
@@ -108,7 +108,15 @@ $autoload['language'] = array();
 |
 */
 
-$autoload['model'] = array('admin/Login_Model');
+$autoload['model'] = array('admin/Login_Model',
+							'admin/News_Model',
+							'admin/Cinema_Model',
+							'admin/Poll_Model',
+							'admin/Mahila_Model',
+							'admin/Sahithi_Model',
+							'admin/Gallery_Model',
+							'admin/Greeting_Model'
+							);
 
 
 

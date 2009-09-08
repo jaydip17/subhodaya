@@ -3,15 +3,6 @@ class Subhodaya extends Controller {
 	var $layout = 'default'; 
 	function Subhodaya(){
 		parent::Controller();
-		$this->load->helper('directory');
-		$this->load->model('admin/News_Model');
-		$this->load->model("admin/Cinema_Model");
-		$this->load->model("admin/Poll_Model");
-		$this->load->model("admin/Mahila_Model");
-		$this->load->model("admin/Sahithi_Model");
-		$this->load->Model("admin/Gallery_Model");
-		$this->load->Model('admin/Greeting_Model');
-		
 	}
 	function index(){
 		$news_type7=$this->News_Model->get_newstype1(7);
@@ -59,10 +50,10 @@ class Subhodaya extends Controller {
 	 		
 	    	}
 		   }
-		 // print_r($images);
 	    }
 	    	
-	
+		$activenews=$this->News_Model->active_news1();
+		//print_r($activenews);
 		$data=array('more'				=>	$more,
 		            'news_type7'		=>	$news_type7,
 					'news_type4'		=>	$news_type4,
@@ -76,7 +67,8 @@ class Subhodaya extends Controller {
 		            'mahila_details'	=>	$mahila_details,
 					'greetings1'		=>	$greetings1,
 		            'home_stories' 		=>	$home_stories,
-					'images'			=>	$images
+					'images'			=>	$images,
+					'activenews'		=>  $activenews
 					);
 		$this->load->view('home',$data);
 	}

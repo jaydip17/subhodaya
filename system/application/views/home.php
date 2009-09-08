@@ -499,13 +499,13 @@ function reload()
 							        	if(!empty($greetings1['0'])){
 							        	$count=0;
 							        	foreach ($greetings1 as $item):?>
-							        		<td><div style="padding: 5px;">
+							        		<td><div style="width:132px; ">
 							        		<? 
 							        		if(file_exists("./assets/greetings/gree_img".$greetings1['0']->id."_thumb.jpg")){ ?>
-							        		<a href="<?=base_url();?>greetings/content/<?php if(isset($greetings1['0'])) {echo $greetings1['0']->type;}?>"><img src="<?=base_url();?>assets/greetings/gree_img<?=$item->id?>_thumb.jpg" height="100px" border="0"></a>
+							        		<a href="<?=base_url();?>greetings/content/<?php if(isset($greetings1['0'])) {echo $greetings1['0']->type;}?>"><img src="<?=base_url();?>assets/greetings/gree_img<?=$item->id?>_thumb.jpg" height="100px" width="132px" border="0"></a>
 							        		<?} ?>
 							        		</div>
-							        		<div id="gall_names"><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings1['0'])) {echo $greetings1['0']->type;}?>"><?=$item->gree_cat?></a></div></td>
+							        		<div id="gall_botto_img"><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings1['0'])) {echo $greetings1['0']->type;}?>"><?=$item->gree_cat?></a></div></td>
 							        		<?php 
 							        		if($count==1){
 							        			break;

@@ -288,7 +288,10 @@
 		$this->db->order_by('id','desc');
 		//$this->db->select('id,title','parentid');
 		$this->db->limit(1);
-		$array=array('parentid'=>$parentid,'active'=>1);
+		$array=array(
+			'parentid'	=>	$parentid,
+			'active'	=>	1
+		 );
 		$this->db->where($array);
 		$query=$this->db->get('gallery_images');
 		return $query->result_array();
@@ -305,7 +308,8 @@
   		$query=$this->db->get_where('gallery_images');
   		return $query;	
 	}
-	function get_views($id){
+	function get_views($id)
+	{
 		$this->db->where('id',$id);
   		$this->db->select('id, views');
   		$query=$this->db->get_where('gallery_images');
@@ -316,18 +320,24 @@
 		$this->insert_views($id,$pre_views);
 	
 	}
-	function insert_views($id,$pre_views){
+	function insert_views($id,$pre_views)
+	{
 		$this->db->where('id', $id);
 		$views=$pre_views+1;
-		$data=array('gallery_images.views'=>$views);
+		$data=array(
+				'gallery_images.views'	=>	$views
+			);
 		$query=$this->db->update('gallery_images', $data);
 	}
-	function top_views(){
+	function top_views()
+	{
 		$this->db->order_by('views','desc');
+		$this->db->order_by('id','desc');
   		$this->db->select('id, parentid, title,views');
   		$query=$this->db->get_where('gallery_images');
   		return $query->result();
 	}
+	
 	
   	
  }

@@ -76,16 +76,16 @@ function telugu_typing()
 				
 				<tr>
 					<td valign="top" colspan="3">
-					<div><form method="post" name="Ratingform" action="SpryRating.php">
+					<div><form method="post" name="Ratingform" action="<?=base_url();?>gallery/rating/">
    
 
-<span id="rating2" class="ratingContainer">
+<span id="rating2" class="ratingContainer" >
+		      <span class="ratingButton" ></span>
+		      <span class="ratingButton" ></span>
 		      <span class="ratingButton"></span>
 		      <span class="ratingButton"></span>
 		      <span class="ratingButton"></span>
-		      <span class="ratingButton"></span>
-		      <span class="ratingButton"></span>
-
+				<input type="hidden" name="id" value="<?=$image['0']->id?>" />
 		      <input id="dynamicElement2" type="text" name="spry_dynamic2" value="3" />
       		  <span class="ratingRatedMsg sample">Thanks for your rating!</span>
   </span>
@@ -95,7 +95,6 @@ function telugu_typing()
 
 	
 </form>
-		
     <script type="text/javascript">
 		///var firstRating = new Spry.Widget.Rating("static", {ratingValueElement: 'readOnly', readOnly: true});	
 		///var Rating1 = new Spry.Widget.Rating("rating1", {ratingValueElement:'dynamicElement1'});

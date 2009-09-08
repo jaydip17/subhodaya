@@ -72,7 +72,7 @@ class Gallery extends Controller {
   					'pagination'=>$paginate);
   		$this->load->view('gallery_inner',$data);
   	}
-  	function content($id){
+  	function content(){
   		 $id=$this->uri->segment(3,0);
   		 $parentid=$this->uri->segment(4,0);
   		$more=$this->News_Model->more_news();
@@ -133,6 +133,39 @@ class Gallery extends Controller {
 		return $links;
 	
 	}
+	}
+	function rating(){
+	$rating=$this->input->post('spry_dynamic2');
+	$id=$this->input->post('id');
+	$ip=$this->input->ip_address();
+	$data=array(
+		'id'	 => $id,
+		
+	);
+	$result=$this->insert_rating($rating,$id,$ip);
+	
+	}
+	function insert_rating($rating,$id,$ip)
+	{
+		$result=array();
+		$this->db->where('galleryid',$id);
+  		$this->db->select('ipaddress,rating');
+  		$query=$this->db->get_where('gall_rating');
+  		$result=$query->result();
+  		
+  		if(isset($result['0'])){
+  			return true;
+  		}else{
+  			echo $rating1=(3.5)%10;
+  			exit;
+		$data = array(
+               'galleryid' => $id ,
+               'ipaddress' => $ip ,
+               'rating'    => $rating1
+            );
+
+		$this->db->insert('gall_rating', $data); 
+  		}
 	}
 }
 ?>

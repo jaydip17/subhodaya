@@ -17,7 +17,7 @@ class Video extends Controller {
 	    //this is the first categeory which is displayed in the div first on loading the page
 	    $first_to_display=$videocategeories->result();
 	    $first_id =$first_to_display['0']->id;
-	    $onload = "loadNews('$first_id','".base_url()."videolist/videoview/".$first_id."','".base_url()."videolist/videonamesview/','body')";
+	    $onload = "loadVideos('$first_id','".base_url()."videolist/videoview/".$first_id."','".base_url()."videolist/videonamesview','body')";
 
 	   
   

@@ -42,13 +42,12 @@ class Video_model extends Model
     function count_videos($catid)
     {
     	//echo $catid;
-    	if(isset($catid))
+    	if($catid!=0)
     	{
     		$this->db->where('video_cat_id',$catid);
     	}
     	
     	$count=$this->db->count_all_results('videos');
-    	print_r($count);
     	return $count;
     	
     }

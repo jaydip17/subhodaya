@@ -1,21 +1,3 @@
-<script type='text/javascript'>
- 	var messages = new Array();
-// multi-dimensional arrays containing: 
-// image and text for tooltip
-// optional: bgColor and color to be sent to tooltip
-<?
-$count = 0;
-foreach ($videosnames as $item ) {
-	?>
-messages[<?=$count?>] = new Array('<?=base_url ()?>assets/videos/image_preview/image<?=$item->id?>_thumb.jpg','<center>Views:<?=$item->no_of_views?>  time:<?=$item->time?></center>',"#FFFFFF");
-	<?
-	$count ++;
-}
-?></script>
-<script type="text/javascript"
-	src="<?=base_url ();?>assets/js/imagemouseover.js"></script>
-
-
 
 <table width="99%"  border="0" cellpadding="0" cellspacing="0">
 <tr>
@@ -110,9 +92,7 @@ messages[<?=$count?>] = new Array('<?=base_url ()?>assets/videos/image_preview/i
 
   <ul class="TabbedPanelsTabGroup">
   <?foreach($videocategeories->result() as $item){ ?>
-   <li class="TabbedPanelsTab" onclick="javascript:loadNews('<?=$item->id?>','<?=base_url(
-
-)?>videolist/videoview/<?=$item->id?>')"><?=$item->name ?></li>
+   <li class="TabbedPanelsTab" onclick="javascript:loadNews('<?=$item->id?>','<?=base_url()?>videolist/videoview/<?=$item->id?>')"><?=$item->name ?></li>
   <?}?>
   </ul>
   <div class="TabbedPanelsContentGroup"  >
@@ -238,37 +218,9 @@ messages[<?=$count?>] = new Array('<?=base_url ()?>assets/videos/image_preview/i
                   <tr ><td><div style="height:142px;width:660px;border-left: 1px solid #9D9D9D; border-right: 1px solid #9D9D9D;">
                          <div id="allvi"><?=$more['35']->matter?></div>
                            
-                          <div id="allimg" style="width:660px;">
+                          <div id="divallimg" style="width:660px;">
                           
-                          <table>
-                            
-                              <tr>
-                             <?
-                             $count=0;
-                          $count_another=1;
-                          foreach($videosnames as $item){
-                          ?>
-                           <td><div style="font-size:13px;color:#000000;padding-left:25px;padding-top:8px;text-decoration:none;text-align:left;"class="viname"><a href="<?=base_url();?>video/index/<?=$item->id?>" onmouseover="doTooltipimage(event,<?=$count?>,<?=$item->id?>,'<?=base_url ()?>')"
-								onmouseout="hideTip()"><?=$item->name?></a></div></td>
-      
-                                 
-                               <?
-                               if($count_another==6)
-                               {
-                               $count_another=0;	
-                            	echo "<tr></tr>";                             }
-                          $count ++;
-                          $count_another++;
-                         }
-                           ?>
-                              </tr>
-                               
-                               
-                             </table>
-                             <div style="text-align:right;margin-top:10px;"class="hiname"><a href="#"><?=$more['0']->matter?></a></div>
-                          
-                          </div>
-                           
+                         
                          
                         
                    </div></td></tr>

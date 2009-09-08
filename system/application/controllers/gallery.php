@@ -3,8 +3,6 @@ class Gallery extends Controller {
 	var $layout = 'default'; 
 	function gallery(){
 		parent::Controller();
-		$this->load->model("admin/News_Model");
-		$this->load->model("admin/Gallery_Model");
 	}
 	function index()
 	{
@@ -82,8 +80,11 @@ class Gallery extends Controller {
   		$query=$this->Gallery_Model->get_allimages($parentid);
   		$result=$query->result();
   		//print_r($result);
+  		$views=array();
+  		$views=$this->Gallery_Model->get_views($id);
+  		
   		$links=$this->prevnex($query->result(),$id);
-  		//print_r($links);
+  		print_r($views);
   		$data=array('more'  => $more,
   					'image' => $image,
   					'links'=> $links);

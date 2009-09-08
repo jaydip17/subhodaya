@@ -19,7 +19,7 @@
 							<?php $count=1; foreach ($result as $row):?>
 								<td   width="125" height="110" align="center">
 								<div style="height: 95px;width: 130px;">
-									<a href="<?=base_url();?>gallery/content/<?=$row->id?>"><img src="<?=base_url()?>assets/gallery/image<?=$row->id?>_thumb.jpg" border="0"></a>
+									<a href="<?=base_url();?>gallery/content/<?=$row->id?>/<?=$row->parentid?>"><img src="<?=base_url()?>assets/gallery/image<?=$row->id?>_thumb.jpg" border="0"></a>
 								</div><div id="gall_botto_img"><sapn id="gall_names"><a href="<?=base_url();?>gallery/content/<?=$row->id?>/<?=$row->parentid?>"><?=$row->title?></a></span></div></td>
 									<? if ($count==5)
 									{

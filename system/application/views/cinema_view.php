@@ -457,13 +457,59 @@ var TabbedPanels2 = new Spry.Widget.TabbedPanels("TabbedPanels2");
          <div class=" yui-skin-sam" style="width: 470px; border: 1px solid #50BCFC; " >
                       	<div id="demo1" class="yui-navset" style="color: #EDF5FF;">
 	    						<ul class="yui-nav">
-							        <li style="text-align: center;"><a href="#tab2"><em style="width: 80px;"><span id="telugufont"><?=$more['13']->matter ?></span></em></a></li>
+							        <li style="text-align: center;" class="selected"><a href="#tab2"><em style="width: 80px;"><span id="telugufont"><?=$more['13']->matter ?></span></em></a></li>
 							        <li style="text-align: center;"><a href="#tab3"><em style="width: 80px;"><span id="telugufont"><?=$more['14']->matter ?></span></em></a></li>
 									<li style="text-align: center;"><a href="#tab3"><em style="width: 80px;"><span id="telugufont"><?=$more['15']->matter ?></span></em></a></li>
 	    						</ul>            
     							<div class="yui-content" style="height: 150px;text-align: center;">
-							        <div id="tab1"><p>Tab four Content</p></div>
-							        <div id="tab2"><p>Tab Two ContentTab One ContentTab One Content</p></div>
+							        <div id="tab1"><p>
+							        <table width="100%" height="100%"><tr>
+							   			<?php if(!empty($images)){
+							   			foreach ($images as $item):
+							   			$count=1;
+							   			foreach ($item as $sub):
+							   			//print_r($sub);					
+							   			?>
+							   		<td width="125"  align="center" valign="top" >
+									<div style="height: 95px;border: 0px solid red;width: 100%;text-align: left;">
+									<? if(file_exists("./assets/gallery/image".$sub['id']."_thumb.jpg")){ ?>
+										<a href="<?=base_url();?>gallery/content/<?=$sub['id']?>/<?=$sub['parentid']?>"><img src="<?=base_url();?>assets/gallery/image<?=$sub['id']?>_thumb.jpg" height="95px" width="130px" border="0"></a>
+									<?} ?>
+									</div>
+									<div id="gall_botto_img"><a href="<?=base_url();?>gallery/content/<?=$sub['id']?>/<?=$sub['parentid']?>"><?=$sub['title']?></a></div></td>
+							   			<? if($count==3){
+							   				break;
+							   			}else{
+							   				$count++;
+							   			}
+							   			endforeach;
+							   			endforeach; }
+							   			else 'No data found';?>
+							   			</tr>
+							   			</table><div style="width: 100%;height: 15px;" id="more-news-div"><a href="<?=base_url();?>gallery/inner/<?=$sub['parentid']?>"><?=$more['0']->matter;?></a></div>
+							        </p></div>
+							        <div id="tab2"><p>
+							        <table width="100%" height="100%">
+							        <tr>
+							        <? if(!empty($gall_topviews)){
+							        $count=1;
+							        foreach ($gall_topviews as $row): ?>
+							   			<td width="125"  align="center" valign="bottom">
+							   				<div style="border: 0px solid red;width: 100%;text-align: left;">
+							   				<a href="<?=base_url();?>gallery/content/<?=$row->id?>/<?=$row->parentid?>"><img src="<?=base_url();?>assets/gallery/image<?=$row->id?>_thumb.jpg" border="0"></a>
+							   				</div>
+							   				<div id="gall_botto_img"><a href="<?=base_url();?>gallery/content/<?=$row->id?>/<?=$row->parentid?>"><?=$row->title?></a></div>
+										</td>
+										<? if($count==3){
+											break;
+										}else {
+											$count++;
+										}endforeach;}
+										?>
+
+							   		</tr>
+							   		</table>
+							        </p></div>
 							        <div id="tab3"><p>Tab Three Content</p></div>
     							</div>
 <script>

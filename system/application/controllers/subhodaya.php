@@ -21,11 +21,6 @@ class Subhodaya extends Controller {
         //$details=$this->Gallery_Model->get_cateimage(11);
         $home_stories=$this->Sahithi_Model->get_home_stories($type=2);
 		$images=array();
-		/*foreach($details as $item)
-		{
-			$images[$item->id]=$this->Gallery_Model->getimage($item->id);
-		}*/
-		//get all categeories of gallery where active=1
 		$gallery_maincategeories = $this->Gallery_Model->get_categeory($active=1);
 		
 		if(!empty($gallery_maincategeories))//if atleast one main categeory exists..
@@ -53,7 +48,8 @@ class Subhodaya extends Controller {
 	    }
 	    	
 		$activenews=$this->News_Model->active_news1();
-		//print_r($activenews);
+		$gall_topviews=$this->Gallery_Model->top_views();
+		//print_r($gall_topviews);
 		$data=array('more'				=>	$more,
 		            'news_type7'		=>	$news_type7,
 					'news_type4'		=>	$news_type4,
@@ -68,7 +64,8 @@ class Subhodaya extends Controller {
 					'greetings1'		=>	$greetings1,
 		            'home_stories' 		=>	$home_stories,
 					'images'			=>	$images,
-					'activenews'		=>  $activenews
+					'activenews'		=>  $activenews,
+					'gall_topviews'		=>  $gall_topviews
 					);
 		$this->load->view('home',$data);
 	}

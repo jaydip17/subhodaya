@@ -3,8 +3,6 @@ class Greetings extends Controller {
 	var $layout = 'default'; 
 	function greetings(){
 		parent::Controller();
-		$this->load->model("admin/Greeting_Model");
-		$this->load->model("admin/News_Model");
 	}
 	function index(){
 		$type=$this->Greeting_Model->get_type();
@@ -18,18 +16,18 @@ class Greetings extends Controller {
 		$greetings16=$this->Greeting_Model->get_main_greetings(16);
 		$greetings7=$this->Greeting_Model->get_main_greetings(7);
 		$more=$this->News_Model->more_news();
-		$data=array('greetings1' => $greetings1,
-					'greetings2' => $greetings2,
-					'greetings12'=> $greetings12,
-					'greetings10'=> $greetings10,
-					'greetings9' => $greetings9,
-					'greetings8' => $greetings8,
-					'greetings4'=> $greetings4,
-					'greetings16'=>$greetings16,
-					'greetings7'=>$greetings7,
-					'more'       => $more,
-					'type'       => $type,
-					'onload' => "display_text_1()",
+		$data=array('greetings1' 	=> 	$greetings1,
+					'greetings2' 	=> 	$greetings2,
+					'greetings12'	=> 	$greetings12,
+					'greetings10'	=> 	$greetings10,
+					'greetings9' 	=> 	$greetings9,
+					'greetings8' 	=> 	$greetings8,
+					'greetings4'	=> 	$greetings4,
+					'greetings16'	=>	$greetings16,
+					'greetings7'	=>	$greetings7,
+					'more'       	=> 	$more,
+					'type'       	=> 	$type,
+					'onload' 		=> 	"display_text_1()",
 			);
 		$this->load->view('greetings_content',$data);
   }

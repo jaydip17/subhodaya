@@ -49,7 +49,7 @@ function reload()
 							        <li class="selected"><a href="#tab1"><em style="padding: 5px 2px 0px 4px;"><span id="telugufont"><?=$more['10']->matter ?></span></em></a></li>
 							        <li><a href="#tab2"><em style="padding:5px 4px 0px 25px;"><span id="telugufont"><?=$more['11']->matter ?></span></em></a></li>
 							        <li><a href="#tab3"><em style="padding:5px 4px 0px 20px;"><span id="telugufont"><?=$more['4']->matter ?></span></em></a></li>
-									<li><a href="#tab4"><em style="padding:5px 4px 0px 25px;"><span id="telugufont"><?=$more['5']->matter ?></span></em></a></li>
+									<li><a href="#tab4"><em style="padding:5px 4px 0px 25px;"><span id="telugufont"><?=$more['8']->matter ?></span></em></a></li>
 	    						</ul>            
     							<div class="yui-content">
     							<div id="tab1">
@@ -290,10 +290,10 @@ function reload()
 							   		<td width="125"  align="center" valign="top" >
 									<div style="height: 95px;border: 0px solid red;width: 100%;text-align: left;">
 									<? if(file_exists("./assets/gallery/image".$sub['id']."_thumb.jpg")){ ?>
-										<a href="<?=base_url();?>gallery/inner/<?=$sub['parentid']?>"><img src="<?=base_url();?>assets/gallery/image<?=$sub['id']?>_thumb.jpg" height="95px" width="130px" border="0"></a>
+										<a href="<?=base_url();?>gallery/content/<?=$sub['id']?>/<?=$sub['parentid']?>"><img src="<?=base_url();?>assets/gallery/image<?=$sub['id']?>_thumb.jpg" height="95px" width="130px" border="0"></a>
 									<?} ?>
 									</div>
-									<div id="gall_botto_img"><a href="<?=base_url();?>gallery/inner/<?=$sub['parentid']?>"><?=$sub['title']?></a></div></td>
+									<div id="gall_botto_img"><a href="<?=base_url();?>gallery/content/<?=$sub['id']?>/<?=$sub['parentid']?>"><?=$sub['title']?></a></div></td>
 							   			<? if($count==3){
 							   				break;
 							   			}else{
@@ -305,7 +305,28 @@ function reload()
 							   			</tr>
 							   			</table><div style="width: 100%;height: 15px;" id="more-news-div"><a href="<?=base_url();?>gallery/inner/<?=$sub['parentid']?>"><?=$more['0']->matter;?></a></div>
 							        </p></div>
-							        <div id="tab2"><p>dfgdgf</p></div>
+							        <div id="tab2"><p>
+							        <table width="100%" height="100%">
+							        <tr>
+							        <? if(!empty($gall_topviews)){
+							        $count=1;
+							        foreach ($gall_topviews as $row): ?>
+							   			<td width="125"  align="center" valign="bottom">
+							   				<div style="border: 0px solid red;width: 100%;text-align: left;">
+							   				<a href="<?=base_url();?>gallery/content/<?=$row->id?>/<?=$row->parentid?>"><img src="<?=base_url();?>assets/gallery/image<?=$row->id?>_thumb.jpg" border="0"></a>
+							   				</div>
+							   				<div id="gall_botto_img"><a href="<?=base_url();?>gallery/content/<?=$row->id?>/<?=$row->parentid?>"><?=$row->title?></a></div>
+										</td>
+										<? if($count==3){
+											break;
+										}else {
+											$count++;
+										}endforeach;}
+										?>
+
+							   		</tr>
+							   		</table>
+							        </p></div>
 							        <div id="tab3"><p>Tab Three Content</p></div>
     							</div>
 <script>

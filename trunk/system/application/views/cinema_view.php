@@ -457,7 +457,6 @@ var TabbedPanels2 = new Spry.Widget.TabbedPanels("TabbedPanels2");
          <div class=" yui-skin-sam" style="width: 470px; border: 1px solid #50BCFC; " >
                       	<div id="demo1" class="yui-navset" style="color: #EDF5FF;">
 	    						<ul class="yui-nav">
-							       <li class="selected" style="text-align: center;"><a href="#tab1"><em style="width: 80px;">Politics</em></a></li>
 							        <li style="text-align: center;"><a href="#tab2"><em style="width: 80px;"><span id="telugufont"><?=$more['13']->matter ?></span></em></a></li>
 							        <li style="text-align: center;"><a href="#tab3"><em style="width: 80px;"><span id="telugufont"><?=$more['14']->matter ?></span></em></a></li>
 									<li style="text-align: center;"><a href="#tab3"><em style="width: 80px;"><span id="telugufont"><?=$more['15']->matter ?></span></em></a></li>
@@ -466,7 +465,6 @@ var TabbedPanels2 = new Spry.Widget.TabbedPanels("TabbedPanels2");
 							        <div id="tab1"><p>Tab four Content</p></div>
 							        <div id="tab2"><p>Tab Two ContentTab One ContentTab One Content</p></div>
 							        <div id="tab3"><p>Tab Three Content</p></div>
-									<div id="tab3"><p>Tab four Content</p></div>
     							</div>
 <script>
 (function() {

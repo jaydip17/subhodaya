@@ -3,13 +3,6 @@ class Cinema extends Controller {
 	var $layout='default';
 	function Cinema(){
 		parent::Controller();
-		$this->load->model("admin/Cinema_Model");
-		$this->load->model("admin/News_Model");
-		$this->load->model("admin/Poll_Model");
-		$this->load->model("admin/Greeting_Model");
-		$this->load->model("admin/Sahithi_Model");
-		$this->load->model("admin/Mahila_Model");
-		
 	}
 	function index(){
 		$more=$this->News_Model->more_news();
@@ -21,16 +14,45 @@ class Cinema extends Controller {
 		$cinema_type6=$this->Cinema_Model->get_cinematype(6);
 		$cinemapoll=$this->Poll_Model->get_newspolls($type=5);
 		$yes_poll=$this->Poll_Model->get_yes_newspoll($type=5);
-		$data=array('cinema_type1'=>$cinema_type1,
-					'cinema_type2'=>$cinema_type2,
-					'cinema_type3'=>$cinema_type3,
-					'cinema_type4'=>$cinema_type4,
-					'cinema_type5'=>$cinema_type5,
-					'cinema_type6'=>$cinema_type6,
-						'more'=>$more,
-						'cinemapoll'=>$cinemapoll,
-						'yes_poll'=>$yes_poll,
-						'onload' => "display_text_1()",
+	$images=array();
+		$gallery_maincategeories = $this->Gallery_Model->get_categeory($active=1);
+		
+		if(!empty($gallery_maincategeories))//if atleast one main categeory exists..
+		{
+			
+		  foreach($gallery_maincategeories as $item)
+		  {
+			$subcategeories[$item->id]=$this->Gallery_Model->subcat($item->id);
+		  }
+		//  print_r($subcategeories);
+		 	
+	       foreach($subcategeories as $item)
+	       {  
+	       	$eachone=$item->result();
+	    	if(!empty($eachone))
+	    	{
+	    		foreach ($eachone as $row){
+	    			//print_r($row);
+	    			
+	 				$images[$row->id]=$this->Gallery_Model->getimage1($row->id);
+	    		}
+	 		
+	    	}
+		   }
+	    }
+	    $gall_topviews=$this->Gallery_Model->top_views();
+		$data=array('cinema_type1'		=>	$cinema_type1,
+					'cinema_type2'		=>	$cinema_type2,
+					'cinema_type3'		=>	$cinema_type3,
+					'cinema_type4'		=>	$cinema_type4,
+					'cinema_type5'		=>	$cinema_type5,
+					'cinema_type6'		=>	$cinema_type6,
+						'more'			=>	$more,
+						'cinemapoll'	=>	$cinemapoll,
+						'yes_poll'		=>	$yes_poll,
+						'onload' 		=> "display_text_1()",
+						'images'		=> $images,
+						'gall_topviews' => $gall_topviews
 		);
 		$this->load->view('cinema_view',$data);
 	}

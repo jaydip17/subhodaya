@@ -21,8 +21,8 @@
 <script src="<?=base_url();?>assets/js/SpryTabbedPanels.js"></script>
 <script src="<?=base_url();?>assets/js/SpryDOMUtils.js"></script>
 <script src="<?=base_url();?>assets/js/tp_unobtrusive.js"></script>
-<link href="<?=base_url();?>assets/samples1.css" rel="stylesheet" type="text/css" />
-<link href="<?=base_url();?>assets/SpryRating.css" rel="stylesheet" type="text/css" />
+<link href="<?=base_url();?>assets/js/samples1.css" rel="stylesheet" type="text/css" />
+<link href="<?=base_url();?>assets/js/SpryRating.css" rel="stylesheet" type="text/css" />
 <script language="JavaScript" type="text/javascript" src="<?=base_url();?>assets/js/SpryRating.js"></script>
 <script type="text/javascript" src="<?=base_url();?>assets/js/pollLoader.js"></script>
 <script type="text/javascript" src="<?=base_url();?>assets/js/newsLoader.js"></script>

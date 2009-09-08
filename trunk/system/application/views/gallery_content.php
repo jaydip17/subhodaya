@@ -76,6 +76,32 @@ function telugu_typing()
 				
 				<tr>
 					<td valign="top" colspan="3">
+					<div><form method="post" name="Ratingform" action="SpryRating.php">
+   
+
+<span id="rating2" class="ratingContainer">
+		      <span class="ratingButton"></span>
+		      <span class="ratingButton"></span>
+		      <span class="ratingButton"></span>
+		      <span class="ratingButton"></span>
+		      <span class="ratingButton"></span>
+
+		      <input id="dynamicElement2" type="text" name="spry_dynamic2" value="3" />
+      		  <span class="ratingRatedMsg sample">Thanks for your rating!</span>
+  </span>
+		  <label>
+		  <input type="submit" name="button" id="button" value="Vote" />
+		  </label>
+
+	
+</form>
+		
+    <script type="text/javascript">
+		///var firstRating = new Spry.Widget.Rating("static", {ratingValueElement: 'readOnly', readOnly: true});	
+		///var Rating1 = new Spry.Widget.Rating("rating1", {ratingValueElement:'dynamicElement1'});
+		var Rating2 = new Spry.Widget.Rating("rating2", {ratingValueElement:'dynamicElement2'});
+	
+      </script></div>
 					<form name="telugu_send" method="post" action="<?=base_url();?>subhodaya/sendmail">
 					<input type="hidden" name="url" value="<?=base_url()?>gallery/content/<?=$image['0']->id?>">
 			

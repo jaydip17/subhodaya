@@ -1,3 +1,22 @@
+<script type='text/javascript'>
+ 	var messages = new Array();
+// multi-dimensional arrays containing: 
+// image and text for tooltip
+// optional: bgColor and color to be sent to tooltip
+<?
+$count = 0;
+foreach ($videosnames as $item ) {
+	?>
+messages[<?=$count?>] = new Array('<?=base_url ()?>assets/videos/image_preview/image<?=$item->id?>_thumb.jpg','<center>Views:<?=$item->no_of_views?>  time:<?=$item->time?></center>',"#FFFFFF");
+	<?
+	$count ++;
+}
+?></script>
+<script type="text/javascript"
+	src="<?=base_url ();?>assets/js/imagemouseover.js"></script>
+
+
+
 <table width="99%"  border="0" cellpadding="0" cellspacing="0">
 <tr>
     <td width="420" valign="top" >
@@ -91,51 +110,34 @@
 
   <ul class="TabbedPanelsTabGroup">
   <?foreach($videocategeories->result() as $item){ ?>
-    <li class="TabbedPanelsTab"><?=$item->name ?> </li>
+   <li class="TabbedPanelsTab" onclick="javascript:loadNews('<?=$item->id?>','<?=base_url(
+
+)?>videolist/videoview/<?=$item->id?>')"><?=$item->name ?></li>
   <?}?>
   </ul>
-  <div class="TabbedPanelsContentGroup">
- <?php  foreach($hotvideos as $key=>$item){
+  <div class="TabbedPanelsContentGroup"  >
+ <?php  foreach($videocategeories->result() as $key=>$item){
  
- 	?>
-    <div class="TabbedPanelsContent">     
-       <?
-       $count=1;
-       
-       	foreach($item->result() as $video){
-         ?>
-       <div style="float:left;vertical-align:middle;padding-right:20px;padding-bottom:5px;padding-top:2px;">
-       <div style="vertical-align:middle;float:left;text-align:justify;padding-right:10px;">
-        <a href="<?=base_url();?>video/index/<?=$video->id?>/<?=$video->video_cat_id?>">
-        <img id="img" src="<?=base_url();?>assets/videos/image_preview/home_image<?=$video->id?>_thumb.jpg"></a>
-        </div>
-        
-         <span style="font-size:12px;font-weight:bold;"><?=$video->insert_date?></span><br/><span style="font-size:12px;font-weight:bold;"><?=$video->name?></span><br/>
-           <span style="font-size:12px;font-weight:bold;color:#FF6507;padding-top:7px;"><?=$video->no_of_views?> views</span>
-           <br/><span style="font-size:12px;font-weight:bold;padding-top:3px;"><?=$video->time?></span><br/><div id="hotimg"><?=$more['36']->matter?>: <span style="color:#FF6507;"><?=$video->rating?></span></div>
-           
-          
-          
-          </div>
+  $count=1;?>
+    <div class="TabbedPanelsContent" id="div<?=$item->id?>" >     
+           </div>
      
     
- <? }
+
    
-  ?>
-  <div  id="hotvi" class="hiname"><a href="#"><?echo $pagination[$key]?></a></div>
-   </div>   
+  
   
     <?php } ?> 
        
-     
+    
+  
                
       
       </div>   
                 
        </div>  
                           
-            
-             </td>
+            </td>
            
             </tr>
             
@@ -241,20 +243,22 @@
                           <table>
                             
                               <tr>
-                            <?
-                          $count=1;
+                             <?
+                             $count=0;
+                          $count_another=1;
                           foreach($videosnames as $item){
                           ?>
-                           
-                             <td><div style="font-size:13px;color:#000000;padding-left:25px;padding-top:8px;text-decoration:none;text-align:left;"class="viname"><a href="<?=base_url();?>video/index/<?=$video->video_cat_id?>"><?=$item->name?></a></div></td>
+                           <td><div style="font-size:13px;color:#000000;padding-left:25px;padding-top:8px;text-decoration:none;text-align:left;"class="viname"><a href="<?=base_url();?>video/index/<?=$item->id?>" onmouseover="doTooltipimage(event,<?=$count?>,<?=$item->id?>,'<?=base_url ()?>')"
+								onmouseout="hideTip()"><?=$item->name?></a></div></td>
       
                                  
                                <?
-                               if($count==6)
+                               if($count_another==6)
                                {
-                               $count=0;	
+                               $count_another=0;	
                             	echo "<tr></tr>";                             }
                           $count ++;
+                          $count_another++;
                          }
                            ?>
                               </tr>
@@ -277,3 +281,4 @@
         
           </table>
 
+  

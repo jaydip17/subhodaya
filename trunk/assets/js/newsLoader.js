@@ -1,7 +1,10 @@
 var xmlhttp;
-
-function loadNews(url)
+var div_id;
+function loadNews(id,url)
 {
+div_id=id;
+//alert(div_id);
+ //alert("hello");
 xmlhttp=null;
 if (window.XMLHttpRequest)
   {// code for IE7, Firefox, Mozilla, etc.
@@ -11,9 +14,10 @@ else if (window.ActiveXObject)
   {// code for IE5, IE6
   xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
   }
-if (xmlhttp!=null)
+if(xmlhttp!=null)
   {
   xmlhttp.onreadystatechange=get_Newslist;
+  
   xmlhttp.open("GET",url,true);
   xmlhttp.send(null);
   }
@@ -29,7 +33,7 @@ if (xmlhttp.readyState==4)
   {// 4 = "loaded"
   if (xmlhttp.status==200)
     {// 200 = "OK"
-    document.getElementById('news_content').innerHTML=xmlhttp.responseText;
+    document.getElementById('div'+div_id).innerHTML=xmlhttp.responseText;
     }
   else
     {

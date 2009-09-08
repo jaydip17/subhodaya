@@ -10,54 +10,17 @@ class Video extends Controller {
 	    	 
 		$latestvideos = $this->video_Model->get_videos('latest',4);
 		$topviewedvideos = $this->video_Model->get_videos('top',7);
-		$videosnames=$this->video_Model->getvideosnames('name',15);
-	    $videocategeories = $this->video_Model->getvideocategeories(3);
-	   // print_r($videocategeories->result());
-	    $hotvideos=array();
-	    
-	   // $this->load->library('paginationnew');
-	  //  print_r($videocategeories->result());
-//	     foreach($videocategeories->result() as $item)
-//	       {
-//    	
-//    	   $this->paginationnew->start = ($this->uri->segment(4)) ? $this->uri->segment(4) : '0';
-//        $this->paginationnew->limit =10;
-//         $this->paginationnew->filePath ='javascript:loadNews(\''.$item->id.'';
-//      
-//         $this->paginationnew->select_what = '*';
-//         $this->paginationnew->nbItems = $this->video_Model->count_videos($item->id);
-//         $this->paginationnew->add_query = $query;
-//        
-//   		$result = $this->paginationnew->getQuery(TRUE);
-//   		$details=$result->result();
-//   		 		
-//  	    $paginate = $this->paginationnew->paginate(); 
-//	   
-//	      $hotvideos[$item->id]=$this->video_Model->get_videos($item->id,6);
-//	     }
-        
-      //  $onload = "loadNews('".base_url()."videolist/listview/".$type."')";
-       $count=1;
-       $pagination=array();
-	   foreach($videocategeories->result() as $item)
-	   {
-	   //	echo "hello";
-        $onload = "loadNews('".base_url()."videolist/videoview/".$item->id."')";
-        $total_rows=$this->video_Model->count_videos($item->id);
-        //echo $total_rows;
-	    $this->load->library('pagination');
-		$config['base_url'] = base_url()."videolist/videoview/".$item->id;
-    	$config['total_rows'] = $total_rows;
-		$config['per_page'] = 1;
-		$config['uri_segment'] = 4;
-		$this->pagination->initialize($config); 
-		$pagination[$item->id]=$this->pagination->create_links();
-		$hotvideos[$item->id]=$this->video_Model->get_videos($item->id,2);
-		
-		
-		 $count++;
-	   }
-        print_r($pagination);
+		//pagination for total videos i.e. mottam videos
+				
+		//pagination for total videos i.e. mottam videos
+		$videocategeories = $this->video_Model->getvideocategeories(3);
+	    //this is the first categeory which is displayed in the div first on loading the page
+	    $first_to_display=$videocategeories->result();
+	    $first_id =$first_to_display['0']->id;
+	    $onload = "loadNews('$first_id','".base_url()."videolist/videoview/".$first_id."','".base_url()."videolist/videonamesview/','body')";
+
+	   
+  
 	    if($this->uri->segment(3)!=0)
 	    {
 	      $videoid = $this->uri->segment(3);
@@ -88,10 +51,9 @@ class Video extends Controller {
                   'latestvideos'=>$latestvideos,
                   'videocategeories'=>$videocategeories,
                  'topviewedvideos'=>$topviewedvideos,
-                         'hotvideos' => $hotvideos,
-	                  'videosnames'=>$videosnames,
+                               
 	                  'onload'=>$onload,
-	                 'pagination' =>$pagination
+	                
        
         );
             

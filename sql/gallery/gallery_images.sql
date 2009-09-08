@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 25, 2009 at 10:40 AM
+-- Generation Time: Sep 08, 2009 at 01:37 PM
 -- Server version: 5.1.32
 -- PHP Version: 5.2.9-1
 
@@ -31,35 +31,29 @@ CREATE TABLE IF NOT EXISTS `gallery_images` (
   `title` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `parentid` int(20) NOT NULL,
   `active` int(10) NOT NULL,
+  `views` int(10) NOT NULL DEFAULT '100',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=28 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
 
 --
 -- Dumping data for table `gallery_images`
 --
 
-INSERT INTO `gallery_images` (`id`, `title`, `parentid`, `active`) VALUES
-(4, 'అనుష్క-రవితేజ ', 14, 0),
-(5, 'షిరిడి సాయి బాబా', 15, 0),
-(6, 'అనుష్క&nbsp; <br>', 14, 0),
-(7, 'ప్రస్తానం <br>', 17, 0),
-(8, 'శ్రియ&nbsp; <br>', 18, 0),
-(9, 'ప్రస్తానం <br>', 17, 0),
-(10, 'సాయి <br>', 15, 0),
-(11, 'జెనిలియా', 19, 0),
-(12, 'జెనిలియా', 19, 0),
-(13, 'జెనిలియా', 19, 0),
-(14, 'ప్రస్థానం', 17, 0),
-(15, 'ప్రస్థానం', 17, 0),
-(16, 'ప్రస్థానం', 17, 0),
-(17, 'ప్రస్థానం', 17, 0),
-(18, 'ప్రస్థానం', 17, 0),
-(19, 'ప్రస్థానం', 17, 0),
-(20, 'రామ్ చరణ్ తెజ', 22, 0),
-(21, 'రామ్ చరణ్ తెజ', 22, 0),
-(22, 'చిరంజీవి', 22, 0),
-(23, 'చిరంజీవి', 22, 0),
-(24, 'చిరంజీవి', 22, 0),
-(25, 'చరణ్ తెజ <br>', 22, 0),
-(26, 'పవన్ కళ్యాణ్', 22, 0),
-(27, 'పవన్ కళ్యాణ్', 22, 0);
+INSERT INTO `gallery_images` (`id`, `title`, `parentid`, `active`, `views`) VALUES
+(1, 'hello malli', 2, 0, 100),
+(2, 'hello malli', 2, 0, 100),
+(3, 'hello malli', 2, 0, 100),
+(4, 'hello malli', 2, 0, 100),
+(5, 'చంద్రబాబు నాయుడు', 15, 1, 100),
+(6, 'వై.ఎస్.అర్. రెడ్డి&nbsp; <br>', 17, 1, 100),
+(7, 'వై.ఎస్.అర్. రెడ్డి&nbsp; <br>', 17, 1, 100),
+(8, 'వై.ఎస్.అర్.<br>', 17, 1, 100),
+(9, 'చంద్రబాబు', 15, 1, 100),
+(10, 'చంద్రబాబు', 15, 0, 100),
+(11, 'వై .ఎస్.', 17, 1, 100),
+(12, 'వై .ఎస్.', 17, 1, 117),
+(13, 'వై .ఎస్.ఆర్.', 17, 1, 108),
+(14, 'dfsdf dsf sdfds<br>', 15, 1, 100),
+(15, 'sdasd', 15, 0, 106),
+(16, 'sdasd', 15, 0, 102),
+(17, 'అనుష్క', 22, 1, 101);

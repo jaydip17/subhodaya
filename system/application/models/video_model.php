@@ -34,14 +34,21 @@ class Video_model extends Model
 		}
        
 		$query = $this->db->get('videos');
+		//print_r($query);
+		
 		return $query;
 		
     }
     function count_videos($catid)
     {
     	//echo $catid;
-    	$this->db->where('video_cat_id',$catid);
+    	if(isset($catid))
+    	{
+    		$this->db->where('video_cat_id',$catid);
+    	}
+    	
     	$count=$this->db->count_all_results('videos');
+    	print_r($count);
     	return $count;
     	
     }
@@ -113,8 +120,6 @@ function getlatestvideos($limit,$catid,$id)
 	
  function getvideosnames($limit)
 	{
-		//$this->db->where('id',$id);
-		$this->db->select('name');
 		$query = $this->db->get('videos');
 		return $query->result();
 		

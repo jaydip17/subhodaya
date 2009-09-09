@@ -511,9 +511,20 @@ function reload()
 							        <li style="text-align: center;"><a href="#tab2"><em style="width: 80px;padding-top: 2px""><span id="telugufont"><?=$more['7']->matter ?></span></em></a></li>
 	    						</ul>            
     							<div class="yui-content" style="height: 150px;text-align: center;background-image:url(assets/imgs/gmail-seline.jpg);background-repeat:repeat-x;">
-							        <div id="tab1"><p>Tab four Content</p></div>
+							        <div id="tab1"><p>
+							         <table cellspacing="5" align="left">
+							        	<tr>
+							        <?php foreach($video_result as $item){?>
+							        	
+							        	<td><div style="padding:5px;"><a href="<?=base_url();?>video/index/<?php if(isset($item)) {echo $item->id;}?>"><img src="<?=base_url();?>assets/videos/image_preview/home_image<?=$item->id?>_thumb.jpg" border="0"></a></div>
+							        		<div id="gall_names" style="margin-left:10px;">Views:<?=$item->no_of_views;?><a href="<?=base_url();?>video/index/<?php if(isset($item)) {echo $item->id;}?>"><?=$item->name?></a></div></td>
+							        	
+                                   <? }?>
+							       </tr>
+							        </table>
+							        </p></div>
 							        <div id="tab2"><p>
-							        <?php ?>
+							       
 							        <table cellspacing="5" align="left">
 							        	<tr>
 							        	<?php 

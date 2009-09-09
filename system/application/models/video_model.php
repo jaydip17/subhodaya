@@ -52,7 +52,7 @@ class Video_model extends Model
     	
     }
 	function getvideocategeories($limit)
-	{
+	{echo $limit;
 	//if($limit!=0)
 	//{
 	  $this->db->limit($limit);

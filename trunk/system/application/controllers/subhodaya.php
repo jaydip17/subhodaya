@@ -42,7 +42,6 @@ class Subhodaya extends Controller {
 	    			
 	 				$images[$row->id]=$this->Gallery_Model->getimage1($row->id);
 	    		}
-	 		
 	    	}
 		   }
 	    }
@@ -50,6 +49,13 @@ class Subhodaya extends Controller {
 		$activenews=$this->News_Model->active_news1();
 		$gall_topviews=$this->Gallery_Model->top_views();
 		//print_r($gall_topviews);
+	    //home page 3 videos from three recent categeories
+	    $this->load->Model('Video_Model');
+	   
+	     $videos=$this->Video_Model->get_videos('active',2);
+	   	  
+	     $video_result=$videos->result();
+	
 		$data=array('more'				=>	$more,
 		            'news_type7'		=>	$news_type7,
 					'news_type4'		=>	$news_type4,
@@ -63,6 +69,8 @@ class Subhodaya extends Controller {
 		            'mahila_details'	=>	$mahila_details,
 					'greetings1'		=>	$greetings1,
 		            'home_stories' 		=>	$home_stories,
+					'images'			=>	$images,
+		            'video_result'     =>  $video_result
 					'images'			=>	$images,
 					'activenews'		=>  $activenews,
 					'gall_topviews'		=>  $gall_topviews

@@ -2,6 +2,11 @@ function show_subscribe()
 {
   var text_box =document.createElement('input');
   text_box.setAttribute('type','text');
+  var close =document.createElement('img');
+  close.setAttribute('src','./assets/imgs/delete_on.gif');
+  close.setAttribute('hspace','25px');
+  close.setAttribute('onclick','reload()');
+  close.setAttribute('onmouseover','close');
   var send_button =document.createElement('input');
   send_button.setAttribute('type','button');
   send_button.setAttribute('onclick','subscribe(document.getElementById("subscribe").value)');
@@ -9,10 +14,13 @@ function show_subscribe()
   var text = document.createTextNode('Enter E-mail');
   text_box.id="subscribe";
   document.getElementById('newsletter').innerHTML="";
+  
   document.getElementById('newsletter').appendChild(text);
+  document.getElementById('newsletter').appendChild(close);
   document.getElementById('newsletter').appendChild(text_box);
   document.getElementById('newsletter').appendChild(send_button);
   
+   
 }
 	 var xmlhttp;
 	

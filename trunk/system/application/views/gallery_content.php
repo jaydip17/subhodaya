@@ -76,7 +76,7 @@ function telugu_typing()
 				
 				<tr>
 					<td valign="top" colspan="3">
-					<div><form method="post" name="Ratingform" action="<?=base_url();?>gallery/rating/">
+					<div><form method="post" name="Ratingform" action="<?=base_url();?>gallery/content/">
    
 
 <span id="rating2" class="ratingContainer" >

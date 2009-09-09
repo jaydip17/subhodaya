@@ -82,8 +82,16 @@ class Gallery extends Controller {
   		//print_r($result);
   		$views=array();
   		$views=$this->Gallery_Model->get_views($id);
-  		
   		$links=$this->prevnex($query->result(),$id);
+  		//rating
+  		$rating=$this->input->post('spry_dynamic2');
+		$rid=$this->input->post('id');
+		$ip=$this->input->ip_address();
+		$data=array(
+		'id'	 => $rid,
+		
+		);
+		$result=$this->insert_rating($rating,$rid,$ip);
   		print_r($views);
   		$data=array('more'  => $more,
   					'image' => $image,
@@ -135,35 +143,33 @@ class Gallery extends Controller {
 	}
 	}
 	function rating(){
-	$rating=$this->input->post('spry_dynamic2');
-	$id=$this->input->post('id');
-	$ip=$this->input->ip_address();
-	$data=array(
-		'id'	 => $id,
-		
-	);
-	$result=$this->insert_rating($rating,$id,$ip);
+	
 	
 	}
 	function insert_rating($rating,$id,$ip)
 	{
-		$result=array();
-		$this->db->where('galleryid',$id);
-  		$this->db->select('ipaddress,rating');
-  		$query=$this->db->get_where('gall_rating');
-  		$result=$query->result();
-  		
-  		if(isset($result['0'])){
-  			return true;
-  		}else{
-  			echo $rating1=(3.5)%10;
-  			exit;
+		
 		$data = array(
                'galleryid' => $id ,
                'ipaddress' => $ip ,
                'rating'    => $rating1
             );
-
+		$result=array();
+		$this->db->where('galleryid',$id);
+  		$this->db->select('ipaddress,rating,views');
+  		$query=$this->db->get_where('gall_rating');
+  		$result=$query->result();
+  		
+  		if(isset($result['0'])){
+  			 $peve_ip=$result['0']->ipaddress;
+  			 $pre_view=$result['0']->views;
+  			 if($ip==$peve_ip){
+  			 	return true;
+  			 }else{
+  			 $this->db->insert('gall_rating', $data);
+  			 }
+  		}else{
+  		 $rating1=(3.5)%10;
 		$this->db->insert('gall_rating', $data); 
   		}
 	}

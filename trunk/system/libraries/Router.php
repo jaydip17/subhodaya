@@ -34,7 +34,7 @@ class CI_Router {
 	var $class			= '';
 	var $method			= 'index';
 	var $directory		= '';
-	var $uri_protocol 	= 'auto';
+	var $uri_protocol 	= 'PATH_INFO';
 	var $default_controller;
 	var $scaffolding_request = FALSE; // Must be set to FALSE
 	

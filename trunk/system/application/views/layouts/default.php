@@ -13,20 +13,19 @@
 <link href="<?=base_url();?>assets/fonts-min.css" rel="stylesheet" type="text/css" />
 <link href="<?=base_url();?>assets/tabview.css" rel="stylesheet" type="text/css" />
 
-<!-- tabs -->
-<script src="<?=base_url();?>assets/SpryAssets/SpryTabbedPanels.js" type="text/javascript"></script>
 
+<!-- start tabs -->
+<script src="<?=base_url();?>assets/SpryAssets/SpryTabbedPanels.js" type="text/javascript" />
 <link href="<?=base_url();?>assets/SpryTabbedPanels.css" rel="stylesheet" type="text/css" />
 <link href="<?=base_url();?>assets/SpryTabbedPanels.css" rel="stylesheet" type="text/css" />
 <script src="<?=base_url();?>assets/js/SpryTabbedPanels.js"></script>
+<!-- end tabs -->
 <script src="<?=base_url();?>assets/js/SpryDOMUtils.js"></script>
 <script src="<?=base_url();?>assets/js/tp_unobtrusive.js"></script>
-<link href="<?=base_url();?>assets/js/samples1.css" rel="stylesheet" type="text/css" />
-<link href="<?=base_url();?>assets/js/SpryRating.css" rel="stylesheet" type="text/css" />
-<script language="JavaScript" type="text/javascript" src="<?=base_url();?>assets/js/SpryRating.js"></script>
 <script type="text/javascript" src="<?=base_url();?>assets/js/pollLoader.js"></script>
 <script type="text/javascript" src="<?=base_url();?>assets/js/newsLoader.js"></script>
 <script type="text/javascript" src="<?=base_url();?>assets/js/mmenu.js"></script>
+
 
 <body onload="<? if(isset($onload)) echo $onload; ?>">
 

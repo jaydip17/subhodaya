@@ -43,6 +43,7 @@
 $route['default_controller'] = "subhodaya";
 $route['scaffolding_trigger'] = "";
 $route['admin'] = 'admin/login';
+//$route['rpc.php'] = 'ratings_rpc/index'; 
 
 
 /* End of file routes.php */

@@ -1,3 +1,124 @@
+<style type="text/css">
+/*  styles for the unit rater
+--------------------------------------------------------- 
+ryan masuga, masugadesign.com
+ryan@masugadesign.com 
+Licensed under a Creative Commons Attribution 3.0 License.
+http://creativecommons.org/licenses/by/3.0/
+See readme.txt for full credit details.
+--------------------------------------------------------- */
+
+.ratingblock {
+	display:block;
+	border-bottom:1px solid #999;
+	padding-bottom:8px;
+	margin-bottom:8px;
+	}
+
+.loading {
+	height: 15px;
+	background: url('<?=base_url()?>assets/imgs/working.gif') 50% 50% no-repeat;
+	}
+	
+.unit-rating { /* the UL */
+	list-style:none;
+	margin: 0px;
+	padding:0px;
+	height: 15px;
+	position: relative;
+	background: url('<?=base_url()?>assets/imgs/starrating.gif') top left repeat-x;		
+	}
+
+.unit-rating li{
+    text-indent: -90000px;
+	padding:0px;
+	margin:0px;
+	/*\*/
+	float: left;
+	/* */
+	}
+	
+.unit-rating li a {
+	outline: none;
+	display:block;
+	width:30px;
+	height: 15px;
+	text-decoration: none;
+	text-indent: -9000px;
+	z-index: 20;
+	position: absolute;
+	padding: 0px;
+	}
+	
+.unit-rating li a:hover{
+	background: url('<?=base_url()?>assets/imgs/starrating.gif') left center;
+	z-index: 2;
+	left: 0px;
+	}
+
+.unit-rating a.r1-unit{left: 0px;}
+.unit-rating a.r1-unit:hover{width:30px;}
+.unit-rating a.r2-unit{left:30px;}
+.unit-rating a.r2-unit:hover{width: 60px;}
+.unit-rating a.r3-unit{left: 60px;}
+.unit-rating a.r3-unit:hover{width: 90px;}
+.unit-rating a.r4-unit{left: 90px;}	
+.unit-rating a.r4-unit:hover{width: 120px;}
+.unit-rating a.r5-unit{left: 120px;}
+.unit-rating a.r5-unit:hover{width: 150px;}
+.unit-rating a.r6-unit{left: 150px;}
+.unit-rating a.r6-unit:hover{width: 180px;}
+.unit-rating a.r7-unit{left: 180px;}
+.unit-rating a.r7-unit:hover{width: 210px;}
+.unit-rating a.r8-unit{left: 210px;}
+.unit-rating a.r8-unit:hover{width: 240px;}
+.unit-rating a.r9-unit{left: 240px;}
+.unit-rating a.r9-unit:hover{width: 270px;}
+.unit-rating a.r10-unit{left: 270px;}
+.unit-rating a.r10-unit:hover{width: 300px;}
+
+.unit-rating li.current-rating {
+	background: url('<?=base_url()?>assets/imgs/starrating.gif') left bottom;
+	position: absolute;
+	height: 15px;
+	display: block;
+	text-indent: -9000px;
+	z-index: 1;
+	}
+
+.voted {color:#999;}
+.thanks {color:#36AA3D;}
+.static {color:#5D3126;}
+
+#container {
+	width: 50%;
+	border: 1px solid #ccc;
+	padding: 10px;
+	}
+
+h1 {
+	font-size: 21px;
+	font-family: Arial, sans-serif;
+	margin:0 0 5px 0;
+	padding:0;
+	}
+
+h2 {
+	font-size: 16px;
+	color: #333;
+	font-family: Arial, sans-serif;
+	margin:0 0 10px 0;
+	padding:0;
+	}
+
+p 	{
+	margin:3px;
+	padding:0;
+	}
+		
+</style>
+<script type="text/javascript" language="javascript" src="<?=base_url()?>assets/js/behavior.js"></script>
+<script type="text/javascript" language="javascript" src="<?=base_url()?>assets/js/rating.js"></script>
 <script language="javascript">
 //<!--
 function telugu_typing()
@@ -17,7 +138,15 @@ function telugu_typing()
 </script> 
 <table cellpadding="0" cellspacing="5px;" width="926">
 	<tr>
-		<td  height="93" align="left" valign="top"><div style="width: 742px;height: 93px;border: 1px solid red;background-color: gray;">your adds here</div></td>
+		<td  height="93" align="left" valign="top"><div style="width: 742px;height: 93px;border: 1px solid red;">
+		<div id="container">
+
+    
+<?php echo $this->ratings->bar('id21',''); ?>
+<img src="<?=base_url()?>assets/imgs/starrating.gif" alt="fjshfh"/>
+
+
+</div></div></td>
 		<td rowspan="2" width="180" align="center" valign="top"><div style="width: 180px;height: 740px;border: 1px solid red;"></div></td>
 	</tr>
 	<tr>
@@ -76,31 +205,6 @@ function telugu_typing()
 				
 				<tr>
 					<td valign="top" colspan="3">
-					<div><form method="post" name="Ratingform" action="<?=base_url();?>gallery/content/">
-   
-
-<span id="rating2" class="ratingContainer" >
-		      <span class="ratingButton" ></span>
-		      <span class="ratingButton" ></span>
-		      <span class="ratingButton"></span>
-		      <span class="ratingButton"></span>
-		      <span class="ratingButton"></span>
-				<input type="hidden" name="id" value="<?=$image['0']->id?>" />
-		      <input id="dynamicElement2" type="text" name="spry_dynamic2" value="3" />
-      		  <span class="ratingRatedMsg sample">Thanks for your rating!</span>
-  </span>
-		  <label>
-		  <input type="submit" name="button" id="button" value="Vote" />
-		  </label>
-
-	
-</form>
-    <script type="text/javascript">
-		///var firstRating = new Spry.Widget.Rating("static", {ratingValueElement: 'readOnly', readOnly: true});	
-		///var Rating1 = new Spry.Widget.Rating("rating1", {ratingValueElement:'dynamicElement1'});
-		var Rating2 = new Spry.Widget.Rating("rating2", {ratingValueElement:'dynamicElement2'});
-	
-      </script></div>
 					<form name="telugu_send" method="post" action="<?=base_url();?>subhodaya/sendmail">
 					<input type="hidden" name="url" value="<?=base_url()?>gallery/content/<?=$image['0']->id?>">
 			

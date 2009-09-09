@@ -73,6 +73,7 @@ class Gallery extends Controller {
   		$this->load->view('gallery_inner',$data);
   	}
   	function content(){
+  		 $this->load->model('ratings_model', 'ratings');
   		 $id=$this->uri->segment(3,0);
   		 $parentid=$this->uri->segment(4,0);
   		$more=$this->News_Model->more_news();
@@ -84,15 +85,8 @@ class Gallery extends Controller {
   		$views=$this->Gallery_Model->get_views($id);
   		$links=$this->prevnex($query->result(),$id);
   		//rating
-  		$rating=$this->input->post('spry_dynamic2');
-		$rid=$this->input->post('id');
-		$ip=$this->input->ip_address();
-		$data=array(
-		'id'	 => $rid,
-		
-		);
-		$result=$this->insert_rating($rating,$rid,$ip);
-  		print_r($views);
+  		
+  		//print_r($views);
   		$data=array('more'  => $more,
   					'image' => $image,
   					'links'=> $links);
@@ -142,36 +136,54 @@ class Gallery extends Controller {
 	
 	}
 	}
-	function rating(){
+	/*function rating(){
+	$rating=$this->input->post('spry_dynamic2');
+		$rid=$this->input->post('id');
+		$ip=$this->input->ip_address();
 	
+		echo $result=$this->insert_rating($rating,$rid,$ip);
 	
 	}
 	function insert_rating($rating,$id,$ip)
 	{
 		
-		$data = array(
-               'galleryid' => $id ,
-               'ipaddress' => $ip ,
-               'rating'    => $rating1
-            );
 		$result=array();
 		$this->db->where('galleryid',$id);
   		$this->db->select('ipaddress,rating,views');
   		$query=$this->db->get_where('gall_rating');
   		$result=$query->result();
-  		
-  		if(isset($result['0'])){
+  		print_r($result);
+  		if(isset($result['0']))
+  		{
   			 $peve_ip=$result['0']->ipaddress;
-  			 $pre_view=$result['0']->views;
-  			 if($ip==$peve_ip){
-  			 	return true;
-  			 }else{
-  			 $this->db->insert('gall_rating', $data);
-  			 }
+  			 $prv_view=$result['0']->views;
+  			 $prv_rate=$result['0']->rating;
+  			 $prv_view=$result['0']->views;
+  			 echo $ip.','.$peve_ip;
+  			 if($ip==$peve_ip)
+  			 	{
+  			 		echo "sad";
+  			 		return false;
+  			 	}else{
+  			 		$rating1=($prv_rate+$rating)%5;
+  			 		$data=array(
+  			 				'rating'	=>	$rating1,
+  			 				'galleryid' => 	$id ,
+               				'ipaddress' => 	$ip ,
+  			 			);
+  			 			
+  			 		$query=$this->db->insert('gall_rating1', $data);
+  			 		
+  			 		
+  			 	return TRUE;	
+  			 	}
   		}else{
-  		 $rating1=(3.5)%10;
-		$this->db->insert('gall_rating', $data); 
+  		 $rating1=(3.2+$rating)%5;
+  		 $data=array('rating'=>$rating1);
+		$query=$this->db->insert('gall_rating', $data); 
+		
   		}
-	}
+  		return true;
+	}*/
 }
 ?>

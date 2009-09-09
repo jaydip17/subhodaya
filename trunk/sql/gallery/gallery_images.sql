@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 08, 2009 at 01:37 PM
+-- Generation Time: Sep 09, 2009 at 04:55 AM
 -- Server version: 5.1.32
 -- PHP Version: 5.2.9-1
 
@@ -51,7 +51,7 @@ INSERT INTO `gallery_images` (`id`, `title`, `parentid`, `active`, `views`) VALU
 (9, 'చంద్రబాబు', 15, 1, 100),
 (10, 'చంద్రబాబు', 15, 0, 100),
 (11, 'వై .ఎస్.', 17, 1, 100),
-(12, 'వై .ఎస్.', 17, 1, 117),
+(12, 'వై .ఎస్.', 17, 1, 122),
 (13, 'వై .ఎస్.ఆర్.', 17, 1, 108),
 (14, 'dfsdf dsf sdfds<br>', 15, 1, 100),
 (15, 'sdasd', 15, 0, 106),

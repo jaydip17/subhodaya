@@ -70,7 +70,7 @@ class Subhodaya extends Controller {
 					'greetings1'		=>	$greetings1,
 		            'home_stories' 		=>	$home_stories,
 					'images'			=>	$images,
-		            'video_result'     =>  $video_result
+		            'video_result'     =>  $video_result,
 					'images'			=>	$images,
 					'activenews'		=>  $activenews,
 					'gall_topviews'		=>  $gall_topviews

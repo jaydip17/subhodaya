@@ -8,9 +8,9 @@ class Mahila extends Controller {
 		 $this->load->model('admin/Sahithi_Model');
 		$this->load->model("admin/News_Model");
 		$more=$this->News_Model->more_news();
-		$details=$this->mahila_Model->get_Mahilatype();
+		$details=$this->Mahila_Model->get_Mahilatype();
 		foreach($details as $item)
-		$details_more[$item->id]=$this->mahila_Model->getdetails($item->id,'yes',6);;
+		$details_more[$item->id]=$this->Mahila_Model->getdetails($item->id,'yes',6);;
 		
 		$details_sahithi=$this->Sahithi_Model->get_sahithitype();
 		$details_more_sahithi=array();

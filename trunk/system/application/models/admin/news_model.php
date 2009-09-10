@@ -39,7 +39,7 @@ class News_Model extends Model
     {
     	
     	$data=array('heading'=>$_POST['heading'],
-  					'summery'=>$_POST["summary"],
+  					'summary'=>$_POST["summary"],
   					'description'=>$_POST["description"],
   					'breking_news'=>$breaking
   					);

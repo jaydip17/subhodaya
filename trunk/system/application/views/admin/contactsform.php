@@ -25,7 +25,8 @@
       <td colspan="2" style="padding:6">*Your username and password will not be stored on this server.</td>
     </tr>
     <tr> 
-      <td colspan="2" style="padding:6"><input type="submit" name="Submit" value="Import Contacts" class="button" style="width:100%"></td>
+      <td colspan="2" style="padding:6">
+      <input  alt="<?=base_url()."admin/contactslist"?>?&hight=400&width=300" class="thickbox" type="submit" name="Submit" value="Import Contacts" class="button" style="width:100%"></td>
     </tr>
     <tr> 
       <td colspan="2" style="padding:6" align="center"><?=$message;?></td>

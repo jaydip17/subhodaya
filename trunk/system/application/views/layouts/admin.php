@@ -2,6 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- thick box -->
+<script type="text/javascript" src="<?=base_url()?>assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="<?=base_url()?>assets/js/thickbox-compressed.js"></script>
+<link rel="stylesheet" href="<?=base_url()?>assets/thickbox.css" type="text/css" media="screen" />
 <link type="text/css" href="<?=base_url();?>assets/style-admin.css"
 	rel="stylesheet" />
 <link rel="stylesheet" type="text/css"

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 05, 2009 at 05:48 AM
+-- Generation Time: Sep 10, 2009 at 07:18 AM
 -- Server version: 5.0.51
 -- PHP Version: 5.2.5
 
@@ -125,18 +125,55 @@ CREATE TABLE IF NOT EXISTS `gallery_images` (
   `title` varchar(200) character set utf8 collate utf8_unicode_ci NOT NULL,
   `parentid` int(20) NOT NULL,
   `active` int(10) NOT NULL,
+  `views` int(10) NOT NULL default '100',
   PRIMARY KEY  (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
 
 --
 -- Dumping data for table `gallery_images`
 --
 
-INSERT INTO `gallery_images` (`id`, `title`, `parentid`, `active`) VALUES
-(1, 'hello malli', 2, 0),
-(2, 'hello malli', 2, 0),
-(3, 'hello malli', 2, 0),
-(4, 'hello malli', 2, 0);
+INSERT INTO `gallery_images` (`id`, `title`, `parentid`, `active`, `views`) VALUES
+(1, 'hello malli', 2, 0, 100),
+(2, 'hello malli', 2, 0, 100),
+(3, 'hello malli', 2, 0, 100),
+(4, 'hello malli', 2, 0, 100),
+(5, 'చంద్రబాబు నాయుడు', 15, 1, 100),
+(6, 'వై.ఎస్.అర్. రెడ్డి&nbsp; <br>', 17, 1, 100),
+(7, 'వై.ఎస్.అర్. రెడ్డి&nbsp; <br>', 17, 1, 100),
+(8, 'వై.ఎస్.అర్.<br>', 17, 1, 100),
+(9, 'చంద్రబాబు', 15, 1, 100),
+(10, 'చంద్రబాబు', 15, 0, 100),
+(11, 'వై .ఎస్.', 17, 1, 100),
+(12, 'వై .ఎస్.', 17, 1, 122),
+(13, 'వై .ఎస్.ఆర్.', 17, 1, 108),
+(14, 'dfsdf dsf sdfds<br>', 15, 1, 100),
+(15, 'sdasd', 15, 0, 106),
+(16, 'sdasd', 15, 0, 102),
+(17, 'అనుష్క', 22, 1, 101);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gall_rating`
+--
+
+DROP TABLE IF EXISTS `gall_rating`;
+CREATE TABLE IF NOT EXISTS `gall_rating` (
+  `id` int(10) NOT NULL auto_increment,
+  `galleryid` int(10) NOT NULL,
+  `ipaddress` varchar(50) NOT NULL,
+  `rating` varchar(100) NOT NULL default '3.5',
+  `views` int(10) NOT NULL default '10',
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `gall_rating`
+--
+
+INSERT INTO `gall_rating` (`id`, `galleryid`, `ipaddress`, `rating`, `views`) VALUES
+(1, 12, '127.0.0.1', '3', 10);
 
 -- --------------------------------------------------------
 
@@ -639,20 +676,29 @@ CREATE TABLE IF NOT EXISTS `videos` (
   `rating` varchar(100) NOT NULL,
   `insert_date` date NOT NULL,
   `last_viewed` int(10) NOT NULL,
-  `time` time NOT NULL,
+  `time` varchar(10) NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=84 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=104 ;
 
 --
 -- Dumping data for table `videos`
 --
 
 INSERT INTO `videos` (`id`, `name`, `video_cat_id`, `video_uploaded`, `no_of_views`, `active`, `rating`, `insert_date`, `last_viewed`, `time`) VALUES
-(76, 'వోడాఫోన్1', 12, '1', 12121, 1, '11', '2009-12-12', 0, '00:32:00'),
-(75, 'వోడాఫోన్11', 12, '1', 12124345, 0, '100', '2009-12-12', 0, '00:32:00'),
-(80, 'సినిమా', 13, '1', 1212, 0, '10', '2009-12-12', 0, '00:32:00'),
-(82, 'వోడాఫోన్', 13, '1', 1212, 0, '10', '2009-12-12', 0, '00:32:00'),
-(83, 'వోడాఫోన్', 13, '1', 1212, 0, '1', '2009-12-12', 0, '00:32:00');
+(86, 'సినిమా', 12, '1', 53535, 0, '5324', '2009-10-10', 0, '00:54'),
+(84, 'సినిమా', 13, '1', 53535, 0, '5324', '2009-10-10', 0, '00:54'),
+(85, 'సినిమా', 13, '1', 53535, 0, '5324', '2009-10-10', 0, '00:54'),
+(102, 'సినిమా', 13, '1', 53535, 0, '5324', '2009-10-10', 0, '00:54'),
+(90, 'సినిమా', 13, '1', 53535, 0, '5324', '2009-10-10', 0, '00:54'),
+(88, 'సినిమా', 13, '1', 53535, 0, '5324', '2009-10-10', 0, '00:54'),
+(87, 'సినిమా', 13, '1', 53535, 0, '5324', '2009-10-10', 0, '00:54'),
+(91, 'సినిమా', 12, '1', 53535, 0, '5324', '2009-10-10', 0, '00:54'),
+(95, 'సినిమా', 12, '1', 53535, 0, '5324', '2009-10-10', 0, '00:54'),
+(94, 'సినిమా', 12, '1', 53535, 0, '5324', '2009-10-10', 0, '00:54'),
+(99, 'సినిమా', 12, '1', 53535, 0, '5324', '2009-10-10', 0, '00:54'),
+(97, 'సినిమా', 12, '1', 53535, 0, '5324', '2009-10-10', 0, '00:54'),
+(101, 'సినిమా', 13, '1', 5, 0, '5', '2009-10-10', 0, '00:54'),
+(103, 'సినిమా', 13, '1', 53535, 0, '5324', '2009-10-10', 0, '00:54');
 
 -- --------------------------------------------------------
 

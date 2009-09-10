@@ -22,7 +22,7 @@ if(isset($message) && !is_array($message) ) echo($message);?>
 	<tr>
 		<td>Summery</td>
 		<td style="text-align: left;">
-			<textarea rows="3" cols="50" name="summary" id="summary"><?=$edit['0']->summery ?></textarea> 
+			<textarea rows="3" cols="50" name="summary" id="summary"><?=$edit['0']->summary ?></textarea> 
 		</td>
 	</tr>
 	<tr>

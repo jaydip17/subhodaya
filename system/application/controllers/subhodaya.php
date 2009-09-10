@@ -15,8 +15,10 @@ class Subhodaya extends Controller {
 		$yes_poll=$this->Poll_Model->get_yes_newspoll($type=4);
 		$newspoll=$this->Poll_Model->get_newspolls($type=4);
 		$sahithi_details=$this->Sahithi_Model->active_sahithi(1,$type='home');
+		//mahila
 		$mahila_details=$this->Mahila_Model->active_mahila(1,$type='home');
-		//print_r($mahila_details);
+		$mahila_details1=$this->Mahila_Model->active_mahila(4,$type='home');
+		//print_r($mahila_details1);
 	    $greetings1=$this->Greeting_Model->get_main_greetings(1);
         //$details=$this->Gallery_Model->get_cateimage(11);
         $home_stories=$this->Sahithi_Model->get_home_stories($type=2);
@@ -70,10 +72,11 @@ class Subhodaya extends Controller {
 					'greetings1'		=>	$greetings1,
 		            'home_stories' 		=>	$home_stories,
 					'images'			=>	$images,
-		            'video_result'     =>  $video_result,
+		            'video_result'      =>  $video_result,
 					'images'			=>	$images,
 					'activenews'		=>  $activenews,
-					'gall_topviews'		=>  $gall_topviews
+					'gall_topviews'		=>  $gall_topviews,
+					'mahila_details1'	=>  $mahila_details1
 					);
 		$this->load->view('home',$data);
 	}

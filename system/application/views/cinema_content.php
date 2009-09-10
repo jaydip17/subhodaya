@@ -30,7 +30,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 							        		<div style="height:235px;" id="telugufont1">
 							        			<?if(isset($active_news1['0'])){
 							        			if(file_exists("./assets/cinema/cine_img".$active_news1['0']->id."_thumb.jpg")){?>
-          				 						<a href="<?=base_url();?>cinema/inner/<?=$active_news1['0']->id?>"><img src="<?=base_url();?>assets/cinema/cine_img<?=$active_news1['0']->id?>_thumb.jpg" style="float: left;padding: 2px 19px 2px 1px;text-align: left;text-align: justify;"  border="0"></img></a>
+          				 						<a href="<?=base_url();?>cinema/inner/<?=$active_news1['0']->id?>/<?=$active_news1['0']->type?>"><img src="<?=base_url();?>assets/cinema/cine_img<?=$active_news1['0']->id?>_thumb.jpg" style="float: left;padding: 2px 19px 2px 1px;text-align: left;text-align: justify;"  border="0"></img></a>
           				 						<?} ?>
           				 						<font id="mainnews"><a href="<?=base_url();?>cinema/inner/<?=$active_news1['0']->id?>/<?=$active_news1['0']->type?>"><?php echo $active_news1['0']->heading;?></a></font><br>
           				 						<?php echo $active_news1['0']->summary;?>
@@ -63,9 +63,9 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 							        		<?if(isset($active_news2['0'])){
 							        		if(file_exists("./assets/cinema/cine_img".$active_news2['0']->id."_thumb.jpg")){
 							        		?>
-							        		<a href="<?=base_url();?>cinema/inner/<?=$active_news2['0']->id?>"><img src="<?=base_url();?>assets/cinema/cine_img<?=$active_news2['0']->id?>_thumb.jpg" style="float: left;padding: 2px 19px 2px 1px;text-align: left;text-align: justify;"  border="0"></img></a>
+							        		<a href="<?=base_url();?>cinema/inner/<?=$active_news2['0']->id?>/<?=$active_news2['0']->type?>"><img src="<?=base_url();?>assets/cinema/cine_img<?=$active_news2['0']->id?>_thumb.jpg" style="float: left;padding: 2px 19px 2px 1px;text-align: left;text-align: justify;"  border="0"></img></a>
 							        		<?} ?>
-							        		<div id="mainnews"><a href="<?=base_url();?>cinema/inner/<?=$active_news2['0']->id?>"><?=$active_news2['0']->heading?></a></div>
+							        		<div id="mainnews"><a href="<?=base_url();?>cinema/inner/<?=$active_news2['0']->id?>/<?=$active_news2['0']->type?>"><?=$active_news2['0']->heading?></a></div>
 							        		<?php echo $active_news2['0']->summary;?>
 							        			<ul id="mainnews">
 							        			<?php
@@ -97,11 +97,11 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 							        	<?if(isset($active_news3['0'])){
 							        	if(file_exists("./assets/cinema/cine_img".$active_news3['0']->id."_thumb.jpg")){
 							        	?>
-							        		<a href="<?=base_url();?>cinema/inner/<?=$active_news3['0']->id?>"><img src="<?=base_url();?>assets/cinema/cine_img<?=$active_news3['0']->id?>_thumb.jpg" style="float: left;padding: 2px 19px 2px 1px;text-align: left;text-align: justify;" border="0"></img></a>
+							        		<a href="<?=base_url();?>cinema/inner/<?=$active_news3['0']->id?>/<?=$active_news3['0']->type?>"><img src="<?=base_url();?>assets/cinema/cine_img<?=$active_news3['0']->id?>_thumb.jpg" style="float: left;padding: 2px 19px 2px 1px;text-align: left;text-align: justify;" border="0"></img></a>
 							        		<?} ?>
 							        		<div id="mainnews">
 							        		
-							        		<a href="<?=base_url();?>cinema/inner/<?=$active_news3['0']->id?>"><?=$active_news3['0']->heading?></a></div>
+							        		<a href="<?=base_url();?>cinema/inner/<?=$active_news3['0']->id?>/<?=$active_news3['0']->type?>"><?=$active_news3['0']->heading?></a></div>
 							        		<?php echo $active_news3['0']->summary;?>
 							        			<ul id="mainnews">
 							        			<?php
@@ -112,7 +112,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 							        			 	continue;
 							        			 }
 							        			 ?>
-							        				<li style="padding: 1px;"><a href="<?=base_url();?>cinema/inner/<?=$row->id?>"><?=$row->heading?></a></li>
+							        				<li style="padding: 1px;"><a href="<?=base_url();?>cinema/inner/<?=$row->id?>/<?=$row->type?>"><?=$row->heading?></a></li>
 							        			<? if($count==4){
 							          						break;
 							          					}else{
@@ -133,10 +133,10 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 										<?if(isset($active_news4['0'])){
 										if(file_exists("./assets/cinema/cine_img".$active_news4['0']->id."_thumb.jpg")){
 										?>
-							        		<a href="<?=base_url();?>cinema/inner/<?=$active_news4['0']->id?>"><img src="<?=base_url();?>assets/cinema/cine_img<?=$active_news4['0']->id?>_thumb.jpg" style="float: left;padding: 2px 19px 2px 1px;text-align: left;text-align: justify;" border="0"></img></a>
+							        		<a href="<?=base_url();?>cinema/inner/<?=$active_news4['0']->id?>/<?=$active_news4['0']->type?>"><img src="<?=base_url();?>assets/cinema/cine_img<?=$active_news4['0']->id?>_thumb.jpg" style="float: left;padding: 2px 19px 2px 1px;text-align: left;text-align: justify;" border="0"></img></a>
 							        		<?} ?>
 							        		<div id="mainnews">
-							        		<a href="<?=base_url();?>cinema/inner/<?=$active_news4['0']->id?>"><?=$active_news4['0']->heading?></a></div>
+							        		<a href="<?=base_url();?>cinema/inner/<?=$active_news4['0']->id?>/<?=$active_news4['0']->type?>"><?=$active_news4['0']->heading?></a></div>
 							        		<?php echo $active_news4['0']->summary;?>
 							        			<ul id="mainnews">
 							        			<?php
@@ -147,7 +147,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 							        			 	continue;
 							        			 }
 							        			 ?>
-							        				<li style="padding: 1px;"><a href="<?=base_url();?>cinema/inner/<?=$row->id?>"><?=$row->heading?></a></li>
+							        				<li style="padding: 1px;"><a href="<?=base_url();?>cinema/inner/<?=$row->id?>/<?=$row->type?>"><?=$row->heading?></a></li>
 							        			<? if($count==4){
 							          						break;
 							          					}else{
@@ -246,7 +246,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
           				 	<ul id="mainnews">
           				 	<?php $count=0;
           				 	foreach ($active_news as $row):?>
-          					<li style="padding-top: 2px;"><a href="<?=base_url()?>cinema/inner/<?=$row->id?>"><?=$row->heading?></a></li>
+          					<li style="padding-top: 2px;"><a href="<?=base_url()?>cinema/inner/<?=$row->id?>/<?=$row->type?>"><?=$row->heading?></a></li>
           				 	<?php if($count==19){
           				 		break;
           				 	}else {

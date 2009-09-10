@@ -12,8 +12,10 @@
 <script type="text/javascript" src="<?=base_url();?>assets/js/tabview-min.js"></script>
 <link href="<?=base_url();?>assets/fonts-min.css" rel="stylesheet" type="text/css" />
 <link href="<?=base_url();?>assets/tabview.css" rel="stylesheet" type="text/css" />
-
-
+<!-- thick box -->
+<script type="text/javascript" src="<?=base_url()?>assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="<?=base_url()?>assets/js/thickbox-compressed.js"></script>
+<link rel="stylesheet" href="<?=base_url()?>assets/thickbox.css" type="text/css" media="screen" />
 <!-- start tabs -->
 <script src="<?=base_url();?>assets/SpryAssets/SpryTabbedPanels.js" type="text/javascript" />
 <link href="<?=base_url();?>assets/SpryTabbedPanels.css" rel="stylesheet" type="text/css" />

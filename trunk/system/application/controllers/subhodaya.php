@@ -96,6 +96,9 @@ class Subhodaya extends Controller {
         redirect($_POST['url'].'/'.$status);
      
 	    }
+	    function sample(){
+	    	$this->load->view('sample');
+	    }
 
 }
 ?>

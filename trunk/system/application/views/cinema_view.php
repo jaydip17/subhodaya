@@ -65,6 +65,7 @@ function display(value)
 <style type="text/css">
 ul{
 list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
+padding-left: 20px;
 }
 </style>
 <table width="99%"  border="0" cellpadding="0" cellspacing="0">

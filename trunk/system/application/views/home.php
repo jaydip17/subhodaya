@@ -25,9 +25,23 @@ function reload()
 	}
 	 
 	 </script>
+<script type="text/javascript">
+<!--
+function test()
+{
+	var uname = document.getElementById('username').value;
+	var pass = document.getElementById('password').value;
+	var email = document.getElementById('email').value;
+	var url = '&username='+uname+'&password='+pass+'&type='+email;
+	var attribures = '&height=400&width=500'; 
+	document.getElementById('importcontacts').setAttribute('alt','<?=base_url()."admin/contacts/import?"?>'+url+attribures);
+}
+//-->
+</script>
 <style type="text/css">
 	ul{
 	list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
+	padding-left: 20px;
 	}
 </style>
 <table width="99%" height="99%"  border="0" cellpadding="0" cellspacing="0">
@@ -441,18 +455,18 @@ function reload()
 	  </tr>
 	  <tr>
 	  	<td>Username</></td>
-	  	<td><input type="text" name="username" size="10" value="" /></td>
+	  	<td><input type="text" name="username" size="10" value="" id="username"/></td>
 	  	</tr>
 	  
 	  <tr>
 	  	  <td>Password</td>
-	      <td colspan="2"><input type="password" name="password" size="10"/></td>
+	      <td colspan="2"><input type="password" name="password" size="10" id="password"/></td>
 	  </tr>
 	  	<tr>
 	  	<td>Domain</td>
 	    <td>	
 	    
-	      <select name="type" size="1">
+	      <select name="type" size="1" id="email">
 			
 			<option value="yahoo" >Yahoo</option>
 			<option value="gmail" >Gmail</option>
@@ -461,7 +475,7 @@ function reload()
 	  </tr>
 	  <tr>
 	  	  <td colspan="3" align="center">
-	  	  	<input alt="<?=base_url()?>?&inlineId=myOnPageContent" class="thickbox" type="submit" name="submit" value="Invite My Contacts" title="your Contacts list"/>
+	  	  	<input id='importcontacts' alt='' onclick="test()" class="thickbox" type="submit" name="submit" value="Invite My Contacts" title="your Contacts list"/>
 	  	  </td>
 	  </tr>    
 	  <tr>

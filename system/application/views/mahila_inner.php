@@ -2,7 +2,7 @@
 ul{
 list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 font-size:14px;
-
+padding-left: 20px;
 }
 li{
 padding-bottom:5px;

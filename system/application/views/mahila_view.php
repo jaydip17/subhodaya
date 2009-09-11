@@ -74,6 +74,7 @@ make_menus();
 <style type="text/css">
 ul{
 list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
+padding-left: 20px;
 }
 #tdmahila
 {

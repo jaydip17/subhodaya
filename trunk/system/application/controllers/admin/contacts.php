@@ -1,9 +1,10 @@
 <?php
 class Contacts extends Controller {
-	var $layout = 'admin'; 
+	//var $layout = 'admin'; 
 	function Contacts()
 	{
 		parent::Controller();
+		$this->load->helper('email');
 	}
 	function index()
 	{
@@ -33,7 +34,8 @@ class Contacts extends Controller {
   			else {
   			$page="";
   			}
-  			$formaction ='sample';
+  			
+  			$formaction ='admin/Contacts/sendmail';
   			$this->load->plugin('grabcontacts');
   			
   			if($_GET['type']=="gmail")
@@ -93,10 +95,35 @@ class Contacts extends Controller {
 							  'emails'	=> $emails,
 						   	  'formaction'=> $formaction
 			          );
+			          //print_r($emails);
+			  
+
+			
 		$this->load->view('admin/contactslist',$data);
 
 		    }
 		}
+     }
+     function sendmail(){
+     	
+     	if(isset($_POST['addresses']))
+     		{
+	     		$addresses=$_POST['addresses'];
+	     		//print_r($addresses);
+	     		//exit();
+	     		$this->load->library('email');
+				$this->email->from('www.subhodaya.com', 'Your Name');
+				$this->email->to($addresses);
+				//$this->email->cc('another@another-example.com');
+				//$this->email->bcc('them@their-example.com');
+				
+				$this->email->subject('Invitation form subhodaya.com');
+				$this->email->message('Testing the email class.'); 
+				//$this->email->initialize($config);
+				$this->email->send();
+				$this->email->print_debugger();
+     	}
+     	redirect(base_url());
      }
 }
 ?>

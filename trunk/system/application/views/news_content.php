@@ -224,13 +224,8 @@ padding-left: 20px;
           				 	?>
           				 </div>
           				 <div id="divcontent">
-    						<!--<ul>
-    						<? foreach ($news as $row): ?>
-    						<li><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>"><? echo $row->heading;?></a></li>
-    						<? endforeach; ?>
-    						<div style="padding-top: 400px;padding-left: 250px"><? echo $pagination; ?></div>
-    						</ul>
-          				 --></div>
+          				  <img src="<?=base_url();?>assets/imgs/loadingAnimation.gif" align="middle" style="padding: 200px 0px 0px 80px;"></img>
+    					</div>
           				</td>
           				<td style="border: 1px solid #3789C3;" valign="top">
           				 <div style="width:100%;" id="news_heading" align="center"><span id="newsheading"><?=$more['29']->matter?></span></div>

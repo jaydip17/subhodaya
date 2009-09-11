@@ -162,8 +162,10 @@ document.write('</td></table>')
       <a href="<?=base_url();?>gallery/"><?=$more['6']->matter?></a>|
       <a href="<?=base_url();?>greetings/"><?=$more['7']->matter?></a>|
       <a href="<?=base_url();?>mahila/"><?=$more['8']->matter?></a>|
-      <a href="<?=base_url();?>sahithi/"><?=$more['9']->matter?></a>
-      
+      <a href="<?=base_url();?>sahithi/"><?=$more['9']->matter?></a>|
+      <a href="<?=base_url()."contact"?>?&height=350&width=550" class="thickbox" title="Please Contact Us"><?=$more['40']->matter?></a>|
+      <a href="<?=base_url()."contact/feedback"?>?&height=350&width=550" class="thickbox" title="Your Feedback"><?=$more['41']->matter?></a>|
+      <a href="<?=base_url()."contact/advertise"?>?&height=350&width=550" class="thickbox" title="Your Feedback"><?=$more['42']->matter?></a>
     </div>
    
  </td>

@@ -238,7 +238,7 @@ padding-left: 20px;
           				  ?>
           				 </div>
           				 <div id="divcontent">
-          				 <img src="<?=base_url();?>assets/imgs/loading3.gif"></img>
+          				 <img src="<?=base_url();?>assets/imgs/loadingAnimation.gif"></img>
     						</div>
           				</td>
           				<td style="border: 1px solid #3789C3;" valign="top">

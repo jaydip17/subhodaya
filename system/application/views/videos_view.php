@@ -1,4 +1,4 @@
-
+<link href="<?=base_url();?>assets/SpryTabbedPanels.css" rel="stylesheet" type="text/css" />
 <table width="99%"  border="0" cellpadding="0" cellspacing="0">
 <tr>
     <td width="420" valign="top" >
@@ -84,14 +84,13 @@
    <li class="TabbedPanelsTab" onclick="javascript:loadNews('<?=$item->id?>','<?=base_url()?>videolist/videoview/<?=$item->id?>')"><?=$item->name ?></li>
   <?}?>
   </ul>
-  <div class="TabbedPanelsContentGroup"  >
+  <div class="TabbedPanelsContentGroup" >
  <?php  foreach($videocategeories->result() as $key=>$item){
  
   $count=1;?>
     <div class="TabbedPanelsContent" id="div<?=$item->id?>" >     
            </div>
      
-    
 
    
   

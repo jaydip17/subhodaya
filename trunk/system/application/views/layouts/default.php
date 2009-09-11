@@ -19,7 +19,6 @@
 <!-- start tabs -->
 <script src="<?=base_url();?>assets/SpryAssets/SpryTabbedPanels.js" type="text/javascript" />
 <link href="<?=base_url();?>assets/SpryTabbedPanels.css" rel="stylesheet" type="text/css" />
-<link href="<?=base_url();?>assets/SpryTabbedPanels.css" rel="stylesheet" type="text/css" />
 <script src="<?=base_url();?>assets/js/SpryTabbedPanels.js"></script>
 <!-- end tabs -->
 <script src="<?=base_url();?>assets/js/SpryDOMUtils.js"></script>

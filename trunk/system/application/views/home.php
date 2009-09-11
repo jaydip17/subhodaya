@@ -185,7 +185,7 @@ function test()
 							        		<li style="padding: 2px"><a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details1['3'])){echo $mahila_details1['3']->id;}?>"><?php if(isset($mahila_details1['3'])){echo $mahila_details1['3']->heading;}?></a></li>
 							        	</ul>
 							        	</div>
-							        	<div id="more-news-div"><a href="<?=base_url();?>mahila/details/<?=$mahila_details1['0']->cat_id?>"><?php if(isset($more['0'])){echo $more['0']->matter;}?></a></div>
+							        	<div id="more-news-div"><a href="<?=base_url();?>mahila/details/<?=$mahila_details_yoga['0']->cat_id?>"><?php if(isset($more['0'])){echo $more['0']->matter;}?></a></div>
 							        	
 							        	<div style="padding:5px 5px 5px 5px; border: 1px solid #D9EBF7; background-image: url(assets/imgs/123.jpg);background-repeat: repeat-x; height: 70px">
 							        	<table width="100%">

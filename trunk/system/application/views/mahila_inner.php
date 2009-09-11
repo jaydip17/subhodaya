@@ -90,7 +90,7 @@ function telugu_typing()
 			<tr>
 			<td>
 			
-			<div id="maindiv-news" align="left">
+			<div id="maindiv-news" align="left" style="font-size:14px;letter-spacing:1px">
 			<img src="<?=base_url();?>assets/<?=$type?>/news_img<?=$result['0']->id?>.jpg" style="float: left;padding:0px 30px 30px 0px;border: 0px solid  #9FA0A0; margin: 10px 0px 0px 10px;" ></img>
 			<?=$result['0']->description ?></div>
 		
@@ -142,6 +142,26 @@ function telugu_typing()
 		 <td width="185" align="center" valign="top">
 			<table>
 				<tr>
+					<td valign="top" align="left" height="295px"><div class="heading" style="width: 181px;" id="news_heading"><div style="padding-top:5px;" id="newsheading"><?php echo $more['5']->matter;?></div></div>
+						<div style="height:265px;border:1px solid #9FA0A0;padding-left:20px" id="left_news">
+									<?php
+								if(!empty($video_result)){
+								
+          				        foreach($video_result as $item){?>
+          				 		<div style="padding:5px;height:82px;"><a href="<?=base_url();?>video/index/<?php if(isset($item)) {echo $item->id;}?>"><img src="<?=base_url();?>assets/videos/image_preview/home_image<?=$item->id?>_thumb.jpg" border="0"></a></div>
+							        		<div id="gall_botto_img"><a href="<?=base_url();?>video/index/<?php if(isset($item)) {echo $item->id;}?>"><?=$item->name?></a></div>
+							        		<div style="height:12px;">Views:<?=$item->no_of_views?>	</div>
+							        			
+								<? }}else
+								    echo 'No data found';?>
+							
+								</div>
+						</td>
+					</tr>
+			</table>
+		
+			<table>
+				<tr>
 					<td valign="top" align="left" height="295px"><div class="heading" style="width: 181px;" id="news_heading"><div style="padding-top:5px;" id="newsheading"><?php if($type=="mahila"){echo $more['9']->matter;}else {echo $more['8']->matter;}?></div></div>
 						<div style="height: 265px;border:1px solid #9FA0A0;" id="left_news">
 							<img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type1['0']->id?>_thumb.jpg" style="padding:5px 0px 0px 20px; ">
@@ -160,32 +180,6 @@ function telugu_typing()
 								echo 'No data found';?>
 							</ul>
 							<div id="more-news-div"><a href="<?=base_url();?><?=$link;?>/details/<?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->type;}?>"><?php if(isset($more['0'])){echo $more['0']->matter;}?></a></div>
-						
-						</td>
-					</tr>
-			</table>
-		
-			<table>
-				<tr>
-					<td valign="top" align="left" height="295px"><div class="heading" style="width: 181px;" id="news_heading"><div style="padding-top:5px;" id="newsheading"><?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->cinema_type;}?></div></div>
-						<div style="height: 265px;border:1px solid #9FA0A0;" id="left_news">
-							<img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type1['0']->id?>_thumb.jpg" style="padding:5px 0px 0px 20px; ">
-							<ul id="mainnews">
-								<?php
-								if(!empty($cinema_type1))
-								{ 
-								$count=0; foreach ($cinema_type1 as $row):?>
-								<li><a href="<?=base_url();?>cinema/inner/<?=$row->id?>"><?=$row->heading?></a></li>
-								<?php
-								if($count==2){
-								break;}
-								else{$count++;}
-								 endforeach;
-								 }
-								else
-								echo 'No data found';?>
-							</ul>
-							<div id="more-news-div"><a href="<?=base_url();?>cinema/details/<?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->type;}?>"><?php if(isset($more['0'])){echo $more['0']->matter;}?></a></div>
 						
 						</td>
 					</tr>

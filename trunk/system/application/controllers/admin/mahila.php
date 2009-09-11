@@ -82,7 +82,7 @@ class Mahila extends Controller {
 		    $message='News Added Successfully';
 			$this->session->set_flashdata('message',$message);
 		}
-			$filename = 'news_img'.$id.'.jpg';
+			$filename = 'new_img'.$id.'.jpg';
 			$image_path='assets/mahila/';
 	    	$config['image_library'] = 'gd2';
 	        $config['source_image'] = $image_path.$filename;
@@ -122,7 +122,7 @@ class Mahila extends Controller {
 	}
     function getmahila(){
    		
-		$details=$this->Mahila_Model->getdetails($this->uri->segment(4),'no');
+		$details=$this->Mahila_Model->getdetails($this->uri->segment(4),'no','');
 		$data=array('details'=>$details,
 		              'cat_id' =>$this->uri->segment(4));
 		//print_r($deatails);

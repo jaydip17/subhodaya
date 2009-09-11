@@ -14,7 +14,7 @@ class Sahithilist extends Controller {
     	
     	$this->paginationnew->start = ($this->uri->segment(4)) ? $this->uri->segment(4) : '0';
     	$this->paginationnew->limit =10;
-        $this->paginationnew->filePath ='javascript:loadNews(\''.$a.'';
+        $this->paginationnew->filePath ='javascript:loadNews(\'content\',\''.$a.'';
       
         $this->paginationnew->select_what = '*';
         $this->paginationnew->nbItems = $this->Sahithi_Model->count($type);
@@ -42,7 +42,7 @@ class Sahithilist extends Controller {
     	
     	$this->paginationnew->start = ($this->uri->segment(4)) ? $this->uri->segment(4) : '0';
     	$this->paginationnew->limit =4;
-        $this->paginationnew->filePath ='javascript:loadNews(\''.$a.'';
+        $this->paginationnew->filePath ='javascript:loadNews(\'content\',\''.$a.'';
       
         $this->paginationnew->select_what = '*';
         $this->paginationnew->nbItems = $this->Sahithi_Model->count($type);

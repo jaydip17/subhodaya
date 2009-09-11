@@ -43,6 +43,7 @@
 	<tr>
 		<td><? echo form_label('Preview Image','image');?></td>
 		<td><?=form_upload('image');?></td>
+		<td>preferably 600 x 400</td>
 	</tr>
 	
 	<tr>

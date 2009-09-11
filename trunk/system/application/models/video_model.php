@@ -14,7 +14,7 @@ class Video_model extends Model
     function get_videos($type,$limit)
     {
     	$this->db->where('video_uploaded',1);
-		$this->db->order_by('no_of_views','desc');
+    	//$this->db->order_by('no_of_views','desc');
 		$this->db->limit($limit);
 		if($type=='latest')
 		{
@@ -52,7 +52,7 @@ class Video_model extends Model
     	
     }
 	function getvideocategeories($limit)
-	{echo $limit;
+	{
 	//if($limit!=0)
 	//{
 	  $this->db->limit($limit);

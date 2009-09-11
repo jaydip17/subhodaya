@@ -128,7 +128,7 @@ class Sahithi extends Controller {
 	}
    function getsahithi(){
    		
-		$details=$this->Sahithi_Model->getdetails($this->uri->segment(4),'no');
+		$details=$this->Sahithi_Model->getdetails($this->uri->segment(4),'no','');
 		$data=array('details'=>$details,
 		              'cat_id' =>$this->uri->segment(4));
 		//print_r($deatails);

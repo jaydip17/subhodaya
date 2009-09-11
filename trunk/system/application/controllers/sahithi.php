@@ -46,15 +46,22 @@ class Sahithi extends Controller {
 		$details_more=array();
 		foreach($details_mahila as $item)
 		$details_more[$item->id]=$this->mahila_Model->getdetails($item->id,'yes',6);
-		//print_r($result);
-		$data=array('result'   =>   $result,
+		
+		$this->load->Model('Video_Model');
+	   
+	     $videos=$this->Video_Model->get_videos('top',2);
+	   	  
+	     $video_result=$videos->result();
+	     
+	    $data=array('result'   =>   $result,
 					 'more'    =>   $more,
 				'cinema_type1' =>   $cinema_type1,
 		        'details'   =>  $details,
 		        'evenmore'  =>$evenmore,
 		        'details_more'  => $details_more,
 		         'type'=>'sahithi',
-		         'link' =>'mahila'
+		         'link' =>'mahila',
+		          'video_result'     =>  $video_result
 				);
 				
 		$this->load->view('mahila_inner',$data);
@@ -70,7 +77,7 @@ class Sahithi extends Controller {
 		$details_more[$item->id]=$this->Sahithi_Model->getdetails($item->id,'yes',6);
 		$more=$this->Sahithi_Model->more_sahithi();
 		$type=$this->uri->segment(3,0);
-		$onload = "loadNews('".base_url()."sahithilist/listview/".$type."')";
+		$onload = "loadNews('content','".base_url()."sahithilist/listview/".$type."')";
 		$total_rows=$this->Sahithi_Model->count($type);
 		//echo $total_rows;
 	    $this->load->library('pagination');
@@ -80,7 +87,9 @@ class Sahithi extends Controller {
 		$this->pagination->initialize($config); 
 		$pagination=$this->pagination->create_links();
 		$sahithi=$this->Sahithi_Model->get_sahithi($type,$count=false);
-		//print_r($sahithi);
+		
+		
+		
 		$data=array(	'news'  =>$sahithi,
 						'more'=>$more,
 					'pagination'=>$pagination,
@@ -90,7 +99,8 @@ class Sahithi extends Controller {
 		             'details' =>$details,
 		              'details_more' =>$details_more,
 		               'type'=>'sahithi',
-		              'cinemapoll'  => $cinemapoll);
+		              'cinemapoll'  => $cinemapoll,
+		             );
 		$this->load->view("mahila_content",$data);
 	}
 }

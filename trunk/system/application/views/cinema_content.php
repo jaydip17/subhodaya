@@ -226,8 +226,8 @@ padding-left: 20px;
           				 <div style="width:100%;"id="news_heading" ><div id="newsheading" style="width:250px;float: left; "><?php if(isset($result['0'])){echo $result['0']->cinema_type;}?></div>
           				 <?if(!empty($result)){ 
           				 $count=0; foreach($result as $row): ?>
-          				 <div id="more-news-div" >Change View:<img src="<?=base_url();?>assets/imgs/LIN.png" onclick="loadNews('<?=base_url()?>cinemalist/listview/<?=$row->type?>')"/>
-          				 <img src="<?=base_url();?>assets/imgs/FUL.png" onclick="loadNews('<?=base_url()?>cinemalist/thumbview/<?=$row->type ?>')"/></div>
+          				 <div id="more-news-div" >Change View:<img src="<?=base_url();?>assets/imgs/LIN.png" onclick="loadNews('content','<?=base_url()?>cinemalist/listview/<?=$row->type?>')"/>
+          				 <img src="<?=base_url();?>assets/imgs/FUL.png" onclick="loadNews('content','<?=base_url()?>cinemalist/thumbview/<?=$row->type ?>')"/></div>
           				 <? if($count==0){
           				 	break;
           				 }
@@ -237,7 +237,7 @@ padding-left: 20px;
           				 }
           				  ?>
           				 </div>
-          				 <div id="news_content">
+          				 <div id="divcontent">
           				 <img src="<?=base_url();?>assets/imgs/loading3.gif"></img>
     						</div>
           				</td>

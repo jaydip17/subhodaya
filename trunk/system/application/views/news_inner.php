@@ -148,32 +148,21 @@ function telugu_typing()
 				<td align="center" valign="top">
 					<table>
 					<tr>
-						<td id="telugufont1" ><div class="heading" style="width: 181px;" id="news_heading"><span id="newsheading"><?php if(isset($mahila_details['0'])){ echo $mahila_details['0']->cat_name;}?></span></div>
-						<div style="height: 280px;border: 1px solid #9FA0A0;" id="left_news">
-						<div style="height: 248px;">
-						<? if(!empty($mahila_details['0'])){
-						if(file_exists("./assets/mahila/news_img".$mahila_details['0']->id."_thumb.jpg")){ ?>
-						<a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details['0'])){ echo $mahila_details['0']->id;}?>"><img src="<?=base_url();?>assets/mahila/news_img<?php if(isset($mahila_details['0'])){ echo $mahila_details['0']->id;}?>_thumb.jpg" style="padding: 5px 0px 2px 20px;" border="0"/></a>
-						<?}} ?>
-						<ul id="mainnews" style="padding-top: 5px;">
-						<?php if(isset($mahila_details )){
-							foreach ($mahila_details as $row):							
-						?>
-						
-							<li><a href="<?=base_url();?>mahila/mahiladetails/<?=$row->id?>"><?=$row->heading?></a></li>
-							<?php if($count==2){
-								break;
-							}else {
-								$count++;
-							}if($count==0)
-							echo 'no datafound';
-							endforeach;
-						}
-							?>
-						</ul>
-						</div>
-						<div id="more-news-div" ><a href="<?=base_url();?>mahila/details/<?php if(isset($mahila_details['0'])){echo $mahila_details['0']->cat_id;}?>"><?php if(isset($more['0'])){echo $more['0']->matter;}?></a></div>
-						</div></td>
+					<td valign="top" align="left" height="295px"><div class="heading" style="width: 181px;" id="news_heading"><div style="padding-top:5px;" id="newsheading"><?php echo $more['5']->matter;?></div></div>
+						<div style="height:265px;border:1px solid #9FA0A0;padding-left:20px" id="left_news">
+									<?php
+								if(!empty($video_result)){
+								
+          				        foreach($video_result as $item){?>
+          				 		<div style="padding:5px;height:82px;"><a href="<?=base_url();?>video/index/<?php if(isset($item)) {echo $item->id;}?>"><img src="<?=base_url();?>assets/videos/image_preview/home_image<?=$item->id?>_thumb.jpg" border="0"></a></div>
+							        		<div id="gall_botto_img"><a href="<?=base_url();?>video/index/<?php if(isset($item)) {echo $item->id;}?>"><?=$item->name?></a></div>
+							        		<div style="height:12px;">Views:<?=$item->no_of_views?>	</div>
+							        			
+								<? }}else
+								    echo 'No data found';?>
+							
+								</div>
+						</td>
 					</tr>
 				</table>
 				</td>

@@ -31,7 +31,7 @@
             ?>          
            
            <tr>
-           <td align="center"><div style="margin-left:4px;"><a href="<?=base_url();?>video/index/<?=$item->id?>/<?=$item->video_cat_id?>"><img id="img" src="<?=base_url();?>assets/videos/image_preview/image<?=$item->id?>_thumb.jpg"></a></div></td>
+           <td><div style="margin-left:15px;"><a href="<?=base_url();?>video/index/<?=$item->id?>/<?=$item->video_cat_id?>"><div id="latestvideo_time"><?=$item->time?></div><img id="img" src="<?=base_url();?>assets/videos/image_preview/image<?=$item->id?>_thumb.jpg"></a></div></td>
            <td><div id="li-vi"><?=$item->insert_date?><br/><?=$item->name?><br/><span style="color:#FF6507;"><?=$item->no_of_views?> views</span><br/><?=$more['36']->matter?>:<span style="color:#FF6507;"><?=$item->rating?></span></div></td>
           </tr>
           <?} ?> 
@@ -64,13 +64,13 @@
           <tr>
          
           <td  valign="top" height="375" width="660">
-            <table border="0" align="left" style="margin-top:20px; margin-right:30px;" width="650" cellspacing="0" cellpadding="0">
+            <table border="0" align="left" style="margin-top:20px; margin-right:5px;" width="650" cellspacing="0" cellpadding="0">
             <tr>
             <td><img src="<?=base_url();?>assets/imgs/hot-video-topline.jpg"></td>
             </tr>
             
             <tr ><td><div style="height:375px;border-left: 1px solid #9D9D9D; border-right: 1px solid #9D9D9D;"> 
-            <table width="99%" style="margin-left:4px margin-right:2px;padding-left:3px;">
+            <table width="100%" style="margin-left:4px margin-right:2px;padding-left:3px;">
                 <div id="hotvideo"><?=$more['33']->matter ?><!--<span style="padding-left:300px;">Search for Videos:<input type="text" name="search" value="" size="13"></span></div>-->
           
             <tr>
@@ -147,7 +147,7 @@
           	            foreach($topviewedvideos->result() as $item){  
           	            ?>
           	          <tr>
-          	            <td><div style="padding-top:5px;"><a href="<?=base_url();?>video/index/<?=$item->id?>/<?=$item->video_cat_id?>"><img id="img" src="<?=base_url();?>assets/videos/image_preview/image<?=$item->id?>_thumb.jpg"></div></a></td>
+          	            <td><div style="padding-top:5px;"><a href="<?=base_url();?>video/index/<?=$item->id?>/<?=$item->video_cat_id?>"><div id="latestvideo_time"><?=$item->time?></div><img id="img" src="<?=base_url();?>assets/videos/image_preview/image<?=$item->id?>_thumb.jpg"></div></a></td>
           	            <td  valign="top" id="topvi"><?=$item->name?><br/><?=$item->insert_date?><br/><span style="color:#FF6507;"><?=$item->no_of_views?> Views</span><br/><div id="topimg" style=height:15px;width:101px;padding-left:4px;margin-top:4px;padding-top:2px;"><?=$more['36']->matter?>:<span style="color:#FF6507;"> <?=$item->rating?></span></div></td>
           	            </tr>
           	          <?}?><!-- 
@@ -172,7 +172,7 @@
               
             <tr>
              <td  valign="top" style="height:150px; width:660px;">
-               <table  border="0" width="650" align="left" style="margin-top:10px;height:150px;" cellspacing="0" cellpadding="0">
+               <table  border="0" width="660" align="left" style="margin-top:10px;height:150px;" cellspacing="0" cellpadding="0">
                   <tr>
                     <td ><img src="<?=base_url();?>assets/imgs/all-video-topline.jpg"></td>
                   </tr>

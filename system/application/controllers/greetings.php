@@ -6,6 +6,7 @@ class Greetings extends Controller {
 	}
 	function index(){
 		$type=$this->Greeting_Model->get_type();
+		//print_r($type);
 		$greetings1=$this->Greeting_Model->get_main_greetings(1);
 		$greetings2=$this->Greeting_Model->get_main_greetings(2);
 		$greetings12=$this->Greeting_Model->get_main_greetings(12);

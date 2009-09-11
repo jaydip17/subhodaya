@@ -115,8 +115,8 @@ $autoload['model'] = array('admin/Login_Model',
 							'admin/Mahila_Model',
 							'admin/Sahithi_Model',
 							'admin/Gallery_Model',
-							'admin/Greeting_Model'
-							);
+							'admin/Greeting_Model',
+                           	);
 
 
 

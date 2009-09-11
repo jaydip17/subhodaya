@@ -141,15 +141,17 @@ sample sf dsfsd fdsf
 				<td style="border:1px solid #50BCFC;height: 25px;" id="news_heading" align="center"><span id="telugufont"><?=$more['17']->matter ?></span></td>
 			</tr>
 			<tr>
-				<td align="center">
-				<table style="padding-left: 5px" >
-					<tr><td><div><img src="<?=base_url();?>assets/imgs/cini-img.jpg"></div></td></tr>
-					<tr><td>sometext sometext sometext sometext</td></tr>
-					<tr><td><div><img src="<?=base_url();?>assets/imgs/cini-img.jpg"></div></td></tr>
-					<tr><td>sometext sometext sometext sometext</td></tr>
-					<tr><td><div><img src="<?=base_url();?>assets/imgs/cini-img.jpg"></div></td></tr>
-					<tr><td>sometext sometext sometext sometext</td></tr>
-					</table>
+				<td style="border:1px solid #50BCFC;height: 25px;" align="center">
+				<table style="padding-left:0px" >
+				  <?php
+						if(!empty($video_result)){
+						 foreach($video_result as $item){?>
+					<tr>
+           <td align="center"><div style="margin-left:4px;"><a href="<?=base_url();?>video/index/<?=$item->id?>/<?=$item->video_cat_id?>"><img id="img" src="<?=base_url();?>assets/videos/image_preview/home_image<?=$item->id?>_thumb.jpg"></a></div></td>
+           <td><div id="li-vi"><?=$item->insert_date?><br/><?=$item->name?><br/><span style="color:#FF6507;"><?=$item->no_of_views?> views</span><br/><?=$more['36']->matter?>:<span style="color:#FF6507;"><?=$item->rating?></span></div></td>
+          </tr>
+					<?}} ?>
+						</table>
 				</td>
 			</tr>
 			</table>

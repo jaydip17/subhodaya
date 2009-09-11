@@ -45,7 +45,7 @@ class News extends Controller {
 	}
 	function details(){
 		$type=$this->uri->segment(3);
-		$onload = "loadNews('".base_url()."newslist/listview/".$type."')";
+		$onload = "loadNews('content','".base_url()."newslist/listview/".$type."')";
 		$more=$this->News_Model->more_news();
 		$type=$this->uri->segment(3,0);
 		$active_news=$this->News_Model->active_news1();
@@ -88,7 +88,9 @@ class News extends Controller {
 		$cinema_type5=$this->Cinema_Model->get_cinematype(5);
 		$cinema_type3=$this->Cinema_Model->get_cinematype(3);
 		$news_cat=$this->News_Model->get_newstype();
-		//print_r($news);
+		$this->load->Model('Video_Model');
+	    $videos=$this->Video_Model->get_videos('active',2);
+	   	$video_result=$videos->result();
 		
 		$data=array('result'   		=>   $result,
 					 'more'    		=>   $more,
@@ -97,7 +99,8 @@ class News extends Controller {
 				'cinema_type5'		=>	 $cinema_type5,
 				'cinema_type3'		=>   $cinema_type3,
 				'news'				=>	 $news,
-				'news_cat'			=>	 $news_cat
+				'news_cat'			=>	 $news_cat,
+		          'video_result'     =>  $video_result
 				);
 				
 		$this->load->view('news_inner',$data);

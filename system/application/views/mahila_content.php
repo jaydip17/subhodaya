@@ -109,15 +109,15 @@ padding-left: 20px;
           				<td width="450" style="border: 1px solid #3789C3;"  valign="top">
           				 <div style="width:100%"id="news_heading"><div id="newsheading" style="width:250px;float: left; "><? if (isset($news['0']->cat_name)){ echo $news['0']->cat_name;}?></div>
           				 <? $count=1; foreach($news as $row): ?>
-          				Change View:<img src="<?=base_url();?>assets/imgs/LIN.png" style="cursor: pointer"onclick="loadNews('<?=base_url()?><?=$type?>list/listview/<?=$row->cat_id?>')" />
-          				 <img style="cursor: pointer; " src="<?=base_url();?>assets/imgs/FUL.png" onclick="loadNews('<?=base_url()?><?=$type?>list/thumbview/<?=$row->cat_id ?>')" />
+          				Change View:<img src="<?=base_url();?>assets/imgs/LIN.png" style="cursor: pointer"onclick="loadNews('content','<?=base_url()?><?=$type?>list/listview/<?=$row->cat_id?>')" />
+          				 <img style="cursor: pointer; " src="<?=base_url();?>assets/imgs/FUL.png" onclick="loadNews('content','<?=base_url()?><?=$type?>list/thumbview/<?=$row->cat_id ?>')" />
           				 <? if($count==1){
           				 	break;
           				 } 
           				 endforeach;	 
           				 	?>
           				 </div>
-          				 <div id="news_content">
+          				 <div id="divcontent">
     						<!--<ul>
     						<? foreach ($news as $row): ?>
     						<li><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>"><? echo $row->heading;?></a></li>

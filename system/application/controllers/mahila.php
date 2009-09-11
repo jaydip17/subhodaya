@@ -32,22 +32,29 @@ class Mahila extends Controller {
   }
  function mahiladetails(){
  	   $this->load->model('admin/Sahithi_Model');
-		$more=$this->mahila_Model->more_mahila();
+		$more=$this->Mahila_Model->more_mahila();
 		$cinema_type1=$this->Cinema_Model->get_cinematype(1);
 		$this->load->model("admin/News_Model");
 		$details=array();
 		//$news_type1=$this->News_Model->get_newstype(5);
 		//print_r($news_type1);
 		$id=$this->uri->segment(3,0);
-		$result=$this->mahila_Model->inner_mahila($id);
-		$details=$this->mahila_Model->get_mahilatype();
+		$result=$this->Mahila_Model->inner_mahila($id);
+		$details=$this->Mahila_Model->get_mahilatype();
 		$details_sahithi=$this->Sahithi_Model->get_sahithitype();
 		$details_more=array();
 		foreach($details_sahithi as $item)
 		$details_more[$item->id]=$this->Sahithi_Model->getdetails($item->id,'yes',6);
 	
-		$evenmore=$this->mahila_Model->evenmore($id);
-		//print_r($details);
+		$evenmore=$this->Mahila_Model->evenmore($id);
+		
+		
+		$this->load->Model('Video_Model');
+	   
+	     $videos=$this->Video_Model->get_videos('active',2);
+	   	  
+	     $video_result=$videos->result();
+		
 		$data=array('result'   =>   $result,
 					 'more'    =>   $more,
 				'cinema_type1' =>   $cinema_type1,
@@ -55,7 +62,8 @@ class Mahila extends Controller {
 		        'details' =>$details,
 		        'details_more' =>$details_more,
 		            'type'=>'mahila',
-		            'link' => 'sahithi'
+		            'link' => 'sahithi',
+		              'video_result'     =>  $video_result
 		     	);
 				
 		$this->load->view('mahila_inner',$data);
@@ -64,14 +72,14 @@ class Mahila extends Controller {
    	    $this->load->model('admin/Poll_Model');
    	    $newspoll=$this->Poll_Model->get_newspolls($type=4);
 		$yes_poll=$this->Poll_Model->get_yes_newspoll($type=4);
-      	$details=$this->mahila_Model->get_mahilatype();
+      	$details=$this->Mahila_Model->get_mahilatype();
 		foreach($details as $item)
-		$details_more[$item->id]=$this->mahila_Model->getdetails($item->id,'yes',6);
-		$more=$this->mahila_Model->more_mahila();
+		$details_more[$item->id]=$this->Mahila_Model->getdetails($item->id,'yes',6);
+		$more=$this->Mahila_Model->more_mahila();
 		$type=$this->uri->segment(3,0);
-		$onload = "loadNews('".base_url()."mahilalist/listview/".$type."')";
+		$onload = "loadNews('content','".base_url()."mahilalist/listview/".$type."')";
 		//print_r($details_more);
-		$total_rows=$this->mahila_Model->count($type);
+		$total_rows=$this->Mahila_Model->count($type);
 		//echo $total_rows;
 	    $this->load->library('pagination');
 		$config['base_url'] = base_url()."mahila/details/";
@@ -79,7 +87,7 @@ class Mahila extends Controller {
 		$config['per_page'] = '13';
 		$this->pagination->initialize($config); 
 		$pagination=$this->pagination->create_links();
-		$mahila=$this->mahila_Model->get_mahila($type,$count=false);
+		$mahila=$this->Mahila_Model->get_mahila($type,$count=false);
 		//print_r($mahila);
 		$data=array(	'news'  =>$mahila,
 						'more'=>$more,

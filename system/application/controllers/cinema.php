@@ -40,6 +40,10 @@ class Cinema extends Controller {
 	    	}
 		   }
 	    }
+	    
+	    $this->load->Model('Video_Model');
+	    $videos=$this->Video_Model->get_videos('latest',5);
+	   	$video_result=$videos->result();
 	    $gall_topviews=$this->Gallery_Model->top_views();
 		$data=array('cinema_type1'		=>	$cinema_type1,
 					'cinema_type2'		=>	$cinema_type2,
@@ -52,13 +56,14 @@ class Cinema extends Controller {
 						'yes_poll'		=>	$yes_poll,
 						'onload' 		=> "display_text_1()",
 						'images'		=> $images,
-						'gall_topviews' => $gall_topviews
+						'gall_topviews' => $gall_topviews,
+		          'video_result'     =>  $video_result
 		);
 		$this->load->view('cinema_view',$data);
 	}
 	function details(){
 		$type=$this->uri->segment(3);
-		$onload = "loadNews('".base_url()."cinemalist/listview/".$type."')";
+		$onload = "loadNews('content','".base_url()."cinemalist/listview/".$type."')";
 		$more=$this->News_Model->more_news();
 		$id=$this->uri->segment(3,0);
 		$result=$this->Cinema_Model->get_all($id);
@@ -99,7 +104,11 @@ class Cinema extends Controller {
 		$news_type2=$this->News_Model->get_newstype1(2);
 		$mahila_details1=$this->Mahila_Model->active_mahila(8);
 		$cinema_cat=$this->Cinema_Model->get_cinemanewstype();
-		//print_r($result1);
+		
+		$this->load->Model('Video_Model');
+	    $videos=$this->Video_Model->get_videos('active',2);
+	   	$video_result=$videos->result();
+		
 		$data=array('more'   		 => $more,
 					'result' 		 => $result,
 					'news_type4'	 => $news_type4,
@@ -107,7 +116,9 @@ class Cinema extends Controller {
 					'cinema_cat'	 => $cinema_cat,
 					'news_type2'	 =>	$news_type2,
 					'mahila_details1'=>	$mahila_details1,
-					'result1'		 => $result1
+					'result1'		 => $result1,
+		          'video_result'     =>  $video_result
+	
 					);
 		$this->load->view('cinema_inner',$data);
 	}

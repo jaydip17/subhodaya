@@ -17,8 +17,9 @@ class Subhodaya extends Controller {
 		$sahithi_details=$this->Sahithi_Model->active_sahithi(1,$type='home');
 		//mahila
 		$mahila_details=$this->Mahila_Model->active_mahila(1,$type='home');
-		$mahila_details1=$this->Mahila_Model->active_mahila(4,$type='home');
-		//print_r($mahila_details1);
+		$mahila_details_yoga=$this->Mahila_Model->active_mahila(4,$type='home');
+		print_r($mahila_details_yoga);
+		//echo $mahila_details_yoga['0']->id;
 	    $greetings1=$this->Greeting_Model->get_main_greetings(1);
         //$details=$this->Gallery_Model->get_cateimage(11);
         $home_stories=$this->Sahithi_Model->get_home_stories($type=2);
@@ -76,7 +77,7 @@ class Subhodaya extends Controller {
 					'images'			=>	$images,
 					'activenews'		=>  $activenews,
 					'gall_topviews'		=>  $gall_topviews,
-					'mahila_details1'	=>  $mahila_details1
+					'mahila_details_yoga'	=>$mahila_details_yoga
 					);
 		$this->load->view('home',$data);
 	}

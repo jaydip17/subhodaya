@@ -13,6 +13,7 @@ class Video extends Controller {
 		//pagination for total videos i.e. mottam videos
 				
 		//pagination for total videos i.e. mottam videos
+	
 		$videocategeories = $this->video_Model->getvideocategeories(3);
 	    //this is the first categeory which is displayed in the div first on loading the page
 	    $first_to_display=$videocategeories->result();
@@ -25,14 +26,15 @@ class Video extends Controller {
 	    {
 	      $videoid = $this->uri->segment(3);
 	    }
-	    
-	     else {
+	       else {
 	    //for latest videoid
 	    $result_videoid=$this->video_Model->get_videos('active',1);
 	    $video_result=$result_videoid->result();
 	    $videoid=$video_result['0']->id;
 	    //for latest videoid
 	     }
+	     $this->video_Model->increase_viewcount($videoid);
+	  
 	    
 	    $this->load->library('flash_video');
 		$config['id'] = 'n0';
@@ -53,7 +55,7 @@ class Video extends Controller {
                  'topviewedvideos'=>$topviewedvideos,
                                
 	                  'onload'=>$onload,
-	                
+	                 
        
         );
             

@@ -1,3 +1,26 @@
+<script language="javascript">
+function fun(){
+	var i;
+	for(i=1;i<=10;i++)
+	{
+		var vn='c'+i;
+		document.getElementById(vn).checked=true;
+		
+	}	
+}
+
+function fun1(){
+	var i;
+	for(i=1;i<=10;i++)
+	{
+	 var vn='c'+i;
+	 document.getElementById(vn).checked=false;	
+	}	
+}
+</script>
+
+
+
 <table width="650" align="center" id="tableadmin">
 
  <thead>

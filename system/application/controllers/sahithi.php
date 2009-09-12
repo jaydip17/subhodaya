@@ -36,6 +36,7 @@ class Sahithi extends Controller {
    }
    function sahithidetails(){
        	$this->load->model('admin/mahila_Model');
+       	$news_type2=$this->News_Model->get_newstype1(2);
        	$more=$this->Sahithi_Model->more_sahithi();
 		$cinema_type1=$this->Cinema_Model->get_cinematype(1);
 		$id=$this->uri->segment(3,0);
@@ -61,7 +62,8 @@ class Sahithi extends Controller {
 		        'details_more'  => $details_more,
 		         'type'=>'sahithi',
 		         'link' =>'mahila',
-		          'video_result'     =>  $video_result
+		          'video_result'     =>  $video_result,
+	              'news_type2'  =>	$news_type2
 				);
 				
 		$this->load->view('mahila_inner',$data);

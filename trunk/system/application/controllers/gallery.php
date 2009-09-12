@@ -6,7 +6,7 @@ class Gallery extends Controller {
 	}
 	function index()
 	{
-		$type=11;
+		$type=14;
 		$more=$this->News_Model->more_news();
 		$details=$this->Gallery_Model->get_cateimage($type);
 		$images=array();
@@ -55,7 +55,7 @@ class Gallery extends Controller {
     	$this->load->library('paginationnew');
     	
     	$this->paginationnew->start = ($this->uri->segment(4)) ? $this->uri->segment(4) : '0';
-    	$this->paginationnew->limit =2;
+    	$this->paginationnew->limit =30;
         $this->paginationnew->filePath =$a;
       
         $this->paginationnew->select_what = '*';

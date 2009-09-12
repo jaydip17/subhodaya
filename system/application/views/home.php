@@ -173,16 +173,16 @@ function test()
 							        	</div></div>
 									<div id="tab4">
 									     <div style="height: 175px;" id="telugufont1">
-							        	<? if(file_exists("./assets/mahila/news_img".$mahila_details1['0']->id."_thumb.jpg")){ ?>
-							        		<a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details1['0'])){echo $mahila_details1['0']->id;}?>"><img src="<?=base_url();?>assets/mahila/news_img<?php if(isset($mahila_details1['0'])){echo $mahila_details1['0']->id;}?>_thumb.jpg" align="top" style="padding: 0px 18px 1px 2px;float: left;border: 0px;"></img></a>
+							        	<? if(file_exists("./assets/mahila/news_img".$mahila_details_yoga['0']->id."_thumb.jpg")){ ?>
+							        		<a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['0'])){echo $mahila_details_yoga['0']->id;}?>"><img src="<?=base_url();?>assets/mahila/news_img<?php if(isset($mahila_details_yoga['0'])){echo $mahila_details_yoga['0']->id;}?>_thumb.jpg" align="top" style="padding: 0px 18px 1px 2px;float: left;border: 0px;"></img></a>
 							        	<?} ?>
-    									<font id="mainnews"><a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details1['0'])){echo $mahila_details1['0']->id;}?>"><?php if(isset($mahila_details1['0'])){echo $mahila_details1['0']->heading;}?></a></font><br>
-							        	<font style="font-size: 14px;text-align: justify;"><?php if(isset($mahila_details1['0'])){echo $mahila_details1['0']->summary;}?></font>
-							        	<div id="more-news-div"><a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details1['0']->id?>"><?php if(isset($more['0'])){echo $more['1']->matter;}?></a></div>
+    									<font id="mainnews"><a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['0'])){echo $mahila_details_yoga['0']->id;}?>"><?php if(isset($mahila_details_yoga['0'])){echo $mahila_details_yoga['0']->heading;}?></a></font><br>
+							        	<font style="font-size: 14px;text-align: justify;"><?php if(isset($mahila_details_yoga['0'])){echo $mahila_details_yoga['0']->summary;}?></font>
+							        	<div id="more-news-div"><a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details_yoga['0']->id?>"><?php if(isset($more['0'])){echo $more['1']->matter;}?></a></div>
 							        	<ul id="mainnews">
-							        		<li style="padding: 2px"><a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details1['1'])){echo $mahila_details1['1']->id;}?>"><?php if(isset($mahila_details1['1'])){echo $mahila_details1['1']->heading;}?></a></li>
-							        		<li style="padding: 2px"><a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details1['2'])){echo $mahila_details1['2']->id;}?>"><?php if(isset($mahila_details1['2'])){echo $mahila_details1['2']->heading;}?></a></li>
-							        		<li style="padding: 2px"><a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details1['3'])){echo $mahila_details1['3']->id;}?>"><?php if(isset($mahila_details1['3'])){echo $mahila_details1['3']->heading;}?></a></li>
+							        		<li style="padding: 2px"><a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['1'])){echo $mahila_details_yoga['1']->id;}?>"><?php if(isset($mahila_details_yoga['1'])){echo $mahila_details_yoga['1']->heading;}?></a></li>
+							        		<li style="padding: 2px"><a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['2'])){echo $mahila_details_yoga['2']->id;}?>"><?php if(isset($mahila_details_yoga['2'])){echo $mahila_details_yoga['2']->heading;}?></a></li>
+							        		<li style="padding: 2px"><a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['3'])){echo $mahila_details1_yoga['3']->id;}?>"><?php if(isset($mahila_details_yoga['3'])){echo $mahila_details_yoga['3']->heading;}?></a></li>
 							        	</ul>
 							        	</div>
 							        	<div id="more-news-div"><a href="<?=base_url();?>mahila/details/<?=$mahila_details_yoga['0']->cat_id?>"><?php if(isset($more['0'])){echo $more['0']->matter;}?></a></div>
@@ -192,17 +192,17 @@ function test()
 							        	
 							        		<tr>
 							        			<td width="50%" valign="top">
-							        			<? if(!empty($mahila_details1['4'])){ ?>
-								        			<? if(file_exists("./assets/mahila/news_img".$mahila_details1['4']->id."_thumb.jpg")){ ?>
-								        				<a href="<?=base_url();?>cinema/inner/<?php if(isset($mahila_details1['4'])){echo $mahila_details1['4']->id;}?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($mahila_details1['4'])){echo $mahila_details1['4']->id;}?>_thumb.jpg" style="padding: 0px 10px 0px 0px;float: left; height: 15px;width: 60px;border: 0px;" align="top"></a>
+							        			<? if(!empty($mahila_details_yoga['4'])){ ?>
+								        			<? if(file_exists("./assets/mahila/news_img".$mahila_details_yoga['4']->id."_thumb.jpg")){ ?>
+								        				<a href="<?=base_url();?>cinema/inner/<?php if(isset($mahila_details_yoga['4'])){echo $mahila_details_yoga['4']->id;}?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($mahila_details_yoga['4'])){echo $mahila_details_yoga['4']->id;}?>_thumb.jpg" style="padding: 0px 10px 0px 0px;float: left; height: 15px;width: 60px;border: 0px;" align="top"></a>
 								        			<?} }?>
-							        				<div id="mainnews1" style="height: 40px" ><a href="<?=base_url();?>cinema/inner/<?php if(isset($mahila_details1['4'])){echo $mahila_details1['4']->id;}?>"><?php if(isset($mahila_details1['4'])){echo $mahila_details1['4']->heading;}?></a></div><div style="padding:5px 0px 0px 70px;" id="more-news-div"><a href="<?=base_url();?>maila/mahiladetails/<?php if(isset($mahila_details1['4'])){echo $mahila_details1['4']->id;}?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div></td>
+							        				<div id="mainnews1" style="height: 40px" ><a href="<?=base_url();?>cinema/inner/<?php if(isset($mahila_details_yoga['4'])){echo $mahila_details_yoga['4']->id;}?>"><?php if(isset($mahila_details_yoga['4'])){echo $mahila_details1_yoga['4']->heading;}?></a></div><div style="padding:5px 0px 0px 70px;" id="more-news-div"><a href="<?=base_url();?>maila/mahiladetails/<?php if(isset($mahila_details_yoga['4'])){echo $mahila_details_yoga['4']->id;}?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div></td>
 							        			<td width="50%" valign="top">
-							        			<? if(!empty($mahila_details1['5'])){ ?>
-							        			<? if(file_exists("./assets/cinema/ceni_img".$mahila_details1['5']->id."_thumb.jpg")){ ?>
-							        			<a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details1['5'])){echo $mahila_details1['5']->id;}?>/<?=$mahila_details1['5']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($mahila_details1['5'])){echo $mahila_details1['5']->id;}?>_thumb.jpg" style="padding: 0px 10px 0px 0px;float: left; height: 15px;width: 60px;border: 0px;" align="top"></a>
+							        			<? if(!empty($mahila_details_yoga['5'])){ ?>
+							        			<? if(file_exists("./assets/cinema/ceni_img".$mahila_details_yoga['5']->id."_thumb.jpg")){ ?>
+							        			<a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['5'])){echo $mahila_details_yoga['5']->id;}?>/<?=$mahila_details_yoga['5']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($mahila_details_yoga['5'])){echo $mahila_details_yoga['5']->id;}?>_thumb.jpg" style="padding: 0px 10px 0px 0px;float: left; height: 15px;width: 60px;border: 0px;" align="top"></a>
 							        			<?} ?>
-							        			<div id="mainnews1" style="height: 40px"><a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details1['5'])){echo $mahila_details1['5']->id;}?>"><?php if(isset($mahila_details1['5'])){echo $mahila_details1['5']->heading;}?></a></div><div style="padding:5px 0px 0px 70px;" id="more-news-div"><a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details1['5'])){echo $mahila_details1['5']->id;}?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div><?} ?></td>
+							        			<div id="mainnews1" style="height: 40px"><a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['5'])){echo $mahila_details_yoga['5']->id;}?>"><?php if(isset($mahila_details_yoga['5'])){echo $mahila_details_yoga['5']->heading;}?></a></div><div style="padding:5px 0px 0px 70px;" id="more-news-div"><a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['5'])){echo $mahila_details_yoga['5']->id;}?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div><?} ?></td>
 							        		
 							        		</tr>
 							        		

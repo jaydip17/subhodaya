@@ -12,11 +12,9 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 	</div></td>
 </tr>
 <tr>
-	<td rowspan="3" valign="top" width="159" style="background-color: #0772ba;padding-top: 4px;" align="center">
+	<td rowspan="3" valign="top" width="159" style="background-color: #0772ba;" align="center">
 		 <div class="content">
-      <div id="info3" style="border: opx;">
-      <div id="information" style="border: opx;"><?=$more['37']->matter?></div>
-     
+      <div id="info3">
         <div id="menu">
 		<ul style="list-style: none;margin: 0;padding: 0;">
 		<?php if(!empty($result)){ 
@@ -30,18 +28,15 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 		
 		</ul>
 	</div>
-    
-
-        <div id="Left-footer"></div>
       </div>
 	</td>
 	<td valign="top">
-		<div style="width: 595px;height: 198px;margin-left: 4px;"><img src="<?=base_url()?>assets/imgs/banner.jpg"></div>
+		<div style="width: 595px;height: 198px;margin-left: 6px;"><img src="<?=base_url()?>assets/imgs/banner.jpg"></div>
 		<div style="width: 595;height: 420px;margin-top: 5px;">
 			<table cellpadding="0" cellspacing="0" style="padding-left: 4px;">
 				<tr>
 					<td id="gal_leftslide" ></td>
-					<td id="gal_menucen" style="font-size: 14px;font-weight: bold;color: maroon;">Recent Gallery</td>
+					<td id="gal_menucen" style="font-size: 14px;font-weight: bold;color: maroon;padding-left: 4px;">Recent Gallery</td>
 					<td id="gal_rightslide"></td>
 				</tr>
 				<tr>
@@ -81,10 +76,10 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 			</table>
 		</div>
 			<div style="width: 605;height: 229px;margin-top: 5px;">
-			<table cellpadding="0" cellspacing="0" style="padding-left: 4px;">
+			<table cellpadding="0" cellspacing="0" style="padding-left: 6px;">
 				<tr>
 					<td id="gal_leftslide"></td>
-					<td id="gal_menucen" style="font-size: 14px;font-weight: bold;color: maroon;">Gallery</td>
+					<td id="gal_menucen" style="font-size: 14px;font-weight: bold;color: maroon;padding-left: 4px;">Gallery</td>
 					<td id="gal_rightslide"></td>
 				</tr>
 				<tr>

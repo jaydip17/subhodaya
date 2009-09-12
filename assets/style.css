@@ -273,10 +273,11 @@ border-bottom: 2px solid #9FA0A0;
 width: 89%; 
 }
 .content{
-width: 150px;
+width: 164px;
 padding:0px 0px 0px 0px;
 font-size:14px;
 letter-spacing:2px;
+border: 3px thin solid black;
 }
 #sahithi-table
 {
@@ -601,9 +602,9 @@ text-align:center;
 	font-size:13px;
 	border-color: #B0d9EF;
 	border-size: 0px;
-	border-width: 1px;
+	border-width: 0px;
 	text-align: center;
-	
+	width: 159px;
 	
 	}
 	
@@ -612,6 +613,7 @@ text-align:center;
   	voice-family: "\"}\""; 
   	voice-family: inherit;
 	text-decoration: none;
+	width: 159px;
 	}	
 	
 #menu li a:link, #menu li a:visited {
@@ -621,24 +623,28 @@ text-align:center;
 	border-left:0px solid #0772ba;
 	border-right:0px solid #0772ba;
 	padding: 0px 0 0 0px;
+	width: 159px;
 	}
 	
 #menu li a:hover {
 	color: #f30e0e;
 	background: url(imgs/li-img2.gif) repeat-x;
-	padding: 0px 0 0 0px;
+	padding: 0px 0px 0px 0px;
+	width: 159px;
 	}
 	
 #menu li a:active {
 	color: #26370A;
 	background: url(imgs/li-img2.gif) repeat-x;
-	padding: 1px 0 0 0px;
+	padding: 0px 0px 0px 0px;
+	width: 159px;
 	}
 
 .content #info3 #Left-footer {
 	background-image: url(imgs/left-footer.jpg);
 	background-repeat: no-repeat;
 	height: 34px;
+	width: 159px;
 
 }
 #information {

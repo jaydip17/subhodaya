@@ -85,7 +85,7 @@ class Video_model extends Model
 			
 		return $query;
 	}
-	
+	 
  function getvideoname($id)
 	{
 		$this->db->where('id',$id);

@@ -283,7 +283,7 @@ sample sf dsfsd fdsf
 							        <?php if(!empty($greetings1)){ $count=1; foreach($greetings1 as $row):?>
 							       	<div style="border: 0px solid red;height:95px;">
 							        	<div style="padding:1px;">
-							        		<a href="<?=base_url();?>greetings/content/<?=$row->type?>"><img src="<?=base_url();?>assets/greetings/gree_img<?=$row->id?>_thumb.jpg" width="80px;" height="87px;" style="float: left;border: 1px red;padding:2px;"></a>
+							        		<a href="<?=base_url();?>greetings/content/<?=$row->type?>"><img src="<?=base_url();?>assets/greetings/gree_img<?=$row->id?>_thumb.jpg" width="80px;" height="87px;" style="float: left;border: 1px #939393;padding:2px;"></a>
 							        		<font id="more-news-div"><a href="<?=base_url();?>greetings/content/<?=$row->type?>"><?=$row->name;?></a></font>
 							        		<div><?=$row->summery;?></div>
 							        	</div>
@@ -296,7 +296,7 @@ sample sf dsfsd fdsf
 							        	<?php if(!empty($greetings2)){ $count=1; foreach($greetings2 as $row):?>
 							       		<div style="border: 0px solid red;height:95px;">
 							        	<div style="padding:1px;">
-							        		<a href="<?=base_url();?>greetings/content/<?=$row->type?>"><img src="<?=base_url();?>assets/greetings/gree_img<?=$row->id?>_thumb.jpg" height="90px;" width="70px" style="float: left;border: 2px red;padding:2px;text-align: justify;"></a>
+							        		<a href="<?=base_url();?>greetings/content/<?=$row->type?>"><img src="<?=base_url();?>assets/greetings/gree_img<?=$row->id?>_thumb.jpg" height="90px;" width="70px" style="float: left;border: 2px #939393;padding:2px;text-align: justify;"></a>
 							        		<font id="more-news-div"><a href="<?=base_url();?>greetings/content/<?=$row->type?>"><?=$row->name;?></a></font>
 							        		<div><?=$row->summery;?></div>
 							        	</div>
@@ -311,7 +311,7 @@ sample sf dsfsd fdsf
 							        <?php if(!empty($greetings12)){ $count=1; foreach($greetings12 as $row):?>
 							       	<div style="border: 0px solid red;height:95px;">
 							        	<div style="padding:1px;">
-							        		<a href="<?=base_url();?>greetings/content/<?=$row->type?>"><img src="<?=base_url();?>assets/greetings/gree_img<?=$row->id?>_thumb.jpg" height="90px;" style="float: left;border: 2px red;padding:2px;text-align: justify;"></a>
+							        		<a href="<?=base_url();?>greetings/content/<?=$row->type?>"><img src="<?=base_url();?>assets/greetings/gree_img<?=$row->id?>_thumb.jpg" height="90px;" style="float: left;border: 2px #939393;padding:2px;text-align: justify;"></a>
 							        		<font id="more-news-div"><a href="<?=base_url();?>greetings/inner/<?=$row->type?>"><?=$row->name;?></a></font>
 							        		<div><?=$row->summery;?></div>
 							        	</div>

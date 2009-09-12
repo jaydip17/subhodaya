@@ -36,12 +36,18 @@ function telugu_typing()
 								<td colspan='2' align="center"><div  id="gree_bar1"><?=$more['25']->matter?></div></td>
 							</tr>
 							<tr>
-								<td align="left" width="30%"><?=$more['27']->matter?></td><td align="left" width="70%"><input type="text" name="name" size="30"></td>
+								<td align="left" width="30%" style="padding-left: 10px;"><?=$more['27']->matter?></td>
+								<td align="left" width="70%"><input type="text" name="name" size="30"></td>
 							</tr>
 							<tr>
-								<td align="left"><?=$more['28']->matter?></td><td align="left"><input type="text" name="email" size="30"></td>
+								<td align="left" width="30%" style="padding-left: 10px;"><?=$more['38']->matter?></td>
+								<td align="left" width="70%"><input type="text" name="name" size="30"></td>
 							</tr>
-							<tr><td colspan="2" align="left"><input type="checkbox" onclick="telugu_typing()" id="telugu_type" name="telugu_type">Type in telugu</td></tr>
+							<tr>
+								<td align="left" style="padding-left: 10px;"><?=$more['28']->matter?></td>
+								<td align="left"><input type="text" name="email" size="30"></td>
+							</tr>
+							<tr><td align="left" colspan="2" style="padding-left: 10px;"><input type="checkbox" onclick="telugu_typing()" id="telugu_type" name="telugu_type">Type in telugu</td></tr>
 				
 							<tr>
 							<td align="center" colspan="2"><textarea style="height: 190px;width: 95%" name="description"></textarea></td>

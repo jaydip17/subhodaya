@@ -509,7 +509,7 @@ function telugu_typing()
 				</tr>
 				<tr>
 					<td colspan="3"  id="gal_center1"  width="742" align="center" height="590" >
-					<img src="<?=base_url()?>assets/gallery/image<?=$image['0']->id?>.jpg"  border="0">
+					<img src="<?=base_url()?>assets/gallery/image<?=$image['0']->id?>.jpg"  style="border: 1px solid #939393;">
 					</td>
 				</tr>
 				 <tr>
@@ -536,21 +536,24 @@ function telugu_typing()
 				</tr>
 				
 				<tr>
-					<td valign="top" colspan="3">
+					<td valign="top" colspan="3" align="center">
 					<form name="telugu_send" method="post" action="<?=base_url();?>subhodaya/sendmail">
 					<input type="hidden" name="url" value="<?=base_url()?>gallery/content/<?=$image['0']->id?>">
 			
-						<table align="center" width="550px" border="0">
+						<table align="center" width="550px" style="border: 1px solid #939393;">
 							<tr>
 								<td colspan='2' align="center"><div  id="gree_bar1"><?=$more['25']->matter?></div></td>
 							</tr>
 							<tr>
-								<td align="left" width="30%"><?=$more['27']->matter?></td><td align="left" width="70%"><input type="text" name="name" size="30"></td>
+								<td width="30%" align="left" style="padding-left: 10px;"><?=$more['27']->matter?></td>
+								<td align="left" width="70%"><input type="text" name="name" size="30"></td>
 							</tr>
 							<tr>
-								<td align="left"><?=$more['28']->matter?></td><td align="left"><input type="text" name="email" size="30"></td>
+								<td align="left" style="padding-left: 10px;"><?=$more['28']->matter?></td>
+								<td align="left"><input type="text" name="email" size="30"></td>
 							</tr>
-							<tr><td colspan="2" align="left"><input type="checkbox" onclick="telugu_typing()" id="telugu_type" name="telugu_type">Type in telugu</td></tr>
+							<tr>
+								<td colspan="2" align="left" style="padding-left: 10px;"><input type="checkbox" onclick="telugu_typing()" id="telugu_type" name="telugu_type">Type in telugu</td></tr>
 				            <tr>
 							<td align="center" colspan="2"><textarea style="height: 190px;width: 95%" name="description"></textarea></td>
 							</tr>

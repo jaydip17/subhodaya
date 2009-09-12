@@ -58,8 +58,7 @@ class Mahila extends Controller {
 		$id=$this->db->insert_id();
 		
 		}
-		//echo print_r($_FILES);
-		if($result==1 && $_FILES['image']['name']!=""){
+		if($result==1){
 		
 		$config['upload_path'] ='assets/mahila/';
 		$config['allowed_types'] = 'gif|jpg|png';
@@ -101,7 +100,7 @@ class Mahila extends Controller {
 	    	}
 			
 	    	$this->image_lib->clear();
-			}
+		}
 			redirect(base_url().'admin/mahila',$message);
 	
 	}

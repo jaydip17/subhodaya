@@ -32,11 +32,11 @@ class Video_Model extends Model {
 	
 		if (!$this->upload->do_upload('video'))
 		{
-			echo "hello";
+			//echo "hello";
 			$error = array('error' => $this->upload->display_errors());
 			print_r($error);
 			
-			echo "hello";
+			//echo "hello";
 			//$this->load->view('admin_images', $error);
 		}	
 		else

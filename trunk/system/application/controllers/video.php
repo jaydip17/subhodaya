@@ -57,7 +57,7 @@ class Video extends Controller {
        
         );
           
-	   $this->load->view('videos_view',$data);
+	   $this->load->view('videos_view',$data);     
 	  
 	  
 	    

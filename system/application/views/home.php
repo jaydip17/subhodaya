@@ -490,7 +490,7 @@ function test()
      <td valign="top" id="center-line"><img src="<?=base_url();?>assets/imgs/tock-line-boyom1.jpg" width="5" height="166"/></td>
     </tr>
     </table>
-    	<table width="217" border="0" cellpadding="0" cellspacing="0" style="margin-top:6px;">
+    	<table width="217" border="0" cellpadding="0" cellspacing="0" style="margin-top:6px;border: 1px solid #50BCFC;">
         	<tr>
                 <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter-1.jpg" width="5" height="31" /></td>
                 <td width="208" valign="bottom" id="senter3" align="left"><table><tr><td width="20%"><img src="<?=base_url(); ?>assets/imgs/001.png" style="padding: 0px 5px 3px 2px;" align="middle"></img></td><td width="80%"><span id="telugufont"><?php echo $more['16']->matter;?></span></td></tr></table></td>

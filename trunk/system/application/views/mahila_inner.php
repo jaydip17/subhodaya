@@ -54,15 +54,17 @@ function telugu_typing()
 						</td>
 					</tr>
 					<tr>
-						<td align="left" valign="top" height="295px"><div class="heading" style="width: 181px;" id="news_heading"><div style="padding-top:5px;" id="newsheading"><?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->cinema_type;}?></div></div>
-						<div style="height: 265px;border:1px solid #9FA0A0;" id="left_news">
-							<img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type1['0']->id?>_thumb.jpg" style="padding:5px 0px 0px 20px; ">
-							<ul id="mainnews">
+						<td align="left"><div class="heading" style="width: 181px;" id="news_heading"><div style="padding-top:5px;" id="newsheading"><?php if(isset($news_type2['0'])){echo $news_type2['0']->news_cat;}?></div></div>
+						<div style="height: 275px;" id="left_news">
+						<div style="height: 250px">
+						<?if(!empty($news_type2)){
+						if(file_exists("./assets/news/news_img".$news_type2['0']->id."_thumb.jpg")){ ?>
+							<a href="<?=base_url();?>news/newsdetails/<?=$news_type2['0']->id?>/<?=$news_type2['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?=$news_type2['0']->id?>_thumb.jpg" style="padding:5px 0px 0px 20px;" border="0"></a>
+							<?} ?>
+							<ul >
 								<?php
-								if(!empty($news_type1))
-								{ 
-								$count=0; foreach ($news_type1 as $row):?>
-								<li><a href="<?=base_url();?>cinema/inner/<?=$row->id?>"><?=$row->heading?></a></li>
+								$count=0; foreach ($news_type2 as $row):?>
+								<li id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>/<?=$row->type?>"><?=$row->heading?></a></li>
 								<?php
 								if($count==2){
 								break;}
@@ -71,8 +73,9 @@ function telugu_typing()
 								 }
 								else
 								echo 'No data found';?>
+								</div>
+								<div id="more-news-div" ><a href="<?=base_url();?>cinema/details/<?php if(isset($cinema_type2['0'])){echo $cinema_type2['0']->type;}?>"><?php if(isset($more['0'])){echo $more['0']->matter;}?></a></div>
 							</ul>
-							<div id="more-news-div"><a href="<?=base_url();?>cinema/details/<?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->type;}?>"><?php if(isset($more['0'])){echo $more['0']->matter;}?></a></div>
 						</div>
 						</td>
 					</tr>

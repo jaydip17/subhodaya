@@ -3,10 +3,11 @@ class Mahila extends Controller {
 	var $layout = 'default'; 
 	function mahila(){
 		parent::Controller();
-	}
-	function index(){
 		 $this->load->model('admin/Sahithi_Model');
 		$this->load->model("admin/News_Model");
+	}
+	function index(){
+		
 		$more=$this->News_Model->more_news();
 		$details=$this->Mahila_Model->get_Mahilatype();
 		foreach($details as $item)
@@ -32,6 +33,7 @@ class Mahila extends Controller {
   }
     function mahiladetails(){
  	   $this->load->model('admin/Sahithi_Model');
+ 	    $news_type2=$this->News_Model->get_newstype1(1);
 		$more=$this->Mahila_Model->more_mahila();
 		$cinema_type1=$this->Cinema_Model->get_cinematype(1);
 		$this->load->model("admin/News_Model");
@@ -63,7 +65,8 @@ class Mahila extends Controller {
 		        'details_more' =>$details_more,
 		            'type'=>'mahila',
 		            'link' => 'sahithi',
-		              'video_result'     =>  $video_result
+		              'video_result'     =>  $video_result,
+	              'news_type2'  =>	$news_type2
 		     	);
 				
 		$this->load->view('mahila_inner',$data);

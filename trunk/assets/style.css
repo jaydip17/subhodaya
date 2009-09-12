@@ -895,3 +895,6 @@ a:active{
 	background-image:url(imgs/gmail-seline.jpg);
 	background-repeat:repeat-x;
 }
+hr{
+	 border: 1px solid rgb(55, 137, 195);
+}

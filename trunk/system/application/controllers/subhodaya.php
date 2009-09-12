@@ -18,7 +18,7 @@ class Subhodaya extends Controller {
 		//mahila
 		$mahila_details=$this->Mahila_Model->active_mahila(1,$type='home');
 		$mahila_details_yoga=$this->Mahila_Model->active_mahila(4,$type='home');
-		print_r($mahila_details_yoga);
+		//print_r($mahila_details_yoga);
 		//echo $mahila_details_yoga['0']->id;
 	    $greetings1=$this->Greeting_Model->get_main_greetings(1);
         //$details=$this->Gallery_Model->get_cateimage(11);

@@ -99,7 +99,7 @@ class Mahila extends Controller {
 	    	}
 			
 	    	$this->image_lib->clear();
-			//redirect(base_url().'admin/mahila',$message);
+			redirect(base_url().'admin/mahila',$message);
 		}
 	}
 	 function getmahilatype(){

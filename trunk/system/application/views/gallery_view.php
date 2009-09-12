@@ -12,7 +12,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 	</div></td>
 </tr>
 <tr>
-	<td rowspan="3" valign="top" width="150" style="background-color: #0772ba;" align="left">
+	<td rowspan="3" valign="top" width="159" style="background-color: #0772ba;" align="center">
 		 <div class="content">
       <div id="info3"><img src="<?=base_url();?>assets/imgs/info-left.gif" width="7" height="34" style="float:left" />
        <img src="<?=base_url();?>assets/imgs/info-right.gif" width="7" height="34" style="float:right" />

@@ -124,7 +124,7 @@
 		else
 		{
 		   $data = array('upload_data' => $this->upload->data());
-	       echo $filepath = $data['upload_data']['file_name'];
+	       $filepath = $data['upload_data']['file_name'];
 	       rename($dir.$filepath , $dir.'image'.$id.'.jpg');	
 		
 		//generating thumnail of image

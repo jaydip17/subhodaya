@@ -72,7 +72,7 @@ class Video_Model extends Model {
 	      
 	      //generating image to display in recent list 
 	      
-		$this->load->library('image_lib');
+		/*$this->load->library('image_lib');
     	$filename = 'image'.$i.'.jpg';
     	
     	$config2['image_library'] = 'gd2';
@@ -92,7 +92,7 @@ class Video_Model extends Model {
 			print_r($error);
     	}
     	$this->image_lib->clear();
-
+*/
     	//generating image to display in categeory list
     	$this->load->library('image_lib');
     	$filename = 'image'.$i.'.jpg';
@@ -124,8 +124,8 @@ class Video_Model extends Model {
         $config3['source_image'] = $dir1.'/'.$filename;
       	$config3['create_thumb'] = TRUE;
 		$config3['maintain_ratio'] = TRUE;
-		$config3['width'] = 82;
-		$config3['height'] =56;
+		$config3['width'] = 87;
+		$config3['height'] =67;
     	
     	      
     	$this->image_lib->initialize($config3);

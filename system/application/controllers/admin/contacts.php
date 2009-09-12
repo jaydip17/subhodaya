@@ -35,7 +35,7 @@ class Contacts extends Controller {
   			$page="";
   			}
   			
-  			$formaction ='admin/Contacts/sendmail';
+  			$formaction ='admin/contacts/sendmail';
   			$this->load->plugin('grabcontacts');
   			
   			if($_GET['type']=="gmail")
@@ -108,6 +108,10 @@ class Contacts extends Controller {
      	
      	if(isset($_POST['addresses']))
      		{
+     		$subject="welcome to shubhodaya..";
+		 	$message="hai".$_POST['addresses']."has invited you for the following website.
+		 		          /n follow the below link to go to the website.\n";
+		 	
 	     		$addresses=$_POST['addresses'];
 	     		//print_r($addresses);
 	     		//exit();
@@ -117,8 +121,8 @@ class Contacts extends Controller {
 				//$this->email->cc('another@another-example.com');
 				//$this->email->bcc('them@their-example.com');
 				
-				$this->email->subject('Invitation form subhodaya.com');
-				$this->email->message('Testing the email class.'); 
+				$this->email->subject($subject);
+				$this->email->message($message); 
 				//$this->email->initialize($config);
 				$this->email->send();
 				$this->email->print_debugger();

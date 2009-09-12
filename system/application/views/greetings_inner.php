@@ -25,13 +25,13 @@ function telugu_typing()
 			<table width="685px" height="700px" align="center" >
 				<tr>
 					<td align="center" width="685px" valign="top">
-							<img src="<?=base_url();?>assets/greetings/gree_img<?php if(isset($result)){echo $result['0']->id;}?>.jpg">
+							<img src="<?=base_url();?>assets/greetings/gree_img<?php if(isset($result)){echo $result['0']->id;}?>.jpg" style="border: 3px solid #939393;margin: 7px 0px 7px 0px;">
 					</td>
 				</tr>
 				<tr>
-					<td valign="top">
+					<td valign="top" align="center">
 					<form name="telugu_send" method="post" action="<?=base_url();?>subhodaya/sendmail">
-						<table align="center" width="550px" border="0">
+						<table align="center" width="550px" border="0" style="border: 1px solid #939393;">
 							<tr>
 								<td colspan='2' align="center"><div  id="gree_bar1"><?=$more['25']->matter?></div></td>
 							</tr>

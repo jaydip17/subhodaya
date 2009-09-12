@@ -1,5 +1,5 @@
 <?php
-class Contact extends Controller {
+class contact extends Controller {
 	function contact(){
 		parent::Controller();
 		$this->load->helper('email');

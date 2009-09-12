@@ -164,8 +164,7 @@ padding-top:0px;
 	            </tr>
 	            <tr>
 	            <td width="50%" valign="top" height="219px" style="background-image:url(<?=base_url();?>assets/imgs/Pandugalu-cr.gif);background-repeat-y;">
-	            <div style="padding: 3px;" >
-	             <div style="height: 195px;" >
+	           </br>
 	             <?if(!empty($details_more['1'])){
 	             if(file_exists("./assets/mahila/news_img".$details_more['1']['0']->id."_thumb.jpg")){
 	             ?>

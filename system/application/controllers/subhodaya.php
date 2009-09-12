@@ -84,6 +84,8 @@ class Subhodaya extends Controller {
 	}
 	function sendmail()
 	{
+		if(isset($_POST['send']))
+		{
 		$to = $_POST['email'];
         $subject = "Shubhodaya nice article";
         $message= "Dear ".$_POST['email'].".. Your friend ".$_POST['name']." sent u an article on shubhodaya".$_POST['description'];
@@ -95,7 +97,9 @@ class Subhodaya extends Controller {
         $status= "1";
         else
         $status= "-1";
+		}
         redirect($_POST['url'].'/'.$status);
+		
      
 	    }
 	    function sample(){

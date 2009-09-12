@@ -479,7 +479,7 @@ function telugu_typing()
 
 
 </div></div></td>
-		<td rowspan="2" width="180" align="center" valign="top"><div style="width: 180px;height: 740px;border: 1px solid red;"></div></td>
+		<td rowspan="2" width="180" align="center" valign="top"><div style="width: 180px;height: 1100px;border: 1px solid red;background-color: gray;"></div></td>
 	</tr>
 	<tr>
 		<td valign="top" height="600">
@@ -536,7 +536,7 @@ function telugu_typing()
 				</tr>
 				
 				<tr>
-					<td valign="top" colspan="3" align="center">
+					<td valign="top" colspan="3" align="center" style="padding-top: 10px;">
 					<form name="telugu_send" method="post" action="<?=base_url();?>subhodaya/sendmail">
 					<input type="hidden" name="url" value="<?=base_url()?>gallery/content/<?=$image['0']->id?>">
 			

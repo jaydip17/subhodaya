@@ -53,12 +53,13 @@ class Sahithi extends Controller {
 				'homepage'=> $homepage,
 				'active'      =>$active
 		);
+		$message="";
 		if(!empty($data))
 		{
 		$result=$this->db->insert('sahithi',$data);
 		$id=$this->db->insert_id();
 		}
-		if($result==1){
+		if($result==1 && $_FILES['image']['name']!=""){
 		$config['upload_path'] ='assets/sahithi/';
 		$config['allowed_types'] = 'gif|jpg|png';
 		$config['max_size']	= '1000';
@@ -103,8 +104,9 @@ class Sahithi extends Controller {
 	    		print_r($error);	
 	    	}
 	    	$this->image_lib->clear();
-			//redirect(base_url().'admin/sahithi',$message);
+	    	
 		}
+		   redirect(base_url().'admin/sahithi',$message);
 	}
    function getsahithitype(){
    		

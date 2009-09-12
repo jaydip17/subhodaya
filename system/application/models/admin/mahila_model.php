@@ -132,6 +132,7 @@ class Mahila_Model extends Model {
     	$this->db->order_by("mahila.insert_date", "desc");
 		$this->db->from('mahila_cat');
 		$this->db->join('mahila', 'mahila.cat_id= mahila_cat.id');
+		$this->db->order_by('mahila.id','desc');
 		$query = $this->db->get_where();
 		return $query->result();
     }

@@ -144,6 +144,7 @@ class Sahithi_Model extends Model {
     	$this->db->where($array);
 		$this->db->from('sahithi_cat');
 		$this->db->join('sahithi', 'sahithi.cat_id= sahithi_cat.id');
+		$this->db->order_by('sahithi.id','desc');
 		$query = $this->db->get_where();
 		return $query->result();
     }

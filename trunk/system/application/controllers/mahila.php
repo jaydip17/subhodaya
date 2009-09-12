@@ -43,11 +43,9 @@ class Mahila extends Controller {
 		$id=$this->uri->segment(3,0);
 		$result=$this->Mahila_Model->inner_mahila($id);
 		$details=$this->Mahila_Model->get_mahilatype();
-		$details_sahithi=$this->Sahithi_Model->get_sahithitype();
-		$details_more=array();
-		foreach($details_sahithi as $item)
-		$details_more[$item->id]=$this->Sahithi_Model->getdetails($item->id,'yes',6);
-	
+		
+		$details_more=$this->Sahithi_Model->getdetails(2,'yes',5);
+	    $key = key($details_more);
 		$evenmore=$this->Mahila_Model->evenmore($id);
 		
 		
@@ -66,7 +64,8 @@ class Mahila extends Controller {
 		            'type'=>'mahila',
 		            'link' => 'sahithi',
 		              'video_result'     =>  $video_result,
-	              'news_type2'  =>	$news_type2
+	              'news_type2'  =>	$news_type2,
+	                 'key'         =>  $key
 		     	);
 				
 		$this->load->view('mahila_inner',$data);

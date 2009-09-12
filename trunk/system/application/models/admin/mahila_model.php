@@ -58,9 +58,9 @@ class Mahila_Model extends Model {
     }
     function getdetails($id,$headingonly,$limit)
 	{
-		if($limit==6)
+		if($limit==5)
 		{
-			$this->db->limit(6);
+			$this->db->limit(5);
 		}
 		if($headingonly=='yes')
 		{

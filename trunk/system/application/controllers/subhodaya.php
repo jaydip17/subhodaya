@@ -21,6 +21,7 @@ class Subhodaya extends Controller {
 		//print_r($mahila_details_yoga);
 		//echo $mahila_details_yoga['0']->id;
 	    $greetings1=$this->Greeting_Model->get_main_greetings(1);
+		$greetings1=$this->Greeting_Model->get_main_greetings(1);
         //$details=$this->Gallery_Model->get_cateimage(11);
         $home_stories=$this->Sahithi_Model->get_home_stories($type=2);
 		$images=array();

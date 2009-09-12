@@ -70,18 +70,7 @@ class Videos extends Controller {
 		$data['catid']=$id;
 	    $this->load->view('admin/viewvideos',$data);
 	 }
-	
-/*function active(){
-
-if(!isset($_POST['active'])){
-			
-			$active=0;
-		}else{
-			$active=$_POST['active'];
-		}
-		$this->Video_Model->active();
-}*/
-	 
+ 
    function deletevideo()
 	  {
 		

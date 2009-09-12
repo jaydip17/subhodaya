@@ -176,7 +176,7 @@ padding-top:0px;
 	               <?if(!empty($details_more['1'])){
 	             if(file_exists("./assets/sahithi/news_img".$details_more['1']['0']->id."_thumb.jpg")){
 	             ?>
-	              <a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['1']['0']->id?>"><img src="<?=base_url();?>assets/sahithi/news_img<?=$details_more['1']['0']->id?>_thumb" style="float:left;padding:4px 20px 4px 4px;text-align: justify;" align="top" border="0"/></a>
+	              <a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['1']['0']->id?>"><img src="<?=base_url();?>assets/sahithi/news_img<?=$details_more['1']['0']->id?>_thumb.jpg" style="float:left;padding:4px 20px 4px 4px;text-align: justify;" align="top" border="0"/></a>
 	              <?}} ?>
 	            <?if(!empty($details_more['1'])){?>
 	             <font id="telugufont"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['1']['0']->id?>"><?php echo $details_more['1']['0']->heading?></a></font><br>
@@ -188,7 +188,11 @@ padding-top:0px;
                      if($count==0)
 							           {$count++;
 							            continue;
-							           }?>
+							           }
+							            if($count>7)
+							           {
+							           break;
+                                       }$count++;?>
 	             <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>"><?=$item->heading ?></a></li>
 	                <?}} ?>
 	                 </ul>
@@ -212,7 +216,7 @@ padding-top:0px;
 	              <?if(!empty($details_more['2'])){
 	             if(file_exists("./assets/sahithi/news_img".$details_more['2']['0']->id."_thumb.jpg")){
 	             ?>
-	              <a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['2']['0']->id?>"><img src="<?=base_url();?>assets/sahithi/news_img<?=$details_more['2']['0']->id?>_thumb" style="float:left;padding:4px 20px 4px 4px;text-align: justify;" align="top" border="0"/></a>
+	              <a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['2']['0']->id?>"><img src="<?=base_url();?>assets/sahithi/news_img<?=$details_more['2']['0']->id?>_thumb.jpg" style="float:left;padding:4px 20px 4px 4px;text-align: justify;" align="top" border="0"/></a>
 	              <?}} ?>
 	              <?if(!empty($details_more['2'])){?>
 	             <font id="telugufont"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['2']['0']->id?>"><?php echo $details_more['2']['0']->heading?></a></font><br>
@@ -223,7 +227,11 @@ padding-top:0px;
 	              foreach($details_more['2'] as $item) { if($count==0)
 							           {$count++;
 							            continue;
-							           }?>
+							           }
+							            if($count>7)
+							           {
+							           break;
+                                       }$count++;?>
 
 	              <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>"><?=$item->heading ?></a></li>
 	              <?}} ?>
@@ -256,7 +264,11 @@ padding-top:0px;
 	              foreach($details_more['3'] as $item) {if($count==0)
 							           {$count++;
 							            continue;
-							           }?>
+							           }
+							           if($count>2)
+							           {
+							           break;
+                                       }$count++;?>
 	            
 
 	             <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>"><?=$item->heading ?></a></li>
@@ -288,7 +300,11 @@ padding-top:0px;
 	              foreach($details_more['4'] as $item) {if($count==0)
 							           {$count++;
 							            continue;
-							           }?>
+							           }
+							           if($count>2)
+							           {
+							           break;
+                                       }$count++;?>
 
 	              <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>"><?=$item->heading?></a></li>
 	              <?}} ?>	                 </ul>
@@ -321,7 +337,11 @@ padding-top:0px;
 	              foreach($details_more['5'] as $item) {if($count==0)
 							           {$count++;
 							            continue;
-							           }?>
+							           }
+							            if($count>3)
+							           {
+							           break;
+                                       }$count++;?>
 
 	             <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>"><?=$item->heading ?></a></li>
 	              <?}} ?>
@@ -352,7 +372,11 @@ padding-top:0px;
 	              foreach($details_more['6'] as $item) {if($count==0)
 							           {$count++;
 							            continue;
-							           }?>
+							           }
+							            if($count>3)
+							           {
+							           break;
+                                       }$count++;?>
 
 	             <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>"><?=$item->heading ?></a></li>
 	              <?}} ?>
@@ -386,7 +410,11 @@ padding-top:0px;
 	              foreach($details_more['7'] as $item) {if($count==0)
 							           {$count++;
 							            continue;
-							           }?>
+							           }
+							            if($count>5)
+							           {
+							           break;
+                                       }$count++;?>
 
 	              <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>"><?=$item->heading ?></a></li>
 	             <?}} ?>
@@ -416,7 +444,11 @@ padding-top:0px;
 	              foreach($details_more['8'] as $item) {if($count==0)
 							           {$count++;
 							            continue;
-							           }?>
+							           }
+							            if($count>5)
+							           {
+							           break;
+                                       }$count++;?>
 
 	              <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>"><?=$item->heading?></a></li>
 	              <?}} ?>

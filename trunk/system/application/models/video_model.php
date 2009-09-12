@@ -147,8 +147,8 @@ function getlatestvideos($limit,$catid,$id)
   function increase_viewcount($id)
    
 	 {
-	 	
-		    $this->db->query('update videos set no_of_views=no_of_views+1 where id='.$id);
+	 	$this->db->query('update videos set no_of_views=no_of_views+1 where id='.$id);
+   
 	}
 }
 ?>

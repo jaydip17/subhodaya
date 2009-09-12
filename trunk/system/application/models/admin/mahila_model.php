@@ -15,6 +15,12 @@ class Mahila_Model extends Model {
 		$result=$this->db->get('mahila');
 		return $result->result();
 	}
+	function edit($id)
+	{
+		$this->db->where('id',$id);
+		$result=$this->db->get('mahila');
+		return $result->result();
+	}
     function delete($id)
 	{
 		  $remove=array();
@@ -56,11 +62,12 @@ class Mahila_Model extends Model {
 		{
 			$this->db->select('id,heading,summary');
 		}
+		$this->db->order_by('id','desc');
 		$result=$this->db->get_where('mahila',array('cat_id'=>$id));
 		return $result->result();
 		
 	}
- function get_mahilatype1($type)
+   function get_mahilatype1($type)
     {
     	$this->db->select('*');
     	$this->db->order_by("mahila.insert_date", "desc");

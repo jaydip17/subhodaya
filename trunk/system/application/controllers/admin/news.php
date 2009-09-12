@@ -46,7 +46,7 @@ class News extends Controller {
 		$description=$this->input->post('description');
 		$data=array('type'    => $type,
 					'heading' => $heading,
-					'summery' => $summery,
+					'summary' => $summery,
 				'description' => $description,
 				'breking_news'=> $breaking_news,
 				'active'      =>$active

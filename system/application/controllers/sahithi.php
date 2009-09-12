@@ -43,11 +43,13 @@ class Sahithi extends Controller {
 		$result=$this->Sahithi_Model->inner_sahithi($id);
 		$evenmore=$this->Sahithi_Model->evenmore($id);
 		$details=$this->Sahithi_Model->get_sahithitype();
-		$details_mahila=$this->mahila_Model->get_mahilatype();
-		$details_more=array();
-		foreach($details_mahila as $item)
-		$details_more[$item->id]=$this->mahila_Model->getdetails($item->id,'yes',6);
+		//$details_mahila=$this->mahila_Model->get_mahilatype();
+		//$details_more=array();
 		
+		//foreach($details_mahila as $item)
+		$details_more=$this->mahila_Model->getdetails(2,'yes',5);
+		
+		$key = key($details_more);
 		$this->load->Model('Video_Model');
 	   
 	     $videos=$this->Video_Model->get_videos('top',2);
@@ -63,7 +65,8 @@ class Sahithi extends Controller {
 		         'type'=>'sahithi',
 		         'link' =>'mahila',
 		          'video_result'     =>  $video_result,
-	              'news_type2'  =>	$news_type2
+	              'news_type2'  =>	$news_type2,
+	             'key'         =>  $key
 				);
 				
 		$this->load->view('mahila_inner',$data);

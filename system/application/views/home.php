@@ -222,7 +222,7 @@ function test()
                 </table></td>
             </tr>
           </table></td>
-          <td width="0" valign="top" style="margin-left:5px;"><table width="320" align="center" border="0" cellpadding="0" cellspacing="0">
+          <td width="0" valign="top" style="margin-left:5px;" align="center"><table width="320" align="center" border="0" cellpadding="0" cellspacing="0">
             <tr>
               <td width="10"><img src="<?=base_url();?>assets/imgs/tock-line.jpg" width="10" height="34" style="border-left:1px solid #1D77B3; border-top:1px solid #1D77B3;"/></td>
               <td  width="327" valign="top" id="tock-line-center" align="left" >

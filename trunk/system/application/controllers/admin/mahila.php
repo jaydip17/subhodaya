@@ -51,13 +51,15 @@ class Mahila extends Controller {
 				'homepage'=> $homepage,
 				'active'      =>$active
 		);
+		$message="";
 		if(!empty($data))
 		{
 		$result=$this->db->insert('mahila',$data);
 		$id=$this->db->insert_id();
 		
 		}
-		if($result==1){
+		//echo print_r($_FILES);
+		if($result==1 && $_FILES['image']['name']!=""){
 		
 		$config['upload_path'] ='assets/mahila/';
 		$config['allowed_types'] = 'gif|jpg|png';
@@ -99,8 +101,9 @@ class Mahila extends Controller {
 	    	}
 			
 	    	$this->image_lib->clear();
+			}
 			redirect(base_url().'admin/mahila',$message);
-		}
+	
 	}
 	 function getmahilatype(){
    		

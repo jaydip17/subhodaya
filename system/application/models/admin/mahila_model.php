@@ -36,8 +36,12 @@ class Mahila_Model extends Model {
     	{
     		$this->db->where('id',$item);
     		$this->db->delete('mahila');
+    		if(file_exists("./assets/mahila/news_img'.$item.'.jpg")){
     		unlink('./assets/mahila/news_img'.$item.'.jpg');
+    		}
+    		if(file_exists("./assets/mahila/news_img'.$item.'_thumb.jpg")){
     		unlink('./assets/mahila/news_img'.$item.'_thumb.jpg');
+    		}
     	}
 	}
     function edit1($id,$homepage)

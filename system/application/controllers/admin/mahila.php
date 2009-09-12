@@ -82,7 +82,8 @@ class Mahila extends Controller {
 		    $message='News Added Successfully';
 			$this->session->set_flashdata('message',$message);
 		}
-			$filename = 'new_img'.$id.'.jpg';
+		
+			$filename = 'news_img'.$id.'.jpg';
 			$image_path='assets/mahila/';
 	    	$config['image_library'] = 'gd2';
 	        $config['source_image'] = $image_path.$filename;
@@ -96,21 +97,9 @@ class Mahila extends Controller {
 	    	{
 	    		$error = array('error' => $this->image_lib->display_errors());	
 	    	}
-			$filename1= 'news_img'.$id.'t.jpg';
-	    	$config1['image_library'] = 'gd2';
-	        $config1['source_image'] = $image_path.$filename1;
-			$config1['create_thumb'] = TRUE;
-			$config1['maintain_ratio'] = TRUE;
-			$config1['width'] = 80;
-			$config1['height'] = 60;
-	    	$this->load->library('image_lib');      
-	    	$this->image_lib->initialize($config1);
-	    	if(!$this->image_lib->resize())
-	    	{
-	    		$error = array('error' => $this->image_lib->display_errors());	
-	    	}
+			
 	    	$this->image_lib->clear();
-			redirect(base_url().'admin/mahila',$message);
+			//redirect(base_url().'admin/mahila',$message);
 		}
 	}
 	 function getmahilatype(){
@@ -139,8 +128,8 @@ class Mahila extends Controller {
 	
 	function edit(){
 	 $id =$this->uri->segment(4,0);
-     $edit = $this->Mahila_Model->getmahila_details($id);
-    
+	 $edit = $this->Mahila_Model->edit($id);
+    print_r($edit);
      $message = $this->session->flashdata('message');
 		$this->load->model('admin/Openwysiwyg_Model');
 		$textarea[]= array('textarea' => 'description',

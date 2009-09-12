@@ -30,7 +30,7 @@ class Mahila extends Controller {
 		             );
 		$this->load->view('mahila_view',$data);
   }
- function mahiladetails(){
+    function mahiladetails(){
  	   $this->load->model('admin/Sahithi_Model');
 		$more=$this->Mahila_Model->more_mahila();
 		$cinema_type1=$this->Cinema_Model->get_cinematype(1);
@@ -68,7 +68,7 @@ class Mahila extends Controller {
 				
 		$this->load->view('mahila_inner',$data);
 	}
-   function details(){
+    function details(){
    	    $this->load->model('admin/Poll_Model');
    	    $newspoll=$this->Poll_Model->get_newspolls($type=4);
 		$yes_poll=$this->Poll_Model->get_yes_newspoll($type=4);

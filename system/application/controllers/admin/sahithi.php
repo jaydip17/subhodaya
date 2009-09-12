@@ -86,28 +86,15 @@ class Sahithi extends Controller {
 		     
 			$filename = 'news_img'.$id.'.jpg';
 			$image_path='assets/sahithi/';
-	    	$config_resize['image_library'] = 'gd2';
-	    	//$config_resize['new_image']= "new_img_".$id."size1.jpg";
-	        $config_resize['source_image'] = $image_path.$filename;
-			
-			$config_resize['maintain_ratio'] = TRUE;
-			$config_resize['width'] = 320;
-			$config_resize['height'] = 240;
-			    
-	    	$this->image_lib->initialize($config_resize);
-			if(!$this->image_lib->resize())
-	    	{
-	    		$error = array('error' => $this->image_lib->display_errors());
-	    		print_r($error);
-	    	}
-	    	$this->image_lib->clear();
+	    	
+	    	
 	    	$filename= 'news_img'.$id.'.jpg';
 	    	$config1['image_library'] = 'gd2';
 	        $config1['source_image'] = $image_path.$filename;
 			$config1['create_thumb'] = TRUE;
 			$config1['maintain_ratio'] = TRUE;
-			$config1['width'] = 80;
-			$config1['height'] = 60;
+			$config1['width'] = 100;
+			$config1['height'] = 88;
 	    	
 	    	$this->image_lib->initialize($config1);
 	    	if(!$this->image_lib->resize())
@@ -116,7 +103,7 @@ class Sahithi extends Controller {
 	    		print_r($error);	
 	    	}
 	    	$this->image_lib->clear();
-			redirect(base_url().'admin/sahithi',$message);
+			//redirect(base_url().'admin/sahithi',$message);
 		}
 	}
    function getsahithitype(){

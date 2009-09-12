@@ -35,7 +35,7 @@ if(isset($message) && !is_array($message) ) echo($message);?>
 		</td>
 	</tr>
 	<tr>
-		<td>Image</td>
+		<td>Image(350x400 size)</td>
 		<td align="left"><?=form_upload('image') ?></td>
 	</tr>
 	<tr>

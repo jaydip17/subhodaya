@@ -30,7 +30,7 @@ padding-left: 20px;
 							 <div id="tab<?=$i?>">
 							    <div style="padding-top: 5px;" id="telugufont1">
 							    <?if(!empty($details_more[$i]['0'])){ 
-						 if(file_exists("./assets/mahila/news_img".$details_more[$i]['0']->id."_thumb.jpg")){ ?>	        
+						 if(file_exists("./assets/".$type."/news_img".$details_more[$i]['0']->id."_thumb.jpg")){ ?>	        
 	              	<a href="<?=base_url();?><?=$type?>/<?=$type?>details/<?=$details_more[$i]['0']->id?>"><img src="<?=base_url();?>assets/<?=$type?>/news_img<?php if(isset($details_more[$i]['0'])){echo $details_more[$i]['0']->id;}?>_thumb.jpg" style="float:left;padding:4px 20px 4px 4px;text-align: justify;" align="top" border="0"/></a>
 	            	<? }} ?>
 	             <?if(!empty($details_more[$i])){?>

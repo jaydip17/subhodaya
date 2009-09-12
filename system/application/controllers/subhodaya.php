@@ -52,7 +52,7 @@ class Subhodaya extends Controller {
 	    	
 		$activenews=$this->News_Model->active_news1();
 		$gall_topviews=$this->Gallery_Model->top_views();
-		//print_r($gall_topviews);
+		//print_r($activenews);
 	    //home page 3 videos from three recent categeories
 	    $this->load->Model('Video_Model');
 	   

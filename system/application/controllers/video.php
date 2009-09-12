@@ -38,7 +38,7 @@ class Video extends Controller {
 		$config['id'] = 'n0';
 		$config['height'] = '360';
 		$config['width']  = '500';
-		$config['autostart'] = 'false';
+		$config['autostart'] = 'true';
 		$config['file'] = base_url().'assets/videos/video'.$videoid.'.flv';//file full path
 		$config['skin'] = 'simple'; 
 		$config['previewimage']	= base_url().'assets/videos/image_preview/image'.$videoid.'.jpg';

@@ -592,14 +592,14 @@ text-align:center;
 #telugufont1{
 	font-size: 14px;
 	}
-/* =-=-=-=-=-=-=-[greetins Menu One]-=-=-=-=-=-=-=- */
+/* =-=-=-=-=-=-=-[gallery Menu One]-=-=-=-=-=-=-=- */
 #menu {
 	
 	border-style: solid solid none solid;
 	font-family:"Trebuchet MS";
 	font-size:13px;
 	border-color: #B0d9EF;
-	border-size: 1px;
+	border-size: 0px;
 	border-width: 1px;
 	text-align: center;
 	
@@ -617,8 +617,8 @@ text-align:center;
 	color: #000000;
 	display: block;
 	background: url(imgs/li-img.gif) repeat-x;
-	border-left:1px solid #0772ba;
-	border-right:1px solid #0772ba;
+	border-left:0px solid #0772ba;
+	border-right:0px solid #0772ba;
 	padding: 0px 0 0 0px;
 	}
 	

@@ -4,19 +4,18 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 }
 </style>
 
-<table width="100%" cellpadding="5" cellspacing="0">
+<table width="100%" cellpadding="0" cellspacing="0">
 <tr>
-	<td colspan="2" align="center" style="font-weight: bold;font-size: 14px;color: maroon;"><div id="ga_topmenu"><?=$more['6']->matter?></div></td>
+	<td colspan="2" align="center" style="font-weight: bold;font-size: 14px;color: maroon;"><div id="ga_topmenu" style="margin: 2px;"><?=$more['6']->matter?></div></td>
 	<td rowspan="4" valign="top">
 	<div style="width: 174px;border: 1px solid red;height: 890px;background-color: gray;">
 	</div></td>
 </tr>
 <tr>
-	<td rowspan="3" valign="top" width="159" style="background-color: #0772ba;" align="center">
+	<td rowspan="3" valign="top" width="159" style="background-color: #0772ba;padding-top: 4px;" align="center">
 		 <div class="content">
-      <div id="info3"><img src="<?=base_url();?>assets/imgs/info-left.gif" width="7" height="34" style="float:left" />
-       <img src="<?=base_url();?>assets/imgs/info-right.gif" width="7" height="34" style="float:right" />
-      <div id="information"><?=$more['37']->matter?></div>
+      <div id="info3" style="border: opx;">
+      <div id="information" style="border: opx;"><?=$more['37']->matter?></div>
      
         <div id="menu">
 		<ul style="list-style: none;margin: 0;padding: 0;">
@@ -37,17 +36,17 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
       </div>
 	</td>
 	<td valign="top">
-		<div style="width: 595px;height: 198px;"><img src="<?=base_url()?>assets/imgs/banner.jpg"></div>
+		<div style="width: 595px;height: 198px;margin-left: 4px;"><img src="<?=base_url()?>assets/imgs/banner.jpg"></div>
 		<div style="width: 595;height: 420px;margin-top: 5px;">
-			<table cellpadding="0" cellspacing="0">
+			<table cellpadding="0" cellspacing="0" style="padding-left: 4px;">
 				<tr>
-					<td id="gal_leftslide"></td>
+					<td id="gal_leftslide" ></td>
 					<td id="gal_menucen" style="font-size: 14px;font-weight: bold;color: maroon;">Recent Gallery</td>
 					<td id="gal_rightslide"></td>
 				</tr>
 				<tr>
 					<td colspan="3" height="388" id="gal_center" valign="top" >
-					<table cellspacing="15">
+					<table cellspacing="15" >
 							<tr>
 						<?php if(!empty($images)){
 						foreach ($images as $cat):
@@ -82,7 +81,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 			</table>
 		</div>
 			<div style="width: 605;height: 229px;margin-top: 5px;">
-			<table cellpadding="0" cellspacing="0">
+			<table cellpadding="0" cellspacing="0" style="padding-left: 4px;">
 				<tr>
 					<td id="gal_leftslide"></td>
 					<td id="gal_menucen" style="font-size: 14px;font-weight: bold;color: maroon;">Gallery</td>

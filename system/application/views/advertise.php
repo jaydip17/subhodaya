@@ -1,5 +1,5 @@
 <form method="post" name="advertise" action="<?=base_url()?>contact/send_advertise/">
-<table width="100%" border="0" cellspacing="10" cellpadding="10" style="font-size: 14px;">
+<table width="100%" cellspacing="10" cellpadding="10" style="font-size: 13px;border: 1px solid rgb(55, 137, 195);">
 	<tr>
 		<td>Company/Organization</td>
 		<td><input type="text" name="company"></td>

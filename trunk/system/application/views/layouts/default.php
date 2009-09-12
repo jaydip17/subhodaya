@@ -165,7 +165,7 @@ document.write('</td></table>')
       <a href="<?=base_url();?>sahithi/"><?=$more['9']->matter?></a>|
       <a href="<?=base_url()."contact"?>?&height=350&width=550" class="thickbox" title="Please Contact Us"><?=$more['40']->matter?></a>|
       <a href="<?=base_url()."contact/feedback"?>?&height=350&width=550" class="thickbox" title="Your Feedback"><?=$more['41']->matter?></a>|
-      <a href="<?=base_url()."contact/advertise"?>?&height=350&width=550" class="thickbox" title="Your Feedback"><?=$more['42']->matter?></a>
+      <a href="<?=base_url()."contact/advertise"?>?&height=350&width=550" class="thickbox" title="For your add location"><?=$more['42']->matter?></a>
     </div>
    
  </td>

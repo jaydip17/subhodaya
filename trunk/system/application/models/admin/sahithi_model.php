@@ -36,8 +36,12 @@ class Sahithi_Model extends Model {
     	{
     		$this->db->where('id',$item);
     		$this->db->delete('sahithi');
+    		if(file_exists("./assets/sahithi/news_img'.$item.'.jpg")){
     		unlink('./assets/sahithi/news_img'.$item.'.jpg');
+    		}
+    		if(file_exists("./assets/sahithi/news_img'.$item.'_thumb.jpg")){
     		unlink('./assets/sahithi/news_img'.$item.'_thumb.jpg');
+    		}
     	}
 	}
     function edit1($id,$homepage)

@@ -92,6 +92,7 @@ class Mahila extends Controller {
 		$pagination=$this->pagination->create_links();
 		$mahila=$this->Mahila_Model->get_mahila($type,$count=false);
 		//print_r($mahila);
+		//echo $onload;
 		$data=array(	'news'  =>$mahila,
 						'more'=>$more,
 					'pagination'=>$pagination,

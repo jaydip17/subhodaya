@@ -118,6 +118,8 @@ padding-left: 20px;
           				 	?>
           				 </div>
           				 <div id="divcontent">
+          				 <img src="<?=base_url();?>assets/imgs/loadingAnimation.gif" align="middle" style="padding: 200px 0px 0px 80px;"></img>
+    					
     						<!--<ul>
     						<? foreach ($news as $row): ?>
     						<li><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>"><? echo $row->heading;?></a></li>

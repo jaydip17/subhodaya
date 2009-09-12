@@ -15,7 +15,7 @@
 	<tr>
 		<td><? echo form_label('Video Name','name');?></td>
 		<td><?=form_input('name');?></td>
-	</tr>
+	</tr> 
 	<tr>
 		<td><? echo form_label('Video Duration','time');?></td>
 		<td><?=form_input('time');?></td>

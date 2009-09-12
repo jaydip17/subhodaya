@@ -66,7 +66,7 @@ class Mahila extends Controller {
 		$config['max_width']  = '1024';
 		$config['max_height']  = '768';
 		
-		$this->load->library('upload', $config);
+		$this->load->library('upload',$config);
 	
 		if ( ! $this->upload->do_upload('image'))
 		{ 

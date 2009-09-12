@@ -82,7 +82,7 @@ var pauseit=1
 //Specify the marquee's content (don't delete <nobr> tag)
 //Keep all content on ONE line, and backslash any single quotations (ie: that\'s great):
 
-var marqueecontent='<nobr><span style="font: bold 14px Verdana">';
+var marqueecontent='<nobr><span id="more-news-div" style="font: bold 14px Verdana;">';
 	marqueecontent+="<?php foreach ($activenews as $news){?>&nbsp;<img src='<?=base_url()?>assets/imgs/sub-img.jpg'/>&nbsp;<a href='<?=base_url();?>news/newsdetails/<?=$news->id?>'><?php echo $news->heading;?></a><?} ?>";
 	marqueecontent+="</span></nobr>";
 

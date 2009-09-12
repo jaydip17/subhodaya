@@ -1,13 +1,19 @@
 -- phpMyAdmin SQL Dump
--- version 2.11.5
+-- version 3.1.3
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 10, 2009 at 07:18 AM
--- Server version: 5.0.51
--- PHP Version: 5.2.5
+-- Generation Time: Sep 12, 2009 at 04:54 AM
+-- Server version: 5.1.32
+-- PHP Version: 5.2.9-1
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `subhodaya`
@@ -21,14 +27,14 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
 DROP TABLE IF EXISTS `cinema`;
 CREATE TABLE IF NOT EXISTS `cinema` (
-  `id` int(10) NOT NULL auto_increment,
+  `id` int(10) NOT NULL AUTO_INCREMENT,
   `type` int(10) NOT NULL,
-  `heading` varchar(100) character set utf8 collate utf8_unicode_ci NOT NULL,
-  `summary` text character set utf8 collate utf8_unicode_ci NOT NULL,
-  `description` text character set utf8 collate utf8_unicode_ci NOT NULL,
-  `insert_date` timestamp NOT NULL default CURRENT_TIMESTAMP,
-  `active` int(1) NOT NULL default '0',
-  PRIMARY KEY  (`id`)
+  `heading` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `summary` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `description` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `insert_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `active` int(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=25 ;
 
 --
@@ -36,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `cinema` (
 --
 
 INSERT INTO `cinema` (`id`, `type`, `heading`, `summary`, `description`, `insert_date`, `active`) VALUES
-(3, 1, '<font class="UnicodeContent">కెఆర్వీకి ఎస్వీఆర్ అవార్డు</font>', '<font class="UnicodeContent">తెలుగు చలన చిత్ర పరిశ్రమలో నభూతో నభవిష్యతి\nఅన్న తరహాలో ఎన్నో పాత్రలకు ప్రాణప్రతిష్ఠ చేసిన స్వర్గీయ ఎస్.వి.రంగారావు\nపేరిట ఏర్పాటు చేసిన ఎస్వీఆర్ స్మారక కంకణాన్ని సీనియర్ నటి కె.ఆర్.విజయ\nస్వీకరించనున్నారు. అమ్మవారి</font>', '<font class="UnicodeContent">పాత్రలకు తనకు తానే సాటి అనిపించుకుని,\nనటిగా 400కు పైగా చిత్రాల్లో నటించి తెలుగు, తమిళ ప్రేక్షకుల హృదయాలలో\nచెరగని ముద్ర వేసిన నటి కె.ఆర్.విజయ. ఎస్వీ ఆర్ ఇంటర్నేషనల్ అకాడమీ\n(యుఎస్ఎ)తో కలిసి ప్రముఖ సాంస్కృతిక సంస్థ ''ఆరాధన'' ఈనెల 3న రవీంద్రభారతిలో\nఈ స్వర్ణకంకణ ప్రదానోత్సవాన్ని నిర్వహించనుంది. అమెరికాలోని ప్రవాస\nభారతీయలు ఈ కార్యక్రమ నిర్వహణకు ఆర్థిక సౌజన్యాన్ని అందిస్తున్నట్టు\n''ఆరాధన'' అద్యక్షుడు గుదిబండ వెంకటరెడ్డి, ఎస్వీ రంగారావు ఇంటర్నేషనల్\nఅకాడమీ చైర్మన్ చందు శ్రీనివాస్ తెలిపారు.<br>\n<br>\nస్వర్ణకంకణ ప్రదానోత్సవ కార్యక్రమానికి ఆర్థిక మంత్రి కె.రోశయ్య ముఖ్య\nఅతిథిగా విచ్చేస్తారు. దర్శకరత్న డాక్టర్ దాసరినారాయణరావు చేతులమీదుగా\nఅవార్డు ప్రదానం జరుగుతుంది. సభాధ్యక్షులుగా ''ఆంధ్రప్రభ'' సంపాదకులు\nపి.విజయబాబు, గౌరవ అతిథిగా రాష్ట్ర ప్రభుత్వ ప్రధాన కార్యదర్శి (రెవెన్యూ\nధర్యాదాయ శాఖ), విశిష్ట అతిథిగా ఇండియన్ మీడియా సెంటర్ (న్యూఢిల్లీ)\nచైర్మన్ శ్యాం ఖోస్లా పాల్గొంటారు. పద్మశ్రీ శోభానాయుడు జ్యోతి ప్రజ్వలన\nచేస్తారు. వర్దమాన రచయిత్రి శ్రుతకీర్తి వ్యాఖ్యాతగా వ్యవహిస్తారు.\nఎస్వీఆర్ స్మారక కంకణాలను యు.వి.కృష్ణంరాజు 2007లోనూ, కైకాల సత్యనారాయణ\n2008లోనూ అందుకున్నారు.</font><br>', '2009-07-02 11:22:14', 1),
+(3, 1, '<font class="UnicodeContent">కెఆర్వీకి ఎస్వీఆర్</font>', '<font class="UnicodeContent">తెలుగు చలన చిత్ర పరిశ్రమలో నభూతో నభవిష్యతి\nఅన్న తరహాలో ఎన్నో పాత్రలకు ప్రాణప్రతిష్ఠ చేసిన స్వర్గీయ ఎస్.వి.రంగారావు\nపేరిట ఏర్పాటు చేసిన ఎస్వీఆర్ స్మారక కంకణాన్ని సీనియర్ నటి కె.ఆర్.విజయ\nస్వీకరించనున్నారు. అమ్మవారి</font>', '<font class="UnicodeContent">పాత్రలకు తనకు తానే సాటి అనిపించుకుని,\nనటిగా 400కు పైగా చిత్రాల్లో నటించి తెలుగు, తమిళ ప్రేక్షకుల హృదయాలలో\nచెరగని ముద్ర వేసిన నటి కె.ఆర్.విజయ. ఎస్వీ ఆర్ ఇంటర్నేషనల్ అకాడమీ\n(యుఎస్ఎ)తో కలిసి ప్రముఖ సాంస్కృతిక సంస్థ ''ఆరాధన'' ఈనెల 3న రవీంద్రభారతిలో\nఈ స్వర్ణకంకణ ప్రదానోత్సవాన్ని నిర్వహించనుంది. అమెరికాలోని ప్రవాస\nభారతీయలు ఈ కార్యక్రమ నిర్వహణకు ఆర్థిక సౌజన్యాన్ని అందిస్తున్నట్టు\n''ఆరాధన'' అద్యక్షుడు గుదిబండ వెంకటరెడ్డి, ఎస్వీ రంగారావు ఇంటర్నేషనల్\nఅకాడమీ చైర్మన్ చందు శ్రీనివాస్ తెలిపారు.<br>\n<br>\nస్వర్ణకంకణ ప్రదానోత్సవ కార్యక్రమానికి ఆర్థిక మంత్రి కె.రోశయ్య ముఖ్య\nఅతిథిగా విచ్చేస్తారు. దర్శకరత్న డాక్టర్ దాసరినారాయణరావు చేతులమీదుగా\nఅవార్డు ప్రదానం జరుగుతుంది. సభాధ్యక్షులుగా ''ఆంధ్రప్రభ'' సంపాదకులు\nపి.విజయబాబు, గౌరవ అతిథిగా రాష్ట్ర ప్రభుత్వ ప్రధాన కార్యదర్శి (రెవెన్యూ\nధర్యాదాయ శాఖ), విశిష్ట అతిథిగా ఇండియన్ మీడియా సెంటర్ (న్యూఢిల్లీ)\nచైర్మన్ శ్యాం ఖోస్లా పాల్గొంటారు. పద్మశ్రీ శోభానాయుడు జ్యోతి ప్రజ్వలన\nచేస్తారు. వర్దమాన రచయిత్రి శ్రుతకీర్తి వ్యాఖ్యాతగా వ్యవహిస్తారు.\nఎస్వీఆర్ స్మారక కంకణాలను యు.వి.కృష్ణంరాజు 2007లోనూ, కైకాల సత్యనారాయణ\n2008లోనూ అందుకున్నారు.</font><br>', '2009-07-02 11:22:14', 1),
 (5, 1, '<font class="UnicodeContent">''నింగి నేల నాదే'' వెబ్ సైట్</font>', '<font class="UnicodeContent">ఆత్మ విశ్వాసం, పట్టుదల ఉంటే సాధంచలేనిది\nఏదీ లేదనే సందేశం ఇచ్చే ''నింగి...నేల...నాదే'' చిత్రం ప్రతి ఒక్కరికీ\nస్ఫూర్తి కావాలని ముఖ్యమంత్రి డాక్టర్ వై.ఎస్.రాజశేఖర్ రెడ్డి\nఆక్షాక్షించారు. పలు అవార్డులు రివార్డులు అందుకున్న చైనా</font>', '<font class="UnicodeContent">చిత్రం ''ఇన్విజబుల్ వింగ్స్'' ఇప్పుడు\nతెలుగులో ''నింగి నేల నాదే'' పేరుతో అనువాదమై జూలై 3న ప్రేక్షకుల ముందుకు\nరానుంది. నిర్మాత చావ సుధారాణి ఈ చిత్రాన్ని తెలుగు ప్రేక్షకులకు\nఅందిస్తున్నారు. ఈ చిత్రం వెబ్ సైట్ ను ముఖ్యమంత్రి రాజశేఖర్ రెడ్డి\nహైద్రాబాద్ లో ఆవిష్కరించారు.<br>\n<br>\nఒక పని తలబెడితే ఆ పనిని చివరి వరకూ పూర్తి చేసే స్థైర్యం ఉండాలని\nబర్తృహరి చెప్పారనీ, అలాంటి స్థైర్యం మెండుగా ఉన్న యువతే ఈ చిత్రంలోని\nకథానాయిక అని వై.ఎస్. అన్నారు. నేటి యువతరానికి అలాంటి ఆత్మవిశ్వాసనమే\nకావాలనీ, ఏదైనా సాధించాలనే పట్టుదల అవసరమనీ, అంగవైకల్యం అవరోధం కాదనే\nధైర్యం కావాలని ఆయన ఉద్బోధించారు. చావా సుధారాణి మాట్లాడుతూ, ఎన్ని పనుల\nఒత్తిడిలో ఉన్నప్పటికీ ''నింగి నేల నాదే'' వెబ్ సైట్ ను ఆవిష్కరించిన\nముఖ్యమంత్రికి తన కృతజ్ఞతలని అన్నారు. యువతరం ఈ చిత్రం నుంచి\nఆత్మవిశ్వాసాన్ని నేర్చుకోవాలన్నదే తమ కోరిక అని అన్నారు. తమను చూడగానే ఈ\nచిత్రం పేరు బాగుందంటూ ముఖ్యమంత్రి ఆశీర్వదించడం చాలా సంతోషంగా ఉందన్నారు.\n''www.ninginelanaade.com''లో ఈ చిత్రానికి సంబంధించిన పూర్తి వివరాలను\nచూడవచ్చని ఆమె చెప్పారు.</font>', '2009-07-02 11:35:49', 0),
 (6, 3, '<font class="UnicodeContent">మీరా ప్రేమ బెడిసికొట్టిందా?</font>', '<font class="UnicodeContent">వెండితెరపై ఎంతటి సెలబ్రెటీలైనప్పటికీ\nప్రేమ, పెళ్లి వదంతులు వారిని కూడా వదిలిపెట్టవు. జాతీయ ఉత్తమ నటి\nమీరాజాస్మిన్ ప్రేమలో పడిందంటూ ఎప్పటికప్పుడు పలు వదంతులు రావడం, వాటిని\nఆమె ఖండించడం దాదాపు ఏడాది నుంచి సర్వసాధారమైంది. ఇప్పుడో రేపే మీరా\nజాస్మిన్ </font>', '<font class="UnicodeContent">సినిమాలకు స్వస్తి చెప్పనుందందనే వార్తలు\nరావడం, ఇందుకు భిన్నంగా మీరా కొత్త ప్రాజెక్టులు ఒప్పుకోవడం జరుగుతూనే\nఉంది. కొద్దికాలంగా మీరాజాస్మిన్, మాండలిన్ యు.రాజేష్ ప్రేమ వ్యవహారం\nచర్చనీయాంశమవుతోంది. మాండలిన్ శ్రీనివాస్ తమ్ముడే మాండలిన్ రాజేష్.\nమ్యూజిక్ కంపోజర్ అయిన రాజేష్, మీరా కొద్దికాలంగా చెన్నైలో కలిసే\nఉంటున్నప్పటికీ పెళ్లికి మాత్రం ఇంకా సమయాత్తం కాలేదు. అయితే ఈ శుభ ఘడియ\nరాకముందే వారిద్దరి మధ్య ప్రేమ వ్యవహారం బెడిసికొట్టిందనే ప్రచారం\nప్రస్తుతం జరుగుతోంది.<br>\n<br>\nరాజేష్ కంటే ముందుగానే తమిళ హీరో ప్రశాంత్, మీరా ప్రేమించుకున్నారంటూ\nఅప్పట్లో ప్రచారం జరిగింది. ప్రశాంత్ ఇటీవల తన భార్య గృహలక్ష్మితో\nవిడాకులు తీసుకోవడం కూడా ఆ వదంతులకు బలం చేకూరినట్టయింది. అయితే ఆ\nవదంతులను ప్రశాంత్ ఖండించారు. అయినప్పటికీ రాజేష్ తల్లిదండ్రులు మాత్రం\nమీరాను పెళ్లాడాలనుకున్న రాజేష్ కోరిక పట్ల సానుకూలంగా స్పందించలేదని\nఅంటున్నారు. ఈ క్రమంలోనే మీరా-రాజేష్ లు ప్రేమ వ్యవహారానికి కూడా ఇప్పుడు\nతెరపడిందంటూ చెన్నై వర్గాలు చెబుతున్నాయి. రాజేష్ సైతం ఈ విషయాన్ని\nధ్రువీకరించారని వారు చెబుతున్నారు. ''కాలమే అన్ని గాయలనూ మాన్పుతుంది.\nనేను ఎంతో ఊహించుకున్నాను. వాటికీ, ప్రస్తుతం జరుగుతున్న పరిణామాలకూ\nఏమాత్రం పొంతన లేదు. కాలమే అన్నిటికీ సమాధానమిస్తుంది'' అని రాజేష్\nవ్యాఖ్యానించినట్టు తెలుస్తోంది. ఇంతకుమించు తాను ఏమీ చెప్పదలచుకోలేదనీ,\nప్రస్తుతం తన దృష్టంతా మ్యూడిక్ కెరీర్ మీదే కేంద్రీకరించబోతున్నాననీ\nరాజేష్ చెబుతున్నారు. మీరా సైతం ప్రస్తుతం తన కెరీర్ పైనే ఎక్కువ దృష్టి\nసారించాలని నిశ్చయించుకుందని అంటున్నారు. కొత్త హీరోలతో పనిచేసేందుకు కూడా\nఆసక్తి కనబరుస్తూ వరుసగా పలు తమిళ, మలయాళ చిత్రాలకు కమిట్ అవుతోంది.</font>', '2009-07-02 12:21:10', 1),
 (7, 4, '<font class="UnicodeContent">''మల్లన్న'' జూలైలో లేనట్టే?!</font>', '<font class="UnicodeContent">''అపరిచితుడు'' చిత్రం తర్వాత హీరో విక్రమ్ ను\nమళ్లీ ఆ స్థాయిలో ప్రెజెంట్ చేస్తున్న చిత్రంగా ''మల్లన్న'' కొద్దికాలంగా\nవిపరీతమైన పబ్లిసిటీని చూరగొంటోంది. సుశీ గణేషన్ దర్శకత్వంలో కళైపులి థాను\nసుమారు 45 కోట్ల భారీ బడ్జెట్ తో ఈ చిత్రాన్ని </font>', '<font class="UnicodeContent">నిర్మించడం, విక్రమ్ కు జోడిగా గ్లామర్ నటి\nశ్రియ నటిస్తుండటంతో పాటు పలు హైలైట్స్ ఈ చిత్రంలో చోటుచేసుకుంటున్నాయి.\nతమిళంలో ఈ చిత్రం ''కందసామి'' పేరుతో విడుదల కానుంది. దాదాపు రెండేళ్ల పాటు\nచిత్రీకరణ జరుపుకొన్న ఈ చిత్రం ఎప్పుడెప్పుడు విడుదలవుతుందా అని చియాన్\nవిక్రమ్ అభిమానులు ఎదురుతెన్నులు చూస్తున్నారు. అయితే మరో నెలరోజుల పాటు ఈ\nనిరీక్షణ తప్పదనీ, జూలైలో ''మల్లన్న'' వెలుగుచూసే అవకాశాలు దాదాపు\nలేనట్టేననీ చెన్నై వర్గాల ద్వారా తెలుస్తోంది. హాలీవుడ్ సినిమా చూస్తున్న\nఅనుభూతిని కలిగించే విధంగా కంప్యూటర్ గ్రాఫిక్స్ ఇందులో ఉండబోతున్నాయనీ,\nవీటి కోసం మరికొంత వ్యవధి అనివార్యం కానుందనీ, ఏరకంగా చూసినా ఆగస్టులోనే ఈ\nచిత్రం విడుదలయ్యే అవకాశాలున్నాయనీ ఆ వర్గాలు చెబుతున్నారు.<br>\n<br>\nసమాజంలో అంతకంతకూ విశ్వరూపం దాలుస్తున్న ఆర్థిక అసమానతలపై పోరాటం సాగించిన\nఓ ప్రభుత్వాధికారి కథే ''మల్లన్న''. సిబిఐలో ఆర్థిక నేరాల విభాగాన్ని\nపర్యవేక్షించే అధికారిగా విక్రమ్ ఇందులో కనపించనున్నారు. రాబిన్ హుడ్\nతరహాలో ఆయన పాత్ర ఉండబోతోంది. విదేశాల నుంచి ఇండియాకి తిరిగి వచ్చిన\nఅభ్యుదయ భావాలు కలిగిన అమ్మాయిగా శ్రియ నటించింది. నటశేఖర కృష్ణ ఓ కీలక\nపాత్ర పోషించారు. గీత రచయిత సాహితి ఈ చిత్రం ద్వారా మాటల రచయితిగా పరిచయం\nకావడం, దేవిశ్రీప్రసాద్ సంగీతం ప్రత్యేక ఆకర్షణలు కాబోతున్నాయి. విక్రమ్\nఐదు గెటప్స్ లో కనిపించ నుండగా, ఇందులోని పాటలన్నింటినికీ ఆయన స్వయంగా\nనేపథ్యగానం అందించారు. తెలుగులో తన పాత్రకు డబ్బింగ్ కూడా చెప్పుకున్నారు.\nఇన్ని ప్రత్యేకతలున్న ''మల్లన్న'' చిత్రాన్ని వివిధ భాషల్లో 900కు పైగా\nథియేటర్లరో ప్రపంచవ్యాప్తంగా విడుదల చేసేందుకు నిర్మాత కళైపులి థాను\nప్లాన్ చేస్తున్నారు.</font>', '2009-07-02 12:23:04', 1),
@@ -65,10 +71,10 @@ INSERT INTO `cinema` (`id`, `type`, `heading`, `summary`, `description`, `insert
 
 DROP TABLE IF EXISTS `cinema_cat`;
 CREATE TABLE IF NOT EXISTS `cinema_cat` (
-  `id` int(10) NOT NULL auto_increment,
-  `cinema_type` varchar(100) character set utf8 collate utf8_unicode_ci NOT NULL,
-  `active` int(1) NOT NULL default '0',
-  PRIMARY KEY  (`id`)
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `cinema_type` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `active` int(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
@@ -91,12 +97,12 @@ INSERT INTO `cinema_cat` (`id`, `cinema_type`, `active`) VALUES
 
 DROP TABLE IF EXISTS `gallery_categeory`;
 CREATE TABLE IF NOT EXISTS `gallery_categeory` (
-  `id` int(20) NOT NULL auto_increment,
-  `catname` varchar(200) character set utf8 collate utf8_unicode_ci NOT NULL,
+  `id` int(20) NOT NULL AUTO_INCREMENT,
+  `catname` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `parentid` int(20) NOT NULL,
   `active` int(10) NOT NULL,
-  `update_date` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
-  PRIMARY KEY  (`id`)
+  `update_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20 ;
 
 --
@@ -121,12 +127,12 @@ INSERT INTO `gallery_categeory` (`id`, `catname`, `parentid`, `active`, `update_
 
 DROP TABLE IF EXISTS `gallery_images`;
 CREATE TABLE IF NOT EXISTS `gallery_images` (
-  `id` int(20) NOT NULL auto_increment,
-  `title` varchar(200) character set utf8 collate utf8_unicode_ci NOT NULL,
+  `id` int(20) NOT NULL AUTO_INCREMENT,
+  `title` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `parentid` int(20) NOT NULL,
   `active` int(10) NOT NULL,
-  `views` int(10) NOT NULL default '100',
-  PRIMARY KEY  (`id`)
+  `views` int(10) NOT NULL DEFAULT '100',
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
 
 --
@@ -146,7 +152,7 @@ INSERT INTO `gallery_images` (`id`, `title`, `parentid`, `active`, `views`) VALU
 (10, 'చంద్రబాబు', 15, 0, 100),
 (11, 'వై .ఎస్.', 17, 1, 100),
 (12, 'వై .ఎస్.', 17, 1, 122),
-(13, 'వై .ఎస్.ఆర్.', 17, 1, 108),
+(13, 'వై .ఎస్.ఆర్.', 17, 1, 115),
 (14, 'dfsdf dsf sdfds<br>', 15, 1, 100),
 (15, 'sdasd', 15, 0, 106),
 (16, 'sdasd', 15, 0, 102),
@@ -160,12 +166,12 @@ INSERT INTO `gallery_images` (`id`, `title`, `parentid`, `active`, `views`) VALU
 
 DROP TABLE IF EXISTS `gall_rating`;
 CREATE TABLE IF NOT EXISTS `gall_rating` (
-  `id` int(10) NOT NULL auto_increment,
+  `id` int(10) NOT NULL AUTO_INCREMENT,
   `galleryid` int(10) NOT NULL,
   `ipaddress` varchar(50) NOT NULL,
-  `rating` varchar(100) NOT NULL default '3.5',
-  `views` int(10) NOT NULL default '10',
-  PRIMARY KEY  (`id`)
+  `rating` varchar(100) NOT NULL DEFAULT '3.5',
+  `views` int(10) NOT NULL DEFAULT '10',
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
@@ -183,13 +189,13 @@ INSERT INTO `gall_rating` (`id`, `galleryid`, `ipaddress`, `rating`, `views`) VA
 
 DROP TABLE IF EXISTS `greetings`;
 CREATE TABLE IF NOT EXISTS `greetings` (
-  `id` int(10) NOT NULL auto_increment,
+  `id` int(10) NOT NULL AUTO_INCREMENT,
   `type` int(10) NOT NULL,
-  `name` varchar(100) character set utf8 collate utf8_unicode_ci NOT NULL,
-  `summery` text character set utf8 collate utf8_unicode_ci NOT NULL,
-  `insert_date` timestamp NOT NULL default CURRENT_TIMESTAMP,
-  `active` int(1) NOT NULL default '0',
-  PRIMARY KEY  (`id`)
+  `name` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `summery` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `insert_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `active` int(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 --
@@ -213,10 +219,10 @@ INSERT INTO `greetings` (`id`, `type`, `name`, `summery`, `insert_date`, `active
 
 DROP TABLE IF EXISTS `greeting_cat`;
 CREATE TABLE IF NOT EXISTS `greeting_cat` (
-  `id` int(10) NOT NULL auto_increment,
-  `gree_cat` varchar(100) character set utf8 collate utf8_unicode_ci NOT NULL,
-  `active` int(1) NOT NULL default '0',
-  PRIMARY KEY  (`id`)
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `gree_cat` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `active` int(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
 
 --
@@ -248,10 +254,10 @@ INSERT INTO `greeting_cat` (`id`, `gree_cat`, `active`) VALUES
 
 DROP TABLE IF EXISTS `ipaddress`;
 CREATE TABLE IF NOT EXISTS `ipaddress` (
-  `id` int(10) NOT NULL auto_increment,
+  `id` int(10) NOT NULL AUTO_INCREMENT,
   `pollid` int(10) NOT NULL,
   `ipadress` varchar(200) NOT NULL,
-  PRIMARY KEY  (`id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
@@ -270,16 +276,16 @@ INSERT INTO `ipaddress` (`id`, `pollid`, `ipadress`) VALUES
 
 DROP TABLE IF EXISTS `mahila`;
 CREATE TABLE IF NOT EXISTS `mahila` (
-  `id` int(10) NOT NULL auto_increment,
+  `id` int(10) NOT NULL AUTO_INCREMENT,
   `cat_id` int(10) NOT NULL,
-  `heading` varchar(150) character set utf8 collate utf8_unicode_ci NOT NULL,
-  `summary` text character set utf8 collate utf8_unicode_ci NOT NULL,
-  `description` text character set utf8 collate utf8_unicode_ci NOT NULL,
-  `insert_date` timestamp NOT NULL default CURRENT_TIMESTAMP,
-  `homepage` int(1) NOT NULL default '0',
-  `active` int(1) NOT NULL default '0',
-  PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=43 ;
+  `heading` varchar(150) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `summary` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `description` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `insert_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `homepage` int(1) NOT NULL DEFAULT '0',
+  `active` int(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=44 ;
 
 --
 -- Dumping data for table `mahila`
@@ -298,7 +304,8 @@ INSERT INTO `mahila` (`id`, `cat_id`, `heading`, `summary`, `description`, `inse
 (31, 1, 'ఆడ వాళ్ళ ప్రత్యేకం', 'ఆడ వాళ్ళ ప్రత్యేకం ఆడ వాళ్ళ ప్రత్యేకం ఆడ వాళ్ళ ప్రత్యేకం', 'ఆడ వాళ్ళ ప్రత్యేకం', '2009-08-22 19:33:55', 0, 1),
 (32, 1, 'ఆడ వాళ్ళ ప్రత్యేకం', 'ఆడ వాళ్ళ ప్రత్యేకం ఆడ వాళ్ళ ప్రత్యేకం ఆడ వాళ్ళ ప్రత్యేకం', 'ఆడ వాళ్ళ ప్రత్యేకం', '2009-08-22 19:33:55', 1, 1),
 (41, 3, 'ముక్కుపుడక', 'ముక్కుపుడక అంటే మహిళలకు ఎంత మక్కువో తెలియాలంటే పురాణాలలోని ఎన్నో', '<p>ముక్కుపుడక అంటే మహిళలకు ఎంత మక్కువో తెలియాలంటే పురాణాలలోని ఎన్నో ఉదాహరణలు ఇవ్వచ్చు. <a href="http://te.wikipedia.org/wiki/%E0%B0%AD%E0%B0%BE%E0%B0%AE%E0%B0%BE%E0%B0%95%E0%B0%B2%E0%B0%BE%E0%B0%AA%E0%B0%82" title="భామాకలాపం" class="mw-redirect">భామాకలాపంలో</a>\nఒకసారి సత్యభామ చెలికత్తెను శ్రీకృష్ణుని వద్దకు రాయబారం కోసం\nవెళ్ళమంటుంది. ఎన్ని లంచాలు ఇస్తానన్నా, ఎన్ని నగలు ఇస్తానన్నా\nవెళ్లనంటుంది. విసిగిన సత్య చివరకు అసలు నీకేం కావాలో చెప్పవే అని అడిగితే\nసత్యభామ ముక్కున ఉన్న ముక్కెర కావాలంటుంది. అది ఇవ్వగానే లంకెబెందెలు\nదొరికినంత సంతోషమ్గో శ్రీకృష్ణుని వద్దకు వెళ్ళి రాయబారం నడుపుతుంది.</p>\n<p>హిందూ దేవతలు అందరికీ ముక్కెర తప్పకుండా ఉంటుంది. బెజవాడ కృష్ణానది పొంగి కనకదుర్గమ్మ ముక్కెరను తాకితే భూమి మీద ఎవ్వరూ మిగలరని <a href="http://te.wikipedia.org/wiki/%E0%B0%AA%E0%B1%8B%E0%B0%A4%E0%B1%81%E0%B0%B2%E0%B1%82%E0%B0%B0%E0%B0%BF_%E0%B0%B5%E0%B1%80%E0%B0%B0%E0%B0%AC%E0%B1%8D%E0%B0%B0%E0%B0%B9%E0%B1%8D%E0%B0%AE%E0%B1%87%E0%B0%82%E0%B0%A6%E0%B1%8D%E0%B0%B0%E0%B0%B8%E0%B1%8D%E0%B0%B5%E0%B0%BE%E0%B0%AE%E0%B0%BF" title="పోతులూరి వీరబ్రహ్మేంద్రస్వామి">పోతులూరి వీరబ్రహ్మేంద్రస్వామి</a> గారు కాలజ్ఞానంలో చెబుతారు.</p>', '2009-08-31 13:15:54', 1, 0),
-(42, 7, 'బ్యుటి &amp; కెరీర్ <br>', '<b>ఈద్ గాహ్</b> లేదా <b>ఈద్గాహ్</b> ఒక గాలి బయట మైదాన స్థలంలోని <a href="http://te.wikipedia.org/wiki/%E0%B0%AE%E0%B0%B8%E0%B1%8D%E0%B0%9C%E0%B0%BF%E0%B0%A6%E0%B1%8D" title="మస్జిద్">మస్జిద్</a>, సాధారణంగా ఇది ', '<p><b>ఈద్ గాహ్</b> లేదా <b>ఈద్గాహ్</b> ఒక గాలి బయట మైదాన స్థలంలోని <a href="http://te.wikipedia.org/wiki/%E0%B0%AE%E0%B0%B8%E0%B1%8D%E0%B0%9C%E0%B0%BF%E0%B0%A6%E0%B1%8D" title="మస్జిద్">మస్జిద్</a>, సాధారణంగా ఇది ఊరి బయట వుంటుంది. దీనిని ఈద్ (పండుగ), గాహ్ (ప్రదేశం), ఈద్ సమయాన <a href="http://te.wikipedia.org/wiki/%E0%B0%B8%E0%B0%B2%E0%B0%BE%E0%B0%B9%E0%B1%8D" title="సలాహ్" class="mw-redirect">సలాహ్</a> (నమాజు) లేదా ఈద్ నమాజ్ చేయుటకు ఉపయోగిస్తారు.<sup id="cite_ref-0" class="reference"><a href="http://te.wikipedia.org/wiki/%E0%B0%88%E0%B0%A6%E0%B1%8D%E0%B0%97%E0%B0%BE%E0%B0%B9%E0%B1%8D#cite_note-0">[1]</a></sup></p>\n<p><a href="http://te.wikipedia.org/wiki/%E0%B0%AE%E0%B0%B9%E0%B0%AE%E0%B1%8D%E0%B0%AE%E0%B0%A6%E0%B1%81_%E0%B0%AA%E0%B1%8D%E0%B0%B0%E0%B0%B5%E0%B0%95%E0%B1%8D%E0%B0%A4" title="మహమ్మదు ప్రవక్త" class="mw-redirect">మహమ్మదు ప్రవక్త</a> దీనిని ఆచరణలోకి తీసుకు వచ్చారు.<sup>sawa</sup> ఈద్ నమాజ్ ఊరి బయట చదివే రివాజు. ఈద్ నమాజ్ ఊరి బయట చదవడం <a href="http://te.wikipedia.org/wiki/%E0%B0%B8%E0%B1%81%E0%B0%A8%E0%B1%8D%E0%B0%A8%E0%B0%B9%E0%B1%8D" title="సున్నహ్">సున్నహ్</a> కూడానూ.<sup id="cite_ref-1" class="reference"><a href="http://te.wikipedia.org/wiki/%E0%B0%88%E0%B0%A6%E0%B1%8D%E0%B0%97%E0%B0%BE%E0%B0%B9%E0%B1%8D#cite_note-1">[2]</a></sup></p>\n<p>ప్రప్రథమ ఈద్ గాహ్ <a href="http://te.wikipedia.org/wiki/%E0%B0%AE%E0%B0%A6%E0%B1%80%E0%B0%A8%E0%B0%BE" title="మదీనా">మదీనా</a> నగరపు పొలిమేరల్లో యుండేది, ఇది <a href="http://te.wikipedia.org/wiki/%E0%B0%AE%E0%B0%B8%E0%B1%8D%E0%B0%9C%E0%B0%BF%E0%B0%A6%E0%B1%8D-%E0%B0%8E-%E0%B0%A8%E0%B0%AC%E0%B0%B5%E0%B0%BF" title="మస్జిద్-ఎ-నబవి" class="mw-redirect">మస్జిద్-ఎ-నబవి</a> నుండి దాదాపు 1000 అంగల దూరంలో వుండేది.<sup id="cite_ref-2" class="reference"><a href="http://te.wikipedia.org/wiki/%E0%B0%88%E0%B0%A6%E0%B1%8D%E0%B0%97%E0%B0%BE%E0%B0%B9%E0%B1%8D#cite_note-2">[3]</a></sup><sup>,</sup><sup id="cite_ref-3" class="reference"><a href="http://te.wikipedia.org/wiki/%E0%B0%88%E0%B0%A6%E0%B1%8D%E0%B0%97%E0%B0%BE%E0%B0%B9%E0%B1%8D#cite_note-3">[4]</a></sup></p>\n<p>సంవత్సరంలో రెండు ప్రముఖ పండుగలైన <a href="http://te.wikipedia.org/wiki/%E0%B0%B0%E0%B0%82%E0%B0%9C%E0%B0%BE%E0%B0%A8%E0%B1%8D" title="రంజాన్">రంజాన్</a> మరియు <a href="http://te.wikipedia.org/wiki/%E0%B0%AC%E0%B0%95%E0%B1%8D%E0%B0%B0%E0%B1%80%E0%B0%A6%E0%B1%81" title="బక్రీదు" class="mw-redirect">బక్రీదు</a>\nల సామూహిక నమాజు ఈ ఈద్‌గాహ్ లో ఆచరించబడుతుంది. ఆంధ్రప్రదేశ్ లోని\nగ్రామాలలో వీటినే "నమాజు కట్ట" అని కూడా వ్యవహరిస్తూ వుంటారు. పండుగలు\nకాని సమయాలలో ఈ ఈద్గాహ్ ను ఖాళీగా వుంచడమో లేక ధార్మిక కార్యక్రమాల\nఉపయోగానికో ఉపయోగిస్తుంటారు.</p>\n<p>పండుగల రోజున ఊరినుండి ఈద్గాహ్ కు బయలుదేరే ముస్లిం సమూహం <a href="http://te.wikipedia.org/wiki/%E0%B0%85%E0%B0%B2%E0%B1%8D%E0%B0%B2%E0%B0%BE%E0%B0%B9%E0%B1%8D" title="అల్లాహ్">అల్లాహ్</a>\nస్తోత్రములు "అల్లాహు అక్బర్, అల్లాహు అక్బర్, లాఇలాహ ఇల్లల్లాహు అల్లాహు\nఅక్బర్, అల్లాహు అక్బర్, వలిల్లాహిల్ హమ్ద్" (అల్లాహ్ ఘనమైన వాడు, ఒక్కడే\nదేవుడు, అతడే అల్లాహ్, మేమంతా నీనామమే కీర్తిస్తాము) అని పలుకుతూ\nబయలుదేరి, ఈద్గాహ్ కు చేరేంతవరకూ పఠిస్తూనే వుంటారు.</p>', '2009-08-31 13:22:28', 1, 0);
+(42, 7, 'బ్యుటి &amp; కెరీర్ <br>', '<b>ఈద్ గాహ్</b> లేదా <b>ఈద్గాహ్</b> ఒక గాలి బయట మైదాన స్థలంలోని <a href="http://te.wikipedia.org/wiki/%E0%B0%AE%E0%B0%B8%E0%B1%8D%E0%B0%9C%E0%B0%BF%E0%B0%A6%E0%B1%8D" title="మస్జిద్">మస్జిద్</a>, సాధారణంగా ఇది ', '<p><b>ఈద్ గాహ్</b> లేదా <b>ఈద్గాహ్</b> ఒక గాలి బయట మైదాన స్థలంలోని <a href="http://te.wikipedia.org/wiki/%E0%B0%AE%E0%B0%B8%E0%B1%8D%E0%B0%9C%E0%B0%BF%E0%B0%A6%E0%B1%8D" title="మస్జిద్">మస్జిద్</a>, సాధారణంగా ఇది ఊరి బయట వుంటుంది. దీనిని ఈద్ (పండుగ), గాహ్ (ప్రదేశం), ఈద్ సమయాన <a href="http://te.wikipedia.org/wiki/%E0%B0%B8%E0%B0%B2%E0%B0%BE%E0%B0%B9%E0%B1%8D" title="సలాహ్" class="mw-redirect">సలాహ్</a> (నమాజు) లేదా ఈద్ నమాజ్ చేయుటకు ఉపయోగిస్తారు.<sup id="cite_ref-0" class="reference"><a href="http://te.wikipedia.org/wiki/%E0%B0%88%E0%B0%A6%E0%B1%8D%E0%B0%97%E0%B0%BE%E0%B0%B9%E0%B1%8D#cite_note-0">[1]</a></sup></p>\n<p><a href="http://te.wikipedia.org/wiki/%E0%B0%AE%E0%B0%B9%E0%B0%AE%E0%B1%8D%E0%B0%AE%E0%B0%A6%E0%B1%81_%E0%B0%AA%E0%B1%8D%E0%B0%B0%E0%B0%B5%E0%B0%95%E0%B1%8D%E0%B0%A4" title="మహమ్మదు ప్రవక్త" class="mw-redirect">మహమ్మదు ప్రవక్త</a> దీనిని ఆచరణలోకి తీసుకు వచ్చారు.<sup>sawa</sup> ఈద్ నమాజ్ ఊరి బయట చదివే రివాజు. ఈద్ నమాజ్ ఊరి బయట చదవడం <a href="http://te.wikipedia.org/wiki/%E0%B0%B8%E0%B1%81%E0%B0%A8%E0%B1%8D%E0%B0%A8%E0%B0%B9%E0%B1%8D" title="సున్నహ్">సున్నహ్</a> కూడానూ.<sup id="cite_ref-1" class="reference"><a href="http://te.wikipedia.org/wiki/%E0%B0%88%E0%B0%A6%E0%B1%8D%E0%B0%97%E0%B0%BE%E0%B0%B9%E0%B1%8D#cite_note-1">[2]</a></sup></p>\n<p>ప్రప్రథమ ఈద్ గాహ్ <a href="http://te.wikipedia.org/wiki/%E0%B0%AE%E0%B0%A6%E0%B1%80%E0%B0%A8%E0%B0%BE" title="మదీనా">మదీనా</a> నగరపు పొలిమేరల్లో యుండేది, ఇది <a href="http://te.wikipedia.org/wiki/%E0%B0%AE%E0%B0%B8%E0%B1%8D%E0%B0%9C%E0%B0%BF%E0%B0%A6%E0%B1%8D-%E0%B0%8E-%E0%B0%A8%E0%B0%AC%E0%B0%B5%E0%B0%BF" title="మస్జిద్-ఎ-నబవి" class="mw-redirect">మస్జిద్-ఎ-నబవి</a> నుండి దాదాపు 1000 అంగల దూరంలో వుండేది.<sup id="cite_ref-2" class="reference"><a href="http://te.wikipedia.org/wiki/%E0%B0%88%E0%B0%A6%E0%B1%8D%E0%B0%97%E0%B0%BE%E0%B0%B9%E0%B1%8D#cite_note-2">[3]</a></sup><sup>,</sup><sup id="cite_ref-3" class="reference"><a href="http://te.wikipedia.org/wiki/%E0%B0%88%E0%B0%A6%E0%B1%8D%E0%B0%97%E0%B0%BE%E0%B0%B9%E0%B1%8D#cite_note-3">[4]</a></sup></p>\n<p>సంవత్సరంలో రెండు ప్రముఖ పండుగలైన <a href="http://te.wikipedia.org/wiki/%E0%B0%B0%E0%B0%82%E0%B0%9C%E0%B0%BE%E0%B0%A8%E0%B1%8D" title="రంజాన్">రంజాన్</a> మరియు <a href="http://te.wikipedia.org/wiki/%E0%B0%AC%E0%B0%95%E0%B1%8D%E0%B0%B0%E0%B1%80%E0%B0%A6%E0%B1%81" title="బక్రీదు" class="mw-redirect">బక్రీదు</a>\nల సామూహిక నమాజు ఈ ఈద్‌గాహ్ లో ఆచరించబడుతుంది. ఆంధ్రప్రదేశ్ లోని\nగ్రామాలలో వీటినే "నమాజు కట్ట" అని కూడా వ్యవహరిస్తూ వుంటారు. పండుగలు\nకాని సమయాలలో ఈ ఈద్గాహ్ ను ఖాళీగా వుంచడమో లేక ధార్మిక కార్యక్రమాల\nఉపయోగానికో ఉపయోగిస్తుంటారు.</p>\n<p>పండుగల రోజున ఊరినుండి ఈద్గాహ్ కు బయలుదేరే ముస్లిం సమూహం <a href="http://te.wikipedia.org/wiki/%E0%B0%85%E0%B0%B2%E0%B1%8D%E0%B0%B2%E0%B0%BE%E0%B0%B9%E0%B1%8D" title="అల్లాహ్">అల్లాహ్</a>\nస్తోత్రములు "అల్లాహు అక్బర్, అల్లాహు అక్బర్, లాఇలాహ ఇల్లల్లాహు అల్లాహు\nఅక్బర్, అల్లాహు అక్బర్, వలిల్లాహిల్ హమ్ద్" (అల్లాహ్ ఘనమైన వాడు, ఒక్కడే\nదేవుడు, అతడే అల్లాహ్, మేమంతా నీనామమే కీర్తిస్తాము) అని పలుకుతూ\nబయలుదేరి, ఈద్గాహ్ కు చేరేంతవరకూ పఠిస్తూనే వుంటారు.</p>', '2009-08-31 13:22:28', 1, 0),
+(43, 4, 'dxfgdgbxcv', 'zxcvxcvxcvcncbn', 'vnvbnvbnvbn', '2009-09-10 13:39:06', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -308,10 +315,10 @@ INSERT INTO `mahila` (`id`, `cat_id`, `heading`, `summary`, `description`, `inse
 
 DROP TABLE IF EXISTS `mahila_cat`;
 CREATE TABLE IF NOT EXISTS `mahila_cat` (
-  `id` int(10) NOT NULL auto_increment,
-  `cat_name` varchar(100) character set utf8 collate utf8_unicode_ci NOT NULL,
-  `active` int(1) NOT NULL default '0',
-  PRIMARY KEY  (`id`)
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `cat_name` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `active` int(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
 --
@@ -336,11 +343,11 @@ INSERT INTO `mahila_cat` (`id`, `cat_name`, `active`) VALUES
 
 DROP TABLE IF EXISTS `more`;
 CREATE TABLE IF NOT EXISTS `more` (
-  `id` int(10) NOT NULL auto_increment,
-  `matter` varchar(100) character set utf8 collate utf8_unicode_ci NOT NULL,
-  `active` int(1) NOT NULL default '0',
-  PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=41 ;
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `matter` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `active` int(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=45 ;
 
 --
 -- Dumping data for table `more`
@@ -386,7 +393,11 @@ INSERT INTO `more` (`id`, `matter`, `active`) VALUES
 (37, 'రేటింగ్', 0),
 (38, 'గ్యాలరీ మెను', 0),
 (39, 'మీ ఈమెయిలు', 0),
-(40, 'మిత్రుని పేరు', 0);
+(40, 'మిత్రుని పేరు', 0),
+(41, 'సంప్రదించు', 0),
+(42, 'ఫీడ్ బ్యాక్ ', 0),
+(43, 'అడ్వర్ టైస్', 0),
+(44, 'మమ్ము సంప్రదించు', 0);
 
 -- --------------------------------------------------------
 
@@ -396,15 +407,15 @@ INSERT INTO `more` (`id`, `matter`, `active`) VALUES
 
 DROP TABLE IF EXISTS `news`;
 CREATE TABLE IF NOT EXISTS `news` (
-  `id` int(10) NOT NULL auto_increment,
+  `id` int(10) NOT NULL AUTO_INCREMENT,
   `type` varchar(50) NOT NULL,
-  `heading` varchar(100) character set utf8 collate utf8_unicode_ci NOT NULL,
-  `summary` text character set utf8 collate utf8_unicode_ci NOT NULL,
-  `description` text character set utf8 collate utf8_unicode_ci NOT NULL,
-  `insert_date` timestamp NOT NULL default CURRENT_TIMESTAMP,
-  `breking_news` int(1) NOT NULL default '0',
+  `heading` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `summary` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `description` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `insert_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `breking_news` int(1) NOT NULL DEFAULT '0',
   `active` int(1) NOT NULL,
-  PRIMARY KEY  (`id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=58 ;
 
 --
@@ -412,7 +423,7 @@ CREATE TABLE IF NOT EXISTS `news` (
 --
 
 INSERT INTO `news` (`id`, `type`, `heading`, `summary`, `description`, `insert_date`, `breking_news`, `active`) VALUES
-(32, '2', '''ఈల'' వేసిన లోక్ సత్తా', '<font class="UnicodeContent">హైదరాబాద్ : ఈల గుర్తును లోక్ సత్తా\nపార్టీకి కేటాయిస్తున్నట్లు రాష్ట్ర ఎన్నికల సంఘం ఆ పార్టీకి\nలిఖితపూర్వకంగా సమాచారం అందించింది. ఈల గుర్తుని ఫ్రీ సింబల్స్ జాబితాలో\nచేర్చాలని, తమ పార్టీకి దాన్ని కేటాయించాలంటూ లోక్ సత్తా పార్టీ చేసిన\nవిజ్ఞప్తి పట్ల ఈసీ సానుకూలంగా స్పందించినట్లైంది. </font>', '<font class="UnicodeContent">అయితే, ఈల గుర్తు కేటాయింపు తాత్కాలికమేనని,\nత్వరలో జరగనున్న గ్రేటర్ హైదరాబాద్ ఎన్నికల్లో ఈల గుర్తు మీది లోక్ సత్తా\nపోటీ చేయవచ్చని ఈసీ స్పష్టం చేసింది. లోక్ సత్తా పార్టీ ప్రధాన కార్యదర్శి\nవి. లక్ష్మణ్ బాలాజీకి రాష్ట్ర ఎన్నికల సంఘం కార్యదర్శి జి.ఎం. రమేష్\nకుమార్ రాసిన లేఖలో ఈ విషయం స్పష్టం చేశారు. ఈ విషయాన్ని లోక్ సత్తా\nఅధికార ప్రతినిధులు వి.లక్ష్మణ్ బాలాజీ, మహ్మద్ ఇషాక్ ఖాన్ గురువారం\nమధ్యాహ్నం పార్టీ కేంద్ర కార్యాలయంలో నిర్వహించిన మీడియా సమావేశంలో\nవివరించారు</font>', '2009-06-26 10:19:17', 0, 1),
+(32, '2', '''ఈల'' వేసిన లోక్ సత్తా aaa', '<font class="UnicodeContent">హైదరాబాద్ : ఈల గుర్తును లోక్ సత్తా\nపార్టీకి కేటాయిస్తున్నట్లు రాష్ట్ర ఎన్నికల సంఘం ఆ పార్టీకి\nలిఖితపూర్వకంగా సమాచారం అందించింది. ఈల గుర్తుని ఫ్రీ సింబల్స్ జాబితాలో\nచేర్చాలని, తమ పార్టీకి దాన్ని కేటాయించాలంటూ లోక్ సత్తా పార్టీ చేసిన\nవిజ్ఞప్తి పట్ల ఈసీ సానుకూలంగా స్పందించినట్లైంది. </font>', '<font class="UnicodeContent">అయితే, ఈల గుర్తు కేటాయింపు తాత్కాలికమేనని,\nత్వరలో జరగనున్న గ్రేటర్ హైదరాబాద్ ఎన్నికల్లో ఈల గుర్తు మీది లోక్ సత్తా\nపోటీ చేయవచ్చని ఈసీ స్పష్టం చేసింది. లోక్ సత్తా పార్టీ ప్రధాన కార్యదర్శి\nవి. లక్ష్మణ్ బాలాజీకి రాష్ట్ర ఎన్నికల సంఘం కార్యదర్శి జి.ఎం. రమేష్\nకుమార్ రాసిన లేఖలో ఈ విషయం స్పష్టం చేశారు. ఈ విషయాన్ని లోక్ సత్తా\nఅధికార ప్రతినిధులు వి.లక్ష్మణ్ బాలాజీ, మహ్మద్ ఇషాక్ ఖాన్ గురువారం\nమధ్యాహ్నం పార్టీ కేంద్ర కార్యాలయంలో నిర్వహించిన మీడియా సమావేశంలో\nవివరించారు</font>', '2009-06-26 10:19:17', 0, 1),
 (31, '1', 'మైకేల్ జాక్సన్ మృతి', '<font class="UnicodeContent">లాస్ ఏంజెలెస్ : ప్రపంచ సంగీత చక్రవర్తి,\nఆధునిక స్వర విన్యాస మూర్తి పాప్ స్టార్ మైకేల్ జాక్సన్ ఇక లేరు. విశ్వ\nసంగీత ప్రియులను రసధునిలో ఓలలాడించిన ఆ అద్భుత సంగీత స్రష్ట తనువు\nచాలించారు. నలభై వసంతాల పాటు కోట్లాది మంది</font>', '<font class="UnicodeContent">అభిమానులను తన స్వరంతో, బ్రేక్ డాన్స్ లతో\nమంత్ర ముగ్ధులను చేసిన మైకేల్ జోసఫ్ జాన్సన్ హృద్రోగంతో కన్నుమూశారు. తన\nనివాస గృహంలోనే గుండె పోటు రావడంతో అపస్మారక స్థితి(కోమా)లోకి వెళ్ళిపోయిన\nజాక్సన్ ఇక్కడి యుసిఎల్ ఏ మెడికల్ సెంటర్లో చికిత్స పొందుతూ శుక్రవారం\nతెల్లవారజూమున సుమారు రెండున్నర ప్రాంతంలో తుదిశ్వాస విడిచారు. జాక్సన్\nమృతి వార్త సంగీత ప్రపంచాన్ని విషాదంలో ముంచేసింది. జాక్సన్ మొదట లిజా\nమేరీ ప్రెస్లేను వివాహం చేసుకున్నారు. కానీ 1996లో విడాకులు తీసుకున్నారు.\nవీరికి ఒక సంతానం. ఆ తరువాత డెబ్బీ రోవ్ ను వివాహం చేసుకుని ఇద్దరు\nపిల్లలు కలిగిన తర్వాత విడిపోయారు. జాక్సన్ తన పిల్లలు మైకేల్ జోసఫ్\nజాక్సన్ జూనియర్, పారీస్ మైకేల్ కేథరైన్ జాక్సన్, ప్రిన్స్ బ్లాంకెట్\nమైకేల్ జాక్సన్ 1తో కలిసి ఉంటున్నారు. కాగా ఇటీవలే ఆయన మతం\nమార్చుకున్నారు. ఇస్లాం మతాన్ని స్వీకరించారు. <br>\n<br>\nఅయితే వివాదాలమయమైన ఆయన వ్యక్తిగత జీవితంలో చివరకు మరణం కూడా వివాదంగానే\nమిగిలింది. బుధవారం నుంచే జాక్సన్ అస్వస్థులుగా ఉన్నారని అతని సోదరుడు\nజర్మైన్ జాక్సన్ వివరించారు. అప్పుడే కుటుంబ వైద్యులను పిలిపించారు.\nతీవ్రమైన గుండెపోటుతో మైకేల్ జాక్సన్ కోమాలోకి వెళ్ళేసమయంలో వైద్యులు\nఅందుబాటులోనే ఉన్నారు. వెంటనే యూసీఎల్ ఏ మెడికిల్ సెంటర్ కు తరలించి\nవైద్యుల బృందం జాక్సన్ బతికించడానికి తీవ్ర ప్రయత్నాలు చేసినా ఫలితం\nదక్కలేదు. కోమాలోకి వెళ్ళే సరికే నాడి పడిపోయిందని వైద్యులు చెబుతున్నారు.\nకాగా చాలా కాలంగా వివిద రుగ్మతలతో బాధపడుతున్న జాక్సన్ కు వైద్యులు మందులు\nఇచ్చారని, వాటిని నియమం, పరిమితి లేకుండా వాడడం వల్లనే జాక్సన్ కు\nగుండెపోటు వచ్చి ఉంటుందని జాక్సన్ కుటుంబ అటార్నీ బ్రియాన్ ఆక్సమెన్\nచెబుతున్నారు. లాస్ ఏంజెలెస్ పోలీసులు జాక్సన్ మృతిపై దర్యాప్తును\nప్రారంభించారు. జాక్సన్ మృతిలో ఎలాంటి నేరపూరితమైన పరిణామాలూ\nచోటుచేసుకున్నట్టు ఆధారాలు లేకపోయినా పోలీసులు జాక్సన్ బంధువులను,\nస్నేహితులను, వైద్యులను ప్రశ్నిస్తున్నారు. అలానే జాక్సన్ పార్ధీవకాయనికి\nవైద్యపరమైన అటాప్సీ పరీక్షలు నిర్వహించనున్నారు. </font><br>', '2009-06-26 10:17:49', 0, 1),
 (30, '3', 'వై. ఎస్. వ్యూహాన్ని తిప్పి కొట్టి', '<span><span><p align="justify">జిల్లా నియోజక వర్గ స్థాయి&nbsp;&nbsp; ఇతర పార్టీల&nbsp;\nముఖ్యనేతలను&nbsp; కాంగ్రెస్ లోకి చేర్చుకోవాలని&nbsp; మంత్రులకు సి. ఎం.&nbsp;&nbsp;\nస్పష్టమైన ఆదేశాలు ఇవ్వడం తో విపక్షాలు ముఖ్యంగా టి. డి.&nbsp; పి. లో గుబులు\nమొదలైంది.&nbsp; విభజించి పాలించడం లో వై.ఎస్. చాలా నిష్ణాతులు.&nbsp; వై. ఎస్.\nవ్యూహానికి ఇప్పుడే అడ్డుకట్ట వేయకపోతే రానున్న ఐదేళ్ల కాలంలో జిల్లాల్లో\nఉనికి లేకుండా పోతుందన్న ఆందోళన విపక్ష పార్టీలో మొదలైంది. </p>\n</span></span>', '<span><span><p align="justify">జిల్లా నియోజక వర్గ స్థాయి&nbsp;&nbsp; ఇతర పార్టీల&nbsp;\nముఖ్యనేతలను&nbsp; కాంగ్రెస్ లోకి చేర్చుకోవాలని&nbsp; మంత్రులకు సి. ఎం.&nbsp;&nbsp;\nస్పష్టమైన ఆదేశాలు ఇవ్వడం తో విపక్షాలు ముఖ్యంగా టి. డి.&nbsp; పి. లో గుబులు\nమొదలైంది.&nbsp; విభజించి పాలించడం లో వై.ఎస్. చాలా నిష్ణాతులు.&nbsp; వై. ఎస్.\nవ్యూహానికి ఇప్పుడే అడ్డుకట్ట వేయకపోతే రానున్న ఐదేళ్ల కాలంలో జిల్లాల్లో\nఉనికి లేకుండా పోతుందన్న ఆందోళన విపక్ష పార్టీలో మొదలైంది. </p>\n<p align="justify">వై. ఎస్. వ్యూహాన్ని తిప్పి కొట్టి&nbsp; పార్టీ క్యా\nడర్‌ను కాపాడుకునే పనిలో విపక్ష పార్టీలు&nbsp; తల మునకలు అవుతున్నాయి. మిగిలిన\nపార్టీలెమో కానీ తెలుగుదేశం పార్టీ కి&nbsp; మాత్రం ఈ సారి గట్టి దెబ్బ తగలడం\nఖాయం అని తెలిసింది.</p></span></span>', '2009-06-25 13:22:22', 0, 1),
 (35, '5', '<span class="kreative">మళ్ళీ పెరిగిన పెట్రోలు ధరలు                </span>', '<font style="font-size: 11pt; color: #000000;">దేశంలో మరోమారు\nపెట్రోలు ధరలు భగ్గుమన్నాయి. పెట్రోలు, డీజిల్‌ ధరలను పెంచుతూ నిర్ణయం\nతీసుకున్నట్లు పెట్రోలియం శాఖ మంత్రి మురళీదేవరా ప్రకటించారు. </font>', '<font style="font-size: 11pt; color: #000000;">పెట్రోలు లీటర్‌కి\nరూ.4, డీజిల్‌పై రూ.2 పెంచినట్లు ఆయన పేర్కొన్నారు. పెంచిన ధరలు బుధవారం\nఅర్థరాత్రినుంచే అమలులోకి వస్తాయని ఆయన తెలిపారు. </font><br><br><font style="font-size: 11pt; color: #000000;">అంతకు\nముందు దేవరా, ప్రధాన మంత్రితో భేటీ అయ్యారు. అనంతరం మీడియా ప్రతినిధుల\nసమావేశంలో పెట్రో ధరలు పెంచుతున్నట్లు తెలిపారు. అయితే వంటగ్యాస్‌,\nకిరోసిన్‌ ధరలు మాత్రం పెంచేది లేదని ఆయన స్పష్టం చేశారు. </font><br><br><font style="font-size: 11pt; color: #000000;">అంతర్జాతీయంగా పెరిగిన ముడి చమురు ధరల కారణంగా లోటును పూర్తి చేసుకునేందుకే తాము ధరలను పెంచాల్సివచ్చిందని ఆయన వివరించారు</font>', '2009-07-02 16:25:00', 0, 1),
@@ -450,10 +461,10 @@ INSERT INTO `news` (`id`, `type`, `heading`, `summary`, `description`, `insert_d
 
 DROP TABLE IF EXISTS `newsletter`;
 CREATE TABLE IF NOT EXISTS `newsletter` (
-  `id` int(10) NOT NULL default '0',
-  `email` varchar(100) character set utf8 collate utf8_unicode_ci NOT NULL,
-  `active` tinyint(1) NOT NULL default '0',
-  `insert_date` timestamp NOT NULL default '0000-00-00 00:00:00'
+  `id` int(10) NOT NULL DEFAULT '0',
+  `email` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `active` tinyint(1) NOT NULL DEFAULT '0',
+  `insert_date` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -475,10 +486,10 @@ INSERT INTO `newsletter` (`id`, `email`, `active`, `insert_date`) VALUES
 
 DROP TABLE IF EXISTS `news_types`;
 CREATE TABLE IF NOT EXISTS `news_types` (
-  `id` int(1) NOT NULL auto_increment,
-  `news_cat` varchar(100) character set utf8 collate utf8_unicode_ci NOT NULL,
-  `active` int(1) NOT NULL default '0',
-  PRIMARY KEY  (`id`)
+  `id` int(1) NOT NULL AUTO_INCREMENT,
+  `news_cat` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `active` int(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
 
 --
@@ -502,16 +513,16 @@ INSERT INTO `news_types` (`id`, `news_cat`, `active`) VALUES
 
 DROP TABLE IF EXISTS `poll`;
 CREATE TABLE IF NOT EXISTS `poll` (
-  `id` int(10) NOT NULL auto_increment,
+  `id` int(10) NOT NULL AUTO_INCREMENT,
   `cat_id` int(10) NOT NULL,
-  `question` varchar(200) character set utf8 collate utf8_unicode_ci NOT NULL,
+  `question` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `optiona` int(10) NOT NULL,
   `optionb` int(10) NOT NULL,
   `optionc` int(10) NOT NULL,
   `displaydate` date NOT NULL,
-  `insert-date` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
-  `active` int(1) NOT NULL default '0',
-  PRIMARY KEY  (`id`)
+  `insert-date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `active` int(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 --
@@ -530,20 +541,43 @@ INSERT INTO `poll` (`id`, `cat_id`, `question`, `optiona`, `optionb`, `optionc`,
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `ratings`
+--
+
+DROP TABLE IF EXISTS `ratings`;
+CREATE TABLE IF NOT EXISTS `ratings` (
+  `id` varchar(11) NOT NULL,
+  `total_votes` int(11) NOT NULL,
+  `total_value` int(11) NOT NULL,
+  `vote_limit` int(11) NOT NULL,
+  `used_ips` longtext NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `ratings`
+--
+
+INSERT INTO `ratings` (`id`, `total_votes`, `total_value`, `vote_limit`, `used_ips`) VALUES
+('id21', 0, 0, 0, '');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `sahithi`
 --
 
 DROP TABLE IF EXISTS `sahithi`;
 CREATE TABLE IF NOT EXISTS `sahithi` (
-  `id` int(10) NOT NULL auto_increment,
+  `id` int(10) NOT NULL AUTO_INCREMENT,
   `cat_id` int(10) NOT NULL,
-  `heading` varchar(150) character set utf8 collate utf8_unicode_ci NOT NULL,
-  `summary` text character set utf8 collate utf8_unicode_ci NOT NULL,
-  `description` text character set utf8 collate utf8_unicode_ci NOT NULL,
-  `insert_date` timestamp NOT NULL default CURRENT_TIMESTAMP,
-  `homepage` int(1) NOT NULL default '0',
-  `active` int(1) NOT NULL default '0',
-  PRIMARY KEY  (`id`)
+  `heading` varchar(150) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `summary` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `description` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `insert_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `homepage` int(1) NOT NULL DEFAULT '0',
+  `active` int(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=37 ;
 
 --
@@ -591,10 +625,10 @@ INSERT INTO `sahithi` (`id`, `cat_id`, `heading`, `summary`, `description`, `ins
 
 DROP TABLE IF EXISTS `sahithi_cat`;
 CREATE TABLE IF NOT EXISTS `sahithi_cat` (
-  `id` int(10) NOT NULL auto_increment,
-  `cat_name` varchar(200) collate utf8_unicode_ci NOT NULL,
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `cat_name` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
   `active` int(10) NOT NULL,
-  PRIMARY KEY  (`id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=9 ;
 
 --
@@ -619,10 +653,10 @@ INSERT INTO `sahithi_cat` (`id`, `cat_name`, `active`) VALUES
 
 DROP TABLE IF EXISTS `slideimages`;
 CREATE TABLE IF NOT EXISTS `slideimages` (
-  `id` int(10) NOT NULL auto_increment,
-  `title` varchar(200) character set utf8 collate utf8_unicode_ci NOT NULL,
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `title` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `hyperlink` text NOT NULL,
-  PRIMARY KEY  (`id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
@@ -648,8 +682,8 @@ CREATE TABLE IF NOT EXISTS `users` (
   `uname` varchar(50) NOT NULL,
   `pass` varchar(50) NOT NULL,
   `type` enum('admin','user') NOT NULL,
-  `active` int(1) NOT NULL default '0',
-  PRIMARY KEY  (`id`)
+  `active` int(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -667,8 +701,8 @@ INSERT INTO `users` (`id`, `uname`, `pass`, `type`, `active`) VALUES
 
 DROP TABLE IF EXISTS `videos`;
 CREATE TABLE IF NOT EXISTS `videos` (
-  `id` int(10) NOT NULL auto_increment,
-  `name` varchar(100) character set utf8 collate utf8_unicode_ci NOT NULL,
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `video_cat_id` int(10) NOT NULL,
   `video_uploaded` varchar(200) NOT NULL,
   `no_of_views` int(10) NOT NULL,
@@ -677,7 +711,7 @@ CREATE TABLE IF NOT EXISTS `videos` (
   `insert_date` date NOT NULL,
   `last_viewed` int(10) NOT NULL,
   `time` varchar(10) NOT NULL,
-  PRIMARY KEY  (`id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=104 ;
 
 --
@@ -685,7 +719,7 @@ CREATE TABLE IF NOT EXISTS `videos` (
 --
 
 INSERT INTO `videos` (`id`, `name`, `video_cat_id`, `video_uploaded`, `no_of_views`, `active`, `rating`, `insert_date`, `last_viewed`, `time`) VALUES
-(86, 'సినిమా', 12, '1', 53535, 0, '5324', '2009-10-10', 0, '00:54'),
+(86, 'సినిమా', 12, '1', 53540, 0, '5324', '2009-10-10', 0, '00:54'),
 (84, 'సినిమా', 13, '1', 53535, 0, '5324', '2009-10-10', 0, '00:54'),
 (85, 'సినిమా', 13, '1', 53535, 0, '5324', '2009-10-10', 0, '00:54'),
 (102, 'సినిమా', 13, '1', 53535, 0, '5324', '2009-10-10', 0, '00:54'),
@@ -708,11 +742,11 @@ INSERT INTO `videos` (`id`, `name`, `video_cat_id`, `video_uploaded`, `no_of_vie
 
 DROP TABLE IF EXISTS `videos_categeory`;
 CREATE TABLE IF NOT EXISTS `videos_categeory` (
-  `id` int(10) NOT NULL auto_increment,
-  `name` varchar(100) character set utf8 collate utf8_unicode_ci NOT NULL,
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `insert_date` date NOT NULL,
   `active` int(1) NOT NULL,
-  PRIMARY KEY  (`id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
 
 --

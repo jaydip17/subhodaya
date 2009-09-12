@@ -58,7 +58,7 @@ class Mahila extends Controller {
 		
 		}
 		if($result==1){
-			echo "hello";
+		
 		$config['upload_path'] ='assets/mahila/';
 		$config['allowed_types'] = 'gif|jpg|png';
 		$config['max_size']	= '2000';
@@ -68,7 +68,7 @@ class Mahila extends Controller {
 		$this->load->library('upload', $config);
 	
 		if ( ! $this->upload->do_upload('image'))
-		{  echo "hello";
+		{ 
 			$this->db->where('id',$id);
 			$this->db->delete('mahila');
 			$error[]= array('error' => $this->upload->display_errors());

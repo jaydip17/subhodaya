@@ -15,6 +15,7 @@ class Contact extends Controller {
 	}
 	function send_advertise()
 		{
+			if(!empty($_POST['mailid'])){
 		$company=$_POST['company'];
 		$name=$_POST['name'];
 		$phone=$_POST['phone'];
@@ -37,10 +38,15 @@ class Contact extends Controller {
 				//$this->email->initialize($config);
 				$this->email->send();
 				echo $this->email->print_debugger();
-		
+			}
+		else{
+			redirect(base_url());
+		}
+		redirect(base_url());
 	}
 	function send_contact()
 	{
+		if(!empty($_POST['mailid'])){
 		$company=$_POST['company'];
 		$name=$_POST['name'];
 		$phone=$_POST['phone'];
@@ -63,6 +69,11 @@ class Contact extends Controller {
 				//$this->email->initialize($config);
 				$this->email->send();
 				echo $this->email->print_debugger();
+		}
+		else{
+			redirect(base_url());
+		}
+		redirect(base_url());
 			
 	}
 

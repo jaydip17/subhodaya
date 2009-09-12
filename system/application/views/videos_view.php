@@ -120,7 +120,7 @@
           	</td>
           	
           	<td align="left" valign="top" rowspan="2" style="height:570px;" >
-          	 <table border="0" style="padding-top:10px;margin-top:5px;" cellspacing="0" cellpadding="0"  >
+          	 <table border="0" style="padding-top:10px;margin-top:5px;padding-left:20px;" cellspacing="0" cellpadding="0"  >
           	    <tr>
           	    <td style="height:4px; width:241;"></td>
           	    </tr>

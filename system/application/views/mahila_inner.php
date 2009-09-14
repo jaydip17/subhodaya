@@ -87,9 +87,9 @@ function telugu_typing()
 			<table cellpadding="1px" width="100%">
 			<tr><td><div id="news_heading" class="heading"><span id="newsheading"><?=$result['0']->heading ?></span></div></td></tr>
 			<tr><td align="center">
-			<div id="maindiv-news">
+			<!--<div id="maindiv-news">
 			<font color="red"> <? if($this->uri->segment(4)==-1){echo "can't send mail";}else if($this->uri->segment(4)==1){echo "mail sent succesfully";}?></font>
-			</div>
+			</div>-->
 			</tr>
 			<tr>
 			<td>

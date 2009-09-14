@@ -43,9 +43,11 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 					<td colspan="3" height="388" id="gal_center" valign="top" >
 					<table cellspacing="15" >
 							<tr>
-						<?php if(!empty($images)){
-						foreach ($images as $cat):
+						<?php
 						$count=1;
+						if(!empty($images)){
+						foreach ($images as $cat):
+						
 						foreach ($cat as $sub):
 							?>				
 								<td width="125"  align="center" valign="top" >
@@ -56,13 +58,13 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 									<?php 
 								if($count==4)
 									{
-										$count = 0;
+										$count = 1;
 										echo "</tr><tr>";
 									}
 									$count++;
-									if($count==12){
-										break;
-									}
+//									if($count==12){
+//										break;
+//									}
 									endforeach; 
 								endforeach;}
 								else 'no data found';

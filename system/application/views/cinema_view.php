@@ -473,7 +473,7 @@ var TabbedPanels2 = new Spry.Widget.TabbedPanels("TabbedPanels2");
 							   			foreach ($item as $sub):
 							   			//print_r($sub);					
 							   			?>
-							   		<td width="125"  align="center" valign="top" >
+							   		<td width="125" valign="top" >
 									<div style="height: 95px;border: 0px solid red;width: 100%;text-align: left;">
 									<? if(file_exists("./assets/gallery/image".$sub['id']."_thumb.jpg")){ ?>
 										<a href="<?=base_url();?>gallery/content/<?=$sub['id']?>/<?=$sub['parentid']?>"><img src="<?=base_url();?>assets/gallery/image<?=$sub['id']?>_thumb.jpg" height="95px" width="130px" border="0"></a>
@@ -497,7 +497,7 @@ var TabbedPanels2 = new Spry.Widget.TabbedPanels("TabbedPanels2");
 							        <? if(!empty($gall_topviews)){
 							        $count=1;
 							        foreach ($gall_topviews as $row): ?>
-							   			<td width="125"  align="center" valign="bottom">
+							   			<td width="125" valign="bottom">
 							   				<div style="border: 0px solid red;width: 100%;text-align: left;">
 							   				<a href="<?=base_url();?>gallery/content/<?=$row->id?>/<?=$row->parentid?>"><img src="<?=base_url();?>assets/gallery/image<?=$row->id?>_thumb.jpg" border="0"></a>
 							   				</div>

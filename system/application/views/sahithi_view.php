@@ -99,7 +99,7 @@ padding-top:0px;
 					</tr>
 					<tr>
 					<td height="151px" valign="top" colspan="3" style="background-image:url(<?=base_url();?>assets/imgs/KitchenTips-cr.gif);background-repeat-x;border:1px solid #0A70BB;border-bottom:0px;">
-					<div style="height: 125px;padding-top: 3px;" id="telugufont"><ul id="mainnews">
+					<div style="height: 125px;padding-top: 3px;width:220px" id="telugufont"><ul id="mainnews">
 	              <?if(!empty($details_more_mahila['1'])){
 	              	$count=0;
 	              foreach($details_more_mahila['1'] as $item):?>
@@ -126,7 +126,7 @@ padding-top:0px;
 					</tr>
 					<tr>
 					<td height="151px" valign="top" colspan="3" style="background-image:url(<?=base_url();?>assets/imgs/KitchenTips-cr.gif);background-repeat-x;border: 1px solid #0A70BB;border-bottom: 0px;">
-					<div style="height: 125px;padding-top:3px; " id="telugufont">
+					<div style="height: 125px;padding-top:3px;;width:220px " id="telugufont">
 					<ul id="mainnews">
 	              <?if(!empty($details_more_mahila['2'])){
 	              	$count=0;

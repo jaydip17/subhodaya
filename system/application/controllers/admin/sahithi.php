@@ -82,6 +82,8 @@ class Sahithi extends Controller {
 		    rename($oldname,'assets/sahithi/news_img_main'.$id.'.jpg');	
 		    $message='Sahithi Added Successfully';
 			$this->session->set_flashdata('message',$message);
+			$aspect_ratio = $data['upload_data']['image_height'] / $data['upload_data']['image_width'];
+		  	
 			
 		}
 		
@@ -110,7 +112,7 @@ class Sahithi extends Controller {
 		  else 
 		  rename('assets/sahithi/news_img_main'.$id.'.jpg','assets/sahithi/news_img'.$id.'.jpg');	
 		
-		     
+		    $height=$aspect_ratio * 100;
 			$filename = 'news_img'.$id.'.jpg';
 			$image_path='assets/sahithi/';
 	    	$filename= 'news_img'.$id.'.jpg';
@@ -119,7 +121,7 @@ class Sahithi extends Controller {
 			$config1['create_thumb'] = TRUE;
 			$config1['maintain_ratio'] = TRUE;
 			$config1['width'] = 100;
-			$config1['height'] = 100;
+			$config1['height'] = $height;
 	    	
 	    	$this->image_lib->initialize($config1);
 	    	if(!$this->image_lib->resize())

@@ -1,5 +1,5 @@
 <?
-echo form_open_multipart(base_url()."admin/mahila/edit1/") ?>
+echo form_open_multipart("admin/mahila/edit1/") ?>
 <center><?
 if(isset($message) && !is_array($message) ) echo($message);?>
 		<? 

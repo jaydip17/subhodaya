@@ -1,5 +1,5 @@
 <?
-echo form_open_multipart(base_url()."admin/sahithi/edit1/") ?>
+echo form_open_multipart("admin/sahithi/edit1/") ?>
 <center><?
 if(isset($message) && !is_array($message) ) echo($message);?>
 		<? 
@@ -12,7 +12,7 @@ if(isset($message) && !is_array($message) ) echo($message);?>
 		</center>
 <table align="center">
 	<tr>
-		<td style="font-size: 18px;" colspan='2' align='center'>Sahithi</td>
+		<td style="font-size:18px;" colspan='2' align='center'>Sahithi</td>
 	</tr>
 	<tr>
 		<td>Heading</td>

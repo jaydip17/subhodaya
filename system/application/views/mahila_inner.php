@@ -109,7 +109,7 @@ function telugu_typing()
 				<tr><td width="150px" align="left" style="padding-left: 15px"><?=$more['27']->matter;?></td><td><input type="text" name="name" size="30"></td></tr>
 				<tr><td width="150px" align="left" style="padding-left: 15px"><?=$more['28']->matter;?></td><td><input type="text" name="email" size="30"></td></tr>
 				<tr><td valign="top" colspan="2"><div style="background-color: #B5E8FD;height:20px;"></div></td></tr>
-				<tr><td colspan="2" align="left"><input style="padding-left: 15px;" type="checkbox" onclick="telugu_typing()" id="telugu_type" name="telugu_type">Type in telugu</td></tr>
+				<tr><td colspan="2" align="left" style="padding-left: 10px;"><input type="checkbox" onclick="telugu_typing()" id="telugu_type" name="telugu_type">&nbsp;Type in telugu</td></tr>
 				<tr><td colspan="2" align="center"><textarea style="height: 190px;width: 95%" name="description"></textarea></td></tr>
 				<tr><td colspan="2" align="center"><input type="submit" name="send" value="Send"><input type="reset" ></td></tr>
 				<tr><td valign="top" colspan="2"><div style="background-color: #B5E8FD;height:20px;"></div></td></tr>

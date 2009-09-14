@@ -25,7 +25,7 @@ class Cinema extends Controller {
 			$subcategeories[$item->id]=$this->Gallery_Model->subcat($item->id);
 		  }
 		//  print_r($subcategeories);
-		 	
+		 	$count = 1;
 	       foreach($subcategeories as $item)
 	       {  
 	       	$eachone=$item->result();
@@ -35,6 +35,9 @@ class Cinema extends Controller {
 	    			//print_r($row);
 	    			
 	 				$images[$row->id]=$this->Gallery_Model->getimage1($row->id);
+	 				$count = $count + 1;
+	 				if($count >3)
+	 				break;
 	    		}
 	 		
 	    	}

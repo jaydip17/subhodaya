@@ -9,13 +9,13 @@
     		<tr>
 	       		<td  valign="top" width="500">
 		       		<table width="100%"  border="0" cellpadding="0" cellspacing="0">
-		     			<tr><td height="4" valign="bottom"><img src="<?=base_url();?>assets/imgs/top-cor-line.jpg" width="500" height="4" /></td></tr>
+		     			<tr><td height="4" valign="bottom"><!--<img src="<?=base_url();?>assets/imgs/top-cor-line.jpg" width="500" height="4" />--></td></tr>
 		            </table>
-	                <table width="100%"  border="0" style="border-left:1px solid #0872BC; border-right:1px solid #0872BC;" cellpadding="0" cellspacing="0">
+	                <table width="100%"  border="0"  style="border-left:1px solid #0872BC; border-right:1px solid #0872BC;" cellpadding="0" cellspacing="0">
 	                    <tr><td height="360"><?=$videoplayer?></td>
 	                    </tr>
 	                </table></td></tr>
-	                <tr><td><img src="<?=base_url();?>assets/imgs/top-crow-botom.jpg" width="500"/></td></tr>
+	                <tr><td><!--<img src="<?=base_url();?>assets/imgs/top-crow-botom.jpg" width="500"/>--></td></tr>
          </table>
          </td>
      </tr>
@@ -31,7 +31,7 @@
             ?>          
            
            <tr>
-           <td><div style="margin-left:15px;"><a href="<?=base_url();?>video/index/<?=$item->id?>/<?=$item->video_cat_id?>"><!--<div id="latestvideo_time"><?=$item->time?></div>--><img id="img" src="<?=base_url();?>assets/videos/image_preview/image<?=$item->id?>_thumb.jpg"></a></div></td>
+           <td><div style="margin-left:15px;"><a href="<?=base_url();?>video/index/<?=$item->id?>/<?=$item->video_cat_id?>"><!--<div id="latestvideo_time"><?=$item->time?></div>--><img id="img" src="<?=base_url();?>assets/videos/image_preview/image<?=$item->id?>_thumb.jpg" width="96"height="66"></a></div></td>
            <td><div id="li-vi"><?=$item->insert_date?><br/><?=$item->name?><br/><span style="color:#FF6507;"><?=$item->no_of_views?> views</span><br/><?=$more['36']->matter?>:<span style="color:#FF6507;"><?=$item->rating?></span></div></td>
           </tr>
           <?} ?> 
@@ -120,7 +120,7 @@
           	</td>
           	
           	<td align="left" valign="top" rowspan="2" style="height:570px;" >
-          	 <table border="0" style="padding-top:10px;margin-top:5px;" cellspacing="0" cellpadding="0"  >
+          	 <table border="0" style="padding-top:10px;margin-top:5px;margin-left:20px;" cellspacing="0" cellpadding="0"  >
           	    <tr>
           	    <td style="height:4px; width:241;"></td>
           	    </tr>

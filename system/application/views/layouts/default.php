@@ -15,6 +15,10 @@
 <link href="<?=base_url();?>assets/tabview.css" rel="stylesheet" type="text/css" />
 <!-- thick box -->
 <script type="text/javascript" src="<?=base_url()?>assets/js/jquery.min.js"></script>
+
+<script type="text/javascript">
+var tb_pathToImage = "<?=base_url()?>assets/imgs/loadingAnimation.gif";
+</script>
 <script type="text/javascript" src="<?=base_url()?>assets/js/thickbox-compressed.js"></script>
 <link rel="stylesheet" href="<?=base_url()?>assets/thickbox.css" type="text/css" media="screen" />
 <!-- start tabs -->

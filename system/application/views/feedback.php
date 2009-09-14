@@ -1,4 +1,4 @@
-<form method="post" name="advertise" action="<?=base_url()?>contact/send_contact/">
+<form method="post" name="advertise" action="contact/send_contact/">
 <table width="100%" border="0" cellspacing="10" cellpadding="10" style="font-size: 13px;border: 1px solid rgb(55, 137, 195);">
 	<tr>
 		<td>Company/Organization</td>

@@ -79,23 +79,47 @@ class Sahithi extends Controller {
 		{
 			$data = array('upload_data' => $this->upload->data());
 			$oldname='assets/sahithi/'.$data['upload_data']['file_name'];
-		    rename($oldname,'assets/sahithi/news_img'.$id.'.jpg');	
+		    rename($oldname,'assets/sahithi/news_img_main'.$id.'.jpg');	
 		    $message='News Added Successfully';
 			$this->session->set_flashdata('message',$message);
 			
 		}
+		
+		 if($data['upload_data']['image_width'] >300 && $data['upload_data']['image_height'] > 300)
+		  {
+		  	$filename = 'news_img_main'.$id.'.jpg';
+			$image_path='assets/sahithi/';
+			$config['new_image'] = 'news_img_temp'.$id.'.jpg';
+	    	$config['image_library'] = 'gd2';
+	        $config['source_image'] = $image_path.$filename;
+			$config['create_thumb'] = TRUE;
+			$config['maintain_ratio'] = TRUE;
+			$config['width'] = 300;
+			$config['height'] =300;
+			$this->load->library('image_lib');      
+	    	$this->image_lib->initialize($config);
+			if(!$this->image_lib->resize())
+	    	{
+	    		$error = array('error' => $this->image_lib->display_errors());	
+	    	}
+	    	rename('assets/sahithi/news_img_temp'.$id.'_thumb.jpg','assets/sahithi/news_img'.$id.'.jpg');
+	    	unlink('assets/sahithi/news_img_main'.$id.'.jpg');
+			$this->image_lib->clear();
+				
+		 }
+		  else 
+		  rename('assets/sahithi/news_img_main'.$id.'.jpg','assets/sahithi/news_img'.$id.'.jpg');	
+		
 		     
 			$filename = 'news_img'.$id.'.jpg';
 			$image_path='assets/sahithi/';
-	    	
-	    	
 	    	$filename= 'news_img'.$id.'.jpg';
 	    	$config1['image_library'] = 'gd2';
 	        $config1['source_image'] = $image_path.$filename;
 			$config1['create_thumb'] = TRUE;
 			$config1['maintain_ratio'] = TRUE;
 			$config1['width'] = 100;
-			$config1['height'] = 88;
+			$config1['height'] = 100;
 	    	
 	    	$this->image_lib->initialize($config1);
 	    	if(!$this->image_lib->resize())
@@ -105,8 +129,9 @@ class Sahithi extends Controller {
 	    	}
 	    	$this->image_lib->clear();
 	    	
+	    	
 		}
-		   redirect(base_url().'admin/sahithi',$message);
+		   //redirect(base_url().'admin/sahithi',$message);
 	}
    function getsahithitype(){
    		

@@ -79,8 +79,7 @@ class Mahila extends Controller {
 		{
 			$data = array('upload_data' => $this->upload->data());
 			$oldname='assets/mahila/'.$data['upload_data']['file_name'];
-			//print_r($data['upload_data']);
-		    rename($oldname,'assets/mahila/news_img_main'.$id.'.jpg');	
+			rename($oldname,'assets/mahila/news_img_main'.$id.'.jpg');	
 		    $message='News Added Successfully';
 			$this->session->set_flashdata('message',$message);
 		}
@@ -101,9 +100,7 @@ class Mahila extends Controller {
 	    	{
 	    		$error = array('error' => $this->image_lib->display_errors());	
 	    	}
-	    	
-			
-			rename('assets/mahila/news_img_temp'.$id.'_thumb.jpg','assets/mahila/news_img'.$id.'.jpg');
+	    	rename('assets/mahila/news_img_temp'.$id.'_thumb.jpg','assets/mahila/news_img'.$id.'.jpg');
 			$this->image_lib->clear();
 				
 		 }
@@ -117,7 +114,7 @@ class Mahila extends Controller {
 			$config1['create_thumb'] = TRUE;
 			$config1['maintain_ratio'] = TRUE;
 			$config1['width'] = 100;
-			$config1['height'] = 88;
+			$config1['height'] = 100;
 			$this->load->library('image_lib');      
 	    	$this->image_lib->initialize($config1);
 			if(!$this->image_lib->resize())

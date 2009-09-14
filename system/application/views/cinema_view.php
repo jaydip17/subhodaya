@@ -468,8 +468,8 @@ var TabbedPanels2 = new Spry.Widget.TabbedPanels("TabbedPanels2");
 							        <div id="tab1"><p>
 							        <table width="100%" height="100%"><tr>
 							   			<?php if(!empty($images)){
-							   			foreach ($images as $item):
 							   			$count=1;
+							   			foreach ($images as $item):
 							   			foreach ($item as $sub):
 							   			//print_r($sub);					
 							   			?>
@@ -480,11 +480,12 @@ var TabbedPanels2 = new Spry.Widget.TabbedPanels("TabbedPanels2");
 									<?} ?>
 									</div>
 									<div id="gall_botto_img"><a href="<?=base_url();?>gallery/content/<?=$sub['id']?>/<?=$sub['parentid']?>"><?=$sub['title']?></a></div></td>
-							   			<? if($count==3){
+							   			<? $count++;
+							   			if($count==2)
 							   				break;
-							   			}else{
-							   				$count++;
-							   			}
+							   			
+							   				
+							   			
 							   			endforeach;
 							   			endforeach; }
 							   			else 'No data found';?>

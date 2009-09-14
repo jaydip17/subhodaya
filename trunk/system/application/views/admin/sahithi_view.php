@@ -1,5 +1,5 @@
 <?
-echo form_open_multipart(base_url()."admin/sahithi/insert") ?>
+echo form_open_multipart("admin/sahithi/insert") ?>
 <center><?
 if(isset($message) && !is_array($message) ) echo($message);?>
 		<? 

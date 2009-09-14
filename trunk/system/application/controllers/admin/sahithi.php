@@ -131,7 +131,7 @@ class Sahithi extends Controller {
 	    	
 	    	
 		}
-		   //redirect(base_url().'admin/sahithi',$message);
+		   redirect(base_url().'admin/sahithi',$message);
 	}
    function getsahithitype(){
    		

@@ -101,6 +101,7 @@ class Mahila extends Controller {
 	    		$error = array('error' => $this->image_lib->display_errors());	
 	    	}
 	    	rename('assets/mahila/news_img_temp'.$id.'_thumb.jpg','assets/mahila/news_img'.$id.'.jpg');
+	    	unlink('assets/mahila/news_img_main'.$id.'.jpg');
 			$this->image_lib->clear();
 				
 		 }
@@ -123,7 +124,7 @@ class Mahila extends Controller {
 	    	}
 			
 	    	$this->image_lib->clear();
-	    	unlink('assets/mahila/news_img_main'.$id.'.jpg');
+	    	
 		}
 			redirect(base_url().'admin/mahila',$message);
 	

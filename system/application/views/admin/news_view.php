@@ -1,4 +1,4 @@
-<?=form_open_multipart(base_url()."admin/news/insert") ?>
+<?=form_open_multipart("admin/news/insert") ?>
 <center><?
 if(isset($message) && !is_array($message) ) echo($message);?>
 		<? 

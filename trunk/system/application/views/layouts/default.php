@@ -3,6 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>:: subhodaya ::</title>
+<link REL="SHORTCUT ICON" HREF="<?=base_url();?>assets/favicon.ico">
 <!-- main style sheet -->
 <link href="<?=base_url();?>assets/style.css" rel="stylesheet" type="text/css" />
 <!-- for tabs js ans css -->

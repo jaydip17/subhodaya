@@ -28,6 +28,7 @@ class News extends Controller {
 		$this->load->view('admin/news_view',$data);
 	}
 	function insert(){
+		
 		if(!isset($_POST['breaking_news'])){
 			
 			$breaking_news=0;

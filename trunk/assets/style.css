@@ -11,7 +11,7 @@ font-size:14px;
 .topline{
       background-image:url(imgs/top-line.jpg);
 	  background-repeat:repeat-x;
-	  height:80px;
+	  height:50px;
 }
 #video_time{
 	background-color:gray;

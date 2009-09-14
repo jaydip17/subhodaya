@@ -25,7 +25,9 @@ font-size:14px;
 	background-color:gray;
 	color:white;
 	font-size:11px;
-	margin-left:55px;
+	font-weight:bold;
+	margin-left:106px;
+	margin-top:90px;
 	position:absolute;
 	padding-top:-30px;
 }
@@ -588,9 +590,10 @@ text-align:center;
  #li-vi{
  font-size:12px;
  font-weight:bold;
-  padding-left:4px;
+  margin-right:10px;
   text-align:left;
  padding-top:2px;
+ padding-left:2px;
  }
 #telugufont1{
 	font-size: 14px;
@@ -749,7 +752,7 @@ font-size: 14px;
 	height: 25px;
 }
 #img{
-border:2px solid #703E1B;
+border:2px solid #767676;
 }
 
 #gree_inner
@@ -907,3 +910,41 @@ a:active{
 hr{
 	 border: 1px solid rgb(55, 137, 195);
 }
+
+#video_botto_img
+{
+background-image: url(imgs/photos-name.jpg);
+background-repeat: no-repeat;
+height: 25px;
+width:132px;
+padding-right:2px;
+margin-left:2px;
+margin-right:3px; 
+margin-top:0px;
+font-size: 14px;
+}
+#video_botto_img a:link
+{
+text-decoration:none;
+color:	#000000;
+font-size: 14px;
+}
+#video_botto_img a:active{
+text-decoration:none;
+color:	#000000;
+font-size: 14px;
+}
+#video_botto_img a:visited{
+text-decoration:none;
+color:	#000000;
+font-size: 14px;
+}
+#video_botto_img a:hover{
+text-decoration:none;
+color:	red;
+font-size: 14px;
+}
+
+
+
+

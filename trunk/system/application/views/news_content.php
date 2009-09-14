@@ -22,8 +22,8 @@ padding-left: 20px;
                       		<div id="demo1" class="yui-navset" style="color: #EDF5FF;">
 	    						<ul class="yui-nav">
 							       <li class="selected" style="text-align: center;"><a href="#tab1"><em style="width: 90px;"><?php if(isset($active_news1['0'])){echo $active_news1['0']->news_cat;}?></em></a></li>
-							        <li style="text-align: center;"><a href="#tab2"><em style="width: 92px;"><span id="telugufont"><?php if(isset($active_news2['0'])){echo $active_news2['0']->news_cat;}?></span></em></a></li>
-							        <li style="text-align: center;"><a href="#tab3"><em style="width: 120px;"><span id="telugufont"><?php if(isset($active_news3['0'])){echo $active_news3['0']->news_cat;}?></span></em></a></li>
+							        <li style="text-align: center;"><a href="#tab2"><em style="width: 95px;"><span id="telugufont"><?php if(isset($active_news2['0'])){echo $active_news2['0']->news_cat;}?></span></em></a></li>
+							        <li style="text-align: center;"><a href="#tab3"><em style="width: 123px;"><span id="telugufont"><?php if(isset($active_news3['0'])){echo $active_news3['0']->news_cat;}?></span></em></a></li>
 									<li style="text-align: center;"><a href="#tab4"><em style="width: 90px;"><span id="telugufont"><?php if(isset($active_news4['0'])){echo $active_news4['0']->news_cat;}?></span></em></a></li>
 	    						</ul>            
     							<div class="yui-content" >

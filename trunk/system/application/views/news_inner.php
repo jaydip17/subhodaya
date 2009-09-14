@@ -99,12 +99,12 @@ function telugu_typing()
 			<form>
 			<table id="formdiv">
 				<tr><td valign="top" colspan="2"><div style="background-color: #B5E8FD;height:20px;"></div></td></tr>
-				<tr><td width="150px" align="left"><?php if(isset($more['27'])){ echo $more['27']->matter;}?></td><td><input type="text" name="uname" size="30"></td></tr>
-				<tr><td width="150px" align="left"><?php if(isset($more['38'])){ echo $more['38']->matter;}?></td><td><input type="text" name="uname" size="30"></td></tr>
-				<tr><td width="150px" align="left"><?php if(isset($more['39'])){ echo $more['39']->matter;}?></td><td><input type="text" name="uname" size="30"></td></tr>
-				<tr><td width="150px" align="left"><?php if(isset($more['28'])){ echo $more['28']->matter;}?></td><td><input type="text" name="uname" size="30"></td></tr>
+				<tr><td width="150px" align="left" style="padding-left: 10px;"><?php if(isset($more['27'])){ echo $more['27']->matter;}?></td><td><input type="text" name="uname" size="30"></td></tr>
+				<tr><td width="150px" align="left" style="padding-left: 10px;"><?php if(isset($more['38'])){ echo $more['38']->matter;}?></td><td><input type="text" name="uname" size="30"></td></tr>
+				<tr><td width="150px" align="left" style="padding-left: 10px;"><?php if(isset($more['39'])){ echo $more['39']->matter;}?></td><td><input type="text" name="uname" size="30"></td></tr>
+				<tr><td width="150px" align="left" style="padding-left: 10px;"><?php if(isset($more['28'])){ echo $more['28']->matter;}?></td><td><input type="text" name="uname" size="30"></td></tr>
 				<tr><td valign="top" colspan="2"><div style="background-color: #B5E8FD;height:20px;"></div></td></tr>
-				<tr><td colspan="2" align="left"><input type="checkbox" onclick="telugu_typing()" id="telugu_type" name="telugu_type">Type in telugu</td></tr>
+				<tr><td colspan="2" align="left" style="padding-left: 10px;"><input type="checkbox" onclick="telugu_typing()" id="telugu_type" name="telugu_type">&nbsp;Type in telugu</td></tr>
 				<tr><td colspan="2" align="center"><textarea style="height: 190px;width: 95%"></textarea></td></tr>
 				<tr><td colspan="2" align="center"><input type="submit" name="send" value="Send"><input type="reset" ></td></tr>
 				<tr><td valign="top" colspan="2"><div style="background-color: #B5E8FD;height:20px;"></div></td></tr>

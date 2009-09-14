@@ -36,7 +36,7 @@ class Video extends Controller {
      
 	    $this->load->library('flash_video');
 		$config['id'] = 'n0';
-		$config['height'] = '360';
+		$config['height'] = '366';
 		$config['width']  = '500';
 		$config['autostart'] = 'true'; 
 		$config['file'] = base_url().'assets/videos/video'.$videoid.'.flv';//file full path

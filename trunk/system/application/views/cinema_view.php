@@ -147,7 +147,7 @@ sample sf dsfsd fdsf
 						if(!empty($video_result)){
 						 foreach($video_result as $item){?>
 					<tr>
-           <td align="center"><div style="margin-left:4px;"><a href="<?=base_url();?>video/index/<?=$item->id?>/<?=$item->video_cat_id?>"><img id="img" src="<?=base_url();?>assets/videos/image_preview/home_image<?=$item->id?>_thumb.jpg"></a></div></td>
+           <td align="center"><div style="margin-left:4px;padding-top:3px;"><a href="<?=base_url();?>video/index/<?=$item->id?>/<?=$item->video_cat_id?>"><img id="img" src="<?=base_url();?>assets/videos/image_preview/home_image<?=$item->id?>_thumb.jpg"></a></div></td>
            <td><div id="li-vi"><?=$item->insert_date?><br/><?=$item->name?><br/><span style="color:#FF6507;"><?=$item->no_of_views?> views</span><br/><?=$more['36']->matter?>:<span style="color:#FF6507;"><?=$item->rating?></span></div></td>
           </tr>
 					<?}} ?>

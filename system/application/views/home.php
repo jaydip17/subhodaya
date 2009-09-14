@@ -312,8 +312,9 @@ function test()
 							        <div id="tab1"><p>
 							        <table width="100%" height="100%"><tr>
 							   			<?php if(!empty($images)){
+							   				$count=1;
 							   			foreach ($images as $item):
-							   			$count=1;
+							   			
 							   			foreach ($item as $sub):
 							   			//print_r($sub);					
 							   			?>
@@ -324,11 +325,12 @@ function test()
 									
 									</div>
 									<div id="gall_botto_img"><a href="<?=base_url();?>gallery/content/<?=$sub['id']?>/<?=$sub['parentid']?>"><?=$sub['title']?></a></div><?} ?></td>
-							   			<? if($count==3){
+							   			<? $count++; 
+							   			if($count==2){
 							   				break;
-							   			}else{
-							   				$count++;
 							   			}
+							   				
+							   			
 							   			endforeach;
 							   			endforeach; }
 							   			else 'No data found';?>
@@ -341,7 +343,7 @@ function test()
 							        <? if(!empty($gall_topviews)){
 							        $count=1;
 							        foreach ($gall_topviews as $row): ?>
-							   			<td width="125"  align="center" valign="bottom">
+							   			<td width="125"  valign="bottom">
 							   				<div style="border: 0px solid red;width: 100%;text-align: left;">
 							   				<? if(file_exists("./assets/gallery/image".$row->id."_thumb.jpg")){ ?>
 							   				<a href="<?=base_url();?>gallery/content/<?=$row->id?>/<?=$row->parentid?>"><img src="<?=base_url();?>assets/gallery/image<?=$row->id?>_thumb.jpg" border="0"></a>

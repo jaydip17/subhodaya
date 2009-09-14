@@ -82,6 +82,9 @@ class Mahila extends Controller {
 			rename($oldname,'assets/mahila/news_img_main'.$id.'.jpg');	
 		    $message='Mahila Added Successfully';
 			$this->session->set_flashdata('message',$message);
+			
+			$aspect_ratio = $data['upload_data']['image_height'] / $data['upload_data']['image_width'];
+		  	
 		}
 		  if($data['upload_data']['image_width'] >300 && $data['upload_data']['image_height'] > 300)
 		  {
@@ -108,6 +111,7 @@ class Mahila extends Controller {
 		  else 
 		  rename('assets/mahila/news_img_main'.$id.'.jpg','assets/mahila/news_img'.$id.'.jpg');	
 		
+		    $height=$aspect_ratio * 100;
 			$filename = 'news_img'.$id.'.jpg';
 			$image_path='assets/mahila/';
 	    	$config1['image_library'] = 'gd2';
@@ -115,7 +119,7 @@ class Mahila extends Controller {
 			$config1['create_thumb'] = TRUE;
 			$config1['maintain_ratio'] = TRUE;
 			$config1['width'] = 100;
-			$config1['height'] = 100;
+			$config1['height'] =$height;
 			$this->load->library('image_lib');      
 	    	$this->image_lib->initialize($config1);
 			if(!$this->image_lib->resize())

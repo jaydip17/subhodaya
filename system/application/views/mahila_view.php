@@ -76,6 +76,10 @@ ul{
 list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 padding-left: 20px;
 }
+li
+{
+padding-top:3px;
+}
 #tdmahila
 {
 padding-left:5px;

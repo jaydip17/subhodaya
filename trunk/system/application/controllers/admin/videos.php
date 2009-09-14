@@ -48,6 +48,8 @@ class Videos extends Controller {
 	}
 	function addvideo()
 	{
+		print_r($_POST);
+		print_r($_FILES);
 		$this->Video_Model->addvideo();
 		redirect(base_url()."admin/videos/viewaddvideo");
 		

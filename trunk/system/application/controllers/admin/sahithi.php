@@ -189,7 +189,7 @@ class Sahithi extends Controller {
    	 $cat_id =$_POST['cat_id'];
 	 $id=$_POST['id'];
    	 $this->Sahithi_Model->edit1($id,$homepage);
-   	redirect(base_url().'admin/sahithi/getsahithi/'.$cat_id);
+  	redirect(base_url().'admin/sahithi/getsahithi/'.$cat_id);
    }
 	
 }

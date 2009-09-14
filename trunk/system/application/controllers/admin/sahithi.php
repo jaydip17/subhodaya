@@ -80,7 +80,7 @@ class Sahithi extends Controller {
 			$data = array('upload_data' => $this->upload->data());
 			$oldname='assets/sahithi/'.$data['upload_data']['file_name'];
 		    rename($oldname,'assets/sahithi/news_img_main'.$id.'.jpg');	
-		    $message='News Added Successfully';
+		    $message='Sahithi Added Successfully';
 			$this->session->set_flashdata('message',$message);
 			
 		}

@@ -80,7 +80,7 @@ class Mahila extends Controller {
 			$data = array('upload_data' => $this->upload->data());
 			$oldname='assets/mahila/'.$data['upload_data']['file_name'];
 			rename($oldname,'assets/mahila/news_img_main'.$id.'.jpg');	
-		    $message='News Added Successfully';
+		    $message='Mahila Added Successfully';
 			$this->session->set_flashdata('message',$message);
 		}
 		  if($data['upload_data']['image_width'] >300 && $data['upload_data']['image_height'] > 300)

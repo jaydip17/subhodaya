@@ -22,7 +22,7 @@ class Video_model extends Model
 		}
 		else if($type=='top')
 		{
-			$this->db->order_by('rating','desc');
+			$this->db->order_by('no_of_views','desc');
 		}
 		else if($type=='active')
 		{

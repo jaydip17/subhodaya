@@ -23,12 +23,12 @@ function feedback_validate()
   }
   else if (document.getElementById('city').value=="")
   {
-    document.getElementById('_city').innerHTML=="Plz enter city name";
+    
 	flag=0;
   }
   else if (document.getElementById('message').value=="")
   {
-    document.getElementById('_message').innerHTML=="Plz enter message";
+    
 	flag=0;
   }
   
@@ -80,3 +80,19 @@ function IsNumeric(sText)
    return IsNumber;
    
    }
+function advertise_validate()
+{
+  if (document.getElementById('location').value=="")
+  {
+    alert("please enter details marked *");
+    return false;
+  }
+  if(!feedback_validate())
+  {
+  return false;
+  }
+  else
+  {
+  return true;
+  }
+}

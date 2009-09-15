@@ -140,6 +140,6 @@ class Mahila_Model extends Model {
 		$query = $this->db->get_where();
 		return $query->result();
     }
-
+   
 }
 ?>

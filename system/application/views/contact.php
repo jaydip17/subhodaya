@@ -34,7 +34,7 @@
 		<td><textarea style="height: 100px;width: 300px;" name="message" id="message"></textarea></td>
 	</tr>
 	<tr >
-		<td colspan='2' align="center"><input type="submit" name="submit" value="submit"></td>
+		<td colspan='3' align="center"><input type="submit" name="submit" value="submit"></td>
 	</tr>
 </table>
 </form>

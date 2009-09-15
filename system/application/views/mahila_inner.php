@@ -135,7 +135,7 @@ function telugu_typing()
 				<div style="border:1px solid #9FA0A0;">
 					<ul>
 					<?foreach($details as $item){ ?>
-					<li><a href="<?=base_url()?>/<?=$type?>/details/<?=$item->id?>"><?=$item->cat_name;?></li>
+					<li><a href="<?=base_url()?><?=$type?>/details/<?=$item->id?>"><?=$item->cat_name;?></li>
 					<?} ?>
 					</ul>
 				</div>

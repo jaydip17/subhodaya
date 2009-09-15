@@ -308,7 +308,7 @@ function test()
 							        <li style="text-align: center;"><a href="#tab3"><em style="width: 80px;"><span id="telugufont"><?=$more['14']->matter ?></span></em></a></li>
 									<li style="text-align: center;"><a href="#tab3"><em style="width: 100px;"><span id="telugufont"><?=$more['15']->matter ?></span></em></a></li>
 	    						</ul>            
-    							<div class="yui-content" style="height: 150px;text-align: center;background-image:url(assets/imgs/gmail-seline.jpg);background-repeat:repeat-x;">
+    							<div class="yui-content" style="height: 150px;text-align: center;background-image:url(assets/imgs/gmailseline.jpg);background-repeat:repeat-x;">
 							        <div id="tab1"><p>
 							        <table width="100%" height="100%"><tr>
 							   			<?php if(!empty($images)){
@@ -448,7 +448,7 @@ function test()
              <td valign="top" id="center-line"><img src="<?=base_url();?>assets/imgs/tock-line-boyom.jpg" width="5" height="166" /></td>
              <td valign="top" width="100%" id="center-line"><table width="100%" border="0" cellpadding="0" cellspacing="0">
          <tr>
-             <td height="165" valign="top">
+             <td height="165" valign="top" style="background-image:url(assets/imgs/gmailseline.jpg);background-repeat:repeat-x;border-bottom:2px solid #166DBC;">
       <form action="<?=base_url()?>admin/contacts/import" method="POST" onSubmit="return checkEmpty(this);" name="loginForm">
       <input type="hidden" name="page" value="home" />
 	<table border="0" align="center" cellpadding="2" cellspacing="4">
@@ -546,7 +546,7 @@ function test()
 							       <li class="selected" style="text-align: center;"><a href="#tab1"><em style="width: 80px;padding-top: 2px" id="telugufont"><?=$more['5']->matter?></em></a></li>
 							        <li style="text-align: center;"><a href="#tab2"><em style="width: 80px;padding-top: 2px""><span id="telugufont"><?=$more['7']->matter ?></span></em></a></li>
 	    						</ul>            
-    							<div class="yui-content" style="height: 150px;text-align: center;background-image:url(assets/imgs/gmail-seline.jpg);background-repeat:repeat-x;">
+    							<div class="yui-content" style="height: 150px;text-align: center;background-image:url(assets/imgs/gmailseline.jpg);background-repeat:repeat-x;">
 							        <div id="tab1"><p>
 							         <table cellspacing="5" align="left">
 							        	<tr>
@@ -603,7 +603,7 @@ function test()
 							       <li class="selected" style="text-align: center;"><a href="#tab1"><em style="width: 80px;padding-top: 2px"" id="telugufont"><?=$more['8']->matter?></em></a></li>
 							        <li style="text-align: center;"><a href="#tab2"><em style="width: 80px;padding-top: 2px""><span id="telugufont"><?=$more['9']->matter ?></span></em></a></li>
 	    						</ul>            
-    							<div class="yui-content" style="height: 150px;text-align: left;background-image:url(assets/imgs/gmail-seline.jpg);background-repeat:repeat-x;">
+    							<div class="yui-content" style="height: 150px;text-align: left;background-image:url(assets/imgs/gmailseline.jpg);background-repeat:repeat-x;">
 							        <div id="tab1"><p><div style="padding-top:11px">
 							        <? if(!empty($mahila_details)){?>
 							        <div id="image"><?if(file_exists("./assets/mahila/news_img".$mahila_details['0']->id."_thumb.jpg")){ ?>

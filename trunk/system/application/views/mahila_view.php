@@ -248,7 +248,7 @@ padding-top:0px;
 	           
 	            </tr>
 	            <tr>
-	             <td height="116px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/Mathru Basha-cr.gif);background-repeat-y;">
+	             <td height="116px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/MathruBashacr.gif);background-repeat-y;">
 	             <div id="telugufont1">
 	             <div style="height: 93px;padding: 3px;">
 	             <?if(!empty($details_more['3'])){
@@ -288,7 +288,7 @@ padding-top:0px;
 	           
 	            </tr>
 	            <tr>
-	             <td height="116px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/Mathru Basha-cr.gif);background-repeat-y;">
+	             <td height="116px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/MathruBashacr.gif);background-repeat-y;">
 	              <div id="telugufont1"> 
 	              <div style="height: 93px;padding: 3px;">
 	             <?if(!empty($details_more['3'])){
@@ -331,7 +331,7 @@ padding-top:0px;
 	           
 	            </tr>
 	            <tr>
-	             <td  height="116px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/Mathru Basha-cr.gif);background-repeat-y;"> 
+	             <td  height="116px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/MathruBashacr.gif);background-repeat-y;"> 
 	              <div id="telugufont1">
 	              <div style="height: 93px;padding: 3px;" id="telugufont">
 	              <?if(!empty($details_more['5'])){
@@ -371,7 +371,7 @@ padding-top:0px;
 	           
 	            </tr>
 	            <tr>
-	             <td height="116px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/Mathru Basha-cr.gif);background-repeat-y;">
+	             <td height="116px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/MathruBashacr.gif);background-repeat-y;">
 	              <div id="telugufont1">
 	              <div style="padding: 3px; height: 93px;">
                  <?if(!empty($details_more['6'])){

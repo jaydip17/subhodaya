@@ -609,7 +609,7 @@ function test()
 							        <a href="<?=base_url();?>mahila/mahiladetails/<?if(!empty($mahila_details)){$mahila_details['0']->id;}?>"><img style="border:0px;" src="<?=base_url();?>assets/mahila/news_img<?if(!empty($mahila_details)){echo $mahila_details['0']->id;}?>_thumb.jpg" /></a></div>
 							        <?} }?>
 							        <div id="mainnews"><a href="<?=base_url();?>mahila/mahiladetails/<?if(!empty($mahila_details)){echo $mahila_details['0']->id;}?>"><?if(!empty($mahila_details)){echo $mahila_details['0']->heading;}?></a></div>
-							        <?php if(!empty($mahila_details)){ echo $mahila_details['0']->summary; ?>
+							     <font style="font-size:14px;padding-top:5px;">  <?php if(!empty($mahila_details)){ echo $mahila_details['0']->summary; ?></font>
 							       <?php  $i=1;$count=0;foreach($mahila_details as $item){
 							           if($count==0)
 							           {$count++;
@@ -619,13 +619,13 @@ function test()
 							           if($i>3)
 							           break;?>
                                     <ul id="mainnews"> 
-							        <li><a href="<?=base_url();?>mahila/mahiladetails/<?=$item->id?>"><?=$item->heading?></a></li></ul><?$i++;}} ?></p></div>
+							        <li style="padding-top:5px;"><a href="<?=base_url();?>mahila/mahiladetails/<?=$item->id?>"><?=$item->heading?></a></li></ul><?$i++;}} ?></p></div>
 							        <div id="tab2"><p>
 							        <div id="image"> <? if(file_exists("./assets/sahithi/news_img".$sahithi_details['0']->id."_thumb.jpg")){?>
 							        <a href="<?=base_url();?>sahithi/sahithidetails/<?=$sahithi_details['0']->id?>"><img style="border:0px;"  src="<?=base_url();?>assets/sahithi/news_img<?=$sahithi_details['0']->id?>_thumb.jpg" alt="hh"/></a></div>
 							        <?} ?>
 							        <div id="mainnews"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$sahithi_details['0']->id?>"><?=$sahithi_details['0']->heading?></a></div>
-							        <?php echo $sahithi_details['0']->summary; ?>
+							      <font style="font-size:14px;padding-top:5px;">   <?php echo $sahithi_details['0']->summary; ?></font>
 							        <?$i=1;$count=0; foreach($sahithi_details as $item){
 							        	 if($count==0)
 							        	 {$count++;
@@ -633,7 +633,7 @@ function test()
 							        	 }
 							             if($i>3)
 							           break;?>
-							    <ul id="mainnews"> <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>"><?=$item->heading?></a></li></ul><? $i++;} ?></p></div>
+							    <ul id="mainnews"> <li style="padding-top:5px;"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>"><?=$item->heading?></a></li></ul><? $i++;} ?></p></div>
     							</div>
 <script>
 (function() {

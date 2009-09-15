@@ -660,8 +660,8 @@ function test()
 	                      <? if(file_exists("./assets/sahithi/news_img".$home_stories['0']->id."_thumb.jpg")){ ?>
 	                      <a href="<?=base_url();?>sahithi/sahithidetails/<?=$home_stories['0']->id?>"><img border="0px" id="image" src="<?=base_url();?>/assets/sahithi/news_img<?=$home_stories['0']->id?>_thumb.jpg"></a>
 	                      <?} ?>
-	                      <font id="mainnews"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$home_stories['0']->id?>"><? echo $home_stories['0']->heading;?></a></font>
-	                       <? echo $home_stories['0']->summary;?><?} ?>
+	                      <font id="mainnews"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$home_stories['0']->id?>"><? echo $home_stories['0']->heading;?>:</a></font></br>
+	                     <font style="font-size:14px;padding-top:5px;"> <? echo $home_stories['0']->summary;?><?} ?></font>
 	                        </div>
 	                       <div id="more-news-div"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$home_stories['0']->id?>"><?=$more['1']->matter?></a></div>
                         </td>

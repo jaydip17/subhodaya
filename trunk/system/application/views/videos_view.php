@@ -31,7 +31,7 @@
             ?>          
            
            <tr>
-           <td><div style="margin-left:15px;"><a href="<?=base_url();?>video/index/<?=$item->id?>/<?=$item->video_cat_id?>"><!--<div id="latestvideo_time"><?=$item->time?></div>--><img id="img" src="<?=base_url();?>assets/videos/image_preview/image<?=$item->id?>_thumb.jpg" width="96"height="66"></a></div></td>
+           <td><div style="margin-left:15px;"><a href="<?=base_url();?>video/index/<?=$item->id?>/<?=$item->video_cat_id?>"><div id="latevideo_time"><?=$item->time?></div><img id="img" src="<?=base_url();?>assets/videos/image_preview/image<?=$item->id?>_thumb.jpg" width="96"height="66"></a></div></td>
            <td><div id="li-vi"><?=$item->insert_date?><br/><?=$item->name?><br/><span style="color:#FF6507;"><?=$item->no_of_views?> views</span><br/><?=$more['36']->matter?>:<span style="color:#FF6507;"><?=$item->rating?></span></div></td>
           </tr>
           <?} ?> 
@@ -146,7 +146,7 @@
           	            foreach($topviewedvideos->result() as $item){  
           	            ?>
           	          <tr>
-          	            <td><div style="padding-top:5px;"><a href="<?=base_url();?>video/index/<?=$item->id?>/<?=$item->video_cat_id?>"><!--  <div id="latestvideo_time"><?=$item->time?></div>--><img id="img" src="<?=base_url();?>assets/videos/image_preview/image<?=$item->id?>_thumb.jpg"></div></a></td>
+          	            <td><div style="padding-top:5px;"><a href="<?=base_url();?>video/index/<?=$item->id?>/<?=$item->video_cat_id?>"><div id="topvideo_time"><?=$item->time?></div><img id="img" src="<?=base_url();?>assets/videos/image_preview/image<?=$item->id?>_thumb.jpg"></div></a></td>
           	            <td  valign="top" id="topvi"><?=$item->name?><br/><?=$item->insert_date?><br/><span style="color:#FF6507;"><?=$item->no_of_views?> Views</span><br/><div id="topimg" style=height:15px;width:101px;padding-left:4px;margin-top:4px;padding-top:2px;"><?=$more['36']->matter?>:<span style="color:#FF6507;"> <?=$item->rating?></span></div></td>
           	            </tr>
           	          <?}?><!-- 

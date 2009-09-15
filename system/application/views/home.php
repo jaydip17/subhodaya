@@ -603,7 +603,7 @@ function test()
 							        <li style="text-align: center;"><a href="#tab2"><em style="width: 80px;padding-top: 2px""><span id="telugufont"><?=$more['9']->matter ?></span></em></a></li>
 	    						</ul>            
     							<div class="yui-content" style="height: 150px;text-align: left;background-image:url(assets/imgs/gmail-seline.jpg);background-repeat:repeat-x;">
-							        <div id="tab1"><p>
+							        <div id="tab1"><p><div style="padding-top:11px">
 							        <? if(!empty($mahila_details)){?>
 							        <div id="image"><?if(file_exists("./assets/mahila/news_img".$mahila_details['0']->id."_thumb.jpg")){ ?>
 							        <a href="<?=base_url();?>mahila/mahiladetails/<?if(!empty($mahila_details)){$mahila_details['0']->id;}?>"><img style="border:0px;" src="<?=base_url();?>assets/mahila/news_img<?if(!empty($mahila_details)){echo $mahila_details['0']->id;}?>_thumb.jpg" /></a></div>
@@ -619,8 +619,9 @@ function test()
 							           if($i>3)
 							           break;?>
                                     <ul id="mainnews"> 
-							        <li style="padding-top:5px;"><a href="<?=base_url();?>mahila/mahiladetails/<?=$item->id?>"><?=$item->heading?></a></li></ul><?$i++;}} ?></p></div>
-							        <div id="tab2"><p>
+							        <li style="padding-top:5px;"><a href="<?=base_url();?>mahila/mahiladetails/<?=$item->id?>"><?=$item->heading?></a></li></ul><?$i++;}} ?></p>
+							        </div></div>
+							        <div id="tab2"><p><div style="padding-top:11px">
 							        <div id="image"> <? if(file_exists("./assets/sahithi/news_img".$sahithi_details['0']->id."_thumb.jpg")){?>
 							        <a href="<?=base_url();?>sahithi/sahithidetails/<?=$sahithi_details['0']->id?>"><img style="border:0px;"  src="<?=base_url();?>assets/sahithi/news_img<?=$sahithi_details['0']->id?>_thumb.jpg" alt="hh"/></a></div>
 							        <?} ?>
@@ -634,7 +635,7 @@ function test()
 							             if($i>3)
 							           break;?>
 							    <ul id="mainnews"> <li style="padding-top:5px;"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>"><?=$item->heading?></a></li></ul><? $i++;} ?></p></div>
-    							</div>
+    							</div></div>
 <script>
 (function() {
     var tabView = new YAHOO.widget.TabView('demo3');

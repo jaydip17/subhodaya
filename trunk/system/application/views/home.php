@@ -451,18 +451,19 @@ function test()
              <td height="165" valign="top">
       <form action="<?=base_url()?>admin/contacts/import" method="POST" onSubmit="return checkEmpty(this);" name="loginForm">
       <input type="hidden" name="page" value="home" />
-	<table border="0" align="center" cellpadding="2" cellspacing="0">
+	<table border="0" align="center" cellpadding="2" cellspacing="4">
 	  <tr>
-		<td colspan="3" align="center">Enter details</td>
+		<th colspan="3" align="center">Enter details</th>
 	  </tr>
 	  <tr>
 	  	<td>Username</></td>
 	  	<td><input type="text" name="username" size="10" value="" id="username"/></td>
+	  	<td id="wrong_id"></td>
 	  	</tr>
-	  
 	  <tr>
 	  	  <td>Password</td>
 	      <td colspan="2"><input type="password" name="password" size="10" id="password"/></td>
+	      <td id="wrong_pw"></td>
 	  </tr>
 	  	<tr>
 	  	<td>Domain</td>
@@ -477,7 +478,7 @@ function test()
 	  </tr>
 	  <tr>
 	  	  <td colspan="3" align="center">
-	  	  	<input id='importcontacts' alt='' onclick="test()" class="thickbox" type="submit" name="submit" value="Invite My Contacts" title="your Contacts list"/>
+	  	  	<input style="background-color:#ACDFFA" id='importcontacts' alt='' onclick="test()" class="thickbox" type="submit" name="submit" value="Invite My Contacts" title="your Contacts list"/>
 	  	  </td>
 	  </tr>    
 	  <tr>

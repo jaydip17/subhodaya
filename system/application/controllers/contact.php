@@ -5,13 +5,22 @@ class contact extends Controller {
 		$this->load->helper('email');
 	}
 	function index(){
-		$this->load->view('contact');
+		$data = array('type'=> 'contact',
+		              'url' => 'contact/send_contact',
+		              'onsubmit' =>'feedback_validate');
+		$this->load->view('advertise',$data);
 	}
 	function feedback(){
-		$this->load->view('feedback');
+		$data = array('type'=> 'feedback',
+		              'url' => 'contact/send_contact',
+		              'onsubmit' =>'feedback_validate');
+		$this->load->view('advertise',$data);
 	}
 	function advertise(){
-		$this->load->view('advertise');
+		$data = array('type'=> 'advertise',
+		              'url' => 'contact/send_advertise',
+		              'onsubmit' =>'advertise_validate');
+		$this->load->view('advertise',$data);
 	}
 	function send_advertise()
 		{

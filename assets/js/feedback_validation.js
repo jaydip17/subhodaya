@@ -62,7 +62,6 @@ function feedback_validate()
 }
 
 function IsNumeric(sText)
-
 {
    var ValidChars = "0123456789.";
    var IsNumber=true;

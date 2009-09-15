@@ -1,4 +1,4 @@
-<form method="post" name="advertise" action="contact/send_advertise/" onsubmit="return advertise_validate()">
+<form method="post" name="advertise" action="<?=$url?>" onsubmit="return <?=$onsubmit?>()">
 <table width="100%" cellspacing="10" cellpadding="10" style="font-size: 13px;border: 1px solid rgb(55, 137, 195);">
     <tr>
         <td colspan="3" align="center">Please Enter all the details marked <span style="color:red">*</span></td>
@@ -28,15 +28,17 @@
 		<td>City</td>
 		<td><input type="text" name="city" id="city"></td>
 	</tr>
+	<?if($type=='advertise'){?>
 	<tr>
 	    <td style="color:red">*</td>
 		<td>Location for AD</td>
 		<td><input type="text" name="location" id="location"></td>
 	</tr>
+	<?} ?>
 	<tr>
 	    <td style="color:red">*</td>
 		<td>Your Message</td>
-		<td><textarea style="height:100px;width: 300px;" name="message" id="message"></textarea></td>
+		<td><textarea style="height:100px;width:300px;" name="message" id="message"></textarea></td>
 	</tr>
 	<tr >
 		<td colspan='3' align="center"><input type="submit" name="submit" value="submit" ></td>

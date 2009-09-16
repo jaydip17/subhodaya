@@ -239,15 +239,15 @@ function test()
           <td width="0" valign="top" style="margin-left:5px;" align="center"><table width="320" align="center" border="0" cellpadding="0" cellspacing="0">
             <tr>
               <td width="10"><img src="<?=base_url();?>assets/imgs/tock-line.jpg" width="10" height="34" style="border-left:1px solid #1D77B3; border-top:1px solid #1D77B3;"/></td>
-              <td  width="327" valign="top" id="tock-line-center" align="left" >
+              <td  width="305" valign="top" id="tock-line-center" align="left" >
               <table><tr><td width="20%"><img src="<?=base_url(); ?>assets/imgs/001.png"></img></td><td width="80%" id="telugufont"><?=$more['12']->matter ?></td></tr></table>
               <td width="8" align="right"><img src="<?=base_url();?>assets/imgs/tock-line-right.jpg" width="8" height="34" style="border-right:1px solid #1D77B3; border-top:1px solid #1D77B3;"/></td>
             </tr>
           </table>
             <table width="320"  align="center" cellpadding="0" cellspacing="0" id="telugufont1">
               <tr>
-                <td  valign="top" id="img-center"><img src="<?=base_url();?>assets/imgs/tock-line-boyom.jpg" width="5" height="283" /></td>
-                <td width="340" valign="top" id="tock-botom-center" align="left">
+                <td  valign="top" id="img-center" align="left"><img src="<?=base_url();?>assets/imgs/tock-line-boyom.jpg" width="5" height="283" /></td>
+                <td width="305" valign="top" id="tock-botom-center" align="left">
                 <div style="padding: 5px;text-align: justify;" >
                 <? if(file_exists("./assets/news/news_img".$active_news['0']->id."_thumb.jpg")){ ?>
                 <a href="<?=base_url();?>news/newsdetails/<?=$active_news['0']->id?>/<?=$active_news['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?=$active_news['0']->id?>_thumb.jpg" style="margin:2px 5px 0px 2px;float: left;border: 0px;" align="top"></img></a>

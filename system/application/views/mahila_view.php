@@ -128,8 +128,7 @@ padding-top:0px;
 					<td><img src="<?=base_url();?>assets/imgs/beauty-top-right.gif" width="8" height="23" alt="gg" /></td>
 					</tr>
 					<tr>
-					<td height="151px"koddiga
-					 valign="top" colspan="3" style="background-image:url(<?=base_url();?>assets/imgs/KitchenTips-cr.gif);background-repeat-x;border: 1px solid #0A70BB;border-bottom: 0px;">
+					<td height="151px" valign="top" colspan="3" style="background-image:url(<?=base_url();?>assets/imgs/KitchenTips-cr.gif);background-repeat-x;border: 1px solid #0A70BB;border-bottom: 0px;">
 					 <div style="height: 120px;padding: 3px;width:215px" id="telugufont">
 					 <ul id="mainnews">
 	              <?if(!empty($details_more_sahithi['2'])){
@@ -168,8 +167,9 @@ padding-top:0px;
 	            </tr>
 	            <tr>
 	            <td width="50%" valign="top" height="219px" style="background-image:url(<?=base_url();?>assets/imgs/Pandugalu-cr.gif);background-repeat-y;">
-	           </br>
-	             <?if(!empty($details_more['1'])){
+	            <div id="telugufont1">
+	              <div style="height: 183px;padding:3px;">
+	              <?if(!empty($details_more['1'])){
 	             if(file_exists("./assets/mahila/news_img".$details_more['1']['0']->id."_thumb.jpg")){
 	             ?>
 	              <a href="<?=base_url();?>mahila/mahiladetails/<?=$details_more['1']['0']->id?>"><img src="<?=base_url();?>assets/mahila/news_img<?=$details_more['1']['0']->id?>_thumb.jpg" style="float:left;padding:4px 20px 4px 4px;text-align: justify;"  align="top" border="0"  alt="gg"/></a>
@@ -207,7 +207,7 @@ padding-top:0px;
 	            <tr>
 	             <td width="50%" valign="top" height="219px" style="background-image:url(<?=base_url();?>assets/imgs/Pandugalu-cr.gif);background-repeat-y;">
 	              <div id="telugufont1">
-	              <div style="height: 195px;padding:3px;">
+	              <div style="height: 183px;padding:3px;">
 	              <?if(!empty($details_more['2'])){
 	             if(file_exists("./assets/mahila/news_img".$details_more['2']['0']->id."_thumb.jpg")){
 	             ?>
@@ -250,7 +250,7 @@ padding-top:0px;
 	            <tr>
 	             <td height="116px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/MathruBashacr.gif);background-repeat-y;">
 	             <div id="telugufont1">
-	             <div style="height: 93px;padding: 3px;">
+	             <div style="height:80px;padding: 3px;">
 	             <?if(!empty($details_more['3'])){
 	             if(file_exists("./assets/mahila/news_img".$details_more['3']['0']->id."_thumb.jpg")){
 	             ?>
@@ -290,7 +290,7 @@ padding-top:0px;
 	            <tr>
 	             <td height="116px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/MathruBashacr.gif);background-repeat-y;">
 	              <div id="telugufont1"> 
-	              <div style="height: 93px;padding: 3px;">
+	              <div style="height:80px;padding: 3px;">
 	             <?if(!empty($details_more['3'])){
 	             if(file_exists("./assets/mahila/news_img".$details_more['4']['0']->id."_thumb.jpg")){
 	             ?>
@@ -333,7 +333,7 @@ padding-top:0px;
 	            <tr>
 	             <td  height="116px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/MathruBashacr.gif);background-repeat-y;"> 
 	              <div id="telugufont1">
-	              <div style="height: 93px;padding: 3px;" id="telugufont">
+	              <div style="height:80px;padding: 3px;" id="telugufont">
 	              <?if(!empty($details_more['5'])){
 	             if(file_exists("./assets/mahila/news_img".$details_more['5']['0']->id."_thumb.jpg")){
 	             ?>
@@ -373,7 +373,7 @@ padding-top:0px;
 	            <tr>
 	             <td height="116px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/MathruBashacr.gif);background-repeat-y;">
 	              <div id="telugufont1">
-	              <div style="padding: 3px; height: 93px;">
+	              <div style="padding: 3px; height:80px;">
                  <?if(!empty($details_more['6'])){
 	             if(file_exists("./assets/mahila/news_img".$details_more['6']['0']->id."_thumb.jpg")){
 	             ?>
@@ -417,7 +417,7 @@ padding-top:0px;
 	            <tr>
 	             <td  height="163px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/Janapadalu-cr.gif);background-repeat-x;">
 	             <div id="telugufont1">
-	              <div style="padding: 3px;height:138px;" >
+	              <div style="padding: 3px;height:128px;" >
 	               <?if(!empty($details_more['7'])){
 	             if(file_exists("./assets/mahila/news_img".$details_more['7']['0']->id."_thumb.jpg")){
 	             ?>
@@ -458,7 +458,7 @@ padding-top:0px;
 	            <tr>
 	             <td height="163px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/Janapadalu-cr.gif);background-repeat-x;"> 
 	             <div id="telugufont1">
-	             <div style="padding: 3px;height: 138px;">
+	             <div style="padding: 3px;height:128px;">
 	             <?if(!empty($details_more['8'])){
 	             	if(file_exists("./assets/mahila/news_img".$details_more['8']['0']->id."_thumb.jpg")){
 	             ?>

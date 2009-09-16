@@ -101,7 +101,7 @@ function telugu_typing()
 		</td></tr>
 			<tr><td><div id="news_heading" class="heading"><span id="newsheading"><?=$more['25']->matter;?></span></div></td></tr>
 			<tr><td align="center"><div style="border:1px solid #9FA0A0;">
-			<form name="telugu_send" method="post" action="<?=base_url();?>subhodaya/sendmail">
+			<form name="telugu_send" method="post" action="subhodaya/sendmail">
 			
 			<input type="hidden" name="url" value="<?=base_url()?><?=$type?>/<?=$type?>details/<?=$result['0']->id?>">
 			<table id="formdiv" cellspacing="5">

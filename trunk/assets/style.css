@@ -954,6 +954,58 @@ color:	red;
 font-size: 14px;
 }
 
-
-
-
+#catvideo_time{
+	background-color:gray;
+	color:white;
+	font-size:11px;
+	font-weight:bold;
+	margin-left:97px;
+	margin-top:72px;
+	position:absolute;
+	padding-top:-30px;
+}
+#latevideo_time{
+	background-color:gray;
+	color:white;
+	font-size:11px;
+	font-weight:bold;
+	margin-left:71px;
+	margin-top:56px;
+	position:absolute;
+	padding-top:-30px;
+}
+#topvideo_time{
+	background-color:gray;
+	color:white;
+	font-size:11px;
+	font-weight:bold;
+	margin-left:62px;
+	margin-top:46px;
+	position:absolute;
+	padding-top:-30px;
+}
+#topvideo_time a:visted{
+	font-size:11px;
+	font-weight:bold;
+	color:white;
+	}
+#topvideo_time a:hover{
+	font-size:11px;
+	font-weight:bold;
+	color:white;
+	}	
+#topvideo_time a:link{
+	font-size:11px;
+	font-weight:bold;
+	color:white;	
+}
+#cinemavideo_time{
+	background-color:gray;
+	color:white;
+	font-size:11px;
+	font-weight:bold;
+	margin-left:97px;
+	margin-top:72px;
+	position:absolute;
+	padding-top:-30px;
+}

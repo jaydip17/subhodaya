@@ -29,12 +29,26 @@ function reload()
 <!--
 function test()
 {
+    var flag=1;
 	var uname = document.getElementById('username').value;
 	var pass = document.getElementById('password').value;
 	var email = document.getElementById('email').value;
+	if(uname=="" || pass=="")
+	{
+	flag=0;
+	alert("enter username and password");	
+	}
+	
+	if(flag!=0)
+	{
+	//tb_show('My Caption',url,'false');
 	var url = '&username='+uname+'&password='+pass+'&type='+email;
-	var attribures = '&height=400&width=500'; 
-	document.getElementById('importcontacts').setAttribute('alt','<?=base_url()."admin/contacts/import?"?>'+url+attribures);
+	attribures = '&height=400&width=500';
+	tb_show('My Caption','<?=base_url()."admin/contacts/import?"?>'+url+attribures,'false');
+	 
+	}
+	else
+	return false;
 }
 //-->
 </script>
@@ -478,7 +492,7 @@ function test()
 	  </tr>
 	  <tr>
 	  	  <td colspan="3" align="center">
-	  	  	<input style="background-color:#ACDFFA" id='importcontacts' alt='' onclick="test()" class="thickbox" type="submit" name="submit" value="Invite My Contacts" title="your Contacts list"/>
+	  	  	<input style="background-color:#ACDFFA" id='importcontacts' alt='' onclick="test()" type="button" name="submit" value="Invite My Contacts" title="your Contacts list"/>
 	  	  </td>
 	  </tr>    
 	  <tr>

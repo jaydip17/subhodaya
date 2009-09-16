@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 20, 2009 at 06:31 AM
+-- Generation Time: Sep 16, 2009 at 11:26 AM
 -- Server version: 5.0.51
 -- PHP Version: 5.2.5
 
@@ -32,14 +32,11 @@ CREATE TABLE IF NOT EXISTS `mahila_cat` (
 --
 
 INSERT INTO `mahila_cat` (`id`, `cat_name`, `active`) VALUES
-(1, 'ఆడ వాళ్ళ ప్రత్యేకం', 0),
+(1, 'ఆడ వాళ్ళ ప్రత్యేకం', 1),
 (2, 'హోం & కెరీర్', 0),
 (3, 'ఫ్యాషన్', 0),
 (4, 'యోగ', 0),
 (5, 'డైట్ & హెల్త్', 0),
 (6, 'మేహెంది', 0),
-(7, 'బ్యూటీ  కెరీర్ ', 0),
-(8, 'ఫుడ్', 0),
-(9, 'సామెతలు', 0),
-(10, 'కవితలు', 0),
-(11, '', 0);
+(7, 'బ్యూటీ టిప్స్ ', 0),
+(8, 'ఫుడ్', 0);

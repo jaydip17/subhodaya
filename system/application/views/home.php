@@ -83,7 +83,7 @@ function test()
     							<div id="tab1">
     							<div style="height: 175px;" id="telugufont1">
     							<? if(file_exists("./assets/news/news_img".$news_type7['0']->id."_thumb.jpg")){ ?>
-    							<a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type7['0'])){echo $news_type7['0']->id;}?>/<?=$news_type7['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?=$news_type7['0']->id?>_thumb.jpg" align="top" style="padding: 0px 18px 1px 2px;float: left;border: 0px;"></img></a>
+    							<a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type7['0'])){echo $news_type7['0']->id;}?>/<?=$news_type7['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?=$news_type7['0']->id?>_thumb.jpg" align="top" style="padding: 0px 22px 1px 2px;float: left;border: 0px;"></img></a>
     							<?} ?>
     									<font id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type7['0'])){echo $news_type7['0']->id;}?>/<?=$news_type7['0']->type?>"><?php if(isset($news_type7['0'])){echo $news_type7['0']->heading;}?></a></font><br>
 							        	<font style="text-align: justify;"><?php if(isset($news_type7['0'])){echo $news_type7['0']->summary;}?></font>
@@ -118,7 +118,7 @@ function test()
 							        <div id="tab2">
 							        	<div style="height: 175px;" id="telugufont1">
 							        	<? if(file_exists("./assets/news/news_img".$news_type4['0']->id."_thumb.jpg")){ ?>
-							        	<a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type4['0'])){echo $news_type4['0']->id;}?>/<?=$news_type4['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?php if(isset($news_type4['0'])){echo $news_type4['0']->id;}?>_thumb.jpg" align="top" style="padding: 0px 18px 1px 2px;float: left;border: 0px;"></img></a>
+							        	<a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type4['0'])){echo $news_type4['0']->id;}?>/<?=$news_type4['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?php if(isset($news_type4['0'])){echo $news_type4['0']->id;}?>_thumb.jpg" align="top" style="padding: 0px 22px 1px 2px;float: left;border: 0px;"></img></a>
 							        	<?} ?>
     									<font id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type4['0'])){echo $news_type4['0']->id;}?>/<?=$news_type4['0']->type?>"><?php if(isset($news_type4['0'])){echo $news_type4['0']->heading;}?></a></font><br>
 							        	<font style="font-size: 14px;text-align: justify;"><?php if(isset($news_type4['0'])){echo $news_type4['0']->summary;}?></font>
@@ -152,7 +152,7 @@ function test()
 							        <div id="tab3">
 							        <div style="height: 175px;" id="telugufont1">
 							        	<? if(file_exists("./assets/cinema/ceni_img".$cinema_type1['0']->id."_thumb.jpg")){ ?>
-							        		<a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->id;}?>/<?=$cinema_type1['0']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->id;}?>_thumb.jpg" align="top" style="padding: 0px 18px 1px 2px;float: left;border: 0px;"></img></a>
+							        		<a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->id;}?>/<?=$cinema_type1['0']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->id;}?>_thumb.jpg" align="top" style="padding: 0px 22px 1px 2px;float: left;border: 0px;"></img></a>
 							        	<?} ?>
     									<font id="mainnews"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->id;}?>/<?=$cinema_type1['0']->type?>"><?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->heading;}?></a></font><br>
 							        	<font style="font-size: 14px;text-align: justify;"><?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->summary;}?></font>
@@ -188,7 +188,7 @@ function test()
 									<div id="tab4">
 									     <div style="height: 175px;" id="telugufont1">
 							        	<? if(file_exists("./assets/mahila/news_img".$mahila_details_yoga['0']->id."_thumb.jpg")){ ?>
-							        		<a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['0'])){echo $mahila_details_yoga['0']->id;}?>"><img src="<?=base_url();?>assets/mahila/news_img<?php if(isset($mahila_details_yoga['0'])){echo $mahila_details_yoga['0']->id;}?>_thumb.jpg" align="top" style="padding: 0px 18px 1px 2px;float: left;border: 0px;"></img></a>
+							        		<a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['0'])){echo $mahila_details_yoga['0']->id;}?>"><img src="<?=base_url();?>assets/mahila/news_img<?php if(isset($mahila_details_yoga['0'])){echo $mahila_details_yoga['0']->id;}?>_thumb.jpg" align="top" style="padding: 0px 22px 1px 2px;float: left;border: 0px;"></img></a>
 							        	<?} ?>
     									<font id="mainnews"><a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['0'])){echo $mahila_details_yoga['0']->id;}?>"><?php if(isset($mahila_details_yoga['0'])){echo $mahila_details_yoga['0']->heading;}?></a></font><br>
 							        	<font style="font-size: 14px;text-align: justify;"><?php if(isset($mahila_details_yoga['0'])){echo $mahila_details_yoga['0']->summary;}?></font>

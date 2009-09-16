@@ -151,9 +151,9 @@ function telugu_typing()
 								if(!empty($video_result)){
 								
           				        foreach($video_result as $item){?>
-          				 		<div style="padding:5px;height:82px;"><a href="<?=base_url();?>video/index/<?php if(isset($item)) {echo $item->id;}?>"><img src="<?=base_url();?>assets/videos/image_preview/home_image<?=$item->id?>_thumb.jpg" border="0"></a></div>
-							        		<div id="gall_botto_img"><a href="<?=base_url();?>video/index/<?php if(isset($item)) {echo $item->id;}?>"><?=$item->name?></a></div>
-							        		<div style="height:12px;">Views:<?=$item->no_of_views?>	</div>
+          				 		<div style="padding:5px;height:82px;"><a href="<?=base_url();?>video/index/<?php if(isset($item)) {echo $item->id;}?>"><div id="cinemavideo_time"><?=$item->time?></div><img id="img"src="<?=base_url();?>assets/videos/image_preview/home_image<?=$item->id?>_thumb.jpg" border="0"></a></div>
+							        		<div id="gall_botto_img" align="center" style="margin-left:3px;"><a href="<?=base_url();?>video/index/<?php if(isset($item)) {echo $item->id;}?>"><?=$item->name?></a></div>
+							        		<div style="height:12px;"><!--Views:<?=$item->no_of_views?>	--></div>
 							        			
 								<? }}else
 								    echo 'No data found';?>

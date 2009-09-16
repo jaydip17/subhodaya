@@ -216,7 +216,7 @@ function test()
 							        			<? if(file_exists("./assets/cinema/ceni_img".$mahila_details_yoga['5']->id."_thumb.jpg")){ ?>
 							        			<a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['5'])){echo $mahila_details_yoga['5']->id;}?>/<?=$mahila_details_yoga['5']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($mahila_details_yoga['5'])){echo $mahila_details_yoga['5']->id;}?>_thumb.jpg" style="padding: 0px 10px 0px 0px;float: left; height: 15px;width: 60px;border: 0px;" align="top"></a>
 							        			<?} ?>
-							        			<div id="mainnews1" style="height: 40px"><a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['5'])){echo $mahila_details_yoga['5']->id;}?>"><?php if(isset($mahila_details_yoga['5'])){echo $mahila_details_yoga['5']->heading;}?></a></div><div style="padding:5px 0px 0px 70px;" id="more-news-div"><a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['5'])){echo $mahila_details_yoga['5']->id;}?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div><?} ?></td>
+							        			<div id="mainnews1" style="height:40px"><a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['5'])){echo $mahila_details_yoga['5']->id;}?>"><?php if(isset($mahila_details_yoga['5'])){echo $mahila_details_yoga['5']->heading;}?></a></div><div style="padding:5px 0px 0px 70px;" id="more-news-div"><a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['5'])){echo $mahila_details_yoga['5']->id;}?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div><?} ?></td>
 							        		
 							        		</tr>
 							        		
@@ -335,7 +335,7 @@ function test()
 							   		<td width="125"  valign="top" >
 									<div style="height: 95px;border: 0px solid red;width: 100%;text-align: left;">
 									<? if(file_exists("./assets/gallery/image".$sub['id']."_thumb.jpg")){ ?>
-										<a href="<?=base_url();?>gallery/content/<?=$sub['id']?>/<?=$sub['parentid']?>"><img src="<?=base_url();?>assets/gallery/image<?=$sub['id']?>_thumb.jpg" height="95px" width="130px" border="0"></a>
+										<a href="<?=base_url();?>gallery/content/<?=$sub['id']?>/<?=$sub['parentid']?>"><img id="img" src="<?=base_url();?>assets/gallery/image<?=$sub['id']?>_thumb.jpg" height="95px" width="130px" border="0"></a>
 									
 									</div>
 									<div id="gall_botto_img"><a href="<?=base_url();?>gallery/content/<?=$sub['id']?>/<?=$sub['parentid']?>"><?=$sub['title']?></a></div><?} ?></td>
@@ -360,7 +360,7 @@ function test()
 							   			<td width="125"  valign="bottom">
 							   				<div style="border: 0px solid red;width: 100%;text-align: left;">
 							   				<? if(file_exists("./assets/gallery/image".$row->id."_thumb.jpg")){ ?>
-							   				<a href="<?=base_url();?>gallery/content/<?=$row->id?>/<?=$row->parentid?>"><img src="<?=base_url();?>assets/gallery/image<?=$row->id?>_thumb.jpg" border="0"></a>
+							   				<a href="<?=base_url();?>gallery/content/<?=$row->id?>/<?=$row->parentid?>"><img id="img" src="<?=base_url();?>assets/gallery/image<?=$row->id?>_thumb.jpg" border="0"></a>
 							   				</div>
 							   				<div id="gall_botto_img"><a href="<?=base_url();?>gallery/content/<?=$row->id?>/<?=$row->parentid?>"><?=$row->title?></a></div><?} ?>
 										</td>
@@ -585,7 +585,7 @@ function test()
 							        		<td><div style="width:132px;">
 							        		<? 
 							        		if(file_exists("./assets/greetings/gree_img".$greetings1['0']->id."_thumb.jpg")){ ?>
-							        		<a href="<?=base_url();?>greetings/content/<?php if(isset($greetings1['0'])) {echo $greetings1['0']->type;}?>"><img src="<?=base_url();?>assets/greetings/gree_img<?=$item->id?>_thumb.jpg" height="100px" width="132px" border="0"></a>
+							        		<a href="<?=base_url();?>greetings/content/<?php if(isset($greetings1['0'])) {echo $greetings1['0']->type;}?>"><img id="img" src="<?=base_url();?>assets/greetings/gree_img<?=$item->id?>_thumb.jpg" height="100px" width="132px" border="0"></a>
 							        		
 							        		</div>
 							        		<div id="gall_botto_img"><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings1['0'])) {echo $greetings1['0']->type;}?>"><?=$item->gree_cat?></a></div><?} ?></td>

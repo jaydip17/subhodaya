@@ -61,7 +61,7 @@ function telugu_typing()
 							if(file_exists("./assets/cinema/ceni_img".$cinema_type3['0']->id."_thumb.jpg")){ ?>
 							<a href="<?=base_url();?>cinema/inner/<?=$cinema_type3['0']->id?>/<?=$cinema_type3['0']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type3['0']->id?>_thumb.jpg" style="padding:5px 0px 0px 20px; " border="0"></a>
 							<?} }?>
-							<ul >
+							<ul>
 								<?php
 								if(!empty($cinema_type3))
 								{ 
@@ -74,7 +74,7 @@ function telugu_typing()
 								 endforeach;
 								 }
 								else
-								echo 'No data found';?>
+								echo 'No data found';?> 
 							</ul>
 							</div>
 							<div id="more-news-div" ><a href="<?=base_url();?>cinema/details/<?php if(isset($cinema_type3['0'])){echo $cinema_type3['0']->type;}?>"><?php if(isset($more['0'])){echo $more['0']->matter;}?></a></div>

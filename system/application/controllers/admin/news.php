@@ -60,7 +60,7 @@ class News extends Controller {
 		if($result==1){
 		$config['upload_path'] ='assets/news/';
 		$config['allowed_types'] = 'gif|jpg|png';
-		$config['max_size']	= '1000';
+		$config['max_size']	= '2000';
 		$config['max_width']  = '1024';
 		$config['max_height']  = '768';
 		
@@ -76,38 +76,70 @@ class News extends Controller {
 		else
 		{
 			$data = array('upload_data' => $this->upload->data());
-			$this->News_Model->rename($data,$id);
+			$oldname='assets/news/'.$data['upload_data']['file_name'];
+			rename($oldname,'assets/news/news_img_main'.$id.'.jpg');
 			$message='News Added Successfully';
 			$this->session->set_flashdata('message',$message);
+			$aspect_ratio = $data['upload_data']['image_height'] / $data['upload_data']['image_width'];
 		}
-			$filename = 'news_img'.$id.'.jpg';
+		
+		if($data['upload_data']['image_width'] >300 && $data['upload_data']['image_height'] > 300)
+		  {
+		  	$filename = 'news_img_main'.$id.'.jpg';
 			$image_path='assets/news/';
+			$config['new_image'] = 'news_img_temp'.$id.'.jpg';
 	    	$config['image_library'] = 'gd2';
 	        $config['source_image'] = $image_path.$filename;
 			$config['create_thumb'] = TRUE;
 			$config['maintain_ratio'] = TRUE;
-			$config['width'] = 100;
-			$config['height'] = 88;
+			$config['width'] = 300;
+			$config['height'] =300;
 			$this->load->library('image_lib');      
 	    	$this->image_lib->initialize($config);
 			if(!$this->image_lib->resize())
 	    	{
 	    		$error = array('error' => $this->image_lib->display_errors());	
 	    	}
-			$filename1= 'news_img'.$id.'t.jpg';
-	    	$config1['image_library'] = 'gd2';
-	        $config1['source_image'] = $image_path.$filename1;
-			$config1['create_thumb'] = TRUE;
-			$config1['maintain_ratio'] = TRUE;
-			$config1['width'] = 92;
-			$config1['height'] = 121;
-	    	$this->load->library('image_lib');      
-	    	$this->image_lib->initialize($config1);
-	    	if(!$this->image_lib->resize())
+	    	rename('assets/news/news_img_temp'.$id.'_thumb.jpg','assets/news/news_img'.$id.'.jpg');
+	    	unlink('assets/news/news_img_main'.$id.'.jpg');
+			$this->image_lib->clear();	
+			}
+		  else 
+		  rename('assets/news/news_img_main'.$id.'.jpg','assets/news/news_img'.$id.'.jpg');	
+			
+	    	
+			$height=$aspect_ratio * 100;
+			$filename = 'news_img'.$id.'.jpg';
+			$image_path='assets/news/';
+	    	$config2['image_library'] = 'gd2';
+	    	$config2['source_image'] = $image_path.$filename;
+			$config2['create_thumb'] = TRUE;
+			$config2['maintain_ratio'] = TRUE;
+			$config2['width'] = 100;
+			$config2['height'] = $height;
+			$this->load->library('image_lib');      
+	    	$this->image_lib->initialize($config2);
+			if(!$this->image_lib->resize())
 	    	{
 	    		$error = array('error' => $this->image_lib->display_errors());	
 	    	}
 	    	$this->image_lib->clear();
+	    	
+//	    	$height=$aspect_ratio * 92;
+//			$filename1= 'news_img'.$id.'.jpg';
+//	    	$config1['image_library'] = 'gd2';
+//	        $config1['source_image'] = $image_path.$filename1;
+//			$config1['create_thumb'] = TRUE;
+//			$config1['maintain_ratio'] = TRUE;
+//			$config1['width'] = 92;
+//			$config1['height'] = $height;
+//	    	$this->load->library('image_lib');      
+//	    	$this->image_lib->initialize($config1);
+//	    	if(!$this->image_lib->resize())
+//	    	{
+//	    		$error = array('error' => $this->image_lib->display_errors());	
+//	    	}
+//	    	$this->image_lib->clear();
 			redirect(base_url().'admin/news',$message);
 		}
 	}

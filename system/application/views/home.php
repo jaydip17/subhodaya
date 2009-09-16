@@ -246,9 +246,9 @@ function test()
           </table>
             <table width="320"  align="center" cellpadding="0" cellspacing="0" id="telugufont1">
               <tr>
-                <td  valign="top" id="img-center" align="left"><img src="<?=base_url();?>assets/imgs/tock-line-boyom.jpg" width="5" height="283" /></td>
-                <td width="305" valign="top" id="tock-botom-center" align="left">
-                <div style="padding: 5px;text-align: justify;" >
+                <td  valign="top" id="img-center"><img src="<?=base_url();?>assets/imgs/tock-line-boyom.jpg" width="5" height="283" /></td>
+                <td width="310" valign="top" id="tock-botom-center" align="left">
+                <div style="padding:5px;text-align: justify;" >
                 <? if(file_exists("./assets/news/news_img".$active_news['0']->id."_thumb.jpg")){ ?>
                 <a href="<?=base_url();?>news/newsdetails/<?=$active_news['0']->id?>/<?=$active_news['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?=$active_news['0']->id?>_thumb.jpg" style="margin:2px 5px 0px 2px;float: left;border: 0px;" align="top"></img></a>
                 <?} ?>

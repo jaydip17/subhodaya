@@ -2,11 +2,13 @@
 ul{
 list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 font-size:14px;
-padding-left: 20px;
+padding-left:20px;
 }
 li{
 padding-bottom:5px;
+padding-left:6px;
 }
+
 </style>
 <script language="javascript">
 //<!--
@@ -118,12 +120,12 @@ function telugu_typing()
 		</td></tr>
 			<tr><td><div id="news_heading" class="heading" style="height: 23px"><span id="newsheading"><?=$more['26']->matter;?></span></div></td></tr>
 			<tr><td>
-				<div style="border:1px solid #9FA0A0;">
+				<div style="border:1px solid #9FA0A0;padding:5px">
 					<ul>
 					<? $i=1; 
 					foreach($evenmore as $item){
 					?>
-					<li><a href="<?=base_url();?><?=$type?>/<?=$type?>details/<?=$item->id?>"><?echo $item->heading;?></a></li>
+					<li style="padding-bottom:10px;"><a href="<?=base_url();?><?=$type?>/<?=$type?>details/<?=$item->id?>"><?echo $item->heading;?></a></li>
 					<?if($i>=5)
 					break;
 					$i++;} ?>
@@ -132,10 +134,10 @@ function telugu_typing()
 			</td></tr>
 			<tr><td><div id="news_heading" class="heading" style="height: 23px"><span id="newsheading">More...Categeories</span></div></td></tr>
 			<tr><td>
-				<div style="border:1px solid #9FA0A0;">
+				<div style="border:1px solid #9FA0A0;padding:3px;">
 					<ul>
 					<?foreach($details as $item){ ?>
-					<li><a href="<?=base_url()?><?=$type?>/details/<?=$item->id?>"><?=$item->cat_name;?></li>
+					<li style="padding-bottom:10px;"><a href="<?=base_url()?><?=$type?>/details/<?=$item->id?>"><?=$item->cat_name;?></li>
 					<?} ?>
 					</ul>
 				</div>

@@ -81,6 +81,14 @@ height:23px;
 height:37px;
 
 }
+.div123
+{
+     padding:5px 5px 5px 5px;
+	 border: 1px solid #D9EBF7; 
+	 background-image: url(imgs/div123.jpg);
+	 background-repeat: repeat-x;
+	 height: 70px"
+}
 #leftline{
 background-image:url(imgs/crow-line.jpg);
 background-repeat:no-repeat;
@@ -429,8 +437,6 @@ background-position:0% -42px;
 {
 float:left;
 padding:0px 20px 5px 0px;
-width:101px;
-height:89px;
 }
 #footer {
 background:transparent url(imgs/footer-img.jpg) repeat-x scroll 0 0;

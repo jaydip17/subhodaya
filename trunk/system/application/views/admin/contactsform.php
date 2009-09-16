@@ -2,16 +2,32 @@
 <!--
 function test()
 {
-	var uname = document.getElementById('username').value;
-	var pass = document.getElementById('password').value;
-	var email = document.getElementById('email').value;
+    var flag=1;
+	var uname = document.getElementById('username1').value;
+	//alert(uname);
+	//alert(password);
+	var pass = document.getElementById('password1').value;
+	var email = document.getElementById('email1').value;
+	if(uname=="" || pass=="")
+	{
+	flag=0;
+	alert("enter username and password");	
+	}
+	
+	if(flag!=0)
+	{
+	//tb_show('My Caption',url,'false');
 	var url = '&username='+uname+'&password='+pass+'&type='+email;
-	var attribures = '&height=400&width=500'; 
-	document.getElementById('importcontacts').setAttribute('alt','<?=base_url()."admin/contacts/import?"?>'+url+attribures);
+	attribures = '&height=400&width=500';
+	tb_show('My Caption','<?=base_url()."admin/contacts/import?"?>'+url+attribures,'false');
+	 
+	}
+	else
+	return false;
 }
 //-->
 </script>
-<form name="form1" method="post" action="<?=base_url()?>admin/contacts/import">
+
   <table width="340" border="0" cellspacing="0" cellpadding="0" >
 
     <tr> 
@@ -21,17 +37,17 @@ function test()
     </tr>
     <tr> 
       <td  style="padding:6"><div align="left"><strong>Username:</strong></div></td>
-      <td  style="padding:6"><input name="username" value="" type="text" class="text" id="username">
-      <select name="type" id='email'>
-      <option value="yahoo">Yahoo.com</option>
-      <option value="gmail">Gmail.com</option>
+      <td  style="padding:6"><input name="username" value="" type="text" class="text" id="username1">
+      <select name="type" id='email1'>
+      <option value="yahoo">yahoo</option>
+      <option value="gmail">gmail</option>
       </select>
       </td>
     </tr>
     <tr> 
       <td style="padding:6"><div align="left"><strong>Password:</strong></div></td>
 
-      <td style="padding:6"><input name="password" type="password" class="text" id="password">
+      <td style="padding:6"><input name="password" type="password" class="text" id="password1">
       </td>
     </tr>
     <tr> 

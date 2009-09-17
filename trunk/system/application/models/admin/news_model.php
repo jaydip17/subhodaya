@@ -43,7 +43,6 @@ class News_Model extends Model
   					'description'=>$_POST["description"],
   					'breking_news'=>$breaking
   					);
-  					print_r($data);
   		$this->db->where('id',$id);	
   		$this->db->update('news',$data);		
     }

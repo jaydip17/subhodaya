@@ -96,7 +96,7 @@ class Cinema extends Controller {
 		  rename('assets/cinema/ceni_img_main'.$id.'.jpg','assets/cinema/ceni_img'.$id.'.jpg');	
 		
 		    $height=$aspect_ratio * 100;
-			$filename = 'ceni_img'.$id.'.jpg';
+			$filename = 'ceni_img'.$id.'.jpg'; 
 			$image_path='assets/cinema/';
 	    	$config1['image_library'] = 'gd2';
 	        $config1['source_image'] = $image_path.$filename;
@@ -131,7 +131,7 @@ class Cinema extends Controller {
 	    	}
 	    	$this->image_lib->clear();
 	    	
-			redirect(base_url().'admin/cinema',$message);
+			//redirect(base_url().'admin/cinema',$message);
 		}
 		
 	}

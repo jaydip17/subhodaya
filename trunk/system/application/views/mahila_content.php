@@ -3,6 +3,10 @@ ul{
 list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 padding-left: 20px;
 }
+li{
+padding-bottom:5px;
+
+}
 </style>
 <table width="99%"  border="0" cellpadding="0" cellspacing="0">
 <tr>
@@ -135,7 +139,7 @@ padding-left: 20px;
           				 	<?foreach($details_more as $item){
           				 		$i=1;
           				         foreach($item as $article){?>
-          				         <li><a href="<?=base_url();?><?=$type?>/<?=$type?>details/<?=$article->id?>"><? echo $article->heading;?></a></li>
+          				         <li style="padding-left:6px;"><a href="<?=base_url();?><?=$type?>/<?=$type?>details/<?=$article->id?>"><? echo $article->heading;?></a></li>
           				         <?if($i==1)break; $i++;}?>
           				 		   <?}?>
 	

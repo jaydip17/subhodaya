@@ -130,5 +130,14 @@ class Poll_Model extends Model {
 	 			
 			}
 	}
+	function edit1($id,$active)
+	{
+		$data=array('question'=>$_POST['question'],
+  					'displaydate'=>$_POST["on_date"],
+  					'active'=>$active
+  					);
+  		$this->db->where('id',$id);	
+  		$this->db->update('poll',$data);
+	}
 }
 ?>

@@ -125,21 +125,23 @@ class News extends Controller {
 	    	}
 	    	$this->image_lib->clear();
 	    	
-//	    	$height=$aspect_ratio * 92;
-//			$filename1= 'news_img'.$id.'.jpg';
-//	    	$config1['image_library'] = 'gd2';
-//	        $config1['source_image'] = $image_path.$filename1;
-//			$config1['create_thumb'] = TRUE;
-//			$config1['maintain_ratio'] = TRUE;
-//			$config1['width'] = 92;
-//			$config1['height'] = $height;
-//	    	$this->load->library('image_lib');      
-//	    	$this->image_lib->initialize($config1);
-//	    	if(!$this->image_lib->resize())
-//	    	{
-//	    		$error = array('error' => $this->image_lib->display_errors());	
-//	    	}
-//	    	$this->image_lib->clear();
+	    	$height=$aspect_ratio * 60;
+			$filename1= 'news_img'.$id.'.jpg';
+			$config=array();
+	    	$config['image_library'] = 'gd2';
+	    	$config['new_image']= "news_img".$id."_home.jpg";
+	        $config['source_image'] = $image_path.$filename1;
+			$config['create_thumb'] = TRUE;
+			$config['maintain_ratio'] = TRUE;
+			$config['width'] = 60;
+			$config['height'] = $height;
+	    	$this->load->library('image_lib');      
+	    	$this->image_lib->initialize($config);
+	    	if(!$this->image_lib->resize())
+	    	{
+	    		$error = array('error' => $this->image_lib->display_errors());	
+	    	}
+	    	$this->image_lib->clear();
 			redirect(base_url().'admin/news',$message);
 		}
 	}

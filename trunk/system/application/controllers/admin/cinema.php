@@ -64,7 +64,7 @@ class Cinema extends Controller {
 		{
 			$data = array('upload_data' => $this->upload->data());
 			$oldname='assets/cinema/'.$data['upload_data']['file_name'];
-			rename($oldname,'assets/cinema/news_img_main'.$id.'.jpg');
+			rename($oldname,'assets/cinema/ceni_img_main'.$id.'.jpg');
 			$message='CinemaNews Added Successfully';
 			$this->session->set_flashdata('message',$message);
 			$aspect_ratio = $data['upload_data']['image_height'] / $data['upload_data']['image_width'];
@@ -72,10 +72,10 @@ class Cinema extends Controller {
 		}
 		if($data['upload_data']['image_width'] >300 && $data['upload_data']['image_height'] > 300)
 		  {
-			$filename = 'news_img_main'.$id.'.jpg';
+			$filename = 'ceni_img_main'.$id.'.jpg';
 			$image_path='assets/cinema/';
 	    	$config['image_library'] = 'gd2';
-	    	$config['new_image'] = 'news_img_temp'.$id.'.jpg';
+	    	$config['new_image'] = 'ceni_img_temp'.$id.'.jpg';
 	        $config['source_image'] = $image_path.$filename;
 			$config['create_thumb'] = TRUE;
 			$config['maintain_ratio'] = TRUE;
@@ -87,16 +87,16 @@ class Cinema extends Controller {
 	    	{
 	    		$error = array('error' => $this->image_lib->display_errors());	
 	    	}
-	    	rename('assets/cinema/news_img_temp'.$id.'_thumb.jpg','assets/cinema/news_img'.$id.'.jpg');
-	    	unlink('assets/cinema/news_img_main'.$id.'.jpg');
+	    	rename('assets/cinema/ceni_img_temp'.$id.'_thumb.jpg','assets/cinema/ceni_img'.$id.'.jpg');
+	    	unlink('assets/cinema/ceni_img_main'.$id.'.jpg');
 			
 	    	$this->image_lib->clear();
 		  }
 		  else 
-		  rename('assets/cinema/news_img_main'.$id.'.jpg','assets/cinema/news_img'.$id.'.jpg');	
+		  rename('assets/cinema/ceni_img_main'.$id.'.jpg','assets/cinema/ceni_img'.$id.'.jpg');	
 		
 		    $height=$aspect_ratio * 100;
-			$filename = 'news_img'.$id.'.jpg';
+			$filename = 'ceni_img'.$id.'.jpg';
 			$image_path='assets/cinema/';
 	    	$config1['image_library'] = 'gd2';
 	        $config1['source_image'] = $image_path.$filename;
@@ -114,10 +114,10 @@ class Cinema extends Controller {
 	    	$this->image_lib->clear();
 	    	
 	    	$height=$aspect_ratio * 60;
-			$filename1= 'news_img'.$id.'.jpg';
+			$filename1= 'ceni_img'.$id.'.jpg';
 			$config=array();
 	    	$config['image_library'] = 'gd2';
-	    	$config['new_image']= "news_img".$id."_home.jpg";
+	    	$config['new_image']= "ceni_img".$id."_home.jpg";
 	        $config['source_image'] = $image_path.$filename1;
 			$config['create_thumb'] = TRUE;
 			$config['maintain_ratio'] = TRUE;

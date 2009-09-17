@@ -99,7 +99,7 @@ function display_text(sample) {
 	{
     getFlexApp("sample123").display_text(sample);
 	}
-	
+	 
 }
 var limit_time = 2000;
 function display_text_1(){

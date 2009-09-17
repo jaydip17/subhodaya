@@ -276,7 +276,7 @@ sample sf dsfsd fdsf
 	    						<ul class="yui-nav">
 							       <li class="selected" style="text-align: center;"><a href="#tab1"><em style="width: 70px;"><?php if(isset($greetings1['0'])){echo $greetings1['0']->gree_cat;}?></em></a></li>
 							        <li style="text-align: center;"><a href="#tab2"><em style="width: 70px;"><span id="telugufont"><?php if(isset($greetings2['0'])){echo $greetings2['0']->gree_cat;}?></span></em></a></li>
-							         <li style="text-align: center;"><a href="#tab2"><em style="width: 70px;"><span id="telugufont"><?php if(isset($greetings12['0'])){echo $greetings12['0']->gree_cat;}?></span></em></a></li>
+							         <li style="text-align: center;"><a href="#tab2"><em style="width: 70px;"><span id="telugufont"><?php if(isset($greetings12['0'])){echo $greetings12['0']->gree_cat;}?>dcadc</span></em></a></li>
 	    						</ul>            
     							<div class="yui-content" style="height: 150px;text-align: center;">
 							        <div id="tab1"><p>
@@ -308,6 +308,7 @@ sample sf dsfsd fdsf
 							        else { echo 'No data found';}?>
 							        </p></div>
 							        <div id="tab3"><p>
+							        <?php print_r($greetings12)?>
 							        <?php if(!empty($greetings12)){ $count=1; foreach($greetings12 as $row):?>
 							       	<div style="border: 0px solid red;height:95px;">
 							        	<div style="padding:1px;">

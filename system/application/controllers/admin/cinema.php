@@ -93,7 +93,7 @@ class Cinema extends Controller {
 	    	$this->image_lib->clear();
 		  }
 		  else 
-		  rename('assets/mahila/news_img_main'.$id.'.jpg','assets/mahila/news_img'.$id.'.jpg');	
+		  rename('assets/cinema/news_img_main'.$id.'.jpg','assets/cinema/news_img'.$id.'.jpg');	
 		
 		    $height=$aspect_ratio * 100;
 			$filename = 'news_img'.$id.'.jpg';

@@ -566,9 +566,9 @@ function test()
 							        	<tr>
 							        <?php foreach($video_result as $item){?>
 							        	
-							        	<td><div style="padding-top:5px;width:132px;">
-							        	<a href="<?=base_url();?>video/index/<?php if(isset($item)) {echo $item->id;}?>"><div id="latestvideo_time"><?=$item->time?></div><img id="img" src="<?=base_url();?>assets/videos/image_preview/home_image<?=$item->id?>_thumb.jpg" height="100px" width="132px" border="0"></a></div>
-							        		<div style="width:132px;"id="video_botto_img" style="margin-left:10px;"><a href="<?=base_url();?>video/index/<?php if(isset($item)) {echo $item->id;}?>"><?=$item->name?></a></div></td>
+							        	<td><div style="padding-top:5px;width:130px;">
+							        	<a href="<?=base_url();?>video/index/<?php if(isset($item)) {echo $item->id;}?>"><div id="latestvideo_time"><?=$item->time?></div><img id="img" src="<?=base_url();?>assets/videos/image_preview/home_image<?=$item->id?>_thumb.jpg" height="100px" width="130px" border="0"></a></div>
+							        		<div style="width:132px;"id="video_botto_img"><a href="<?=base_url();?>video/index/<?php if(isset($item)) {echo $item->id;}?>"><?=$item->name?></a></div></td>
 							        	
                                    <? }?>
 							       </tr>
@@ -582,10 +582,10 @@ function test()
 							        	if(!empty($greetings1['0'])){
 							        	$count=0;
 							        	foreach ($greetings1 as $item):?>
-							        		<td><div style="width:132px;">
+							        		<td><div style="width:130px;">
 							        		<? 
 							        		if(file_exists("./assets/greetings/gree_img".$greetings1['0']->id."_thumb.jpg")){ ?>
-							        		<a href="<?=base_url();?>greetings/content/<?php if(isset($greetings1['0'])) {echo $greetings1['0']->type;}?>"><img id="img" src="<?=base_url();?>assets/greetings/gree_img<?=$item->id?>_thumb.jpg" height="100px" width="132px" border="0"></a>
+							        		<a href="<?=base_url();?>greetings/content/<?php if(isset($greetings1['0'])) {echo $greetings1['0']->type;}?>"><img id="img" src="<?=base_url();?>assets/greetings/gree_img<?=$item->id?>_thumb.jpg" height="100px" width="130px" border="0"></a>
 							        		
 							        		</div>
 							        		<div id="gall_botto_img"><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings1['0'])) {echo $greetings1['0']->type;}?>"><?=$item->gree_cat?></a></div><?} ?></td>

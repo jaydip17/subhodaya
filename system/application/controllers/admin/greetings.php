@@ -121,7 +121,6 @@ class Greetings extends Controller {
 	}
  function edit1()
    {
-   	
    	if(!isset($_POST['active']))
    	{
 		$active=0;

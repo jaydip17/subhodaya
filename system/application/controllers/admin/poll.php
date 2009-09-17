@@ -50,8 +50,22 @@ class  Poll extends Controller {
 	function edit(){
 		 $id=$this->uri->segment(4,0);
 		 $result=$this->Poll_Model->get_edit($id);
-		$this->load->view('admin/poll_edit');
+		 //print_r($result);
+		 $data=array('result'=>$result);
+		$this->load->view('admin/poll_edit',$data);
 		
+	}
+	function edit1()
+	{
+		if(!isset($_POST['active']))
+   		{
+			$active=0;
+   		}else{
+   			$active=$_POST['active'];
+   		}
+	  	 $id=$_POST['id'];
+   	 $this->Poll_Model->edit1($id,$active);
+   	redirect(base_url().'admin/poll/getpoll');
 	}
 
 }

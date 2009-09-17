@@ -24,7 +24,7 @@ if(isset($message) && !is_array($message) ) echo($message);?>
 		<td align="left"><?=form_input('question'); ?></td>
 	</tr>
 	<tr>
-		<td>Insert_date</td>
+		<td>Display_date</td>
 		<td><?=form_input('on_date'); ?></td>
 	</tr>
 	<tr>

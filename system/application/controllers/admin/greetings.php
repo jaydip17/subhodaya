@@ -121,14 +121,14 @@ class Greetings extends Controller {
 	}
  function edit1()
    {
-   	echo $_POST['id'];
+   	
    	if(!isset($_POST['active']))
    	{
 		$active=0;
    	}else{
    		$active=$_POST['active'];
    	}
-	  	echo $id=$_POST['id'];
+	  	 $id=$_POST['id'];
    	 $this->Greeting_Model->edit1($id,$active);
    	redirect(base_url().'admin/greetings/editpage');
    }

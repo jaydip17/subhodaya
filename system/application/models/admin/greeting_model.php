@@ -76,11 +76,9 @@ class Greeting_Model extends Model {
     function edit1($id,$active)
     {
     	$data=array('name'=>$_POST['name'],
-  					'summery'=>$_POST["summary"],
+  					'summery'=>$_POST["summery"],
   					'active'=>$active
   					);
-  					print_r($data);
-  					
   		$this->db->where('id',$id);	
   		$this->db->update('greetings',$data);		
     }

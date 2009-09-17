@@ -63,18 +63,66 @@ class Cinema extends Controller {
 		else
 		{
 			$data = array('upload_data' => $this->upload->data());
-			$this->Cinema_Model->rename($data,$id);
+			$oldname='assets/cinema/'.$data['upload_data']['file_name'];
+			rename($oldname,'assets/cinema/news_img_main'.$id.'.jpg');
 			$message='CinemaNews Added Successfully';
 			$this->session->set_flashdata('message',$message);
+			$aspect_ratio = $data['upload_data']['image_height'] / $data['upload_data']['image_width'];
+	
 		}
-			$filename = 'ceni_img'.$id.'.jpg';
+		if($data['upload_data']['image_width'] >300 && $data['upload_data']['image_height'] > 300)
+		  {
+			$filename = 'news_img_main'.$id.'.jpg';
 			$image_path='assets/cinema/';
 	    	$config['image_library'] = 'gd2';
+	    	$config['new_image'] = 'news_img_temp'.$id.'.jpg';
 	        $config['source_image'] = $image_path.$filename;
 			$config['create_thumb'] = TRUE;
 			$config['maintain_ratio'] = TRUE;
-			$config['width'] = 143;
-			$config['height'] = 148;
+			$config['width'] = 300;
+			$config['height'] = 300;
+	    	$this->load->library('image_lib');      
+	    	$this->image_lib->initialize($config);
+	    	if(!$this->image_lib->resize())
+	    	{
+	    		$error = array('error' => $this->image_lib->display_errors());	
+	    	}
+	    	rename('assets/cinema/news_img_temp'.$id.'_thumb.jpg','assets/cinema/news_img'.$id.'.jpg');
+	    	unlink('assets/cinema/news_img_main'.$id.'.jpg');
+			
+	    	$this->image_lib->clear();
+		  }
+		  else 
+		  rename('assets/mahila/news_img_main'.$id.'.jpg','assets/mahila/news_img'.$id.'.jpg');	
+		
+		    $height=$aspect_ratio * 100;
+			$filename = 'news_img'.$id.'.jpg';
+			$image_path='assets/cinema/';
+	    	$config1['image_library'] = 'gd2';
+	        $config1['source_image'] = $image_path.$filename;
+			$config1['create_thumb'] = TRUE;
+			$config1['maintain_ratio'] = TRUE;
+			$config1['width'] = 100;
+			$config1['height'] =$height;
+			$this->load->library('image_lib');      
+	    	$this->image_lib->initialize($config1);
+			if(!$this->image_lib->resize())
+	    	{
+	    		$error = array('error' => $this->image_lib->display_errors());	
+	    	}
+			
+	    	$this->image_lib->clear();
+	    	
+	    	$height=$aspect_ratio * 60;
+			$filename1= 'news_img'.$id.'.jpg';
+			$config=array();
+	    	$config['image_library'] = 'gd2';
+	    	$config['new_image']= "news_img".$id."_home.jpg";
+	        $config['source_image'] = $image_path.$filename1;
+			$config['create_thumb'] = TRUE;
+			$config['maintain_ratio'] = TRUE;
+			$config['width'] = 60;
+			$config['height'] = $height;
 	    	$this->load->library('image_lib');      
 	    	$this->image_lib->initialize($config);
 	    	if(!$this->image_lib->resize())
@@ -82,6 +130,7 @@ class Cinema extends Controller {
 	    		$error = array('error' => $this->image_lib->display_errors());	
 	    	}
 	    	$this->image_lib->clear();
+	    	
 			redirect(base_url().'admin/cinema',$message);
 		}
 		

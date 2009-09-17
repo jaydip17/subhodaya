@@ -187,7 +187,7 @@ function test()
 							        	</div></div>
 									<div id="tab4">
 									     <div style="height: 175px;" id="telugufont1">
-							        	<? if(file_exists("./assets/mahila/news_img".$mahila_details_yoga['0']->id."_thumb.jpg")){ ?>
+							        	<? if(!empty($mahila_details_yoga['0'])){if(file_exists("./assets/mahila/news_img".$mahila_details_yoga['0']->id."_thumb.jpg")){ ?>
 							        		<a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['0'])){echo $mahila_details_yoga['0']->id;}?>"><img src="<?=base_url();?>assets/mahila/news_img<?php if(isset($mahila_details_yoga['0'])){echo $mahila_details_yoga['0']->id;}?>_thumb.jpg" align="top" style="padding: 0px 22px 1px 2px;float: left;border: 0px;"></img></a>
 							        	<?} ?>
     									<font id="mainnews"><a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['0'])){echo $mahila_details_yoga['0']->id;}?>"><?php if(isset($mahila_details_yoga['0'])){echo $mahila_details_yoga['0']->heading;}?></a></font><br>
@@ -198,9 +198,10 @@ function test()
 							        		<li style="padding: 2px"><a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['2'])){echo $mahila_details_yoga['2']->id;}?>"><?php if(isset($mahila_details_yoga['2'])){echo $mahila_details_yoga['2']->heading;}?></a></li>
 							        		<li style="padding: 2px"><a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['3'])){echo $mahila_details_yoga['3']->id;}?>"><?php if(isset($mahila_details_yoga['3'])){echo $mahila_details_yoga['3']->heading;}?></a></li>
 							        	</ul>
+							        		<?} ?>
 							        	</div>
 							        	<div id="more-news-div"><a href="<?=base_url();?>mahila/details/<?=$mahila_details_yoga['0']->cat_id?>"><?php if(isset($more['0'])){echo $more['0']->matter;}?></a></div>
-							        	
+							        
 							        	<div class="div123">
 							        	<table width="100%">
 							        	

@@ -258,7 +258,7 @@ padding-top:0px;
 	            <tr>
 	             <td height="116px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/MathruBashacr.gif);background-repeat-y;">
 	             <div id="telugufont1">
-	            <div style="height: 80px;padding: 3px;">
+	            <div style="height:80px;padding:7px;">
 	             <?if(!empty($details_more['3'])){?>
 	             <font id="telugufont"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['3']['0']->id?>"><?php echo $details_more['3']['0']->heading?></a></font><br>
 	              <?=$details_more['3']['0']->summary; }?> 
@@ -294,7 +294,7 @@ padding-top:0px;
 	            <tr>
 	             <td height="116px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/MathruBashacr.gif);background-repeat-y;">
 	             <div id="telugufont1">
-	             <div style="height:80px;padding: 3px;">
+	             <div style="height:80px;padding:7px;">
 	             <?if(!empty($details_more['4'])){?>
 	             <font id="telugufont"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['4']['0']->id?>"><?php echo $details_more['4']['0']->heading?></a></font><br>
 	              <?=$details_more['4']['0']->summary; }?> 
@@ -331,7 +331,7 @@ padding-top:0px;
 	            <tr>
 	             <td  height="116px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/MathruBashacr.gif);background-repeat-y;">
 	             <div id="telugufont1">
-	             <div style="height:80px;padding: 3px;">
+	             <div style="height:80px;padding:7px;">
 	             <?if(!empty($details_more['5'])){?>
 	             <font id="telugufont"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['5']['0']->id?>"><?php echo $details_more['5']['0']->heading?></a></font><br>
 	              <?=$details_more['5']['0']->summary; }?> 
@@ -366,7 +366,7 @@ padding-top:0px;
 	            <tr>
 	             <td height="116px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/MathruBashacr.gif);background-repeat-y;">
 	              <div id="telugufont1">
-	              <div style="height:80px;padding: 3px;">
+	              <div style="height:80px;padding:7px;">
 	             <?if(!empty($details_more['6'])){?>
 	             <font id="telugufont"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['6']['0']->id?>"><?php echo $details_more['6']['0']->heading?></a></font><br>
 	              <?=$details_more['6']['0']->summary; }?> 
@@ -404,7 +404,7 @@ padding-top:0px;
 	            <tr>
 	             <td  height="163px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/Janapadalu-cr.gif);background-repeat-x;">
 	             <div id="telugufont1">
-	             <div style="height: 128px;padding: 3px;">
+	             <div style="height: 128px;padding:7px;">
 	             <?if(!empty($details_more['7'])){?>
 	             <font id="telugufont"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['7']['0']->id?>"><?php echo $details_more['7']['0']->heading?></a></font><br>
 	              <?=$details_more['7']['0']->summary; }?> 
@@ -438,7 +438,7 @@ padding-top:0px;
 	            <tr>
 	             <td height="163px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/Janapadalu-cr.gif);background-repeat-x;">
 	              <div id="telugufont1">
-	              <div style="height: 128px;padding: 3px;">
+	              <div style="height: 128px;padding:7px;">
 	             <?if(!empty($details_more['8'])){?>
 	             <font id="telugufont"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['8']['0']->id?>"><?php echo $details_more['8']['0']->heading?></a></font><br>
 	              <?=$details_more['8']['0']->summary; }?> 

@@ -154,8 +154,8 @@ function telugu_typing()
 								if(!empty($video_result)){
 								
           				        foreach($video_result as $item){?>
-          				 		<div style="padding:5px;height:82px;padding-top:6px;"><a href="<?=base_url();?>video/index/<?php if(isset($item)) {echo $item->id;}?>"><div id="cinemavideo_time"><?=$item->time?></div><img id="img"src="<?=base_url();?>assets/videos/image_preview/home_image<?=$item->id?>_thumb.jpg" border="0"></a></div>
-							        		<div id="gall_botto_img" style="margin-left:3px;"align="center"><a href="<?=base_url();?>video/index/<?php if(isset($item)) {echo $item->id;}?>"><?=$item->name?></a></div>
+          				 		<div style="padding:4px;height:82px;padding-top:8px;"><a href="<?=base_url();?>video/index/<?php if(isset($item)) {echo $item->id;}?>"><div id="cinemavideo_time"><?=$item->time?></div><img id="img"src="<?=base_url();?>assets/videos/image_preview/home_image<?=$item->id?>_thumb.jpg"  border="0"></a></div>
+							        		<div id="gall_botto_img" style="margin-left:2px;"align="center"><a href="<?=base_url();?>video/index/<?php if(isset($item)) {echo $item->id;}?>"><?=$item->name?></a></div>
 							        		<div style="height:12px;"><!--Views:<?=$item->no_of_views?>	--></div>
 							        			
 								<? }}else
@@ -168,7 +168,7 @@ function telugu_typing()
 		
 			<table>
 				<tr>
-					<td valign="top" align="left" height="295px"><div class="heading" style="width: 181px;" id="news_heading"><div style="padding-top:5px;" id="newsheading"><?php if($type=="mahila"){echo $more['9']->matter;}else {echo $more['8']->matter;}?></div></div>
+					<td valigns="top" align="left" height="295px"><div class="heading" style="width: 181px;" id="news_heading"><div style="padding-top:5px;" id="newsheading"><?php if($type=="mahila"){echo $more['9']->matter;}else {echo $more['8']->matter;}?></div></div>
 						<div style="height: 265px;border:1px solid #9FA0A0;" id="left_news">
 						<?if(!empty($details_more)){?>	<img src="<?=base_url();?>assets/<?=$link?>/news_img<?=$details_more[$key]->id?>_thumb.jpg" style="padding:5px 0px 0px 20px; " /><?} ?>
 							<ul id="mainnews">

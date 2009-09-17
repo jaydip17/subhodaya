@@ -150,7 +150,7 @@ class Sahithi extends Controller {
 	    	$this->image_lib->clear();
 	    	
 		}
-		   redirect(base_url().'admin/sahithi',$message);
+		 //  redirect(base_url().'admin/sahithi',$message);
 	}
    function getsahithitype(){
    		

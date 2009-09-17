@@ -177,14 +177,13 @@ class News extends Controller {
 	}
   function edit1()
    {
-   	echo $_POST['id'];
-   	if(!isset($_POST['breaking_news']))
+   		if(!isset($_POST['breaking_news']))
    	{
 		$breaking=0;
    	}else{
    		$breaking=$_POST['breaking_news'];
    	}
-	  	echo $id=$_POST['id'];
+	  
    	 $this->News_Model->edit1($id,$breaking);
    	redirect(base_url().'admin/news/getnews');
    }

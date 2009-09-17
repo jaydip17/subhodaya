@@ -1,4 +1,4 @@
-<div style="height:480px">
+<div style="height:490px">
 
 <? $count=0; foreach($details as $row):?>
 <div style="height: 120px" id="telugufont1">

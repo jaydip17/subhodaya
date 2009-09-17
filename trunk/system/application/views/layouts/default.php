@@ -33,6 +33,8 @@ var tb_pathToImage = "<?=base_url()?>assets/imgs/loadingAnimation.gif";
 <script type="text/javascript" src="<?=base_url();?>assets/js/mmenu.js"></script>
 <script type="text/javascript" src="<?=base_url()?>assets/js/feedback_validation.js">
 </script>
+<script type="text/javascript" src="<?=base_url()?>assets/js/validate_sendmail.js">
+</script>
 
 <body onload="<? if(isset($onload)) echo $onload; ?>">
 

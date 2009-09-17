@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 19, 2009 at 10:59 AM
+-- Generation Time: Sep 17, 2009 at 04:28 AM
 -- Server version: 5.0.51
 -- PHP Version: 5.2.5
 
@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `sahithi_cat` (
   `cat_name` varchar(200) collate utf8_unicode_ci NOT NULL,
   `active` int(10) NOT NULL,
   PRIMARY KEY  (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=9 ;
 
 --
 -- Dumping data for table `sahithi_cat`
@@ -36,9 +36,7 @@ INSERT INTO `sahithi_cat` (`id`, `cat_name`, `active`) VALUES
 (2, 'కథలు', 0),
 (3, 'మాతృ భాష', 0),
 (4, 'సామెతలు', 0),
-(5, 'కవితలు', 0),
+(5, 'లెనిన్ కవితలు', 0),
 (6, 'కవిత్వం', 0),
 (7, 'జానపదాలు', 0),
-(8, 'వ్యాసం', 0),
-(9, 'బ్యూటీ టిప్స్', 0),
-(10, 'వంటింటి చిట్కాలు', 0);
+(8, 'వ్యాసం', 0);

@@ -181,8 +181,8 @@ padding-left: 20px;
           </table></td>
           <td width="245" valign="top"><img src="<?=base_url();?>assets/imgs/add-img.jpg"></img></td>
           <td width="185" align="center" valign="top" rowspan="3">
-			<table width="100%" style="border:1px solid #3789C3;">
-			<tr>
+			<div width="100%" style="height:850px;border:1px solid #FF0000;background-color:#808080;">Google Adds
+			<!--<tr>
 				<td style="border:1px solid #3789C3;height: 25px;" id="news_heading">Latest Gallery</td>
 			</tr>
 			<tr>
@@ -197,8 +197,8 @@ padding-left: 20px;
 					</table>
 				</td>
 			</tr>
-			</table>
-			<div style="padding-top: 5px">
+			--></div>
+			<!--<div style="padding-top: 5px">
 			<table style="border:1px solid #3789C3;" bgcolor="#9CD8FC" width="100%">
 				<tr>
 					<td align="center">
@@ -213,7 +213,7 @@ padding-left: 20px;
 				</tr>
 			</table>
 			</div>
-			<div style="width:100%"><!--<img src="<?=base_url();?>assets/imgs/3.jpg" style="padding: 4px;">--></div>
+			--><div style="width:100%"><!--<img src="<?=base_url();?>assets/imgs/3.jpg" style="padding: 4px;">--></div>
           </td>
           </tr>
           <tr>

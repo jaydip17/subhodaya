@@ -1,4 +1,4 @@
-<div style="height:480px">
+<div style="height:490px">
 
 <? $count=0; foreach($details as $row):
 if(isset($type) && $type=="sahithi")
@@ -26,4 +26,4 @@ else if(isset($type) && $type=="mahila"){?>
 endforeach; ?>
 
 </div>
-<div align="right" style="width: 100%"><? echo $paginate;?></div>
+<div align="right" style="width:100%;"><? echo $paginate;?></div>

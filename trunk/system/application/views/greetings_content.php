@@ -236,7 +236,7 @@ sample sf dsfsd fdsf
 					</td>
 					<td width="50%" align="left" valign="top">
 						<div id="gree_cen">
-							<div style="height: 140px; width: 290px;"><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings8['0'])) {echo $greetings16['0']->type;}?>"><img src="<?=base_url();?>assets/greetings/gree_img<?php if(isset($greetings16['0'])) {echo $greetings16['0']->id;}?>_thumb.jpg" style="padding: 5px 10px 5px 10px;float: left;text-align: justify;" border="0"></a>
+							<div style="height: 140px; width: 290px;"><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings16['0'])) {echo $greetings16['0']->type;}?>"><img src="<?=base_url();?>assets/greetings/gree_img<?php if(isset($greetings16['0'])) {echo $greetings16['0']->id;}?>_thumb.jpg" style="padding: 5px 10px 5px 10px;float: left;text-align: justify;" border="0"></a>
 							<div style="padding: 6px 15px 0px 0px;"><span id="more-news-div"><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings16['0'])) {echo $greetings16['0']->type;}?>"><?php if(isset($greetings16['0'])) {echo $greetings16['0']->name;}?></a></span></div>
 							<?php if(isset($greetings16['0'])) {echo $greetings16['0']->summery;}?></div>
 							<div style="" id="more-news-div"><span><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings16['0'])) {echo $greetings16['0']->type;}?>"><?php if(isset($more['0'])){ echo $more['0']->matter;}?></a></span></div>

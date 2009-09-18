@@ -1,5 +1,5 @@
 <?
-echo form_open_multipart(base_url()."admin/poll/insert/") ?>
+echo form_open_multipart("admin/poll/insert") ?>
 <center><?
 if(isset($message) && !is_array($message) ) echo($message);?>
 		<? 

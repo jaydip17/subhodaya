@@ -35,15 +35,17 @@ class Cinema extends Controller {
 	    			//print_r($row);
 	    			
 	 				$images[$row->id]=$this->Gallery_Model->getimage1($row->id);
-	 				$count = $count + 1;
-	 				if($count >3)
-	 				break;
+	 				
+	 				
 	    		}
 	 		
 	    	}
+	    	if($count >=3)
+	 				break;
+	 				$count++;
 		   }
 	    }
-	    
+	   // print_r($images);
 	    $this->load->Model('Video_Model');
 	    $videos=$this->Video_Model->get_videos('latest',5);
 	   	$video_result=$videos->result();

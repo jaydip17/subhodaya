@@ -85,7 +85,7 @@ function telugu_typing()
 		</td>
 		<td valign="top" >
 			<div><table cellpadding="1px" width="100%">
-			<tr><td align="left"><div id="news_heading" style="font-weight: bold;font-size: 14px;border: 1px solid #9FA0A0;"><?=$result['0']->heading ?></div></td></tr>
+			<tr><td align="left"><div id="news_heading" style="font-weight: bold;font-size: 14px;border: 1px solid #9FA0A0;">&nbsp;<?=$result['0']->heading ?></div></td></tr>
 			<tr><td align="center"><div  id="maindiv-news">
 			<div class="maindiv-news" style="text-align: justify;margin: 5px;font-size: 14px;">
 			<? if(!empty($result['0'])){
@@ -96,16 +96,17 @@ function telugu_typing()
 			</div></td></tr>
 			<tr><td><div id="news_heading" class="heading"><span id="newsheading"><?php if(isset($more['25'])){echo $more['25']->matter;}?></span></div></td></tr>
 			<tr><td align="center"><div style="border:1px solid #9FA0A0;">
-			<form>
-			<table id="formdiv">
+			<?=form_open('subhodaya/sendmail',array('name'=>'telugu_send')) ?>
+			
+			<input type="hidden" name="url" value="<?=base_url(); $type="news"; ?><?=$type?>/<?=$type?>details/<?=$result['0']->id?>">
+			<table id="formdiv" cellspacing="5">
 				<tr><td valign="top" colspan="2"><div style="background-color: #B5E8FD;height:20px;"></div></td></tr>
-				<tr><td width="150px" align="left" style="padding-left: 10px;"><?php if(isset($more['27'])){ echo $more['27']->matter;}?></td><td><input type="text" name="uname" size="30"></td></tr>
-				<tr><td width="150px" align="left" style="padding-left: 10px;"><?php if(isset($more['38'])){ echo $more['38']->matter;}?></td><td><input type="text" name="uname" size="30"></td></tr>
-				<tr><td width="150px" align="left" style="padding-left: 10px;"><?php if(isset($more['39'])){ echo $more['39']->matter;}?></td><td><input type="text" name="uname" size="30"></td></tr>
-				<tr><td width="150px" align="left" style="padding-left: 10px;"><?php if(isset($more['28'])){ echo $more['28']->matter;}?></td><td><input type="text" name="uname" size="30"></td></tr>
+				<tr><td width="150px" align="left" style="padding-left: 15px"><?=$more['27']->matter;?></td><td><input type="text" name="name" size="30">  </td></tr>
+				<tr><td width="150px" align="left" style="padding-left: 15px;"><?php if(isset($more['39'])){ echo $more['39']->matter;}?></td><td><input type="text" name="fname" size="30"></td></tr>
+				<tr><td width="150px" align="left" style="padding-left: 15px"><?=$more['28']->matter;?></td><td><input type="text" name="email" size="30"></td></tr>
 				<tr><td valign="top" colspan="2"><div style="background-color: #B5E8FD;height:20px;"></div></td></tr>
 				<tr><td colspan="2" align="left" style="padding-left: 10px;"><input type="checkbox" onclick="telugu_typing()" id="telugu_type" name="telugu_type">&nbsp;Type in telugu</td></tr>
-				<tr><td colspan="2" align="center"><textarea style="height: 190px;width: 95%"></textarea></td></tr>
+				<tr><td colspan="2" align="center"><textarea style="height: 190px;width: 95%" name="description"></textarea></td></tr>
 				<tr><td colspan="2" align="center"><input type="submit" name="send" value="Send"><input type="reset" ></td></tr>
 				<tr><td valign="top" colspan="2"><div style="background-color: #B5E8FD;height:20px;"></div></td></tr>
 			</table>

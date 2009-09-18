@@ -414,7 +414,7 @@ function test()
                         		<font id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?=$active_news1['0']->id?>/<?=$active_news1['0']->type?>"><?=$active_news1['0']->heading?></a></font><br>
                         		<?=$active_news1['0']->summary?>
                         	</div>
-                        	<div id="more-news-div" style="width: 220px;"><span ><a href="<?=base_url();?>cinema/inner/<?=$cinema_type2['0']->id?>/<?=$active_news1['0']->type?>"><?=$more['1']->matter ?>...</a></span></div>
+                        	<div id="more-news-div" style="width: 220px;"><span ><a href="<?=base_url();?>news/newsdetails/<?=$active_news1['0']->id?>/<?=$active_news1['0']->type?>"><?=$more['1']->matter ?>...</a></span></div>
                         </td>
                         <td  valign="top" id="center-img"><img src="<?=base_url();?>assets/imgs/new.jpg" width="5" height="214" /></td>
                     </tr>

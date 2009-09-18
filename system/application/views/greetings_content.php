@@ -284,7 +284,7 @@ sample sf dsfsd fdsf
 							       	<div style="border: 0px solid red;height:95px;">
 							        	<div style="padding:1px;">
 							        		<a href="<?=base_url();?>greetings/content/<?=$row->type?>"><img src="<?=base_url();?>assets/greetings/gree_img<?=$row->id?>_thumb.jpg" width="80px;" height="87px;" style="float: left;border: 1px #939393;padding:2px;"></a>
-							        		<font id="more-news-div"><a href="<?=base_url();?>greetings/content/<?=$row->type?>"><?=$row->name;?></a></font>
+							        		<font ><a href="<?=base_url();?>greetings/content/<?=$row->type?>"><?=$row->name;?></a></font>
 							        		<div><?=$row->summery;?></div>
 							        	</div>
 							        </div>
@@ -297,7 +297,7 @@ sample sf dsfsd fdsf
 							       		<div style="border: 0px solid red;height:95px;">
 							        	<div style="padding:1px;">
 							        		<a href="<?=base_url();?>greetings/content/<?=$row->type?>"><img src="<?=base_url();?>assets/greetings/gree_img<?=$row->id?>_thumb.jpg" height="90px;" width="70px" style="float: left;border: 2px #939393;padding:2px;text-align: justify;"></a>
-							        		<font id="more-news-div"><a href="<?=base_url();?>greetings/content/<?=$row->type?>"><?=$row->name;?></a></font>
+							        		<font ><a href="<?=base_url();?>greetings/content/<?=$row->type?>"><?=$row->name;?></a></font>
 							        		<div><?=$row->summery;?></div>
 							        	</div>
 							        </div>
@@ -313,8 +313,8 @@ sample sf dsfsd fdsf
 							       	<div style="border: 0px solid red;height:95px;">
 							        	<div style="padding:1px;">
 							        		<a href="<?=base_url();?>greetings/content/<?=$row->type?>"><img src="<?=base_url();?>assets/greetings/gree_img<?=$row->id?>_thumb.jpg" height="90px;" style="float: left;border: 2px #939393;padding:2px;text-align: justify;"></a>
-							        		<font id="more-news-div"><a href="<?=base_url();?>greetings/inner/<?=$row->type?>"><?=$row->name;?></a></font>
-							        		<div><?=$row->summery;?></div>
+							        		<font style="text-align: left;"><a href="<?=base_url();?>greetings/inner/<?=$row->type?>"><?=$row->name;?></a></font>
+							        		<div ><?=$row->summery;?></div>
 							        	</div>
 							        </div>
 							       <hr>

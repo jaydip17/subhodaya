@@ -182,7 +182,7 @@ sample sf dsfsd fdsf
               			<tr>
               				<td align="right">
               					<input type="hidden" name="poll_id" value="<?=$cinemapoll['0']->id?>">
-              					<? $attributes = 'onClick= "loadPoll(\''.base_url().'poll/index/'.$cinemapoll[0]->id.'\',this.value)";' ?>
+              					<? $attributes = 'onClick= "loadPoll(\''.base_url().'poll/index/'.$cinemapoll[0]->id.'\',this.value,\''.base_url().'assets/imgs/bigrotation2.gif\')";' ?>
               					<?=form_radio('answer','a',True,$attributes) ?>
               				</td>
               				<td align="left"><?=$more['18']->matter ?></td></tr>
@@ -525,5 +525,5 @@ var TabbedPanels2 = new Spry.Widget.TabbedPanels("TabbedPanels2");
 						</div>
 						</div>
                       </td>
-                      <td><div style="border: 1px solid red;height: 190px;width: 450px;background-color: gray;">add space</div></td>
+                      <td valign="bottom"><div style="border: 1px solid red;height: 120px;width: 450px;background-color: gray;">add space</div></td>
 </table>

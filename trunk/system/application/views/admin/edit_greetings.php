@@ -27,7 +27,7 @@ function fun1()
 
 $i=1;	
 
-echo form_open(base_url().'admin/news/delete');
+echo form_open('admin/greetings/delete');
  ?>
 <table align="center" width="50%" id="tableadmin">
 	<th colspan="3">

@@ -29,7 +29,7 @@ messages[<?=$count?>] = new Array('<?=base_url ()?>assets/videos/image_preview/i
                                if($count_another==6)
                                {
                                $count_another=0;	
-                            	echo "<tr></tr>";                             }
+                            	echo "<tr></tr>";  }
                           $count ++;
                           $count_another++;
                          }

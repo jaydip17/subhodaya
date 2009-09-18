@@ -1,3 +1,4 @@
+
 <script language="javascript">
 function fun(){
 	var i;
@@ -50,6 +51,7 @@ function fun1(){
 
 echo form_open(base_url().'admin/videos/deletevideo/');?>
 <?foreach ($query->result() as $item):
+
 ?>	
 
 <tr>
@@ -102,6 +104,6 @@ echo form_open(base_url().'admin/videos/deletevideo/');?>
 	
 <h2>No Videos in this categeory</h2>	
 
-<a href="<?=base_url();?>/admin/videos/addvideo" style="color:purple">Click to Add Videos</a>
+<a href="<?=base_url();?>/admin/videos/viewaddvideo" style="color:purple">Click to Add Videos</a>
 <? }?>
 </table>

@@ -214,7 +214,7 @@ sample sf dsfsd fdsf
           			<tr>
           				<td width="375" style="border: 1px solid #50BCFC;" id="newstable" valign="top" height="235">
           				<div style="width:100%;" id="news_heading"><span id="newsheading"><?=$cinema_type1['0']->cinema_type?></span></div>
-          				<div id='telugufont1' style="height: 200px">
+          				<div id='telugufont1' style="height: 200px;padding: 0px 3px 0px 4px;text-align: justify;">
           				 <? if(!empty($cinema_type1)){
            					if(file_exists("./assets/cinema/ceni_img".$cinema_type1['0']->id."_thumb.jpg")){ ?>
 							 		<a href="<?=base_url();?>cinema/inner/<?=$cinema_type1['0']->id?>/<?=$cinema_type1['0']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type1['0']->id?>_thumb.jpg" style="float: left;padding:4px 20px 3px 3px;border: 0px;"></img></a>
@@ -250,7 +250,7 @@ sample sf dsfsd fdsf
           				</td>
           				<td style="border: 1px solid #50BCFC;" valign="top" id="newstable" height="235">
           				<div style="width:100%;" id="news_heading"><span id="newsheading"><?=$cinema_type2['0']->cinema_type?></span></div>
-          				<div id='telugufont1' style="height: 200px">
+          				<div id='telugufont1' style="height: 200px;padding: 0px 3px 0px 4px;text-align: justify;">
           				   <? if(!empty($cinema_type2)){
            					if(file_exists("./assets/cinema/ceni_img".$cinema_type2['0']->id."_thumb.jpg")){ ?>
 							 		<a href="<?=base_url();?>cinema/inner/<?=$cinema_type2['0']->id?>/<?=$cinema_type2['0']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type2['0']->id?>_thumb.jpg" style="float: left;padding:4px 20px 3px 3px;border: 0px;"></img></a>
@@ -288,13 +288,13 @@ sample sf dsfsd fdsf
           			<tr>
           				<td width="375" style="border: 1px solid #50BCFC;" valign="top" id="newstable">
           				<div id="TabbedPanels1" class="TabbedPanels" style="padding-left: 0px;">
-							  <ul class="TabbedPanelsTabGroup">
+							  <ul class="TabbedPanelsTabGroup" >
 							    <li class="TabbedPanelsTab" tabindex="0"><span id="newsheading"><?=$cinema_type3['0']->cinema_type?></span></li>
 							    <li class="TabbedPanelsTab" tabindex="0"><span id="newsheading"><?=$cinema_type4['0']->cinema_type?></span></li>
 							  </ul>
 							  <div class="TabbedPanelsContentGroup">
 							    <div class="TabbedPanelsContent">
-							    <div id='telugufont1' style="height: 200px">
+							    <div id='telugufont1' style="height: 200px;padding: 0px 3px 0px 4px;text-align: justify;">
 							    <? if(!empty($cinema_type3)){
            					   if(file_exists("./assets/cinema/ceni_img".$cinema_type3['0']->id."_thumb.jpg")){ ?>
 							 		<a href="<?=base_url();?>cinema/inner/<?=$cinema_type3['0']->id?>/<?=$cinema_type3['0']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type3['0']->id?>_thumb.jpg" style="float: left;padding:4px 20px 3px 3px;border: 0px;"></img></a>
@@ -329,7 +329,7 @@ sample sf dsfsd fdsf
 							 		<div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>cinema/details/<?=$cinema_type3['0']->type?>"><?=$more['0']->matter?></a></span></div>
           						</div>
 							    <div class="TabbedPanelsContent">
-							   		 <div id='telugufont1' style="height: 200px">
+							   		 <div id='telugufont1' style="height: 200px;padding: 0px 3px 0px 4px;text-align: justify;">
 							   		 <? if(!empty($cinema_type4)){
            					          if(file_exists("./assets/cinema/ceni_img".$cinema_type4['0']->id."_thumb.jpg")){ ?>
 							 		<a href="<?=base_url();?>cinema/inner/<?=$cinema_type4['0']->id?>/<?=$cinema_type4['0']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type4['0']->id?>_thumb.jpg" style="float: left;padding:4px 20px 3px 3px;border: 0px;"></img></a>
@@ -374,7 +374,7 @@ sample sf dsfsd fdsf
 							  </ul>
 							  <div class="TabbedPanelsContentGroup">
 							    <div class="TabbedPanelsContent">
-							   		  <div id='telugufont1' style="height: 200px">
+							   		  <div id='telugufont1' style="height: 200px;padding: 0px 3px 0px 4px;text-align: justify;">
 							   		  <? if(!empty($cinema_type5)){
            					if(file_exists("./assets/cinema/ceni_img".$cinema_type5['0']->id."_thumb.jpg")){ ?>
 							 		<a href="<?=base_url();?>cinema/inner/<?=$cinema_type5['0']->id?>/<?=$cinema_type5['0']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type5['0']->id?>_thumb.jpg" style="float: left;padding:4px 20px 3px 3px;border: 0px;"></img></a>

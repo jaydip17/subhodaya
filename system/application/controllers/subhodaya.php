@@ -42,16 +42,19 @@ class Subhodaya extends Controller {
 	    	if(!empty($eachone))
 	    	{
 	    		foreach ($eachone as $row){
-	    			//print_r($row);
-	    			
+	    				    			
 	 				$images[$row->id]=$this->Gallery_Model->getimage1($row->id);
-	 				$count = $count + 1;
-	 				if($count >3)
-	 				break;
+	 				
+	 				
+	 				
 	    		}
 	    	}
+	    	if($count>=3)
+	 				break;
+	    	$count++;
 		   }
 	    }
+	   // print_r($images);
 	    	
 		$activenews=$this->News_Model->active_news1();
 		$gall_topviews=$this->Gallery_Model->top_views();
@@ -90,12 +93,18 @@ class Subhodaya extends Controller {
 		if(isset($_POST['send']))
 		{
 		$to = $_POST['email'];
-        $subject = "Shubhodaya nice article";
-        $message= "Dear ".$_POST['email'].".. Your friend ".$_POST['name']." sent u an article on shubhodaya".$_POST['description'];
+		
+        $subject = "[SUBHODAYA.COM] ";
+		if(isset($_POST['subject']))
+		{
+			$subject .= $_POST['subject'];
+		}
+        $message= "Dear ".$_POST['fname'].".. \n\n Your friend ".$_POST['name']." sent u an article on shubhodaya".$_POST['description'];
         $message.="\n";
         $message.= "To read this article follow the below link.\n".$_POST['url'];
         $message.="Thanks and Regards.\n Shubhodaya Team.";
-        $headers = "From:";
+        $headers = "From: subhodaya \r\n".
+               "Reply-To: dontreply@subhodaya.com"; 
         if( mail($to,$subject,$message,$headers))
         $status= "1";
         else

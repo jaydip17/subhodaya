@@ -47,7 +47,7 @@ class Cinema extends Controller {
 	    }
 	   // print_r($images);
 	    $this->load->Model('Video_Model');
-	    $videos=$this->Video_Model->get_videos('latest',5);
+	    $videos=$this->Video_Model->get_videos('latest',4);
 	   	$video_result=$videos->result();
 	    $gall_topviews=$this->Gallery_Model->top_views();
 		$data=array('cinema_type1'		=>	$cinema_type1,

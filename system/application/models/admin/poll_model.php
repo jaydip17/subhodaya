@@ -37,7 +37,7 @@ class Poll_Model extends Model {
     	foreach($remove as $item)
     	{
     		$this->db->where('id',$item);
-    		$this->db->delete('news');
+    		$this->db->delete('poll');
     	}
 	}
 	function get_edit($id){

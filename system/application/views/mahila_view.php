@@ -333,7 +333,7 @@ padding-top:0px;
 	            <tr>
 	             <td  height="116px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/MathruBashacr.gif);background-repeat-y;"> 
 	              <div id="telugufont1">
-	              <div style="height:80px;padding: 3px;" id="telugufont">
+	              <div style="height:80px;padding: 3px;">
 	              <?if(!empty($details_more['5'])){
 	             if(file_exists("./assets/mahila/news_img".$details_more['5']['0']->id."_thumb.jpg")){
 	             ?>

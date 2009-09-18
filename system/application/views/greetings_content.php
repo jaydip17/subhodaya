@@ -308,7 +308,6 @@ sample sf dsfsd fdsf
 							        else { echo 'No data found';}?>
 							        </p></div>
 							        <div id="tab3"><p>
-							        <?php print_r($greetings12)?>
 							        <?php if(!empty($greetings12)){ $count=1; foreach($greetings12 as $row):?>
 							       	<div style="border: 0px solid red;height:95px;">
 							        	<div style="padding:1px;">

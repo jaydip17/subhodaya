@@ -525,7 +525,7 @@ function test()
               			<tr>
               				<td align="right">
               					<input type="hidden" name="poll_id" value="<?=$newspoll['0']->id?>">
-              					<? $attributes = 'onClick= "loadPoll(\''.base_url().'poll/index/'.$newspoll[0]->id.'\',this.value,\''.base_url().'assets/imgs/loadingAnimation.gif\')";' ?>
+              					<? $attributes = 'onClick= "loadPoll(\''.base_url().'poll/index/'.$newspoll[0]->id.'\',this.value,\''.base_url().'assets/imgs/working.gif\')";' ?>
               					<?=form_radio('answer','a',True,$attributes) ?>
               				</td>
               				<td align="left"><?=$more['18']->matter ?></td></tr>

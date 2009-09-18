@@ -2,8 +2,8 @@ var xmlhttp;
 var loding;
 function loadPoll(url,somevalue,imgurl)
 {
-loading = "<img src=''"+imgurl+"' align='absmiddle'> ";
-document.getElementById('home_poll').innerHTML=loading ;
+loading = "<img src=''"+imgurl+"' align='lodingimage'> ";
+document.getElementById('home_poll').innerHTML=loading;
  url = url+'/'+somevalue;
 xmlhttp=null;
 if (window.XMLHttpRequest)

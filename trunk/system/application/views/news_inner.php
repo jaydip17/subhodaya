@@ -117,11 +117,16 @@ function telugu_typing()
 				<div style="border:1px solid #9FA0A0;">
 					<ul id="mainnews">
 				<?php if(isset($news)){
+					$count=1;
 					foreach ($news as $row):
 				?>
 			
 					<li style="padding-top: 4px;"><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>/<?=$row->type?>"><?=$row->heading?></a></li>
-					<?php endforeach;
+					<?php 
+					if($count==5)
+					break;
+					$count++;
+					endforeach;
 					}
 					?>
 					</ul>

@@ -32,7 +32,7 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 	</td>
 	<td valign="top">
 		<div style="width: 595px;height: 198px;margin-left: 6px;"><img src="<?=base_url()?>assets/imgs/banner.jpg"></div>
-		<div style="width: 595;height: 420px;margin-top: 5px;">
+		<div style="width: 595;height: 440px;margin-top: 5px;">
 			<table cellpadding="0" cellspacing="0" style="padding-left: 4px;">
 				<tr>
 					<td id="gal_leftslide" ></td>
@@ -40,8 +40,8 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 					<td id="gal_rightslide"></td>
 				</tr>
 				<tr>
-					<td colspan="3" height="388" id="gal_center" valign="top" >
-					<table cellspacing="15" >
+					<td colspan="3"  id="gal_center" valign="top" >
+					<table cellspacing="10" >
 							<tr>
 						<?php
 						$count=1;
@@ -58,13 +58,12 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 									<?php 
 								if($count==4)
 									{
-										$count = 1;
+										$count = 0;
 										echo "</tr><tr>";
 									}
+									if($count==12){
+										break;}
 									$count++;
-//									if($count==12){
-//										break;
-//									}
 									endforeach; 
 								endforeach;}
 								else 'no data found';

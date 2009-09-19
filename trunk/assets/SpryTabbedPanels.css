@@ -72,14 +72,14 @@
 	padding: 4px 10px;
 	margin: 0px 1px 0px 0px;
 	font: bold 0.7em sans-serif;
-	background-color: #C6E9FD;
+	background-color:#C6E9FD;
 	height:15px;
 	font-size:12px;
 	list-style: none;
-	border-left: solid 1px #93D7FA;
-	border-bottom: solid 2px #93D7FA;
-	border-top: solid 1px #93D7FA;
-	border-right: solid 1px #93D7FA;
+	border-bottom: 1px solid #93D7FA;
+	border-top:1px solid #808080;
+	border-left:1px solid #808080;
+	border-right:1px solid #808080;
 	-moz-user-select: none;
 	-khtml-user-select: none;
 	cursor: pointer;
@@ -108,6 +108,10 @@
 .TabbedPanelsTabSelected {
 	background-color: #93D7FA;
 	border-bottom: 1px solid #93D7FA;
+	border-top:1px solid #808080;
+	border-left:1px solid #808080;
+	border-right:1px solid #808080;
+	
 }
 
 /* This selector is an example of how to make a link inside of a tab button

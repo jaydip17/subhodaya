@@ -58,14 +58,15 @@ class Mahila extends Controller {
 		$data=array('result'   =>   $result,
 					 'more'    =>   $more,
 				'cinema_type1' =>   $cinema_type1,
-		         'evenmore' =>$evenmore,
-		        'details' =>$details,
-		        'details_more' =>$details_more,
-		            'type'=>'mahila',
-		            'link' => 'sahithi',
-		              'video_result'     =>  $video_result,
-	              'news_type2'  =>	$news_type2,
-	                 'key'         =>  $key
+		         'evenmore'    =>   $evenmore,
+		        'details'      =>   $details,
+		        'details_more' =>   $details_more,
+		            'type'     =>   'mahila',
+		            'link'     =>   'sahithi',
+		    'video_result'     =>  $video_result,
+	              'news_type2' =>	$news_type2,
+	                 'key'     =>  $key,
+				
 		     	);
 				
 		$this->load->view('mahila_inner',$data);
@@ -90,6 +91,7 @@ class Mahila extends Controller {
 		$this->pagination->initialize($config); 
 		$pagination=$this->pagination->create_links();
 		$mahila=$this->Mahila_Model->get_mahila($type,$count=false);
+		$cinemapoll=$this->Poll_Model->get_newspolls($type=5);
 		//print_r($mahila);
 		//echo $onload;
 		$data=array(	'news'  =>$mahila,
@@ -100,7 +102,8 @@ class Mahila extends Controller {
 		              'newspoll'    =>  $newspoll,
 				 'yes_poll'    =>  $yes_poll,
 		            'details_more' =>$details_more,
-		            'type'  =>'mahila');
+		            'type'  =>'mahila',
+					'cinemapoll'   =>  $cinemapoll);
 		$this->load->view("mahila_content",$data);
 	}
 

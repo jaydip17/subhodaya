@@ -24,13 +24,13 @@ class Sahithi extends Controller {
 		$types_mahila =array_keys($details_mahila);
 		//print_r($details_more);
 		//print_r($types);
-		$data=array('more'      =>$more,
-		            'details'   =>$details,
-		            'details_more' => $details_more,
-		             'types'        =>   $types,        
-		             'details_more_mahila' => $details_more_mahila,
+		$data=array('more'      		=>	$more,
+		            'details'  			=>	$details,
+		            'details_more' 		=> $details_more,
+		             'types'        	=>   $types,        
+		          'details_more_mahila' => $details_more_mahila,
 		             'details_mahila'   => $details_mahila,
-		             'types_mahila'  => $types_mahila);
+		             'types_mahila'  	=> $types_mahila);
 		
 		$this->load->view('sahithi_view',$data);
    }

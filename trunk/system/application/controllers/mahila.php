@@ -10,6 +10,7 @@ class Mahila extends Controller {
 		
 		$more=$this->News_Model->more_news();
 		$details=$this->Mahila_Model->get_Mahilatype();
+		//print_r($details);
 		foreach($details as $item)
 		$details_more[$item->id]=$this->Mahila_Model->getdetails($item->id,'yes',6);;
 		
@@ -73,7 +74,8 @@ class Mahila extends Controller {
 	}
     function details(){
    	    $this->load->model('admin/Poll_Model');
-   	    $newspoll=$this->Poll_Model->get_newspolls($type=4);
+   	    $details_sahithi=$this->Sahithi_Model->get_sahithitype();
+   	    $sahithi_details=$this->Sahithi_Model->active_sahithi(3,$type='home');
 		$yes_poll=$this->Poll_Model->get_yes_newspoll($type=4);
       	$details=$this->Mahila_Model->get_mahilatype();
 		foreach($details as $item)
@@ -92,18 +94,23 @@ class Mahila extends Controller {
 		$pagination=$this->pagination->create_links();
 		$mahila=$this->Mahila_Model->get_mahila($type,$count=false);
 		$cinemapoll=$this->Poll_Model->get_newspolls($type=5);
-		//print_r($mahila);
+		//print_r($sahithi_details);
+		//print_r($details_sahithi);
+		
 		//echo $onload;
-		$data=array(	'news'  =>$mahila,
-						'more'=>$more,
-					'pagination'=>$pagination,
-		             'onload' =>$onload,
-		            'details' =>$details,
-		              'newspoll'    =>  $newspoll,
-				 'yes_poll'    =>  $yes_poll,
-		            'details_more' =>$details_more,
-		            'type'  =>'mahila',
-					'cinemapoll'   =>  $cinemapoll);
+		$data=array(	
+						'news'  =>	$mahila,
+						'more'	=>	$more,
+					'pagination'=>	$pagination,
+		             'onload' 	=>	$onload,
+		            'details' 	=>	$details,
+				 'yes_poll'    	=>  $yes_poll,
+		         'details_more' =>	$details_more,
+		            'type'  	=>	'mahila',
+				 'cinemapoll'   =>  $cinemapoll,
+			'details_sahithi'   =>  $details_sahithi,
+			'sahithi_details'	=>  $sahithi_details
+		);
 		$this->load->view("mahila_content",$data);
 	}
 

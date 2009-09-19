@@ -36,7 +36,7 @@ function test()
 	if(uname=="" || pass=="")
 	{
 	flag=0;
-	alert("enter username and password");	
+	alert("Enter username and password");	
 	}
 	
 	if(flag!=0)
@@ -44,7 +44,7 @@ function test()
 	//tb_show('My Caption',url,'false');
 	var url = '&username='+uname+'&password='+pass+'&type='+email;
 	attribures = '&height=400&width=500';
-	tb_show('My Caption','<?=base_url()."admin/contacts/import?"?>'+url+attribures,'false');
+	tb_show('Your Contact list','<?=base_url()."admin/contacts/import?"?>'+url+attribures,'false');
 	 
 	}
 	else

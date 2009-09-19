@@ -207,7 +207,7 @@ sample sf dsfsd fdsf
 				<tr>
 					<td width="50%" align="left" valign="top">
 						<div id="gree_cen">
-							<div style="height: 140px;width: 290px;"><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings10['0'])) {echo $greetings10['0']->type;}?>"><img src="<?=base_url();?>assets/greetings/gree_img<?php if(isset($greetings10['0'])) {echo $greetings10['0']->id;}?>_thumb.jpg" style="padding: 5px 10px 5px 10px;float: left;text-align: justify;" border="0"></a>
+							<div style="height: 140px;width: 290px;"><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings10['0'])) {echo $greetings10['0']->type;}?>"><img src="<?=base_url();?>assets/greetings/gree_img<?php if(isset($greetings10['0'])) {echo $greetings10['0']->id;}?>_thumb.jpg" style="margin: 5px 10px 5px 10px;float: left;text-align: justify;border: 2px solid gray;" border="0"></a>
 							<div style="padding: 6px 15px 0px 0px;"><span id="more-news-div"><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings10['0'])) {echo $greetings10['0']->type;}?>"><?php if(isset($greetings10['0'])) {echo $greetings10['0']->name;}?></a></span></div>
 							<span><?php if(isset($greetings10['0'])) {echo $greetings10['0']->summery;}?></span></div>
 							<div style="" id="more-news-div"><span><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings10['0'])) {echo $greetings10['0']->type;}?>"><?php if(isset($more['0'])){ echo $more['0']->matter;}?></a></span></div>
@@ -216,7 +216,7 @@ sample sf dsfsd fdsf
 					</td>
 					<td width="50%" align="left" valign="top">
 						<div id="gree_cen">
-							<div style="height: 140px;width: 290px;"><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings9['0'])) {echo $greetings9['0']->type;}?>"><img src="<?=base_url();?>assets/greetings/gree_img<?php if(isset($greetings9['0'])) {echo $greetings9['0']->id;}?>_thumb.jpg" style="padding: 5px 10px 5px 10px;float: left;text-align: justify;" border="0"></a>
+							<div style="height: 140px;width: 290px;"><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings9['0'])) {echo $greetings9['0']->type;}?>"><img src="<?=base_url();?>assets/greetings/gree_img<?php if(isset($greetings9['0'])) {echo $greetings9['0']->id;}?>_thumb.jpg" style="margin: 5px 10px 5px 10px;float: left;text-align: justify;border: 2px solid gray;" border="0"></a>
 							<div style="padding: 6px 15px 0px 0px;"><span id="more-news-div"><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings9['0'])) {echo $greetings9['0']->type;}?>"><?php if(isset($greetings9['0'])) {echo $greetings9['0']->name;}?></a></span></div>
 							<span><?php if(isset($greetings9['0'])) {echo $greetings9['0']->summery;}?></span></div>
 							<div style="" id="more-news-div"><span><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings9['0'])) {echo $greetings9['0']->type;}?>"><?php if(isset($more['0'])){ echo $more['0']->matter;}?></a></span></div>
@@ -227,7 +227,7 @@ sample sf dsfsd fdsf
 				<tr>
 					<td width="50%" align="left" valign="top">
 						<div id="gree_cen">
-							<div style="height: 140px; width: 290px;"><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings8['0'])) {echo $greetings8['0']->type;}?>"><img src="<?=base_url();?>assets/greetings/gree_img<?php if(isset($greetings8['0'])) {echo $greetings8['0']->id;}?>_thumb.jpg" style="padding: 5px 10px 5px 10px;float: left;text-align: justify;" border="0"></a>
+							<div style="height: 140px; width: 290px;"><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings8['0'])) {echo $greetings8['0']->type;}?>"><img src="<?=base_url();?>assets/greetings/gree_img<?php if(isset($greetings8['0'])) {echo $greetings8['0']->id;}?>_thumb.jpg" style="margin: 5px 10px 5px 10px;float: left;text-align: justify;border: 2px solid gray;" border="0"></a>
 							<div style="padding: 6px 15px 0px 0px;"><span id="more-news-div"><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings8['0'])) {echo $greetings8['0']->type;}?>"><?php if(isset($greetings8['0'])) {echo $greetings8['0']->name;}?></a></span></div>
 							<?php if(isset($greetings8['0'])) {echo $greetings8['0']->summery;}?></div>
 							<div style="" id="more-news-div"><span><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings8['0'])) {echo $greetings8['0']->type;}?>"><?php if(isset($more['0'])){ echo $more['0']->matter;}?></a></span></div>
@@ -236,7 +236,7 @@ sample sf dsfsd fdsf
 					</td>
 					<td width="50%" align="left" valign="top">
 						<div id="gree_cen">
-							<div style="height: 140px; width: 290px;"><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings6['0'])) {echo $greetings6['0']->type;}?>"><img src="<?=base_url();?>assets/greetings/gree_img<?php if(isset($greetings6['0'])) {echo $greetings6['0']->id;}?>_thumb.jpg" style="padding: 5px 10px 5px 10px;float: left;text-align: justify;" border="0"></a>
+							<div style="height: 140px; width: 290px;"><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings6['0'])) {echo $greetings6['0']->type;}?>"><img src="<?=base_url();?>assets/greetings/gree_img<?php if(isset($greetings6['0'])) {echo $greetings6['0']->id;}?>_thumb.jpg" style="margin: 5px 10px 5px 10px;float: left;text-align: justify;border: 2px solid gray;" border="0"></a>
 							<div style="padding: 6px 15px 0px 0px;"><span id="more-news-div"><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings6['0'])) {echo $greetings6['0']->type;}?>"><?php if(isset($greetings6['0'])) {echo $greetings6['0']->name;}?></a></span></div>
 							<?php if(isset($greetings6['0'])) {echo $greetings6['0']->summery;}?></div>
 							<div style="" id="more-news-div"><span><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings6['0'])) {echo $greetings6['0']->type;}?>"><?php if(isset($more['0'])){ echo $more['0']->matter;}?></a></span></div>
@@ -247,7 +247,7 @@ sample sf dsfsd fdsf
 				<tr>
 					<td width="50%" align="left" valign="top">
 						<div id="gree_cen">
-							<div style="height: 140px; width: 290px;"><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings4['0'])) {echo $greetings4['0']->type;}?>"><img src="<?=base_url();?>assets/greetings/gree_img<?php if(isset($greetings4['0'])) {echo $greetings4['0']->id;}?>_thumb.jpg" style="padding: 5px 10px 5px 10px;float: left;text-align: justify;" border="0"></a>
+							<div style="height: 140px; width: 290px;"><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings4['0'])) {echo $greetings4['0']->type;}?>"><img src="<?=base_url();?>assets/greetings/gree_img<?php if(isset($greetings4['0'])) {echo $greetings4['0']->id;}?>_thumb.jpg" style="margin: 5px 10px 5px 10px;float: left;text-align: justify;border: 2px solid gray;" border="0"></a>
 							<div style="padding: 6px 15px 0px 0px;"><span id="more-news-div"><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings4['0'])) {echo $greetings4['0']->type;}?>"><?php if(isset($greetings4['0'])) {echo $greetings4['0']->name;}?></a></span></div>
 							<?php if(isset($greetings4['0'])) {echo $greetings4['0']->summery;}?></div>
 							<div style="" id="more-news-div"><span><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings4['0'])) {echo $greetings4['0']->type;}?>"><?php if(isset($more['0'])){ echo $more['0']->matter;}?></a></span></div>
@@ -256,7 +256,7 @@ sample sf dsfsd fdsf
 					</td>
 					<td width="50%" align="left" valign="top">
 						<div id="gree_cen">
-							<div style="height: 140px; width: 290px;"><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings7['0'])) {echo $greetings7['0']->type;}?>"><img src="<?=base_url();?>assets/greetings/gree_img<?php if(isset($greetings7['0'])) {echo $greetings7['0']->id;}?>_thumb.jpg" style="padding: 5px 10px 5px 10px;float: left;text-align: justify;" border="0"></a>
+							<div style="height: 140px; width: 290px;"><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings7['0'])) {echo $greetings7['0']->type;}?>"><img src="<?=base_url();?>assets/greetings/gree_img<?php if(isset($greetings7['0'])) {echo $greetings7['0']->id;}?>_thumb.jpg" style="margin: 5px 10px 5px 10px;float: left;text-align: justify;border: 2px solid gray;" border="0"></a>
 							<div style="padding: 6px 15px 0px 0px;"><span id="more-news-div"><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings7['0'])) {echo $greetings7['0']->type;}?>"><?php if(isset($greetings7['0'])) {echo $greetings7['0']->name;}?></a></span></div>
 							<?php if(isset($greetings7['0'])) {echo $greetings7['0']->summery;}?></div>
 							<div style="" id="more-news-div"><span><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings7['0'])) {echo $greetings7['0']->type;}?>"><?php if(isset($more['0'])){ echo $more['0']->matter;}?></a></span></div>
@@ -278,12 +278,12 @@ sample sf dsfsd fdsf
 							        <li style="text-align: center;"><a href="#tab2"><em style="width: 70px;"><span id="telugufont"><?php if(isset($greetings2['0'])){echo $greetings2['0']->gree_cat;}?></span></em></a></li>
 							         <li style="text-align: center;"><a href="#tab2"><em style="width: 70px;"><span id="telugufont"><?php if(isset($greetings12['0'])){echo $greetings12['0']->gree_cat;}?></span></em></a></li>
 	    						</ul>            
-    							<div class="yui-content" style="height: 150px;text-align: center;">
+    							<div class="yui-content" style="height: 150px;">
 							        <div id="tab1"><p>
 							        <?php if(!empty($greetings1)){ $count=1; foreach($greetings1 as $row):?>
 							       	<div style="border: 0px solid red;height:95px;">
 							        	<div style="padding:1px;">
-							        		<a href="<?=base_url();?>greetings/content/<?=$row->type?>"><img src="<?=base_url();?>assets/greetings/gree_img<?=$row->id?>_thumb.jpg" width="80px;" height="87px;" style="float: left;border: 1px #939393;padding:2px;"></a>
+							        		<a href="<?=base_url();?>greetings/content/<?=$row->type?>"><img src="<?=base_url();?>assets/greetings/gree_img<?=$row->id?>_thumb.jpg" width="80px;" height="87px;" style="float: left;border: 1px solid gray;margin:2px 5px 2px 2px;" border=""></a>
 							        		<font ><a href="<?=base_url();?>greetings/content/<?=$row->type?>"><?=$row->name;?></a></font>
 							        		<div><?=$row->summery;?></div>
 							        	</div>
@@ -296,7 +296,7 @@ sample sf dsfsd fdsf
 							        	<?php if(!empty($greetings2)){ $count=1; foreach($greetings2 as $row):?>
 							       		<div style="border: 0px solid red;height:95px;">
 							        	<div style="padding:1px;">
-							        		<a href="<?=base_url();?>greetings/content/<?=$row->type?>"><img src="<?=base_url();?>assets/greetings/gree_img<?=$row->id?>_thumb.jpg" height="90px;" width="70px" style="float: left;border: 2px #939393;padding:2px;text-align: justify;"></a>
+							        		<a href="<?=base_url();?>greetings/content/<?=$row->type?>"><img src="<?=base_url();?>assets/greetings/gree_img<?=$row->id?>_thumb.jpg" height="90px;" width="70px" style="float: left;border: 1px solid gray;margin:2px 5px 2px 2px;"></a>
 							        		<font ><a href="<?=base_url();?>greetings/content/<?=$row->type?>"><?=$row->name;?></a></font>
 							        		<div><?=$row->summery;?></div>
 							        	</div>
@@ -311,7 +311,7 @@ sample sf dsfsd fdsf
 							        <?php if(!empty($greetings12)){ $count=1; foreach($greetings12 as $row):?>
 							       	<div style="border: 0px solid red;height:95px;">
 							        	<div style="padding:1px;">
-							        		<a href="<?=base_url();?>greetings/content/<?=$row->type?>"><img src="<?=base_url();?>assets/greetings/gree_img<?=$row->id?>_thumb.jpg" height="90px;" style="float: left;border: 2px #939393;padding:2px;text-align: justify;"></a>
+							        		<a href="<?=base_url();?>greetings/content/<?=$row->type?>"><img src="<?=base_url();?>assets/greetings/gree_img<?=$row->id?>_thumb.jpg" height="90px;" style="float: left;border: 1px solid gray;margin:2px 5px 2px 2px;"></a>
 							        		<font style="text-align: left;"><a href="<?=base_url();?>greetings/inner/<?=$row->type?>"><?=$row->name;?></a></font>
 							        		<div ><?=$row->summery;?></div>
 							        	</div>

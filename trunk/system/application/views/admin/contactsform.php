@@ -11,7 +11,7 @@ function test()
 	if(uname=="" || pass=="")
 	{
 	flag=0;
-	alert("enter username and password");	
+	alert("Enter username and password");	
 	}
 	
 	if(flag!=0)
@@ -19,7 +19,7 @@ function test()
 	//tb_show('My Caption',url,'false');
 	var url = '&username='+uname+'&password='+pass+'&type='+email;
 	attribures = '&height=400&width=500';
-	tb_show('My Caption','<?=base_url()."admin/contacts/import?"?>'+url+attribures,'false');
+	tb_show('Your Contact list','<?=base_url()."admin/contacts/import?"?>'+url+attribures,'false');
 	 
 	}
 	else
@@ -28,11 +28,11 @@ function test()
 //-->
 </script>
 
-  <table width="340" border="0" cellspacing="0" cellpadding="0" >
+  <table width="340" border="0" cellspacing="5" cellpadding="0" align="center" style="margin: 60px;">
 
     <tr> 
-      <td colspan="2" style="padding:6"><div align="center" class="formheading"><strong>Import 
-            Contacts<br>
+      <td colspan="2" style="padding:6"><div align="center" class="formheading"><strong><h3>Enter 
+            Your Details</h3><br>
            </strong></div></td>
     </tr>
     <tr> 

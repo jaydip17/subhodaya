@@ -93,13 +93,14 @@ class Subhodaya extends Controller {
 		if(isset($_POST['send']))
 		{
 		$to = $_POST['email'];
+		$heading= $_POST['heading'];
 		
-        $subject = "[SUBHODAYA.COM] ";
+        echo $subject = "[SUBHODAYA.COM]  ".$heading;
 		if(isset($_POST['subject']))
 		{
 			$subject .= $_POST['subject'];
 		}
-        $message= "Dear ".$_POST['fname'].".. \n\n Your friend ".$_POST['name']." sent u an article on shubhodaya".$_POST['description'];
+        $message= "Dear ".$_POST['fname'].".. \n\n Your friend ".$_POST['name']." sent u an article on shubhodaya \n\n".$_POST['description'];
         $message.="\n";
         $message.= "To read this article follow the below link.\n".$_POST['url'];
         $message.="Thanks and Regards.\n Shubhodaya Team.";

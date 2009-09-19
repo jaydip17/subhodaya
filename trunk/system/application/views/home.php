@@ -622,7 +622,7 @@ function test()
 							        <div id="tab1"><p><div style="padding-top:11px">
 							        <? if(!empty($mahila_details)){?>
 							        <div id="image"><?if(file_exists("./assets/mahila/news_img".$mahila_details['0']->id."_thumb.jpg")){ ?>
-							        <a href="<?=base_url();?>mahila/mahiladetails/<?if(!empty($mahila_details)){$mahila_details['0']->id;}?>"><img style="border:0px;" src="<?=base_url();?>assets/mahila/news_img<?if(!empty($mahila_details)){echo $mahila_details['0']->id;}?>_thumb.jpg" /></a></div>
+							        <a href="<?=base_url();?>mahila/mahiladetails/<?if(!empty($mahila_details)){$mahila_details['0']->id;}?>"><img style="border:0px;" id="img"src="<?=base_url();?>assets/mahila/news_img<?if(!empty($mahila_details)){echo $mahila_details['0']->id;}?>_thumb.jpg" /></a></div>
 							        <?} }?>
 							        <div id="mainnews"><a href="<?=base_url();?>mahila/mahiladetails/<?if(!empty($mahila_details)){echo $mahila_details['0']->id;}?>"><?if(!empty($mahila_details)){echo $mahila_details['0']->heading;}?></a></div>
 							     <font style="font-size:14px;padding-top:5px;">  <?php if(!empty($mahila_details)){ echo $mahila_details['0']->summary; ?></font>

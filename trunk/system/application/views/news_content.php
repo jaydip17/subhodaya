@@ -267,9 +267,9 @@ padding-left: 20px;
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter2.jpg" width="5" height="31" /></td>
         </tr>
         <tr>
-          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="120" /></td>
+          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="150" /></td>
           <td valign="top" id="botom-ser">
-          <div id="telugufont1" style="height: 86px;">
+          <div id="telugufont1" style="height: 120px;">
           	<? if(isset($mahila_details['0'])){
           	if(file_exists("./assets/mahila/news_img".$mahila_details['0']->id."_thumb.jpg")){?>  
           	<a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details['0']->id?>"><img border="0px" id="image" src="<?=base_url();?>/assets/mahila/news_img<?=$mahila_details['0']->id?>_thumb.jpg" style="float: left;padding: 2px 5px 2px 1px;"></a>
@@ -280,11 +280,11 @@ padding-left: 20px;
 	          </div>
 	          <div id="more-news-div"><a href="<?=base_url()?>mahila/mahiladetails/<?=$mahila_details['0']->id?>"><?=$more['1']->matter?></a></div>
           </td>
-          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="120" /></td>
+          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="150" /></td>
           <td width="8">&nbsp;</td>
-          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="120" /></td>
+          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="150" /></td>
           <td valign="top" id="botom-ser">
-          <div id="telugufont1" style="height: 86px;">
+          <div id="telugufont1" style="height: 120px;">
           	<? if(isset($mahila_details1['0'])){
           	if(file_exists("./assets/mahila/news_img".$mahila_details1['0']->id."_thumb.jpg")){
           		?>  
@@ -296,10 +296,10 @@ padding-left: 20px;
 	          </div>
 	          <div id="more-news-div"><a href="<?=base_url()?>mahila/mahiladetails/<?if(isset($mahila_details1['0'])){ echo $mahila_details1['0']->id;}?>"><?=$more['1']->matter?></a></div>
           </td>
-          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="120" /></td>
+          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="150" /></td>
           <td width="8">&nbsp;</td>
-          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="120" /></td>
-          <td valign="top" id="botom-ser"> <div id="telugufont1" style="height: 86px;">
+          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="150" /></td>
+          <td valign="top" id="botom-ser"> <div id="telugufont1" style="height: 120px;">
           	<? if(isset($mahila_details2['0'])){ 
 				if(file_exists("./assets/mahila/news_img".$mahila_details2['0']->id."_thumb.jpg")){ ?>  
           	<a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details2['0']->id?>"><img border="0px" id="image" src="<?=base_url();?>assets/mahila/news_img<?=$mahila_details2['0']->id?>_thumb.jpg" style="float: left;padding: 2px 5px 2px 1px;"></a>
@@ -309,6 +309,6 @@ padding-left: 20px;
 	               <?} ?>
 	          </div>
 	          <div id="more-news-div"><a href="<?=base_url()?>mahila/mahiladetails/<?if(isset($mahila_details2['0'])){ echo $mahila_details2['0']->id;}?>"><?=$more['1']->matter?></a></div></td>
-          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="120" /></td>
+          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="150" /></td>
         </tr>
     </table>

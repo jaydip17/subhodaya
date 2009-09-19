@@ -280,9 +280,9 @@ padding-left: 20px;
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter2.jpg" width="5" height="31" /></td>
         </tr>
         <tr>
-          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="120" /></td>
+          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="150" /></td>
           <td valign="top" id="botom-ser" >
-          <div style="height: 100px;">
+          <div style="height: 120px;">
            <? if(!empty($greetings4)){
            if(file_exists("./assets/greetings/gree_img".$greetings4['0']->id."_thumb.jpg")){ ?>
           		<a href="<?=base_url()?>greetings/content/<?php if(isset($greetings4['0'])) {echo $greetings4['0']->id;}?>"><img src="<?=base_url()?>assets/greetings/gree_img<?php if(isset($greetings4['0'])) {echo $greetings4['0']->id;}?>_thumb.jpg" style="padding: 1px 1px 1px 1px;float: left;" border="0"/></a>
@@ -292,11 +292,11 @@ padding-left: 20px;
           </div>
           		<div id="more-news-div"><a href="<?=base_url()?>greetings/content/<?php if(isset($greetings4['0'])) {echo $greetings4['0']->id;}?>"><?=$more['0']->matter?></a></div><?} ?>
           </td>
-          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="120" /></td>
+          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="150" /></td>
           <td width="8">&nbsp;</td>
-          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="120" /></td>
+          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="150" /></td>
           <td valign="top" id="botom-ser">
-           <div style="height: 100px;">
+           <div style="height: 125px;">
            <? if(!empty($sahithi)){
            if(file_exists("./assets/sahithi/news_img".$sahithi['0']->id."_thumb.jpg")){ ?>
           		<a href="<?=base_url()?>sahithi/sahithidetails/<?php if(isset($sahithi['0'])) { echo $sahithi['0']->id;} ?>"><img src="<?=base_url()?>assets/sahithi/news_img<?php if(isset($sahithi['0'])) { echo $sahithi['0']->id;} ?>_thumb.jpg" style="padding: 1px 1px 1px 1px;float: left;" border="0"/></a>
@@ -306,10 +306,10 @@ padding-left: 20px;
           </div>
           		<div id="more-news-div"><a href="<?=base_url()?>sahithi/sahithidetails/<?php if(isset($sahithi['0'])) { echo $sahithi['0']->id;} ?>"><?=$more['1']->matter?></a></div><?} ?>
           </td>
-          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="120" /></td>
+          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="150" /></td>
           <td width="8">&nbsp;</td>
-          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="120" /></td>
+          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="150" /></td>
           <td valign="top" id="botom-ser">dshfgjh</td>
-          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="120" /></td>
+          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="150" /></td>
         </tr>
     </table>

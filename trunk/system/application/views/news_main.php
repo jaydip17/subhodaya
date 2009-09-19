@@ -332,9 +332,9 @@ padding-left: 30px;
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter2.jpg" width="5" height="31" /></td>
         </tr>
         <tr>
-          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="120" /></td>
+          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="150" /></td>
           <td valign="top" id="botom-ser" align="left">
-          <div style="height: 80px;padding-top:2px;">
+          <div style="height: 120px;padding-top:2px;">
           <ul>
           	<?php if(isset($news_type5))
           	{
@@ -356,11 +356,11 @@ padding-left: 30px;
           	</div>
           	<div id="more-news-div"><a href="<?=base_url();?>news/details/<?if(isset($news_type5['0'])){ echo $news_type5['0']->type; }?>"><?=$more['0']->matter?></a></div>
           </td>
-          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="120" /></td>
+          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="150" /></td>
           <td width="8">&nbsp;</td>
-          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="120" /></td>
+          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="150" /></td>
           <td valign="top" id="botom-ser" align="left">
-          <div style="height: 80px;padding-top:1px;">
+          <div style="height: 120px;padding-top:1px;">
           	<ul id="mainnews">
           	<?php if(isset($news_type6)){
           		foreach($news_type6 as $row):
@@ -380,11 +380,11 @@ padding-left: 30px;
           </div>
           <div id="more-news-div"><a href="<?=base_url();?>news/details/<?if(isset($news_type6['0'])){ echo $news_type6['0']->type; }?>"><?=$more['0']->matter?></a></div>
           </td>
-          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="120" /></td>
+          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="150" /></td>
           <td width="8">&nbsp;</td>
-          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="120" /></td>
+          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="150" /></td>
           <td valign="top" id="botom-ser">
-          <div id="home_poll" >
+          <div id="home_poll" style="height: 85px;">
                <div><? if(!empty($newspoll['0']->question)){
                 echo $newspoll['0']->question;
                	?></div>
@@ -393,14 +393,14 @@ padding-left: 30px;
               			<tr>
               				<td align="right">
               					<input type="hidden" name="poll_id" value="<?=$newspoll['0']->id?>">
-              					<? $attributes = 'onClick= "loadPoll(\''.base_url().'poll/index/'.$newspoll[0]->id.'\',this.value)";' ?>
+              					<? $attributes = 'onClick= "loadPoll(\''.base_url().'poll/index/'.$newspoll[0]->id.'\',this.value,\''.base_url().'assets/imgs/bigrotation2.gif\')";' ?>
               					<?=form_radio('answer','a',True,$attributes) ?>
               				</td>
               				<td align="left"><?=$more['18']->matter ?></td></tr>
               			<tr><td align="right"><?=form_radio('answer','b',FALSE,$attributes) ?></td><td align="left"><?=$more['19']->matter ?></td></tr>
               			<tr><td align="right"><?=form_radio('answer','c',FALSE,$attributes) ?></td><td align="left"><?=$more['20']->matter ?></td></tr>
      				</table>
-     				<? }else echo 'to day no poll'; ?>
+     				<? }else echo 'to day no poll'; ?></div>
      			<span style="font-weight: bold;font-size: 14px;color:maroon;">yesterday poll</span>
                 <div><?if(!empty($yes_poll['0']->question)){
                 	echo $yes_poll['0']->question;
@@ -410,8 +410,8 @@ padding-left: 30px;
 						'welcome','width=300,height=150')">
 						Result</A></div>
                 <?} else echo 'Yesterday no poll.'; ?>
-                </div>
+                
           </td>
-          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="120" /></td>
+          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="150" /></td>
         </tr>
     </table>

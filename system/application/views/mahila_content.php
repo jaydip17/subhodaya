@@ -162,7 +162,7 @@ padding-bottom:5px;
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter2.jpg" width="5" height="31" /></td>
           <td width="8">&nbsp; </td>
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter-1.jpg" width="5" height="31" /></td>
-          <td width="295" valign="top" id="botomtop" align="left"><img src="<?=base_url();?>assets/imgs/001.png" style="float:left;margin:4px 4px 0px 0px;"></img><div style="padding-top:5px;" id="newsheading"><?php {echo $more['30']->matter;}?></div></td>
+          <td width="295" valign="top" id="botomtop" align="left"><img src="<?=base_url();?>assets/imgs/001.png" style="float:left;margin:4px 4px 0px 0px;"></img><div style="padding-top:5px;" id="newsheading"><?php {echo $details_sahithi['2']->cat_name;}?></div></td>
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter2.jpg" width="5" height="31" /></td>
         </tr>
         <tr>
@@ -208,33 +208,35 @@ padding-bottom:5px;
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="150" /></td>
           <td width="8">&nbsp;</td>
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="150" /></td>
-          <td valign="top" id="botom-ser"> <div id="home_poll" style="height: 80px;">
-               <div><? if(!empty($newspoll['0']->question)){
-                echo $newspoll['0']->question;
-               	?></div>
-
-     				<table width="100%">
-              			<tr>
-              				<td align="right">
-              					<input type="hidden" name="poll_id" value="<?=$newspoll['0']->id?>">
-              					<? $attributes = 'onClick= "loadPoll(\''.base_url().'poll/index/'.$newspoll[0]->id.'\',this.value,\''.base_url().'assets/imgs/bigrotation2.gif\')";' ?>
-              					<?=form_radio('answer','a',True,$attributes) ?>
-              				</td>
-              				<td align="left"><?=$more['18']->matter ?></td></tr>
-              			<tr><td align="right"><?=form_radio('answer','b',FALSE,$attributes) ?></td><td align="left"><?=$more['19']->matter ?></td></tr>
-              			<tr><td align="right"><?=form_radio('answer','c',FALSE,$attributes) ?></td><td align="left"><?=$more['20']->matter ?></td></tr>
-     				</table>
-     				<? }else echo 'to day no poll'; ?></div>
-     			<span style="font-weight: bold;font-size: 14px;color:maroon;">yesterday poll</span>
-                <div><?if(!empty($yes_poll['0']->question)){
-                	echo $yes_poll['0']->question;
-                	?></div>
-                       <div align="right" id="result"><A HREF="javascript:void(0)"
-					onclick="window.open('<?=base_url();?>poll/yes_result/<?=$yes_poll['0']->id?>',
-						'welcome','width=300,height=150')">
-						Result</A></div>
-                <?} else echo 'Yesterday no poll.'; ?>
+          <td valign="top" id="botom-ser" style="font-size: 13px;">
+          <?php 
+          if(!empty($sahithi_details)){ 
+			if(file_exists("./assets/sahithi/news_img".$sahithi_details['0']->id."_thumb.jpg")){ ?>	        
+	              	<a href="<?=base_url();?>sahithi/sahithidetails/<?=$sahithi_details['0']->id?>"><img src="<?=base_url();?>assets/sahithi/news_img<?php if(isset($sahithi_details['0'])){echo $sahithi_details['0']->id;}?>_thumb.jpg" style="float:left;margin:4px 20px 4px 4px;text-align: justify;border: 1px solid gray;" align="top" border="0"/></a>
+	            	<? } ?>
+          <a href="<?=base_url();?>sahithi/sahithidetails/<?=$sahithi_details[0]->id?>"><?=$sahithi_details[0]->heading?></a><br>
+          <?=$sahithi_details[0]->summary?>
+          <ul id="mainnews">
+		<?php
+		$count=0;foreach ($sahithi_details as $row):
+		if($count==0){
+			$count++;
+			continue;
+		}
+		?>
+		<li style="padding: 1px;"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$row->id?>"><?=$row->heading?></a></li>
+		<? if($count==4){
+		break;
+		}else{
+		$count++;
+		}
+		endforeach; 
+		if($count==0){
+			echo 'No data found';
+		}}
+		?>
+          
                 </td>
-          <td valign="top">  </td>
+          <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="150" /></td>
         </tr>
     </table>

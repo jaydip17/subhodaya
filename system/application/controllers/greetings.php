@@ -14,7 +14,7 @@ class Greetings extends Controller {
 		$greetings9=$this->Greeting_Model->get_main_greetings(9);
 		$greetings8=$this->Greeting_Model->get_main_greetings(8);
 		$greetings4=$this->Greeting_Model->get_main_greetings(4);
-		$greetings16=$this->Greeting_Model->get_main_greetings(16);
+		$greetings6=$this->Greeting_Model->get_main_greetings(6);
 		$greetings7=$this->Greeting_Model->get_main_greetings(7);
 		$more=$this->News_Model->more_news();
 		$data=array('greetings1' 	=> 	$greetings1,
@@ -24,7 +24,7 @@ class Greetings extends Controller {
 					'greetings9' 	=> 	$greetings9,
 					'greetings8' 	=> 	$greetings8,
 					'greetings4'	=> 	$greetings4,
-					'greetings16'	=>	$greetings16,
+					'greetings6'	=>	$greetings6,
 					'greetings7'	=>	$greetings7,
 					'more'       	=> 	$more,
 					'type'       	=> 	$type,

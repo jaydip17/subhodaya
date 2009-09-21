@@ -8,7 +8,9 @@
 <link href="<?=base_url();?>assets/style.css" rel="stylesheet" type="text/css" />
 <!-- for tabs js ans css -->
 <script src="<?=base_url();?>assets/Scripts/swfobject_modified.js" type="text/javascript"></script>
-
+<script src="<?=base_url();?>assets/js/yahoo-min.js" type="text/javascript"></script>
+<script src="<?=base_url();?>assets/js/event-min.js" type="text/javascript"></script>
+<script src="<?=base_url();?>assets/js/dom-min.js" type="text/javascript"></script>
 <script type="text/javascript" src="<?=base_url();?>assets/js/element-min.js"></script>
 <script type="text/javascript" src="<?=base_url();?>assets/js/tabview-min.js"></script>
 <link href="<?=base_url();?>assets/fonts-min.css" rel="stylesheet" type="text/css" />
@@ -24,7 +26,7 @@ var tb_pathToImage = "<?=base_url()?>assets/imgs/loadingAnimation.gif";
 <!-- start tabs -->
 <script src="<?=base_url();?>assets/SpryAssets/SpryTabbedPanels.js" type="text/javascript" />
 <link href="<?=base_url();?>assets/SpryTabbedPanels.css" rel="stylesheet" type="text/css" />
-<script src="<?=base_url();?>assets/js/SpryTabbedPanels.js"></script>
+
 <!-- end tabs -->
 <script src="<?=base_url();?>assets/js/SpryDOMUtils.js"></script>
 <script src="<?=base_url();?>assets/js/tp_unobtrusive.js"></script>

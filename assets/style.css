@@ -84,10 +84,10 @@ height:37px;
 .div123
 {
      padding:5px 5px 5px 5px;
-	 border: 1px solid #D9EBF7; dsd  
+	 border: 1px solid #D9EBF7; 
 	 background-image:url(imgs/div123.jpg);
 	 background-repeat:repeat-x;
-	 height: 70px"
+	 height: 70px;
 }
 #leftline{
 background-image:url(imgs/crow-line.jpg);
@@ -122,43 +122,43 @@ height:318px;
 #tock-line-center{
       background-image:url(imgs/tock-line-center.jpg);
 	  background-repeat:repeat-x;
-	  height:34;
-	  border-top:1px solid #1D77B3
+	  height:34px;
+	  border-top:1px solid #1D77B3;
 }
 #tock-botom-center{
       background-image:url(imgs/tock-botom-center.jpg);
 	  background-repeat:repeat-x;
-	  height:281;
+	  height:281px;
 }
 #add-line{
       background-image:url(imgs/add-line-center.jpg);
 	  background-repeat:repeat-x;
-	  height:456;
+	  height:456px;
 }
 #gmail-img{
       background-image:url(imgs/tock-line-center.jpg);
 	  background-repeat:repeat-x;
-	  height:35;
+	  height:35px;
 }
 #center-line{
       background-image:url(imgs/gmail-seline.jpg);
 	  background-repeat:repeat-x;
-	  height:166;
+	  height:166px;
 }
 #img-senter{
       background-image:url(imgs/tock-line-center.jpg);
 	  background-repeat:repeat-x;
-	  height:34;
+	  height:34px;
 }
 #center-img{
       background-image:url(imgs/center-nizio.jpg);
 	  background-repeat:repeat-x;
-	  height:220;
+	  height:220px
 }
 #senter3{
       background-image:url(imgs/serter-3.jpg);
 	  background-repeat:repeat-x;
-	  height:31;
+	  height:31px;
 }
 .senterbotom{
       background-image:url(imgs/senter-botom.jpg);
@@ -167,7 +167,7 @@ height:318px;
 #botomtop{
       background-image:url(imgs/serter-3.jpg);
 	  background-repeat:repeat-x;
-	  height:31;
+	  height:31px;
 }
 #botom-ser{
       background-image:url(imgs/botom-med.jpg);

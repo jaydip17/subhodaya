@@ -63,8 +63,8 @@
           
           <tr>
          
-          <td  valign="top" height="375" width="660">
-            <table border="0" align="left" style="margin-top:20px; margin-right:5px;" width="650" cellspacing="0" cellpadding="0">
+          <td  valign="top" height="375" width="700px">
+            <table border="0" align="left" style="margin-top:20px; margin-right:5px;" width="100%" cellspacing="0" cellpadding="0">
             <tr>
             <td><img src="<?=base_url();?>assets/imgs/hot-video-topline.jpg"></td>
             </tr>
@@ -74,7 +74,7 @@
                 <div id="hotvideo"><?=$more['33']->matter ?><!--<span style="padding-left:300px;">Search for Videos:<input type="text" name="search" value="" size="13"></span></div>-->
           
             <tr>
-               <td  style="width:660px;"> 
+               <td  style="width:700px;"> 
              
              
 <div id="TabbedPanels1" class="TabbedPanels">
@@ -120,7 +120,7 @@
           	</td>
           	
           	<td align="left" valign="top" rowspan="2" style="height:570px;" >
-          	 <table border="0" style="padding-top:10px;margin-top:5px;margin-left:20px;" cellspacing="0" cellpadding="0"  >
+          	 <table border="0" style="padding-top:10px;margin-top:5px;margin-left:4px;" cellspacing="0" cellpadding="0"  >
           	    <tr>
           	    <td style="height:4px; width:241;"></td>
           	    </tr>

@@ -93,7 +93,7 @@ class Subhodaya extends Controller {
 		$to = $_POST['email'];
 		$heading= $_POST['heading'];
 		
-        echo $subject = "[SUBHODAYA.COM]".$heading;
+        $subject = "[SUBHODAYA.COM]".$heading;
 		if(isset($_POST['subject']))
 		{
 			$subject .= $_POST['subject'];

@@ -92,19 +92,20 @@ class Sahithi extends Controller {
 		$this->pagination->initialize($config); 
 		$pagination=$this->pagination->create_links();
 		$sahithi=$this->Sahithi_Model->get_sahithi($type,$count=false);
+		$details_sahithi=$this->Sahithi_Model->get_sahithitype();
 		
 		
-		
-		$data=array(	'news'  =>$sahithi,
-						'more'=>$more,
-					'pagination'=>$pagination,
-		             'onload' =>$onload,
-				     'newspoll'    =>  $newspoll,
+		$data=array(	'news'  	=>	$sahithi,
+						'more'		=>	$more,
+					'pagination'	=>	$pagination,
+		             'onload' 		=>	$onload,
+				     'newspoll'    	=>  $newspoll,
 				      'yes_poll'    =>  $yes_poll,
-		             'details' =>$details,
-		              'details_more' =>$details_more,
-		               'type'=>'sahithi',
-		              'cinemapoll'  => $cinemapoll,
+		             'details' 		=>	$details,
+		             'details_more' =>	$details_more,
+		               'type'		=>	'sahithi',
+		              'cinemapoll'  =>  $cinemapoll,
+				'details_sahithi'	=>	$details_sahithi
 		             );
 		$this->load->view("mahila_content",$data);
 	}

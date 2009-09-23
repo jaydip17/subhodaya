@@ -21,17 +21,17 @@ padding-left: 30px;
                         <div class=" yui-skin-sam" style="width: 502px;  height: 100%" >
                       		<div id="demo1" class="yui-navset" style="color: #EDF5FF;">
 	    						<ul class="yui-nav">
-							       <li class="selected" style="text-align: center;"><a href="#tab1"><em style="width: 90px;"><?php if(isset($news_type1['0'])){echo $news_type1['0']->news_cat;}?></em></a></li>
-							        <li style="text-align: center;"><a href="#tab2"><em style="width: 95px;"><span id="telugufont"><?php if(isset($news_type2['0'])){echo $news_type2['0']->news_cat;}?></span></em></a></li>
-							        <li style="text-align: center;"><a href="#tab3"><em style="width: 123px;"><span id="telugufont"><?php if(isset($news_type3['0'])){echo $news_type3['0']->news_cat;}?></span></em></a></li>
-									<li style="text-align: center;"><a href="#tab4"><em style="width: 90px;"><span id="telugufont"><?php if(isset($news_type4['0'])){echo $news_type4['0']->news_cat;}?></span></em></a></li>
+							       <li class="selected" style="text-align: center;"><a href="#tab1"><em style="width: 89px;"><?php if(isset($news_type1['0'])){echo $news_type1['0']->news_cat;}?></em></a></li>
+							        <li style="text-align: center;"><a href="#tab2"><em style="width: 94px;"><span id="telugufont"><?php if(isset($news_type2['0'])){echo $news_type2['0']->news_cat;}?></span></em></a></li>
+							        <li style="text-align: center;"><a href="#tab3"><em style="width: 120px;"><span id="telugufont"><?php if(isset($news_type3['0'])){echo $news_type3['0']->news_cat;}?></span></em></a></li>
+									<li style="text-align: center;"><a href="#tab4"><em style="width: 89px;"><span id="telugufont"><?php if(isset($news_type4['0'])){echo $news_type4['0']->news_cat;}?></span></em></a></li>
 	    						</ul>            
     							<div class="yui-content" >
 							        <div id="tab1"><p>
 							        		<div style="height:235px;padding-left:5px;" id="telugufont1">
 							        			<? if(!empty($active_news1)){
 												if(file_exists("./assets/news/news_img".$active_news1['0']->id."_thumb.jpg")){ ?>
-          				 						<a href="<?=base_url();?>news/newsdetails/<?=$active_news1['0']->id?>/<?=$active_news1['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?=$active_news1['0']->id?>_thumb.jpg" style="float: left;padding: 2px 22px 2px 1px;text-align: left;text-align: justify;"  border="0"></img></a>
+          				 						<a href="<?=base_url();?>news/newsdetails/<?=$active_news1['0']->id?>/<?=$active_news1['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?=$active_news1['0']->id?>_thumb.jpg" style="float: left;margin: 2px 22px 2px 1px;text-align: left;text-align: justify;"  id="img"></img></a>
           				 						<?} ?>
           				 						<font id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?=$active_news1['0']->id?>/<?=$active_news1['0']->type?>"><?php echo $active_news1['0']->heading;?></a></font><br>
           				 						<?php echo $active_news1['0']->summary;?>
@@ -62,7 +62,7 @@ padding-left: 30px;
 							        		<div style="height:235px;padding-left:5px;" id="telugufont1">
 							        		<? if(!empty($active_news2)){
 												if(file_exists("./assets/news/news_img".$active_news2['0']->id."_thumb.jpg")){ ?>
-							        		<a href="<?=base_url();?>news/newsdetails/<?=$active_news2['0']->id?>/<?=$active_news2['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?=$active_news2['0']->id?>_thumb.jpg" style="float: left;padding: 2px 22px 2px 1px;text-align: left;text-align: justify;" border="0"></img></a>
+							        		<a href="<?=base_url();?>news/newsdetails/<?=$active_news2['0']->id?>/<?=$active_news2['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?=$active_news2['0']->id?>_thumb.jpg" style="float: left;margin: 2px 22px 2px 1px;text-align: left;text-align: justify;" id="img"></img></a>
 							        		<?} ?>
 							        		<div id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?=$active_news2['0']->id?>/<?=$active_news2['0']->type?>"><?=$active_news2['0']->heading?></a></div>
 							        		<?php echo $active_news2['0']->summary;?>
@@ -94,7 +94,7 @@ padding-left: 30px;
 							        	<div style="height:235px;padding-left:5px;" id="telugufont1">
 							        	<? if(!empty($active_news3)){
 											if(file_exists("./assets/news/news_img".$active_news3['0']->id."_thumb.jpg")){ ?>
-							        		<a href="<?=base_url();?>news/newsdetails/<?=$active_news3['0']->id?>/<?=$active_news3['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?=$active_news3['0']->id?>_thumb.jpg" style="float: left;padding: 2px 22px 2px 1px;text-align: left;text-align: justify;" border="0"></img></a>
+							        		<a href="<?=base_url();?>news/newsdetails/<?=$active_news3['0']->id?>/<?=$active_news3['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?=$active_news3['0']->id?>_thumb.jpg" style="float: left;margin: 2px 22px 2px 1px;text-align: left;text-align: justify;" id="img"></img></a>
 							        		<?} ?>
 							        		<div id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?=$active_news3['0']->id?>/<?=$active_news3['0']->type?>"><?=$active_news3['0']->heading?></a></div>
 							        		<?php echo $active_news3['0']->summary;?>
@@ -126,7 +126,7 @@ padding-left: 30px;
 										<div style="height:235px;padding-left:5px;" id="telugufont1">
 										<? if(!empty($active_news4)){
 										if(file_exists("./assets/news/news_img".$active_news4['0']->id."_thumb.jpg")){ ?>
-							        		<a href="<?=base_url();?>news/newsdetails/<?=$active_news4['0']->id?>/<?=$active_news4['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?=$active_news4['0']->id?>_thumb.jpg" style="float: left;padding: 2px 22px 2px 1px;text-align: left;text-align: justify;" border="0"></img></a>
+							        		<a href="<?=base_url();?>news/newsdetails/<?=$active_news4['0']->id?>/<?=$active_news4['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?=$active_news4['0']->id?>_thumb.jpg" style="float: left;margin: 2px 22px 2px 1px;text-align: left;text-align: justify;" id="img"></img></a>
 							        		<?} ?>
 							        		<div id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?=$active_news4['0']->id?>/<?=$active_news4['0']->type?>"><?=$active_news4['0']->heading?></a></div>
 							        		<?php echo $active_news4['0']->summary;?>
@@ -184,7 +184,7 @@ padding-left: 30px;
           				 <div style="height:190px;padding-left:5px;" id="telugufont1">
 						<? if(!empty($news_type1)){
 						if(file_exists("./assets/news/news_img".$news_type1['0']->id."_thumb.jpg")){ ?>
-          				 <a href="<?=base_url();?>news/newsdetails/<?=$news_type1['0']->id?>/<?=$news_type1['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?=$news_type1['0']->id?>_thumb.jpg" style="float: left;padding: 2px 22px 2px 1px;text-align: justify;"  border="0"></img></a>
+          				 <a href="<?=base_url();?>news/newsdetails/<?=$news_type1['0']->id?>/<?=$news_type1['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?=$news_type1['0']->id?>_thumb.jpg" style="float: left;margin: 2px 22px 2px 1px;text-align: justify;"  id="img"></img></a>
           				 <?} ?>
           				 <font id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?=$news_type1['0']->id?>/<?=$news_type1['0']->type?>"><?php echo $news_type1['0']->heading;?></a></font><br>
           				 <?php echo $news_type1['0']->summary;?>
@@ -216,7 +216,7 @@ padding-left: 30px;
           				 <div style="height: 190px;padding-top:2px;padding-left:5px; " id="telugufont1" >
           				 <? if(!empty($news_type2)){
 						if(file_exists("./assets/news/news_img".$news_type2['0']->id."_thumb.jpg")){ ?>
-          				 <a href="<?=base_url();?>news/newsdetails/<?=$news_type2['0']->id?>/<?=$news_type2['0']->type?>"><img src="<?=base_url();?>assets/news/news_img43_thumb.jpg" style="float: left;padding: 1px 10px 2px 1px;text-align: justify;"  border="0"></img></a>
+          				 <a href="<?=base_url();?>news/newsdetails/<?=$news_type2['0']->id?>/<?=$news_type2['0']->type?>"><img src="<?=base_url();?>assets/news/news_img43_thumb.jpg" style="float: left;margin: 1px 10px 2px 1px;text-align: justify;"  id="img"></img></a>
           				 <?} ?>
           				 <font id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?=$news_type2['0']->id?>/<?=$news_type2['0']->type?>"><?php echo $news_type2['0']->heading;?></a></font><br>
           				 <?php echo $news_type2['0']->summary;?>
@@ -251,7 +251,7 @@ padding-left: 30px;
           				 <div style="height:190px;padding-top:2px;padding-left:5px;" id="telugufont1">
           				 <? if(!empty($news_type3)){
 						if(file_exists("./assets/news/news_img".$news_type3['0']->id."_thumb.jpg")){ ?>
-          				 <a href="<?=base_url();?>news/newsdetails/<?=$news_type3['0']->id?>/<?=$news_type3['0']->type?>"><img src="<?=base_url();?>assets/news/news_img43_thumb.jpg" style="float: left;padding: 1px 17px 2px 1px;text-align: justify;" border="0"></img></a>
+          				 <a href="<?=base_url();?>news/newsdetails/<?=$news_type3['0']->id?>/<?=$news_type3['0']->type?>"><img src="<?=base_url();?>assets/news/news_img43_thumb.jpg" style="float: left;margin: 1px 17px 2px 1px;text-align: justify;" id="img"></img></a>
           				 <?} ?>
           				 <font id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?=$news_type3['0']->id?>/<?=$news_type3['0']->type?>"><?php echo $news_type3['0']->heading;?></a></font><br>
           				 <?php echo $news_type3['0']->summary;?>
@@ -283,7 +283,10 @@ padding-left: 30px;
           				  	<span id="newsheading" ><? if(isset($news_type4['0'])){ echo $news_type4['0']->news_cat; }?></span>
           				  </div>
           				 <div style="height:190px;padding-top:2px;padding-left:5px;" id="telugufont1">
-          				 <a href="<?=base_url();?>news/newsdetails/<?=$news_type4['0']->id?>/<?=$news_type4['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?=$news_type4['0']->id?>_thumb.jpg" style="float: left;padding: 1px 17px 2px 1px;text-align: justify;" border="0"></img></a>
+          				 <? if(!empty($news_type4)){
+						if(file_exists("./assets/news/news_img".$news_type4['0']->id."_thumb.jpg")){ ?>
+          				 <a href="<?=base_url();?>news/newsdetails/<?=$news_type4['0']->id?>/<?=$news_type4['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?=$news_type4['0']->id?>_thumb.jpg" style="float: left;margin: 1px 17px 2px 1px;text-align: justify;" id="img"></img></a>
+          				 <?php }?>
           				 <font id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?=$news_type4['0']->id?>/<?=$news_type4['0']->type?>"><?php echo $news_type4['0']->heading;?></a></font><br>
           				 <?php echo $news_type4['0']->summary;?>
           				 <ul id="mainnews">
@@ -304,7 +307,7 @@ padding-left: 30px;
           					endforeach; 
           					if($count==0){
           						echo 'No data found';
-          					}
+          					}}
           					?>
           				 </ul>
           				 </div>

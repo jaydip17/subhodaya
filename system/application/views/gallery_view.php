@@ -51,8 +51,8 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 						foreach ($cat as $sub):
 							?>				
 								<td width="125"  align="center" valign="top" >
-									<div style="height: 95px;width: 130px;">
-										<a href="<?=base_url();?>gallery/inner/<?=$sub['parentid']?>"><img src="<?=base_url();?>assets/gallery/image<?=$sub['id']?>_thumb.jpg" height="95px" width="130px" id="img"></a>
+									<div style="height: 100px;width: 130px;">
+										<a href="<?=base_url();?>gallery/inner/<?=$sub['parentid']?>"><img src="<?=base_url();?>assets/gallery/image<?=$sub['id']?>_thumb.jpg" height="97px" width="128px" id="img"></a>
 									</div>
 									<div id="gall_botto_img"><a href="<?=base_url();?>gallery/inner/<?=$sub['parentid']?>"><?=$sub['title']?></a></div></td>
 									<?php 

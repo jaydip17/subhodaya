@@ -655,7 +655,7 @@ function test()
 						</div>
 						</div>
         </td></tr></table></td>
-	<td width="35%" ><table  width="98%" align="left" style="margin-left:6px;" cellpadding="0" cellspacing="0">
+	<td width="35%"><table  width="98%" align="left" style="margin-left:6px;" cellpadding="0" cellspacing="0">
                       <tr>
                         <td width="6" id="img-senter"><img src="<?=base_url();?>assets/imgs/tock-line.jpg" width="7" /></td>
                         <td valign="bottom" id="img-senter" align="left" style="margin-bottom: 10px;">

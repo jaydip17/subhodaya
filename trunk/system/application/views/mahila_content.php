@@ -18,7 +18,7 @@ padding-bottom:5px;
     		<tr>
        		<td  valign="top">
 	       		<table width="100%"  border="0" cellpadding="0" cellspacing="0">
-	     			<tr><td height="4" valign="bottom"><img src="<?=base_url();?>assets/imgs/top-cor-line.jpg" width="460" height="4" /></td></tr>
+	     			<tr><td height="4" valign="bottom"><img src="<?=base_url();?>assets/imgs/top-cor-line.jpg" width="465" height="4" /></td></tr>
 	            </table>
                  <table width="100%"  border="0" style="border-left:1px solid #0872BC; border-right:1px solid #0872BC;"cellpadding="0" cellspacing="0">
                     <tr><td width="100%" height="310" valign="top" align="left" class=" yui-skin-sam" >
@@ -63,7 +63,7 @@ padding-bottom:5px;
 })();
 </script>
 							</table>
-                      <img src="<?=base_url();?>assets/imgs/top-crow-botom.jpg" width="460"/></td>
+                      <img src="<?=base_url();?>assets/imgs/top-crow-botom.jpg" width="465"/></td>
                   </tr>
                 </table></td>
             </tr>
@@ -212,7 +212,7 @@ padding-bottom:5px;
           <?php 
           if(!empty($sahithi_details)){ 
 			if(file_exists("./assets/sahithi/news_img".$sahithi_details['0']->id."_thumb.jpg")){ ?>	        
-	              	<a href="<?=base_url();?>sahithi/sahithidetails/<?=$sahithi_details['0']->id?>"><img src="<?=base_url();?>assets/sahithi/news_img<?php if(isset($sahithi_details['0'])){echo $sahithi_details['0']->id;}?>_thumb.jpg" style="float:left;margin:4px 20px 4px 4px;text-align: justify;" align="top" id="img"/></a>
+	              	<a href="<?=base_url();?>sahithi/sahithidetails/<?=$sahithi_details['0']->id?>"><img src="<?=base_url();?>assets/sahithi/news_img<?php if(isset($sahithi_details['0'])){echo $sahithi_details['0']->id;}?>_home_thumb.jpg" style="float:left;margin:4px 20px 4px 4px;text-align: justify;" align="top" id="img"/></a>
 	            	<? } ?>
           <a href="<?=base_url();?>sahithi/sahithidetails/<?=$sahithi_details[0]->id?>"><?=$sahithi_details[0]->heading?></a><br>
           <?=$sahithi_details[0]->summary?>

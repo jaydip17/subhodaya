@@ -22,7 +22,7 @@ class Mahila extends Controller {
 		
 		$types = array_keys($details_more);
 		$types_sahithi =array_keys($details_sahithi);
-		//print_r($details_more);
+		//print_r($details_sahithi);
 		$data=array('more'      	=>	$more,
 		            'details'   	=>	$details,
 		            'details_more' 	=> 	$details_more,

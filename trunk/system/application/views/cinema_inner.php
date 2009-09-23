@@ -36,7 +36,7 @@ function telugu_typing()
 						<div style="height: 257px">
 							<? if(!empty($news_type4['0'])){
 							if(file_exists("./assets/news/news_img".$news_type4['0']->id."_thumb.jpg")){ ?>
-							<a href="<?=base_url();?>news/newsdetails/<?=$news_type4['0']->id?>/<?=$news_type4['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?=$news_type4['0']->id?>_thumb.jpg" style="padding:5px 0px 0px 20px;" border="0"/></a>
+							<a href="<?=base_url();?>news/newsdetails/<?=$news_type4['0']->id?>/<?=$news_type4['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?=$news_type4['0']->id?>_thumb.jpg" style="margin:5px 0px 0px 20px;" id="img"/></a>
 							<?}} ?>
 							<ul>
 								<?php
@@ -64,7 +64,7 @@ function telugu_typing()
 						<div style="height: 250px;">
 						<?if(!empty($mahila_details)){
 							if(file_exists("./assets/mahila/news_img".$mahila_details['0']->id."_thumb.jpg")){ ?>
-							<a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details['0']->id?>"><img src="<?=base_url();?>assets/mahila/news_img<?=$mahila_details['0']->id?>_thumb.jpg" style="padding:5px 0px 0px 20px;" border="0"></a>
+							<a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details['0']->id?>"><img src="<?=base_url();?>assets/mahila/news_img<?=$mahila_details['0']->id?>_thumb.jpg" style="margin:5px 0px 0px 20px;" id="img"></a>
 							<?} ?>
 							<ul >
 								<?php
@@ -166,7 +166,7 @@ function telugu_typing()
 						<div style="height: 250px">
 						<?if(!empty($news_type2)){
 						if(file_exists("./assets/news/news_img".$news_type2['0']->id."_thumb.jpg")){ ?>
-							<a href="<?=base_url();?>news/newsdetails/<?=$news_type2['0']->id?>/<?=$news_type2['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?=$news_type2['0']->id?>_thumb.jpg" style="padding:5px 0px 0px 20px;" border="0"></a>
+							<a href="<?=base_url();?>news/newsdetails/<?=$news_type2['0']->id?>/<?=$news_type2['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?=$news_type2['0']->id?>_thumb.jpg" style="margin:5px 0px 0px 20px;" id="img"></a>
 							<?} ?>
 							<ul >
 								<?php

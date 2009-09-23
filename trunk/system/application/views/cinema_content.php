@@ -22,8 +22,8 @@ padding-left: 20px;
                       		<div id="demo1" class="yui-navset" style="color: #EDF5FF;">
 	    						<ul class="yui-nav">
 							       <li class="selected" style="text-align: center;"><a href="#tab1"><em><?php if(isset($active_news1['0'])){echo $active_news1['0']->cinema_type;}?></em></a></li>
-							        <li style="text-align: center;"><a href="#tab2"><em style="width: 150px;"><span id="telugufont"><?php if(isset($active_news2['0'])){echo $active_news2['0']->cinema_type;}?></span></em></a></li>
-							        <li style="text-align: center;"><a href="#tab3"><em style="width: 150px;"><span id="telugufont"><?php if(isset($active_news3['0'])){echo $active_news3['0']->cinema_type;}?></span></em></a></li>
+							        <li style="text-align: center;"><a href="#tab2"><em style="width: 100px;"><span id="telugufont"><?php if(isset($active_news2['0'])){echo $active_news2['0']->cinema_type;}?></span></em></a></li>
+							        <li style="text-align: center;"><a href="#tab3"><em style="width: 100px;"><span id="telugufont"><?php if(isset($active_news3['0'])){echo $active_news3['0']->cinema_type;}?></span></em></a></li>
 									<li style="text-align: center;"><a href="#tab4"><em><span id="telugufont"><?php if(isset($active_news4['0'])){echo $active_news4['0']->cinema_type;}?></span></em></a></li>
 	    						</ul>            
     							<div class="yui-content" >
@@ -31,7 +31,7 @@ padding-left: 20px;
 							        		<div style="height:235px;" id="telugufont1">
 							        			<?if(isset($active_news1['0'])){
 							        			if(file_exists("./assets/cinema/cine_img".$active_news1['0']->id."_thumb.jpg")){?>
-          				 						<a href="<?=base_url();?>cinema/inner/<?=$active_news1['0']->id?>/<?=$active_news1['0']->type?>"><img src="<?=base_url();?>assets/cinema/cine_img<?=$active_news1['0']->id?>_thumb.jpg" style="float: left;padding: 2px 19px 2px 1px;text-align: left;text-align: justify;"  border="0"></img></a>
+          				 						<a href="<?=base_url();?>cinema/inner/<?=$active_news1['0']->id?>/<?=$active_news1['0']->type?>"><img src="<?=base_url();?>assets/cinema/cine_img<?=$active_news1['0']->id?>_thumb.jpg" style="float: left;margin: 2px 19px 2px 1px;text-align: left;text-align: justify;"  id="img"></img></a>
           				 						<?} ?>
           				 						<font id="mainnews"><a href="<?=base_url();?>cinema/inner/<?=$active_news1['0']->id?>/<?=$active_news1['0']->type?>"><?php echo $active_news1['0']->heading;?></a></font><br>
           				 						<?php echo $active_news1['0']->summary;?>
@@ -64,7 +64,7 @@ padding-left: 20px;
 							        		<?if(isset($active_news2['0'])){
 							        		if(file_exists("./assets/cinema/cine_img".$active_news2['0']->id."_thumb.jpg")){
 							        		?>
-							        		<a href="<?=base_url();?>cinema/inner/<?=$active_news2['0']->id?>/<?=$active_news2['0']->type?>"><img src="<?=base_url();?>assets/cinema/cine_img<?=$active_news2['0']->id?>_thumb.jpg" style="float: left;padding: 2px 19px 2px 1px;text-align: left;text-align: justify;"  border="0"></img></a>
+							        		<a href="<?=base_url();?>cinema/inner/<?=$active_news2['0']->id?>/<?=$active_news2['0']->type?>"><img src="<?=base_url();?>assets/cinema/cine_img<?=$active_news2['0']->id?>_thumb.jpg" style="float: left;padding: 2px 19px 2px 1px;text-align: left;text-align: justify;"  id="img"></img></a>
 							        		<?} ?>
 							        		<div id="mainnews"><a href="<?=base_url();?>cinema/inner/<?=$active_news2['0']->id?>/<?=$active_news2['0']->type?>"><?=$active_news2['0']->heading?></a></div>
 							        		<?php echo $active_news2['0']->summary;?>
@@ -98,7 +98,7 @@ padding-left: 20px;
 							        	<?if(isset($active_news3['0'])){
 							        	if(file_exists("./assets/cinema/cine_img".$active_news3['0']->id."_thumb.jpg")){
 							        	?>
-							        		<a href="<?=base_url();?>cinema/inner/<?=$active_news3['0']->id?>/<?=$active_news3['0']->type?>"><img src="<?=base_url();?>assets/cinema/cine_img<?=$active_news3['0']->id?>_thumb.jpg" style="float: left;padding: 2px 19px 2px 1px;text-align: left;text-align: justify;" border="0"></img></a>
+							        		<a href="<?=base_url();?>cinema/inner/<?=$active_news3['0']->id?>/<?=$active_news3['0']->type?>"><img src="<?=base_url();?>assets/cinema/cine_img<?=$active_news3['0']->id?>_thumb.jpg" style="float: left;padding: 2px 19px 2px 1px;text-align: left;text-align: justify;" id="img"></img></a>
 							        		<?} ?>
 							        		<div id="mainnews">
 							        		
@@ -134,7 +134,7 @@ padding-left: 20px;
 										<?if(isset($active_news4['0'])){
 										if(file_exists("./assets/cinema/cine_img".$active_news4['0']->id."_thumb.jpg")){
 										?>
-							        		<a href="<?=base_url();?>cinema/inner/<?=$active_news4['0']->id?>/<?=$active_news4['0']->type?>"><img src="<?=base_url();?>assets/cinema/cine_img<?=$active_news4['0']->id?>_thumb.jpg" style="float: left;padding: 2px 19px 2px 1px;text-align: left;text-align: justify;" border="0"></img></a>
+							        		<a href="<?=base_url();?>cinema/inner/<?=$active_news4['0']->id?>/<?=$active_news4['0']->type?>"><img src="<?=base_url();?>assets/cinema/cine_img<?=$active_news4['0']->id?>_thumb.jpg" style="float: left;margin: 2px 19px 2px 1px;text-align: left;text-align: justify;" id="img"></img></a>
 							        		<?} ?>
 							        		<div id="mainnews">
 							        		<a href="<?=base_url();?>cinema/inner/<?=$active_news4['0']->id?>/<?=$active_news4['0']->type?>"><?=$active_news4['0']->heading?></a></div>
@@ -285,7 +285,7 @@ padding-left: 20px;
           <div style="height: 120px;">
            <? if(!empty($greetings4)){
            if(file_exists("./assets/greetings/gree_img".$greetings4['0']->id."_thumb.jpg")){ ?>
-          		<a href="<?=base_url()?>greetings/content/<?php if(isset($greetings4['0'])) {echo $greetings4['0']->id;}?>"><img src="<?=base_url()?>assets/greetings/gree_img<?php if(isset($greetings4['0'])) {echo $greetings4['0']->id;}?>_thumb.jpg" style="padding: 1px 1px 1px 1px;float: left;" border="0"/></a>
+          		<a href="<?=base_url()?>greetings/content/<?php if(isset($greetings4['0'])) {echo $greetings4['0']->id;}?>"><img src="<?=base_url()?>assets/greetings/gree_img<?php if(isset($greetings4['0'])) {echo $greetings4['0']->id;}?>_thumb.jpg" style="margin: 1px 1px 1px 1px;float: left;" id="img"/></a>
           		<?} ?>
           		<div id="mainnews"><a href="<?=base_url()?>greetings/content/<?php if(isset($greetings4['0'])) {echo $greetings4['0']->id;}?>"><?php if(isset($greetings4['0'])) {echo $greetings4['0']->name;}?></a></div>
           		<?php if(isset($greetings4['0'])) {echo $greetings4['0']->summery;}?>
@@ -299,7 +299,7 @@ padding-left: 20px;
            <div style="height: 125px;">
            <? if(!empty($sahithi)){
            if(file_exists("./assets/sahithi/news_img".$sahithi['0']->id."_thumb.jpg")){ ?>
-          		<a href="<?=base_url()?>sahithi/sahithidetails/<?php if(isset($sahithi['0'])) { echo $sahithi['0']->id;} ?>"><img src="<?=base_url()?>assets/sahithi/news_img<?php if(isset($sahithi['0'])) { echo $sahithi['0']->id;} ?>_thumb.jpg" style="padding: 1px 1px 1px 1px;float: left;" border="0"/></a>
+          		<a href="<?=base_url()?>sahithi/sahithidetails/<?php if(isset($sahithi['0'])) { echo $sahithi['0']->id;} ?>"><img src="<?=base_url()?>assets/sahithi/news_img<?php if(isset($sahithi['0'])) { echo $sahithi['0']->id;} ?>_thumb.jpg" style="margin: 1px 1px 1px 1px;float: left;" /></a>
           		<?} ?>
           		<div id="mainnews"><a href="<?=base_url()?>sahithi/sahithidetails/<?php if(isset($sahithi['0'])) { echo $sahithi['0']->id;} ?>"><?php if(isset($sahithi['0'])) { echo $sahithi['0']->heading;} ?></a></div>
           		<?php if(isset($sahithi['0'])) { echo $sahithi['0']->summary;} ?>

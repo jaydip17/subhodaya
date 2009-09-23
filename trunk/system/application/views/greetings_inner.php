@@ -17,7 +17,7 @@ function telugu_typing()
 </script> 
 <table align="left" cellspacing='6' cellpadding="0" >
 	<tr>
-		<td  width="px">
+		<td >
 		<div style="height: 25px;width: 691px;background-color: #137ABC" id="more-news-div1">
 			<span ><a href="<?=base_url();?>greetings/content/<?php if(isset($result['0'])){echo $result['0']->type;}?>"><?php if(isset($more[24])){echo $more['24']->matter;}?></a></span>
 		</div>

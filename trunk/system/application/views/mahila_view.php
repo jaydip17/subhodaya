@@ -172,7 +172,7 @@ padding-top:0px;
 	              <?if(!empty($details_more['1'])){
 	             if(file_exists("./assets/mahila/news_img".$details_more['1']['0']->id."_thumb.jpg")){
 	             ?>
-	              <a href="<?=base_url();?>mahila/mahiladetails/<?=$details_more['1']['0']->id?>"><img src="<?=base_url();?>assets/mahila/news_img<?=$details_more['1']['0']->id?>_thumb.jpg" style="float:left;padding:4px 20px 4px 4px;text-align: justify;"  align="top" border="0"  alt="gg"/></a>
+	              <a href="<?=base_url();?>mahila/mahiladetails/<?=$details_more['1']['0']->id?>"><img src="<?=base_url();?>assets/mahila/news_img<?=$details_more['1']['0']->id?>_thumb.jpg" style="float:left;margin:4px 20px 4px 4px;text-align: justify;"  align="top" id="img"  alt="gg"/></a>
 	              <?} ?>
 	             <font id="telugufont"><a href="<?=base_url();?>mahila/mahiladetails/<?=$details_more['1']['0']->id?>"><?php echo $details_more['1']['0']->heading?></a></font><br>
 	              <?=$details_more['1']['0']->summary; }?>

@@ -217,7 +217,7 @@ sample sf dsfsd fdsf
           				<div id='telugufont1' style="height: 200px;padding: 0px 3px 0px 4px;text-align: justify;">
           				 <? if(!empty($cinema_type1)){
            					if(file_exists("./assets/cinema/ceni_img".$cinema_type1['0']->id."_thumb.jpg")){ ?>
-							 		<a href="<?=base_url();?>cinema/inner/<?=$cinema_type1['0']->id?>/<?=$cinema_type1['0']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type1['0']->id?>_thumb.jpg" style="float: left;padding:4px 20px 3px 3px;border: 0px;"></img></a>
+							 		<a href="<?=base_url();?>cinema/inner/<?=$cinema_type1['0']->id?>/<?=$cinema_type1['0']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type1['0']->id?>_thumb.jpg" style="float: left;margin:4px 20px 3px 3px;" id="img"></img></a>
 							 		<?} ?>
 							 		<div id="mainnews"><a href="<?=base_url();?>cinema/inner/<?=$cinema_type1['0']->id?>/<?=$cinema_type1['0']->type?>"><?=$cinema_type1['0']->heading?></a></div>
 							 		<?=$cinema_type1['0']->summary?>
@@ -253,7 +253,7 @@ sample sf dsfsd fdsf
           				<div id='telugufont1' style="height: 200px;padding: 0px 3px 0px 4px;text-align: justify;">
           				   <? if(!empty($cinema_type2)){
            					if(file_exists("./assets/cinema/ceni_img".$cinema_type2['0']->id."_thumb.jpg")){ ?>
-							 		<a href="<?=base_url();?>cinema/inner/<?=$cinema_type2['0']->id?>/<?=$cinema_type2['0']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type2['0']->id?>_thumb.jpg" style="float: left;padding:4px 20px 3px 3px;border: 0px;"></img></a>
+							 		<a href="<?=base_url();?>cinema/inner/<?=$cinema_type2['0']->id?>/<?=$cinema_type2['0']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type2['0']->id?>_thumb.jpg" style="float: left;margin:4px 20px 3px 3px;" id="img"></img></a>
 							 		<?} ?>
 							 		<div id="mainnews"><a href="<?=base_url();?>cinema/inner/<?=$cinema_type2['0']->id?>/<?=$cinema_type2['0']->type?>"><?=$cinema_type2['0']->heading?></a></div>
 							 		<?=$cinema_type2['0']->summary?>
@@ -297,7 +297,7 @@ sample sf dsfsd fdsf
 							    <div id='telugufont1' style="height: 200px;padding: 0px 3px 0px 4px;text-align: justify;">
 							    <? if(!empty($cinema_type3)){
            					   if(file_exists("./assets/cinema/ceni_img".$cinema_type3['0']->id."_thumb.jpg")){ ?>
-							 		<a href="<?=base_url();?>cinema/inner/<?=$cinema_type3['0']->id?>/<?=$cinema_type3['0']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type3['0']->id?>_thumb.jpg" style="float: left;padding:4px 20px 3px 3px;border: 0px;"></img></a>
+							 		<a href="<?=base_url();?>cinema/inner/<?=$cinema_type3['0']->id?>/<?=$cinema_type3['0']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type3['0']->id?>_thumb.jpg" style="float: left;margin:4px 20px 3px 3px;" id="img"></img></a>
 							 		<?} ?>
 							 		<div id="mainnews"><a href="<?=base_url();?>cinema/inner/<?=$cinema_type3['0']->id?>/<?=$cinema_type3['0']->type?>"><?=$cinema_type3['0']->heading?></a></div>
 							 		<?=$cinema_type3['0']->summary?>
@@ -332,7 +332,7 @@ sample sf dsfsd fdsf
 							   		 <div id='telugufont1' style="height: 200px;padding: 0px 3px 0px 4px;text-align: justify;">
 							   		 <? if(!empty($cinema_type4)){
            					          if(file_exists("./assets/cinema/ceni_img".$cinema_type4['0']->id."_thumb.jpg")){ ?>
-							 		<a href="<?=base_url();?>cinema/inner/<?=$cinema_type4['0']->id?>/<?=$cinema_type4['0']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type4['0']->id?>_thumb.jpg" style="float: left;padding:4px 20px 3px 3px;border: 0px;"></img></a>
+							 		<a href="<?=base_url();?>cinema/inner/<?=$cinema_type4['0']->id?>/<?=$cinema_type4['0']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type4['0']->id?>_thumb.jpg" style="float: left;margin:4px 20px 3px 3px;" id="img"></img></a>
 							 		<?} ?>
 							 		<div id="mainnews"><a href="<?=base_url();?>cinema/inner/<?=$cinema_type4['0']->id?>/<?=$cinema_type4['0']->type?>"><?=$cinema_type4['0']->heading?></a></div>
 							 		<?=$cinema_type4['0']->summary?>
@@ -377,7 +377,7 @@ sample sf dsfsd fdsf
 							   		  <div id='telugufont1' style="height: 200px;padding: 0px 3px 0px 4px;text-align: justify;">
 							   		  <? if(!empty($cinema_type5)){
            					if(file_exists("./assets/cinema/ceni_img".$cinema_type5['0']->id."_thumb.jpg")){ ?>
-							 		<a href="<?=base_url();?>cinema/inner/<?=$cinema_type5['0']->id?>/<?=$cinema_type5['0']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type5['0']->id?>_thumb.jpg" style="float: left;padding:4px 20px 3px 3px;border: 0px;"></img></a>
+							 		<a href="<?=base_url();?>cinema/inner/<?=$cinema_type5['0']->id?>/<?=$cinema_type5['0']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type5['0']->id?>_thumb.jpg" style="float: left;margin:4px 20px 3px 3px;border: 0px;" id="img"></img></a>
 							 		<?} ?>
 							 		<div id="mainnews"><a href="<?=base_url();?>cinema/inner/<?=$cinema_type5['0']->id?>/<?=$cinema_type5['0']->type?>"><?=$cinema_type5['0']->heading?></a></div>
 							 		<?=$cinema_type5['0']->summary?>
@@ -412,7 +412,7 @@ sample sf dsfsd fdsf
 									  <div id='telugufont1' style="height: 200px">
 									  <? if(!empty($cinema_type6)){
            					if(file_exists("./assets/cinema/ceni_img".$cinema_type6['0']->id."_thumb.jpg")){ ?>
-							 		<a href="<?=base_url();?>cinema/inner/<?=$cinema_type6['0']->id?>/<?=$cinema_type6['0']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type6['0']->id?>_thumb.jpg" style="float: left;padding:4px 20px 3px 3px;border: 0px;"></img></a>
+							 		<a href="<?=base_url();?>cinema/inner/<?=$cinema_type6['0']->id?>/<?=$cinema_type6['0']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type6['0']->id?>_thumb.jpg" style="float: left;margin:4px 20px 3px 3px;" id="img"></img></a>
 							 		<?} ?>
 							 		<div id="mainnews"><a href="<?=base_url();?>cinema/inner/<?=$cinema_type6['0']->id?>/<?=$cinema_type6['0']->type?>"><?=$cinema_type6['0']->heading?></a></div>
 							 		<?=$cinema_type6['0']->summary?>
@@ -476,7 +476,7 @@ var TabbedPanels2 = new Spry.Widget.TabbedPanels("TabbedPanels2");
 							   		<td width="125" valign="top" >
 									<div style="height: 95px;border: 0px solid red;width: 100%;text-align: left;">
 									<? if(file_exists("./assets/gallery/image".$sub['id']."_thumb.jpg")){ ?>
-										<a href="<?=base_url();?>gallery/content/<?=$sub['id']?>/<?=$sub['parentid']?>"><img src="<?=base_url();?>assets/gallery/image<?=$sub['id']?>_thumb.jpg" height="95px" width="130px" border="0"></a>
+										<a href="<?=base_url();?>gallery/content/<?=$sub['id']?>/<?=$sub['parentid']?>"><img src="<?=base_url();?>assets/gallery/image<?=$sub['id']?>_thumb.jpg" height="95px" width="130px" id="img"></a>
 									<?} ?>
 									</div>
 									<div id="gall_botto_img"><a href="<?=base_url();?>gallery/content/<?=$sub['id']?>/<?=$sub['parentid']?>"><?=$sub['title']?></a></div></td>

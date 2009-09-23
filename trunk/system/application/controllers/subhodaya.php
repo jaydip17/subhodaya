@@ -41,12 +41,9 @@ class Subhodaya extends Controller {
 	       	$eachone=$item->result();
 	    	if(!empty($eachone))
 	    	{
-	    		foreach ($eachone as $row){
-	    				    			
+	    		foreach ($eachone as $row)
+	    		{
 	 				$images[$row->id]=$this->Gallery_Model->getimage1($row->id);
-	 				
-	 				
-	 				
 	    		}
 	    	}
 	    	if($count>=3)
@@ -65,7 +62,8 @@ class Subhodaya extends Controller {
 	     $videos=$this->Video_Model->get_videos('active',2);
 	   	  
 	     $video_result=$videos->result();
-	
+	    //$breadcrumb= $this->breadcrumb->generate();
+	    //print_r($breadcrumb); 
 		$data=array('more'				=>	$more,
 		            'news_type7'		=>	$news_type7,
 					'news_type4'		=>	$news_type4,
@@ -84,7 +82,7 @@ class Subhodaya extends Controller {
 					'images'			=>	$images,
 					'activenews'		=>  $activenews,
 					'gall_topviews'		=>  $gall_topviews,
-					'mahila_details_yoga'	=>$mahila_details_yoga
+					'mahila_details_yoga'	=>$mahila_details_yoga,
 					);
 		$this->load->view('home',$data);
 	}
@@ -95,7 +93,7 @@ class Subhodaya extends Controller {
 		$to = $_POST['email'];
 		$heading= $_POST['heading'];
 		
-        echo $subject = "[SUBHODAYA.COM]  ".$heading;
+        echo $subject = "[SUBHODAYA.COM]".$heading;
 		if(isset($_POST['subject']))
 		{
 			$subject .= $_POST['subject'];
@@ -115,9 +113,7 @@ class Subhodaya extends Controller {
 		
      
 	    }
-	    function sample(){
-	    	$this->load->view('sample');
-	    }
+
 
 }
 ?>

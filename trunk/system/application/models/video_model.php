@@ -61,7 +61,7 @@ class Video_model extends Model
 	   return $query;
 	}
 	
-  function getvideos($id,$bywhat)
+  /*function getvideos($id,$bywhat)
 	 {
 	
 		$flag=1;
@@ -84,7 +84,7 @@ class Video_model extends Model
 		}
 			
 		return $query;
-	}
+	}*/
 	 
  function getvideoname($id)
 	{

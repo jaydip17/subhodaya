@@ -77,8 +77,8 @@
 	font-size:12px;
 	list-style: none;
 	border-bottom: 1px solid #93D7FA;
-	border-top:1px solid #808080;
-	border-left:1px solid #808080;
+	border-top:1px solid #808080;                      
+	border-left:1px solid #808080;   
 	border-right:1px solid #808080;
 	-moz-user-select: none;
 	-khtml-user-select: none;
@@ -137,6 +137,9 @@
 	clear: both;
 	border-left: none;
 	border-right: none;
+	width:600px;
+	
+	
 }
 
 /* This is the selector for the Content panel. The Content panel holds the
@@ -152,7 +155,7 @@
 	padding: 4px;
 	border-left: none;
 	border-right: none;
-    height:330px;
+   
 }
 
 /* This selector is an example of how to change the appearnce of the currently

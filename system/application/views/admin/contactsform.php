@@ -27,17 +27,11 @@ function test()
 }
 //-->
 </script>
-
-  <table width="340" border="0" cellspacing="5" cellpadding="0" align="center" style="margin: 60px;">
-
+<div style="text-align: center;margin-top: 20px;font-size: 16px;font-weight: bold;">Enter Details</div>
+  <table width="450" height="250" border="0" cellspacing="10" cellpadding="10" align="center" style="border: 1px solid blue;margin: 9px 0px 0px 25px;">
     <tr> 
-      <td colspan="2" style="padding:6"><div align="center" class="formheading"><strong><h3>Enter 
-            Your Details</h3><br>
-           </strong></div></td>
-    </tr>
-    <tr> 
-      <td  style="padding:6"><div align="left"><strong>Username:</strong></div></td>
-      <td  style="padding:6"><input name="username" value="" type="text" class="text" id="username1">
+      <td  style="padding:6" align="left"><div align="left"><strong>Username:</strong></div></td>
+      <td  style="padding:6" align="left"><input name="username" value="" type="text" class="text" id="username1">
       <select name="type" id='email1'>
       <option value="yahoo">yahoo</option>
       <option value="gmail">gmail</option>
@@ -45,16 +39,16 @@ function test()
       </td>
     </tr>
     <tr> 
-      <td style="padding:6"><div align="left"><strong>Password:</strong></div></td>
+      <td  align="left"><strong>Password:</strong></td>
 
-      <td style="padding:6"><input name="password" type="password" class="text" id="password1">
+      <td align="left"><input name="password" type="password" class="text" id="password1">
       </td>
     </tr>
     <tr> 
-      <td colspan="2" style="padding:6">*Your username and password will not be stored on this server.</td>
+      <td colspan="2" style="padding:6" align="left">*Your username and password will not be stored on this server.</td>
     </tr>
     <tr> 
-      <td colspan="2" style="padding:6">
+      <td colspan="2" style="padding:6" align="left">
       <input id='importcontacts' alt='' onclick="test()" class="thickbox" type="submit" name="Submit" value="Import Contacts" class="button" style="width:100%"></td>
     </tr>
     <tr> 

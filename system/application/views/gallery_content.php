@@ -509,7 +509,7 @@ function telugu_typing()
 				</tr>
 				<tr>
 					<td colspan="3"  id="gal_center1"  width="742" align="center" height="590" >
-					<img src="<?=base_url()?>assets/gallery/image<?=$image['0']->id?>.jpg"  style="border: 1px solid #939393;">
+					<img src="<?=base_url()?>assets/gallery/image<?=$image['0']->id?>.jpg"  id="img">
 					</td>
 				</tr>
 				 <tr>

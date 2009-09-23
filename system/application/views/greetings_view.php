@@ -11,7 +11,7 @@
 			<? $count = 1; foreach ($greetings as $data): ?>
 					<td align='center' height="250" id="gree_inner" valign="top">
 						<div style="padding:8px 0px 2px 0px;">
-								<a href="<?=base_url();?>greetings/inner/<?=$data->id?>"><img src="<?=base_url();?>assets/greetings/gree_img<?=$data->id?>_thumb.jpg" style="border: 1px solid gray;"/></a>
+								<a href="<?=base_url();?>greetings/inner/<?=$data->id?>"><img src="<?=base_url();?>assets/greetings/gree_img<?=$data->id?>_thumb.jpg" id="img"/></a>
 								<div style="padding: 5px 50px 0px 0px;"><a href="<?=base_url();?>greetings/inner/<?=$data->id?>"><?=$data->name?></a></div>
 								<div id="gree-summery" style="text-align: justify;"><?=$data->summery?></a></div>
 						</div>

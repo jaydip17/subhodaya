@@ -35,7 +35,7 @@ padding-bottom:5px;
 							    <div style="padding-top: 5px;" id="telugufont1">
 							    <?if(!empty($details_more[$i]['0'])){ 
 						 if(file_exists("./assets/".$type."/news_img".$details_more[$i]['0']->id."_thumb.jpg")){ ?>	        
-	              	<a href="<?=base_url();?><?=$type?>/<?=$type?>details/<?=$details_more[$i]['0']->id?>"><img src="<?=base_url();?>assets/<?=$type?>/news_img<?php if(isset($details_more[$i]['0'])){echo $details_more[$i]['0']->id;}?>_thumb.jpg" style="float:left;padding:4px 20px 4px 4px;text-align: justify;" align="top" border="0"/></a>
+	              	<a href="<?=base_url();?><?=$type?>/<?=$type?>details/<?=$details_more[$i]['0']->id?>"><img src="<?=base_url();?>assets/<?=$type?>/news_img<?php if(isset($details_more[$i]['0'])){echo $details_more[$i]['0']->id;}?>_thumb.jpg" style="float:left;margin:4px 20px 4px 4px;text-align: justify;" align="top" id="img"/></a>
 	            	<? }} ?>
 	             <?if(!empty($details_more[$i])){?>
 	             <font id="telugufont"><a href="<?=base_url();?><?=$type?>/<?=$type?>details/<?=$details_more[$i]['0']->id?>"><?php echo $details_more[$i]['0']->heading?></a></font><br>
@@ -212,7 +212,7 @@ padding-bottom:5px;
           <?php 
           if(!empty($sahithi_details)){ 
 			if(file_exists("./assets/sahithi/news_img".$sahithi_details['0']->id."_thumb.jpg")){ ?>	        
-	              	<a href="<?=base_url();?>sahithi/sahithidetails/<?=$sahithi_details['0']->id?>"><img src="<?=base_url();?>assets/sahithi/news_img<?php if(isset($sahithi_details['0'])){echo $sahithi_details['0']->id;}?>_thumb.jpg" style="float:left;margin:4px 20px 4px 4px;text-align: justify;border: 1px solid gray;" align="top" border="0"/></a>
+	              	<a href="<?=base_url();?>sahithi/sahithidetails/<?=$sahithi_details['0']->id?>"><img src="<?=base_url();?>assets/sahithi/news_img<?php if(isset($sahithi_details['0'])){echo $sahithi_details['0']->id;}?>_thumb.jpg" style="float:left;margin:4px 20px 4px 4px;text-align: justify;" align="top" id="img"/></a>
 	            	<? } ?>
           <a href="<?=base_url();?>sahithi/sahithidetails/<?=$sahithi_details[0]->id?>"><?=$sahithi_details[0]->heading?></a><br>
           <?=$sahithi_details[0]->summary?>

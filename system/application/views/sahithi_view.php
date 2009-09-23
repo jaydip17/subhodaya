@@ -180,7 +180,7 @@ padding-top:0px;
 	               <?if(!empty($details_more['1'])){
 	             if(file_exists("./assets/sahithi/news_img".$details_more['1']['0']->id."_thumb.jpg")){
 	             ?>
-	              <a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['1']['0']->id?>"><img src="<?=base_url();?>assets/sahithi/news_img<?=$details_more['1']['0']->id?>_thumb.jpg" style="float:left;padding:4px 20px 4px 4px;text-align: justify;" align="top" border="0"/></a>
+	              <a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['1']['0']->id?>"><img src="<?=base_url();?>assets/sahithi/news_img<?=$details_more['1']['0']->id?>_thumb.jpg" style="float:left;margin:4px 20px 4px 4px;text-align: justify;" align="top" id="img"/></a>
 	              <?}} ?>
 	            <?if(!empty($details_more['1'])){?>
 	             <font id="telugufont"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['1']['0']->id?>"><?php echo $details_more['1']['0']->heading?></a></font><br>
@@ -220,7 +220,7 @@ padding-top:0px;
 	              <?if(!empty($details_more['2'])){
 	             if(file_exists("./assets/sahithi/news_img".$details_more['2']['0']->id."_thumb.jpg")){
 	             ?>
-	              <a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['2']['0']->id?>"><img src="<?=base_url();?>assets/sahithi/news_img<?=$details_more['2']['0']->id?>_thumb.jpg" style="float:left;padding:4px 20px 4px 4px;text-align: justify;" align="top" border="0" alt="hh"/></a>
+	              <a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['2']['0']->id?>"><img src="<?=base_url();?>assets/sahithi/news_img<?=$details_more['2']['0']->id?>_thumb.jpg" style="float:left;margin:4px 20px 4px 4px;text-align: justify;" align="top" id="img" alt="hh"/></a>
 	              <?}} ?>
 	              <?if(!empty($details_more['2'])){?>
 	             <font id="telugufont"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['2']['0']->id?>"><?php echo $details_more['2']['0']->heading?></a></font><br>

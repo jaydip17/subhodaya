@@ -15,7 +15,7 @@ class Videolist extends Controller {
 		 $query=" from videos where video_cat_id=$id order by insert_date desc ";
 		 $a =base_url().'videolist/videoview/'.$id;
 		 $this->load->library('paginationnew');$this->paginationnew->start = ($this->uri->segment(4)) ? $this->uri->segment(4) : '0';
-    	 $this->paginationnew->limit =9;
+    	 $this->paginationnew->limit =6;
          $this->paginationnew->filePath ='javascript:loadNews(\''.$id.'\',\''.$a;
       
          $this->paginationnew->select_what = '*';
@@ -24,7 +24,7 @@ class Videolist extends Controller {
       
    		 $result = $this->paginationnew->getQuery(TRUE);
    		 $hotvideos=$result;
-   		 $paginate = $this->paginationnew->paginate(); 
+   		 $paginate = $this->paginationnew->paginate();            
 	     //pagination for hot videos view 		
 		 $data=array( 	'more' =>$more,			
 		                'paginate'=>$paginate,
@@ -45,7 +45,7 @@ class Videolist extends Controller {
          $this->paginationnew->filePath ='javascript:loadNews(\'allimg\',\''.$a;
          $this->paginationnew->select_what = '*';
          $this->paginationnew->nbItems = $this->video_Model->count_videos(0);
-         $this->paginationnew->add_query = $query;
+         $this->paginationnew->add_query = $query;                                  
       
    		 $result = $this->paginationnew->getQuery(TRUE);
    		 $videosnames=$result->result();

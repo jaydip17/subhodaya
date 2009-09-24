@@ -63,18 +63,18 @@
           
           <tr>
          
-          <td  valign="top" height="375" width="590px">
+          <td  valign="top" height="375px" width="660px">
             <table border="0" align="left" style="margin-top:20px; margin-right:5px;" width="100%" cellspacing="0" cellpadding="0">
             <tr>
             <td><img src="<?=base_url();?>assets/imgs/hot-video-topline.jpg"></td>
             </tr>
             
-            <tr ><td><div style="height:375px;border-left: 1px solid #9D9D9D; border-right: 1px solid #9D9D9D;"> 
+            <tr ><td><div style="height:375px; width:660px;border-left:1px solid #9D9D9D; border-right:1px solid #9D9D9D;"> 
             <table width="100%" style="margin-left:4px margin-right:2px;padding-left:3px;">
                 <div id="hotvideo"><?=$more['33']->matter ?><!--<span style="padding-left:300px;">Search for Videos:<input type="text" name="search" value="" size="13"></span></div>-->
           
             <tr>
-               <td  style="width:570px;"> 
+               <td  style="width:640px; padding-left:4px;"> 
              
              
 <div id="TabbedPanels1" class="TabbedPanels">
@@ -120,7 +120,7 @@
           	</td>
           	
           	<td align="left" valign="top" rowspan="2" style="height:570px;" >
-          	 <table border="0" style="padding-top:10px;margin-top:5px;margin-left:4px;" cellspacing="0" cellpadding="0"  >
+          	 <table border="0" style="margin-top:18px;margin-left:15px;" cellspacing="0" cellpadding="0"  >
           	    <tr>
           	    <td style="height:4px; width:241;"></td>
           	    </tr>

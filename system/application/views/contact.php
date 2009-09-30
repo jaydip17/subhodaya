@@ -4,19 +4,9 @@
         <td colspan="3" align="center">Please Enter all the details marked <span style="color:red">*</span> </td>
     </tr>
 	<tr>
-	<td style="color:red">*</td>
-		<td>Company/Organization</td>
-		<td><input type="text" name="company" id="company"></td>
-		</tr>
-	<tr>
 	    <td style="color:red">*</td>
 		<td>Name</td>
 		<td><input type="text"  name="name" id="name"></td>
-	</tr>
-	<tr>
-	    <td style="color:red">*</td>
-		<td>Mobile/Phone</td>
-		<td><input type="text" name="phone" id="phone"></td>
 	</tr>
 	<tr>
 	    <td style="color:red">*</td>
@@ -24,9 +14,19 @@
 		<td><input type="text" name="mailid" id="mailid"></td>
 	</tr>
 	<tr>
-	    <td style="color:red">*</td>
+	    <td style="color:red"></td>
+		<td>Mobile/Phone</td>
+		<td><input type="text" name="phone" id="phone"></td>
+	</tr>
+	<tr>
+	    <td style="color:red"></td>
 		<td>City</td>
 		<td><input type="text" name="city" id="city"></td>
+	</tr>
+	<tr>
+		<td style="color:red"></td>
+		<td>Company/Organization</td>
+		<td><input type="text" name="company" id="company"></td>
 	</tr>
 	<tr>
 	    <td style="color:red">*</td>

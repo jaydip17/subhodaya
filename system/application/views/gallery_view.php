@@ -96,11 +96,9 @@ list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 								$count = 0;
 								echo "</tr><tr>";
 							}
-							else{
-							$count++;
-							}
 							if($count==28)
 							break;
+							else $count++;
 							endforeach; ?>
 						</tr>
 					</table>

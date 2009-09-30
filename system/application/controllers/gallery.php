@@ -1,7 +1,7 @@
 <?php
 class Gallery extends Controller {
 	var $layout = 'default'; 
-	function gallery(){
+	function Gallery(){
 		parent::Controller();
 	}
 	function index()
@@ -16,8 +16,8 @@ class Gallery extends Controller {
 			$images[$item->id]=$this->Gallery_Model->getimage($item->id);
 		}
 		$result=$this->Gallery_Model->get_categeory(0);
-		$result1=$this->Gallery_Model->get_subcate();
-
+		$result1=$this->Gallery_Model->get_subcate1();
+		//print_r($result1);
 		$data=array('more'   => $more,
 					'result' => $result,
 					'images'=> $images,

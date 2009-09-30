@@ -5,18 +5,8 @@
     </tr>
 	<tr>
 	    <td style="color:red">*</td>
-		<td>Company/Organization</td>
-		<td><input type="text" name="company" id="company"></td>
-	</tr>
-	<tr>
-	    <td style="color:red">*</td>
 		<td>Name</td>
 		<td><input type="text" name="name" id="name"></td>
-	</tr>
-	<tr>
-	    <td style="color:red">*</td>
-		<td>Mobile/Phone</td>
-		<td><input type="text" name="phone" id="phone"></td>
 	</tr>
 	<tr>
 	    <td style="color:red">*</td>
@@ -25,12 +15,17 @@
 	</tr>
 	<tr>
 	    <td style="color:red">*</td>
+		<td>Mobile/Phone</td>
+		<td><input type="text" name="phone" id="phone"></td>
+	</tr>
+	<tr>
+	    <td style="color:red"></td>
 		<td>City</td>
 		<td><input type="text" name="city" id="city"></td>
 	</tr>
 	<?if($type=='advertise'){?>
 	<tr>
-	    <td style="color:red">*</td>
+	    <td style="color:red"></td>
 		<td>Location for AD</td>
 		<td><input type="text" name="location" id="location"></td>
 	</tr>

@@ -15,6 +15,7 @@ class Greetings extends Controller {
 		$greetings8=$this->Greeting_Model->get_main_greetings(8);
 		$greetings4=$this->Greeting_Model->get_main_greetings(4);
 		$greetings6=$this->Greeting_Model->get_main_greetings(6);
+		//print_r($greetings6);
 		$greetings7=$this->Greeting_Model->get_main_greetings(7);
 		$more=$this->News_Model->more_news();
 		$data=array('greetings1' 	=> 	$greetings1,

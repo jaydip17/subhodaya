@@ -33,6 +33,7 @@ function test()
 	var uname = document.getElementById('username').value;
 	var pass = document.getElementById('password').value;
 	var email = document.getElementById('email').value;
+	
 	if(uname=="" || pass=="")
 	{
 	flag=0;
@@ -44,11 +45,19 @@ function test()
 	//tb_show('My Caption',url,'false');
 	var url = '&username='+uname+'&password='+pass+'&type='+email;
 	attribures = '&height=400&width=500';
-	tb_show('Your Contact list','<?=base_url()."admin/contacts/import?"?>'+url+attribures,'false');
+	tb_show('Your Yahoo (or) Gmail Contact List','<?=base_url()."admin/contacts/import?"?>'+url+attribures,'false');
 	 
 	}
 	else
 	return false;
+}
+function test1()
+{
+	var type=document.getElementsByName("email").value;
+	alert(type);
+ 
+	
+	
 }
 //-->
 </script>
@@ -350,7 +359,7 @@ function test()
 							   			endforeach; }
 							   			else 'No data found';?>
 							   			</tr>
-							   			</table><div style="width: 100%;height: 15px;" id="more-news-div"><a href="<?=base_url();?>gallery/inner/<?=$sub['parentid']?>"><?=$more['0']->matter;?></a></div>
+							   			</table><div style="width: 100%;height: 15px;" id="more-news-div"><a href="<?=base_url();?>gallery/inner/<?php if(!empty($sub['parentid'])) {echo $sub['parentid'];}?>"><?=$more['0']->matter;?></a></div>
 							        </p></div>
 							        <div id="tab2"><p>
 							        <table width="100%" height="100%">
@@ -471,6 +480,10 @@ function test()
 		<th colspan="3" align="center">Enter details</th>
 	  </tr>
 	  <tr>
+	  	<td align="left"><img src="<?=base_url()?>assets/imgs/gmail.png" id='email' name="gmail" onclick="test1()"></td>
+	    <td align="left"><img src="<?=base_url()?>assets/imgs/yahoo-img.jpg" id='email' name="yahoo" onclick="test1()"></td>
+	  </tr>
+	  <tr>
 	  	<td>Username</></td>
 	  	<td align="left"><input type="text" name="username" size="10" value="" id="username"/></td>
 	  	<td id="wrong_id"></td>
@@ -480,21 +493,10 @@ function test()
 	      <td align="left"><input type="password" name="password" size="10" id="password"/></td>
 	      <td id="wrong_pw"></td>
 	  </tr>
-	  	<tr>
-	  	<td align="left">Domain</td>
-	    <td align="left">	
-	    
-	      <select name="type" size="1" id="email">
-			
-			<option value="yahoo" >Yahoo</option>
-			<option value="gmail" >Gmail</option>
-			</select>
-	        </td>
-	  </tr>
 	  <tr>
 	  	  <td colspan="3" align="center">
-	  	  	<input style="background-color:#ACDFFA" id='importcontacts' alt='' onclick="test()" type="button" name="submit" value="Invite My Contacts" title="your Contacts list"/>
-	  	  </td>
+	  	  	<!--<input style="background-color:#ACDFFA" id='importcontacts' alt='' onclick="test()" type="button" name="submit" value="Invite My Contacts" title="your Contacts list"/>
+	  	  --><img src="<?=base_url()?>assets/imgs/invite-contact2.png" id='importcontacts' onclick="test()" name="submit" alt=""/></td>
 	  </tr>    
 	  <tr>
 	  	 <td colspan="3" align="center"><small>your info is secured..</small></td>
@@ -632,6 +634,7 @@ function test()
 							        <li style="padding-top:5px;"><a href="<?=base_url();?>mahila/mahiladetails/<?=$item->id?>"><?=$item->heading?></a></li></ul><?$i++;}} ?></p>
 							        </div></div>
 							        <div id="tab2"><p><div style="padding-top:11px">
+							     <?php if(!empty($sahithi_detail)){?>
 							        <div id="image"> <? if(file_exists("./assets/sahithi/news_img".$sahithi_details['0']->id."_thumb.jpg")){?>
 							        <a href="<?=base_url();?>sahithi/sahithidetails/<?=$sahithi_details['0']->id?>"><img src="<?=base_url();?>assets/sahithi/news_img<?=$sahithi_details['0']->id?>_thumb.jpg" alt="hh" id="img"/></a></div>
 							        <?} ?>
@@ -645,7 +648,7 @@ function test()
 							             if($i>3)
 							           break;?>
 							    <ul id="mainnews"> <li style="padding-top:5px;"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>"><?=$item->heading?></a></li></ul><? $i++;} ?></p></div>
-    							</div></div>
+    							</div></div><?php }?>
 <script>
 (function() {
     var tabView = new YAHOO.widget.TabView('demo3');
@@ -669,9 +672,9 @@ function test()
 	                        <div style="text-align:justify;padding-top:14px;height: 125px;" >
 	                     <? if(isset($home_stories['0'])){ ?> 
 	                      <? if(file_exists("./assets/sahithi/news_img".$home_stories['0']->id."_thumb.jpg")){ ?>
-	                      <a href="<?=base_url();?>sahithi/sahithidetails/<?=$home_stories['0']->id?>"><img  id="img" src="<?=base_url();?>/assets/sahithi/news_img<?=$home_stories['0']->id?>_thumb.jpg"></a>
+	                      <a href="<?=base_url();?>sahithi/sahithidetails/<?=$home_stories['0']->id?>"><img  id="img" src="<?=base_url();?>/assets/sahithi/news_img<?=$home_stories['0']->id?>_thumb.jpg" style="float: left;margin: 0px 3px 2px 1px;text-align: justify;"></a>
 	                      <?} ?>
-	                      <font id="mainnews"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$home_stories['0']->id?>"><? echo $home_stories['0']->heading;?>:</a></font></br>
+	                      <font id="mainnews"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$home_stories['0']->id?>"><? echo $home_stories['0']->heading;?>:</a></font><br>
 	                     <font style="font-size:14px;padding-top:5px;"> <? echo $home_stories['0']->summary;?><?} ?></font>
 	                        </div>
 	                       <div id="more-news-div"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$home_stories['0']->id?>"><?=$more['1']->matter?></a></div>

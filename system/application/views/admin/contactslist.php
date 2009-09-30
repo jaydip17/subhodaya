@@ -14,7 +14,9 @@ function togglechecked(){
       document.inviteform.allbox.checked = !document.inviteform.allbox.checked;
         togglechecked();}
 </SCRIPT>
-<tr bgcolor="#FFFFFF"><td colspan="3" align="center"><h1 align="center">Invite Contacts</h1></td></tr>
+<!--<tr bgcolor="#FFFFFF"><td colspan="3" align="center"><h1 align="center">Invite Contacts</h></td></tr>
+ --><tr> <td colspan="3" style="padding:4" align="center"><input name="submit" type="submit" value="Send Invitation" style="width:50%;height: 25px;"></td>
+           </tr>
 <tr bgcolor="#CCCCCC"><td>
 <input type="checkbox" name="allbox" id="allbox" value="nothing" onClick="togglechecked()" checked> 
 </td><td><b>Name</b></td><td><b>Email</b></td></tr>
@@ -36,9 +38,9 @@ $maxin = count($names);
 
 ?>
 <tr>
-               <tr><td><input type="checkbox" name="allbox2" value="nothing" onClick="toggleselect()" checked></td><td><a href="javascript:toggleselect()">Select/Deselect All</a></td><td></td></tr>
+               <!--<tr><td><input type="checkbox" name="allbox2" value="nothing" onClick="toggleselect()" checked></td><td><a href="javascript:toggleselect()">Select/Deselect All</a></td><td></td></tr>
 
-            <tr> <td colspan="3" style="padding:4"><input name="submit" type="submit" value="Invite Selected" style="width:100%"></td>
+            --><tr><td colspan="3"><hr></td></tr><tr><td colspan="3" style="padding:4" align="center"><input name="submit" type="submit" value="Send Invitation" style="width:50%;height: 25px;"></td>
            </tr>
           </table></form>
 </div>

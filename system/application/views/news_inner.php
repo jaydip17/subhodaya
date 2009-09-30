@@ -66,7 +66,7 @@ function telugu_typing()
 								if(!empty($cinema_type3))
 								{ 
 								$count=0; foreach ($cinema_type1 as $row):?>
-								<li id="mainnews" ><a href="<?=base_url();?>cinema/inner/<?=$row->id?>"><?=$row->heading?></a></li>
+								<li id="mainnews" ><a href="<?=base_url();?>cinema/inner/<?=$row->id?>/<?=$row->type?>"><?=$row->heading?></a></li>
 								<?php
 								if($count==2){
 								break;}
@@ -87,7 +87,7 @@ function telugu_typing()
 			<div><table cellpadding="1px" width="100%">
 			<tr><td align="left"><div id="news_heading" style="font-weight: bold;font-size: 14px;border: 1px solid #9FA0A0;">&nbsp;<?=$result['0']->heading ?></div></td></tr>
 			<tr><td align="center"><div  id="maindiv-news">
-			<div class="maindiv-news" style="text-align: justify;margin: 5px;font-size: 14px;">
+			<div class="maindiv-news">
 			<? if(!empty($result['0'])){
 			if(file_exists("./assets/news/news_img".$result['0']->id."_thumb.jpg")){ ?>
 			<img src="<?=base_url();?>assets/news/news_img<?=$result['0']->id?>.jpg" style="float: left;padding:2px 2px 2px 2px;border: 1px solid  #9FA0A0; margin: 10px 10px 10px 10px;" ></img>
@@ -102,7 +102,8 @@ function telugu_typing()
 			<table id="formdiv" cellspacing="5">
 				<tr><td valign="top" colspan="2"><div style="background-color: #B5E8FD;height:20px;"></div></td></tr>
 				<tr><td width="150px" align="left" style="padding-left: 15px"><?=$more['27']->matter;?></td><td><input type="text" name="name" size="30"> <?=form_hidden('heading',$result[0]->heading)?></td></tr>
-				<tr><td width="150px" align="left" style="padding-left: 15px;"><?php if(isset($more['39'])){ echo $more['39']->matter;}?></td><td><input type="text" name="fname" size="30"></td></tr>
+								<tr><td width="150px" align="left" style="padding-left: 15px;"><?=$more['38']->matter;?></td><td><input type="text" name="uemail" size="30"></td></tr>
+				<tr><td width="150px" align="left" style="padding-left: 15px;"><?=$more['39']->matter;?></td><td><input type="text" name="fname" size="30"></td></tr>
 				<tr><td width="150px" align="left" style="padding-left: 15px"><?=$more['28']->matter;?></td><td><input type="text" name="email" size="30"></td></tr>
 				<tr><td valign="top" colspan="2"><div style="background-color: #B5E8FD;height:20px;"></div></td></tr>
 				<tr><td colspan="2" align="left" style="padding-left: 10px;"><input type="checkbox" onclick="telugu_typing()" id="telugu_type" name="telugu_type">&nbsp;Type in telugu</td></tr>
@@ -189,7 +190,7 @@ function telugu_typing()
 							foreach ($cinema_type5 as $row):							
 						?>
 						
-							<li><a href="<?=base_url();?>cinema/inner/<?=$row->id?>"><?=$row->heading?></a></li>
+							<li><a href="<?=base_url();?>cinema/inner/<?=$row->id?>/<?=$row->type?>"><?=$row->heading?></a></li>
 							<?php if($count==2){
 								break;
 							}else {

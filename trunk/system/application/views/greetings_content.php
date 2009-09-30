@@ -281,7 +281,7 @@ sample sf dsfsd fdsf
     							<div class="yui-content" style="height: 150px;">
 							        <div id="tab1"><p>
 							        <?php if(!empty($greetings1)){ $count=1; foreach($greetings1 as $row):?>
-							       	<div style="height:95px;">
+							       	<div style="height:97px;">
 							        	<div style="padding:1px;">
 							        		<a href="<?=base_url();?>greetings/content/<?=$row->type?>"><img src="<?=base_url();?>assets/greetings/gree_img<?=$row->id?>_thumb.jpg" width="80px;" height="87px;" style="float: left;margin:2px 5px 2px 2px;" id="img"></a>
 							        		<font ><a href="<?=base_url();?>greetings/content/<?=$row->type?>"><?=$row->name;?></a></font>
@@ -294,9 +294,9 @@ sample sf dsfsd fdsf
 							        </p></div>
 							        <div id="tab2"><p>
 							        	<?php if(!empty($greetings2)){ $count=1; foreach($greetings2 as $row):?>
-							       		<div style="height:95px;">
+							       		<div style="height:97px;">
 							        	<div style="padding:1px;">
-							        		<a href="<?=base_url();?>greetings/content/<?=$row->type?>"><img src="<?=base_url();?>assets/greetings/gree_img<?=$row->id?>_thumb.jpg" height="90px;" width="70px" style="float: left;margin:2px 5px 2px 2px;" id="img"></a>
+							        		<a href="<?=base_url();?>greetings/content/<?=$row->type?>"><img src="<?=base_url();?>assets/greetings/gree_img<?=$row->id?>_thumb.jpg" height="87px;" width="70px" style="float: left;margin:2px 5px 2px 2px;" id="img"></a>
 							        		<font ><a href="<?=base_url();?>greetings/content/<?=$row->type?>"><?=$row->name;?></a></font>
 							        		<div><?=$row->summery;?></div>
 							        	</div>
@@ -309,9 +309,9 @@ sample sf dsfsd fdsf
 							        </p></div>
 							        <div id="tab3"><p>
 							        <?php if(!empty($greetings12)){ $count=1; foreach($greetings12 as $row):?>
-							       	<div style="height:95px;">
+							       	<div style="height:97px;">
 							        	<div style="padding:1px;">
-							        		<a href="<?=base_url();?>greetings/content/<?=$row->type?>"><img src="<?=base_url();?>assets/greetings/gree_img<?=$row->id?>_thumb.jpg" height="90px;" style="float: left;margin:2px 5px 2px 2px;" id="img"></a>
+							        		<a href="<?=base_url();?>greetings/content/<?=$row->type?>"><img src="<?=base_url();?>assets/greetings/gree_img<?=$row->id?>_thumb.jpg" height="87px;" style="float: left;margin:2px 5px 2px 2px;" id="img"></a>
 							        		<font style="text-align: left;"><a href="<?=base_url();?>greetings/inner/<?=$row->type?>"><?=$row->name;?></a></font>
 							        		<div ><?=$row->summery;?></div>
 							        	</div>

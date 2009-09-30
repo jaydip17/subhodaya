@@ -95,7 +95,8 @@
  		return $result->result();
 	}
   	//rename,add image into database and folder assets	
- 	function addImage($title,$parentid,$active) 	{
+ 	function addImage($title,$parentid,$active) 	
+ 	{
  	   $i=0;
  	   $this->load->library('image_lib');
  	  foreach($title as $item)
@@ -108,8 +109,8 @@
 	    $config['upload_path'] = $dir;
 		$config['allowed_types'] = 'gif|jpg|png';
 		$config['max_size']	= '1000';
-//		$config['max_width']  = '1024';
-//		$config['max_height']  = '768';
+		$config['max_width']  = '700';
+		$config['max_height']  = '1000';
 
 				
 		$this->load->library('upload', $config);
@@ -125,58 +126,35 @@
 		{
 		   $data = array('upload_data' => $this->upload->data());
 	       $filepath = $data['upload_data']['file_name'];
-	       rename($dir.$filepath , $dir.'image'.$id.'.jpg');	
+	       rename($dir.$filepath , $dir.'image'.$id.'.jpg');
+	       $aspect_ratio = $data['upload_data']['image_height'] / $data['upload_data']['image_width'];	
 		
 		//generating thumnail of image
-		
+		if($data['upload_data']['image_width'] >500 && $data['upload_data']['image_height'] > 600)
+		{
  	    $filename = 'image'.$id.'.jpg';
- 	    
  	  	$config1['image_library'] = 'gd2';
 	  	$config1['source_image'] = $dir.'/'.$filename;
         $config1['maintain_ratio'] = TRUE;
-     	$config1['width'] = 80;
-	    $config1['height'] = 60;
+     	$config1['width'] = 300;
+	    $config1['height'] = 97;
 		$config1['create_thumb'] = TRUE;
 		//$config['quality'] = '100';
 	  $this->image_lib->initialize($config1);
  	  if(!$this->image_lib->resize())
     	{
     		$error = array('error' => $this->image_lib->display_errors());
-			print_r($error);
 					
     	}
     	$this->image_lib->clear();
-    	
-    	//thumb
-    	
- 		$config['image_library'] = 'gd2';
-        $config['source_image'] = $dir.'/'.$filename;
-         
-      	//echo $dir.'/'.$filename;
-		$config['create_thumb'] = TRUE;
-		$config['maintain_ratio'] = TRUE;
-		$config['width'] = 130;
-		$config['height'] = 95;
-	
-		      
-   	$this->image_lib->initialize($config);
-  	
-   	if(!$this->image_lib->resize())
-   	{
-   		$error = array('error' => $this->image_lib->display_errors());
-		print_r($error);
-			
-    	}
-    	$this->image_lib->clear();
-    	
     	 $i++;
 		}//endforeach
-  	}
+		}
+  		}
  	}
 	//fetching all sub categeories from database
     function subcat($uriseg)
 	{
-		//echo $uriseg;
 		$this->db->where('parentid',$uriseg);
 		$query =$this->db->get('gallery_categeory');
 		if(!empty($query->result))
@@ -191,13 +169,12 @@
  		
  	}
     //extract image details from adatabase 
-    function image_view($parentid){
+    function image_view($parentid)
+    {
     	
     	$this->db->where('parentid',$parentid);
     	$query = $this->db->get('gallery_images');
     	return $query;
-    	//print_r($query->result());
-    	
     }
     //edit image form
      function imageedit($uriseg)
@@ -261,6 +238,15 @@
   		$this->db->where('parentid !=', $id);
   		$this->db->order_by('id','desc');
 		$quary=$this->db->get('gallery_categeory');
+		return $quary->result();
+  	}
+  	function get_subcate1(){
+  		$id=0;
+  		$this->db->where('parentid !=', $id);
+  		$this->db->order_by('id','desc');
+  		$this->db->limit(20);
+		$quary=$this->db->get('gallery_categeory');
+		//print_r($quary->result());
 		return $quary->result();
   	}
   	function get_gallery($type)

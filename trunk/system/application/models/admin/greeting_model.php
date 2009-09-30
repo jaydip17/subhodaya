@@ -60,7 +60,6 @@ class Greeting_Model extends Model {
     	if(isset($_POST['remove']))
     	{
     		$remove = $_POST['removeid'];
-    		
     	}
     	else {
     		$remove = array($id);

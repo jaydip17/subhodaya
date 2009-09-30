@@ -41,7 +41,7 @@ function telugu_typing()
 								if(!empty($cinema_type1))
 								{ 
 								$count=0; foreach ($cinema_type1 as $row):?>
-								<li><a href="<?=base_url();?>cinema/inner/<?=$row->id?>"><?=$row->heading?></a></li>
+								<li><a href="<?=base_url();?>cinema/inner/<?=$row->id?>/<?=$row->type?>"><?=$row->heading?></a></li>
 								<?php
 								if($count==2){
 								break;}
@@ -101,7 +101,7 @@ function telugu_typing()
 			<?=$result['0']->description ?></div>
 		
 		</td></tr>
-			<tr><td><div id="news_heading" class="heading"><span id="newsheading"><?=$more['25']->matter;?></span></div></td></tr>
+			<tr><td><div id="news_heading" class="heading"><div id="newsheading" style="width: 50%;text-align: left;float: left;"><?=$more['25']->matter;?></div><div style="text-align: right;padding: 0px 5px 20px 10px;" id="newsheading">Comment</div></div></td></tr>
 			<tr><td align="center"><div style="border:1px solid #9FA0A0;">
 			<?=form_open('subhodaya/sendmail',array('name'=>'telugu_send')) ?>
 			
@@ -110,6 +110,7 @@ function telugu_typing()
 				<tr><td valign="top" colspan="2"><div style="background-color: #B5E8FD;height:20px;"></div></td></tr>
 				<tr><td width="150px" align="left" style="padding-left: 15px"><?=$more['27']->matter;?></td><td><input type="text" name="name" size="30"></td></tr>
 				<?=form_hidden('heading',$result[0]->heading)?>
+				<tr><td width="150px" align="left" style="padding-left: 15px;"><?php if(isset($more['38'])){ echo $more['38']->matter;}?></td><td><input type="text" name="uemil" size="30"></td></tr>
 				<tr><td width="150px" align="left" style="padding-left: 15px;"><?php if(isset($more['39'])){ echo $more['39']->matter;}?></td><td><input type="text" name="fname" size="30"></td></tr>
 				<tr><td width="150px" align="left" style="padding-left: 15px"><?=$more['28']->matter;?></td><td><input type="text" name="email" size="30"></td></tr>
 				<tr><td valign="top" colspan="2"><div style="background-color: #B5E8FD;height:20px;"></div></td></tr>

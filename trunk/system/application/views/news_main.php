@@ -346,7 +346,7 @@ padding-left: 30px;
           	?>
           		<li id="mainnews" style="padding: 1px;"><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>/<?=$row->type?>"><?=$row->heading?></a></li>
           		<?php 
-          		if($count==2)
+          		if($count==5)
           		{
           			break;
           		}else{
@@ -366,11 +366,12 @@ padding-left: 30px;
           <div style="height: 120px;padding-top:1px;">
           	<ul id="mainnews">
           	<?php if(isset($news_type6)){
+          		$count=0;
           		foreach($news_type6 as $row):
           	?>
           		<li  style="padding: 1px;"><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>/<?=$row->type?>"><?=$row->heading?></a></li>
           			<?php 
-          		if($count==2)
+          		if($count==5)
           		{
           			break;
           		}else{

@@ -44,20 +44,20 @@ function reload()
 <!--
 function test1(type)
 {
-	
-		document.getElementById(type).className = "selected";
+		
 		document.getElementById('emailtype').value = type;
 	if(type=='gmail')
 	{
-		var temptype = 'yahoo';
+		document.getElementById('gmail').className = "contacts_gmail_selected";
+		document.getElementById('yahoo').className = "contacts_yahoo";
 		document.getElementById('username').value = "Enter your Gmail id";
 	}
 	else
 	{
-		var temptype = 'gmail';
+		document.getElementById('gmail').className = "contacts_gmail";
+		document.getElementById('yahoo').className = "contacts_yahoo_selected";
 		document.getElementById('username').value = "Enter your Yahoo id";
 	}
-		document.getElementById(temptype).className = "unselected";
 
 }
 
@@ -507,8 +507,13 @@ function test()
 		<th colspan="3" align="center">Enter details</th>
 	  </tr>
 	  <tr>
-	  	<td align="left"><img src="<?=base_url()?>assets/imgs/gmail.png" class="selected" id='gmail' name="gmail" onclick="test1(this.name)"></td>
-	    <td align="left"><img src="<?=base_url()?>assets/imgs/yahoo-img.jpg" class="unselected" id='yahoo' name="yahoo" onclick="test1(this.name)"></td>
+	  	<td align="left">
+	  	 <div id='gmail' class="contacts_gmail_selected" onclick="test1('gmail')" > </div>
+	  	<!--<img src="<?=base_url()?>assets/imgs/gmail.png" class="selected" id='gmail' name="gmail" onclick="test1(this.name)">--></td>
+	    <td align="left">
+	    <div id='yahoo' class="contacts_yahoo" onclick="test1('yahoo')" > </div><!--
+	    <img src="<?=base_url()?>assets/imgs/yahoo-img.jpg" class="unselected" id='yahoo' name="yahoo" onclick="test1(this.name)">
+	    --></td>
 	  </tr>
 	  <tr>
 	  	<td>Username</></td>

@@ -1022,3 +1022,31 @@ font-size: 14px;
 	position:absolute;
 	padding-top:-30px;
 }
+
+.contacts_gmail_selected{
+	background-image: url(imgs/Groups1.png);
+	background-position: 0px -48px;
+	height: 24px;
+	width: 70px;
+	cursor: pointer;
+}
+.contacts_gmail{
+	background-image: url(imgs/Groups1.png);
+	height: 24px;
+	width: 70px;
+	cursor: pointer;
+}
+.contacts_yahoo_selected{
+	background-image: url(imgs/Groups1.png);
+	background-position: 0px -72px;
+	height: 24px;
+	cursor: pointer;
+	width: 70px;
+}
+.contacts_yahoo{
+	background-image: url(imgs/Groups1.png);
+	background-position: 0px -24px;
+	height: 24px;
+	width: 70px;
+	cursor: pointer;
+}

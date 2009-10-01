@@ -1,20 +1,3 @@
-<script language="javascript">
-//<!--
-function telugu_typing()
-{
-	if(document.telugu_send.telugu_type.checked == true)
-	{
-		window.location="javascript:(t13nb=window.t13nb||function(l){var%20t=t13nb,d=document,o=d.body,c=\"createElement\",a=\"appendChild\",w=\"clientWidth\",i=d[c](\"span\"),s=i.style,x=o[a](d[c](\"script\"));if(o){if(!t.l){t.l=x.id=\"t13ns\";o[a](i).id=\"t13n\";i.innerHTML=\"Loading%20transliteration\";s.cssText=\"z-index:99;font-size:18px;background:#FFF1A8;top:0\";s.position=d.all?\"absolute\":\"fixed\";s.left=((o[w]-i[w])/2)+\"px\";x.src=\"http://t13n.googlecode.com/svn/trunk/blet/rt13n.js?l=\"+l}}else%20setTimeout(t,500)})('te')";
-
-	}
-	else
-
-	{
-		window.location="javascript:(t13nb=window.t13nb||function(l){var%20t=t13nb,d=document,o=d.body,c=\"createElement\",a=\"appendChild\",w=\"clientWidth\",i=d[c](\"span\"),s=i.style,x=o[a](d[c](\"script\"));if(o){if(!t.l){t.l=x.id=\"t13ns\";o[a](i).id=\"t13n\";i.innerHTML=\"Loading%20transliteration\";s.cssText=\"z-index:99;font-size:18px;background:#FFF1A8;top:0\";s.position=d.all?\"absolute\":\"fixed\";s.left=((o[w]-i[w])/2)+\"px\";x.src=\"http://t13n.googlecode.com/svn/trunk/blet/rt13n.js?l=\"+l}}else%20setTimeout(t,500)})('te')";
-	}
-}
-//-->
-</script> 
 <table align="left" cellspacing='6' cellpadding="0" >
 	<tr>
 		<td >
@@ -40,6 +23,10 @@ function telugu_typing()
 								<td align="left" width="70%"><input type="text" name="name" size="30"></td>
 							</tr>
 							<tr>
+								<td align="left" width="30%" style="padding-left: 10px;"><?=$more['38']->matter?></td>
+								<td align="left" width="70%"><input type="text" name="name" size="30"></td>
+							</tr>
+							<tr>
 								<td align="left" width="30%" style="padding-left: 10px;"><?=$more['39']->matter?></td>
 								<td align="left" width="70%"><input type="text" name="fname" size="30"><?=form_hidden('type','Greeting')?></td>
 							</tr>
@@ -47,10 +34,10 @@ function telugu_typing()
 								<td align="left" style="padding-left: 10px;"><?=$more['28']->matter?></td>
 								<td align="left"><input type="text" name="email" size="30"></td>
 							</tr>
-							<tr><td align="left" colspan="2" style="padding-left: 10px;"><input type="checkbox" onclick="telugu_typing()" id="telugu_type" name="telugu_type">Type in telugu</td></tr>
+							<tr><td align="left" colspan="2" style="padding-left: 10px;"><input type="checkbox" id="checkboxId" onclick="javascript:checkboxClickHandler()" name="telugu_type">Type in telugu</td></tr>
 				
 							<tr>
-							<td align="center" colspan="2"><textarea style="height: 190px;width: 95%" name="description"></textarea></td>
+							<td align="center" colspan="2"><textarea style="height: 190px;width: 95%" name="description" id="transl2"></textarea></td>
 							</tr>
 							<tr>
 								<td align="center" colspan="2"><input type="submit" name="send" value="Send"><input type="reset" ></td>

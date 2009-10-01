@@ -42,5 +42,7 @@ $maxin = count($names);
 
             --><tr><td colspan="3"><hr></td></tr><tr><td colspan="3" style="padding:4" align="center"><input name="submit" type="submit" value="Send Invitation" style="width:50%;height: 25px;"></td>
            </tr>
-          </table></form>
+          </table>
+          <?=form_hidden('uname',$username) ?>
+          </form>
 </div>

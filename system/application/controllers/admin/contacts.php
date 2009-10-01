@@ -79,13 +79,13 @@ class Contacts extends Controller {
 		 	
 		    $message.=base_url()."shubhodaya";
 		    //echo "hello";
-		  if(mailto($tomails,$subject,$message))
-		  {
-		  	echo "mail sent";
-		  }
-		  else {
-		  	echo "unable to send mail";
-		  }
+//		  if(mailto($tomails,$subject,$message))
+//		  {
+//		  	echo "mail sent";
+//		  }
+//		  else {
+//		  	echo "unable to send mail";
+//		  }
 		   
 		  redirect(base_url());
 		 }
@@ -93,7 +93,8 @@ class Contacts extends Controller {
 		         $data = array('login' 	=> $login,
 							  'names'		=> $names,
 							  'emails'	=> $emails,
-						   	  'formaction'=> $formaction
+						   	  'formaction'=> $formaction,
+		         			  'username' => $_GET['username'],
 			          );
 			          //print_r($emails);
 			  
@@ -108,24 +109,22 @@ class Contacts extends Controller {
      	
      	if(isset($_POST['addresses']))
      		{
-     		$subject="welcome to shubhodaya..";
-		 	$message="hai".$_POST['addresses']."has invited you for the following website.
-		 		          /n follow the below link to go to the website.\n";
+     		$subject="[SUBHODAYA.COM] $_POST[uname] has invited to view subhodaya.com";
+		 	$message="Dear Sir/Madam  \n\n Your Friend $_POST[uname] has recently viewed subhodaya.com .
+		 		      \n To accept this invitation  click  the below link .\n http://www.subhodaya.com";
 		 	
 	     		$addresses=$_POST['addresses'];
-	     		//print_r($addresses);
-	     		//exit();
+
 	     		$this->load->library('email');
-				$this->email->from('www.subhodaya.com', 'Your Name');
+	     		$this->email->clear();
+				$this->email->from('dontreply@subhodaya.com', 'Subhodaya');
+
 				$this->email->to($addresses);
-				//$this->email->cc('another@another-example.com');
-				//$this->email->bcc('them@their-example.com');
-				
+				$html_message  = $this->load->view('email_layout/invitation_friend',$data,TRUE);
 				$this->email->subject($subject);
-				$this->email->message($message); 
-				//$this->email->initialize($config);
+				$this->email->message($html_message); 
+
 				$this->email->send();
-				$this->email->print_debugger();
      	}
      	redirect(base_url());
      }

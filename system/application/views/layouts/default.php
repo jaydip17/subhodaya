@@ -2,9 +2,27 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>:: subhodaya ::</title>
+
+<title>Subhodaya.com | Leaders In Telugu News | AP Politics On The Net</title>	
+<meta http-equiv=Content-Type content="text/html; charset=iso-8859-1">	
+<meta name=ROBOTS content="INDEX,FOLLOW">	
+<meta name="Description" content="Subhodaya.com, Leaders In Telugu News, AP Politics On The Net" />	
+<meta name="Keywords" content="subhodaya.com, leaders in telugu news, Latest Telugu News, Telugu News Website, Telugu Cinema News, Telugu Cinema Website, Telugu Mahila, Telugu Cinema Gallery, Telugu News On The Net,  Telugu Movie Trailers, Telugu Sahithi,
+The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting Cards" />	
+<meta name="copyright" content=" 2009 Subhodaya.com" />	
+<meta name="content-language" content="EN" />	
+<meta name="author" content="www.subhodaya.com" />	
+<meta name="resource-type" content="document" />	
+<meta name="distribution" content="GLOBAL" />	
+<meta name="robots" content="ALL" />	
+<meta name="revisit-after" content="1 day" />	
+<meta name="rating" content="general" />	
+<meta name="pragma" content="no-cache" />	
+<meta name="classification" content="Leaders In Telugu News, AP Politics On The Net " />
+
 <link REL="SHORTCUT ICON" HREF="<?=base_url();?>assets/favicon.ico">
 <!-- main style sheet -->
+
 <link href="<?=base_url();?>assets/style.css" rel="stylesheet" type="text/css" />
 <!-- for tabs js ans css -->
 <script src="<?=base_url();?>assets/Scripts/swfobject_modified.js" type="text/javascript"></script>

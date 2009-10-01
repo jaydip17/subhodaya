@@ -93,26 +93,84 @@ class Subhodaya extends Controller {
 		$to = $_POST['email'];
 		$heading= $_POST['heading'];
 		
-        $subject = "[SUBHODAYA.COM]".$heading;
+        $subject = "[SUBHODAYA.COM] ".$heading;
 		if(isset($_POST['subject']))
 		{
-			$subject .= $_POST['subject'];
+			$subject .= strip_tags($_POST['subject']);
 		}
-        $message= "Dear ".$_POST['fname'].".. \n\n Your friend ".$_POST['name']." sent u an article on shubhodaya \n\n".$_POST['description'];
-        $message.="\n";
-        $message.= "To read this article follow the below link.\n".$_POST['url'];
-        $message.="Thanks and Regards.\n Shubhodaya Team.";
+		if(isset($_POST['type']))
+		{
+			$type =  $_POST['type'];
+		}
+		else
+		{
+			$type ="Article";
+		}
+//		if($type=="Article")
+//		{
+//        $message= "Dear ".$_POST['fname'].".. \n\n Your friend ".$_POST['name']." sent u an article on shubhodaya \n\n".$_POST['description'];
+//        $message.="\n";
+//        $message.= "To read this article follow the below link.\n".$_POST['url'];
+//		}
+//		else 
+//		{
+//		$message= "Dear ".$_POST['fname'].".. \n\n Your friend ".$_POST['name']." sent u an article on shubhodaya \n\n".$_POST['description'];
+//        $message.="\n";
+//        $message.= "To read this article follow the below link.\n".$_POST['url'];
+//		}
+//		
+		switch ($type)
+		{
+			case 'Article' : 
+				$message= "Dear ".$_POST['fname'].".. \n\n Your friend ".$_POST['name']." sent u an article on shubhodaya \n\n".$_POST['description'];
+        		$message.="\n";
+        		$message.= "To read this article follow the below link.\n".$_POST['url'];
+        				break;
+			case 'Gallery' :
+				$message= "Dear ".$_POST['fname'].".. \n\n Your friend ".$_POST['name']." sent u an image on shubhodaya \n\n".$_POST['description'];
+		        $message.="\n";
+		        $message.= "To view this image follow the below link.\n".$_POST['url'];
+		        		break;
+			case 'Greeting' :
+				$message= "Dear ".$_POST['fname'].".. \n\n Your friend ".$_POST['name']." sent u an greeting on shubhodaya \n\n".$_POST['description'];
+		        $message.="\n";
+		        $message.= "To view this greeting follow the below link.\n".$_POST['url'];
+		        		break;
+        
+		}
+        $message.="\n\n\nRegards.\n Shubhodaya Team.";
         $headers = "From: subhodaya \r\n".
                "Reply-To: dontreply@subhodaya.com"; 
-        if( mail($to,$subject,$message,$headers))
-        $status= "1";
-        else
-        $status= "-1";
+        $this->send_mail($to,$subject,$message);
+//        if( mail($to,$subject,$message,$headers))
+//        $status= "1";
+//        else
+//        $status= "-1";
 		}
+		$status= "1";
         redirect($_POST['url'].'/'.$status);
 		
      
-	    }
+	 }
+	 
+	 function send_mail($to,$subject,$message)
+	 {
+	 	$data = array (
+	 					'message' => $message,
+	 	);
+	 	$this->load->library('email');
+		$this->email->clear();
+		$this->email->from('dontreply@subhodaya.com', 'Subhodaya');
+		$this->email->to($to);
+		//$this->email->cc('another@another-example.com');
+		//$this->email->bcc('them@their-example.com');
+		$html_message  = $this->load->view('email_layout/invitation_friend',$data,TRUE);
+		$this->email->subject($subject);
+		$this->email->message($html_message);
+		
+		$this->email->send();
+		return true;
+	 }
 
 
 }

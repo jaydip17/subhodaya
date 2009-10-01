@@ -30,7 +30,7 @@ function telugu_typing()
 				</tr>
 				<tr>
 					<td valign="top" align="center">
-					<form name="telugu_send" method="post" action="<?=base_url();?>subhodaya/sendmail">
+					<?=form_open('subhodaya/sendmail',array('name'=>'telugu_send')) ?>
 						<table align="center" width="550px" border="0" style="border: 1px solid #939393;">
 							<tr>
 								<td colspan='2' align="center"><div  id="gree_bar1"><?=$more['25']->matter?></div></td>
@@ -40,8 +40,8 @@ function telugu_typing()
 								<td align="left" width="70%"><input type="text" name="name" size="30"></td>
 							</tr>
 							<tr>
-								<td align="left" width="30%" style="padding-left: 10px;"><?=$more['38']->matter?></td>
-								<td align="left" width="70%"><input type="text" name="name" size="30"></td>
+								<td align="left" width="30%" style="padding-left: 10px;"><?=$more['39']->matter?></td>
+								<td align="left" width="70%"><input type="text" name="fname" size="30"><?=form_hidden('type','Greeting')?></td>
 							</tr>
 							<tr>
 								<td align="left" style="padding-left: 10px;"><?=$more['28']->matter?></td>

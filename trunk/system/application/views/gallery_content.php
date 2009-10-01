@@ -537,7 +537,7 @@ function telugu_typing()
 				
 				<tr>
 					<td valign="top" colspan="3" align="center" style="padding-top: 10px;">
-					<form name="telugu_send" method="post" action="<?=base_url();?>subhodaya/sendmail">
+					<?=form_open('subhodaya/sendmail','name="telugu_send"') ?>
 					<input type="hidden" name="url" value="<?=base_url()?>gallery/content/<?=$image['0']->id?>">
 			
 						<table align="center" width="550px" style="border: 1px solid #939393;">
@@ -548,6 +548,9 @@ function telugu_typing()
 								<td width="30%" align="left" style="padding-left: 10px;"><?=$more['27']->matter?></td>
 								<td align="left" width="70%"><input type="text" name="name" size="30"></td>
 							</tr>
+							<tr><td width="150px" align="left" style="padding-left: 10px;"><?php if(isset($more['39'])){ echo $more['39']->matter;}?></td><td><input type="text" name="fname" size="30">
+							<?=form_hidden('type','Gallery')?>
+							</td></tr>
 							<tr>
 								<td align="left" style="padding-left: 10px;"><?=$more['28']->matter?></td>
 								<td align="left"><input type="text" name="email" size="30"></td>

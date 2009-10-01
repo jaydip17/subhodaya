@@ -1,4 +1,19 @@
 <script type="text/javascript" src="<?=base_url()?>/assets/js/shubhodaya.js"></script>
+<style>
+<!--
+.unselected {
+	opacity:0.5;filter:alpha(opacity=50);
+	cursor: pointer;
+}
+.selected {
+	cursor: pointer;
+}
+input {
+	color: #5A5F5F;
+	font-size: 11px;
+}
+-->
+</style>
 <script type="text/javascript" >
 function reload()
 	 {
@@ -27,13 +42,32 @@ function reload()
 	 </script>
 <script type="text/javascript">
 <!--
+function test1(type)
+{
+	
+		document.getElementById(type).className = "selected";
+		document.getElementById('emailtype').value = type;
+	if(type=='gmail')
+	{
+		var temptype = 'yahoo';
+		document.getElementById('username').value = "Enter your Gmail id";
+	}
+	else
+	{
+		var temptype = 'gmail';
+		document.getElementById('username').value = "Enter your Yahoo id";
+	}
+		document.getElementById(temptype).className = "unselected";
+
+}
+
 function test()
 {
     var flag=1;
 	var uname = document.getElementById('username').value;
 	var pass = document.getElementById('password').value;
-	var email = document.getElementById('email').value;
-	
+	var email = document.getElementById('emailtype').value;
+
 	if(uname=="" || pass=="")
 	{
 	flag=0;
@@ -46,19 +80,12 @@ function test()
 	var url = '&username='+uname+'&password='+pass+'&type='+email;
 	attribures = '&height=400&width=500';
 	tb_show('Your Yahoo (or) Gmail Contact List','<?=base_url()."admin/contacts/import?"?>'+url+attribures,'false');
-	 
+	
 	}
 	else
 	return false;
 }
-function test1()
-{
-	var type=document.getElementsByName("email").value;
-	alert(type);
- 
-	
-	
-}
+
 //-->
 </script>
 <style type="text/css">
@@ -480,12 +507,13 @@ function test1()
 		<th colspan="3" align="center">Enter details</th>
 	  </tr>
 	  <tr>
-	  	<td align="left"><img src="<?=base_url()?>assets/imgs/gmail.png" id='email' name="gmail" onclick="test1()"></td>
-	    <td align="left"><img src="<?=base_url()?>assets/imgs/yahoo-img.jpg" id='email' name="yahoo" onclick="test1()"></td>
+	  	<td align="left"><img src="<?=base_url()?>assets/imgs/gmail.png" class="selected" id='gmail' name="gmail" onclick="test1(this.name)"></td>
+	    <td align="left"><img src="<?=base_url()?>assets/imgs/yahoo-img.jpg" class="unselected" id='yahoo' name="yahoo" onclick="test1(this.name)"></td>
 	  </tr>
 	  <tr>
 	  	<td>Username</></td>
-	  	<td align="left"><input type="text" name="username" size="10" value="" id="username"/></td>
+	  	<td align="left"><input onfocus="this.value=''" type="text" name="username" size="10" value="Enter your Gmail id" id="username"/>
+	  	<input type="hidden" name="emailtype" size="10" value="gmail" id="emailtype"/></td>
 	  	<td id="wrong_id"></td>
 	  	</tr>
 	  <tr>
@@ -496,7 +524,7 @@ function test1()
 	  <tr>
 	  	  <td colspan="3" align="center">
 	  	  	<!--<input style="background-color:#ACDFFA" id='importcontacts' alt='' onclick="test()" type="button" name="submit" value="Invite My Contacts" title="your Contacts list"/>
-	  	  --><img src="<?=base_url()?>assets/imgs/invite-contact2.png" id='importcontacts' onclick="test()" name="submit" alt=""/></td>
+	  	  --><img src="<?=base_url()?>assets/imgs/invite-contact2.png" id='importcontacts' style="cursor: pointer;" onclick="test()" name="submit" alt=""/></td>
 	  </tr>    
 	  <tr>
 	  	 <td colspan="3" align="center"><small>your info is secured..</small></td>

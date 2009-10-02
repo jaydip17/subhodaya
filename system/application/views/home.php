@@ -287,7 +287,7 @@ function test()
                 <td width="310" valign="top" id="tock-botom-center" align="left">
                 <div style="padding:5px;text-align: justify;" >
                 <? if(file_exists("./assets/news/news_img".$active_news['0']->id."_thumb.jpg")){ ?>
-                <a href="<?=base_url();?>news/newsdetails/<?=$active_news['0']->id?>/<?=$active_news['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?=$active_news['0']->id?>_thumb.jpg" style="margin:2px 5px 0px 2px;float: left;" align="top" id="img"></img></a>
+                <a href="<?=base_url();?>news/newsdetails/<?=$active_news['0']->id?>/<?=$active_news['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?=$active_news['0']->id?>_thumb.jpg" style="margin:2px 23px 0px 2px;float: left;" align="top" id="img"></img></a>
                 <?} ?>
                 <font id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?=$active_news['0']->id?>/<?=$active_news['0']->type?>"><?php echo $active_news['0']->heading;?></a></font><br>
                <?php echo $active_news['0']->summary;?>

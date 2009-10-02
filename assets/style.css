@@ -1050,3 +1050,24 @@ font-size: 14px;
 	width: 70px;
 	cursor: pointer;
 }
+#home_bottom a:link
+{
+text-decoration:none;
+color:	#000000;
+font-size: 12px;
+}
+#home_bottom a:active{
+text-decoration:none;
+color:	#000000;
+font-size: 12px;
+}
+#home_bottom a:visited{
+text-decoration:none;
+color:	#000000;
+font-size: 12px;
+}
+#home_bottom a:hover{
+text-decoration:none;
+color:	red;
+font-size: 12px;
+}

@@ -24,7 +24,7 @@
 							</tr>
 							<tr>
 								<td align="left" width="30%" style="padding-left: 10px;"><?=$more['38']->matter?></td>
-								<td align="left" width="70%"><input type="text" name="name" size="30"></td>
+								<td align="left" width="70%"><input type="text" name="uemail" size="30"></td>
 							</tr>
 							<tr>
 								<td align="left" width="30%" style="padding-left: 10px;"><?=$more['39']->matter?></td>

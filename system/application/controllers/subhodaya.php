@@ -149,6 +149,8 @@ class Subhodaya extends Controller {
 //        $status= "-1";
 		}
 		$status= "1";
+		print_r($_POST);
+		exit;
         redirect($_POST['url'].'/'.$status);
 		
      

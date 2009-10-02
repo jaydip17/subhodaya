@@ -138,7 +138,7 @@ function test()
 							        			<? if(file_exists("./assets/news/news_img".$news_type7['4']->id."_home_thumb.jpg")){ ?>
 							        			<a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type7['4'])){echo $news_type7['4']->id;}?>/<?=$news_type7['4']->type?>"><img src="<?=base_url();?>assets/news/news_img<?php if(isset($news_type7['4'])){echo $news_type7['4']->id;}?>_home_thumb.jpg" style="margin: 0px 10px 0px 0px;float: left;" align="top" id="img"></a>
 							        			<?} ?>
-							        				<div id="mainnews1" style="height: 40px"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type7['4'])){echo $news_type7['4']->id;}?>/<?=$news_type7['4']->type?>"><?php if(isset($news_type7['4'])){echo $news_type7['4']->heading;}?></a></div>
+							        				<div id="mainnews1" style="height: 40px;font-size:13px;"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type7['4'])){echo $news_type7['4']->id;}?>/<?=$news_type7['4']->type?>"><?php if(isset($news_type7['4'])){echo $news_type7['4']->heading;}?></a></div>
 							        				<div style="padding:5px 0px 0px 70px;" id="more-news-div"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type7['4'])){echo $news_type7['4']->id;}?>/<?=$news_type7['4']->type?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div>
 							        			</td>
 							        			<td width="50%" valign="top">
@@ -291,7 +291,7 @@ function test()
                 <?} ?>
                 <font id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?=$active_news['0']->id?>/<?=$active_news['0']->type?>"><?php echo $active_news['0']->heading;?></a></font><br>
                <?php echo $active_news['0']->summary;?>
-               <div style="height: 185px;" id="telugufont">
+               <div style="height: 150px;" id="telugufont">
                <ul id="mainnews">
             <?php 
           		$count=0;  foreach ($active_news as $row):
@@ -485,19 +485,20 @@ function test()
     </table></td>
               </tr>
             </table>
-            <table width="98%" border="0" style="margin-left:1px"  cellpadding="0" cellspacing="5">
+            <table border="0" style="margin-left:1px;"  cellpadding="0" cellspacing="5">
               <tr>
-<td height="253" valign="top" width="240"><table width="100%"  border="0"  align="center" cellpadding="0" cellspacing="0"  style="margin-right:5px;margin-left:5px">
+<td height="253" valign="top" style="width: 50%;">
+				<table width="100%"  border="0"  align="center" cellpadding="0" cellspacing="0"  style="margin-right:5px;margin-left:5px">
                   <tr>
-                        <td width="6"  valign="top" id="img-senter"><img src="<?=base_url();?>assets/imgs/tock-line.jpg" width="6" height="34" /></td>
-                        <td width="200" valign="bottom" id="img-senter" align="left" >
-                        <table><tr><td width="20%"><img src="<?=base_url(); ?>assets/imgs/001.png" style="padding: 0px 5px 3px 2px;" align="middle"></img></td><td width="80%"><span id="telugufont"><?php echo $more['22']->matter;?></span></td></tr></table>
+                        <td valign="top" id="img-senter"><img src="<?=base_url();?>assets/imgs/tock-line.jpg" height="34" /></td>
+                        <td  valign="bottom" id="img-senter" align="left" >
+                        <table width="100%"><tr><td align="left"><img src="<?=base_url(); ?>assets/imgs/001.png" style="padding: 0px 5px 3px 2px;" align="middle"></img></td><td align="left" width="95%"><span id="telugufont"><?php echo $more['22']->matter;?></span></td></tr></table>
                         </td>
-                        <td width="6" valign="top"><img src="<?=base_url();?>assets/imgs/tock-line-right.jpg" width="6" height="34" /></td>
+                        <td valign="top"><img src="<?=base_url();?>assets/imgs/tock-line-right.jpg" height="34" /></td>
                     </tr>
                       <tr>
-                        <td  valign="top" id="center-img"><img src="<?=base_url();?>assets/imgs/new1.jpg" width="5" height="214" /></td>
-                        <td width="200" id="center-img" align="left" valign="top">
+                        <td  valign="top" id="center-img"><img src="<?=base_url();?>assets/imgs/new1.jpg"  height="214" /></td>
+                        <td  id="center-img" align="left" valign="top">
                         	<div style="text-align: justify; height: 185px;width:99%;padding-top: 5px;" id="telugufont1">
                         	<? if(!empty($active_news1)){
                         	if(file_exists("./assets/news/news_img".$active_news1['0']->id."_thumb.jpg")){ ?>
@@ -514,7 +515,7 @@ function test()
 							          	continue;
 						          		} ?>
 						               		
-						               			<li style="padding-top:3px;" ><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>/<?=$row->type?>"><?php echo $row->heading;?></a></li>
+						               			<li style="padding:3px;" ><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>/<?=$row->type?>"><?php echo $row->heading;?></a></li>
 						               		
 						          	<? if($count==5){
 						          	break;
@@ -532,18 +533,18 @@ function test()
                     </tr>
                   </table>
                  </td>
-				<td width="250" valign="top">
+				<td  valign="top">
 					<table width="100%" border="0" align="center" style="margin-left:6px;" cellpadding="0" cellspacing="0">
                       <tr>
-                        <td width="6"  valign="top" id="img-senter"><img src="<?=base_url();?>assets/imgs/tock-line.jpg" width="7" height="34" /></td>
-                        <td width="200" valign="bottom" id="img-senter" align="left" style="margin-bottom: 10px;">
-                        <table><tr><td width="20%"><img src="<?=base_url(); ?>assets/imgs/001.png"></img></td><td width="80%" id="telugufont"><?=$cinema_type2['0']->cinema_type ?></td></tr></table>
+                        <td   valign="top" id="img-senter"><img src="<?=base_url();?>assets/imgs/tock-line.jpg"  height="34" /></td>
+                        <td  valign="bottom" id="img-senter" align="left" style="margin-bottom: 10px;">
+                        <table width="100%"><tr><td><img src="<?=base_url(); ?>assets/imgs/001.png"></img></td><td width="95%" id="telugufont"><?=$cinema_type2['0']->cinema_type ?></td></tr></table>
                         </td>
-                        <td width="6" valign="top"><img src="<?=base_url();?>assets/imgs/tock-line-right.jpg" width="6" height="34" /></td>
+                        <td width="6" valign="top"><img src="<?=base_url();?>assets/imgs/tock-line-right.jpg" height="34" /></td>
              		 </tr>
                       <tr>
-                        <td height="214"  valign="top" id="center-img"><img src="<?=base_url();?>assets/imgs/new1.jpg" width="5" height="214" /></td>
-                        <td width="200" id="center-img" align="left" valign="top" height="100%">
+                        <td height="214"  valign="top" id="center-img"><img src="<?=base_url();?>assets/imgs/new1.jpg"  height="214" /></td>
+                        <td  id="center-img" align="left" valign="top" height="100%">
 	                        <div style="height: 185px;text-align: justify;padding-top: 3px;width:99%;" id="telugufont1">
 	                        
 	                        <? 
@@ -561,7 +562,7 @@ function test()
 							          	continue;
 						          		} ?>
 						               		
-						               			<li style="padding-top:3px;" ><a href="<?=base_url();?>cinema/inner/<?=$row->id?>/<?=$row->type?>"><?php echo $row->heading;?></a></li>
+						               			<li style="padding:3px;" ><a href="<?=base_url();?>cinema/inner/<?=$row->id?>/<?=$row->type?>"><?php echo $row->heading;?></a></li>
 						               		
 						          	<? if($count==5){
 						          	break;

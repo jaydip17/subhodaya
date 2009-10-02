@@ -498,7 +498,7 @@ function test()
                       <tr>
                         <td  valign="top" id="center-img"><img src="<?=base_url();?>assets/imgs/new1.jpg" width="5" height="214" /></td>
                         <td width="200" id="center-img" align="left" valign="top">
-                        	<div style="text-align: justify; height: 190px;width:99%;padding-top: 5px;" id="telugufont1">
+                        	<div style="text-align: justify; height: 185px;width:99%;padding-top: 5px;" id="telugufont1">
                         	<? if(!empty($active_news1)){
                         	if(file_exists("./assets/news/news_img".$active_news1['0']->id."_thumb.jpg")){ ?>
                         		<a href="<?=base_url();?>news/newsdetails/<?=$active_news1['0']->id?>/<?=$active_news1['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?=$active_news1['0']->id?>_thumb.jpg" style="margin: 0px 22px 2px 0px;float: left;" id="img"/></a>
@@ -516,7 +516,7 @@ function test()
 						               		
 						               			<li style="padding-top:3px;" ><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>/<?=$row->type?>"><?php echo $row->heading;?></a></li>
 						               		
-						          	<? if($count==4){
+						          	<? if($count==5){
 						          	break;
 						          		}else{
 						          	$count++;
@@ -544,7 +544,7 @@ function test()
                       <tr>
                         <td height="214"  valign="top" id="center-img"><img src="<?=base_url();?>assets/imgs/new1.jpg" width="5" height="214" /></td>
                         <td width="200" id="center-img" align="left" valign="top" height="100%">
-	                        <div style="height: 190px;text-align: justify;padding-top: 3px;width:99%;" id="telugufont1">
+	                        <div style="height: 185px;text-align: justify;padding-top: 3px;width:99%;" id="telugufont1">
 	                        
 	                        <? 
 	                        if(!empty($cinema_type2['0'])){ if(file_exists("./assets/cinema/ceni_img".$cinema_type2['0']->id."_thumb.jpg")){ ?>
@@ -563,7 +563,7 @@ function test()
 						               		
 						               			<li style="padding-top:3px;" ><a href="<?=base_url();?>cinema/inner/<?=$row->id?>/<?=$row->type?>"><?php echo $row->heading;?></a></li>
 						               		
-						          	<? if($count==4){
+						          	<? if($count==5){
 						          	break;
 						          		}else{
 						          	$count++;

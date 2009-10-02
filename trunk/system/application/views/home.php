@@ -526,7 +526,7 @@ function test()
 						          		?>
                </ul>
                         	</div>
-                        	<div id="more-news-div" style="width:99%;"><span ><a href="<?=base_url();?>news/newsdetails/<?=$active_news1['0']->id?>/<?=$active_news1['0']->type?>"><?=$more['1']->matter ?>...</a></span></div>
+                        	<div id="more-news-div" style="width:99%;"><span ><a href="<?=base_url();?>news/details/<?=$active_news1['0']->type?>"><?=$more['0']->matter ?>...</a></span></div>
                         </td>
                         <td  valign="top" id="center-img"><img src="<?=base_url();?>assets/imgs/new.jpg" width="5" height="214" /></td>
                     </tr>
@@ -573,7 +573,7 @@ function test()
 						      ?>
                </ul>
 	                   		</div>
-	                        <div id="more-news-div" style="width: 99%;" ><span ><a href="<?=base_url();?>cinema/inner/<?=$cinema_type2['0']->id?>/<?=$cinema_type2['0']->type?>"><?=$more['1']->matter ?>...</a></span></div>
+	                        <div id="more-news-div" style="width: 99%;" ><span ><a href="<?=base_url();?>cinema/details/<?=$cinema_type2['0']->type?>"><?=$more['0']->matter ?>...</a></span></div>
                         </td>
                          <td height="214"  valign="top" id="center-img"><img src="<?=base_url();?>assets/imgs/new.jpg" width="5" height="214" /></td>
                     </tr>

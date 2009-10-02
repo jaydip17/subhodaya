@@ -48,7 +48,7 @@ padding-left: 20px;
 								<?php
 								if(!empty($cinema_type3))
 								{ 
-								$count=0; foreach ($cinema_type1 as $row):?>
+								$count=0; foreach ($cinema_type3 as $row):?>
 								<li id="mainnews" ><a href="<?=base_url();?>cinema/inner/<?=$row->id?>/<?=$row->type?>"><?=$row->heading?></a></li>
 								<?php
 								if($count==2){

@@ -291,7 +291,7 @@ function test()
                 <?} ?>
                 <font id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?=$active_news['0']->id?>/<?=$active_news['0']->type?>"><?php echo $active_news['0']->heading;?></a></font><br>
                <?php echo $active_news['0']->summary;?>
-               <div style="height: 120px;" id="telugufont">
+               <div style="height: 185px;" id="telugufont">
                <ul id="mainnews">
             <?php 
           		$count=0;  foreach ($active_news as $row):

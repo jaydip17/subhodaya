@@ -82,12 +82,12 @@ padding-bottom:5px;
 			</div></td></tr>
 			<tr><td><div id="news_heading" class="heading"><span id="newsheading"><?php if(isset($more['25'])){echo $more['25']->matter;}?></span></div></td></tr>
 			<tr><td align="center"><div style="border:1px solid #9FA0A0;">
-			<form name="telugu_send" action="<?=base_url();?>subhodaya/sendmail">
+			<?=form_open('subhodaya/sendmail',array('name'=>'telugu_send')) ?>
 			<table id="formdiv">
 				<tr><td valign="top" colspan="2"><div style="background-color: #B5E8FD;height:20px;"></div></td></tr>
 				<tr><td width="150px" align="left" style="padding-left: 10px;"><?php if(isset($more['27'])){ echo $more['27']->matter;}?></td><td><input type="text" name="name" size="30"><?=form_hidden('heading',$result[0]->heading)?></td></tr>
 				<tr><td width="150px" align="left" style="padding-left: 10px;"><?php if(isset($more['28'])){ echo $more['38']->matter;}?></td><td><input type="text" name="uemail" size="30"></td></tr>
-				<tr><td width="150px" align="left" style="padding-left: 10px;"><?php if(isset($more['39'])){ echo $more['39']->matter;}?></td><td><input type="text" name="ufname" size="30"></td></tr>
+				<tr><td width="150px" align="left" style="padding-left: 10px;"><?php if(isset($more['39'])){ echo $more['39']->matter;}?></td><td><input type="text" name="fname" size="30"></td></tr>
 				<tr><td width="150px" align="left" style="padding-left: 10px;"><?php if(isset($more['28'])){ echo $more['28']->matter;}?></td><td><input type="text" name="email" size="30"></td></tr>
 				<tr><td valign="top" colspan="2"><div style="background-color: #B5E8FD;height:20px;"></div></td></tr>
 				<tr><td colspan="2" align="left" style="padding-left: 10px;"><input type="checkbox" id="checkboxId" onclick="javascript:checkboxClickHandler()" name="telugu_type">&nbsp;Type in telugu</td></tr>

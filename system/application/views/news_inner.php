@@ -14,7 +14,7 @@ padding-left: 20px;
 							<div style="height: 248px;">
 							<?if(!empty($cinema_type1['0'])){
 							if(file_exists("./assets/cinema/ceni_img".$cinema_type1['0']->id."_thumb.jpg")){ ?>
-							<a href="<?=base_url();?>cinema/inner/<?=$cinema_type1['0']->id?>/<?=$cinema_type1['0']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type1['0']->id?>_thumb.jpg" style="padding:5px 0px 0px 20px;" border="0"></a>
+							<a href="<?=base_url();?>cinema/inner/<?=$cinema_type1['0']->id?>/<?=$cinema_type1['0']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type1['0']->id?>_thumb.jpg" style="margin:5px 0px 0px 20px;" id="img"></a>
 							<?} }?>
 							<ul style="padding-top: 5px;">
 								<?php
@@ -42,7 +42,7 @@ padding-left: 20px;
 							<div style="height: 248px;">
 							<? if(!empty($cinema_type3['0'])){
 							if(file_exists("./assets/cinema/ceni_img".$cinema_type3['0']->id."_thumb.jpg")){ ?>
-							<a href="<?=base_url();?>cinema/inner/<?=$cinema_type3['0']->id?>/<?=$cinema_type3['0']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type3['0']->id?>_thumb.jpg" style="padding:5px 0px 0px 20px; " border="0"></a>
+							<a href="<?=base_url();?>cinema/inner/<?=$cinema_type3['0']->id?>/<?=$cinema_type3['0']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type3['0']->id?>_thumb.jpg" style="margin:5px 0px 0px 20px; " id='img'></a>
 							<?} }?>
 							<ul>
 								<?php
@@ -144,7 +144,7 @@ padding-left: 20px;
 								if(!empty($video_result)){
 								
           				        foreach($video_result as $item){?>
-          				 		<div style="padding:4px;height:82px;padding-top:7px;"><a href="<?=base_url();?>video/index/<?php if(isset($item)) {echo $item->id;}?>"><div id="cinemavideo_time"><?=$item->time?></div><img id="img"src="<?=base_url();?>assets/videos/image_preview/home_image<?=$item->id?>_thumb.jpg" border="0"></a></div>
+          				 		<div style="padding:4px;height:82px;padding-top:7px;"><a href="<?=base_url();?>video/index/<?php if(isset($item)) {echo $item->id;}?>"><div id="cinemavideo_time"><?=$item->time?></div><img id="img" src="<?=base_url();?>assets/videos/image_preview/home_image<?=$item->id?>_thumb.jpg"></a></div>
 							        		<div id="gall_botto_img" align="center"style="margin-left:2px;"><a href="<?=base_url();?>video/index/<?php if(isset($item)) {echo $item->id;}?>"><?=$item->name?></a></div>
 							        		<div style="height:12px;"><!--Views:<?=$item->no_of_views?>	--></div>
 							        			
@@ -166,7 +166,7 @@ padding-left: 20px;
 						<div style="height: 248px;">
 						<? if(!empty($cinema_type5['0'])){
 						if(file_exists("./assets/cinema/ceni_img".$cinema_type5['0']->id."_thumb.jpg")){ ?>
-						<a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type5['0'])){ echo $cinema_type5['0']->id;}?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($cinema_type5['0'])){ echo $cinema_type5['0']->id;}?>_thumb.jpg" style="padding: 5px 0px 2px 20px;" border="0"/></a>
+						<a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type5['0'])){ echo $cinema_type5['0']->id;}?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($cinema_type5['0'])){ echo $cinema_type5['0']->id;}?>_thumb.jpg" style="margin: 5px 0px 2px 20px;" id="img"/></a>
 						<?}} ?>
 						<ul id="mainnews" style="padding-top: 5px;">
 						<?php if(isset($cinema_type5 )){

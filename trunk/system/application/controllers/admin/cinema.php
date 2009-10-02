@@ -30,6 +30,13 @@ class Cinema extends Controller {
 		$this->load->view('admin/cinema_view',$data);
 	}
 	function insert(){
+		if(!isset($_POST['active'])){
+			
+			$active=0;
+		}else{
+			$active=$_POST['active'];
+			
+		}
 		$type=$this->input->post('type');
 		$heading=$this->input->post('heading');
 		$summery=$this->input->post('summary');
@@ -38,6 +45,7 @@ class Cinema extends Controller {
 					'heading' => $heading,
 					'summary' => $summery,
 				'description' => $description,
+				'active'	  => $active
 		);
 		if(!empty($data))
 		{

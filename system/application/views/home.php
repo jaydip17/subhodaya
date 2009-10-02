@@ -514,7 +514,7 @@ function test()
 							          	continue;
 						          		} ?>
 						               		
-						               			<li style="padding-top:3px;" ><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>/<?=$active_news['0']->type?>"><?php echo $row->heading;?></a></li>
+						               			<li style="padding-top:3px;" ><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>/<?=$row->type?>"><?php echo $row->heading;?></a></li>
 						               		
 						          	<? if($count==4){
 						          	break;

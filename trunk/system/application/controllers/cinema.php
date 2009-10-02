@@ -106,6 +106,7 @@ class Cinema extends Controller {
 		$result1=$this->Cinema_Model->get_all($type);
 		$result=$this->Cinema_Model->inner($id);
 		$mahila_details=$this->Mahila_Model->active_mahila(6);
+		print_r($mahila_details);
 		$news_type2=$this->News_Model->get_newstype1(2);
 		$mahila_details1=$this->Mahila_Model->active_mahila(8);
 		$cinema_cat=$this->Cinema_Model->get_cinemanewstype();

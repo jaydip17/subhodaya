@@ -301,7 +301,7 @@ function test()
 	          	continue;
           		} ?>
                		
-               			<li style="padding:3px;" ><a href="<?=base_url();?>news/newsdetails/<?=$active_news['0']->id?>/<?=$active_news['0']->type?>"><?php echo $row->heading;?></a></li>
+               			<li style="padding:3px;" ><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>/<?=$row->type?>"><?php echo $row->heading;?></a></li>
                		
           	<? if($count==6){
           	break;
@@ -343,7 +343,7 @@ function test()
               </tr>
           </table></td>
           <td width="4" valign="top"><img src="<?=base_url();?>assets/imgs/add-line-right.jpg" width="4" height="456" /></td>
-          <td width="500" valign="top">
+          <td width="100%" valign="top"  colspan="2">
           	<table width="0"  border="0"  id="photog-md" cellpadding="0" cellspacing="0" style="margin-left:5px;">
               <tr>
                 <td width="500"  valign="top"><table width="98%" border="0" cellpadding="0" cellspacing="0" style="margin-left: 5px">
@@ -427,7 +427,62 @@ function test()
                       <td><img src="<?=base_url();?>assets/imgs/photogalleri-botom-lin.jpg" width="490" height="4" /></td>
                     </tr>
                   </table>
-                </td>
+                </td><td>
+                <table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" >
+         <tr>
+             <td width="6" valign="top"><img src="<?=base_url();?>assets/imgs/tock-line.jpg" width="6" height="35" /></td>
+             <td  id="img-senter" align="left" valign="middle">
+                	<img src="<?=base_url(); ?>assets/imgs/001.png" style="margin:1px 0px 0px 0px;" align="middle"></img>
+                	<span id="telugufont" style="padding: 0px 0px 8px 2px;"><?php echo $more['21']->matter;?></span>
+             </td>
+             <td valign="top"><img src="<?=base_url();?>assets/imgs/tock-line-right.jpg" width="6" height="35" /></td>
+         </tr>
+         <tr>
+             <td valign="top" id="center-line"><img src="<?=base_url();?>assets/imgs/tock-line-boyom.jpg" width="5" height="166" /></td>
+             <td valign="top" width="100%" id="center-line"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+         <tr>
+             <td height="165" valign="top" style="background-image:url(assets/imgs/gmailseline.jpg);background-repeat:repeat-x;border-bottom:1px solid #166DBC;">
+      <form action="<?=base_url()?>admin/contacts/import" method="POST" onSubmit="return checkEmpty(this);" name="loginForm">
+      <input type="hidden" name="page" value="home" />
+	<table border="0" align="center" cellpadding="2" cellspacing="4" style="padding-left: 10px;">
+	  <tr>
+		<th colspan="3" align="center">Enter details</th>
+	  </tr>
+	  <tr>
+	  	<td align="left">
+	  	 <div id='gmail' class="contacts_gmail_selected" onclick="test1('gmail')" > </div>
+	    <td align="left">
+	    <div id='yahoo' class="contacts_yahoo" onclick="test1('yahoo')" > </div>
+	    
+	    </td>
+	  </tr>
+	  <tr>
+	  	<td>Username</></td>
+	  	<td align="left"><input onfocus="this.value=''" type="text" name="username" size="15" value="Enter your Gmail id" id="username"/>
+	  	<input type="hidden" name="emailtype" size="10" value="gmail" id="emailtype"/></td>
+	  	<td id="wrong_id"></td>
+	  	</tr>
+	  <tr>
+	  	  <td>Password</td>
+	      <td align="left"><input type="password" name="password" size="15" id="password"/></td>
+	      <td id="wrong_pw"></td>
+	  </tr>
+	  <tr>
+	  	  <td colspan="3" align="center">
+	  	  <img src="<?=base_url()?>assets/imgs/invite-contact2.png" id='importcontacts' style="cursor: pointer;" onclick="test()" name="submit" alt=""/></td>
+	  </tr>    
+	  <tr>
+	  	 <td colspan="3" align="center"><small>your info is secured..</small></td>
+	  </tr>    
+	</table>
+	</form>
+             </td>
+         </tr>
+       </table>
+     </td>
+     <td valign="top" id="center-line"><img src="<?=base_url();?>assets/imgs/tock-line-boyom1.jpg" width="5" height="166"/></td>
+    </tr>
+    </table></td>
               </tr>
             </table>
             <table width="98%" border="0" style="margin-left:1px"  cellpadding="0" cellspacing="5">
@@ -443,14 +498,35 @@ function test()
                       <tr>
                         <td  valign="top" id="center-img"><img src="<?=base_url();?>assets/imgs/new1.jpg" width="5" height="214" /></td>
                         <td width="200" id="center-img" align="left" valign="top">
-                        	<div style="text-align: justify; height: 190px;width: 225px;padding-top: 5px;" id="telugufont1">
-                        	<? if(file_exists("./assets/news/news_img".$active_news1['0']->id."_thumb.jpg")){ ?>
-                        		<a href="<?=base_url();?>news/newsdetails/<?=$active_news1['0']->id?>/<?=$active_news1['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?=$active_news1['0']->id?>_thumb.jpg" style="margin: 0px 3px 2px 0px;float: left;" id="img"/></a>
+                        	<div style="text-align: justify; height: 190px;width:99%;padding-top: 5px;" id="telugufont1">
+                        	<? if(!empty($active_news1)){
+                        	if(file_exists("./assets/news/news_img".$active_news1['0']->id."_thumb.jpg")){ ?>
+                        		<a href="<?=base_url();?>news/newsdetails/<?=$active_news1['0']->id?>/<?=$active_news1['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?=$active_news1['0']->id?>_thumb.jpg" style="margin: 0px 22px 2px 0px;float: left;" id="img"/></a>
                         		<?} ?>
                         		<font id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?=$active_news1['0']->id?>/<?=$active_news1['0']->type?>"><?=$active_news1['0']->heading?></a></font><br>
                         		<?=$active_news1['0']->summary?>
+                        		 <ul id="mainnews">
+						            <?php 
+						          		$count=0;  foreach ($active_news1 as $row):
+						          		if($count==0)
+						          		{
+							          	$count++;
+							          	continue;
+						          		} ?>
+						               		
+						               			<li style="padding-top:3px;" ><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>/<?=$active_news['0']->type?>"><?php echo $row->heading;?></a></li>
+						               		
+						          	<? if($count==4){
+						          	break;
+						          		}else{
+						          	$count++;
+						          		}
+						          	endforeach; 
+                        	}
+						          		?>
+               </ul>
                         	</div>
-                        	<div id="more-news-div" style="width: 220px;"><span ><a href="<?=base_url();?>news/newsdetails/<?=$active_news1['0']->id?>/<?=$active_news1['0']->type?>"><?=$more['1']->matter ?>...</a></span></div>
+                        	<div id="more-news-div" style="width:99%;"><span ><a href="<?=base_url();?>news/newsdetails/<?=$active_news1['0']->id?>/<?=$active_news1['0']->type?>"><?=$more['1']->matter ?>...</a></span></div>
                         </td>
                         <td  valign="top" id="center-img"><img src="<?=base_url();?>assets/imgs/new.jpg" width="5" height="214" /></td>
                     </tr>
@@ -468,15 +544,36 @@ function test()
                       <tr>
                         <td height="214"  valign="top" id="center-img"><img src="<?=base_url();?>assets/imgs/new1.jpg" width="5" height="214" /></td>
                         <td width="200" id="center-img" align="left" valign="top" height="100%">
-	                        <div style="height: 190px;text-align: justify;padding-top: 3px;width: 220px;" id="telugufont1">
+	                        <div style="height: 190px;text-align: justify;padding-top: 3px;width:99%;" id="telugufont1">
 	                        
-	                        <?if(!empty($cinema_type2['0'])){ if(file_exists("./assets/cinema/ceni_img".$cinema_type2['0']->id."_thumb.jpg")){ ?>
-	                        <a href="<?=base_url();?>cinema/inner/<?=$cinema_type2['0']->id?>/<?=$cinema_type2['0']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type2['0']->id?>_thumb.jpg" style="float: left;margin:2px 5px 2px 2px;" id="img"></img></a>
+	                        <? 
+	                        if(!empty($cinema_type2['0'])){ if(file_exists("./assets/cinema/ceni_img".$cinema_type2['0']->id."_thumb.jpg")){ ?>
+	                        <a href="<?=base_url();?>cinema/inner/<?=$cinema_type2['0']->id?>/<?=$cinema_type2['0']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type2['0']->id?>_thumb.jpg" style="float: left;margin:2px 22px 2px 2px;" id="img"></img></a>
 	                        <?} ?>
 	                        <font id="mainnews"><a href="<?=base_url();?>cinema/inner/<?=$cinema_type2['0']->id?>/<?=$cinema_type2['0']->type?>"><?=$cinema_type2['0']->heading?></a></font><br>
-	                   		<?=$cinema_type2['0']->summary ?></div>
-	                        <div id="more-news-div" style="width: 220px;" ><span ><a href="<?=base_url();?>cinema/inner/<?=$cinema_type2['0']->id?>/<?=$cinema_type2['0']->type?>"><?=$more['1']->matter ?>...</a></span></div>
-	                        <?} ?>
+	                   		<?=$cinema_type2['0']->summary ?>
+	                   		 <ul id="mainnews">
+						            <?php 
+						          		$count=0;  foreach ($cinema_type2 as $row):
+						          		if($count==0)
+						          		{
+							          	$count++;
+							          	continue;
+						          		} ?>
+						               		
+						               			<li style="padding-top:3px;" ><a href="<?=base_url();?>cinema/inner/<?=$row->id?>/<?=$row->type?>"><?php echo $row->heading;?></a></li>
+						               		
+						          	<? if($count==4){
+						          	break;
+						          		}else{
+						          	$count++;
+						          		}
+						          	endforeach; 
+                        	}
+						      ?>
+               </ul>
+	                   		</div>
+	                        <div id="more-news-div" style="width: 99%;" ><span ><a href="<?=base_url();?>cinema/inner/<?=$cinema_type2['0']->id?>/<?=$cinema_type2['0']->type?>"><?=$more['1']->matter ?>...</a></span></div>
                         </td>
                          <td height="214"  valign="top" id="center-img"><img src="<?=base_url();?>assets/imgs/new.jpg" width="5" height="214" /></td>
                     </tr>
@@ -485,12 +582,12 @@ function test()
               </tr>
           </table>
          </td>
-         <td width="200" valign="top" align="right">
+        <!-- <td width="200" valign="top" align="right">
          <table width="210"  border="0" align="center" cellpadding="0" cellspacing="0" >
          <tr>
              <td width="6" valign="top"><img src="<?=base_url();?>assets/imgs/tock-line.jpg" width="6" height="35" /></td>
              <td  id="img-senter" align="left" valign="middle">
-<!--                	<img src="<?=base_url(); ?>assets/imgs/001.png" style="margin:1px 0px 0px 0px;" align="middle"></img>-->
+                	<img src="<?=base_url(); ?>assets/imgs/001.png" style="margin:1px 0px 0px 0px;" align="middle"></img>
                 	<span id="telugufont" style="padding: 0px 0px 8px 5px;"><?php echo $more['21']->matter;?></span>
              </td>
              <td valign="top"><img src="<?=base_url();?>assets/imgs/tock-line-right.jpg" width="6" height="35" /></td>
@@ -509,11 +606,11 @@ function test()
 	  <tr>
 	  	<td align="left">
 	  	 <div id='gmail' class="contacts_gmail_selected" onclick="test1('gmail')" > </div>
-	  	<!--<img src="<?=base_url()?>assets/imgs/gmail.png" class="selected" id='gmail' name="gmail" onclick="test1(this.name)">--></td>
+	  	<img src="<?=base_url()?>assets/imgs/gmail.png" class="selected" id='gmail' name="gmail" onclick="test1(this.name)"></td>
 	    <td align="left">
-	    <div id='yahoo' class="contacts_yahoo" onclick="test1('yahoo')" > </div><!--
+	    <div id='yahoo' class="contacts_yahoo" onclick="test1('yahoo')" > </div>
 	    <img src="<?=base_url()?>assets/imgs/yahoo-img.jpg" class="unselected" id='yahoo' name="yahoo" onclick="test1(this.name)">
-	    --></td>
+	    </td>
 	  </tr>
 	  <tr>
 	  	<td>Username</></td>
@@ -528,8 +625,8 @@ function test()
 	  </tr>
 	  <tr>
 	  	  <td colspan="3" align="center">
-	  	  	<!--<input style="background-color:#ACDFFA" id='importcontacts' alt='' onclick="test()" type="button" name="submit" value="Invite My Contacts" title="your Contacts list"/>
-	  	  --><img src="<?=base_url()?>assets/imgs/invite-contact2.png" id='importcontacts' style="cursor: pointer;" onclick="test()" name="submit" alt=""/></td>
+	  	  	<input style="background-color:#ACDFFA" id='importcontacts' alt='' onclick="test()" type="button" name="submit" value="Invite My Contacts" title="your Contacts list"/>
+	  	  <img src="<?=base_url()?>assets/imgs/invite-contact2.png" id='importcontacts' style="cursor: pointer;" onclick="test()" name="submit" alt=""/></td>
 	  </tr>    
 	  <tr>
 	  	 <td colspan="3" align="center"><small>your info is secured..</small></td>
@@ -580,11 +677,11 @@ function test()
                 
                 <?} else echo 'Yesterday no poll'; ?>
                 </td>
-              </tr><!--
+              </tr>
               
                 <td height="123" colspan="3" valign="top"><div align="right" style="padding-top:6px"><img src="<?=base_url();?>assets/imgs/add-fun.jpg" width="215" height="107"></img></div></td>
              
-          --></table></td>
+          </table></td>-->
         </tr>
       </table>
    <table width="100%" align="left"><tr>
@@ -695,14 +792,41 @@ function test()
                       <tr>
                         <td width="6" id="img-senter"><img src="<?=base_url();?>assets/imgs/tock-line.jpg" width="7" /></td>
                         <td valign="bottom" id="img-senter" align="left" style="margin-bottom: 10px;">
-                        <table><tr><td width="20%"><img src="<?=base_url();?>assets/imgs/001.png"></img></td><td width="80%" id="telugufont"><?if(isset($home_stories['0'])){echo $home_stories['0']->heading;}?></td></tr></table>
+                        <table><tr><td width="20%"><img src="<?=base_url();?>assets/imgs/001.png"></img></td><td width="80%" id="telugufont"><?php echo $more['16']->matter;?></td></tr></table>
                         </td>
                         <td width="6"><img src="<?=base_url();?>assets/imgs/tock-line-right.jpg" width="6" height="34" /></td>
              		 </tr>
                       <tr>
                         <td  valign="top" id="center-img1"><img src="<?=base_url();?>assets/imgs/new1.jpg" width="5" /></td>
                         <td valign="top" id="center-img1" align="left">
-	                        <div style="text-align:justify;padding-top:14px;height: 125px;" >
+                         <div id="home_poll" >
+                 	<div><? if(!empty($newspoll['0']->question)){
+                 	   echo $newspoll['0']->question;
+                 	   ?></div>
+     				<table width="100%">
+              			<tr>
+              				<td align="right">
+              					<input type="hidden" name="poll_id" value="<?=$newspoll['0']->id?>">
+              					<? $attributes = 'onClick= "loadPoll(\''.base_url().'poll/index/'.$newspoll[0]->id.'\',this.value,\''.base_url().'assets/imgs/bigrotation2.gif\')";' ?>
+              					<?=form_radio('answer','a',True,$attributes) ?>
+              				</td>
+              				<td align="left"><?=$more['18']->matter ?></td></tr>
+              			<tr><td align="right"><?=form_radio('answer','b',FALSE,$attributes) ?></td><td align="left"><?=$more['19']->matter ?></td></tr>
+              			<tr><td align="right"><?=form_radio('answer','c',FALSE,$attributes) ?></td><td align="left"><?=$more['20']->matter ?></td></tr>
+     				</table>
+     				<? }else echo 'today no poll'; ?>
+                </div>
+                <span style="font-weight: bold;font-size: 14px;color:maroon;">yesterday poll</span>
+                <div><?if(!empty($yes_poll['0']->question)){
+					echo  $yes_poll['0']->question;   ?>            	
+               </div>
+                <div align="right" id="result"><a HREF="javascript:void(0)"
+					onclick="window.open('<?=base_url();?>poll/yes_result/<?=$yes_poll['0']->id?>',
+						'welcome','width=300,height=200')">
+						Result</a></div>
+                
+                <?} else echo 'Yesterday no poll'; ?>
+	                        <!--<div style="text-align:justify;padding-top:14px;height: 125px;" >
 	                     <? if(isset($home_stories['0'])){ ?> 
 	                      <? if(file_exists("./assets/sahithi/news_img".$home_stories['0']->id."_thumb.jpg")){ ?>
 	                      <a href="<?=base_url();?>sahithi/sahithidetails/<?=$home_stories['0']->id?>"><img  id="img" src="<?=base_url();?>/assets/sahithi/news_img<?=$home_stories['0']->id?>_thumb.jpg" style="float: left;margin: 0px 3px 2px 1px;text-align: justify;"></a>
@@ -711,7 +835,7 @@ function test()
 	                     <font style="font-size:14px;padding-top:5px;"> <? echo $home_stories['0']->summary;?><?} ?></font>
 	                        </div>
 	                       <div id="more-news-div"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$home_stories['0']->id?>"><?=$more['1']->matter?></a></div>
-                        </td>
+                        --></td>
                          <td id="center-img1"><img src="<?=base_url();?>assets/imgs/new.jpg" width="5"/></td>
                     </tr>
                   </table>

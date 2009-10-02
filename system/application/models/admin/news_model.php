@@ -107,6 +107,7 @@ class News_Model extends Model
     	$this->db->select('*');
     	$array=array('news.type'=>$type,'news.active'=>1);
     	$this->db->where($array);
+    	$this->db->order_by("insert_date", "desc"); 
 		$this->db->from('news_types');
 		$this->db->join('news', 'news.type= news_types.id');
 		$query = $this->db->get_where();
@@ -118,6 +119,7 @@ class News_Model extends Model
     	$this->db->select('*');
     	$array=array('news.breking_news'=>1);
     	$this->db->where($array);
+    	$this->db->order_by("insert_date", "desc");
 		$this->db->from('news_types');
 		$this->db->join('news', 'news.type= news_types.id');
 		$query = $this->db->get_where();

@@ -7,10 +7,11 @@ class Subhodaya extends Controller {
 	function index(){
 		$news_type7=$this->News_Model->get_newstype1(7);
 		$active_news=$this->News_Model->active_news(2);
-		$active_news1=$this->News_Model->active_news(7);
+		$active_news1=$this->News_Model->active_news(1);
 		$news_type4=$this->News_Model->get_newstype1(4);
-		$cinema_type2=$this->Cinema_Model->get_cinematype(2);
-		$cinema_type1=$this->Cinema_Model->get_cinematype(1);
+		$cinema_type2=$this->Cinema_Model->get_activenews1(2);
+		//print_r($cinema_type2);
+		$cinema_type1=$this->Cinema_Model->get_activenews1(1);
 		$more=$this->News_Model->more_news();
 		$yes_poll=$this->Poll_Model->get_yes_newspoll($type=4);
 		$newspoll=$this->Poll_Model->get_newspolls($type=4);

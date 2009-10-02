@@ -41,7 +41,7 @@ if(isset($message) && !is_array($message) ) echo($message);?>
 	</tr>
 	<tr>
 		<td>Active</td>
-		<td align="left"><?=form_checkbox('active','1') ?></td>
+		<td align="left"><?=form_checkbox('active',1) ?></td>
 	</tr>
 	<tr>
 		<td colspan="2" align="right"><?=form_submit('add','Add') ?></td>

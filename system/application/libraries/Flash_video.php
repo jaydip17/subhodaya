@@ -222,10 +222,28 @@ s1.addParam(\"wmode\",\"opaque\");\n";
 			</script>\n";
 		return $jscript;	
 	}
+	
+	
 	function Add_variable($key,$variable)
 	{
 		$string = "s1.addVariable(\"".$key."\",\"".$variable."\");\n";
 		return $string;
+	}
+	
+	function get_flowplayer()
+	{
+		$data = '
+		<script type="text/javascript" src="'.base_url().'assets/players/flowplayer/flowplayer-3.1.4.min.js"></script>';
+		$data .= '<br/><a  
+			 href="'.$this->file.'"  
+			 style="display:block;width:'.$this->width.';height:'.$this->height.'"  
+			 id="player"> 
+		</a>';
+		
+		$data.= '<script>
+			flowplayer("player", "'.base_url().'assets/players/flowplayer/flowplayer-3.1.3.swf");
+		</script>';
+		return $data;
 	}
 	
 }

@@ -3,8 +3,11 @@ class Subhodaya extends Controller {
 	var $layout = 'default'; 
 	function Subhodaya(){
 		parent::Controller();
+				
 	}
 	function index(){
+ 		
+		
 		$news_type7=$this->News_Model->get_newstype1(7);
 		$active_news=$this->News_Model->active_news(2);
 		$active_news1=$this->News_Model->active_news(1);

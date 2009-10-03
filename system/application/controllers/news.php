@@ -8,6 +8,7 @@ class News extends Controller {
 		$this->load->model("admin/Cinema_Model");
 		$this->load->model("admin/Sahithi_Model");
 		$this->load->model("admin/Mahila_Model");
+		
 	}
 	function index(){
 		$more=$this->News_Model->more_news();
@@ -25,6 +26,17 @@ class News extends Controller {
 		$active_news3=$this->News_Model->active_news(3);
 		$active_news4=$this->News_Model->active_news(4);
 		
+		$current_url = current_url();
+		//$navigation = array ($current_url);
+		$segments = array(	'seg1' => $this->uri->segment(1,0),
+						   	'seg2' => $this->uri->segment(2,0),
+							'seg3' => $this->uri->segment(3,0),
+							'seg4' => $this->uri->segment(4,0),
+							'seg5' => $this->uri->segment(5,0),
+							'main' => $more['3']->matter,
+							'home' => $more['2']->matter,
+		); 
+		$bread_crumb = $this->bread_crumb->get_code($segments);
 		
 		$data=array('news_type1'  =>  $details,
 					'news_type2'  =>  $news_type2,
@@ -39,11 +51,13 @@ class News extends Controller {
 					'active_news1'=>  $active_news1,
 					'active_news2'=>  $active_news2,
 					'active_news3'=>  $active_news3,
-					'active_news4'=>  $active_news4
+					'active_news4'=>  $active_news4,
+					'bread_crumb' => $bread_crumb,
 		);
 		$this->load->view("news_main",$data);
 	}
 	function details(){
+		
 		$type=$this->uri->segment(3);
 		$onload = "loadNews('content','".base_url()."newslist/listview/".$type."')";
 		$more=$this->News_Model->more_news();
@@ -58,8 +72,17 @@ class News extends Controller {
 		$active_news2=$this->News_Model->active_news(2);
 		$active_news3=$this->News_Model->active_news(3);
 		$active_news4=$this->News_Model->active_news(4);
-		//print_r($active_news4);
 		
+		$segments = array(	'seg1' => $this->uri->segment(1,0),
+						   	'seg2' => $this->uri->segment(2,0),
+							'seg3' => $this->uri->segment(3,0),
+							'seg4' => $this->uri->segment(4,0),
+							'seg5' => $this->uri->segment(5,0),
+							'main' => $more['3']->matter,
+							'home' => $more['2']->matter
+		); 
+		$bread_crumb = $this->bread_crumb->get_code($segments);
+		//print_r($active_news4);
 		$data=array(	'news'  		   =>	$news,
 						'more'			   =>	$more,
 						'onload'    	   => 	$onload,
@@ -70,7 +93,8 @@ class News extends Controller {
 						'active_news2'	   =>	$active_news2,
 						'active_news3'	   =>	$active_news3,
 						'active_news4'	   =>   $active_news4,
-						'mahila_details2'  =>	$mahila_details2
+						'mahila_details2'  =>	$mahila_details2,
+						'bread_crumb' => $bread_crumb,
 						
 						
 						
@@ -78,6 +102,7 @@ class News extends Controller {
 		$this->load->view("news_content",$data);
 	}
 	function newsdetails(){
+		
 		$more=$this->News_Model->more_news();
 		$cinema_type1=$this->Cinema_Model->get_cinematype(1);
 		$id=$this->uri->segment(3,0);
@@ -91,7 +116,16 @@ class News extends Controller {
 		$this->load->Model('Video_Model');
 	    $videos=$this->Video_Model->get_videos('active',2);
 	   	$video_result=$videos->result();
-		
+		$segments = array(	'seg1' => $this->uri->segment(1,0),
+						   	'seg2' => $this->uri->segment(2,0),
+							'seg3' => $this->uri->segment(3,0),
+							'seg4' => $this->uri->segment(4,0),
+							'seg5' => $this->uri->segment(5,0),
+							'heading' => $result[0]->heading,
+							'main' => $more['3']->matter,
+							'home' => $more['2']->matter,
+		); 		
+		$bread_crumb = $this->bread_crumb->get_code($segments);
 		$data=array('result'   		=>   $result,
 					 'more'    		=>   $more,
 				'cinema_type1' 		=>   $cinema_type1,
@@ -100,7 +134,8 @@ class News extends Controller {
 				'cinema_type3'		=>   $cinema_type3,
 				'news'				=>	 $news,
 				'news_cat'			=>	 $news_cat,
-		          'video_result'     =>  $video_result
+		          'video_result'     =>  $video_result,
+				'bread_crumb' => $bread_crumb,
 				);
 				
 		$this->load->view('news_inner',$data);

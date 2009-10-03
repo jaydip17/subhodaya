@@ -14,6 +14,7 @@ input {
 }
 -->
 </style>
+
 <script type="text/javascript" >
 function reload()
 	 {
@@ -215,7 +216,7 @@ function test()
 							        			<? if(file_exists("./assets/cinema/ceni_img".$cinema_type1['5']->id."_home_thumb.jpg")){ ?>
 							        			<a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['5'])){echo $cinema_type1['5']->id;}?>/<?=$cinema_type1['5']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($cinema_type1['5'])){echo $cinema_type1['5']->id;}?>_home_thumb.jpg" style="margin: 0px 10px 0px 0px;float: left;border: 0px;" align="top" id="img"></a>
 							        			<?} ?>
-							        			<div id="mainnews1" style="height: 40px"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['5'])){echo $cinema_type1['5']->id;}?>/<?=$cinema_type1['5']->type?>"><?php if(isset($cinema_type1['5'])){echo $cinema_type1['5']->heading;}?></a></div><div style="padding:5px 0px 0px 70px;" id="more-news-div"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['5'])){echo $cinema_type1['5']->id;}?>/<?=$cinema_type1['5']->type?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div><?} ?></td>
+							        			<div id="home_bottom"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['5'])){echo $cinema_type1['5']->id;}?>/<?=$cinema_type1['5']->type?>"><?php if(isset($cinema_type1['5'])){echo $cinema_type1['5']->heading;}?></a></div><div style="padding:5px 0px 0px 70px;" id="more-news-div"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['5'])){echo $cinema_type1['5']->id;}?>/<?=$cinema_type1['5']->type?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div><?} ?></td>
 							        		
 							        		</tr>
 							        		
@@ -348,7 +349,7 @@ function test()
               <tr>
                 <td width="500"  valign="top"><table width="98%" border="0" cellpadding="0" cellspacing="0" style="margin-left: 5px">
                   <tr>
-                    <td height="4" valign="top"><img src="<?=base_url();?>assets/imgs/photogalleri-top-lin.jpg" width="484" height="4" /></td>
+                    <td height="4" valign="top"><img src="<?=base_url();?>assets/imgs/photogalleri-top-lin.jpg" width="485" height="4" /></td>
                   </tr>
                 </table>
                   <table width="98%" border="0" id="photigalleri" cellpadding="0" cellspacing="0" style="margin-left: 5px">
@@ -424,7 +425,7 @@ function test()
                   </table>
                   <table width="98%" border="0" cellpadding="0" cellspacing="0" style="margin-left: 5px">
                     <tr>
-                      <td><img src="<?=base_url();?>assets/imgs/photogalleri-botom-lin.jpg" width="484" height="4" /></td>
+                      <td><img src="<?=base_url();?>assets/imgs/photogalleri-botom-lin.jpg" width="485" height="4" /></td>
                     </tr>
                   </table>
                 </td><td>

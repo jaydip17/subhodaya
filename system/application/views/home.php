@@ -291,7 +291,7 @@ function test()
                 <?} ?>
                 <font id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?=$active_news['0']->id?>/<?=$active_news['0']->type?>"><?php echo $active_news['0']->heading;?></a></font><br>
                <?php echo $active_news['0']->summary;?>
-               <div style="height: 185px;" id="telugufont">
+               <div style="height: 170px;" id="telugufont">
                <ul id="mainnews">
             <?php 
           		$count=0;  foreach ($active_news as $row):
@@ -348,7 +348,7 @@ function test()
               <tr>
                 <td width="500"  valign="top"><table width="98%" border="0" cellpadding="0" cellspacing="0" style="margin-left: 5px">
                   <tr>
-                    <td height="4" valign="top"><img src="<?=base_url();?>assets/imgs/photogalleri-top-lin.jpg" width="488" height="4" /></td>
+                    <td height="4" valign="top"><img src="<?=base_url();?>assets/imgs/photogalleri-top-lin.jpg" width="484" height="4" /></td>
                   </tr>
                 </table>
                   <table width="98%" border="0" id="photigalleri" cellpadding="0" cellspacing="0" style="margin-left: 5px">
@@ -424,27 +424,27 @@ function test()
                   </table>
                   <table width="98%" border="0" cellpadding="0" cellspacing="0" style="margin-left: 5px">
                     <tr>
-                      <td><img src="<?=base_url();?>assets/imgs/photogalleri-botom-lin.jpg" width="490" height="4" /></td>
+                      <td><img src="<?=base_url();?>assets/imgs/photogalleri-botom-lin.jpg" width="484" height="4" /></td>
                     </tr>
                   </table>
                 </td><td>
                 <table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" >
          <tr>
-             <td width="6" valign="top"><img src="<?=base_url();?>assets/imgs/tock-line.jpg" width="6" height="35" /></td>
-             <td  id="img-senter" align="left" valign="middle">
+             <td width="6" valign="top"><img src="<?=base_url();?>assets/imgs/tock-line.jpg" width="7" height="35" /></td>
+             <td  id="img-senter" align="left" valign="bottom">
                 	<img src="<?=base_url(); ?>assets/imgs/001.png" style="margin:1px 0px 0px 0px;" align="middle"></img>
-                	<span id="telugufont" style="padding: 0px 0px 8px 2px;">Invite Friends  Via E-mail</span>
+                	<span id="telugufont" style="padding: 5px 0px px 2px;">Invite Friends  Via E-mail</span>
              </td>
              <td valign="top"><img src="<?=base_url();?>assets/imgs/tock-line-right.jpg" width="6" height="35" /></td>
          </tr>
          <tr>
-             <td valign="top" id="center-line"><img src="<?=base_url();?>assets/imgs/tock-line-boyom.jpg" width="5" height="166" /></td>
+             <td valign="top" id="center-line"><img src="<?=base_url();?>assets/imgs/tock-line-boyom.jpg" width="7" height="166" /></td>
              <td valign="top" width="100%" id="center-line"><table width="100%" border="0" cellpadding="0" cellspacing="0">
          <tr>
              <td height="165" valign="top" style="background-image:url(assets/imgs/gmailseline.jpg);background-repeat:repeat-x;border-bottom:1px solid #166DBC;">
       <form action="<?=base_url()?>admin/contacts/import" method="POST" onSubmit="return checkEmpty(this);" name="loginForm">
       <input type="hidden" name="page" value="home" />
-	<table border="0" align="center" cellpadding="2" cellspacing="4" style="padding-left: 10px;">
+	<table border="0" align="center" cellpadding="4" cellspacing="8" style="padding: 10px 0px 0px 15px;">
 	  <tr>
 	  	<td align="left">
 	  	 <div id='gmail' class="contacts_gmail_selected" onclick="test1('gmail')" > </div>
@@ -477,24 +477,24 @@ function test()
          </tr>
        </table>
      </td>
-     <td valign="top" id="center-line"><img src="<?=base_url();?>assets/imgs/tock-line-boyom1.jpg" width="5" height="166"/></td>
+     <td valign="top" id="center-line"><img src="<?=base_url();?>assets/imgs/tock-line-boyom1.jpg" width="5" height="165"/></td>
     </tr>
     </table></td>
               </tr>
             </table>
-            <table width="98%" border="0" style="margin-left:1px"  cellpadding="0" cellspacing="5">
+            <table  width="100%" border="0" style="margin-left:1px"  cellpadding="0" cellspacing="5">
               <tr>
-<td height="253" valign="top" width="240"><table width="100%"  border="0"  align="center" cellpadding="0" cellspacing="0"  style="margin-right:5px;margin-left:5px">
+<td height="253" valign="top" width="50%"><table width="100%"  border="0"  align="center" cellpadding="0" cellspacing="0"  style="margin-right:5px;margin-left:5px">
                   <tr>
                         <td width="6"  valign="top" id="img-senter"><img src="<?=base_url();?>assets/imgs/tock-line.jpg" width="6" height="34" /></td>
-                        <td width="200" valign="bottom" id="img-senter" align="left" >
+                        <td  valign="bottom" id="img-senter" align="left" >
                         <table><tr><td width="20%"><img src="<?=base_url(); ?>assets/imgs/001.png" style="padding: 0px 5px 3px 2px;" align="middle"></img></td><td width="80%"><span id="telugufont"><?php echo $more['22']->matter;?></span></td></tr></table>
                         </td>
                         <td width="6" valign="top"><img src="<?=base_url();?>assets/imgs/tock-line-right.jpg" width="6" height="34" /></td>
                     </tr>
                       <tr>
                         <td  valign="top" id="center-img"><img src="<?=base_url();?>assets/imgs/new1.jpg" width="5" height="214" /></td>
-                        <td width="200" id="center-img" align="left" valign="top">
+                        <td  id="center-img" align="left" valign="top">
                         	<div style="text-align: justify; height: 185px;width:99%;padding-top: 5px;" id="telugufont1">
                         	<? if(!empty($active_news1)){
                         	if(file_exists("./assets/news/news_img".$active_news1['0']->id."_thumb.jpg")){ ?>
@@ -529,18 +529,18 @@ function test()
                     </tr>
                   </table>
                  </td>
-				<td width="250" valign="top">
+				<td width="50%" valign="top">
 					<table width="100%" border="0" align="center" style="margin-left:6px;" cellpadding="0" cellspacing="0">
                       <tr>
                         <td width="6"  valign="top" id="img-senter"><img src="<?=base_url();?>assets/imgs/tock-line.jpg" width="7" height="34" /></td>
-                        <td width="200" valign="bottom" id="img-senter" align="left" style="margin-bottom: 10px;">
+                        <td  valign="bottom" id="img-senter" align="left" style="margin-bottom: 10px;">
                         <table><tr><td width="20%"><img src="<?=base_url(); ?>assets/imgs/001.png"></img></td><td width="80%" id="telugufont"><?=$cinema_type2['0']->cinema_type ?></td></tr></table>
                         </td>
                         <td width="6" valign="top"><img src="<?=base_url();?>assets/imgs/tock-line-right.jpg" width="6" height="34" /></td>
              		 </tr>
                       <tr>
                         <td height="214"  valign="top" id="center-img"><img src="<?=base_url();?>assets/imgs/new1.jpg" width="5" height="214" /></td>
-                        <td width="200" id="center-img" align="left" valign="top" height="100%">
+                        <td id="center-img" align="left" valign="top" height="100%">
 	                        <div style="height: 185px;text-align: justify;padding-top: 3px;width:99%;" id="telugufont1">
 	                        
 	                        <? 

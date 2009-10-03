@@ -31,7 +31,7 @@ padding-left: 30px;
 							        		<div style="height:235px;padding-left:5px;" id="telugufont1">
 							        			<? if(!empty($active_news1)){
 												if(file_exists("./assets/news/news_img".$active_news1['0']->id."_thumb.jpg")){ ?>
-          				 						<a href="<?=base_url();?>news/newsdetails/<?=$active_news1['0']->id?>/<?=$active_news1['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?=$active_news1['0']->id?>_thumb.jpg" style="float: left;margin: 2px 22px 2px 1px;text-align: left;text-align: justify;"  id="img"></img></a>
+          				 						<a href="<?=base_url();?>news/newsdetails/<?=$active_news1['0']->id?>/<?=$active_news1['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?=$active_news1['0']->id?>_thumb.jpg" style="float: left;margin: 2px 24px 2px 1px;text-align: left;text-align: justify;"  id="img"></img></a>
           				 						<?} ?>
           				 						<font id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?=$active_news1['0']->id?>/<?=$active_news1['0']->type?>"><?php echo $active_news1['0']->heading;?></a></font><br>
           				 						<?php echo $active_news1['0']->summary;?>
@@ -216,7 +216,7 @@ padding-left: 30px;
           				 <div style="height: 190px;padding-top:2px;padding-left:5px; " id="telugufont1" >
           				 <? if(!empty($news_type2)){
 						if(file_exists("./assets/news/news_img".$news_type2['0']->id."_thumb.jpg")){ ?>
-          				 <a href="<?=base_url();?>news/newsdetails/<?=$news_type2['0']->id?>/<?=$news_type2['0']->type?>"><img src="<?=base_url();?>assets/news/news_img43_thumb.jpg" style="float: left;margin: 1px 10px 2px 1px;text-align: justify;"  id="img"></img></a>
+          				 <a href="<?=base_url();?>news/newsdetails/<?=$news_type2['0']->id?>/<?=$news_type2['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?=$news_type2['0']->id?>_thumb.jpg" style="float: left;margin: 1px 22px 2px 1px;text-align: justify;"  id="img"></img></a>
           				 <?} ?>
           				 <font id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?=$news_type2['0']->id?>/<?=$news_type2['0']->type?>"><?php echo $news_type2['0']->heading;?></a></font><br>
           				 <?php echo $news_type2['0']->summary;?>

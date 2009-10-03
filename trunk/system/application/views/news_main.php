@@ -23,7 +23,7 @@ padding-left: 30px;
 	    						<ul class="yui-nav">
 							       <li class="selected" style="text-align: center;"><a href="#tab1"><em style="width: 89px;"><?php if(isset($news_type1['0'])){echo $news_type1['0']->news_cat;}?></em></a></li>
 							        <li style="text-align: center;"><a href="#tab2"><em style="width: 94px;"><span id="telugufont"><?php if(isset($news_type2['0'])){echo $news_type2['0']->news_cat;}?></span></em></a></li>
-							        <li style="text-align: center;"><a href="#tab3"><em style="width: 120px;"><span id="telugufont"><?php if(isset($news_type3['0'])){echo $news_type3['0']->news_cat;}?></span></em></a></li>
+							        <li style="text-align: center;"><a href="#tab3"><em style="width: 122px;"><span id="telugufont"><?php if(isset($news_type3['0'])){echo $news_type3['0']->news_cat;}?></span></em></a></li>
 									<li style="text-align: center;"><a href="#tab4"><em style="width: 89px;"><span id="telugufont"><?php if(isset($news_type4['0'])){echo $news_type4['0']->news_cat;}?></span></em></a></li>
 	    						</ul>            
     							<div class="yui-content" >
@@ -170,9 +170,9 @@ padding-left: 30px;
                 </table></td>
             </tr>
           </table></td>
-          <td width="235" valign="top" align="center"><div style="border: 1px solid red;height: 315px;width: 230px;background-color: gray;"><img src="<?=base_url();?>/assets/ads/News1.jpg" /></div></td>
+          <td width="235" valign="top" align="center" style="margin: 2px;"><div style="border: 1px solid #7FD9FC;height:background-color: gray;margin: 3px;"><img src="<?=base_url();?>/assets/ads/News1.jpg" /></div></td>
           <td width="185" align="center" valign="top" rowspan="3">
-          <div style="background-color: gray;border: 1px solid red;height: 820px;width:  191px;"> google add space</div>
+          <div style="background-color: gray;border: 1px solid #7FD9FC;height: 820px;width:  191px;margin: 2px;"> Google Ad Space</div>
 			</td>
           </tr>
           <tr>
@@ -251,20 +251,20 @@ padding-left: 30px;
           				 <div style="height:190px;padding-top:2px;padding-left:5px;" id="telugufont1">
           				 <? if(!empty($news_type3)){
 						if(file_exists("./assets/news/news_img".$news_type3['0']->id."_thumb.jpg")){ ?>
-          				 <a href="<?=base_url();?>news/newsdetails/<?=$news_type3['0']->id?>/<?=$news_type3['0']->type?>"><img src="<?=base_url();?>assets/news/news_img43_thumb.jpg" style="float: left;margin: 1px 17px 2px 1px;text-align: justify;" id="img"></img></a>
+          				 <a href="<?=base_url();?>news/newsdetails/<?=$news_type3['0']->id?>/<?=$news_type3['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?php if(isset($news_type3['0'])){echo $news_type3['0']->id;} ?>_thumb.jpg" style="float: left;margin: 1px 17px 2px 1px;text-align: justify;" id="img"></img></a>
           				 <?} ?>
           				 <font id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?=$news_type3['0']->id?>/<?=$news_type3['0']->type?>"><?php echo $news_type3['0']->heading;?></a></font><br>
           				 <?php echo $news_type3['0']->summary;?>
           				 <ul id="mainnews">
           				<?
-          						$count=0; foreach($news_type3 as $row):
+          						$count=1; foreach($news_type3 as $row):
           						  if($count==0)
           							{
 	          							$count++;
 	          							continue;
           							} ?>
           					<li><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>/<?=$row->type?>"><?=$row->heading ?></a></li>
-          				 <? if($count==3){
+          				 <? if($count==5){
           						break;
           					}else{
           						$count++;
@@ -341,7 +341,7 @@ padding-left: 30px;
           <ul>
           	<?php if(isset($news_type5))
           	{
-          		$count=0;
+          		$count=1;
           		foreach ($news_type5 as $row):
           	?>
           		<li id="mainnews" style="padding: 1px;"><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>/<?=$row->type?>"><?=$row->heading?></a></li>
@@ -366,7 +366,7 @@ padding-left: 30px;
           <div style="height: 120px;padding-top:1px;">
           	<ul id="mainnews">
           	<?php if(isset($news_type6)){
-          		$count=0;
+          		$count=1;
           		foreach($news_type6 as $row):
           	?>
           		<li  style="padding: 1px;"><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>/<?=$row->type?>"><?=$row->heading?></a></li>

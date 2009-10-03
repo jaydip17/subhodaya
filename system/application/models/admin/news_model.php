@@ -5,9 +5,9 @@ class News_Model extends Model
 		$oldname='assets/news/'.$data['upload_data']['file_name'];
 		rename($oldname,'assets/news/news_img'.$id.'.jpg');
 	}
-	function getnews_details()
+	function getnews_details($type)
 	{
-		$result=$this->db->get('news');
+		$result=$this->db->get_where('news',array('type'=>$type));
 		return $result->result();
 	}
 	function delete($id)
@@ -37,11 +37,17 @@ class News_Model extends Model
 	}
     function edit1($id,$breaking)
     {
-    	
+     if(!isset($_POST['active']))
+   	{
+		$active=0;
+   	}else{
+   		$active=$_POST['active'];
+   	}
     	$data=array('heading'=>$_POST['heading'],
   					'summary'=>$_POST["summary"],
   					'description'=>$_POST["description"],
-  					'breking_news'=>$breaking
+  					'breking_news'=>$breaking,
+    				'active'=>$active
   					);
   		$this->db->where('id',$id);	
   		$this->db->update('news',$data);		

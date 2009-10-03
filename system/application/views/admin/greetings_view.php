@@ -19,7 +19,7 @@ if(isset($message) && !is_array($message) ) echo($message);?>
 	</tr>
 	<tr>
 		<td>Name</td>
-		<td><textarea rows="3" cols="50" name="name" id="name"></textarea></td>
+		<td><textarea rows="2" cols="40" name="name" id="name"></textarea></td>
 	</tr>
 	<tr>
 		<td>Summery</td>

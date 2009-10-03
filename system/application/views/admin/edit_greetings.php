@@ -96,7 +96,7 @@ foreach ($details as $item):
 </table>
 <? }else { ?>
 	
-<h2>Add film news to display</h2>	
+<h2>Add Greetings to display</h2>	
 <? }?>
 
 </form>

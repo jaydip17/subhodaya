@@ -15,8 +15,8 @@ class Greetings extends Controller {
 		$this->load->model('admin/Openwysiwyg_Model');
 		$textarea[]= array('textarea' => 'summery',
 						   'skin'	  => 'small');
-		$textarea[]= array('textarea' => 'name',
-						   'skin'	  => 'small');
+		/*$textarea[]= array('textarea' => 'name',
+						   'skin'	  => 'small');*/
 		$links = $this->Openwysiwyg_Model->setEditor($enable=TRUE,$textarea);
 		$data=array(
 							'jslinks'   => $links,
@@ -88,9 +88,9 @@ class Greetings extends Controller {
 			redirect(base_url().'admin/greetings',$message);
 		}
 	}
-	function editpage()
+	function editpage($type)
 	{
-		$details=$this->Greeting_Model->greeting_details();
+		$details=$this->Greeting_Model->greeting_details($type);
 		$data=array('details'=>$details);
 		$this->load->view('admin/edit_greetings',$data);
 	}
@@ -130,6 +130,12 @@ class Greetings extends Controller {
 	  	 $id=$_POST['id'];
    	 $this->Greeting_Model->edit1($id,$active);
    	redirect(base_url().'admin/greetings/editpage');
+   }
+   function getgreetypes()
+   {
+   	$details=$this->Greeting_Model->get_type();
+	$data=array('details'=>$details);
+	$this->load->view('admin/getgreetypes',$data);
    }
 }
 ?>

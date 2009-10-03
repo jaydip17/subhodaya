@@ -278,7 +278,7 @@ sample sf dsfsd fdsf
 							        <li style="text-align: center;"><a href="#tab2"><em style="width: 70px;"><span id="telugufont"><?php if(isset($greetings2['0'])){echo $greetings2['0']->gree_cat;}?></span></em></a></li>
 							         <li style="text-align: center;"><a href="#tab2"><em style="width: 70px;"><span id="telugufont"><?php if(isset($greetings12['0'])){echo $greetings12['0']->gree_cat;}?></span></em></a></li>
 	    						</ul>            
-    							<div class="yui-content" style="height: 150px;" id="tabs_backgrou_gree">
+    							<div class="yui-content" style="height: 150px;" >
 							        <div id="tab1"><p>
 							        <?php if(!empty($greetings1)){ $count=1; foreach($greetings1 as $row):?>
 							       	<div style="height:97px;">

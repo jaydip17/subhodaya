@@ -1,5 +1,5 @@
 <?
-echo form_open_multipart(base_url()."admin/cinema/edit1/") ?>
+echo form_open_multipart("admin/cinema/edit1/") ?>
 <center><?
 if(isset($message) && !is_array($message) ) echo($message);?>
 		<? 
@@ -17,7 +17,7 @@ if(isset($message) && !is_array($message) ) echo($message);?>
 	<tr>
 		<td>Heading</td>
 		<?=form_hidden('id',$edit['0']->id) ?>
-		<td><textarea rows="3" cols="50" name="heading" id="heading"><?=$edit['0']->heading?></textarea></td>
+		<td><textarea rows="2" cols="40" name="heading" id="heading"><?=$edit['0']->heading?></textarea></td>
 	</tr>
 	<tr>
 		<td>Summery</td>

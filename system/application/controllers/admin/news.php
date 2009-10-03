@@ -17,8 +17,8 @@ class News extends Controller {
 						   'skin'	  => 'full');
 		$textarea[]= array('textarea' => 'summary',
 						   'skin'	  => 'small');
-		$textarea[]= array('textarea' => 'heading',
-						   'skin'	  => 'small');
+		/*$textarea[]= array('textarea' => 'heading',
+						   'skin'	  => 'small');*/
 		$links = $this->Openwysiwyg_Model->setEditor($enable=TRUE,$textarea);
 		$data=array(
 							'jslinks'   => $links,
@@ -145,9 +145,9 @@ class News extends Controller {
 			redirect(base_url().'admin/news',$message);
 		}
 	}
-	function getnews(){
+	function getnews($type){
 		$this->load->model('admin/News_Model');
-		$details=$this->News_Model->getnews_details();
+		$details=$this->News_Model->getnews_details($type);
 		$data=array('details'=>$details);
 		$this->load->view('admin/news_edit',$data);
 	}
@@ -182,10 +182,15 @@ class News extends Controller {
 		$breaking=0;
    	}else{
    		$breaking=$_POST['breaking_news'];
-   	}
-	  
+   	}   	
+	  $id=$_POST['id'];
    	 $this->News_Model->edit1($id,$breaking);
-   	redirect(base_url().'admin/news/getnews');
+   	redirect(base_url().'admin/news/getnewstypes');
+   }
+   function getnewstypes(){
+   $details=$this->News_Model->get_newstype();
+	$data=array('details'=>$details);
+		$this->load->view('admin/getnewstypes',$data);
    }
 
 }

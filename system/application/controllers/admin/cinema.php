@@ -18,8 +18,8 @@ class Cinema extends Controller {
 						   'skin'	  => 'full');
 		$textarea[]= array('textarea' => 'summary',
 						   'skin'	  => 'small');
-		$textarea[]= array('textarea' => 'heading',
-						   'skin'	  => 'small');
+		/*$textarea[]= array('textarea' => 'heading',
+						   'skin'	  => 'small');*/
 		$links = $this->Openwysiwyg_Model->setEditor($enable=TRUE,$textarea);
 		$data=array(
 							'jslinks'   => $links,
@@ -139,13 +139,14 @@ class Cinema extends Controller {
 	    	}
 	    	$this->image_lib->clear();
 	    	
-			//redirect(base_url().'admin/cinema',$message);
+			redirect(base_url().'admin/cinema',$message);
 		}
 		
 	}
 	function getcinema(){
+		$type=$this->uri->segment(4,0);
 		$this->load->model('admin/Cinema_Model');
-		$details=$this->Cinema_Model->getcinema_details();
+		$details=$this->Cinema_Model->getcinema_details($type);
 		$data=array('details'=>$details);
 		$this->load->view('admin/cinema_edit',$data);
 	}
@@ -159,8 +160,8 @@ class Cinema extends Controller {
 						   'skin'	  => 'full');
 		$textarea[]= array('textarea' => 'summary',
 						   'skin'	  => 'small');
-		$textarea[]= array('textarea' => 'heading',
-						   'skin'	  => 'small');
+		/*$textarea[]= array('textarea' => 'heading',
+						   'skin'	  => 'small');*/
 		$links = $this->Openwysiwyg_Model->setEditor($enable=TRUE,$textarea);
 		$data=array(
 							'jslinks'   => $links,
@@ -180,6 +181,11 @@ class Cinema extends Controller {
 	$id=$this->uri->segment(4,0);
 	$result=$this->Cinema_Model->delete($id);
 	redirect(base_url()."admin/cinema/getcinema");
+	}
+	function getcinematype(){
+		$details=$this->Cinema_Model->get_cinemanewstype();
+		$data=array('details'=>$details);
+		$this->load->view('admin/getcinematype',$data);
 	}
 	
 	

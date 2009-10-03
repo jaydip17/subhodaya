@@ -52,8 +52,10 @@ var tb_pathToImage = "<?=base_url()?>assets/imgs/loadingAnimation.gif";
 <script type="text/javascript" src="<?=base_url()?>assets/js/feedback_validation.js"></script>
 <script type="text/javascript" src="<?=base_url()?>assets/js/validate_sendmail.js"></script>
 <!-- for telugu typeing -->
+<?php if(isset($telegu_typing)) { ?> 
 <script type="text/javascript" src="<?=base_url()?>assets/js/jsapi.js"></script>
 <script type="text/javascript" src="<?=base_url()?>assets/js/telugu.js"></script>
+<?php } ?>
 <body onload="<? if(isset($onload)) echo $onload; ?>">
 
 <table width="999"  border="0" align="center" cellpadding="0" cellspacing="0" >
@@ -95,7 +97,7 @@ var tb_pathToImage = "<?=base_url()?>assets/imgs/loadingAnimation.gif";
            <script language="JavaScript1.2">
 
 //Specify the marquee's width (in pixels)
-var marqueewidth = "947px"
+var marqueewidth = "930px"
 //Specify the marquee's height
 var marqueeheight="25px"
 //Specify the marquee's marquee speed (larger is faster 1-10)
@@ -174,6 +176,8 @@ document.write('</td></table>')
 }
 }
 </script>
+
+<?=(isset($bread_crumb)) ? $bread_crumb : '' ?>
 </td>
         </tr>
      <tr><td width="100%"  align="left" style="border: 2px solid #0A70BB;border-top: 0px solid #0A70BB;padding:0px 0px 25px 5px">

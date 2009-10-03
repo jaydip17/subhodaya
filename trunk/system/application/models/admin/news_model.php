@@ -132,5 +132,15 @@ class News_Model extends Model
 		return $query->result();
     	
     }
+    
+    // function to get the category name by id 
+    
+    function get_root_cat_by_id($id)
+    {
+    	$this->db->where('id',$id);
+    	$rs = $this->db->get('news_types');
+    	$result = $rs->row();
+    	return $result->news_cat;
+    }
 }
 ?>

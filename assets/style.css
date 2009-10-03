@@ -1071,3 +1071,11 @@ text-decoration:none;
 color:	red;
 font-size: 13px;
 }
+#tabs_background{
+	background-image:url(imgs/gmailseline.jpg);
+background-repeat:repeat-x;
+}
+#tabs_backgrou_gree{
+	background-image:url(imgs/scrool-img.jpg);
+background-repeat:repeat-x;
+}

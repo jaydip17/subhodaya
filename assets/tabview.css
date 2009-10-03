@@ -67,7 +67,6 @@ zoom:1;
 }
 .yui-navset .yui-content:after{
 width:200px;
-
 content:'';
 counter-increment:'';
 display:block;

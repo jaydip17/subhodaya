@@ -207,13 +207,13 @@ function test()
 							        		<tr>
 							        			<td width="50%" valign="top">
 								        			<? if(file_exists("./assets/cinema/ceni_img".$cinema_type1['4']->id."_home_thumb.jpg")){ ?>
-								        				<a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['4'])){echo $cinema_type1['4']->id;}?>/<?=$cinema_type1['4']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($cinema_type1['4'])){echo $cinema_type1['4']->id;}?>_home_thumb.jpg" style="margin: 0px 10px 0px 0px;float: left; height: 15px;width: 60px;border: 0px;" align="top" id="img"></a>
+								        				<a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['4'])){echo $cinema_type1['4']->id;}?>/<?=$cinema_type1['4']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($cinema_type1['4'])){echo $cinema_type1['4']->id;}?>_home_thumb.jpg" style="margin: 0px 10px 0px 0px;float: left;;border: 0px;" align="top" id="img"></a>
 								        			<?} ?>
 							        				<div id="home_bottom"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['4'])){echo $cinema_type1['4']->id;}?>/<?=$cinema_type1['4']->type?>"><?php if(isset($cinema_type1['4'])){echo $cinema_type1['4']->heading;}?></a></div><div style="padding:5px 0px 0px 70px;" id="more-news-div"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['4'])){echo $cinema_type1['4']->id;}?>/<?=$cinema_type1['4']->type?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div></td>
 							        			<td width="50%" valign="top">
 							        			<? if(!empty($cinema_type1['5'])){ ?>
 							        			<? if(file_exists("./assets/cinema/ceni_img".$cinema_type1['5']->id."_home_thumb.jpg")){ ?>
-							        			<a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['5'])){echo $cinema_type1['5']->id;}?>/<?=$cinema_type1['5']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($cinema_type1['5'])){echo $cinema_type1['5']->id;}?>_home_thumb.jpg" style="margin: 0px 10px 0px 0px;float: left; height: 15px;width: 60px;border: 0px;" align="top" id="img"></a>
+							        			<a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['5'])){echo $cinema_type1['5']->id;}?>/<?=$cinema_type1['5']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($cinema_type1['5'])){echo $cinema_type1['5']->id;}?>_home_thumb.jpg" style="margin: 0px 10px 0px 0px;float: left;border: 0px;" align="top" id="img"></a>
 							        			<?} ?>
 							        			<div id="mainnews1" style="height: 40px"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['5'])){echo $cinema_type1['5']->id;}?>/<?=$cinema_type1['5']->type?>"><?php if(isset($cinema_type1['5'])){echo $cinema_type1['5']->heading;}?></a></div><div style="padding:5px 0px 0px 70px;" id="more-news-div"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['5'])){echo $cinema_type1['5']->id;}?>/<?=$cinema_type1['5']->type?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div><?} ?></td>
 							        		
@@ -359,7 +359,7 @@ function test()
 							        <li style="text-align: center;"><a href="#tab3"><em style="width: 80px;"><span id="telugufont"><?=$more['14']->matter ?></span></em></a></li>
 									<li style="text-align: center;"><a href="#tab3"><em style="width: 100px;"><span id="telugufont"><?=$more['15']->matter ?></span></em></a></li>
 	    						</ul>            
-    							<div class="yui-content" style="height: 150px;text-align: center;background-image:url(assets/imgs/gmailseline.jpg);background-repeat:repeat-x;">
+    							<div class="yui-content" style="height: 150px;text-align: center;" id="tabs_background">
 							        <div id="tab1"><p>
 							        <table width="100%" height="100%"><tr>
 							   			<?php if(!empty($images)){
@@ -690,7 +690,7 @@ function test()
 							       <li class="selected" style="text-align: center;"><a href="#tab1"><em style="width: 80px;padding-top: 2px" id="telugufont"><?=$more['5']->matter?></em></a></li>
 							        <li style="text-align: center;"><a href="#tab2"><em style="width: 80px;padding-top: 2px""><span id="telugufont"><?=$more['7']->matter ?></span></em></a></li>
 	    						</ul>            
-    							<div class="yui-content" style="height: 150px;text-align: center;background-image:url(assets/imgs/gmailseline.jpg);background-repeat:repeat-x;">
+    							<div class="yui-content" style="height: 150px;text-align: center;" id="tabs_background">
 							        <div id="tab1"><p>
 							         <table cellspacing="5" align="left">
 							        	<tr>
@@ -741,7 +741,7 @@ function test()
 							       <li class="selected" style="text-align: center;"><a href="#tab1"><em style="width: 80px;padding-top: 2px"" id="telugufont"><?=$more['8']->matter?></em></a></li>
 							        <li style="text-align: center;"><a href="#tab2"><em style="width: 80px;padding-top: 2px""><span id="telugufont"><?=$more['9']->matter ?></span></em></a></li>
 	    						</ul>            
-    							<div class="yui-content" style="height: 150px;text-align: left;background-image:url(assets/imgs/gmailseline.jpg);background-repeat:repeat-x;">
+    							<div class="yui-content" style="height: 150px;text-align: left;" id="tabs_background">
 							        <div id="tab1"><p><div style="padding-top:11px">
 							        <? if(!empty($mahila_details)){?>
 							        <div id="image"><?if(file_exists("./assets/mahila/news_img".$mahila_details['0']->id."_thumb.jpg")){ ?>

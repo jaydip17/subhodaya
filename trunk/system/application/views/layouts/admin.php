@@ -46,13 +46,13 @@ ddsmoothmenu.init({
 			<li><a href="#">News</a>
 			<ul>
 				<li><a href="<?=base_url();?>admin/news/">Add News</a></li>
-				<li><a href="<?=base_url();?>admin/news/getnews">Edit News</a></li>
+				<li><a href="<?=base_url();?>admin/news/getnewstypes">Edit News</a></li>
 			</ul>
 			</li>
 			<li><a href="#">Movies</a>
 			<ul>
 				<li><a href="<?=base_url();?>admin/cinema">Insert</a></li>
-				<li><a href="<?=base_url();?>admin/cinema/getcinema">Edit News</a></li>
+				<li><a href="<?=base_url();?>admin/cinema/getcinematype">Edit News</a></li>
 			</ul>
 			</li>
 			<li><a href="#">Video</a>
@@ -66,7 +66,7 @@ ddsmoothmenu.init({
 			<li><a href="#">Greetings</a>
 			<ul>
 				<li><a href="<?=base_url();?>admin/greetings">Insert</a></li>
-				<li><a href="<?=base_url();?>admin/greetings/editpage/">Edit</a></li>
+				<li><a href="<?=base_url();?>admin/greetings/getgreetypes/">Edit</a></li>
 			</ul>
 			</li>
 			<li><a href="#">Mahila</a>

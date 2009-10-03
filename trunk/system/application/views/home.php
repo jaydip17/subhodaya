@@ -469,7 +469,7 @@ function test()
 	  	  <img src="<?=base_url()?>assets/imgs/invite-contact2.png" id='importcontacts' style="cursor: pointer;" onclick="test()" name="submit" alt=""/></td>
 	  </tr>    
 	  <tr>
-	  	 <td colspan="3" align="center"><small>your info is secured..</small></td>
+	  	 <td colspan="3" align="center" ><small>We Don't Store Your Username And Password</small></td>
 	  </tr>    
 	</table>
 	</form>

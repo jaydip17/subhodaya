@@ -49,8 +49,10 @@ class Greeting_Model extends Model {
 		$count =$this->db->count_all_results();
 		return $count;
 	}
-	function greeting_details(){
+	function greeting_details($type){
 		$this->db->order_by("greetings.insert_date", "desc");
+		$array=array('type'=>$type);
+   		$this->db->where($array);
 		$result=$this->db->get('greetings');
 		return $result->result();
 	}

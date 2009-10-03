@@ -17,8 +17,8 @@ class Mahila extends Controller {
 						   'skin'	  => 'full');
 		$textarea[]= array('textarea' => 'summary',
 						   'skin'	  => 'small');
-		$textarea[]= array('textarea' => 'heading',
-						   'skin'	  => 'small');
+		/*$textarea[]= array('textarea' => 'heading',
+						   'skin'	  => 'small');*/
 		$links = $this->Openwysiwyg_Model->setEditor($enable=TRUE,$textarea);
 		$data=array(
 							'jslinks'   => $links,

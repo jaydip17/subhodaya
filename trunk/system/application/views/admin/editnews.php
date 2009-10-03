@@ -33,7 +33,11 @@ if(isset($message) && !is_array($message) ) echo($message);?>
 	</tr>
 	<tr>
 		<td>Home Page</td>
-		<td align="left"><?=form_checkbox('homepage','1') ?></td>
+		<td align="left"><?=form_checkbox('active','1') ?></td>
+	</tr>
+		<tr>
+		<td>breaking news</td>
+		<td align="left"><?=form_checkbox('breaking_news','1') ?></td>
 	</tr>
 
 	<tr>

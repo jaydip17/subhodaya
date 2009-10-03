@@ -9,8 +9,8 @@ class Cinema_Model extends Model {
 		$oldname='assets/cinema/'.$data['upload_data']['file_name'];
 		rename($oldname,'assets/cinema/ceni_img'.$id.'.jpg');
 	}
-	function getcinema_details(){
-		$result=$this->db->get('cinema');
+	function getcinema_details($type){
+		$result=$this->db->get_where('cinema',array('type'=>$type));
 		return $result->result();
 	}
 	function cinemadetails($id){

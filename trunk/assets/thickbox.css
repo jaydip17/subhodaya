@@ -16,11 +16,11 @@
 	color:#666666;
 }
 
-#TB_window a:link {color: #666666;}
-#TB_window a:visited {color: #666666;}
-#TB_window a:hover {color: #000;}
-#TB_window a:active {color: #666666;}
-#TB_window a:focus{color: #666666;}
+#TB_window a:link {color: #FF0808; font-weight: bold; float: right;}
+#TB_window a:visited {color: #FF0808; font-weight: bold;}
+#TB_window a:hover {color: #FF0808; font-weight: bold;}
+#TB_window a:active {color: #FF0808; font-weight: bold;}
+#TB_window a:focus{color: #FF0808; font-weight: bold;}
 
 /* ----------------------------------------------------------------------------------------------------------------*/
 /* ---------->>> thickbox settings <<<-----------------------------------------------------------------------------*/

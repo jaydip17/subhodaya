@@ -1,12 +1,7 @@
 function feedback_validate()
 {
  var flag=1;
-  if (document.getElementById('company').value=="")
-  {
-    
-	flag=0;
-  }
-  else if (document.getElementById('name').value=="")
+   if (document.getElementById('name').value=="")
   {
    
 	flag=0;
@@ -19,11 +14,6 @@ function feedback_validate()
    else if (document.getElementById('mailid').value=="")
   {
    
-	flag=0;
-  }
-  else if (document.getElementById('city').value=="")
-  {
-    
 	flag=0;
   }
   else if (document.getElementById('message').value=="")

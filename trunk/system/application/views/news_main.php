@@ -197,7 +197,7 @@ padding-left: 30px;
 	          							continue;
           							} ?>
           					<li style="padding: 2px;"><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>/<?=$row->type?>"><?=$row->heading ?></a></li>
-          				 <? if($count==3){
+          				 <? if($count==5){
           						break;
           					}else{
           						$count++;
@@ -230,7 +230,7 @@ padding-left: 30px;
           							} ?>
           					<li style="padding: 2px;"><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>/<?=$row->type?>"><?=$row->heading ?></a></li>
           				
-          				 <? if($count==6){
+          				 <? if($count==5){
           						break;
           					}else{
           						$count++;
@@ -299,7 +299,7 @@ padding-left: 30px;
           							} ?>
           					<li style="padding: 1px;"><a href="<?=base_url();?>news/newsdetails/<?=$row->id?>/<?=$row->type?>"><?=$row->heading ?></a></li>
           				
-          				 	<? if($count==4){
+          				 	<? if($count==5){
           						break;
           					}else{
           						$count++;

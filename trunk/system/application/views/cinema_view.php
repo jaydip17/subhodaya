@@ -232,7 +232,7 @@ sample sf dsfsd fdsf
           											}
           						  		?>
 							 			<li style="padding: 1px;"><a href="<?=base_url();?>cinema/inner/<?=$row->id?>/<?=$row->type?>"><?=$row->heading?></a></li>
-							 			<? if($count==3)
+							 			<? if($count==5)
 							 			 {
           									break;
           								 }else{
@@ -268,7 +268,7 @@ sample sf dsfsd fdsf
           											}
           						  		?>
 							 			<li style="padding: 1px;"><a href="<?=base_url();?>cinema/inner/<?=$row->id?>/<?=$row->type?>"><?=$row->heading?></a></li>
-							 			<? if($count==3)
+							 			<? if($count==5)
 							 			 {
           									break;
           								 }else{
@@ -312,7 +312,7 @@ sample sf dsfsd fdsf
           											}
           						  		?>
 							 			<li style="padding: 1px;"><a href="<?=base_url();?>cinema/inner/<?=$row->id?>/<?=$row->type?>"><?=$row->heading?></a></li>
-							 			<? if($count==3)
+							 			<? if($count==5)
 							 			 {
           									break;
           								 }else{
@@ -347,7 +347,7 @@ sample sf dsfsd fdsf
           											}
           						  		?>
 							 			<li style="padding: 1px;"><a href="<?=base_url();?>cinema/inner/<?=$row->id?>/<?=$row->type?>"><?=$row->heading?></a></li>
-							 			<? if($count==3)
+							 			<? if($count==5)
 							 			 {
           									break;
           								 }else{
@@ -392,7 +392,7 @@ sample sf dsfsd fdsf
           											}
           						  		?>
 							 			<li style="padding: 1px;"><a href="<?=base_url();?>cinema/inner/<?=$row->id?>/<?=$row->type?>"><?=$row->heading?></a></li>
-							 			<? if($count==3)
+							 			<? if($count==5)
 							 			 {
           									break;
           								 }else{
@@ -427,7 +427,7 @@ sample sf dsfsd fdsf
           											}
           						  		?>
 							 			<li style="padding: 1px;"><a href="<?=base_url();?>cinema/inner/<?=$row->id?>/<?=$row->type?>"><?=$row->heading?></a></li>
-							 			<? if($count==3)
+							 			<? if($count==5)
 							 			 {
           									break;
           								 }else{
@@ -481,7 +481,7 @@ var TabbedPanels2 = new Spry.Widget.TabbedPanels("TabbedPanels2");
 									</div>
 									<div id="gall_botto_img"><a href="<?=base_url();?>gallery/content/<?=$sub['id']?>/<?=$sub['parentid']?>"><?=$sub['title']?></a></div></td>
 							   			<? $count++;
-							   			if($count==2)
+							   			if($count==3)
 							   				break;
 							   			
 							   				

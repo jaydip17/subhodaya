@@ -108,7 +108,7 @@ padding-top:0px;
 	              	$count=0;
 	              foreach($details_more_mahila['1'] as $item):?>
 
-	              <li><a href="<?=base_url();?>mahila/mahiladetails/<?=$item->id?>"><?=$item->heading?></li>
+	              <li><a href="<?=base_url();?>mahila/mahiladetails/<?=$item->id?>/<?=$item->cat_id?>"><?=$item->heading?></li>
 	              <? if($count==5)
 	              break;
 	              else  $count++;
@@ -136,7 +136,7 @@ padding-top:0px;
 	              	$count=0;
 	              foreach($details_more_mahila['2'] as $row):?>
 
-	              <li><a href="<?=base_url();?>mahila/mahiladetails/<?=$row->id?>"><?=$row->heading?></a></li>
+	              <li><a href="<?=base_url();?>mahila/mahiladetails/<?=$row->id?>/<?=$row->cat_id?>"><?=$row->heading?></a></li>
 	              <?if($count==5)
 	              break;
 	              else {
@@ -180,10 +180,10 @@ padding-top:0px;
 	               <?if(!empty($details_more['1'])){
 	             if(file_exists("./assets/sahithi/news_img".$details_more['1']['0']->id."_thumb.jpg")){
 	             ?>
-	              <a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['1']['0']->id?>"><img src="<?=base_url();?>assets/sahithi/news_img<?=$details_more['1']['0']->id?>_thumb.jpg" style="float:left;margin:4px 20px 4px 4px;text-align: justify;" align="top" id="img"/></a>
+	              <a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['1']['0']->id?>/<?=$details_more['1']['0']->cat_id?>"><img src="<?=base_url();?>assets/sahithi/news_img<?=$details_more['1']['0']->id?>_thumb.jpg" style="float:left;margin:4px 20px 4px 4px;text-align: justify;" align="top" id="img"/></a>
 	              <?}} ?>
 	            <?if(!empty($details_more['1'])){?>
-	             <font id="telugufont"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['1']['0']->id?>"><?php echo $details_more['1']['0']->heading?></a></font><br>
+	             <font id="telugufont"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['1']['0']->id?>/<?=$details_more['1']['0']->cat_id?>"><?php echo $details_more['1']['0']->heading?></a></font><br>
 	              <?=$details_more['1']['0']->summary; }?> 
 	              <ul id="mainnews">
 	              <?if(!empty($details_more['1'])){
@@ -197,7 +197,7 @@ padding-top:0px;
 							           {
 							           break;
                                        }$count++;?>
-	             <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>"><?=$item->heading ?></a></li>
+	             <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>/<?=$item->cat_id?>"><?=$item->heading ?></a></li>
 	                <?}} ?>
 	                 </ul>
 	                 </div>
@@ -220,10 +220,10 @@ padding-top:0px;
 	              <?if(!empty($details_more['2'])){
 	             if(file_exists("./assets/sahithi/news_img".$details_more['2']['0']->id."_thumb.jpg")){
 	             ?>
-	              <a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['2']['0']->id?>"><img src="<?=base_url();?>assets/sahithi/news_img<?=$details_more['2']['0']->id?>_thumb.jpg" style="float:left;margin:4px 20px 4px 4px;text-align: justify;" align="top" id="img" alt="hh"/></a>
+	              <a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['2']['0']->id?>/<?=$details_more['2']['0']->cat_id?>"><img src="<?=base_url();?>assets/sahithi/news_img<?=$details_more['2']['0']->id?>_thumb.jpg" style="float:left;margin:4px 20px 4px 4px;text-align: justify;" align="top" id="img" alt="hh"/></a>
 	              <?}} ?>
 	              <?if(!empty($details_more['2'])){?>
-	             <font id="telugufont"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['2']['0']->id?>"><?php echo $details_more['2']['0']->heading?></a></font><br>
+	             <font id="telugufont"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['2']['0']->id?>/<?=$details_more['2']['0']->cat_id?>"><?php echo $details_more['2']['0']->heading?></a></font><br>
 	              <?=$details_more['2']['0']->summary; }?> 
 	               <ul id="mainnews">
 	             <?if(!empty($details_more['2'])){
@@ -237,7 +237,7 @@ padding-top:0px;
 							           break;
                                        }$count++;?>
 
-	              <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>"><?=$item->heading ?></a></li>
+	              <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>/<?=$item->cat_id?>"><?=$item->heading ?></a></li>
 	              <?}} ?>
 	                 </ul>
 	                 </div>
@@ -260,7 +260,7 @@ padding-top:0px;
 	             <div id="telugufont1">
 	            <div style="height:80px;padding:7px;">
 	             <?if(!empty($details_more['3'])){?>
-	             <font id="telugufont"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['3']['0']->id?>"><?php echo $details_more['3']['0']->heading?></a></font><br>
+	             <font id="telugufont"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['3']['0']->id?>/<?=$details_more['3']['0']->cat_id?>"><?php echo $details_more['3']['0']->heading?></a></font><br>
 	              <?=$details_more['3']['0']->summary; }?> 
 	              <ul id="mainnews">
 	              <?if(!empty($details_more['3'])){
@@ -275,7 +275,7 @@ padding-top:0px;
                                        }$count++;?>
 	            
 
-	             <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>"><?=$item->heading ?></a></li>
+	             <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>/<?=$item->cat_id?>"><?=$item->heading ?></a></li>
 	               <?}} ?>
 	                 </ul>
 	                 </div>
@@ -296,7 +296,7 @@ padding-top:0px;
 	             <div id="telugufont1">
 	             <div style="height:80px;padding:7px;">
 	             <?if(!empty($details_more['4'])){?>
-	             <font id="telugufont"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['4']['0']->id?>"><?php echo $details_more['4']['0']->heading?></a></font><br>
+	             <font id="telugufont"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['4']['0']->id?>/<?=$details_more['4']['0']->cat_id?>"><?php echo $details_more['4']['0']->heading?></a></font><br>
 	              <?=$details_more['4']['0']->summary; }?> 
 	             <ul id="mainnews">
 	              <?if(!empty($details_more['4'])){
@@ -310,7 +310,7 @@ padding-top:0px;
 							           break;
                                        }$count++;?>
 
-	              <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>"><?=$item->heading?></a></li>
+	              <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>/<?=$item->cat_id?>"><?=$item->heading?></a></li>
 	              <?}} ?>	                 </ul>
 	              </div>
 	              <div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>sahithi/details/<?if(isset($types['3'])){ echo $types['3']; }?>"><?=$more['0']->matter?></a></span></div> 
@@ -333,7 +333,7 @@ padding-top:0px;
 	             <div id="telugufont1">
 	             <div style="height:80px;padding:7px;">
 	             <?if(!empty($details_more['5'])){?>
-	             <font id="telugufont"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['5']['0']->id?>"><?php echo $details_more['5']['0']->heading?></a></font><br>
+	             <font id="telugufont"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['5']['0']->id?>/<?=$details_more['5']['0']->cat_id?>"><?php echo $details_more['5']['0']->heading?></a></font><br>
 	              <?=$details_more['5']['0']->summary; }?> 
 	              <ul id="mainnews">
 	             <?if(!empty($details_more['5'])){
@@ -347,7 +347,7 @@ padding-top:0px;
 							           break;
                                        }$count++;?>
 
-	             <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>"><?=$item->heading ?></a></li>
+	             <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>/<?=$item->cat_id?>"><?=$item->heading ?></a></li>
 	              <?}} ?>
 	                 </ul>
 	                 </div>
@@ -368,7 +368,7 @@ padding-top:0px;
 	              <div id="telugufont1">
 	              <div style="height:80px;padding:7px;">
 	             <?if(!empty($details_more['6'])){?>
-	             <font id="telugufont"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['6']['0']->id?>"><?php echo $details_more['6']['0']->heading?></a></font><br>
+	             <font id="telugufont"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['6']['0']->id?>/<?=$details_more['6']['0']->cat_id?>"><?php echo $details_more['6']['0']->heading?></a></font><br>
 	              <?=$details_more['6']['0']->summary; }?> 
 	             <ul id="mainnews">
 	              <?if(!empty($details_more['6'])){
@@ -382,7 +382,7 @@ padding-top:0px;
 							           break;
                                        }$count++;?>
 
-	             <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>"><?=$item->heading ?></a></li>
+	             <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>/<?=$item->cat_id?>"><?=$item->heading ?></a></li>
 	              <?}} ?>
 	                 </ul>
 	                 </div>
@@ -406,7 +406,7 @@ padding-top:0px;
 	             <div id="telugufont1">
 	             <div style="height: 128px;padding:7px;">
 	             <?if(!empty($details_more['7'])){?>
-	             <font id="telugufont"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['7']['0']->id?>"><?php echo $details_more['7']['0']->heading?></a></font><br>
+	             <font id="telugufont"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['7']['0']->id?>/<?=$details_more['7']['0']->cat_id?>"><?php echo $details_more['7']['0']->heading?></a></font><br>
 	              <?=$details_more['7']['0']->summary; }?> 
 	              <ul id="mainnews">
 	             <?if(!empty($details_more['7'])){
@@ -420,7 +420,7 @@ padding-top:0px;
 							           break;
                                        }$count++;?>
 
-	              <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>"><?=$item->heading ?></a></li>
+	              <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>/<?=$item->cat_id?>"><?=$item->heading ?></a></li>
 	             <?}} ?>
 	                 </ul></div>
 	                 <div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>sahithi/details/<?if(isset($types['6'])){ echo $types['6']; }?>"><?=$more['0']->matter?></a></span></div>
@@ -440,7 +440,7 @@ padding-top:0px;
 	              <div id="telugufont1">
 	              <div style="height: 128px;padding:7px;">
 	             <?if(!empty($details_more['8'])){?>
-	             <font id="telugufont"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['8']['0']->id?>"><?php echo $details_more['8']['0']->heading?></a></font><br>
+	             <font id="telugufont"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$details_more['8']['0']->id?>/<?=$details_more['8']['0']->cat_id?>"><?php echo $details_more['8']['0']->heading?></a></font><br>
 	              <?=$details_more['8']['0']->summary; }?> 
 	             <ul id="mainnews">
 	             <?if(!empty($details_more['8'])){
@@ -454,7 +454,7 @@ padding-top:0px;
 							           break;
                                        }$count++;?>
 
-	              <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>"><?=$item->heading?></a></li>
+	              <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>/<?=$item->cat_id?>"><?=$item->heading?></a></li>
 	              <?}} ?>
 	                 </ul>
 	                 </div>

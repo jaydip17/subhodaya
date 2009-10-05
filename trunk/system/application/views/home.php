@@ -140,7 +140,7 @@ function test()
 							        			<a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type7['4'])){echo $news_type7['4']->id;}?>/<?=$news_type7['4']->type?>"><img src="<?=base_url();?>assets/news/news_img<?php if(isset($news_type7['4'])){echo $news_type7['4']->id;}?>_home_thumb.jpg" style="margin: 0px 10px 0px 0px;float: left;" align="top" id="img"></a>
 							        			<?} ?>
 							        				<div id="home_bottom"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type7['4'])){echo $news_type7['4']->id;}?>/<?=$news_type7['4']->type?>"><?php if(isset($news_type7['4'])){echo $news_type7['4']->heading;}?></a></div>
-							        				<div style="padding:5px 0px 0px 70px;" id="more-news-div"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type7['4'])){echo $news_type7['4']->id;}?>/<?=$news_type7['4']->type?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div>
+							        				<div style="padding:5px 0px 0px 60px;" id="more-news-div"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type7['4'])){echo $news_type7['4']->id;}?>/<?=$news_type7['4']->type?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div>
 							        			</td>
 							        			<td width="50%" valign="top">
 							        			<? if(file_exists("./assets/news/news_img".$news_type7['5']->id."_home_thumb.jpg")){ ?>
@@ -378,7 +378,7 @@ function test()
 									</div>
 									<div id="gall_botto_img"><a href="<?=base_url();?>gallery/content/<?=$sub['id']?>/<?=$sub['parentid']?>"><?=$sub['title']?></a></div><?} ?></td>
 							   			<? $count++; 
-							   			if($count==2){
+							   			if($count==3){
 							   				break;
 							   			}
 							   				
@@ -746,10 +746,10 @@ function test()
 							        <div id="tab1"><p><div style="padding-top:11px">
 							        <? if(!empty($mahila_details)){?>
 							        <div id="image"><?if(file_exists("./assets/mahila/news_img".$mahila_details['0']->id."_thumb.jpg")){ ?>
-							        <a href="<?=base_url();?>mahila/mahiladetails/<?if(!empty($mahila_details)){$mahila_details['0']->id;}?>"><img  id="img" src="<?=base_url();?>assets/mahila/news_img<?if(!empty($mahila_details)){echo $mahila_details['0']->id;}?>_thumb.jpg" /></a></div>
-							        <?} }?>
-							        <div id="mainnews"><a href="<?=base_url();?>mahila/mahiladetails/<?if(!empty($mahila_details)){echo $mahila_details['0']->id;}?>"><?if(!empty($mahila_details)){echo $mahila_details['0']->heading;}?></a></div>
-							     <font style="font-size:14px;padding-top:5px;">  <?php if(!empty($mahila_details)){ echo $mahila_details['0']->summary; ?></font>
+							        <a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details['0']->id?>/<?=$mahila_details['0']->cat_id?>"><img  id="img" src="<?=base_url();?>assets/mahila/news_img<?=$mahila_details['0']->id?>_thumb.jpg" /></a></div>
+							        <?} ?>
+							        <div id="mainnews"><a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details['0']->id?>/<?=$mahila_details['0']->cat_id?>"><?=$mahila_details['0']->heading?></a></div>
+							     <font style="font-size:14px;padding-top:5px;">  <?=$mahila_details['0']->summary?></font>
 							       <?php  $i=1;$count=0;foreach($mahila_details as $item){
 							           if($count==0)
 							           {$count++;
@@ -759,14 +759,14 @@ function test()
 							           if($i>3)
 							           break;?>
                                     <ul id="mainnews"> 
-							        <li style="padding-top:5px;"><a href="<?=base_url();?>mahila/mahiladetails/<?=$item->id?>"><?=$item->heading?></a></li></ul><?$i++;}} ?></p>
+							        <li style="padding-top:5px;"><a href="<?=base_url();?>mahila/mahiladetails/<?=$item->id?>/<?=$item->cat_id?>"><?=$item->heading?></a></li></ul><?$i++;}} ?></p>
 							        </div></div>
 							        <div id="tab2"><p><div style="padding-top:11px">
 							     <?php if(!empty($sahithi_detail)){?>
 							        <div id="image"> <? if(file_exists("./assets/sahithi/news_img".$sahithi_details['0']->id."_thumb.jpg")){?>
-							        <a href="<?=base_url();?>sahithi/sahithidetails/<?=$sahithi_details['0']->id?>"><img src="<?=base_url();?>assets/sahithi/news_img<?=$sahithi_details['0']->id?>_thumb.jpg" alt="hh" id="img"/></a></div>
+							        <a href="<?=base_url();?>sahithi/sahithidetails/<?=$sahithi_details['0']->id?>/<?=$sahithi_details['0']->cat_id?>"><img src="<?=base_url();?>assets/sahithi/news_img<?=$sahithi_details['0']->id?>_thumb.jpg" alt="hh" id="img"/></a></div>
 							        <?} ?>
-							        <div id="mainnews"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$sahithi_details['0']->id?>"><?=$sahithi_details['0']->heading?></a></div>
+							        <div id="mainnews"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$sahithi_details['0']->id?>/<?=$sahithi_details['0']->cat_id?>"><?=$sahithi_details['0']->heading?></a></div>
 							      <font style="font-size:14px;padding-top:5px;">   <?php echo $sahithi_details['0']->summary; ?></font>
 							        <?$i=1;$count=0; foreach($sahithi_details as $item){
 							        	 if($count==0)
@@ -775,7 +775,7 @@ function test()
 							        	 }
 							             if($i>3)
 							           break;?>
-							    <ul id="mainnews"> <li style="padding-top:5px;"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>"><?=$item->heading?></a></li></ul><? $i++;} ?></p></div>
+							    <ul id="mainnews"> <li style="padding-top:5px;"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>/<?=$item->cat_id?>"><?=$item->heading?></a></li></ul><? $i++;} ?></p></div>
     							</div></div><?php }?>
 <script>
 (function() {

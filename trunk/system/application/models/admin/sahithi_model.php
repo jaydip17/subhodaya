@@ -68,7 +68,7 @@ class Sahithi_Model extends Model {
 		}
 		if($headingonly=='yes')
 		{
-			$this->db->select('id,heading,summary');
+			$this->db->select('id,heading,summary,cat_id');
 		}
 		$this->db->order_by('id','desc');
 		$result=$this->db->get_where('sahithi',array('cat_id'=>$id));

@@ -257,7 +257,7 @@ padding-left: 30px;
           				 <?php echo $news_type3['0']->summary;?>
           				 <ul id="mainnews">
           				<?
-          						$count=1; foreach($news_type3 as $row):
+          						$count=0; foreach($news_type3 as $row):
           						  if($count==0)
           							{
 	          							$count++;

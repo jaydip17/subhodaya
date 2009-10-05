@@ -703,7 +703,7 @@ background-repeat: repeat-x;
 }
 #gal_middle
 {
-background-color:#EBEBEB;
+background-color:#FFFFFF;
 border-left: 2px solid #0A70BB;
 border-right: 2px solid #0A70BB;
 }
@@ -1063,21 +1063,49 @@ text-decoration:none;
 color:	#000000;
 font-size: 13px;
 }
-#home_bottom a:visited{
-text-decoration:none;
-color:	#000000;
-font-size: 13px;
+#home_bottom a:visited
+{
+	text-decoration:none;
+	color:	#000000;
+	font-size: 13px;
 }
-#home_bottom a:hover{
-text-decoration:none;
-color:	red;
-font-size: 13px;
+#home_bottom a:hover
+{
+	text-decoration:none;
+	color:	red;
+	font-size: 13px;
 }
-#tabs_background{
+#tabs_background
+{
 	background-image:url(imgs/gmailseline.jpg);
-background-repeat:repeat-x;
+	background-repeat:repeat-x;
 }
-#tabs_backgrou_gree{
+#tabs_backgrou_gree
+{
 	background-image:url(imgs/scrool-img.jpg);
-background-repeat:repeat-x;
+	background-repeat:repeat-x;
+}
+#menu_center_gall
+{
+	background-image: url(imgs/menu-center.jpg);
+	background-repeat: repeat-x;
+}
+#gal_middle_line
+{
+	background-image: url(imgs/center-by.jpg);
+	background-repeat: repeat-x;
+}
+#gallery_image
+{
+	height: 160px;
+	width: 130px;
+	border: 1px solid blue;
+}
+#gall_botom_image
+{
+	background-image: url(imgs/img-cr.jpg);
+	background-repeat: no-repeat;
+	height: 54px;
+	width: 130px;
+	border: 1px solid blue;
 }

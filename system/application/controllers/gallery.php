@@ -17,7 +17,7 @@ class Gallery extends Controller {
 		}
 		$result=$this->Gallery_Model->get_categeory(0);
 		$result1=$this->Gallery_Model->get_subcate1();
-		//print_r($result1);
+		//print_r($result);
 		$data=array('more'   => $more,
 					'result' => $result,
 					'images'=> $images,

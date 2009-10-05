@@ -4,17 +4,17 @@
 if(isset($type) && $type=="sahithi")
 {?>
 <div style="height: 110px" id="telugufont1">
-<a href="<?=base_url()?>sahithi/sahithidetails/<?=$row->id?>"><? if(file_exists("./assets/sahithi/news_img".$row->id."_thumb.jpg")){ ?><img src="<?=base_url();?>assets/sahithi/news_img<?=$row->id ?>_thumb.jpg"  style="margin: 2px 4px 2px 2px;float: left;" id="img"></img><?} ?><? echo $row->heading; ?></a>
+<a href="<?=base_url()?>sahithi/sahithidetails/<?=$row->id?>/<?=$row->cat_id?>"><? if(file_exists("./assets/sahithi/news_img".$row->id."_thumb.jpg")){ ?><img src="<?=base_url();?>assets/sahithi/news_img<?=$row->id ?>_thumb.jpg"  style="margin: 2px 4px 2px 2px;float: left;" id="img"></img><?} ?><? echo $row->heading; ?></a>
 <font id="mainnews">
-<a href="<?=base_url()?>sahithi/sahithidetails/<?=$row->id?>"></a></font><br>
+<a href="<?=base_url()?>sahithi/sahithidetails/<?=$row->id?>/<?=$row->cat_id?>"></a></font><br>
 <? echo $row->summary; ?>
 </div><hr />
 <? }
 else if(isset($type) && $type=="mahila"){?>
 <div style="height: 110px" id="telugufont1">
-<a href="<?=base_url()?>mahila/mahiladetails/<?=$row->id?>"><? if(file_exists("./assets/mahila/news_img".$row->id."_thumb.jpg")){ ?><img src="<?=base_url();?>assets/mahila/news_img<?=$row->id ?>_thumb.jpg" style="margin: 2px 4px 2px 2px;float: left;" id="img"></img><?} echo $row->heading; ?></a>
+<a href="<?=base_url()?>mahila/mahiladetails/<?=$row->id?>/<?=$row->cat_id?>"><? if(file_exists("./assets/mahila/news_img".$row->id."_thumb.jpg")){ ?><img src="<?=base_url();?>assets/mahila/news_img<?=$row->id ?>_thumb.jpg" style="margin: 2px 4px 2px 2px;float: left;" id="img"></img><?} echo $row->heading; ?></a>
 <font id="mainnews">
-<a href="<?=base_url()?>mahila/mahiladetails/<?=$row->id?>"></a></font><br>
+<a href="<?=base_url()?>mahila/mahiladetails/<?=$row->id?>/<?=$row->cat_id?>"></a></font><br>
 <? echo $row->summary; ?>
 </div><hr />
 

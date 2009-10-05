@@ -691,19 +691,21 @@ background-repeat: repeat-x;
 height: 21px;
 width: 594px;
 }
-#gal_center
+#gal_center-top
 {
-background-image: url(imgs/gal-center.jpg);
+background-image: url(imgs/body-center.jpg);
 background-repeat: repeat-x;
-border-left: 1px solid #B0d9EF;
-border-right: 1px solid #B0d9EF;
 }
-#gal_center1
+#gal_center-botom
 {
-background-image: url(imgs/gal-top-line.jpg);
+background-image: url(imgs/body-bottomCr.jpg);
 background-repeat: repeat-x;
-border-left: 1px solid #B0d9EF;
-border-right: 1px solid #B0d9EF;
+}
+#gal_middle
+{
+background-color:#EBEBEB;
+border-left: 2px solid #0A70BB;
+border-right: 2px solid #0A70BB;
 }
 	
 #gall_names a:link{

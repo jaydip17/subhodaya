@@ -1,49 +1,64 @@
-<table cellpadding="0" cellspacing="5px;" width="926">
-	<tr>
-		<td width="742" height="93" align="left" valign="top"><div style="width: 742px;height: 93px;border: 1px solid red;"></div></td>
-		<td rowspan="2" width="180" align="center" valign="top"><div style="width: 180px;height: 900px;border: 1px solid red;background-color: gray;">addspace</div></td>
-	</tr>
-	<tr>
-		<td valign="top" height="850">
-		<div style="width: ;height: 413px;margin-top: 5px;">
-			<table cellpadding="0" cellspacing="0">
-				<tr>
-					<td id="gal_leftslide"></td>
-					<td id="gal_menucen"><span id="pagenation"><?=$pagination?></span></td>
-					<td id="gal_rightslide"></td>
-				</tr>
-				<tr>
-					<td colspan="3" height="800"  id="gal_center1" valign="top" width="742">
-					<table cellspacing="10" height="">
-							<tr>
-							<?php $count=1; foreach ($result as $row):?>
-								<td   width="125" height="110" align="center">
-								<div style="height: 99px;width: 130px;">
-									<a href="<?=base_url();?>gallery/content/<?=$row->id?>/<?=$row->parentid?>"><img src="<?=base_url()?>assets/gallery/image<?=$row->id?>_thumb.jpg" height="97px" width="128px" id="img"></a>
-								</div><div id="gall_botto_img"><sapn id="gall_names"><a href="<?=base_url();?>gallery/content/<?=$row->id?>/<?=$row->parentid?>"><?=$row->title?></a></span></div></td>
-									<? if ($count==5)
-									{
-										$count = 0;
-										echo "</tr><tr>";
-									}
-									$count++;
-									endforeach; ?>
-							</tr>
-							
-					</table>
-					</td>
-				</tr>
-					<tr>
-					<td id="gal_leftslide"></td>
-					<td id="gal_menucen">
-					<?=$pagination?>
-					</td>
-					<td id="gal_rightslide"></td>
-				</tr>
-				<tr><td id="gal_bottom" colspan="3"></td></tr>
-			</table>
-		</div>
-			
+<style type="text/css">
+ul{
+list-style-image:url(<?=base_url()?>assets/imgs/cr.png);
+padding-left: 20px;
+}
+</style>
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+	<td valign="top" width="2px"><img src="<?=base_url()?>assets/imgs/body-left.jpg"></td>
+	<td id="gal_center-top" width="745px;" align="left" height="30">
+			<div style="width: 50%;text-align: left;float: left;color: #8B0000;font-weight: bold;font-size: 14px;"></div>
+			<div style="text-align: right;color: #8B0000;font-weight: bold;font-size: 14px;"></div>
 	</td>
-	</tr>
+	<td valign="top" width="2px"><img src="<?=base_url()?>assets/imgs/body-right.jpg"></td>
+	<td valign="top" rowspan="3" align="center">
+		<table width="96%" cellpadding="0" cellspacing="0">
+		<tr>
+			<td valign="top"><img src="<?=base_url()?>assets/imgs/menu-left.jpg"></td>
+			<td id="menu_center_gall" width="99%" align="left" style="font-weight: bold;color: #FFFFFF;font-size: 14px;">Gallery Categories</td>
+			<td valign="top" width="4px" align="left"><img src="<?=base_url()?>assets/imgs/menu-right.jpg"></td>
+		</tr>
+		<tr>
+			<td colspan="3" align="left"><div style="height: 250px;width: 100%;background-color: #9CD8FC">
+				<ul>
+				<?php if(!empty($cate)){
+					foreach ($cate as $item): 
+				?>
+				<li style="padding: 3px;"><a href="<?=base_url()?>gallery/categeory/<?=$item->id?>"><?=$item->catname?></a></li>
+				<?endforeach;} ?>
+				</ul>
+			 </div>
+			 <div >
+			 <img src="<?=base_url()?>assets/imgs/add.jpg">
+			 </div>
+			 </td>
+		</tr>
+	</table>
+	</td>
+</tr>
+<tr>
+	<td colspan="3"  id="gal_middle" align="center" valign="top"> 
+		<table width="90%" cellpadding="5" cellspacing="5" align="center" >
+			<tr>
+			<?$count=1;
+			 foreach ($result as $row): ?>
+				<td><div id="gallery_image"><a href="<?=base_url()?>gallery/content/<?=$row->id?>/<?=$row->parentid?>"><img src="<?=base_url()?>assets/gallery/thumimg<?=$row->id?>.jpg"  id='img'></a></div>
+				<div id="gall_botom_image" style="text-align: center;font-weight: bold;font-size: 14px;"><div style="margin-top: 3px;">
+				<span><a href="<?=base_url()?>gallery/content/<?=$row->id?>/<?=$row->parentid?>"><?=$row->title?></a></span><br>
+				</div>
+				</div></td>
+				<? if($count==4){
+					$count = 0;
+					echo '</tr><tr>';
+				} $count++;
+				endforeach;?>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td valign="bottom" width="2px"><img src="<?=base_url()?>assets/imgs/body-bottomLeft.jpg"></td>
+	<td id="gal_center-botom" width="750px;" align="left" valign="bottom" height="30"></td>
+	<td valign="bottom" width="2px;"><img src="<?=base_url()?>assets/imgs/body-bottomRight.jpg"></td>
+</tr>
 </table>

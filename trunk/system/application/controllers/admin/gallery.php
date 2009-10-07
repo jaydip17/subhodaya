@@ -1,10 +1,11 @@
 <?php
   class Gallery extends Controller {
   	  var $layout = 'admin';
+  	  
 	function Gallery(){
 		parent::Controller();
 		$this->load->model('admin/Gallery_model');
-		$this->load->helper(array('form','url','file'));
+		$this->load->helper(array('form','url','file','date'));
 		//if not logged in go to login page
 	   $this->Login_Model->login_validate();
 	}

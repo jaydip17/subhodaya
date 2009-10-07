@@ -29,7 +29,7 @@ echo form_hidden('parentid',$item->parentid);?>
 <?=$item->title?>
     </td>
 		<td><img
-			src="<?=base_url()?>assets/gallery/image<?=$item->id?>_thumb.jpg"
+			src="<?=base_url()?>assets/gallery/thumimg<?=$item->id?>.jpg"
 			alt="img"></td>
 		<td><a
 			href="<?=base_url()?>admin/gallery/deleteimage/<?=$item->id?>/<?=$item->parentid?>"

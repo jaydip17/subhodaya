@@ -101,7 +101,10 @@
  	   $this->load->library('image_lib');
  	  foreach($title as $item)
  	  {
- 		$this->db->insert('gallery_images',array('title'=>$item, 'parentid'=>$parentid,'active'=>$active));
+ 	  	$datestring = "%Y-%m-%d";
+		$time = time();
+		$date=mdate($datestring, $time);
+ 		$this->db->insert('gallery_images',array('title'=>$item, 'parentid'=>$parentid,'active'=>$active,'insert_date'=>$date));
  		
  		
  	    $id = $this->db->insert_id();
@@ -112,8 +115,14 @@
 		$config['max_width']  = '700';
 		$config['max_height']  = '1000';
 
+		$config1['upload_path'] = $dir;
+		$config1['allowed_types'] = 'gif|jpg|png';
+		$config1['max_size']	= '400';
+		$config1['max_width']  = '200';
+		$config1['max_height']  = '400';
 				
 		$this->load->library('upload', $config);
+		$this->load->library('upload', $config1);
 	
 		if ( ! $this->upload->do_upload('image'.$i))
 		{
@@ -129,26 +138,23 @@
 	       rename($dir.$filepath , $dir.'image'.$id.'.jpg');
 	       $aspect_ratio = $data['upload_data']['image_height'] / $data['upload_data']['image_width'];	
 		
-		//generating thumnail of image
-		if($data['upload_data']['image_width'] >500 && $data['upload_data']['image_height'] > 600)
+		$this->image_lib->clear();
+		}
+ 	  if ( ! $this->upload->do_upload('thumb'.$i))
 		{
- 	    $filename = 'image'.$id.'.jpg';
- 	  	$config1['image_library'] = 'gd2';
-	  	$config1['source_image'] = $dir.'/'.$filename;
-        $config1['maintain_ratio'] = TRUE;
-     	$config1['width'] = 300;
-	    $config1['height'] = 97;
-		$config1['create_thumb'] = TRUE;
-		//$config['quality'] = '100';
-	  $this->image_lib->initialize($config1);
- 	  if(!$this->image_lib->resize())
-    	{
-    		$error = array('error' => $this->image_lib->display_errors());
-					
-    	}
-    	$this->image_lib->clear();
-    	 $i++;
-		}//endforeach
+			$error = array('error' => $this->upload->display_errors());
+			print_r($error);
+			
+			$this->load->view('gallery_admin_images', $error);
+		}	
+		else
+		{
+		   $data = array('upload_data' => $this->upload->data());
+	       $filepath = $data['upload_data']['file_name'];
+	       rename($dir.$filepath , $dir.'thumimg'.$id.'.jpg');
+	       $aspect_ratio = $data['upload_data']['image_height'] / $data['upload_data']['image_width'];	
+		
+		$this->image_lib->clear();
 		}
   		}
  	}
@@ -214,7 +220,7 @@
 	function get_cateimage($type)
 	{
 		$this->db->order_by('id','desc');
-		$this->db->limit(12);
+		$this->db->limit(8);
 		$array=array('parentid'=>$type);
 		$this->db->where($array);
 		$quary=$this->db->get('gallery_categeory');
@@ -230,7 +236,7 @@
 		$array=array('parentid'=>$parentid);
 		$this->db->where($array);
 		$query=$this->db->get('gallery_images');
-		return $query->result_array();
+		return $query->row();
 	}
   	function get_subcate()
   	{

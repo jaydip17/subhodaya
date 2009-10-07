@@ -452,26 +452,9 @@ var ratingAction = {
 Behaviour.register(ratingAction);
 
 </script>
-<script language="javascript">
-//<!--
-function telugu_typing()
-{
-	if(document.telugu_send.telugu_type.checked == true)
-	{
-		window.location="javascript:(t13nb=window.t13nb||function(l){var%20t=t13nb,d=document,o=d.body,c=\"createElement\",a=\"appendChild\",w=\"clientWidth\",i=d[c](\"span\"),s=i.style,x=o[a](d[c](\"script\"));if(o){if(!t.l){t.l=x.id=\"t13ns\";o[a](i).id=\"t13n\";i.innerHTML=\"Loading%20transliteration\";s.cssText=\"z-index:99;font-size:18px;background:#FFF1A8;top:0\";s.position=d.all?\"absolute\":\"fixed\";s.left=((o[w]-i[w])/2)+\"px\";x.src=\"http://t13n.googlecode.com/svn/trunk/blet/rt13n.js?l=\"+l}}else%20setTimeout(t,500)})('te')";
-
-	}
-	else
-
-	{
-		window.location="javascript:(t13nb=window.t13nb||function(l){var%20t=t13nb,d=document,o=d.body,c=\"createElement\",a=\"appendChild\",w=\"clientWidth\",i=d[c](\"span\"),s=i.style,x=o[a](d[c](\"script\"));if(o){if(!t.l){t.l=x.id=\"t13ns\";o[a](i).id=\"t13n\";i.innerHTML=\"Loading%20transliteration\";s.cssText=\"z-index:99;font-size:18px;background:#FFF1A8;top:0\";s.position=d.all?\"absolute\":\"fixed\";s.left=((o[w]-i[w])/2)+\"px\";x.src=\"http://t13n.googlecode.com/svn/trunk/blet/rt13n.js?l=\"+l}}else%20setTimeout(t,500)})('te')";
-	}
-}
-//-->
-</script> 
-<table cellpadding="0" cellspacing="5px;" width="926">
+<!--<table cellpadding="0" cellspacing="5px;" width="926">
 	<tr>
-		<td  height="93" align="left" valign="top"><div style="width: 742px;height: 93px;border: 1px solid red;">
+		<td align="left" valign="top"><div style="width: 742px;height: 93px;border: 1px solid red;">
 		<div id="container">
 
     
@@ -581,4 +564,124 @@ function telugu_typing()
 		<td width="925" height="156" style="border: 1px solid red;background-color: gray;" colspan="2" >
 		</td>
 	</tr>
+</table>-->
+<style type="text/css">
+ul{
+list-style-image:url(<?=base_url()?>assets/imgs/cr.png);
+padding-left: 20px;
+}
+</style>
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+	<td valign="top" width="1px"><img src="<?=base_url()?>assets/imgs/body-left.jpg"></td>
+	<td id="gal_center-top"  align="left" height="30" width="750">
+			<div style="text-align: left;float: left;width: 70%;text-align: left;float: left;width: 50%;padding-left: 3px;font-size: 14px;font-weight: bold;" >
+					<? if(isset($links)):?>
+						<?if(isset($links['prev'])){ ?>
+						<a href="<?=base_url();?>gallery/content/<?=$links['prev']?>/<?=$image['0']->parentid?>">Previous</a>						
+					<?}endif; ?>
+					</div>
+					<div style="text-align: right;padding-right: 3px;font-size: 14px;font-weight: bold;">
+					<? if(isset($links)):?>
+					<?if(isset($links['next'])){ ?>
+						<a href="<?=base_url();?>gallery/content/<?=$links['next']?>/<?=$image['0']->parentid?>">Next</a>
+					<?}endif; ?>
+					</div>
+	</td>
+	<td valign="top" width="2px"><img src="<?=base_url()?>assets/imgs/body-right.jpg"></td>
+	<td valign="top" rowspan="3" align="center" style="height: 500px;width: 170px;" >
+		<table width="97%" cellpadding="0" cellspacing="0">
+		<tr>
+			<td valign="top" width="4px"><img src="<?=base_url()?>assets/imgs/menu-left.jpg"></td>
+			<td id="menu_center_gall" align="center" style="font-weight: bold;color: #FFFFFF;font-size: 14px;">Gallery Categories</td>
+			<td valign="top" width="4px" align="left"><img src="<?=base_url()?>assets/imgs/menu-right.jpg"></td>
+		</tr>
+		<tr>
+			<td colspan="3" align="left"><div style="height: 250px;width: 100%;background-color: #9CD8FC;font-size: 14px;">
+				<ul style="margin-left: 15px;">
+				<?php if(!empty($result)){
+					foreach ($result as $item): 
+				?>
+				<li style="padding: 3px;"><a href="<?=base_url()?>gallery/categeory/<?=$item->id?>"><?=$item->catname?></a></li>
+				<?endforeach;} ?>
+				</ul>
+			 </div>
+			 <div style="margin-top: 5px;">
+			 	<table width="97%" border="1" height="200">
+			 		<tr>
+			 			<td width="32%">xc</td>
+			 			<td>zxcv</td>
+			 			<td>zxcv</td>
+			 		</tr>
+			 		<tr>
+			 		<td width="32%">xc</td>
+			 			<td>zxcv</td>
+			 			<td>zxcv</td>
+			 		</tr>
+			 	</table>
+			 </div>
+			 </td>
+		</tr>
+	</table>
+	</td>
+</tr>
+<tr>
+	<td colspan="3"   id="gal_middle" align="center" height="820"> 
+		<div style="margin: 10px 0px 10px 0px">
+		<img src="<?=base_url()?>assets/gallery/image<?=$image['0']->id?>.jpg" id="img">
+		</div>
+		<div style="margin: 10px 0px 10px 0px">
+		<?=form_open('subhodaya/sendmail','name="telugu_send"') ?>
+					<input type="hidden" name="url" value="<?=base_url()?>gallery/content/<?=$image['0']->id?>">
+			
+						<table align="center" width="500px" style="border: 1px solid #939393;">
+							<tr>
+								<td colspan='2' align="center"><div  id="gree_bar1"><?=$more['25']->matter?></div></td>
+							</tr>
+							<tr>
+								<td width="30%" align="left" style="padding-left: 10px;"><?=$more['27']->matter?></td>
+								<td align="left" width="70%"><input type="text" name="name" size="30"></td>
+							</tr>
+							<tr>
+								<td align="left" width="30%" style="padding-left: 10px;"><?=$more['38']->matter?></td>
+								<td align="left" width="70%"><input type="text" name="uemail" size="30"></td>
+							</tr>
+							<tr><td width="150px" align="left" style="padding-left: 10px;"><?php if(isset($more['39'])){ echo $more['39']->matter;}?></td><td><input type="text" name="fname" size="30">
+							<?=form_hidden('type','Gallery')?>
+							</td></tr>
+							<tr>
+								<td align="left" style="padding-left: 10px;"><?=$more['28']->matter?></td>
+								<td align="left"><input type="text" name="email" size="30"></td>
+							</tr>
+							<tr>
+								<td colspan="2" align="left" style="padding-left: 10px;"><input type="checkbox" id="checkboxId" onclick="javascript:checkboxClickHandler()" id="telugu_type" name="telugu_type">Type in telugu</td></tr>
+				            <tr>
+							<td align="center" colspan="2"><textarea style="height: 190px;width: 95%" name="description" id="transl2"></textarea></td>
+							</tr>
+							<tr>
+								<td align="center" colspan="2"><input type="submit" name="send" value="Send"><input type="reset" ></td>
+							</tr>
+							</table>
+						</form>
+		</div>
+	</td>
+</tr>
+<tr>
+	<td valign="bottom" width="2px"><img src="<?=base_url()?>assets/imgs/body-bottomLeft.jpg"></td>
+	<td id="gal_center-botom"  align="left" valign="bottom">
+	<div style="text-align: left;float: left;width: 50%;text-align: left;float: left;width: 50%;padding-left: 3px;font-size: 14px;font-weight: bold;" >
+					<? if(isset($links)):?>
+						<?if(isset($links['prev'])){ ?>
+						<a href="<?=base_url();?>gallery/content/<?=$links['prev']?>/<?=$image['0']->parentid?>">Previous</a>						
+					<?}endif; ?>
+					</div>
+					<div style="text-align: right;padding-right: 3px;font-size: 14px;font-weight: bold;margin-bottom: 6px;">
+					<? if(isset($links)):?>
+					<?if(isset($links['next'])){ ?>
+						<a href="<?=base_url();?>gallery/content/<?=$links['next']?>/<?=$image['0']->parentid?>">Next</a>
+					<?}endif; ?>
+					</div>
+	</td>
+	<td valign="bottom" width="2px;"><img src="<?=base_url()?>assets/imgs/body-bottomRight.jpg"></td>
+</tr>
 </table>

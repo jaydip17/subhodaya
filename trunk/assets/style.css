@@ -1099,13 +1099,11 @@ font-size: 13px;
 {
 	height: 160px;
 	width: 130px;
-	border: 1px solid blue;
 }
 #gall_botom_image
 {
 	background-image: url(imgs/img-cr.jpg);
 	background-repeat: no-repeat;
 	height: 54px;
-	width: 130px;
-	border: 1px solid blue;
+	width: 135px;
 }

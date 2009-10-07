@@ -6,22 +6,88 @@ class Gallery extends Controller {
 	}
 	function index()
 	{
-		$type=14;
 		$more=$this->News_Model->more_news();
-		$details=$this->Gallery_Model->get_cateimage($type);
+		$result=$this->Gallery_Model->get_categeory(0);
+		$details=array();
+		//print_r($result);
+		foreach ($result as $cate)
+		{
+			$subcats=$this->Gallery_Model->get_cateimage($cate->id);
+			foreach ($subcats as $sub_cat)
+			{
+				$ss = $this->Gallery_Model->getimage($sub_cat->id);
+				//echo $sub_cat->id;
+				//print_r($ss);
+				$sub_cats[] = array(
+									'date'=>(isset($ss->insert_date)) ? $ss->insert_date : 0,
+									'id' => $sub_cat->id,
+									'catname'	=> $sub_cat->catname,
+									'imageid'  => (isset($ss->id)) ? $ss->id : 0,
+									'imagename'  => (isset($ss->title)) ? $ss->title : 0, 
+									);   
+			}
+			$cats[] = array ('id' => $cate->id,
+						   'name' => $cate->catname,
+						   'subcats' => $sub_cats,);
+			$sub_cats=array();
+			//$details[$cate->id]=$this->Gallery_Model->get_cateimage($cate->id);
+			//$cats = array_merge($cate ,$details);
+		}
+//		foreach ($cats as $cates)
+//		{
+//			echo $cates['name'];
+//			foreach ($cates['subcats'] as $sub_ca)
+//			{
+//				print_r($sub_ca->catname);
+//			}
+//			echo "<br/>";
+//		}
+		//print_r($cats);
+		/*foreach ($sub_cats as $row){
+			print_r($row);
+		}*/
 		$images=array();
 		foreach($details as $item)
 		{
-			//print_r($item);
-			$images[$item->id]=$this->Gallery_Model->getimage($item->id);
+			//$sub=$item[0]->id;
+			foreach ($item as $sub){
+				//echo $sub->id;exit;
+				$images[$sub->id]=$this->Gallery_Model->getimage($sub->id);
+			}
+			
 		}
-		$result=$this->Gallery_Model->get_categeory(0);
-		$result1=$this->Gallery_Model->get_subcate1();
-		//print_r($result);
+		
+	//	print_r($images);
+	//	exit;
+		
+//		
+//		foreach ($result as $cat)
+//		{
+//			echo "<br/>".$cat->catname."<br/>";
+//			 foreach ($details as $det)
+//			 {
+//				 	if($det[1]->parentid == $cat->id)
+//				 	{
+//				 	echo ','.$det[1]->catname.','.$det[1]->id.',';
+//				 	$parent_id = $det[1]->id;
+//				 	
+//				 	//print_r($images[$parent_id]);
+//				 	foreach ($images as $img)
+//				 	{
+//				 		if(!empty($img))
+//				 		if($parent_id == $img[1]['parentid'])
+//				 			print_r($img);
+//				 	}
+//			 	}
+//			 }
+//		}
+		//print_r($temp);
+		//$result1=$this->Gallery_Model->get_subcate1();
+		//print_r($images);
 		$data=array('more'   => $more,
 					'result' => $result,
-					'images'=> $images,
-					'result1'=>$result1
+					'images' => $images,
+					'cats'=>$cats
 					);
 		$this->load->view('gallery_view',$data);
   	}
@@ -37,16 +103,18 @@ class Gallery extends Controller {
 		$result=$this->Gallery_Model->get_categeory(0);
 		$result1=$this->Gallery_Model->get_subcate();
 		$data=array('more'   => $more,
-					'result' => $result,
-					'images'=> $images,
+					'cate' => $result,
+					'result'=> $images,
 					'result1'=>$result1
 					);
-		$this->load->view('gallery_view',$data);
+		$this->load->view('gallery_inner',$data);
   	}
   	function inner(){
   		$type=$this->uri->segment(3,0);
+  		$cate=$this->Gallery_Model->get_categeory(0);
   		$more=$this->News_Model->more_news();
   		$result=$this->Gallery_Model->get_gallery($type);
+  		//print_r($result); 
   		$total_count=$this->Gallery_Model->count($type);
   		$query=$this->Gallery_Model->gallery_pagi($type);
   		//pagination
@@ -64,31 +132,33 @@ class Gallery extends Controller {
         
    		$result = $this->paginationnew->getQuery(TRUE);
    		$details=$result->result();
-   		 		
   	    $paginate = $this->paginationnew->paginate1();
 		//print_r($details);
   		$data=array('more'=>$more,
+  					'cate'=>$cate,
   					'result'=>$details,
   					'pagination'=>$paginate);
   		$this->load->view('gallery_inner',$data);
   	}
   	function content(){
   		 $this->load->model('ratings_model', 'ratings');
-  		 $id=$this->uri->segment(3,0);
+  		$id=$this->uri->segment(3,0);
   		 $parentid=$this->uri->segment(4,0);
   		$more=$this->News_Model->more_news();
   		$image=$this->Gallery_Model->get_image($id);
   		$query=$this->Gallery_Model->get_allimages($parentid);
+  		//print_r($query);
   		$result=$query->result();
   		//print_r($result);
   		$views=array();
   		$views=$this->Gallery_Model->get_views($id);
   		$links=$this->prevnex($query->result(),$id);
   		//rating
-  		
-  		//print_r($views);
+  		$result1=$this->Gallery_Model->get_categeory(0);
+  		//sprint_r($links);
   		$data=array('more'  => $more,
   					'image' => $image,
+  					'result'=> $result1,
   					'links'=> $links);
   		$this->load->view('gallery_content',$data);
   		

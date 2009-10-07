@@ -113,6 +113,16 @@ echo form_textarea ($array);
 	<tr>
 		<td>
 <?
+echo form_label ( 'Thumb image', 'thumb0' );
+?>
+</td>
+		<td>
+<?=form_upload('thumb0');?>
+<input type='button' value='add more' onclick='fun();' /></td>
+	</tr>
+<tr>
+		<td>
+<?
 echo form_label ( 'Select image', 'image0' );
 ?>
 </td>

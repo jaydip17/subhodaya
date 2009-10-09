@@ -76,7 +76,7 @@ padding-bottom:5px;
 			<div  style="text-align: justify; padding: 7px;font-size: 14px;">
 			<?if(!empty($result)){
 			if(file_exists("./assets/cinema/ceni_img".$result['0']->id."_thumb.jpg")){ ?>
-			<img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($result['0'])){echo $result['0']->id;}?>.jpg" style="float: left;padding:1px 4px 2px 2px;border: 1px solid  #9FA0A0; margin: 10px 10px 10px 10px;" ></img>
+			<img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($result['0'])){echo $result['0']->id;}?>.jpg" style="float: left;padding:0px 0px 0px 0px;border: 1px solid  #9FA0A0; margin: 10px 20px 20px 10px;" ></img>
 			<?}} ?>
 			<font style="padding: 2px;"><?php if(isset($result['0'])){echo $result['0']->description;}?></font></div>
 			</div></td></tr>
@@ -102,10 +102,17 @@ padding-bottom:5px;
 				<div style="border:1px solid #9FA0A0;">
 					<ul id="mainnews">
 					<?php if(isset($result1)){
+						$count=1;
 					foreach ($result1 as $row):
 					?>
 						<li style="padding-top: 4px; "><a href="<?=base_url()?>cinema/inner/<?=$row->id?>/<?=$row->type?>"><?=$row->heading?></a></li>
-						<?php endforeach;}?>
+						<?php
+						if($count==5){
+							break;
+						} else {
+							$count++;
+						}
+						endforeach;}?>
 					</ul>
 				</div>
 			</td></tr>
@@ -114,10 +121,12 @@ padding-bottom:5px;
 				<div style="border:1px solid #9FA0A0;">
 					<ul id="mainnews">
 					<?php if(isset($cinema_cat)){
+						
 					foreach ($cinema_cat as  $row):
 					?>
 						<li style="padding-top: 4px;"><a href="<?=base_url();?>cinema/details/<?=$row->id?>"><?=$row->cinema_type?></a></li>
-						<?php endforeach;}?>
+						<?php
+						endforeach;}?>
 					</ul>
 				</div>
 			</td></tr>

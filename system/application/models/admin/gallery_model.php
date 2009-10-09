@@ -347,6 +347,7 @@
 	{
 		$this->db->order_by('views','desc');
 		$this->db->order_by('id','desc');
+		$this->db->limit(3);
   		$this->db->select('id, parentid, title,views');
   		$query=$this->db->get_where('gallery_images');
   		return $query->result();

@@ -12,7 +12,7 @@ class Gallery extends Controller {
 		//print_r($result);
 		foreach ($result as $cate)
 		{
-			$subcats=$this->Gallery_Model->get_cateimage($cate->id);
+			$subcats=$this->Gallery_Model->get_cateimage($cate->id,$limit="8");
 			foreach ($subcats as $sub_cat)
 			{
 				$ss = $this->Gallery_Model->getimage($sub_cat->id);
@@ -94,20 +94,42 @@ class Gallery extends Controller {
   	function categeory(){
   		$type=$this->uri->segment(3,0);
   		$more=$this->News_Model->more_news();
-		$details=$this->Gallery_Model->get_cateimage($type);
+		$details=$this->Gallery_Model->get_cateimage($type,$limit="");
 		$images=array();
 		foreach($details as $item)
 		{
 			$images[$item->id]=$this->Gallery_Model->getimage($item->id);
+			 //$query1[$item->id]=$this->Gallery_Model->gallery_pagi1($item->id);
 		}
 		$result=$this->Gallery_Model->get_categeory(0);
-		$result1=$this->Gallery_Model->get_subcate();
+		//$result1=$this->Gallery_Model->get_subcate();
+		//pagination
+//		$query=$query1->result();
+//		print_r($query);
+		/*$a =base_url().'gallery/categeory/'.$type;
+		 //pagination
+		 $query=$this->Gallery_Model->gallery_pagi1($type);
+		 $total_count=$this->Gallery_Model->count1($type);
+		 
+    	$this->load->library('paginationnew');
+    	$this->paginationnew->start = ($this->uri->segment(4)) ? $this->uri->segment(4) : '0';
+    	$this->paginationnew->limit =30;
+        $this->paginationnew->filePath =$a;
+      
+        $this->paginationnew->select_what = '*';
+        $this->paginationnew->nbItems = $total_count;
+        $this->paginationnew->add_query = $query;
+        
+   		$result1 = $this->paginationnew->getQuery(TRUE);
+   		$details=$result1->result();
+   		//print_r($details);
+  	    $paginate = $this->paginationnew->paginate1();*/
+  	    //end pagination
 		$data=array('more'   => $more,
 					'cate' => $result,
 					'result'=> $images,
-					'result1'=>$result1
 					);
-		$this->load->view('gallery_inner',$data);
+		$this->load->view('gallery_subcat',$data);
   	}
   	function inner(){
   		$type=$this->uri->segment(3,0);

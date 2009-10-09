@@ -607,18 +607,7 @@ padding-left: 20px;
 				</ul>
 			 </div>
 			 <div style="margin-top: 5px;">
-			 	<table width="97%" border="1" height="200">
-			 		<tr>
-			 			<td width="32%">xc</td>
-			 			<td>zxcv</td>
-			 			<td>zxcv</td>
-			 		</tr>
-			 		<tr>
-			 		<td width="32%">xc</td>
-			 			<td>zxcv</td>
-			 			<td>zxcv</td>
-			 		</tr>
-			 	</table>
+			 	<img src="<?=base_url()?>assets/imgs/add.jpg">
 			 </div>
 			 </td>
 		</tr>

@@ -43,11 +43,11 @@ padding-left: 20px;
 		<? if(!empty($cats)){
 		$count=0;
 		foreach ($cats as $sub){ ?>
-		<div style="height: 499px;">
+		<div style="height: 500px;">
 		<?if($count!=0) {?>
-			<div id="gal_middle_line" style="height: 31px">
-				<div style="width: 50%;text-align: left;float: left;color: #8B0000;font-weight: bold;font-size: 14px;padding-left: 5px;"><?=$sub['name'] ?></div>
-				<div style="text-align: right;color: #8B0000;font-weight: bold;font-size: 14px;">View Most Viewed</div>
+			<div id="gal_middle_line" style="height: 31px;margin-top: 5px;">
+				<div style="width: 50%;text-align: left;float: left;color: #8B0000;font-weight: bold;font-size: 14px;padding: 5px 0px 0px 5px;"><?=$sub['name'] ?></div>
+				<div style="text-align: right;color: #8B0000;font-weight: bold;font-size: 14px;padding: 3px 5px 0px 0px;">View Most Viewed</div>
 			</div>
 			<?} ?>
 		<table width="90%" cellpadding="5" cellspacing="5" align="center" >
@@ -58,7 +58,7 @@ padding-left: 20px;
 				?>
 				
 				<td><div id="gallery_image" style="margin-bottom: 4px;"><a href="<?=base_url()?>gallery/inner/<?=$img['id']?>"><img src="<?=base_url()?>assets/gallery/thumimg<?=$img['imageid']?>.jpg" id="img" ></a></div>
-				<div id="gall_botom_image" style="text-align: center;font-weight: bold;font-size: 14px;"><div style="margin-top: 3px;">
+				<div id="gall_botom_image" style="text-align: center;font-weight: bold;font-size: 14px;"><div style="margin-top: 5px;">
 					<span><a href="<?=base_url()?>gallery/inner/<?=$img['id']?>"><?=$img['imagename']?></a></span><br>
 					<span style="color:#000000;"><?=$img['date']?></span></div>
 				</div></td>
@@ -67,7 +67,7 @@ padding-left: 20px;
 					echo '</tr><tr>';
 				} $count1++;
 				}?>
-				<tr><td colspan="5" style="text-align: right;"><a href="<?=base_url()?>gallery/inner/<?=$sub['id'] ?>"><?=$more['0']->matter?></a></td></tr>
+				<tr><td colspan="5" height="15px;" style="text-align: right;padding-bottom: 10px;"><a href="<?=base_url()?>gallery/categeory/<?=$sub['id'] ?>"><?=$more['0']->matter?></a></td></tr>
 		</table>
 		</div>
 		<?$count++;}}?>

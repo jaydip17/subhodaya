@@ -131,23 +131,23 @@ function test()
 								        	<li style="padding: 1px"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type7['3'])){echo $news_type7['3']->id;}?>/<?=$news_type7['3']->type?>"><?php if(isset($news_type7['3'])){echo $news_type7['3']->heading;}?></a></li>
 							        	</ul>
 							        	</div>
-							        	<div id="more-news-div"><a href="<?=base_url();?>news/details/<?=$news_type7['0']->type?>"><?php if(isset($more['0'])){echo $more['0']->matter;}?></a></div>
+							        	<div id="more-news-div" style="margin-bottom: 3px;"><a href="<?=base_url();?>news/details/<?=$news_type7['0']->type?>"><?php if(isset($more['0'])){echo $more['0']->matter;}?></a></div>
 							        	<div class="div123">
 							        	<table width="100%" >
 							        		<tr>
-							        			<td width="50%" valign="top">
+							        			<td width="50%" valign="top" height="97%"> 
 							        			<? if(file_exists("./assets/news/news_img".$news_type7['4']->id."_home_thumb.jpg")){ ?>
 							        			<a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type7['4'])){echo $news_type7['4']->id;}?>/<?=$news_type7['4']->type?>"><img src="<?=base_url();?>assets/news/news_img<?php if(isset($news_type7['4'])){echo $news_type7['4']->id;}?>_home_thumb.jpg" style="margin: 0px 10px 0px 0px;float: left;" align="top" id="img"></a>
 							        			<?} ?>
 							        				<div id="home_bottom"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type7['4'])){echo $news_type7['4']->id;}?>/<?=$news_type7['4']->type?>"><?php if(isset($news_type7['4'])){echo $news_type7['4']->heading;}?></a></div>
-							        				<div style="padding:5px 0px 0px 60px;" id="more-news-div"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type7['4'])){echo $news_type7['4']->id;}?>/<?=$news_type7['4']->type?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div>
+							        				<div  id="more-news-div"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type7['4'])){echo $news_type7['4']->id;}?>/<?=$news_type7['4']->type?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div>
 							        			</td>
 							        			<td width="50%" valign="top">
 							        			<? if(file_exists("./assets/news/news_img".$news_type7['5']->id."_home_thumb.jpg")){ ?>
 							        			<a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type7['5'])){echo $news_type7['5']->id;}?>/<?=$news_type7['5']->type?>"><img src="<?=base_url();?>assets/news/news_img<?php if(isset($news_type7['5'])){echo $news_type7['5']->id;}?>_home_thumb.jpg" style="margin: 0px 10px 0px 0px;float: left;" align="top" id="img"></a>
 							        			<?} ?>
 							        			<div id="home_bottom"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type7['5'])){echo $news_type7['5']->id;}?>/<?=$news_type7['5']->type?>"><?php if(isset($news_type7['5'])){echo $news_type7['5']->heading;}?></a></div>
-							        			<div style="padding:5px 0px 0px 70px;" id="more-news-div"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type7['5'])){echo $news_type7['5']->id;}?>/<?=$news_type7['5']->type?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div></td>
+							        			<div id="more-news-div"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type7['5'])){echo $news_type7['5']->id;}?>/<?=$news_type7['5']->type?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div></td>
 							        		</tr>
 							        	</table>
 							        	</div></div>
@@ -176,12 +176,12 @@ function test()
 							        			<? if(file_exists("./assets/news/news_img".$news_type4['4']->id."_home_thumb.jpg")){ ?>
 							        				<a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type4['4'])){echo $news_type4['4']->id;}?>/<?=$news_type4['4']->type?>"><img src="<?=base_url();?>assets/news/news_img<?php if(isset($news_type4['4'])){echo $news_type4['4']->id;}?>_home_thumb.jpg" style="margin: 0px 10px 0px 0px;float: left; height: 40px;width: 60px;border: 0px;" align="top" id="img"></a>
 							        			<?} ?>
-							        			<div id="home_bottom"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type4['4'])){echo $news_type4['4']->id;}?>/<?=$news_type4['4']->type?>"><?php if(isset($news_type4['4'])){echo $news_type4['4']->heading;}?></a></div><div style="padding:5px 0px 0px 70px;" id="more-news-div"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type4['4'])){echo $news_type4['4']->id;}?>/<?=$news_type4['4']->type?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div></td>
+							        			<div id="home_bottom"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type4['4'])){echo $news_type4['4']->id;}?>/<?=$news_type4['4']->type?>"><?php if(isset($news_type4['4'])){echo $news_type4['4']->heading;}?></a></div><div  id="more-news-div"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type4['4'])){echo $news_type4['4']->id;}?>/<?=$news_type4['4']->type?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div></td>
 							        			<td width="50%" valign="top">
 							        			<? if(file_exists("./assets/news/news_img".$news_type4['5']->id."_home_thumb.jpg")){ ?>
 							        			<a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type4['5'])){echo $news_type4['5']->id;}?>/<?=$news_type4['5']->type?>"><img src="<?=base_url();?>assets/news/news_img<?php if(isset($news_type4['5'])){echo $news_type4['5']->id;}?>_home_thumb.jpg" style="margin: 0px 10px 0px 0px;float: left; height: 40px;width: 60px;" align="top" id="img"></a>
 							        			<?} ?>
-							        			<div id="home_bottom"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type4['5'])){echo $news_type4['5']->id;}?>/<?=$news_type4['5']->type?>"><?php if(isset($news_type4['5'])){echo $news_type4['5']->heading;}?></a></div><div style="padding:5px 0px 0px 70px;" id="more-news-div"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type4['5'])){echo $news_type4['5']->id;}?>/<?=$news_type4['5']->type?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div></td>
+							        			<div id="home_bottom"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type4['5'])){echo $news_type4['5']->id;}?>/<?=$news_type4['5']->type?>"><?php if(isset($news_type4['5'])){echo $news_type4['5']->heading;}?></a></div><div id="more-news-div"><a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type4['5'])){echo $news_type4['5']->id;}?>/<?=$news_type4['5']->type?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div></td>
 							        		</tr>
 							        		
 							        	</table>
@@ -210,13 +210,13 @@ function test()
 								        			<? if(file_exists("./assets/cinema/ceni_img".$cinema_type1['4']->id."_home_thumb.jpg")){ ?>
 								        				<a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['4'])){echo $cinema_type1['4']->id;}?>/<?=$cinema_type1['4']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($cinema_type1['4'])){echo $cinema_type1['4']->id;}?>_home_thumb.jpg" style="margin: 0px 10px 0px 0px;float: left;;border: 0px;" align="top" id="img"></a>
 								        			<?} ?>
-							        				<div id="home_bottom"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['4'])){echo $cinema_type1['4']->id;}?>/<?=$cinema_type1['4']->type?>"><?php if(isset($cinema_type1['4'])){echo $cinema_type1['4']->heading;}?></a></div><div style="padding:5px 0px 0px 70px;" id="more-news-div"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['4'])){echo $cinema_type1['4']->id;}?>/<?=$cinema_type1['4']->type?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div></td>
+							        				<div id="home_bottom"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['4'])){echo $cinema_type1['4']->id;}?>/<?=$cinema_type1['4']->type?>"><?php if(isset($cinema_type1['4'])){echo $cinema_type1['4']->heading;}?></a></div><div id="more-news-div"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['4'])){echo $cinema_type1['4']->id;}?>/<?=$cinema_type1['4']->type?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div></td>
 							        			<td width="50%" valign="top">
 							        			<? if(!empty($cinema_type1['5'])){ ?>
 							        			<? if(file_exists("./assets/cinema/ceni_img".$cinema_type1['5']->id."_home_thumb.jpg")){ ?>
 							        			<a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['5'])){echo $cinema_type1['5']->id;}?>/<?=$cinema_type1['5']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($cinema_type1['5'])){echo $cinema_type1['5']->id;}?>_home_thumb.jpg" style="margin: 0px 10px 0px 0px;float: left;border: 0px;" align="top" id="img"></a>
 							        			<?} ?>
-							        			<div id="home_bottom"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['5'])){echo $cinema_type1['5']->id;}?>/<?=$cinema_type1['5']->type?>"><?php if(isset($cinema_type1['5'])){echo $cinema_type1['5']->heading;}?></a></div><div style="padding:5px 0px 0px 70px;" id="more-news-div"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['5'])){echo $cinema_type1['5']->id;}?>/<?=$cinema_type1['5']->type?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div><?} ?></td>
+							        			<div id="home_bottom"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['5'])){echo $cinema_type1['5']->id;}?>/<?=$cinema_type1['5']->type?>"><?php if(isset($cinema_type1['5'])){echo $cinema_type1['5']->heading;}?></a></div><div  id="more-news-div"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['5'])){echo $cinema_type1['5']->id;}?>/<?=$cinema_type1['5']->type?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div><?} ?></td>
 							        		
 							        		</tr>
 							        		
@@ -248,13 +248,13 @@ function test()
 								        			<? if(file_exists("./assets/mahila/news_img".$mahila_details_yoga['4']->id."_home_thumb.jpg")){ ?>
 								        				<a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['4'])){echo $mahila_details_yoga['4']->id;}?>"><img src="<?=base_url();?>assets/mahila/news_img<?php if(isset($mahila_details_yoga['4'])){echo $mahila_details_yoga['4']->id;}?>_home_thumb.jpg" style="margin: 0px 10px 0px 0px;float: left;;width: 60px;" align="top" id="img"></a>
 								        			<?} }?>
-							        				<div id="home_bottom"><a href="<?=base_url();?>cinema/inner/<?php if(isset($mahila_details_yoga['4'])){echo $mahila_details_yoga['4']->id;}?>"><?php if(isset($mahila_details_yoga['4'])){echo $mahila_details_yoga['4']->heading;}?></a></div><div style="padding:5px 0px 0px 70px;" id="more-news-div"><a href="<?=base_url();?>maila/mahiladetails/<?php if(isset($mahila_details_yoga['4'])){echo $mahila_details_yoga['4']->id;}?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div></td>
+							        				<div id="home_bottom"><a href="<?=base_url();?>cinema/inner/<?php if(isset($mahila_details_yoga['4'])){echo $mahila_details_yoga['4']->id;}?>"><?php if(isset($mahila_details_yoga['4'])){echo $mahila_details_yoga['4']->heading;}?></a></div><div  id="more-news-div"><a href="<?=base_url();?>maila/mahiladetails/<?php if(isset($mahila_details_yoga['4'])){echo $mahila_details_yoga['4']->id;}?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div></td>
 							        			<td width="50%" valign="top">
 							        			<? if(!empty($mahila_details_yoga['5'])){ ?>
 							        			<? if(file_exists("./assets/mahila/news_img".$mahila_details_yoga['5']->id."_home_thumb.jpg")){ ?>
 							        			<a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['5'])){echo $mahila_details_yoga['5']->id;}?>/<?=$mahila_details_yoga['5']->cat_id?>"><img src="<?=base_url();?>assets/mahila/news_img<?php if(isset($mahila_details_yoga['5'])){echo $mahila_details_yoga['5']->id;}?>_home_thumb.jpg" style="margin: 0px 10px 0px 0px;float: left;width: 60px;" align="top" id="img"></a>
 							        			<?} ?>
-							        			<div id="home_bottom"><a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['5'])){echo $mahila_details_yoga['5']->id;}?>"><?php if(isset($mahila_details_yoga['5'])){echo $mahila_details_yoga['5']->heading;}?></a></div><div style="padding:5px 0px 0px 70px;" id="more-news-div"><a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['5'])){echo $mahila_details_yoga['5']->id;}?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div><?} ?></td>
+							        			<div id="home_bottom"><a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['5'])){echo $mahila_details_yoga['5']->id;}?>"><?php if(isset($mahila_details_yoga['5'])){echo $mahila_details_yoga['5']->heading;}?></a></div><div  id="more-news-div"><a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['5'])){echo $mahila_details_yoga['5']->id;}?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div><?} ?></td>
 							        		
 							        		</tr>
 							        		
@@ -292,7 +292,7 @@ function test()
                 <?} ?>
                 <font id="mainnews"><a href="<?=base_url();?>news/newsdetails/<?=$active_news['0']->id?>/<?=$active_news['0']->type?>"><?php echo $active_news['0']->heading;?></a></font><br>
                <?php echo $active_news['0']->summary;?>
-               <div style="height: 170px;" id="telugufont">
+               <div style="" id="telugufont">
                <ul id="mainnews">
             <?php 
           		$count=0;  foreach ($active_news as $row):
@@ -349,7 +349,7 @@ function test()
               <tr>
                 <td width="500"  valign="top"><table width="98%" border="0" cellpadding="0" cellspacing="0" style="margin-left: 5px">
                   <tr>
-                    <td height="4" valign="top"><img src="<?=base_url();?>assets/imgs/photogalleri-top-lin.jpg" width="485" height="4" /></td>
+                    <td height="4" valign="top"><img src="<?=base_url();?>assets/imgs/photogalleri-top-lin.jpg" width="480" height="4" /></td>
                   </tr>
                 </table>
                   <table width="98%" border="0" id="photigalleri" cellpadding="0" cellspacing="0" style="margin-left: 5px">
@@ -364,19 +364,20 @@ function test()
 							        <div id="tab1"><p>
 							        <table width="100%" height="100%"><tr>
 							   			<?php if(!empty($images)){
+							   				//print_r($images);
 							   				$count=1;
 							   			foreach ($images as $item):
-							   			
+							   			//print_r($item);
 							   			foreach ($item as $sub):
 							   			//print_r($sub);					
 							   			?>
 							   		<td width="125"  valign="top" >
 									<div style="height: 95px;width: 100%;text-align: left;margin-bottom: 4px;">
-									<? if(file_exists("./assets/gallery/image".$sub['id']."_thumb.jpg")){ ?>
-										<a href="<?=base_url();?>gallery/content/<?=$sub['id']?>/<?=$sub['parentid']?>"><img id="img" src="<?=base_url();?>assets/gallery/image<?=$sub['id']?>_thumb.jpg" height="95px" width="130px" id="img"></a>
+									
+										<a href="<?=base_url();?>gallery/content/<?=$sub['id']?>/<?=$sub['parentid']?>"><img id="img" src="<?=base_url();?>assets/gallery/thumimg<?=$sub['id']?>.jpg" id="img"></a>
 									
 									</div>
-									<div id="gall_botto_img"><a href="<?=base_url();?>gallery/content/<?=$sub['id']?>/<?=$sub['parentid']?>"><?=$sub['title']?></a></div><?} ?></td>
+									<!--<div id="gall_botto_img"><a href="<?=base_url();?>gallery/content/<?=$sub['id']?>/<?=$sub['parentid']?>"><?=$sub['title']?></a></div>--></td>
 							   			<? $count++; 
 							   			if($count==3){
 							   				break;
@@ -425,7 +426,7 @@ function test()
                   </table>
                   <table width="98%" border="0" cellpadding="0" cellspacing="0" style="margin-left: 5px">
                     <tr>
-                      <td><img src="<?=base_url();?>assets/imgs/photogalleri-botom-lin.jpg" width="485" height="4" /></td>
+                      <td><img src="<?=base_url();?>assets/imgs/photogalleri-botom-lin.jpg" width="480" height="4" /></td>
                     </tr>
                   </table>
                 </td><td>

@@ -217,10 +217,13 @@
 		$query=$this->db->get('gallery_categeory');
 		return $query->result();
 	}
-	function get_cateimage($type)
+	function get_cateimage($type,$limit)
 	{
+		if(isset($limit)){
+			$this->db->limit($limit);
+		}
 		$this->db->order_by('id','desc');
-		$this->db->limit(8);
+		
 		$array=array('parentid'=>$type);
 		$this->db->where($array);
 		$quary=$this->db->get('gallery_categeory');
@@ -268,6 +271,13 @@
 		$count =$this->db->count_all_results();
 		return $count;
   	}
+   	function count1($type)
+  	{
+  		$this->db->like('parentid',$type);
+		$this->db->from('gallery_categeory');
+		$count =$this->db->count_all_results();
+		return $count;
+  	}
   	function get_image($id)
   	{
   		$this->db->where('id',$id);
@@ -290,6 +300,18 @@
 	}
  	function gallery_pagi($type)
 	{
+		$query="from gallery_images where parentid=$type order by gallery_images.id desc";
+		return $query;
+	}
+  	function gallery_pagi1($type)
+	{
+		/*$this->db->order_by('id','desc');
+		//$this->db->select('id,title','parentid');
+		$this->db->limit(1);
+		$array=array('parentid'=>$parentid);
+		$this->db->where($array);
+		$query=$this->db->get('gallery_images'); */
+		
 		$query="from gallery_images where parentid=$type order by gallery_images.id desc";
 		return $query;
 	}

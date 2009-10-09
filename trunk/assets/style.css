@@ -695,6 +695,7 @@ width: 594px;
 {
 background-image: url(imgs/body-center.jpg);
 background-repeat: repeat-x;
+height: 28px;
 }
 #gal_center-botom
 {
@@ -1107,3 +1108,6 @@ font-size: 13px;
 	height: 54px;
 	width: 135px;
 }
+#view{
+	margin-right: 5px;
+	}

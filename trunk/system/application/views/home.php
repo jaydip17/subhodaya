@@ -347,22 +347,23 @@ function test()
           <td width="100%" valign="top"  colspan="2">
           	<table width="0"  border="0"  id="photog-md" cellpadding="0" cellspacing="0" style="margin-left:5px;">
               <tr>
-                <td width="500"  valign="top"><table width="98%" border="0" cellpadding="0" cellspacing="0" style="margin-left: 5px">
+                <td width="498"  valign="top"><table width="98%" border="0" cellpadding="0" cellspacing="0" style="margin-left: 5px">
                   <tr>
-                    <td height="4" valign="top"><img src="<?=base_url();?>assets/imgs/photogalleri-top-lin.jpg" width="480" height="4" /></td>
+                    <td height="4" valign="top"><img src="<?=base_url();?>assets/imgs/photogalleri-top-lin.jpg" width="481" height="4" /></td>
                   </tr>
                 </table>
-                  <table width="98%" border="0" id="photigalleri" cellpadding="0" cellspacing="0" style="margin-left: 5px">
-                    <tr><td valign="bottom" class=" yui-skin-sam" align="left">
-                      	<div id="demo1" class="yui-navset" style="color: #EDF5FF;">
+                  <table border="0" cellpadding="0" cellspacing="0" style="margin-left: 5px;">
+                    <tr><td valign="bottom" class=" yui-skin-sam" align="left" style=" border-left:1px solid #3daff6;
+	border-right:1px solid #3daff6;">
+                      	<div id="demo1" class="yui-navset" style="color: #EDF5FF;width: 480px;">
 	    						<ul class="yui-nav">
 							        <li class="selected" style="text-align: center;"><a href="#tab1"><em style="width: 80px;"><span id="telugufont"><?=$more['13']->matter ?></span></em></a></li>
 							        <li style="text-align: center;"><a href="#tab3"><em style="width: 80px;"><span id="telugufont"><?=$more['14']->matter ?></span></em></a></li>
-									<li style="text-align: center;"><a href="#tab3"><em style="width: 100px;"><span id="telugufont"><?=$more['15']->matter ?></span></em></a></li>
-	    						</ul>            
-    							<div class="yui-content" style="height: 150px;text-align: center;" id="tabs_background">
+									<!--<li style="text-align: center;"><a href="#tab3"><em style="width: 100px;"><span id="telugufont"><?=$more['15']->matter ?></span></em></a></li>
+	    						--></ul>            
+    							<div class="yui-content" style="height: 173px;text-align: center;" id="tabs_background">
 							        <div id="tab1"><p>
-							        <table width="100%" height="100%"><tr>
+							        <table width="95%" height="100%"><tr>
 							   			<?php if(!empty($images)){
 							   				//print_r($images);
 							   				$count=1;
@@ -371,8 +372,8 @@ function test()
 							   			foreach ($item as $sub):
 							   			//print_r($sub);					
 							   			?>
-							   		<td width="125"  valign="top" >
-									<div style="height: 95px;width: 100%;text-align: left;margin-bottom: 4px;">
+							   		<td valign="top" >
+									<div style=";width:;text-align: left;margin-bottom: 4px;">
 									
 										<a href="<?=base_url();?>gallery/content/<?=$sub['id']?>/<?=$sub['parentid']?>"><img id="img" src="<?=base_url();?>assets/gallery/thumimg<?=$sub['id']?>.jpg" id="img"></a>
 									
@@ -387,8 +388,9 @@ function test()
 							   			endforeach;
 							   			endforeach; }
 							   			else 'No data found';?>
+							   			<td width="11%" valign="bottom"><div style="width: 90%;height: 15px;margin-bottom: 2px;" id="more-news-div"><a href="<?=base_url();?>gallery/inner/<?php if(!empty($sub['parentid'])) {echo $sub['parentid'];}?>"><?=$more['0']->matter;?></a></div></td>
 							   			</tr>
-							   			</table><div style="width: 100%;height: 15px;" id="more-news-div"><a href="<?=base_url();?>gallery/inner/<?php if(!empty($sub['parentid'])) {echo $sub['parentid'];}?>"><?=$more['0']->matter;?></a></div>
+							   			</table>
 							        </p></div>
 							        <div id="tab2"><p>
 							        <table width="100%" height="100%">
@@ -398,10 +400,8 @@ function test()
 							        foreach ($gall_topviews as $row): ?>
 							   			<td width="125"  valign="bottom">
 							   				<div style="border: 0px solid red;width: 100%;text-align: left;margin-bottom: -1px">
-							   				<? if(file_exists("./assets/gallery/image".$row->id."_thumb.jpg")){ ?>
-							   				<a href="<?=base_url();?>gallery/content/<?=$row->id?>/<?=$row->parentid?>"><img id="img" src="<?=base_url();?>assets/gallery/image<?=$row->id?>_thumb.jpg" id="img"></a>
+							   				<a href="<?=base_url();?>gallery/content/<?=$row->id?>/<?=$row->parentid?>"><img id="img" src="<?=base_url();?>assets/gallery/thumimg<?=$row->id?>.jpg" id="img"></a>
 							   				</div>
-							   				<div id="gall_botto_img"><a href="<?=base_url();?>gallery/content/<?=$row->id?>/<?=$row->parentid?>"><?=$row->title?></a></div><?} ?>
 										</td>
 										<? if($count==3){
 											break;
@@ -409,12 +409,12 @@ function test()
 											$count++;
 										}endforeach;}
 										?>
-
+									<td width="11%" valign="bottom"><div style="width: 90%;height: 15px;margin-bottom: 2px;" id="more-news-div"><a href="<?=base_url();?>gallery/inner/<?php if(!empty($gall_topviews)) {echo $row->parentid;}?>"><?=$more['0']->matter;?></a></div></td>
 							   		</tr>
 							   		</table>
 							        </p></div>
-							        <div id="tab3"><p>Tab Three Content</p></div>
-    							</div>
+							        <!--<div id="tab3"><p>Tab Three Content</p></div>
+    							--></div>
 <script>
 (function() {
     var tabView = new YAHOO.widget.TabView('demo1');
@@ -424,9 +424,9 @@ function test()
 						</div>
                       </td></tr>
                   </table>
-                  <table width="98%" border="0" cellpadding="0" cellspacing="0" style="margin-left: 5px">
+                  <table width="95%" border="0" cellpadding="0" cellspacing="0" style="margin-left: 5px">
                     <tr>
-                      <td><img src="<?=base_url();?>assets/imgs/photogalleri-botom-lin.jpg" width="480" height="4" /></td>
+                      <td><img src="<?=base_url();?>assets/imgs/photogalleri-botom-lin.jpg" width="481" height="4" /></td>
                     </tr>
                   </table>
                 </td><td>
@@ -799,7 +799,7 @@ function test()
                         <td  valign="top" id="center-img1"><img src="<?=base_url();?>assets/imgs/new1.jpg" width="5" /></td>
                         <td valign="top" id="center-img1" align="left">
                          <div id="home_poll" >
-                 	<div><? if(!empty($newspoll['0']->question)){
+                 	<div style="padding-top: 3px;"><? if(!empty($newspoll['0']->question)){
                  	   echo $newspoll['0']->question;
                  	   ?></div>
      				<table width="100%">

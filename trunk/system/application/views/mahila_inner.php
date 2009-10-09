@@ -19,7 +19,7 @@ padding-left:6px;
 						<td valign="top" align="left" height="295px"><div class="heading" style="width: 181px;" id="news_heading"><div style="padding-top:5px;" id="newsheading"><?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->cinema_type;}?></div></div>
 						<div style="height: 265px;border:1px solid #9FA0A0;" id="left_news">
 							<? if(file_exists("./assets/cinema/ceni_img".$cinema_type1['0']->id."_thumb.jpg")){?>
-							<a href="<?=base_url();?>cinema/inner/<?=$cinema_type1['0']->id?>/<?=$cinema_type1['0']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type1['0']->id?>_thumb.jpg" style="margin:5px 0px 0px 20px;" id="img"></a><?} ?>
+							<a href="<?=base_url();?>cinema/inner/<?=$cinema_type1['0']->id?>/<?=$cinema_type1['0']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type1['0']->id?>_thumb.jpg" style="margin:5px 0px 3px 20px;" id="img"></a><?} ?>
 							<ul id="mainnews">
 								<?php
 								if(!empty($cinema_type1))
@@ -44,10 +44,8 @@ padding-left:6px;
 						<div style="height: 275px;" id="left_news">
 						<div style="height: 250px">
 						<?if(!empty($news_type2)){
-						if(file_exists("./assets/news/news_img".$news_type2['0']->id."_thumb.jpg")){ ?>
-							<? if(file_exists("./assets/news/news_img".$news_type2['0']->id."_thumb.jpgg")){?>
-							<a href="<?=base_url();?>news/newsdetails/<?=$news_type2['0']->id?>/<?=$news_type2['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?=$news_type2['0']->id?>_thumb.jpg" style="margin:5px 0px 0px 20px;" id="img"><?} ?></a>
-							<?} ?>
+							if(file_exists("./assets/news/news_img".$news_type2['0']->id."_thumb.jpg")){?>
+							<a href="<?=base_url();?>news/newsdetails/<?=$news_type2['0']->id?>/<?=$news_type2['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?=$news_type2['0']->id?>_thumb.jpg" style="margin:5px 0px 3px 20px;" id="img"><?} ?></a>
 							<ul >
 								<?php
 								$count=0; foreach ($news_type2 as $row):?>
@@ -81,7 +79,7 @@ padding-left:6px;
 			<td>
 			
 			<div id="maindiv-news" align="left" style="font-size:14px;letter-spacing:1px">
-			<?if(file_exists("./assets/".$type."/news_img".$result['0']->id."_thumb.jpg")){ ?><img src="<?=base_url();?>assets/<?=$type?>/news_img<?=$result['0']->id?>.jpg" style="float: left;padding:0px 30px 30px 0px;border: 2px solid  gray; margin: 10px 0px 0px 10px;" ></img><?} ?>
+			<?if(file_exists("./assets/".$type."/news_img".$result['0']->id."_thumb.jpg")){ ?><img src="<?=base_url();?>assets/<?=$type?>/news_img<?=$result['0']->id?>.jpg" style="float: left;padding:0px 0px 0px 0px;border: 2px solid  gray; margin: 10px 20px 20px 10px;" ></img><?} ?>
 			<?=$result['0']->description ?></div>
 		
 		</td></tr>
@@ -93,7 +91,7 @@ padding-left:6px;
 			<table id="formdiv" cellspacing="5">
 				<tr><td valign="top" colspan="2"><div style="background-color: #B5E8FD;height:20px;"></div></td></tr>
 				<tr><td width="150px" align="left" style="padding-left: 15px"><?=$more['27']->matter;?></td><td><input type="text" name="name" size="30"></td></tr>
-				<?=form_hidden('heading',$result[0]->heading)?>
+				<?=form_hidden('heading',$result['0']->heading)?>
 				<tr><td width="150px" align="left" style="padding-left: 15px;"><?php if(isset($more['38'])){ echo $more['38']->matter;}?></td><td><input type="text" name="uemil" size="30"></td></tr>
 				<tr><td width="150px" align="left" style="padding-left: 15px;"><?php if(isset($more['39'])){ echo $more['39']->matter;}?></td><td><input type="text" name="fname" size="30"></td></tr>
 				<tr><td width="150px" align="left" style="padding-left: 15px"><?=$more['28']->matter;?></td><td><input type="text" name="email" size="30"></td></tr>
@@ -157,18 +155,20 @@ padding-left:6px;
 				<tr>
 					<td valigns="top" align="left" height="295px"><div class="heading" style="width: 181px;" id="news_heading"><div style="padding-top:5px;" id="newsheading"><?php if($type=="mahila"){echo $more['9']->matter;}else {echo $more['8']->matter;}?></div></div>
 						<div style="height: 265px;border:1px solid #9FA0A0;" id="left_news">
-						<?if(!empty($details_more)){?>	<img src="<?=base_url();?>assets/<?=$link?>/news_img<?=$details_more[$key]->id?>_thumb.jpg" style="margin:5px 0px 0px 20px;" id="img"/><?} ?>
+						<?if(!empty($details_more)){?>	<img src="<?=base_url();?>assets/<?=$link?>/news_img<?=$details_more[$key]->id?>_thumb.jpg" style="margin:5px 0px 3px 20px;" id="img"/><?} ?>
 							<ul id="mainnews">
 								<?php
 								if(!empty($details_more)){
-								
+								$i=0;
           				        foreach($details_more as $article){
           				 		?>
           				          <li><a href="<?=base_url();?><?=$link?>/<?=$link?>details/<?=$article->id?>"><? echo $article->heading;?></a></li>
-          				       <?} }
-	       											
-								else
-								echo 'No data found';?>
+          				       <?
+							if($i>=4)
+								break;
+								$i++;}
+								} 
+								?>
 							</ul>
 							<div id="more-news-div"><a href="<?=base_url();?><?=$link;?>/details/<?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->type;}?>"><?php if(isset($more['0'])){echo $more['0']->matter;}?></a></div>
 						

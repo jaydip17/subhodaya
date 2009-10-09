@@ -131,10 +131,10 @@ sample sf dsfsd fdsf
      </tr>
      </table>
      </td>
-     <td width="245" valign="top" align="center">
-     	<div style="width: 237px;height: 337px;border: 1px solid red;" >
-            <img src="<?=base_url();?>assets/ads/Cinema1.jpg" style="border: 1px solid #50BCFC;"></img>
-<img src="<?=base_url();?>assets/ads/Cinema2.jpg" style="border: 1px solid #50BCFC;"></img></div>
+     <td width="220" valign="top" align="center" style="padding: 5px;">
+     	<div style="width: 220px;height: 337px;border: 1px solid blue;" >
+            <img src="<?=base_url();?>assets/ads/Cinema1.jpg" style="border: 1px solid #50BCFC;margin: 4px;width: 210px"></img>
+			<img src="<?=base_url();?>assets/ads/Cinema2.jpg" style="border: 1px solid #50BCFC;margin: 5px;width: 210px;"></img></div>
      </td>     <td width="185" align="center" valign="top" rowspan="3">
 		<table width="100%" style="border:1px solid #50BCFC;">
 			<tr>
@@ -174,7 +174,7 @@ sample sf dsfsd fdsf
 				<tr>
 					<td>
 					<div id="home_poll" >
-                 	<div><? if(!empty($cinemapoll['0']->question)){
+                 	<div style="padding-top: 3px;"><? if(!empty($cinemapoll['0']->question)){
 						echo   $cinemapoll['0']->question;               		
                  	     ?></div>
 
@@ -213,8 +213,8 @@ sample sf dsfsd fdsf
           		<table width="100%" cellspacing="10" height="500">
           			<tr>
           				<td width="375" style="border: 1px solid #50BCFC;" id="newstable" valign="top" height="235">
-          				<div style="width:100%;" id="news_heading"><span id="newsheading"><?=$cinema_type1['0']->cinema_type?></span></div>
-          				<div id='telugufont1' style="height: 200px;padding: 0px 3px 0px 4px;text-align: justify;">
+          				<div style="width:100%;padding-top: 5px;" id="news_heading" ><span id="newsheading"><?=$cinema_type1['0']->cinema_type?></span></div>
+          				<div id='telugufont1' style="height: 190px;padding: 0px 3px 0px 4px;text-align: justify;">
           				 <? if(!empty($cinema_type1)){
            					if(file_exists("./assets/cinema/ceni_img".$cinema_type1['0']->id."_thumb.jpg")){ ?>
 							 		<a href="<?=base_url();?>cinema/inner/<?=$cinema_type1['0']->id?>/<?=$cinema_type1['0']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type1['0']->id?>_thumb.jpg" style="float: left;margin:4px 20px 3px 3px;" id="img"></img></a>
@@ -246,11 +246,11 @@ sample sf dsfsd fdsf
           								?>
 							 		</ul>
 							 		</div>
-							 			<div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>cinema/details/<?=$cinema_type1['0']->type?>"><?=$more['0']->matter?></a></span></div>
+							 			<div id="more-news-div" style="height: 15px;"><span id="news-more"><a href="<?=base_url();?>cinema/details/<?=$cinema_type1['0']->type?>"><?=$more['0']->matter?></a></span></div>
           				</td>
           				<td style="border: 1px solid #50BCFC;" valign="top" id="newstable" height="235">
-          				<div style="width:100%;" id="news_heading"><span id="newsheading"><?=$cinema_type2['0']->cinema_type?></span></div>
-          				<div id='telugufont1' style="height: 200px;padding: 0px 3px 0px 4px;text-align: justify;">
+          				<div style="width:100%;padding-top: 5px;" id="news_heading"><span id="newsheading"><?=$cinema_type2['0']->cinema_type?></span></div>
+          				<div id='telugufont1' style="height: 190px;padding: 0px 3px 0px 4px;text-align: justify;">
           				   <? if(!empty($cinema_type2)){
            					if(file_exists("./assets/cinema/ceni_img".$cinema_type2['0']->id."_thumb.jpg")){ ?>
 							 		<a href="<?=base_url();?>cinema/inner/<?=$cinema_type2['0']->id?>/<?=$cinema_type2['0']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type2['0']->id?>_thumb.jpg" style="float: left;margin:4px 20px 3px 3px;" id="img"></img></a>
@@ -294,7 +294,7 @@ sample sf dsfsd fdsf
 							  </ul>
 							  <div class="TabbedPanelsContentGroup">
 							    <div class="TabbedPanelsContent">
-							    <div id='telugufont1' style="height: 200px;padding: 0px 3px 0px 4px;text-align: justify;">
+							    <div id='telugufont1' style="height: 190px;padding: 0px 3px 0px 4px;text-align: justify;">
 							    <? if(!empty($cinema_type3)){
            					   if(file_exists("./assets/cinema/ceni_img".$cinema_type3['0']->id."_thumb.jpg")){ ?>
 							 		<a href="<?=base_url();?>cinema/inner/<?=$cinema_type3['0']->id?>/<?=$cinema_type3['0']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type3['0']->id?>_thumb.jpg" style="float: left;margin:4px 20px 3px 3px;" id="img"></img></a>
@@ -329,7 +329,7 @@ sample sf dsfsd fdsf
 							 		<div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>cinema/details/<?=$cinema_type3['0']->type?>"><?=$more['0']->matter?></a></span></div>
           						</div>
 							    <div class="TabbedPanelsContent">
-							   		 <div id='telugufont1' style="height: 200px;padding: 0px 3px 0px 4px;text-align: justify;">
+							   		 <div id='telugufont1' style="height: 190px;padding: 0px 3px 0px 4px;text-align: justify;">
 							   		 <? if(!empty($cinema_type4)){
            					          if(file_exists("./assets/cinema/ceni_img".$cinema_type4['0']->id."_thumb.jpg")){ ?>
 							 		<a href="<?=base_url();?>cinema/inner/<?=$cinema_type4['0']->id?>/<?=$cinema_type4['0']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type4['0']->id?>_thumb.jpg" style="float: left;margin:4px 20px 3px 3px;" id="img"></img></a>
@@ -374,7 +374,7 @@ sample sf dsfsd fdsf
 							  </ul>
 							  <div class="TabbedPanelsContentGroup">
 							    <div class="TabbedPanelsContent">
-							   		  <div id='telugufont1' style="height: 200px;padding: 0px 3px 0px 4px;text-align: justify;">
+							   		  <div id='telugufont1' style="height: 190px;padding: 0px 3px 0px 4px;text-align: justify;">
 							   		  <? if(!empty($cinema_type5)){
            					if(file_exists("./assets/cinema/ceni_img".$cinema_type5['0']->id."_thumb.jpg")){ ?>
 							 		<a href="<?=base_url();?>cinema/inner/<?=$cinema_type5['0']->id?>/<?=$cinema_type5['0']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type5['0']->id?>_thumb.jpg" style="float: left;margin:4px 20px 3px 3px;border: 0px;" id="img"></img></a>
@@ -409,7 +409,7 @@ sample sf dsfsd fdsf
 							 			<div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>cinema/details/<?=$cinema_type5['0']->type?>"><?=$more['0']->matter?></a></span></div>
           						</div>
 							 	<div class="TabbedPanelsContent">
-									  <div id='telugufont1' style="height: 200px">
+									  <div id='telugufont1' style="height: 190px">
 									  <? if(!empty($cinema_type6)){
            					if(file_exists("./assets/cinema/ceni_img".$cinema_type6['0']->id."_thumb.jpg")){ ?>
 							 		<a href="<?=base_url();?>cinema/inner/<?=$cinema_type6['0']->id?>/<?=$cinema_type6['0']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?=$cinema_type6['0']->id?>_thumb.jpg" style="float: left;margin:4px 20px 3px 3px;" id="img"></img></a>
@@ -456,41 +456,43 @@ var TabbedPanels2 = new Spry.Widget.TabbedPanels("TabbedPanels2");
           	</td>
           </tr>
           <table width="99%"  border="0" cellpadding="0" cellspacing="5">
-          <tr><td valign="bottom" align="left" width="200" >
-         <div class=" yui-skin-sam" style="width: 470px; border: 1px solid #50BCFC; " >
-                      	<div id="demo1" class="yui-navset" style="color: #EDF5FF;">
+          <tr><td valign="bottom" align="left" width="200" class=" yui-skin-sam" style="border: 1px solid #52CBFA;">
+         <div id="demo1" class="yui-navset" style="color: #EDF5FF;width: 480px;">
 	    						<ul class="yui-nav">
-							        <li style="text-align: center;" class="selected"><a href="#tab2"><em style="width: 80px;"><span id="telugufont"><?=$more['13']->matter ?></span></em></a></li>
+							        <li class="selected" style="text-align: center;"><a href="#tab1"><em style="width: 80px;"><span id="telugufont"><?=$more['13']->matter ?></span></em></a></li>
 							        <li style="text-align: center;"><a href="#tab3"><em style="width: 80px;"><span id="telugufont"><?=$more['14']->matter ?></span></em></a></li>
-									<li style="text-align: center;"><a href="#tab3"><em style="width: 80px;"><span id="telugufont"><?=$more['15']->matter ?></span></em></a></li>
-	    						</ul>            
-    							<div class="yui-content" style="height: 150px;text-align: center;">
+									<!--<li style="text-align: center;"><a href="#tab3"><em style="width: 100px;"><span id="telugufont"><?=$more['15']->matter ?></span></em></a></li>
+	    						--></ul>            
+    							<div class="yui-content" style="height: 173px;text-align: center;" id="tabs_background">
 							        <div id="tab1"><p>
-							        <table width="100%" height="100%"><tr>
+							        <table width="95%" height="100%"><tr>
 							   			<?php if(!empty($images)){
-							   			$count=1;
+							   				//print_r($images);
+							   				$count=1;
 							   			foreach ($images as $item):
+							   			//print_r($item);
 							   			foreach ($item as $sub):
 							   			//print_r($sub);					
 							   			?>
-							   		<td width="125" valign="top" >
-									<div style="height: 95px;border: 0px solid red;width: 100%;text-align: left;">
-									<? if(file_exists("./assets/gallery/image".$sub['id']."_thumb.jpg")){ ?>
-										<a href="<?=base_url();?>gallery/content/<?=$sub['id']?>/<?=$sub['parentid']?>"><img src="<?=base_url();?>assets/gallery/image<?=$sub['id']?>_thumb.jpg" height="95px" width="130px" id="img"></a>
-									<?} ?>
+							   		<td valign="top" >
+									<div style=";width:;text-align: left;margin-bottom: 4px;">
+									
+										<a href="<?=base_url();?>gallery/content/<?=$sub['id']?>/<?=$sub['parentid']?>"><img id="img" src="<?=base_url();?>assets/gallery/thumimg<?=$sub['id']?>.jpg" id="img"></a>
+									
 									</div>
-									<div id="gall_botto_img"><a href="<?=base_url();?>gallery/content/<?=$sub['id']?>/<?=$sub['parentid']?>"><?=$sub['title']?></a></div></td>
-							   			<? $count++;
-							   			if($count==3)
+									<!--<div id="gall_botto_img"><a href="<?=base_url();?>gallery/content/<?=$sub['id']?>/<?=$sub['parentid']?>"><?=$sub['title']?></a></div>--></td>
+							   			<? $count++; 
+							   			if($count==3){
 							   				break;
-							   			
+							   			}
 							   				
 							   			
 							   			endforeach;
 							   			endforeach; }
 							   			else 'No data found';?>
+							   			<td width="11%" valign="bottom"><div style="width: 100%;height: 20px;margin-bottom: 2px;" id="more-news-div"><a href="<?=base_url();?>gallery/inner/<?php if(!empty($sub['parentid'])) {echo $sub['parentid'];}?>"><?=$more['0']->matter;?></a></div></td>
 							   			</tr>
-							   			</table><div style="width: 100%;height: 15px;" id="more-news-div"><a href="<?=base_url();?>gallery/inner/<?=$sub['parentid']?>"><?=$more['0']->matter;?></a></div>
+							   			</table>
 							        </p></div>
 							        <div id="tab2"><p>
 							        <table width="100%" height="100%">
@@ -498,11 +500,10 @@ var TabbedPanels2 = new Spry.Widget.TabbedPanels("TabbedPanels2");
 							        <? if(!empty($gall_topviews)){
 							        $count=1;
 							        foreach ($gall_topviews as $row): ?>
-							   			<td width="125" valign="bottom">
-							   				<div style="border: 0px solid red;width: 100%;text-align: left;">
-							   				<a href="<?=base_url();?>gallery/content/<?=$row->id?>/<?=$row->parentid?>"><img src="<?=base_url();?>assets/gallery/image<?=$row->id?>_thumb.jpg" border="0"></a>
+							   			<td width="125"  valign="bottom">
+							   				<div style="border: 0px solid red;width: 100%;text-align: left;margin-bottom: -1px">
+							   				<a href="<?=base_url();?>gallery/content/<?=$row->id?>/<?=$row->parentid?>"><img id="img" src="<?=base_url();?>assets/gallery/thumimg<?=$row->id?>.jpg" id="img"></a>
 							   				</div>
-							   				<div id="gall_botto_img"><a href="<?=base_url();?>gallery/content/<?=$row->id?>/<?=$row->parentid?>"><?=$row->title?></a></div>
 										</td>
 										<? if($count==3){
 											break;
@@ -510,12 +511,12 @@ var TabbedPanels2 = new Spry.Widget.TabbedPanels("TabbedPanels2");
 											$count++;
 										}endforeach;}
 										?>
-
+									<td width="11%" valign="bottom"><div style="width: 90%;height: 15px;margin-bottom: 2px;" id="more-news-div"><a href="<?=base_url();?>gallery/inner/<?php if(!empty($gall_topviews)) {echo $row->parentid;}?>"><?=$more['0']->matter;?></a></div></td>
 							   		</tr>
 							   		</table>
 							        </p></div>
-							        <div id="tab3"><p>Tab Three Content</p></div>
-    							</div>
+							        <!--<div id="tab3"><p>Tab Three Content</p></div>
+    							--></div>
 <script>
 (function() {
     var tabView = new YAHOO.widget.TabView('demo1');
@@ -525,5 +526,5 @@ var TabbedPanels2 = new Spry.Widget.TabbedPanels("TabbedPanels2");
 						</div>
 						</div>
                       </td>
-                      <td valign="bottom"><div style="border: 1px solid red;height: 120px;width: 450px;background-color: gray;">add space</div></td>
+                      <td valign="bottom"><div style="border: 1px solid blue;height: 210px;width: 450px;background-color: gray;">AD Space</div></td>
 </table>

@@ -108,7 +108,7 @@ padding-top:0px;
 	              $count=0; 
 	              foreach($details_more_sahithi['1'] as $item):?>
 
-	              <li style="padding: 1px;"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>/<?=$item->cat_id?>"><?=$item->heading?></li>
+	              <li><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>/<?=$item->cat_id?>"><?=$item->heading?></li>
 	              <? if($count==5)
 	              break;
 	              else $count++;
@@ -474,7 +474,7 @@ padding-top:0px;
 							           {$count++;
 							            continue;
 							           }
-							            if($count>5)
+							            if($count>3)
 							           {
 							           break;
                                        }$count++;?>

@@ -79,12 +79,14 @@ class Cinema extends Controller {
 		$active_news2=$this->Cinema_Model->get_activenews1(5);
 		$active_news3=$this->Cinema_Model->get_activenews1(3);
 		$active_news4=$this->Cinema_Model->get_activenews1(4);
+		//print_r($active_news2);
 		//greetings
 		$greetings4=$this->Greeting_Model->get_main_greetings(4);
 		//sahithi 
 		$sahithi=$this->Sahithi_Model->get_home_stories(2);
+		$sahithi1=$this->Sahithi_Model->get_home_stories(4);
 		$sahithi_cat=$this->Sahithi_Model->get_sahithitype();
-		//print_r($sahithi_cat);
+		//print_r($sahithi);
 		$data=array('more'			=>	$more,
 					'result'		=>	$result,
 					'onload' 		=> 	$onload,
@@ -95,6 +97,7 @@ class Cinema extends Controller {
 					'active_news4'	=>	$active_news4,
 					'greetings4'	=>  $greetings4,
 					'sahithi'       =>  $sahithi,
+					'sahithi1'       =>  $sahithi1,
 					'sahithi_cat'	=>	$sahithi_cat);
 		$this->load->view('cinema_content',$data);
 	}
@@ -106,7 +109,7 @@ class Cinema extends Controller {
 		$result1=$this->Cinema_Model->get_all($type);
 		$result=$this->Cinema_Model->inner($id);
 		$mahila_details=$this->Mahila_Model->active_mahila(6);
-		print_r($mahila_details);
+		//print_r($mahila_details);
 		$news_type2=$this->News_Model->get_newstype1(2);
 		$mahila_details1=$this->Mahila_Model->active_mahila(8);
 		$cinema_cat=$this->Cinema_Model->get_cinemanewstype();

@@ -84,11 +84,12 @@
    <li class="TabbedPanelsTab" onclick="javascript:loadNews('<?=$item->id?>','<?=base_url()?>videolist/videoview/<?=$item->id?>')"><?=$item->name ?></li>
   <?}?>
   </ul>
-  <div class="TabbedPanelsContentGroup" >
+  <div class="TabbedPanelsContentGroup" >    
  <?php  foreach($videocategeories->result() as $key=>$item){
  
   $count=1;?>
-    <div class="TabbedPanelsContent" id="div<?=$item->id?>" >     
+    <div class="TabbedPanelsContent" id="div<?=$item->id?>" > 
+     <img src="<?=base_url();?>assets/imgs/loadingAnimation.gif" align="middle" style="padding:100px 0px 0px 80px;"></img>    
            </div>
      
 

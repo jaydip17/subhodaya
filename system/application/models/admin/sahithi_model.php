@@ -154,10 +154,10 @@ class Sahithi_Model extends Model {
     }
     function get_home_stories($type)
     {
-    	$this->db->select('id,heading,summary');
+    	$this->db->select('id,heading,summary,cat_id');
     	$where=array('homepage'=>'1','cat_id'=>$type);
     	$this->db->where($where);
-    	$this->db->limit(2);
+    	$this->db->limit(4);
     	$this->db->order_by('id','desc');
     	$query=$this->db->get('sahithi');
     	return $query->result();

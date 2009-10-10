@@ -29,7 +29,7 @@ padding-bottom:5px;
 							        <li><a href="#tab3"><em><?=$details['2']->cat_name?></em></a></li>
 									<li><a href="#tab3"><em><?=$details['3']->cat_name?></em></a></li>
 	    					</ul>            
-    						<div class="yui-content">
+    						<div class="yui-content" style="width:450px;">
     						<?for($i=1;$i<=4;$i++){?>
 							 <div id="tab<?=$i?>">
 							    <div style="padding-top: 5px;" id="telugufont1">
@@ -70,7 +70,7 @@ padding-bottom:5px;
           </table></td>
           <td width="245" valign="top"><img src="<?=base_url();?>assets/ads/Inner.jpg"></img></td>
           <td width="185" align="center" valign="top" rowspan="3">
-			<div width="100%" style="border:1px solid #FF0000;height:830px;background-color:#808080;">Google Adds
+			<div width="100%" style="border:1px solid #FF0000;height:830px;background-color:#808080;">Google AD
 			<!--<tr>
 				<td style="border:1px solid #3789C3;height: 25px;" id="news_heading">Latest Gallery</td>
 			</tr>
@@ -111,7 +111,7 @@ padding-bottom:5px;
           		<table width="100%" cellspacing="10" height="520px" >
           			<tr>
           				<td width="450" style="border: 1px solid #3789C3;"  valign="top">
-          				 <div style="width:100%"id="news_heading"><div id="newsheading" style="width:250px;float: left; "><? if (isset($news['0']->cat_name)){ echo $news['0']->cat_name;}?></div>
+          				 <div style="width:100%;"id="news_heading"><div id="newsheading" style="width:250px;float: left;padding-top: 4px;"><? if (isset($news['0']->cat_name)){ echo $news['0']->cat_name;}?></div>
           				 <? $count=1; foreach($news as $row): ?>
           				Change View:<img src="<?=base_url();?>assets/imgs/LIN.png" style="cursor: pointer"onclick="loadNews('content','<?=base_url()?><?=$type?>list/listview/<?=$row->cat_id?>')" />
           				 <img style="cursor: pointer; " src="<?=base_url();?>assets/imgs/FUL.png" onclick="loadNews('content','<?=base_url()?><?=$type?>list/thumbview/<?=$row->cat_id ?>')" />

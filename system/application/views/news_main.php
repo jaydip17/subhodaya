@@ -14,11 +14,11 @@ padding-left: 30px;
     		<tr>
        		<td  valign="top" align="left">
 	       		<table width="100%"  border="0" cellpadding="0" cellspacing="0">
-	     			<tr><td height="4" valign="bottom"><img src="<?=base_url();?>assets/imgs/top-cor-line.jpg" width="503" height="4" /></td></tr>
+	     			<tr><td height="4" valign="bottom"><img src="<?=base_url();?>assets/imgs/top-cor-line.jpg" width="507" height="4" /></td></tr>
 	            </table>
                  <table width="100%"  border="0" style="border-left:1px solid #0872BC; border-right:1px solid #0872BC;"cellpadding="0" cellspacing="0">
                     <tr><td width="100%"  valign="top" align="left" class=" yui-skin-sam" >
-                        <div class=" yui-skin-sam" style="width: 502px;  height: 100%" >
+                        <div class=" yui-skin-sam" style="width: 505px;  height: 100%" >
                       		<div id="demo1" class="yui-navset" style="color: #EDF5FF;">
 	    						<ul class="yui-nav">
 							       <li class="selected" style="text-align: center;"><a href="#tab1"><em style="width: 89px;"><?php if(isset($news_type1['0'])){echo $news_type1['0']->news_cat;}?></em></a></li>
@@ -28,7 +28,7 @@ padding-left: 30px;
 	    						</ul>            
     							<div class="yui-content" >
 							        <div id="tab1"><p>
-							        		<div style="height:235px;padding-left:5px;" id="telugufont1">
+							        		<div style="height:235px;padding:2px 0px 0px 5px;" id="telugufont1">
 							        			<? if(!empty($active_news1)){
 												if(file_exists("./assets/news/news_img".$active_news1['0']->id."_thumb.jpg")){ ?>
           				 						<a href="<?=base_url();?>news/newsdetails/<?=$active_news1['0']->id?>/<?=$active_news1['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?=$active_news1['0']->id?>_thumb.jpg" style="float: left;margin: 2px 24px 2px 1px;text-align: left;text-align: justify;"  id="img"></img></a>
@@ -59,7 +59,7 @@ padding-left: 30px;
           				 						<div id="more-news-div" style="padding-right: 2px;"><span id="news-more"><a href="<?=base_url();?>news/details/<?if(isset($active_news1['0'])){ echo $active_news1['0']->type; }?>"><?=$more['0']->matter?></a></span></div>
 							        	</p></div>
 							        <div id="tab2"><p>
-							        		<div style="height:235px;padding-left:5px;" id="telugufont1">
+							        		<div style="height:235px;padding:2px 0px 0px 5px;" id="telugufont1">
 							        		<? if(!empty($active_news2)){
 												if(file_exists("./assets/news/news_img".$active_news2['0']->id."_thumb.jpg")){ ?>
 							        		<a href="<?=base_url();?>news/newsdetails/<?=$active_news2['0']->id?>/<?=$active_news2['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?=$active_news2['0']->id?>_thumb.jpg" style="float: left;margin: 2px 22px 2px 1px;text-align: left;text-align: justify;" id="img"></img></a>
@@ -91,7 +91,7 @@ padding-left: 30px;
 							        		<div id="more-news-div" style="padding-right: 2px;"><span id="news-more"><a href="<?=base_url();?>news/details/<?if(isset($active_news2['0'])){ echo $active_news2['0']->type; }?>"><?=$more['0']->matter?></a></span></div>
 							        </p></div>
 							        <div id="tab3"><p>
-							        	<div style="height:235px;padding-left:5px;" id="telugufont1">
+							        	<div style="height:235px;padding:2px 0px 0px 5px;" id="telugufont1">
 							        	<? if(!empty($active_news3)){
 											if(file_exists("./assets/news/news_img".$active_news3['0']->id."_thumb.jpg")){ ?>
 							        		<a href="<?=base_url();?>news/newsdetails/<?=$active_news3['0']->id?>/<?=$active_news3['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?=$active_news3['0']->id?>_thumb.jpg" style="float: left;margin: 2px 22px 2px 1px;text-align: left;text-align: justify;" id="img"></img></a>
@@ -123,7 +123,7 @@ padding-left: 30px;
 							        		<div id="more-news-div" style="padding-right: 2px;"><span id="news-more"><a href="<?=base_url();?>news/details/<?if(isset($active_news3['0'])){ echo $active_news3['0']->type; }?>"><?=$more['0']->matter?></a></span></div>
 							        </p></div>
 									<div id="tab4"><p>
-										<div style="height:235px;padding-left:5px;" id="telugufont1">
+										<div style="height:235px;padding:2px 0px 0px 5px;" id="telugufont1">
 										<? if(!empty($active_news4)){
 										if(file_exists("./assets/news/news_img".$active_news4['0']->id."_thumb.jpg")){ ?>
 							        		<a href="<?=base_url();?>news/newsdetails/<?=$active_news4['0']->id?>/<?=$active_news4['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?=$active_news4['0']->id?>_thumb.jpg" style="float: left;margin: 2px 22px 2px 1px;text-align: left;text-align: justify;" id="img"></img></a>
@@ -165,7 +165,7 @@ padding-left: 30px;
 						</div> 
 					
 					</td></tr></table>
-                     <img src="<?=base_url();?>assets/imgs/top-crow-botom.jpg" width="503"/></td>
+                     <img src="<?=base_url();?>assets/imgs/top-crow-botom.jpg" width="507"/></td>
                   </tr>
                 </table></td>
             </tr>
@@ -180,8 +180,8 @@ padding-left: 30px;
           		<table width="100%" cellspacing="10" height="505">
           			<tr>
           				<td id="newstable" valign="top" style="border: 1px solid #50BCFC;">
-          				 <div  id="news_heading"><span id="newsheading"><?if(isset($news_type1['0'])){echo $news_type1['0']->news_cat;} ?></span></div>
-          				 <div style="height:190px;padding-left:5px;" id="telugufont1">
+          				 <div  id="news_heading" style="padding-top: 4px;"><span id="newsheading"><?if(isset($news_type1['0'])){echo $news_type1['0']->news_cat;} ?></span></div>
+          				 <div style="height:190px;padding:2px 0px 0px 5px;" id="telugufont1">
 						<? if(!empty($news_type1)){
 						if(file_exists("./assets/news/news_img".$news_type1['0']->id."_thumb.jpg")){ ?>
           				 <a href="<?=base_url();?>news/newsdetails/<?=$news_type1['0']->id?>/<?=$news_type1['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?=$news_type1['0']->id?>_thumb.jpg" style="float: left;margin: 2px 22px 2px 1px;text-align: justify;"  id="img"></img></a>
@@ -212,8 +212,8 @@ padding-left: 30px;
           				 <div id="more-news-div" style="padding-right: 2px;"><span id="news-more"><a href="<?=base_url();?>news/details/<?if(isset($news_type1['0'])){ echo $news_type1['0']->type; }?>"><?=$more['0']->matter?></a></span></div>
           				</td>
           				<td  valign="top" id="newstable" style="border: 1px solid #50BCFC;">
-          				 <div  id="news_heading"><span id="newsheading"><? if(isset($news_type2['0'])){ echo $news_type2['0']->news_cat;}?></span></div>
-          				 <div style="height: 190px;padding-top:2px;padding-left:5px; " id="telugufont1" >
+          				 <div  id="news_heading" style="padding-top: 4px;"><span id="newsheading"><? if(isset($news_type2['0'])){ echo $news_type2['0']->news_cat;}?></span></div>
+          				 <div style="height: 190px;padding:2px 0px 0px 5px; " id="telugufont1" >
           				 <? if(!empty($news_type2)){
 						if(file_exists("./assets/news/news_img".$news_type2['0']->id."_thumb.jpg")){ ?>
           				 <a href="<?=base_url();?>news/newsdetails/<?=$news_type2['0']->id?>/<?=$news_type2['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?=$news_type2['0']->id?>_thumb.jpg" style="float: left;margin: 1px 22px 2px 1px;text-align: justify;"  id="img"></img></a>
@@ -247,8 +247,8 @@ padding-left: 30px;
           			</tr>
           			<tr>
           				<td  valign="top" id="newstable" style="border: 1px solid #50BCFC;">
-          				  <div  id="news_heading"><span id="newsheading"><?if(isset($news_type3['0'])){ echo $news_type3['0']->news_cat; }?></span></div>
-          				 <div style="height:190px;padding-top:2px;padding-left:5px;" id="telugufont1">
+          				  <div  id="news_heading" style="padding-top: 4px;"><span id="newsheading"><?if(isset($news_type3['0'])){ echo $news_type3['0']->news_cat; }?></span></div>
+          				 <div style="height:190px;padding-top:2px 0px 0px 5px;" id="telugufont1">
           				 <? if(!empty($news_type3)){
 						if(file_exists("./assets/news/news_img".$news_type3['0']->id."_thumb.jpg")){ ?>
           				 <a href="<?=base_url();?>news/newsdetails/<?=$news_type3['0']->id?>/<?=$news_type3['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?php if(isset($news_type3['0'])){echo $news_type3['0']->id;} ?>_thumb.jpg" style="float: left;margin: 1px 17px 2px 1px;text-align: justify;" id="img"></img></a>
@@ -279,10 +279,10 @@ padding-left: 30px;
           				 <div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>news/details/<?if(isset($news_type3['0'])){ echo $news_type3['0']->type; }?>"><?=$more['0']->matter?></a></span></div>
           				</td>
           				<td  id="newstable" valign="top" style="border: 1px solid #50BCFC;">
-          				  <div  id="news_heading">
+          				  <div  id="news_heading" style="padding-top: 4px;">
           				  	<span id="newsheading" ><? if(isset($news_type4['0'])){ echo $news_type4['0']->news_cat; }?></span>
           				  </div>
-          				 <div style="height:190px;padding-top:2px;padding-left:5px;" id="telugufont1">
+          				 <div style="height:190px;padding-top:2px 0px 0px 5px;" id="telugufont1">
           				 <? if(!empty($news_type4)){
 						if(file_exists("./assets/news/news_img".$news_type4['0']->id."_thumb.jpg")){ ?>
           				 <a href="<?=base_url();?>news/newsdetails/<?=$news_type4['0']->id?>/<?=$news_type4['0']->type?>"><img src="<?=base_url();?>assets/news/news_img<?=$news_type4['0']->id?>_thumb.jpg" style="float: left;margin: 1px 17px 2px 1px;text-align: justify;" id="img"></img></a>
@@ -331,7 +331,7 @@ padding-left: 30px;
           <td width="8">&nbsp; </td>
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter-1.jpg" width="5" height="31" /></td>
           <td width="295" valign="top"  id="botomtop" align="left"><!--<img src="<?=base_url();?>assets/imgs/001.gif" style="margin:4px 0px 0px 0px;"></img>-->
-          	<div style="padding-top: 6px;"><span id="newsheading"><?=$more['16']->matter?></span></div></td>
+          	<div style="padding-top: 8px;"><span id="newsheading"><?=$more['16']->matter?></span></div></td>
           <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter2.jpg" width="5" height="31" /></td>
         </tr>
         <tr>
@@ -363,7 +363,7 @@ padding-left: 30px;
           <td width="8">&nbsp;</td>
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="150" /></td>
           <td valign="top" id="botom-ser" align="left">
-          <div style="height: 120px;padding-top:1px;">
+          <div style="height: 120px;padding-top:2px;">
           	<ul id="mainnews">
           	<?php if(isset($news_type6)){
           		$count=1;
@@ -388,7 +388,7 @@ padding-left: 30px;
           <td width="8">&nbsp;</td>
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="150" /></td>
           <td valign="top" id="botom-ser">
-          <div id="home_poll" style="height: 85px;">
+          <div id="home_poll" style="height: 85px;padding-top: 4px;">
                <div><? if(!empty($newspoll['0']->question)){
                 echo $newspoll['0']->question;
                	?></div>
@@ -406,7 +406,7 @@ padding-left: 30px;
      				</table>
      				<? }else echo 'to day no poll'; ?></div>
      			<span style="font-weight: bold;font-size: 14px;color:maroon;">yesterday poll</span>
-                <div><?if(!empty($yes_poll['0']->question)){
+                <div style="padding-top: 2px;"><?if(!empty($yes_poll['0']->question)){
                 	echo $yes_poll['0']->question;
                 	?></div>
                        <div align="right" id="result"><A HREF="javascript:void(0)"

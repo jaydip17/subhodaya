@@ -1,7 +1,7 @@
 <?php      
    foreach($hotvideos->result() as $video){
         ?>
-      <div style="float:left;vertical-align:middle;padding-right:4px;padding-bottom:2px;padding-top:2px;margin-left:8px;">
+      <div style="float:left;vertical-align:middle;padding-right:4px;padding-bottom:2px;padding-top:2px;margin-left:15px;margin-right:30px;">
       <div style="vertical-align:middle;float:left;text-align:justify;padding-right:10px;">
        <a href="<?=base_url();?>video/index/<?=$video->id?>/<?=$video->video_cat_id?>">
         <div id="catvideo_time"><?=$video->time?></div style="margin-left:25px;"> <img id="img" src="<?=base_url();?>assets/videos/image_preview/home_image<?=$video->id?>_thumb.jpg"></a>

@@ -6,6 +6,7 @@ class Slideimages_model extends Model{
 	}
 	function show()
 	{
+		$this->db->order_by('slideimages.id','desc');
 		$query = $this->db->get('slideimages');
 		return $query;
 	}

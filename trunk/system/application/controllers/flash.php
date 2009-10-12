@@ -9,6 +9,7 @@ function flashimages()
 {
 	$query=$this->Flash_model->get_flash_images();
 	$images=$query->result();
+	//print_r($images);
     $output="<images>";
     		$i=1;
     		foreach($images as $item)
@@ -21,7 +22,6 @@ function flashimages()
 		$output.="</images>";
 		print($output);
 		exit;
-
 	}
 	
 function greetings()

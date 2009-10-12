@@ -68,7 +68,7 @@ padding-left: 20px;
 		</td>
 		<td valign="top" >
 			<div><table cellpadding="1px" width="100%">
-			<tr><td align="left"><div id="news_heading" style="font-weight: bold;font-size: 14px;border: 1px solid #9FA0A0;">&nbsp;<?=$result['0']->heading ?></div></td></tr>
+			<tr><td align="left"><div id="news_heading" style="font-weight: bold;font-size: 14px;border: 1px solid #9FA0A0;"><div style="padding-top: 5px;">&nbsp;<?=$result['0']->heading ?></div></div></td></tr>
 			<tr><td align="center"><div  id="maindiv-news">
 			<div class="maindiv-news">
 			<? if(!empty($result['0'])){
@@ -161,7 +161,7 @@ padding-left: 20px;
 				<td align="center" valign="top">
 					<table>
 					<tr>
-						<td id="telugufont1" ><div class="heading" style="width: 181px;" id="news_heading"><span id="newsheading"><?php if(isset($cinema_type5['0'])){ echo $cinema_type5['0']->cinema_type;}?></span></div>
+						<td id="telugufont1" align="left"><div class="heading" style="width: 181px;" id="news_heading"><span id="newsheading"><?php if(isset($cinema_type5['0'])){ echo $cinema_type5['0']->cinema_type;}?></span></div>
 						<div style="height: 280px;border: 1px solid #9FA0A0;" id="left_news">
 						<div style="height: 248px;">
 						<? if(!empty($cinema_type5['0'])){
@@ -170,11 +170,12 @@ padding-left: 20px;
 						<?}} ?>
 						<ul id="mainnews" style="padding-top: 5px;">
 						<?php if(isset($cinema_type5 )){
+							$count=1;
 							foreach ($cinema_type5 as $row):							
 						?>
 						
 							<li><a href="<?=base_url();?>cinema/inner/<?=$row->id?>/<?=$row->type?>"><?=$row->heading?></a></li>
-							<?php if($count==2){
+							<?php if($count==4){
 								break;
 							}else {
 								$count++;

@@ -55,7 +55,7 @@ class Mahila extends Controller {
 	     $videos=$this->Video_Model->get_videos('active',2);
 	   	  
 	     $video_result=$videos->result();
-		
+		$telegu_typing=array();
 		$data=array('result'   =>   $result,
 					 'more'    =>   $more,
 				'cinema_type1' =>   $cinema_type1,
@@ -67,6 +67,7 @@ class Mahila extends Controller {
 		    'video_result'     =>  $video_result,
 	              'news_type2' =>	$news_type2,
 	                 'key'     =>  $key,
+				'telegu_typing'=>  $telegu_typing
 				
 		     	);
 				

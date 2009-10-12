@@ -31,11 +31,11 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
 <script type="text/javascript" src="<?=base_url();?>assets/js/tabview-min.js"></script>
 <link href="<?=base_url();?>assets/fonts-min.css" rel="stylesheet" type="text/css" />
 <link href="<?=base_url();?>assets/tabview.css" rel="stylesheet" type="text/css" />
+<!-- video and cinema page tabs -->
 <script src="<?=base_url();?>assets/SpryAssets/SpryTabbedPanels.js" type="text/javascript" />
 <link href="<?=base_url();?>assets/SpryTabbedPanels.css" rel="stylesheet" type="text/css" />
 <!-- thick box -->
 <script type="text/javascript" src="<?=base_url()?>assets/js/jquery.min.js"></script>
-
 <script type="text/javascript">
 var tb_pathToImage = "<?=base_url()?>assets/imgs/loadingAnimation.gif";
 </script>

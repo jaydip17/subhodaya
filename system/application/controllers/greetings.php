@@ -65,8 +65,10 @@ class Greetings extends Controller {
   	$id=$this->uri->segment(3,0);
   	$result=$this->Greeting_Model->get_details($id);
   	$more=$this->News_Model->more_news();
+  	$telegu_typing=array();
   	$data=array('more'=>$more,
-  				'result'=>$result);
+  				'result'=>$result,
+  				'telegu_typing'=>$telegu_typing);
   	$this->load->view('greetings_inner',$data);
   }
 

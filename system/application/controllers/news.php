@@ -116,6 +116,7 @@ class News extends Controller {
 		$this->load->Model('Video_Model');
 	    $videos=$this->Video_Model->get_videos('active',2);
 	   	$video_result=$videos->result();
+	   	$telegu_typing=array();
 		$segments = array(	'seg1' => $this->uri->segment(1,0),
 						   	'seg2' => $this->uri->segment(2,0),
 							'seg3' => $this->uri->segment(3,0),
@@ -136,6 +137,7 @@ class News extends Controller {
 				'news_cat'			=>	 $news_cat,
 		          'video_result'     =>  $video_result,
 				'bread_crumb' => $bread_crumb,
+				'telegu_typing'=>$telegu_typing
 				);
 				
 		$this->load->view('news_inner',$data);

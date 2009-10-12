@@ -757,13 +757,13 @@ function test()
 							            continue;
 							           }
 							            
-							           if($i>3)
+							           if($i>2)
 							           break;?>
                                     <ul id="mainnews"> 
 							        <li style="padding-top:5px;"><a href="<?=base_url();?>mahila/mahiladetails/<?=$item->id?>/<?=$item->cat_id?>"><?=$item->heading?></a></li></ul><?$i++;}} ?></p>
 							        </div></div>
 							        <div id="tab2"><p><div style="padding-top:11px">
-							     <?php if(!empty($sahithi_detail)){?>
+							     <?php if(!empty($sahithi_details)){?>
 							        <div id="image"> <? if(file_exists("./assets/sahithi/news_img".$sahithi_details['0']->id."_thumb.jpg")){?>
 							        <a href="<?=base_url();?>sahithi/sahithidetails/<?=$sahithi_details['0']->id?>/<?=$sahithi_details['0']->cat_id?>"><img src="<?=base_url();?>assets/sahithi/news_img<?=$sahithi_details['0']->id?>_thumb.jpg" alt="hh" id="img"/></a></div>
 							        <?} ?>
@@ -774,7 +774,7 @@ function test()
 							        	 {$count++;
 							            continue;
 							        	 }
-							             if($i>3)
+							             if($i>2)
 							           break;?>
 							    <ul id="mainnews"> <li style="padding-top:5px;"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>/<?=$item->cat_id?>"><?=$item->heading?></a></li></ul><? $i++;} ?></p></div>
     							</div></div><?php }?>

@@ -117,7 +117,7 @@ class Cinema extends Controller {
 		$this->load->Model('Video_Model');
 	    $videos=$this->Video_Model->get_videos('active',2);
 	   	$video_result=$videos->result();
-		
+		$telegu_typing=array();
 		$data=array('more'   		 => $more,
 					'result' 		 => $result,
 					'news_type4'	 => $news_type4,
@@ -126,7 +126,8 @@ class Cinema extends Controller {
 					'news_type2'	 =>	$news_type2,
 					'mahila_details1'=>	$mahila_details1,
 					'result1'		 => $result1,
-		          'video_result'     =>  $video_result
+		          'video_result'     =>  $video_result,
+					'telegu_typing'	 =>	$telegu_typing
 	
 					);
 		$this->load->view('cinema_inner',$data);

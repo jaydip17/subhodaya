@@ -55,7 +55,7 @@ class Sahithi extends Controller {
 	     $videos=$this->Video_Model->get_videos('top',2);
 	   	  
 	     $video_result=$videos->result();
-	     
+	     $telegu_typing=array();
 	    $data=array('result'   =>   $result,
 					 'more'    =>   $more,
 				'cinema_type1' =>   $cinema_type1,
@@ -66,7 +66,8 @@ class Sahithi extends Controller {
 		         'link' =>'mahila',
 		          'video_result'     =>  $video_result,
 	              'news_type2'  =>	$news_type2,
-	             'key'         =>  $key
+	             'key'         =>  $key,
+	    		'telegu_typing'=>$telegu_typing
 				);
 				
 		$this->load->view('mahila_inner',$data);

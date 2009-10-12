@@ -76,7 +76,45 @@ echo form_label ( 'Select title for image', 'title[]' );
 </td>
 		<td>
 <?
-echo form_input ( 'title[]', '' );
+$data=array('name' => 'title[]',
+			'value'=>'',
+			'rows'=>1,
+			'cols'=>27);
+echo form_textarea($data);
+?>
+
+</td>
+	</tr>
+		<tr>
+		<td>
+<?
+echo form_label ( 'Select text for image', 'text[]' );
+?>
+</td>
+		<td>
+<?
+$data=array('name' => 'text[]',
+			'value'=>'',
+			'rows'=>2,
+			'cols'=>27);
+echo form_textarea($data);
+?>
+
+</td>
+	</tr>
+		<tr>
+		<td>
+<?
+echo form_label ( 'Select Hyper_link', 'link[]' );
+?>
+</td>
+		<td>
+<?
+$data=array('name' => 'link[]',
+			'value'=>'',
+			'rows'=>1,
+			'cols'=>27);
+echo form_textarea($data);
 ?>
 
 </td>

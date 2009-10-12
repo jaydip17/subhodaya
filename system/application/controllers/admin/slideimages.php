@@ -14,6 +14,7 @@ class Slideimages extends Controller {
 
 	$query=$this->Flash_model->get_flash_images();
 	$images=$query->result();
+	//print_r($images);
     $output="<images>";
     		$i=1;
     		foreach($images as $item)

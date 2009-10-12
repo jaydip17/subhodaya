@@ -139,7 +139,7 @@ class Sahithi_Model extends Model {
     {
     	if($type=="home")
     	{
-    		$this->db->select('sahithi.id,heading,summary');
+    		$this->db->select('sahithi.id,heading,summary,cat_id');
     	}
     	else {
     	$this->db->select('*');

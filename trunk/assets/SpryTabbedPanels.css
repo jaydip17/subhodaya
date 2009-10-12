@@ -27,7 +27,7 @@
  * want to style the TabbedPanels container.
  */
 .TabbedPanels {
-	height:350px;
+	
 	margin: 0px;
 	padding: 0px;
 	float: left;
@@ -137,7 +137,7 @@
 	clear: both;
 	border-left: none;
 	border-right: none;
-	width:600px;
+
 	
 	
 }

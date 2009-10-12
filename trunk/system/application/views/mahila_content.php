@@ -35,22 +35,19 @@ padding-bottom:5px;
 							    <div style="padding-top: 5px;" id="telugufont1">
 							    <?if(!empty($details_more[$i]['0'])){ 
 						 if(file_exists("./assets/".$type."/news_img".$details_more[$i]['0']->id."_thumb.jpg")){ ?>	        
-	              	<a href="<?=base_url();?><?=$type?>/<?=$type?>details/<?=$details_more[$i]['0']->id?>/<?=$details_more[$i]['0']->cat_id?>"><img src="<?=base_url();?>assets/<?=$type?>/news_img<?php if(isset($details_more[$i]['0'])){echo $details_more[$i]['0']->id;}?>_thumb.jpg" style="float:left;margin:4px 20px 4px 4px;text-align: justify;" align="top" id="img"/></a>
+	              	<a href="<?=base_url();?><?=$type?>/<?=$type?>details/<?=$details_more[$i]['0']->id?>/<?=$details_more[$i]['0']->cat_id?>"><img src="<?=base_url();?>assets/<?=$type?>/news_img<?php if(isset($details_more[$i]['0'])){echo $details_more[$i]['0']->id;}?>_thumb.jpg" style="float: left;margin: 5px 20px 2px 2px;text-align: justify;" align="top" id="img"/></a>
 	            	<? }} ?>
 	             <?if(!empty($details_more[$i])){?>
 	             <font id="telugufont"><a href="<?=base_url();?><?=$type?>/<?=$type?>details/<?=$details_more[$i]['0']->id?>/<?=$details_more[$i]['0']->cat_id?>"><?php echo $details_more[$i]['0']->heading?></a></font><br>
 	              <?=$details_more[$i]['0']->summary; }?>
-	              <div style="height: 120px;" id="telugufont">
-	            
 	                 <ul id="mainnews">
 	              <?if(!empty($details_more[$i])){
 	              	$j=1;
 	              foreach($details_more[$i] as $item) {
                    if($j==9) break;?>
-	             <li id="telugufont"><a href="<?=base_url();?><?=$type?>/<?=$type?>details/<?=$item->id?>/<?=$item->cat_id?>"><?=$item->heading ?></a></li>
+	             <li><a href="<?=base_url();?><?=$type?>/<?=$type?>details/<?=$item->id?>/<?=$item->cat_id?>"><?=$item->heading ?></a></li>
 	                <?$j++;}} ?>
 	                 </ul>
-	                 </div>
 	                 </div>
 					 </div>
 					 	<?} ?>
@@ -134,7 +131,7 @@ padding-bottom:5px;
           				</td>
           				<td style="border: 1px solid #3789C3;" valign="top">
           				 <div style="width:100%" id="news_heading"><span id="newsheading" style="padding-right:30px"><?=$more['29']->matter;?></span></div>
-          				  <div id="mainnews">
+          				  <div id="mainnews" style="padding-top: 4px;">
           				 	<ul>
           				 	<?foreach($details_more as $item){
           				 		$i=1;
@@ -176,8 +173,8 @@ padding-bottom:5px;
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-righ.jpg" width="5" height="150" /></td>
           <td width="8">&nbsp;</td>
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="150" /></td>
-          <td valign="top" id="botom-ser">
-          <div id="home_poll" style="height: 65px;">
+          <td valign="top" id="botom-ser" style="font-size: 14px;">
+          <div id="home_poll" style="height: 80px;padding-top: 3px;">
                  	<div><? if(!empty($cinemapoll['0']->question)){
 						echo   $cinemapoll['0']->question;               		
                  	     ?></div>
@@ -212,10 +209,10 @@ padding-bottom:5px;
           <?php 
           if(!empty($sahithi_details)){ 
 			if(file_exists("./assets/sahithi/news_img".$sahithi_details['0']->id."_thumb.jpg")){ ?>	        
-	              	<a href="<?=base_url();?>sahithi/sahithidetails/<?=$sahithi_details['0']->id?>"><img src="<?=base_url();?>assets/sahithi/news_img<?php if(isset($sahithi_details['0'])){echo $sahithi_details['0']->id;}?>_home_thumb.jpg" style="float:left;margin:4px 20px 4px 4px;text-align: justify;" align="top" id="img"/></a>
+	              	<a href="<?=base_url();?>sahithi/sahithidetails/<?=$sahithi_details['0']->id?>"><img src="<?=base_url();?>assets/sahithi/news_img<?php if(isset($sahithi_details['0'])){echo $sahithi_details['0']->id;}?>_thumb.jpg" style="float:left;margin:4px 20px 4px 4px;text-align: justify;" align="top" id="img"/></a>
 	            	<? } ?>
-          <a href="<?=base_url();?>sahithi/sahithidetails/<?=$sahithi_details[0]->id?>/<?=$sahithi_details[0]->cat_id?>"><?=$sahithi_details[0]->heading?></a><br>
-          <?=$sahithi_details[0]->summary?>
+          <span id="mainnews" style="font-size: 14px;"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$sahithi_details[0]->id?>/<?=$sahithi_details[0]->cat_id?>"><?=$sahithi_details[0]->heading?></a><br>
+          <?=$sahithi_details[0]->summary?></span>
           <ul id="mainnews">
 		<?php
 		$count=0;foreach ($sahithi_details as $row):
@@ -225,7 +222,7 @@ padding-bottom:5px;
 		}
 		?>
 		<li style="padding: 1px;"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$row->id?>/<?=$row->cat_id?>"><?=$row->heading?></a></li>
-		<? if($count==4){
+		<? if($count==3){
 		break;
 		}else{
 		$count++;

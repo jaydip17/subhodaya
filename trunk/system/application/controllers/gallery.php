@@ -178,10 +178,12 @@ class Gallery extends Controller {
   		//rating
   		$result1=$this->Gallery_Model->get_categeory(0);
   		//sprint_r($links);
+  		$telegu_typing=array();
   		$data=array('more'  => $more,
   					'image' => $image,
   					'result'=> $result1,
-  					'links'=> $links);
+  					'links'=> $links,
+  			'telegu_typing' => $telegu_typing);
   		$this->load->view('gallery_content',$data);
   		
   	}

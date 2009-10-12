@@ -77,14 +77,14 @@
                <td  style="width:640px; padding-left:4px;"> 
              
              
-<div id="TabbedPanels1" class="TabbedPanels">
+<div id="TabbedPanels1" class="TabbedPanels" style="height: 350px;">
 
   <ul class="TabbedPanelsTabGroup">
   <?foreach($videocategeories->result() as $item){ ?>
    <li class="TabbedPanelsTab" onclick="javascript:loadNews('<?=$item->id?>','<?=base_url()?>videolist/videoview/<?=$item->id?>')"><?=$item->name ?></li>
   <?}?>
   </ul>
-  <div class="TabbedPanelsContentGroup" >    
+  <div class="TabbedPanelsContentGroup" style="width: 600px;">    
  <?php  foreach($videocategeories->result() as $key=>$item){
  
   $count=1;?>

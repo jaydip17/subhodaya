@@ -19,7 +19,7 @@ class Subhodaya extends Controller {
 		$yes_poll=$this->Poll_Model->get_yes_newspoll($type=4);
 		$newspoll=$this->Poll_Model->get_newspolls($type=4);
 		$sahithi_details=$this->Sahithi_Model->active_sahithi(1,$type='home');
-		//mahila
+		//print_r($sahithi_details);
 		$mahila_details=$this->Mahila_Model->active_mahila(1,$type='home');
 		$mahila_details_yoga=$this->Mahila_Model->active_mahila(4,$type='home');
 		//print_r($mahila_details_yoga);

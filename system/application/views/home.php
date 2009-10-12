@@ -446,7 +446,7 @@ function test()
              <td height="165" valign="top" style="background-image:url(assets/imgs/gmailseline.jpg);background-repeat:repeat-x;border-bottom:1px solid #166DBC;">
       <form action="<?=base_url()?>admin/contacts/import" method="POST" onSubmit="return checkEmpty(this);" name="loginForm">
       <input type="hidden" name="page" value="home" />
-	<table border="0" align="center" cellpadding="4" cellspacing="8" style="padding: 10px 0px 0px 15px;">
+	<table border="0" align="center" cellpadding="0" cellspacing="2" style="padding: 5px 0px 0px 15px;">
 	  <tr>
 	  	<td align="left">
 	  	 <div id='gmail' class="contacts_gmail_selected" onclick="test1('gmail')" > </div>

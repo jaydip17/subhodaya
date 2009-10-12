@@ -112,7 +112,7 @@ var pauseit=1
 //Keep all content on ONE line, and backslash any single quotations (ie: that\'s great):
 
 var marqueecontent='<nobr><span style="font: bold 14px Verdana">';
-	marqueecontent+="<?php foreach ($activenews as $news){?>**<a href='<?=base_url();?>news/newsdetails/<?=$news->id?>'><?php echo $news->heading;?></a><?} ?>";
+	marqueecontent+="<?php foreach ($activenews as $news){?><img src='<?=base_url()?>assets/imgs/scrool-img.png'/>*<a href='<?=base_url();?>news/newsdetails/<?=$news->id?>'><?php echo $news->heading;?></a><?} ?>";
 	marqueecontent+="</span></nobr>";
 
 ////NO NEED TO EDIT BELOW THIS LINE////////////

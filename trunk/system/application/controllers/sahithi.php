@@ -94,7 +94,7 @@ class Sahithi extends Controller {
 		$pagination=$this->pagination->create_links();
 		$sahithi=$this->Sahithi_Model->get_sahithi($type,$count=false);
 		$details_sahithi=$this->Sahithi_Model->get_sahithitype();
-		
+		$tabs=array();
 		
 		$data=array(	'news'  	=>	$sahithi,
 						'more'		=>	$more,
@@ -106,7 +106,8 @@ class Sahithi extends Controller {
 		             'details_more' =>	$details_more,
 		               'type'		=>	'sahithi',
 		              'cinemapoll'  =>  $cinemapoll,
-				'details_sahithi'	=>	$details_sahithi
+				'details_sahithi'	=>	$details_sahithi,
+				'tabs'             => $tabs
 		             );
 		$this->load->view("mahila_content",$data);
 	}

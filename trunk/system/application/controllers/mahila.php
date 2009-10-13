@@ -97,7 +97,7 @@ class Mahila extends Controller {
 		$cinemapoll=$this->Poll_Model->get_newspolls($type=5);
 		//print_r($sahithi_details);
 		//print_r($details_sahithi);
-		
+		$tabs=array();
 		//echo $onload;
 		$data=array(	
 						'news'  =>	$mahila,
@@ -110,7 +110,8 @@ class Mahila extends Controller {
 		            'type'  	=>	'mahila',
 				 'cinemapoll'   =>  $cinemapoll,
 			'details_sahithi'   =>  $details_sahithi,
-			'sahithi_details'	=>  $sahithi_details
+			'sahithi_details'	=>  $sahithi_details,
+				'tabs'          =>  $tabs
 		);
 		$this->load->view("mahila_content",$data);
 	}

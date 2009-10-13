@@ -25,15 +25,20 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
 
 <link href="<?=base_url();?>assets/style.css" rel="stylesheet" type="text/css" />
 <!-- for tabs js ans css -->
+<?php if(isset($tabs)){?>
 <script src="<?=base_url();?>assets/Scripts/swfobject_modified.js" type="text/javascript"></script>
 <script src="<?=base_url();?>assets/js/yahoo-dom-event.js" type="text/javascript"></script>
 <script type="text/javascript" src="<?=base_url();?>assets/js/element-min.js"></script>
 <script type="text/javascript" src="<?=base_url();?>assets/js/tabview-min.js"></script>
 <link href="<?=base_url();?>assets/fonts-min.css" rel="stylesheet" type="text/css" />
 <link href="<?=base_url();?>assets/tabview.css" rel="stylesheet" type="text/css" />
+<?php }?>
 <!-- video and cinema page tabs -->
+<?php if(isset($sprytabs)) {?>
 <script src="<?=base_url();?>assets/SpryAssets/SpryTabbedPanels.js" type="text/javascript" />
 <link href="<?=base_url();?>assets/SpryTabbedPanels.css" rel="stylesheet" type="text/css" />
+<?php }?>
+
 <!-- thick box -->
 <script type="text/javascript" src="<?=base_url()?>assets/js/jquery.min.js"></script>
 <script type="text/javascript">

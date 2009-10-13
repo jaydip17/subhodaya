@@ -50,6 +50,8 @@ class Cinema extends Controller {
 	    $videos=$this->Video_Model->get_videos('latest',4);
 	   	$video_result=$videos->result();
 	    $gall_topviews=$this->Gallery_Model->top_views();
+	    $sprytabs=array();
+	    $tabs=array();
 		$data=array('cinema_type1'		=>	$cinema_type1,
 					'cinema_type2'		=>	$cinema_type2,
 					'cinema_type3'		=>	$cinema_type3,
@@ -59,10 +61,12 @@ class Cinema extends Controller {
 						'more'			=>	$more,
 						'cinemapoll'	=>	$cinemapoll,
 						'yes_poll'		=>	$yes_poll,
-						'onload' 		=> "display_text_1()",
-						'images'		=> $images,
-						'gall_topviews' => $gall_topviews,
-		          'video_result'     =>  $video_result
+						'onload' 		=> 	"display_text_1()",
+						'images'		=> 	$images,
+						'gall_topviews' => 	$gall_topviews,
+		          'video_result'     	=>  $video_result,
+					'sprytabs'			=>	$sprytabs,
+					'tabs'				=>  $tabs
 		);
 		$this->load->view('cinema_view',$data);
 	}
@@ -87,6 +91,7 @@ class Cinema extends Controller {
 		$sahithi1=$this->Sahithi_Model->get_home_stories(4);
 		$sahithi_cat=$this->Sahithi_Model->get_sahithitype();
 		//print_r($sahithi);
+		$tabs=array();
 		$data=array('more'			=>	$more,
 					'result'		=>	$result,
 					'onload' 		=> 	$onload,
@@ -97,8 +102,9 @@ class Cinema extends Controller {
 					'active_news4'	=>	$active_news4,
 					'greetings4'	=>  $greetings4,
 					'sahithi'       =>  $sahithi,
-					'sahithi1'       =>  $sahithi1,
-					'sahithi_cat'	=>	$sahithi_cat);
+					'sahithi1'      =>  $sahithi1,
+					'sahithi_cat'	=>	$sahithi_cat,
+					'tabs'			=> $tabs);
 		$this->load->view('cinema_content',$data);
 	}
 	function inner(){

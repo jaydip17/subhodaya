@@ -56,11 +56,8 @@ function display_text_34(ss){
 }
 function display(value)
 {
-	
-	var content=document.getElementById('flash_'+value).innerHTML 
+	var content = document.getElementById('flash_'+value).innerHTML;
   document.getElementById('flash-content').innerHTML = content;
-	 
-	  
 }
 
 //-->
@@ -124,15 +121,21 @@ else
 <div id="flash-content" style="position:absolute; width:464px; top: 361px; color:white; padding:5px 5px 5px 5px; vertical-align:top; left:38px; height: 40px;text-align: left;"> 
 <?=$img['0']->title?>
 </div>
-<?php $i=0; foreach ($img as $row):
-?>
-<div id="flash_<?=$i?>" style="display: none;"><?=$row->title?></div>
-<?php if($i==4){
-	break;}
-	else{$i++;}
-	endforeach;
+
+<?php 
+ foreach ($img as $img)
+ { 
+ 	?>
+ 
+ 	<div id="flash_<?=$img->id?>"  style="display: none" > 
+<?=$img->title?><?=$img->id?>
+</div>
+<?php 
+ }
 ?>
 
+                                     
+	                    
 	                    </td>
 	                    </tr>
 	                </table></td></tr>

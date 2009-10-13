@@ -8,7 +8,7 @@ class Cinema extends Controller {
 	function index(){
 		$query=$this->Flash_model->get_flash_images();
 		$img=$query->result();
-		print_r($img);
+		//print_r($img);
 		$more=$this->News_Model->more_news();
 		$cinema_type1=$this->Cinema_Model->get_cinematype(1);
 		$cinema_type2=$this->Cinema_Model->get_cinematype(2);

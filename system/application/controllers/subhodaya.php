@@ -69,6 +69,7 @@ class Subhodaya extends Controller {
 	     $video_result=$videos->result();
 	    //$breadcrumb= $this->breadcrumb->generate();
 	    //print_r($breadcrumb); 
+	    $tabs=array();
 		$data=array('more'				=>	$more,
 		            'news_type7'		=>	$news_type7,
 					'news_type4'		=>	$news_type4,
@@ -88,6 +89,7 @@ class Subhodaya extends Controller {
 					'activenews'		=>  $activenews,
 					'gall_topviews'		=>  $gall_topviews,
 					'mahila_details_yoga'	=>$mahila_details_yoga,
+					'tabs'				=>	$tabs
 					);
 		$this->load->view('home',$data);
 	}

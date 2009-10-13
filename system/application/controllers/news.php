@@ -26,6 +26,7 @@ class News extends Controller {
 		$active_news3=$this->News_Model->active_news(3);
 		$active_news4=$this->News_Model->active_news(4);
 		
+		$tabs=array();
 		$current_url = current_url();
 		//$navigation = array ($current_url);
 		$segments = array(	'seg1' => $this->uri->segment(1,0),
@@ -53,6 +54,7 @@ class News extends Controller {
 					'active_news3'=>  $active_news3,
 					'active_news4'=>  $active_news4,
 					'bread_crumb' => $bread_crumb,
+					'tabs'		  => $tabs	
 		);
 		$this->load->view("news_main",$data);
 	}
@@ -72,7 +74,7 @@ class News extends Controller {
 		$active_news2=$this->News_Model->active_news(2);
 		$active_news3=$this->News_Model->active_news(3);
 		$active_news4=$this->News_Model->active_news(4);
-		
+		$tabs=array();
 		$segments = array(	'seg1' => $this->uri->segment(1,0),
 						   	'seg2' => $this->uri->segment(2,0),
 							'seg3' => $this->uri->segment(3,0),
@@ -94,7 +96,8 @@ class News extends Controller {
 						'active_news3'	   =>	$active_news3,
 						'active_news4'	   =>   $active_news4,
 						'mahila_details2'  =>	$mahila_details2,
-						'bread_crumb' => $bread_crumb,
+						'bread_crumb' 	   =>  $bread_crumb,
+						'tabs'			   =>  $tabs
 						
 						
 						

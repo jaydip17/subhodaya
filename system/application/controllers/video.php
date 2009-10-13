@@ -44,15 +44,15 @@ class Video extends Controller {
 		$config['previewimage']	= base_url().'assets/videos/image_preview/image'.$videoid.'.jpg';
 		$this->flash_video->initialize($config);
 		$jslinks = $this->flash_video->getcode();
-	 
-	    $data=array( 'title'	=>	'video',
-                   'videoplayer' => $jslinks,
-                        'more'=>$more,
-                  'latestvideos'=>$latestvideos,
-                  'videocategeories'=>$videocategeories,
-                 'topviewedvideos'=>$topviewedvideos,
-                               
-	                  'onload'=>$onload,
+	 	$sprytabs=array();
+	    $data=array( 'title'		=>	'video',
+                   'videoplayer' 	=> 	$jslinks,
+                        'more'		=>	$more,
+                  'latestvideos'	=>	$latestvideos,
+                  'videocategeories'=>	$videocategeories,
+                 'topviewedvideos'	=>	$topviewedvideos,
+	                  'onload'		=>		$onload,
+	    				'sprytabs'	=>	$sprytabs
 	                 
           
         );

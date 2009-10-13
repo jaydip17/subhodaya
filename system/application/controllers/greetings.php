@@ -18,6 +18,7 @@ class Greetings extends Controller {
 		//print_r($greetings6);
 		$greetings7=$this->Greeting_Model->get_main_greetings(7);
 		$more=$this->News_Model->more_news();
+		$tabs=array();
 		$data=array('greetings1' 	=> 	$greetings1,
 					'greetings2' 	=> 	$greetings2,
 					'greetings12'	=> 	$greetings12,
@@ -30,6 +31,7 @@ class Greetings extends Controller {
 					'more'       	=> 	$more,
 					'type'       	=> 	$type,
 					'onload' 		=> 	"display_text_1()",
+					'tabs'			=> $tabs
 			);
 		$this->load->view('greetings_content',$data);
   }

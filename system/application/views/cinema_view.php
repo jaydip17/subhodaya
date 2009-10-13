@@ -118,7 +118,7 @@ else
 //-->
 </script>
 <div id="flash-content" style="position:absolute; width:464px; top: 361px; color:white; padding:5px 5px 5px 5px; vertical-align:top; left:38px; height: 40px;text-align: left;"> 
-sample sf dsfsd fdsf
+<?=$img['0']->title?>
 </div>
 	                    
 	                    

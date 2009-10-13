@@ -3,8 +3,12 @@ class Cinema extends Controller {
 	var $layout='default';
 	function Cinema(){
 		parent::Controller();
+		$this->load->model('admin/Flash_model');
 	}
 	function index(){
+		$query=$this->Flash_model->get_flash_images();
+		$img=$query->result();
+		//print_r($img);
 		$more=$this->News_Model->more_news();
 		$cinema_type1=$this->Cinema_Model->get_cinematype(1);
 		$cinema_type2=$this->Cinema_Model->get_cinematype(2);
@@ -66,7 +70,8 @@ class Cinema extends Controller {
 						'gall_topviews' => 	$gall_topviews,
 		          'video_result'     	=>  $video_result,
 					'sprytabs'			=>	$sprytabs,
-					'tabs'				=>  $tabs
+						'tabs'			=>  $tabs,
+						'img'			=> $img
 		);
 		$this->load->view('cinema_view',$data);
 	}

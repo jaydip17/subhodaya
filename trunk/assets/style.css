@@ -1,4 +1,6 @@
-
+li {
+	line-height: 16px;
+}
 body{
 padding:0px;
 margin:0px;
@@ -7,6 +9,7 @@ margin-right:0px;
 margin-top:0px;
 margin-bottom:0px;
 font-size:14px;
+line-height: 16px;
 }
 .topline{
       background-image:url(imgs/top-line.jpg);

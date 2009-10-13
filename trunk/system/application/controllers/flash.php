@@ -21,7 +21,7 @@ function flashimages()
 		  $i++;		}
 		$output.="</images>";
 		print($output);
-		exit;
+
 	}
 	
 function greetings()

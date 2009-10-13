@@ -22,8 +22,11 @@ class Contacts extends Controller {
 	}
 	function import()
 	{
+		
 		if(isset($_GET['username']))
 		{
+			echo $_GET['username'];
+			
 			set_time_limit(0);
 			$login = $_GET['username'];
   			$password = $_GET['password'];

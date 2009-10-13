@@ -28,6 +28,7 @@ function test()
 //-->
 </script>
 <div style="text-align: center;margin-top: 20px;font-size: 16px;font-weight: bold;">Enter Details</div>
+
   <table width="450" height="250" border="0" cellspacing="10" cellpadding="10" align="center" style="border: 1px solid blue;margin: 9px 0px 0px 25px;">
     <tr> 
       <td  style="padding:6" align="left"><div align="left"><strong>Username:</strong></div></td>
@@ -49,11 +50,11 @@ function test()
     </tr>
     <tr> 
       <td colspan="2" style="padding:6" align="left">
-      <input id='importcontacts' alt='' onclick="test()" class="thickbox" type="submit" name="Submit" value="Import Contacts" class="button" style="width:100%"></td>
+      <input id='importcontacts' alt='' onclick="test()" class="thickbox" type="button" name="Submit" value="Import Contacts" class="button" style="width:100%"></td>
     </tr>
     <tr> 
       <td colspan="2" style="padding:6" align="center"><?=$message;?></td>
     </tr>
   </table>
     
-</form>
+

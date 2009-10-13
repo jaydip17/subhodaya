@@ -16,7 +16,7 @@ function flashimages()
 		{
 		  $output.="<preview".$i.">flash_images/image".$item->id.".jpg</preview".$i.">";
 		  $output.="<thumb".$i.">flash_images/image".$item->id."_thumb.jpg</thumb".$i.">";
-		  $output.="<content".$i.">".$item->title."</content".$i.">";
+		  $output.="<content".$i.">".$item->id."</content".$i.">";
 		  $output.="<hyperlink".$i.">".$item->hyperlink."</hyperlink".$i.">";
 		  $i++;		}
 		$output.="</images>";

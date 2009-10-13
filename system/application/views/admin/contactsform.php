@@ -27,34 +27,46 @@ function test()
 }
 //-->
 </script>
-<div style="text-align: center;margin-top: 20px;font-size: 16px;font-weight: bold;">Enter Details</div>
+<style>
+#loginimg{
+	background-image: url(<?=base_url()?>assets/imgs/logincr.jpg);
+	background-repeat: repeat-x;
+}
+</style>
+<table height="360" width="510" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr><td width="10" align="right" valign="top"><img src="<?=base_url()?>assets/imgs/loginleft.jpg"></td>
+	<td id="loginimg" valign="top" align="center">
+	<div style="text-align: center;font-size: 16px;color: #FFFFFF;font-weight: bold;padding-top: 20px;">Enter Details</div>
+	  <table cellspacing="10" cellpadding="10" align="center" style="border: 1px solid #99c6E4;padding-top: 20px;">
+    	<tr> 
+		      <td align="left"><div align="left"><strong>Username:</strong></div></td>
+		      <td align="left"><input name="username" value="" type="text" class="text" id="username1">
+		      <select name="type" id='email1'>
+		      <option value="yahoo">yahoo</option>
+		      <option value="gmail">gmail</option>
+		      </select>
+		      </td>
+    	</tr>
+    	<tr> 
+      		<td  align="left"><strong>Password:</strong></td>
+      		<td align="left"><input name="password" type="password" class="text" id="password1">
+      		</td>
+    	</tr>
+    	<tr> 
+      		<td colspan="2"  align="left">*Your username and password will not be stored on this server.</td>
+    	</tr>
+    	<tr> 
+      		<td colspan="2"  align="left">
+      		<input id='importcontacts' alt='' onclick="test()" class="thickbox" type="button" name="Submit" value="Import Contacts" class="button" style="width:100%"></td>
+    	</tr>
+    	<tr> 
+      		<td colspan="2"  align="center"><?=$message;?></td>
+    	</tr>
+  	</table>
+	</td>
+	<td width="10" valign="top"><img src="<?=base_url()?>assets/imgs/loginright.jpg"></td></tr>
+</table>
 
-  <table width="450" height="250" border="0" cellspacing="10" cellpadding="10" align="center" style="border: 1px solid blue;margin: 9px 0px 0px 25px;">
-    <tr> 
-      <td  style="padding:6" align="left"><div align="left"><strong>Username:</strong></div></td>
-      <td  style="padding:6" align="left"><input name="username" value="" type="text" class="text" id="username1">
-      <select name="type" id='email1'>
-      <option value="yahoo">yahoo</option>
-      <option value="gmail">gmail</option>
-      </select>
-      </td>
-    </tr>
-    <tr> 
-      <td  align="left"><strong>Password:</strong></td>
 
-      <td align="left"><input name="password" type="password" class="text" id="password1">
-      </td>
-    </tr>
-    <tr> 
-      <td colspan="2" style="padding:6" align="left">*Your username and password will not be stored on this server.</td>
-    </tr>
-    <tr> 
-      <td colspan="2" style="padding:6" align="left">
-      <input id='importcontacts' alt='' onclick="test()" class="thickbox" type="button" name="Submit" value="Import Contacts" class="button" style="width:100%"></td>
-    </tr>
-    <tr> 
-      <td colspan="2" style="padding:6" align="center"><?=$message;?></td>
-    </tr>
-  </table>
-    
+   
 

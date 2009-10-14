@@ -317,25 +317,29 @@ font-size: 14px;
 }
 #mainnews a:link{
 text-decoration:none;
-color:	blue;
+color:	#000000;
 font-size: 14px;
+font-weight: bold;
 
 }
 #mainnews a:active{
 text-decoration:none;
-color:	blue;
+color:	#000000;
 font-size: 14px;
+font-weight: bold;
 
 }
 #mainnews a:visited{
 text-decoration:none;
-color:	blue;
+color:	#000000;
 font-size: 14px;
+font-weight: bold;
 }
 #mainnews a:hover{
 text-decoration:none;
 color:	red;
 font-size: 14px;
+font-weight: bold;
 }
 #mainnews1 a:link{
 text-decoration:none;

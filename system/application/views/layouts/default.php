@@ -82,7 +82,6 @@ var tb_pathToImage = "<?=base_url()?>assets/imgs/loadingAnimation.gif";
 			<? $current_url = current_url();
 			   
 			?>
-			    <li></li>
 
 			    <li ><a href="<?=base_url();?>"><span><?=$more['2']->matter?></span></a></li>
 			    <li <?if (eregi('news', $current_url)) {echo "id='current'";} ?> ><a href="<?=base_url();?>news/"><span><?=$more['3']->matter?></span></a></li>

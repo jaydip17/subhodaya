@@ -131,7 +131,7 @@
           	     
           	     <div style="height:558px;border-left: 1px solid #9D9D9D; border-right: 1px solid #9D9D9D;" id="backimg">
           	     
-          	         <table width="95%" style="margin-left:6px;margin-right:4px; margin-top:6px;">
+          	         <table width="95%" style="margin-left:6px;margin-right:4px; margin-top:-10px;">
           	          <tr style="height:25px;">
           	       			<td colspan="2" id="topvideo" style=padding-top:0px;"><?=$more['34']->matter?></td>
           	          <tr>

@@ -127,8 +127,8 @@ else
  { 
  	?>
  
- 	<div id="flash_<?=$img->id?>"  style="display: none" > 
-<?=$img->title?><?=$img->id?>
+<div id="flash_<?=$img->id?>"  style="display: none" > 
+<?=$img->title?>
 </div>
 <?php 
  }

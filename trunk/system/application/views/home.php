@@ -581,106 +581,6 @@ function test()
               </tr>
           </table>
          </td>
-        <!-- <td width="200" valign="top" align="right">
-         <table width="210"  border="0" align="center" cellpadding="0" cellspacing="0" >
-         <tr>
-             <td width="6" valign="top"><img src="<?=base_url();?>assets/imgs/tock-line.jpg" width="6" height="35" /></td>
-             <td  id="img-senter" align="left" valign="middle">
-                	<img src="<?=base_url(); ?>assets/imgs/001.png" style="margin:1px 0px 0px 0px;" align="middle"></img>
-                	<span id="telugufont" style="padding: 0px 0px 8px 5px;"><?php echo $more['21']->matter;?></span>
-             </td>
-             <td valign="top"><img src="<?=base_url();?>assets/imgs/tock-line-right.jpg" width="6" height="35" /></td>
-         </tr>
-         <tr>
-             <td valign="top" id="center-line"><img src="<?=base_url();?>assets/imgs/tock-line-boyom.jpg" width="5" height="166" /></td>
-             <td valign="top" width="100%" id="center-line"><table width="100%" border="0" cellpadding="0" cellspacing="0">
-         <tr>
-             <td height="165" valign="top" style="background-image:url(assets/imgs/gmailseline.jpg);background-repeat:repeat-x;border-bottom:2px solid #166DBC;">
-      <form action="<?=base_url()?>admin/contacts/import" method="POST" onSubmit="return checkEmpty(this);" name="loginForm">
-      <input type="hidden" name="page" value="home" />
-	<table border="0" align="center" cellpadding="2" cellspacing="4">
-	  <tr>
-		<th colspan="3" align="center">Enter details</th>
-	  </tr>
-	  <tr>
-	  	<td align="left">
-	  	 <div id='gmail' class="contacts_gmail_selected" onclick="test1('gmail')" > </div>
-	  	<img src="<?=base_url()?>assets/imgs/gmail.png" class="selected" id='gmail' name="gmail" onclick="test1(this.name)"></td>
-	    <td align="left">
-	    <div id='yahoo' class="contacts_yahoo" onclick="test1('yahoo')" > </div>
-	    <img src="<?=base_url()?>assets/imgs/yahoo-img.jpg" class="unselected" id='yahoo' name="yahoo" onclick="test1(this.name)">
-	    </td>
-	  </tr>
-	  <tr>
-	  	<td>Username</></td>
-	  	<td align="left"><input onfocus="this.value=''" type="text" name="username" size="10" value="Enter your Gmail id" id="username"/>
-	  	<input type="hidden" name="emailtype" size="10" value="gmail" id="emailtype"/></td>
-	  	<td id="wrong_id"></td>
-	  	</tr>
-	  <tr>
-	  	  <td>Password</td>
-	      <td align="left"><input type="password" name="password" size="10" id="password"/></td>
-	      <td id="wrong_pw"></td>
-	  </tr>
-	  <tr>
-	  	  <td colspan="3" align="center">
-	  	  	<input style="background-color:#ACDFFA" id='importcontacts' alt='' onclick="test()" type="button" name="submit" value="Invite My Contacts" title="your Contacts list"/>
-	  	  <img src="<?=base_url()?>assets/imgs/invite-contact2.png" id='importcontacts' style="cursor: pointer;" onclick="test()" name="submit" alt=""/></td>
-	  </tr>    
-	  <tr>
-	  	 <td colspan="3" align="center"><small>your info is secured..</small></td>
-	  </tr>    
-	</table>
-	</form>
-             </td>
-         </tr>
-       </table>
-     </td>
-     <td valign="top" id="center-line"><img src="<?=base_url();?>assets/imgs/tock-line-boyom1.jpg" width="5" height="166"/></td>
-    </tr>
-    </table>
-    	<table width="217" border="0" cellpadding="0" cellspacing="0" style="margin-top:6px;border: 1px solid #50BCFC;">
-        	<tr>
-                <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter-1.jpg" width="5" height="31" /></td>
-                <td width="208" valign="bottom" id="senter3" align="left"><table><tr><td width="20%"><img src="<?=base_url(); ?>assets/imgs/001.png" style="padding: 0px 5px 3px 2px;" align="middle"></img></td><td width="80%"><span id="telugufont"><?php echo $more['16']->matter;?></span></td></tr></table></td>
-                <td width="5" valign="top"><img src="<?=base_url();?>assets/imgs/senter2.jpg" width="5" height="31" /></td>
-              </tr>
-              <tr>
-                <td valign="top"><img src="<?=base_url();?>assets/imgs/new1.jpg" width="5" height="225" /></td>
-                <td  align="left" class="senterbotom" valign="top" style="width: 208;">
-                <div id="home_poll" >
-                 	<div><? if(!empty($newspoll['0']->question)){
-                 	   echo $newspoll['0']->question;
-                 	   ?></div>
-     				<table width="100%">
-              			<tr>
-              				<td align="right">
-              					<input type="hidden" name="poll_id" value="<?=$newspoll['0']->id?>">
-              					<? $attributes = 'onClick= "loadPoll(\''.base_url().'poll/index/'.$newspoll[0]->id.'\',this.value,\''.base_url().'assets/imgs/bigrotation2.gif\')";' ?>
-              					<?=form_radio('answer','a',True,$attributes) ?>
-              				</td>
-              				<td align="left"><?=$more['18']->matter ?></td></tr>
-              			<tr><td align="right"><?=form_radio('answer','b',FALSE,$attributes) ?></td><td align="left"><?=$more['19']->matter ?></td></tr>
-              			<tr><td align="right"><?=form_radio('answer','c',FALSE,$attributes) ?></td><td align="left"><?=$more['20']->matter ?></td></tr>
-     				</table>
-     				<? }else echo 'today no poll'; ?>
-                </div>
-                <span style="font-weight: bold;font-size: 14px;color:maroon;">yesterday poll</span>
-                <div><?if(!empty($yes_poll['0']->question)){
-					echo  $yes_poll['0']->question;   ?>            	
-               </div>
-                <div align="right" id="result"><a HREF="javascript:void(0)"
-					onclick="window.open('<?=base_url();?>poll/yes_result/<?=$yes_poll['0']->id?>',
-						'welcome','width=300,height=200')">
-						Result</a></div>
-                
-                <?} else echo 'Yesterday no poll'; ?>
-                </td>
-              </tr>
-              
-                <td height="123" colspan="3" valign="top"><div align="right" style="padding-top:6px"><img src="<?=base_url();?>assets/imgs/add-fun.jpg" width="215" height="107"></img></div></td>
-             
-          </table></td>-->
         </tr>
       </table>
    <table width="100%" align="left"><tr>
@@ -744,7 +644,7 @@ function test()
 							        <li style="text-align: center;"><a href="#tab2"><em style="width: 80px;padding-top: 2px""><span id="telugufont"><?=$more['9']->matter ?></span></em></a></li>
 	    						</ul>            
     							<div class="yui-content" style="height: 150px;text-align: left;" id="tabs_background">
-							        <div id="tab1"><p><div style="padding-top:11px">
+							        <div id="tab1"><p><div style="padding-top:3px">
 							        <? if(!empty($mahila_details)){?>
 							        <div id="image"><?if(file_exists("./assets/mahila/news_img".$mahila_details['0']->id."_thumb.jpg")){ ?>
 							        <a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details['0']->id?>/<?=$mahila_details['0']->cat_id?>"><img  id="img" src="<?=base_url();?>assets/mahila/news_img<?=$mahila_details['0']->id?>_thumb.jpg" /></a></div>
@@ -761,8 +661,8 @@ function test()
 							           break;?>
                                     <ul id="mainnews"> 
 							        <li style="padding-top:5px;"><a href="<?=base_url();?>mahila/mahiladetails/<?=$item->id?>/<?=$item->cat_id?>"><?=$item->heading?></a></li></ul><?$i++;}} ?></p>
-							        </div></div>
-							        <div id="tab2"><p><div style="padding-top:11px">
+							        </div><div id="more-news-div"><a href="<?=base_url()?>mahila/details/<?=$mahila_details['0']->cat_id ?>"><?=$more['0']->matter?></a></div></div>
+							        <div id="tab2"><p><div style="padding-top:3px">
 							     <?php if(!empty($sahithi_details)){?>
 							        <div id="image"> <? if(file_exists("./assets/sahithi/news_img".$sahithi_details['0']->id."_thumb.jpg")){?>
 							        <a href="<?=base_url();?>sahithi/sahithidetails/<?=$sahithi_details['0']->id?>/<?=$sahithi_details['0']->cat_id?>"><img src="<?=base_url();?>assets/sahithi/news_img<?=$sahithi_details['0']->id?>_thumb.jpg" alt="hh" id="img"/></a></div>
@@ -777,6 +677,7 @@ function test()
 							             if($i>2)
 							           break;?>
 							    <ul id="mainnews"> <li style="padding-top:5px;"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>/<?=$item->cat_id?>"><?=$item->heading?></a></li></ul><? $i++;} ?></p></div>
+							    <div id="more-news-div"><a href="<?=base_url()?>mahila/details/<?=$mahila_details['0']->cat_id ?>"><?=$more['0']->matter?></a></div>
     							</div></div><?php }?>
 <script>
 (function() {
@@ -825,16 +726,7 @@ function test()
 						Result</a></div>
                 
                 <?} else echo 'Yesterday no poll'; ?>
-	                        <!--<div style="text-align:justify;padding-top:14px;height: 125px;" >
-	                     <? if(isset($home_stories['0'])){ ?> 
-	                      <? if(file_exists("./assets/sahithi/news_img".$home_stories['0']->id."_thumb.jpg")){ ?>
-	                      <a href="<?=base_url();?>sahithi/sahithidetails/<?=$home_stories['0']->id?>"><img  id="img" src="<?=base_url();?>/assets/sahithi/news_img<?=$home_stories['0']->id?>_thumb.jpg" style="float: left;margin: 0px 3px 2px 1px;text-align: justify;"></a>
-	                      <?} ?>
-	                      <font id="mainnews"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$home_stories['0']->id?>"><? echo $home_stories['0']->heading;?>:</a></font><br>
-	                     <font style="font-size:14px;padding-top:5px;"> <? echo $home_stories['0']->summary;?><?} ?></font>
-	                        </div>
-	                       <div id="more-news-div"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$home_stories['0']->id?>"><?=$more['1']->matter?></a></div>
-                        --></td>
+	                        </td>
                          <td id="center-img1"><img src="<?=base_url();?>assets/imgs/new.jpg" width="5"/></td>
                     </tr>
                   </table>

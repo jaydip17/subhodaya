@@ -81,6 +81,10 @@ li
 padding-top:3px;
 line-height:16px;
 }
+body{
+font-size:14px;
+line-height:16px;
+}
 #tdmahila
 {
 padding-left:5px;

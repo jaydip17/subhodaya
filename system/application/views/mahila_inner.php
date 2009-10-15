@@ -7,8 +7,12 @@ padding-left:20px;
 li{
 padding-bottom:5px;
 padding-left:6px;
+line-height:16px;
 }
-
+body{
+font-size:14px;
+line-height:16px;
+}
 </style>
 <table width="99%">
 	<tr>

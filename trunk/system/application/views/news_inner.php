@@ -3,6 +3,13 @@ ul{
 list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
 padding-left: 20px;
 }
+li{
+line-height:18px;
+}
+body{
+font-size:14px;
+line-height:18px;
+}
 </style>
 <table width="99%">
 	<tr>

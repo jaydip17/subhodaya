@@ -1,6 +1,6 @@
-li {
+/*li {
 	line-height: 16px;
-}
+}*/
 body{
 padding:0px;
 margin:0px;
@@ -8,8 +8,8 @@ margin-left:0px;
 margin-right:0px;
 margin-top:0px;
 margin-bottom:0px;
-line-height:16px;
 font-size:14px;
+/*line-height: 16px;*/
 }
 .topline{
       background-image:url(imgs/top-line.jpg);
@@ -317,29 +317,25 @@ font-size: 14px;
 }
 #mainnews a:link{
 text-decoration:none;
-color:	#000000;
+color:	blue;
 font-size: 14px;
-font-weight: bold;
 
 }
 #mainnews a:active{
 text-decoration:none;
-color:	#000000;
+color:	blue;
 font-size: 14px;
-font-weight: bold;
 
 }
 #mainnews a:visited{
 text-decoration:none;
-color:	#000000;
+color:	blue;
 font-size: 14px;
-font-weight: bold;
 }
 #mainnews a:hover{
 text-decoration:none;
 color:	red;
 font-size: 14px;
-font-weight: bold;
 }
 #mainnews1 a:link{
 text-decoration:none;
@@ -510,9 +506,11 @@ color:maroon;
  margin-left: 142px; 
  height:19px;
  width:98px;
- margin-top:7px;
+ margin-top:2px;
+ /*margin-bottom:2px;*/
  padding-top:2px;
  padding-left:7px;
+ font-size:12px;
  font-weight:bold;
 	}
 	
@@ -533,11 +531,7 @@ background-image:url(imgs/all-video-middleline.jpg);
 background-repeat:repeat-x;
 height:116px;
 	}	
-/*------#hotvi{
- font-size:12px;
- font-weight:bold;
- text-align:left;
-	}------*/
+
 #topvi{
 padding-left:5px;
 padding-top:5px;
@@ -581,7 +575,7 @@ border:1px solid #9D9D9D;
 height:20px;
 width:640px;
 text-align:right; 
-margin-top:6px;
+margin-top:5px;
 float:left;           
 padding-top:0px;
 }
@@ -998,7 +992,7 @@ font-size: 14px;
 	font-size:11px;
 	font-weight:bold;
 	margin-left:62px;
-	margin-top:46px;
+	margin-top:47px;
 	position:absolute;
 	padding-top:-30px;
 }

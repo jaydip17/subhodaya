@@ -1,3 +1,15 @@
+<style type="text/css">
+li{
+line-height:16px;
+}
+body{
+font-size:14px;
+line-height:16px;
+}
+
+</style>
+
+
 <div style="height:490px">
 
 <? $count=0; foreach($details as $row):

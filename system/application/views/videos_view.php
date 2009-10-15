@@ -78,7 +78,7 @@
                <td  style="width:640px; padding-left:4px;"> 
              
              
-<div id="TabbedPanels1" class="TabbedPanels" style="height: 350px;">
+<div id="TabbedPanels1" class="TabbedPanels" style="height:350px;">
 
   <ul class="TabbedPanelsTabGroup">
   <?foreach($videocategeories->result() as $item){ ?>
@@ -131,7 +131,7 @@
           	     
           	     <div style="height:558px;border-left: 1px solid #9D9D9D; border-right: 1px solid #9D9D9D;" id="backimg">
           	     
-          	         <table width="95%" style="margin-left:6px;margin-right:4px; margin-top:-10px;">
+          	         <table width="95%" style="margin-left:6px;margin-right:4px; margin-top:6px;">
           	          <tr style="height:25px;">
           	       			<td colspan="2" id="topvideo" style=padding-top:0px;"><?=$more['34']->matter?></td>
           	          <tr>
@@ -181,6 +181,10 @@
                          <div id="allvi"><?=$more['35']->matter?></div>
                            
                           <div id="divallimg" style="width:660px;">
+                          
+                         
+                         
+                        
                    </div></td></tr>
                       <tr>
                   <td style="height:10px;width:662px;text-align:right;background-image:url('<?=base_url();?>assets/imgs/all-video-bottomline.jpg');background-repeat:no-repeat;"></td>

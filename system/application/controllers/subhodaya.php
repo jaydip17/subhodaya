@@ -3,7 +3,7 @@ class Subhodaya extends Controller {
 	var $layout = 'default'; 
 	function Subhodaya(){
 		parent::Controller();
-				
+				$this->lang->load('telugu', 'telugu');
 	}
 	function index(){
  		
@@ -98,7 +98,9 @@ class Subhodaya extends Controller {
 		if(isset($_POST['send']))
 		{
 		$to = $_POST['email'];
+		if(isset($_POST['heading']))
 		$heading= $_POST['heading'];
+		else $heading='';
 		
         $subject = "[SUBHODAYA.COM] ".$heading;
 		if(isset($_POST['subject']))
@@ -112,6 +114,16 @@ class Subhodaya extends Controller {
 		else
 		{
 			$type ="Article";
+		}
+		if(isset($_POST['name'])){
+			$from_name=$_POST['name'];
+		}else{
+			$from_name='Subhodaya';
+		}
+		if(isset($_POST['umail'])){
+			$from=$_POST['umail'];
+		}else{
+			$from='dontreply@subhodaya.com';
 		}
 //		if($type=="Article")
 //		{
@@ -129,45 +141,48 @@ class Subhodaya extends Controller {
 		switch ($type)
 		{
 			case 'Article' : 
-				$message= "Dear ".$_POST['fname'].".. \n\n Your friend ".$_POST['name']." sent u an article on shubhodaya \n\n".$_POST['description'];
+				$message= "Dear ".$_POST['fname'].".. \n\n Your friend ".$_POST['name']." sent u an article on subhodaya \n\n".$_POST['description'];
         		$message.="\n";
         		$message.= "To read this article follow the below link.\n".$_POST['url'];
         				break;
 			case 'Gallery' :
-				$message= "Dear ".$_POST['fname'].".. \n\n Your friend ".$_POST['name']." sent u an image on shubhodaya \n\n".$_POST['description'];
+				$message= "Dear ".$_POST['fname'].".. \n\n Your friend ".$_POST['name']." sent u an image on subhodaya \n\n".$_POST['description'];
 		        $message.="\n";
 		        $message.= "To view this image follow the below link.\n".$_POST['url'];
 		        		break;
 			case 'Greeting' :
-				$message= "Dear ".$_POST['fname'].".. \n\n Your friend ".$_POST['name']." sent u an greeting on shubhodaya \n\n".$_POST['description'];
+				$message= "Dear ".$_POST['fname'].".. \n\n Your friend ".$_POST['name']." sent u an greeting on subhodaya \n\n".$_POST['description'];
 		        $message.="\n";
 		        $message.= "To view this greeting follow the below link.\n".$_POST['url'];
 		        		break;
         
 		}
-        $message.="\n\n\nRegards.\n Shubhodaya Team.";
+        $message.="\n\n\nRegards.\n Subhodaya Team.";
         $headers = "From: subhodaya \r\n".
                "Reply-To: dontreply@subhodaya.com"; 
-        $this->send_mail($to,$subject,$message);
+        $this->send_mail($to,$subject,$message,$from,$from_name);
 //        if( mail($to,$subject,$message,$headers))
 //        $status= "1";
 //        else
 //        $status= "-1";
 		}
-		$status= "1";
+		$status=1;
+		$this->session->set_flashdata('gallery', $this->lang->line('galley_mail_succ'));
+		$this->session->set_flashdata('greetings', $this->lang->line('gretting_mail_succ'));
+		$this->session->set_flashdata('cinema', $this->lang->line('cinema_mail_succ'));
+		$this->session->set_flashdata('news', $this->lang->line('news_mail_succ'));
+		$this->session->set_flashdata('mahila', $this->lang->line('mahila_mail_succ'));
+		$this->session->set_flashdata('sahithi', $this->lang->line('mahila_mail_succ'));
         redirect($_POST['url'].'/'.$status);
-		
-     
 	 }
-	 
-	 function send_mail($to,$subject,$message)
+	 function send_mail($to,$subject,$message,$from,$from_name)
 	 {
 	 	$data = array (
 	 					'message' => $message,
 	 	);
 	 	$this->load->library('email');
 		$this->email->clear();
-		$this->email->from('dontreply@subhodaya.com', 'Subhodaya');
+		$this->email->from($from, $from_name);
 		$this->email->to($to);
 		//$this->email->cc('another@another-example.com');
 		//$this->email->bcc('them@their-example.com');
@@ -178,7 +193,5 @@ class Subhodaya extends Controller {
 		$this->email->send();
 		return true;
 	 }
-
-
 }
 ?>

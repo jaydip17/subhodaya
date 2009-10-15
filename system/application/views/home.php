@@ -95,6 +95,7 @@ function test()
 	padding-left: 20px;
 	}
 </style>
+<img src='<?=base_url()?>assets/imgs/scrool-img.png'/>
 <table width="99%" height="99%"  border="0" cellpadding="0" cellspacing="0">
         <tr>
           <td width="389" valign="top" height="329"><table width="100%" border="0" cellpadding="0" cellspacing="0">

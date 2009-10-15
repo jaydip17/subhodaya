@@ -71,9 +71,7 @@ padding-left:6px;
 			<table cellpadding="1px" width="100%">
 			<tr><td><div id="news_heading" class="heading"><span id="newsheading"><?=$result['0']->heading ?></span></div></td></tr>
 			<tr><td align="center">
-			<!--<div id="maindiv-news">
-			<font color="red"> <? if($this->uri->segment(4)==-1){echo "can't send mail";}else if($this->uri->segment(4)==1){echo "mail sent succesfully";}?></font>
-			</div>-->
+			<?=$this->session->flashdata('mahila'); ?>
 			</tr>
 			<tr>
 			<td>
@@ -85,9 +83,9 @@ padding-left:6px;
 		</td></tr>
 			<tr><td><div id="news_heading" class="heading"><div id="newsheading" style="width: 50%;text-align: left;float: left;"><?=$more['25']->matter;?></div><div style="text-align: right;padding: 0px 5px 20px 10px;" id="newsheading">Comment</div></div></td></tr>
 			<tr><td align="center"><div style="border:1px solid #9FA0A0;">
-			<?=form_open('subhodaya/sendmail',array('name'=>'telugu_send')) ?>
+			<?=form_open('index.php/subhodaya/sendmail','name="telugu_send"') ?>
 			
-			<input type="hidden" name="url" value="<?=base_url()?><?=$type?>/<?=$type?>details/<?=$result['0']->id?>">
+			<input type="hidden" name="url" value="<?=current_url()?>">
 			<table id="formdiv" cellspacing="5">
 				<tr><td valign="top" colspan="2"><div style="background-color: #B5E8FD;height:20px;"></div></td></tr>
 				<tr><td width="150px" align="left" style="padding-left: 15px"><?=$more['27']->matter;?></td><td><input type="text" name="name" size="30"></td></tr>

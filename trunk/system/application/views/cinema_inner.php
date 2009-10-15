@@ -79,12 +79,13 @@ padding-bottom:5px;
 			<img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($result['0'])){echo $result['0']->id;}?>.jpg" style="float: left;padding:0px 0px 0px 0px;border: 1px solid  #9FA0A0; margin: 10px 20px 20px 10px;" ></img>
 			<?}} ?>
 			<font style="padding: 2px;"><?php if(isset($result['0'])){echo $result['0']->description;}?></font></div>
-			</div></td></tr>
+			</div></td></tr><?=$this->session->flashdata('cinema'); ?>
 			<tr><td><div id="news_heading" class="heading"><span id="newsheading"><?php if(isset($more['25'])){echo $more['25']->matter;}?></span></div></td></tr>
 			<tr><td align="center"><div style="border:1px solid #9FA0A0;">
-			<?=form_open('subhodaya/sendmail',array('name'=>'telugu_send')) ?>
+			<?=form_open('index.php/subhodaya/sendmail','name="telugu_send"') ?>
 			<table id="formdiv">
 				<tr><td valign="top" colspan="2"><div style="background-color: #B5E8FD;height:20px;"></div></td></tr>
+				<input type="hidden" name="url" value="<?=current_url()?>">
 				<tr><td width="150px" align="left" style="padding-left: 10px;"><?php if(isset($more['27'])){ echo $more['27']->matter;}?></td><td><input type="text" name="name" size="30"><?=form_hidden('heading',$result[0]->heading)?></td></tr>
 				<tr><td width="150px" align="left" style="padding-left: 10px;"><?php if(isset($more['28'])){ echo $more['38']->matter;}?></td><td><input type="text" name="uemail" size="30"></td></tr>
 				<tr><td width="150px" align="left" style="padding-left: 10px;"><?php if(isset($more['39'])){ echo $more['39']->matter;}?></td><td><input type="text" name="fname" size="30"></td></tr>

@@ -618,26 +618,27 @@ padding-left: 20px;
 	<td colspan="3"   id="gal_middle" align="center" height="820"> 
 		<div style="margin: 10px 0px 10px 0px">
 		<img src="<?=base_url()?>assets/gallery/image<?=$image['0']->id?>.jpg" id="img">
-		</div>
+		</div><?=$this->session->flashdata('gallery'); ?>
 		<div style="margin: 10px 0px 10px 0px">
-		<?=form_open('subhodaya/sendmail','name="telugu_send"') ?>
-					<input type="hidden" name="url" value="<?=base_url()?>gallery/content/<?=$image['0']->id?>">
+		<?=form_open('index.php/subhodaya/sendmail','name="telugu_send"') ?>
+					<input type="hidden" name="url" value="<?=current_url()?>">
 			
 						<table align="center" width="500px" style="border: 1px solid #939393;">
 							<tr>
 								<td colspan='2' align="center"><div  id="gree_bar1"><?=$more['25']->matter?></div></td>
 							</tr>
 							<tr>
-								<td width="30%" align="left" style="padding-left: 10px;"><?=$more['27']->matter?></td>
-								<td align="left" width="70%"><input type="text" name="name" size="30"></td>
+								<td width="25%" align="left" style="padding-left: 10px;"><?=$more['27']->matter?></td>
+								<td align="left" width="75%"><input type="text" name="name" size="30"></td>
 							</tr>
 							<tr>
-								<td align="left" width="30%" style="padding-left: 10px;"><?=$more['38']->matter?></td>
-								<td align="left" width="70%"><input type="text" name="uemail" size="30"></td>
+								<td align="left" width="25%" style="padding-left: 10px;"><?=$more['38']->matter?></td>
+								<td align="left" width="75%"><input type="text" name="uemail" size="30"></td>
 							</tr>
-							<tr><td width="150px" align="left" style="padding-left: 10px;"><?php if(isset($more['39'])){ echo $more['39']->matter;}?></td><td><input type="text" name="fname" size="30">
-							<?=form_hidden('type','Gallery')?>
-							</td></tr>
+							<tr>
+								<td width="150px" align="left" style="padding-left: 10px;"><?php if(isset($more['39'])){ echo $more['39']->matter;}?></td>
+								<td align="left"><input type="text" name="fname" size="30"><?=form_hidden('type','Gallery')?></td>
+							</tr>
 							<tr>
 								<td align="left" style="padding-left: 10px;"><?=$more['28']->matter?></td>
 								<td align="left"><input type="text" name="email" size="30"></td>

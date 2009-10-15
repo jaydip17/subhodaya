@@ -76,12 +76,12 @@ padding-left: 20px;
 			<img src="<?=base_url();?>assets/news/news_img<?=$result['0']->id?>.jpg" style="float: left;padding:2px 2px 2px 2px;border: 1px solid  #9FA0A0; margin: 10px 10px 10px 10px;" ></img>
 			<?}} ?>
 			<?=$result['0']->description ?></div>
-			</div></td></tr>
+			</div></td></tr><?=$this->session->flashdata('news'); ?>
 			<tr><td><div id="news_heading" class="heading"><span id="newsheading"><?php if(isset($more['25'])){echo $more['25']->matter;}?></span></div></td></tr>
 			<tr><td align="center"><div style="border:1px solid #9FA0A0;">
-			<?=form_open('subhodaya/sendmail',array('name'=>'telugu_send')) ?>
+			<?=form_open('index.php/subhodaya/sendmail','name="telugu_send"') ?>
 			
-			<input type="hidden" name="url" value="<?=base_url(); $type="news"; ?><?=$type?>/<?=$type?>details/<?=$result['0']->id?>">
+			<input type="hidden" name="url" value="<?=current_url()?>">
 			<table id="formdiv" cellspacing="5">
 				<tr><td valign="top" colspan="2"><div style="background-color: #B5E8FD;height:20px;"></div></td></tr>
 				<tr><td width="150px" align="left" style="padding-left: 15px"><?=$more['27']->matter;?></td><td><input type="text" name="name" size="30"> <?=form_hidden('heading',$result[0]->heading)?></td></tr>

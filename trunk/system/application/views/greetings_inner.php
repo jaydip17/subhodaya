@@ -3,7 +3,7 @@
 		<td >
 		<div style="height: 25px;width: 691px;background-color: #137ABC" id="more-news-div1">
 			<span ><a href="<?=base_url();?>greetings/content/<?php if(isset($result['0'])){echo $result['0']->type;}?>"><?php if(isset($more[24])){echo $more['24']->matter;}?></a></span>
-		</div>
+		</div><?=$this->session->flashdata('greetings'); ?>
 		<div style="border: 1px solid #137ABC;">
 			<table width="685px" height="700px" align="center" >
 				<tr>
@@ -13,12 +13,14 @@
 				</tr>
 				<tr>
 					<td valign="top" align="center">
-					<?=form_open('subhodaya/sendmail',array('name'=>'telugu_send')) ?>
+					<?=form_open('index.php/subhodaya/sendmail','name="telugu_send"') ?>
 						<table align="center" width="550px" border="0" style="border: 1px solid #939393;">
 							<tr>
 								<td colspan='2' align="center"><div  id="gree_bar1"><?=$more['25']->matter?></div></td>
 							</tr>
 							<tr>
+							<?=form_hidden('type','Greeting')?></td>
+							<input type="hidden" name="url" value="<?=current_url()?>">
 								<td align="left" width="30%" style="padding-left: 10px;"><?=$more['27']->matter?></td>
 								<td align="left" width="70%"><input type="text" name="name" size="30"></td>
 							</tr>

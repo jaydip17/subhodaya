@@ -111,12 +111,11 @@ var marqueespeed=2
 var marqueebgcolor="#FFFFFF"
 //Pause marquee onMousever (0=no. 1=yes)?
 var pauseit=1
-
 //Specify the marquee's content (don't delete <nobr> tag)
 //Keep all content on ONE line, and backslash any single quotations (ie: that\'s great):
 
 var marqueecontent='<nobr><span style="font: bold 14px Verdana">';
-	marqueecontent+="<?php foreach ($activenews as $news){?><img src='<?=base_url()?>assets/imgs/scrool-img.png'/>*<a href='<?=base_url();?>news/newsdetails/<?=$news->id?>'><?php echo $news->heading;?></a><?} ?>";
+	marqueecontent+="<?php foreach ($activenews as $news){?>**<a href='<?=base_url();?>news/newsdetails/<?=$news->id?>'><?php echo $news->heading;?></a><?} ?>";
 	marqueecontent+="</span></nobr>";
 
 ////NO NEED TO EDIT BELOW THIS LINE////////////
@@ -198,9 +197,9 @@ document.write('</td></table>')
       <a href="<?=base_url();?>greetings/"><?=$more['7']->matter?></a>|
       <a href="<?=base_url();?>mahila/"><?=$more['8']->matter?></a>|
       <a href="<?=base_url();?>sahithi/"><?=$more['9']->matter?></a>|
-      <a href="<?=base_url()."contact"?>?&height=350&width=550" class="thickbox" title="Contact Us"><?=$more['40']->matter?></a>|
-      <a href="<?=base_url()."contact/feedback"?>?&height=350&width=550" class="thickbox" title="Feedback"><?=$more['41']->matter?></a>|
-      <a href="<?=base_url()."contact/advertise"?>?&height=350&width=550" class="thickbox" title="Advertise With Us"><?=$more['42']->matter?></a>
+      <a href="<?=base_url()?>?&height=350&width=550" class="thickbox" title="Contact Us"><?=$more['40']->matter?></a>|
+      <a href="<?=base_url()?>?&height=350&width=550" class="thickbox" title="Feedback"><?=$more['41']->matter?></a>|
+      <a href="<?=base_url()?>?&height=350&width=550" class="thickbox" title="Advertise With Us"><?=$more['42']->matter?></a>
     </div>
    
  </td>

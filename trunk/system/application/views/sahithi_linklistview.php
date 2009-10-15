@@ -1,3 +1,14 @@
+<style type="text/css">
+li{
+line-height:16px;
+}
+body{
+font-size:14px;
+line-height:16px;
+}
+</style>
+
+
 <div style="height: 470px;">
 <? foreach($details as $row):?>
 <ul id="mainnews">
@@ -8,6 +19,6 @@
 <?} ?>
 </ul>
 <?   endforeach;  ?></div>
-<div align="right" style="width: 100%;"><? echo $paginate;?></div>
+<div align="right" style="width: 100%;"><? echo $paginate;?></div>  
 
 

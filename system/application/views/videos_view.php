@@ -90,7 +90,7 @@
  
   $count=1;?>
     <div class="TabbedPanelsContent" id="div<?=$item->id?>" > 
-    <!-- <img src="<?=base_url();?>assets/imgs/loadingAnimation.gif" align="middle" style="padding:100px 0px 0px 80px;"></img> -->
+     <img src="<?=base_url();?>assets/imgs/loadingAnimation.gif" align="middle" style="padding:100px 0px 0px 80px;"></img> 
            </div>
      
 
@@ -104,7 +104,7 @@
                
       
       </div>   
-         <img src="<?=base_url();?>assets/imgs/loadingAnimation.gif" align="middle" style="padding:100px 0px 0px 80px;"></img>        
+       <!--  <img src="<?=base_url();?>assets/imgs/loadingAnimation.gif" align="middle" style="padding:100px 0px 0px 80px;"></img>-->        
        </div>  
                           
             </td>

@@ -129,7 +129,8 @@ function display_text_34(ss){
 }
 function display(value)
 {
-  document.getElementById('flash-content').innerHTML = value;
+	var content = document.getElementById('flash_'+value).innerHTML;
+  document.getElementById('flash-content').innerHTML = content;
 }
 
 //-->
@@ -183,10 +184,12 @@ else
 //-->
 </script>
 <div id="flash-content" style="position:absolute; width:604px; top: 450px; color:white; padding:5px 5px 5px 5px; vertical-align:top; left:41px; height: 40px;text-align: left;"> 
-sample sf dsfsd fdsf
+<?=$query['0']->text?>
 </div>
-	                    </td>
-	                    </tr>
+<? foreach ($query as $image): ?>
+<div id='flash_<?=$image->id?>' style="display: none;"><?=$image->text?></div>
+<?endforeach; ?>
+					</td></tr>
 	                </table></td></tr>
 	                <tr><td></td></tr>
          </table>

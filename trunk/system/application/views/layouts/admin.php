@@ -100,14 +100,22 @@ ddsmoothmenu.init({
 			<ul>
 				<li><a href="<?=base_url();?>admin/player/flowplayer">Flowplayer</a></li>
 				<li><a href="<?=base_url();?>admin/contacts">Contacts</a></li>
-				<li> <a href="#">Slide Images</a>
-	<ul>
-			<li><a href="<?=base_url()?>admin/slideimages/add" >Add Image</a>
+				<li> <a href="#">Cinema flash Images</a>
+				<ul>
+					<li><a href="<?=base_url()?>admin/slideimages/add" >Add Image</a>
+					</li>
+					<li><a href="<?=base_url()."admin/slideimages" ?>">View/Manage</a>
+					</li>
+				</ul>
 			</li>
-			<li><a href="<?=base_url()."admin/slideimages" ?>">View/Manage</a>
+			<li> <a href="#">Greeting flash Images</a>
+				<ul>
+					<li><a href="<?=base_url()?>admin/flash_greet" >Add Image</a>
+					</li>
+					<li><a href="<?=base_url()."admin/flash_greet/edit_flash" ?>">View/Manage</a>
+					</li>
+				</ul>
 			</li>
-		</ul>
-	</li>
 	
 	<li> <a href="#">Ads</a>
 	<ul>

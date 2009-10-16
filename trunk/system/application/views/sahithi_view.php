@@ -114,7 +114,7 @@ padding-top:0px;
 	              foreach($details_more_mahila['1'] as $item):?>
 
 	              <li><a href="<?=base_url();?>mahila/mahiladetails/<?=$item->id?>/<?=$item->cat_id?>"><?=$item->heading?></li>
-	              <? if($count==5)
+	              <? if($count==3)
 	              break;
 	              else  $count++;
 	              endforeach;} ?>
@@ -142,7 +142,7 @@ padding-top:0px;
 	              foreach($details_more_mahila['2'] as $row):?>
 
 	              <li><a href="<?=base_url();?>mahila/mahiladetails/<?=$row->id?>/<?=$row->cat_id?>"><?=$row->heading?></a></li>
-	              <?if($count==5)
+	              <?if($count==3)
 	              break;
 	              else {
 	              	$count++;

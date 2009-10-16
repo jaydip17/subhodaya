@@ -57,13 +57,14 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
 				});
 			});
 		</script>
+
 <!-- thick box -->
 <!--<script type="text/javascript" src="<?=base_url()?>assets/js/jquery.min.js"></script>-->
 <!--<script type="text/javascript">-->
 <!--var tb_pathToImage = "<?=base_url()?>assets/imgs/loadingAnimation.gif";-->
 <!--</script>-->
 <!--<script type="text/javascript" src="<?=base_url()?>assets/js/thickbox-compressed.js"></script>-->
-<!--<link rel="stylesheet" href="<?=base_url()?>assets/thickbox.css" type="text/css" media="screen" />-->
+<link rel="stylesheet" href="<?=base_url()?>assets/thickbox.css" type="text/css" media="screen" />
 <!-- start tabs -->
 
 
@@ -133,7 +134,7 @@ var pauseit=1
 //Keep all content on ONE line, and backslash any single quotations (ie: that\'s great):
 
 var marqueecontent='<nobr><span style="font: bold 14px Verdana">';
-	marqueecontent+="<?php foreach ($activenews as $news){?>**<a href='<?=base_url();?>news/newsdetails/<?=$news->id?>'><?php echo $news->heading;?></a><?} ?>";
+	marqueecontent+="<?php foreach ($activenews as $news){?>**<a href='<?=base_url();?>news/newsdetails/<?=$news->id?>/<?=$news->type?>'><?php echo $news->heading;?></a><?} ?>";
 	marqueecontent+="</span></nobr>";
 
 ////NO NEED TO EDIT BELOW THIS LINE////////////

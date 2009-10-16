@@ -35,17 +35,35 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
 <?php }?>
 <!-- video and cinema page tabs -->
 <?php if(isset($sprytabs)) {?>
-<script src="<?=base_url();?>assets/SpryAssets/SpryTabbedPanels.js" type="text/javascript" />
-<link href="<?=base_url();?>assets/SpryTabbedPanels.css" rel="stylesheet" type="text/css" />
+<script src="<?=base_url();?>assets/SpryAssets/SpryTabbedPanels.js" type="text/javascript" ></script>
+
 <?php }?>
 
-<!-- thick box -->
+<!-- color box -->
+<link href="<?=base_url();?>assets/colorbox.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="<?=base_url()?>assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="<?=base_url()?>assets/js/colorbox/jquery.colorbox.js"></script>
 <script type="text/javascript">
-var tb_pathToImage = "<?=base_url()?>assets/imgs/loadingAnimation.gif";
-</script>
-<script type="text/javascript" src="<?=base_url()?>assets/js/thickbox-compressed.js"></script>
-<link rel="stylesheet" href="<?=base_url()?>assets/thickbox.css" type="text/css" media="screen" />
+			$(document).ready(function(){
+				//Examples of how to assign the ColorBox event to elements
+				$(".feedback").colorbox({width:"550px", height:"350px", iframe:true});
+				$(".contact").colorbox({width:"550px", height:"350px", iframe:true});
+				$(".advertise").colorbox({width:"550px", height:"350px", iframe:true});
+				
+				//Example of preserving a JavaScript event for inline calls.
+				$("#importcontacts").click(function(){ 
+					$("#advertise").colorbox({iframe:true, width:500, height:500, open:true}); 
+					
+				});
+			});
+		</script>
+<!-- thick box -->
+<!--<script type="text/javascript" src="<?=base_url()?>assets/js/jquery.min.js"></script>-->
+<!--<script type="text/javascript">-->
+<!--var tb_pathToImage = "<?=base_url()?>assets/imgs/loadingAnimation.gif";-->
+<!--</script>-->
+<!--<script type="text/javascript" src="<?=base_url()?>assets/js/thickbox-compressed.js"></script>-->
+<!--<link rel="stylesheet" href="<?=base_url()?>assets/thickbox.css" type="text/css" media="screen" />-->
 <!-- start tabs -->
 
 
@@ -197,9 +215,9 @@ document.write('</td></table>')
       <a href="<?=base_url();?>greetings/"><?=$more['7']->matter?></a>|
       <a href="<?=base_url();?>mahila/"><?=$more['8']->matter?></a>|
       <a href="<?=base_url();?>sahithi/"><?=$more['9']->matter?></a>|
-      <a href="<?=base_url()?>?&height=350&width=550" class="thickbox" title="Contact Us"><?=$more['40']->matter?></a>|
-      <a href="<?=base_url()?>?&height=350&width=550" class="thickbox" title="Feedback"><?=$more['41']->matter?></a>|
-      <a href="<?=base_url()?>?&height=350&width=550" class="thickbox" title="Advertise With Us"><?=$more['42']->matter?></a>
+      <a href="<?=base_url()?>contact" class="contact" title="Contact Us"><?=$more['40']->matter?></a>|
+      <a class="feedback" href="<?=base_url()?>contact/feedback" title="Feedback"><?=$more['41']->matter?></a>|
+      <a href="<?=base_url()?>contact/advertise" class="advertise" title="Advertise With Us"><?=$more['42']->matter?></a>
     </div>
    
  </td>

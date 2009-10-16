@@ -90,11 +90,11 @@
  
   $count=1;?>
     <div class="TabbedPanelsContent" id="div<?=$item->id?>" > 
-     <img src="<?=base_url();?>assets/imgs/loadingAnimation.gif" align="middle" style="padding:100px 0px 0px 80px;"></img>    
+    <!-- <img src="<?=base_url();?>assets/imgs/loadingAnimation.gif" align="middle" style="padding:100px 0px 0px 80px;"></img> -->
            </div>
      
 
-   
+  
   
   
     <?php } ?> 
@@ -104,7 +104,7 @@
                
       
       </div>   
-                
+         <img src="<?=base_url();?>assets/imgs/loadingAnimation.gif" align="middle" style="padding:100px 0px 0px 80px;"></img>        
        </div>  
                           
             </td>
@@ -133,7 +133,7 @@
           	     
           	         <table width="95%" style="margin-left:6px;margin-right:4px; margin-top:6px;">
           	          <tr style="height:25px;">
-          	       			<td colspan="2" id="topvideo" style=padding-top:0px;"><?=$more['34']->matter?></td>
+          	       			<td colspan="2" id="topvideo"><?=$more['34']->matter?></td>
           	          <tr>
           	          
           	          <!--<tr>
@@ -148,7 +148,7 @@
           	            foreach($topviewedvideos->result() as $item){  
           	            ?>
           	          <tr>
-          	            <td><div style="padding-top:5px;"><a href="<?=base_url();?>video/index/<?=$item->id?>/<?=$item->video_cat_id?>"><div id="topvideo_time"><?=$item->time?></div><img id="img" src="<?=base_url();?>assets/videos/image_preview/image<?=$item->id?>_thumb.jpg"></div></a></td>
+          	            <td><div style="padding-top:5px;"><a href="<?=base_url();?>video/index/<?=$item->id?>/<?=$item->video_cat_id?>"><div id="topvideo_time"><?=$item->time?></div><img id="img" src="<?=base_url();?>assets/videos/image_preview/image<?=$item->id?>_thumb.jpg" width="90" height="60"></div></a></td>
           	            <td  valign="top" id="topvi"><?=$item->name?><br/><?=$item->insert_date?><br/><span style="color:#FF6507;"><?=$item->no_of_views?> Views</span><br/><div id="topimg" style=height:15px;width:101px;padding-left:4px;margin-top:4px;padding-top:2px;"><?=$more['36']->matter?>:<span style="color:#FF6507;"> <?=$item->rating?></span></div></td>
           	            </tr>
           	          <?}?><!-- 

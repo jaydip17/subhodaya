@@ -188,7 +188,7 @@ padding-top:0px;
 							           {$count++;
 							            continue;
 							           }
-							            if($count>7)
+							            if($count>6)
 							           {
 							           break;
                                        }$count++;?>
@@ -227,7 +227,7 @@ padding-top:0px;
 	              foreach($details_more['2'] as $item) {if($count==0)
 							           {$count++;
 							            continue;
-							           } if($count>7)
+							           } if($count>6)
 							           {
 							           break;
                                        }$count++;?>
@@ -479,7 +479,7 @@ padding-top:0px;
 							           {$count++;
 							            continue;
 							           }
-							            if($count>5)
+							            if($count>3)
 							           {
 							           break;
                                        }$count++;?>

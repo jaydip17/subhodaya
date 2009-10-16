@@ -173,8 +173,8 @@ line-height:18px;
 						<div style="height: 248px;">
 						<? if(!empty($cinema_type5['0'])){
 						if(file_exists("./assets/cinema/ceni_img".$cinema_type5['0']->id."_thumb.jpg")){ ?>
-						<a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type5['0'])){ echo $cinema_type5['0']->id;}?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($cinema_type5['0'])){ echo $cinema_type5['0']->id;}?>_thumb.jpg" style="margin: 5px 0px 2px 20px;" id="img"/></a>
-						<?}} ?>
+						<a href="<?=base_url();?>cinema/inner/<?=$cinema_type5['0']->id?><?=$cinema_type5['0']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($cinema_type5['0'])){ echo $cinema_type5['0']->id;}?>_thumb.jpg" style="margin: 5px 0px 2px 20px;" id="img"/></a>
+						<?} ?>
 						<ul id="mainnews" style="padding-top: 5px;">
 						<?php if(isset($cinema_type5 )){
 							$count=1;
@@ -189,7 +189,7 @@ line-height:18px;
 							}if($count==0)
 							echo 'no datafound';
 							endforeach;
-						}
+						}}
 							?>
 						</ul>
 						</div>

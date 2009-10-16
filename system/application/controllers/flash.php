@@ -26,7 +26,23 @@ function flashimages()
 	
 function greetings()
 {
-	echo "<images>
+		$images=$this->Flash_model->flash_greetings();
+		//$images=$query->result();
+	//print_r($images);
+       $output="<images>";
+    		$i=1;
+    		foreach($images as $item)
+			{
+		  $output.="<preview".$i.">images/flash".$item->id.".jpg</preview".$i.">";
+		  $output.="<content".$i.">".$item->id."</content".$i.">";
+		  $output.="<link".$i.">".$item->link."</link".$i.">";
+		  $i++;		}
+		$output.="</images>";
+		print($output);
+
+	
+		
+	/*echo "<images>
 <preview1>images/i miss u.jpg</preview1>
 <preview2>images/birthday.jpg</preview2>
 <preview3>images/for u.jpg</preview3>
@@ -47,6 +63,6 @@ function greetings()
 <link3>link3</link3>
 <link4>link4</link4>
 <link5>link5</link5>
-</images>";
+</images>";*/
 }
 }

@@ -3,6 +3,7 @@ class Greetings extends Controller {
 	var $layout = 'default'; 
 	function greetings(){
 		parent::Controller();
+		$this->load->model('admin/Flash_model');
 	}
 	function index(){
 		$type=$this->Greeting_Model->get_type();
@@ -15,10 +16,13 @@ class Greetings extends Controller {
 		$greetings8=$this->Greeting_Model->get_main_greetings(8);
 		$greetings4=$this->Greeting_Model->get_main_greetings(4);
 		$greetings6=$this->Greeting_Model->get_main_greetings(6);
-		//print_r($greetings6);
+		//print_r($greetings9);
 		$greetings7=$this->Greeting_Model->get_main_greetings(7);
 		$more=$this->News_Model->more_news();
 		$tabs=array();
+		$query=$this->Flash_model->flash_greetings();
+		//$flashiamges=$query->result();
+		//print_r($query);
 		$data=array('greetings1' 	=> 	$greetings1,
 					'greetings2' 	=> 	$greetings2,
 					'greetings12'	=> 	$greetings12,
@@ -31,7 +35,8 @@ class Greetings extends Controller {
 					'more'       	=> 	$more,
 					'type'       	=> 	$type,
 					'onload' 		=> 	"display_text_1()",
-					'tabs'			=> $tabs
+					'tabs'			=> $tabs,
+					'query'        => $query
 			);
 		$this->load->view('greetings_content',$data);
   }

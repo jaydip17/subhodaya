@@ -79,7 +79,7 @@ class contact extends Controller {
 			$from='www.subhodaya.com';
 			$from_name=$name;
 			
-			$message='Company:'.$company.',<br>Name:'.$name.',<br>phone:'.$phone.',<br>Email_id:'
+			$message='Name:'.$name.',<br>phone:'.$phone.',<br>Email_id:'
 					.$mailid.',<br>City:'.$city.',<br>Location for add:'.$location.',<br>Message:'.$messa.'.';
 					
 			$status=$this->send_mail($to,$subject,$message,$from,$from_name);
@@ -235,12 +235,12 @@ class contact extends Controller {
 			$city=$_POST['city'];
 			$this->session->set_flashdata('city',$city);
 			}
-			$to='admin@subhodaya.com';
+			$to='pradeep@tech-pundits.com';
 			$subject='For Feedback';
-			$from='www.subhodaya.com';
+			$from=$mailid;
 			$from_name=$name;
 			
-			$message='Company:'.$company.',<br>Name:'.$name.',<br>phone:'.$phone.',<br>Email_id:'
+			$message='<br>Name:'.$name.',<br>phone:'.$phone.',<br>Email_id:'
 					.$mailid.',<br>City:'.$city.',<br>Message:'.$messa.'.';
 					
 			$status=$this->send_mail($to,$subject,$message,$from,$from_name);
@@ -261,18 +261,14 @@ class contact extends Controller {
 	 	$this->load->library('email');
 		$this->email->clear();
 		$this->email->from($from, $from_name);
-		$this->email->to($to);
+		$this->email->to('pradeep@tech-pundits.com');
 		//$this->email->cc('another@another-example.com');
 		//$this->email->bcc('them@their-example.com');
 		$html_message  = $this->load->view('email_layout/invitation_friend',$data,TRUE);
 		$this->email->subject($subject);
 		$this->email->message($html_message);
-		
-		$status=$this->email->send();
-		
-	 $this->email->print_debugger();
-	
-		return $status;
+		$this->email->send();
+		return true;
 	 }
 
 }

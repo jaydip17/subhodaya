@@ -121,7 +121,7 @@ padding-left: 20px;
 </tr>
 <tr>
 	<td  width="2px" height="10" valign="top"><img src="<?=base_url()?>assets/imgs/body-bottomLeft.jpg"></td>
-	<td id="gal_center-botom" width="750px;" align="left" height="10" valign="top"></td>
+	<td id="gal_center-botom" width="750px;" align="left" height="10" valign="top"><?echo $paginate;?></td>
 	<td  width="2px;" height="10" valign="top"><img src="<?=base_url()?>assets/imgs/body-bottomRight.jpg"></td>
 </tr>
 </table>

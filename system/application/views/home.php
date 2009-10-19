@@ -61,7 +61,12 @@ function test1(type)
 	}
 
 }
-
+function test3()
+{
+	$(document).ready(function(){
+	$("#advertise").colorbox({iframe:true, width:500, height:500, open:true}); 
+	});
+}
 function test()
 {
     var flag=1;
@@ -80,6 +85,8 @@ function test()
 	//tb_show('My Caption',url,'false');
 	var url = '&username='+uname+'&password='+pass+'&type='+email;
 	attribures = '&height=400&width=500';
+	var sm = '<?=base_url()?>admin/contacts/import';
+	alert(sm);
 	tb_show('Your Yahoo (or) Gmail Contact List','<?=base_url()."admin/contacts/import?"?>'+url+attribures,'false');
 	
 	}
@@ -118,7 +125,7 @@ function test()
 	    						</ul>            
     							<div class="yui-content">
     							<div id="tab1">
-    							<div style="height: 175px;" id="telugufont1">
+    							<div style="height: 169px;" id="telugufont1">
     							<? if(file_exists("./assets/news/news_img".$news_type7['0']->id."_thumb.jpg")){ ?>
     							<a href="<?=base_url();?>news/newsdetails/<?php if(isset($news_type7['0'])){echo $news_type7['0']->id;}?>/<?=$news_type7['0']->type?>"><img id="img" src="<?=base_url();?>assets/news/news_img<?=$news_type7['0']->id?>_thumb.jpg" align="top" style="margin: 0px 22px 1px 2px;float: left;"></img></a>
     							<?} ?>
@@ -187,7 +194,7 @@ function test()
 							        	</table>
 							        	</div></div>
 							        <div id="tab3">
-							        <div style="height: 175px;" id="telugufont1">
+							        <div style="height: 169px;" id="telugufont1">
 							        	<? if(file_exists("./assets/cinema/ceni_img".$cinema_type1['0']->id."_thumb.jpg")){ ?>
 							        		<a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->id;}?>/<?=$cinema_type1['0']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($cinema_type1['0'])){echo $cinema_type1['0']->id;}?>_thumb.jpg" align="top" style="margin: 0px 22px 1px 2px;float: left;" id="img"></img></a>
 							        	<?} ?>
@@ -227,7 +234,7 @@ function test()
 							        	</table>
 							        	</div></div>
 									<div id="tab4">
-									     <div style="height: 175px;" id="telugufont1">
+									     <div style="height: 169px;" id="telugufont1">
 							        	<? if(!empty($mahila_details_yoga['0'])){if(file_exists("./assets/mahila/news_img".$mahila_details_yoga['0']->id."_thumb.jpg")){ ?>
 							        		<a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['0'])){echo $mahila_details_yoga['0']->id;}?>"><img src="<?=base_url();?>assets/mahila/news_img<?php if(isset($mahila_details_yoga['0'])){echo $mahila_details_yoga['0']->id;}?>_thumb.jpg" align="top" style="margin: 0px 22px 1px 2px;float: left;" id="img"></img></a>
 							        	<?} ?>
@@ -472,7 +479,7 @@ function test()
 	  </tr>
 	  <tr>
 	  	  <td colspan="3" align="center">
-	  	  <img src="<?=base_url()?>assets/imgs/invite-contact2.png" id='importcontacts' style="cursor: pointer;" onclick="test()" name="submit" alt=""/></td>
+	  	  <img  src="<?=base_url()?>assets/imgs/invite-contact2.png" id='importcontacts1' onclick="test3()" style="cursor: pointer;"  name="submit" alt=""/></td>
 	  </tr>    
 	  <tr>
 	  	 <td colspan="3" align="center" ><small>We Don't Store Your Username And Password</small></td>

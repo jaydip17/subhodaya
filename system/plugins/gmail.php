@@ -33,12 +33,12 @@ function get_contacts($login, $password)
 	
 	#initialize the curl session
 	$ch = curl_init();
-	curl_setopt($ch, CURLOPT_URL,"http://mail.google.com/mail/");
+	curl_setopt($ch, CURLOPT_URL,"https://www.google.com/accounts/ServiceLoginAuth?service=mail");
 	curl_setopt($ch, CURLOPT_REFERER, "");
 	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-	curl_setopt($ch, CURLOPT_HEADERFUNCTION, 'read_header1');
+	curl_setopt($ch, CURLOPT_HEADERFUNCTION, 'read_header');
 	
 	#get the html from gmail.com
   $html = curl_exec($ch);
@@ -50,7 +50,7 @@ function get_contacts($login, $password)
 
 	#parse the login form:
 	#parse all the hidden elements of the form
-	preg_match_all('/<input type\="hidden" name\="([^"]+)".*?value\="([^"]*)"[^>]*>/si', $html, $matches);
+	preg_match_all('/<input type="hidden"[^>]*name\="([^"]+)"[^>]*value\="([^"]*)"[^>]*>/si', $html, $matches);
 	$values = $matches[2];
 	$params = "";
 	
@@ -91,24 +91,22 @@ function get_contacts($login, $password)
   
   $names = array();
   $emails = array();
-  foreach ($csvrows as $row)
-  {
-    $values = explode(",", $row);
-    if(isset($values[28]))
-    if (eregi("@", $values[28]))
-    {
-      $names[] = ( trim($values[0])=="" ) ? $values[28] : $values [0];
-      $emails[] = $values[28];
-    }
-  }
-  
+	foreach ($csvrows as $row)
+	{
+		if (preg_match('/^((?:"[^"]*")|(?:[^,]*)).*?([^,@]+@[^,]+)/', $row, $matches))
+		{
+			$names[] = trim( ( trim($matches[1] )=="" ) ? current(explode("@",$matches[2])) : $matches[1] , '" ');
+			$emails[] = trim( $matches[2] );
+		}
+	}
+	  
 
 	return array($names, $emails);
 }
 
 #read_header is essential as it processes all cookies and keeps track of the current location url
 #leave unchanged, include it with get_contacts
-function read_header1($ch, $string)
+function read_header($ch, $string)
 {
     global $location;
     global $cookiearr;
@@ -136,15 +134,11 @@ function read_header1($ch, $string)
     $cookie = "";
     if(trim($string) == "") 
     {
-    	if(isset($cookiearr))
-    	{
-		      foreach ($cookiearr as $key=>$value)
-		      {
-		        $cookie .= "$key=$value; ";
-		      }
-		      curl_setopt($ch, CURLOPT_COOKIE, $cookie);
-    	}
-    	
+      foreach ($cookiearr as $key=>$value)
+      {
+        $cookie .= "$key=$value; ";
+      }
+      curl_setopt($ch, CURLOPT_COOKIE, $cookie);
     }
 
     return $length;

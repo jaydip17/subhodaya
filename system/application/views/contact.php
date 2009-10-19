@@ -41,7 +41,7 @@
 		<td style="color: red;"><?=$this->session->flashdata('message1')?></td>
 	</tr>
 	<tr >
-		<td colspan='3' align="center"><input type="submit" name="submit" value="submit"></td>
+		<td colspan='3' align="center"><input id="importcontacts" type="submit" name="submit" value="submit"></td>
 	</tr>
 </table>
 </form>

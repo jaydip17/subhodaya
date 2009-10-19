@@ -84,7 +84,8 @@ line-height:18px;
 			<?}} ?>
 			<?=$result['0']->description ?></div>
 			</div></td></tr>
-			<?php if(isset($this->session->flashdata('news'))){?>
+			<?php $flash_mesg = $this->session->flashdata('news');
+			if($flash_mesg!=""){?>
 			<tr><td style="color: red;"><?=$this->session->flashdata('news')?></td></tr>
 			<?php }?>
 			<tr><td><div id="news_heading" class="heading"><span id="newsheading"><?php if(isset($more['25'])){echo $more['25']->matter;}?></span></div></td></tr>

@@ -28,6 +28,11 @@ class contact extends Controller {
 						'message'=> $message);
 		$this->load->view('advertise',$data);
 	}
+	function message_sent(){
+		$message = $this->session->flashdata('message');
+		$this->load->view('message_sent');
+		
+	}
 	function send_advertise()
 		{
 		if(!empty($_POST['name'])){
@@ -84,13 +89,14 @@ class contact extends Controller {
 					
 			$status=$this->send_mail($to,$subject,$message,$from,$from_name);
 			if($status==1){
-				echo $success='Thankyou for Intresting to advertise with us.</br>Our marketing executiws will respond you 
+				$success='Thankyou for Intresting to advertise with us.</br>Our marketing executiws will respond you 
 				              with in 24 hours</br>.Thanku have a greate day!';
-				$this->session->set_flashdata('successs',$success);
-				
+				$this->session->set_flashdata('messagesent',$success);
+				redirect(base_url().'contact/message');
 			}else {
-				echo $error='please enter details again';
-				
+				$error='please enter details again';
+				$this->session->set_flashdata('messagesent',$error);
+				redirect(base_url().'contact/message_sent');
 			}	
 		}
 	function send_contact()
@@ -157,37 +163,7 @@ class contact extends Controller {
 				echo $error='please enter details again';
 				
 			}
-			//echo $message; exit;
-		/*if(!empty($_POST['mailid'])){
-		$company=$_POST['company'];
-		//$name=$_POST['name'];
-		$phone=$_POST['phone'];
-		//$mailid=$_POST['mailid'];
-		$city=$_POST['city'];
-		//$location=$_POST['location'];
-		$message=$_POST['message'];
-		
-		$message1='Company:'.$company.',<br>Name:'.$name.',<br>phone:'.$phone.',<br>Email_id:'
-					.$mailid.',<br>City:'.$city.',<br>Message:'.$message.'.';
-		
-				$this->load->library('email');
-				$this->email->from('www.subhodaya.com', $name);
-				$this->email->to('admin@subhodaya.com');
-				//$this->email->cc('another@another-example.com');
-				//$this->email->bcc('them@their-example.com');
-				
-				$this->email->subject('For advertise');
-				$this->email->message($message1); 
-				//$this->email->initialize($config);
-				$this->email->send();
-				echo $this->email->print_debugger();
-		}
-		else{
-			redirect(base_url());
-		}*/
 			
-			//print_r($data);exit;
-		//redirect(base_url().'contact',$message);
 			
 	}
 	function send_feedback(){

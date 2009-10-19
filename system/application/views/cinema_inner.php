@@ -85,8 +85,9 @@ line-height:16px;
 			<?}} ?>
 			<font style="padding: 2px;"><?php if(isset($result['0'])){echo $result['0']->description;}?></font></div>
 			</div></td></tr>
-			<?php if(isset($this->session->flashdata('cinema'))){?>
-			<tr><td><?=$this->session->flashdata('cinema')?></td></tr>
+			<?php $flash_mesg=$this->session->flashdata('cinema');
+			if($flash_mesg!=''){?>
+			<tr><td align="center"><div style="color: black;background-color: yellow;"><?=$this->session->flashdata('cinema')?></div></td></tr>
 			<?php }?>
 			<tr><td><div id="news_heading" class="heading"><span id="newsheading"><?php if(isset($more['25'])){echo $more['25']->matter;}?></span></div></td></tr>
 			<tr><td align="center"><div style="border:1px solid #9FA0A0;">

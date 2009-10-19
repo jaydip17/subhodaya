@@ -3,7 +3,7 @@
 		<td >
 		<div style="height: 25px;width: 691px;background-color: #137ABC" id="more-news-div1">
 			<span ><a href="<?=base_url();?>greetings/content/<?php if(isset($result['0'])){echo $result['0']->type;}?>"><?php if(isset($more[24])){echo $more['24']->matter;}?></a></span>
-		</div><?=$this->session->flashdata('greetings'); ?>
+		</div>
 		<div style="border: 1px solid #137ABC;">
 			<table width="685px" height="700px" align="center" >
 				<tr>
@@ -11,6 +11,11 @@
 							<img src="<?=base_url();?>assets/greetings/gree_img<?php if(isset($result)){echo $result['0']->id;}?>.jpg" style="border: 3px solid #939393;margin: 7px 0px 7px 0px;">
 					</td>
 				</tr>
+				<?php $flash_mesg=$this->session->flashdata('greetings');
+				if($flash_mesg!=''){
+				?>
+				<tr><td align="center"><div style="color: black;background-color: yellow;"><?=$this->session->flashdata('greetings')?></div></td></tr>
+				<?php }?>
 				<tr>
 					<td valign="top" align="center">
 					<?=form_open('index.php/subhodaya/sendmail','name="telugu_send"') ?>

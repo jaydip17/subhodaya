@@ -13,6 +13,7 @@ class Gallery extends Controller {
 		foreach ($result as $cate)
 		{
 			$subcats=$this->Gallery_Model->get_cateimage($cate->id,$limit="8");
+			
 			foreach ($subcats as $sub_cat)
 			{
 				$ss = $this->Gallery_Model->getimage($sub_cat->id);
@@ -95,25 +96,27 @@ class Gallery extends Controller {
   		$type=$this->uri->segment(3,0);
   		$more=$this->News_Model->more_news();
 		$details=$this->Gallery_Model->get_cateimage($type,$limit="");
-		$images=array();
+	/*	$images=array();
 		foreach($details as $item)
 		{
 			$images[$item->id]=$this->Gallery_Model->getimage($item->id);
 			 //$query1[$item->id]=$this->Gallery_Model->gallery_pagi1($item->id);
 		}
 		$result=$this->Gallery_Model->get_categeory(0);
+   */
 		//$result1=$this->Gallery_Model->get_subcate();
 		//pagination
 //		$query=$query1->result();
 //		print_r($query);
-		/*$a =base_url().'gallery/categeory/'.$type;
+		$a =base_url().'gallery/categeory/'.$type;
 		 //pagination
-		 $query=$this->Gallery_Model->gallery_pagi1($type);
+		// $query=$this->Gallery_Model->get_cateimage($type,$limit=16);
+	  $query= "from gallery_categeory where parentid = $type";
 		 $total_count=$this->Gallery_Model->count1($type);
 		 
     	$this->load->library('paginationnew');
     	$this->paginationnew->start = ($this->uri->segment(4)) ? $this->uri->segment(4) : '0';
-    	$this->paginationnew->limit =30;
+    	$this->paginationnew->limit =16;
         $this->paginationnew->filePath =$a;
       
         $this->paginationnew->select_what = '*';
@@ -123,11 +126,26 @@ class Gallery extends Controller {
    		$result1 = $this->paginationnew->getQuery(TRUE);
    		$details=$result1->result();
    		//print_r($details);
-  	    $paginate = $this->paginationnew->paginate1();*/
+  	    $paginate = $this->paginationnew->paginate1();
   	    //end pagination
+   		
+  	    print_r($details);
+   		$images=array();
+		foreach($details as $item)
+		{
+			$images[$item->id]=$this->Gallery_Model->getimage($item->id);
+			 //$query1[$item->id]=$this->Gallery_Model->gallery_pagi1($item->id);
+		}
+		
+		$result=$this->Gallery_Model->get_categeory(0);
+		print_r($images);
+        //echo $paginate;
+   		
 		$data=array('more'   => $more,
 					'cate' => $result,
 					'result'=> $images,
+		            'paginate' => $paginate
+		            
 					);
 		$this->load->view('gallery_subcat',$data);
   	}
@@ -145,7 +163,7 @@ class Gallery extends Controller {
     	$this->load->library('paginationnew');
     	
     	$this->paginationnew->start = ($this->uri->segment(4)) ? $this->uri->segment(4) : '0';
-    	$this->paginationnew->limit =30;
+    	$this->paginationnew->limit =16;
         $this->paginationnew->filePath =$a;
       
         $this->paginationnew->select_what = '*';
@@ -159,7 +177,7 @@ class Gallery extends Controller {
   		$data=array('more'=>$more,
   					'cate'=>$cate,
   					'result'=>$details,
-  					'pagination'=>$paginate);
+  					'paginate'=>$paginate);
   		$this->load->view('gallery_inner',$data);
   	}
   	function content(){

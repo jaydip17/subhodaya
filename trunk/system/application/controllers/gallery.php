@@ -129,8 +129,7 @@ class Gallery extends Controller {
   	    $paginate = $this->paginationnew->paginate1();
   	    //end pagination
    		
-  	    print_r($details);
-   		$images=array();
+  	   	$images=array();
 		foreach($details as $item)
 		{
 			$images[$item->id]=$this->Gallery_Model->getimage($item->id);
@@ -138,9 +137,7 @@ class Gallery extends Controller {
 		}
 		
 		$result=$this->Gallery_Model->get_categeory(0);
-		print_r($images);
-        //echo $paginate;
-   		
+		   		
 		$data=array('more'   => $more,
 					'cate' => $result,
 					'result'=> $images,

@@ -183,7 +183,7 @@ else
 	swfobject.registerObject("sample123");
 //-->
 </script>
-<div id="flash-content" style="position:absolute; width:604px; top: 450px; color:white; padding:5px 5px 5px 5px; vertical-align:top; left:41px; height: 40px;text-align: left;"> 
+<div id="flash-content" style="position:absolute; width:604px; top: 425px; color:white; padding:0px 5px 20px 5px; vertical-align:top; left:41px; height: 40px;text-align: left;"> 
 <?=$query['0']->text?>
 </div>
 <? foreach ($query as $image): ?>

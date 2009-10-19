@@ -66,54 +66,65 @@ class contact extends Controller {
 	function send_contact()
 	{
 			if(!empty($_POST['name'])){
-				$name=$_POST['name']; 
+				$name=$_POST['name'];
+			$this->session->set_flashdata('name',$name);	 
 			}else {
 			$name1='Enter Your name';
-			$this->session->set_flashdata('name',$name1);
+			$this->session->set_flashdata('name1',$name1);
 			redirect(base_url().'contact');
 			}
 			
 			if(!empty($_POST['mailid'])){
 				$mailid=$_POST['mailid'];
+			$this->session->set_flashdata('mailid',$mailid);	
 			}else{
 			$mailid1='Enter Your Mailid';
-			$this->session->set_flashdata('mailid',$mailid1);
-			redirect(base_url().'contact');
-			}
-			
-			if(!empty($_POST['message'])){
-				$message1=$_POST['message'];
-			}else{
-			$mess='Please Enter Your Message';
-			$this->session->set_flashdata('message',$mess);
+			$this->session->set_flashdata('mailid1',$mailid1);
 			redirect(base_url().'contact');
 			}
 			
 			if(!empty($_POST['phone'])){
 				$phone=$_POST['phone'];
+				$this->session->set_flashdata('phone',$phone);
 			}else{
 			$phone1='Enter Your phone number';
-			$this->session->set_flashdata('phone',$phone1);
+			$this->session->set_flashdata('phone1',$phone1);
+			redirect(base_url().'contact');
+			}
+			if(!empty($_POST['message'])){
+				$messa=$_POST['message'];
+				$this->session->set_flashdata('messa',$messa);
+			}else{
+			$mess='Please Enter Your Message';
+			$this->session->set_flashdata('message1',$mess);
 			redirect(base_url().'contact');
 			}
 			
-			$company=$_POST['company'];
-			$city=$_POST['city'];
 			
+			if(isset($_POST['company'])){
+			$company=$_POST['company'];
+			$this->session->set_flashdata('comp',$company);
+			}
+			if(isset($_POST['city'])){
+			$city=$_POST['city'];
+			$this->session->set_flashdata('city',$city);
+			}
 			$to='admin@subhodaya.com';
 			$subject='For Contact';
 			$from='www.subhodaya.com';
 			$from_name=$name;
 			
 			$message='Company:'.$company.',<br>Name:'.$name.',<br>phone:'.$phone.',<br>Email_id:'
-					.$mailid.',<br>City:'.$city.',<br>Message:'.$message1.'.';
+					.$mailid.',<br>City:'.$city.',<br>Message:'.$messa.'.';
 					
 			$status=$this->send_mail($to,$subject,$message,$from,$from_name);
 			if($status==1){
-				$success='Enter Your phone number';
-				$this->session->set_flashdata('phone',$success);
+				echo $success='Enter Your phone number';
+				$this->session->set_flashdata('successs',$success);
+				
 			}else {
-				$error='please enter details again';
+				echo $error='please enter details again';
+				
 			}
 			//echo $message; exit;
 		/*if(!empty($_POST['mailid'])){
@@ -164,6 +175,9 @@ function send_mail($to,$subject,$message,$from,$from_name)
 		$this->email->message($html_message);
 		
 		$status=$this->email->send();
+		
+	 $this->email->print_debugger();
+	
 		return $status;
 	 }
 

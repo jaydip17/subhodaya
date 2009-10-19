@@ -83,8 +83,10 @@ line-height:16px;
 			<div id="maindiv-news" align="left" style="font-size:14px;letter-spacing:1px">
 			<?if(file_exists("./assets/".$type."/news_img".$result['0']->id."_thumb.jpg")){ ?><img src="<?=base_url();?>assets/<?=$type?>/news_img<?=$result['0']->id?>.jpg" style="float: left;padding:0px 0px 0px 0px;border: 2px solid  gray; margin: 10px 20px 20px 10px;" ></img><?} ?>
 			<?=$result['0']->description ?></div>
-		
 		</td></tr>
+		<?php if(isset($this->session->flashdata('mahila'))){?>
+		<tr><td><?=$this->session->flashdata('mahila')?></td></tr>
+		<?php }?>
 			<tr><td><div id="news_heading" class="heading"><div id="newsheading" style="width: 50%;text-align: left;float: left;"><?=$more['25']->matter;?></div><div style="text-align: right;padding: 0px 5px 20px 10px;" id="newsheading">Comment</div></div></td></tr>
 			<tr><td align="center"><div style="border:1px solid #9FA0A0;">
 			<?=form_open('index.php/subhodaya/sendmail','name="telugu_send"') ?>

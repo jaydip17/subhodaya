@@ -36,7 +36,7 @@ class contact extends Controller {
 			}else {
 			$name1='Enter Your name';
 			$this->session->set_flashdata('name1',$name1);
-			redirect(base_url().'contact');
+			redirect(base_url().'contact/advertise');
 			}
 			
 			if(!empty($_POST['mailid'])){
@@ -45,7 +45,7 @@ class contact extends Controller {
 			}else{
 			$mailid1='Enter Your Mailid';
 			$this->session->set_flashdata('mailid1',$mailid1);
-			redirect(base_url().'contact');
+			redirect(base_url().'contact/advertise');
 			}
 			
 			if(!empty($_POST['phone'])){
@@ -54,7 +54,7 @@ class contact extends Controller {
 			}else{
 			$phone1='Enter Your phone number';
 			$this->session->set_flashdata('phone1',$phone1);
-			redirect(base_url().'contact');
+			redirect(base_url().'contact/advertise');
 			}
 			if(!empty($_POST['message'])){
 				$messa=$_POST['message'];
@@ -62,13 +62,13 @@ class contact extends Controller {
 			}else{
 			$mess='Please Enter Your Message';
 			$this->session->set_flashdata('message1',$mess);
-			redirect(base_url().'contact');
+			redirect(base_url().'contact/advertise');
 			}
 			
 			
-			if(isset($_POST['company'])){
-			$company=$_POST['company'];
-			$this->session->set_flashdata('comp',$company);
+			if(isset($_POST['location'])){
+			$location=$_POST['location'];
+			$this->session->set_flashdata('comp',$location);
 			}
 			if(isset($_POST['city'])){
 			$city=$_POST['city'];
@@ -197,7 +197,7 @@ class contact extends Controller {
 			}else {
 			$name1='Enter Your name';
 			$this->session->set_flashdata('name1',$name1);
-			redirect(base_url().'contact');
+			redirect(base_url().'contact/feedback');
 			}
 			
 			if(!empty($_POST['mailid'])){
@@ -206,7 +206,7 @@ class contact extends Controller {
 			}else{
 			$mailid1='Enter Your Mailid';
 			$this->session->set_flashdata('mailid1',$mailid1);
-			redirect(base_url().'contact');
+			redirect(base_url().'contact/feedback');
 			}
 			
 			if(!empty($_POST['phone'])){
@@ -215,7 +215,7 @@ class contact extends Controller {
 			}else{
 			$phone1='Enter Your phone number';
 			$this->session->set_flashdata('phone1',$phone1);
-			redirect(base_url().'contact');
+			redirect(base_url().'contact/feedback');
 			}
 			if(!empty($_POST['message'])){
 				$messa=$_POST['message'];
@@ -223,7 +223,7 @@ class contact extends Controller {
 			}else{
 			$mess='Please Enter Your Message';
 			$this->session->set_flashdata('message1',$mess);
-			redirect(base_url().'contact');
+			redirect(base_url().'contact/feedback');
 			}
 			
 			

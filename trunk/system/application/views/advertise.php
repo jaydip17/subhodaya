@@ -1,5 +1,5 @@
 <form method="post" name="advertise" action="<?=$url?>" onsubmit="return <?=$onsubmit?>()">
-<table width="100%" cellspacing="10" cellpadding="10" style="font-size: 13px;border: 1px solid rgb(55, 137, 195);">
+<table width="100%" cellspacing="2" cellpadding="0" style="font-size: 13px;border: 1px solid rgb(55, 137, 195);">
     <tr>
         <td colspan="3" align="center">Please Enter all the details marked <span style="color:red">*</span></td>
     </tr>

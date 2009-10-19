@@ -618,8 +618,9 @@ padding-left: 20px;
 	<td colspan="3"   id="gal_middle" align="center" height="820"> 
 		<div style="margin: 10px 0px 10px 0px">
 		<img src="<?=base_url()?>assets/gallery/image<?=$image['0']->id?>.jpg" id="img">
-		</div><?if(isset($this->session->flashdata('gallery'))){ ?>
-		<div style="border: 1px solid blue;color: red"><?=$this->session->flashdata('gallery')?></div>
+		</div><?$flash_mesg=$this->session->flashdata('gallery');
+		if($flash_mesg!=''){ ?>
+		<div style="color: black;background-color: yellow;"><?=$this->session->flashdata('gallery')?></div>
 		<?php }?>
 		<div style="margin: 10px 0px 10px 0px">
 		<?=form_open('index.php/subhodaya/sendmail','name="telugu_send"') ?>

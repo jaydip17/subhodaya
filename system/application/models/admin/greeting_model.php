@@ -1,11 +1,13 @@
 <?php 
 class Greeting_Model extends Model {
-	function get_type(){
+	function get_type()
+	{
 		$this->db->select('id,gree_cat');
 		$result=$this->db->get('greeting_cat');
 		return $result->result();
 	}
-	function rename($data,$id){
+	function rename($data,$id)
+	{
 		$oldname='assets/greetings/'.$data['upload_data']['file_name'];
 		rename($oldname,'assets/greetings/gree_img'.$id.'.jpg');
 	}

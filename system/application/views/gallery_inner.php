@@ -100,7 +100,7 @@ padding-left: 20px;
 	</td>
 </tr>
 <tr>
-	<td colspan="3"  id="gal_middle" align="center" height="850"> 
+	<td colspan="3"  id="gal_middle" align="center" height="850" valign="top"> 
 		<table width="90%" cellpadding="5" cellspacing="5" align="center" >
 			<tr>
 			<?$count=1;

@@ -1,7 +1,7 @@
 <?php
 
-$lang['galley_mail_succ'] 				= 	"మెసేజ్ సెంట్ చేయబడినది ";
-$lang['gretting_mail_succ'] 			= 	"మెసేజ్ సెంట్ చేయబడినది ";
-$lang['cinema_mail_succ'] 			    = 	"మెసేజ్ సెంట్ చేయబడినది ";
-$lang['news_mail_succ'] 			    = 	"మెసేజ్ సెంట్ చేయబడినది ";
-$lang['mahila_mail_succ'] 			    = 	"మెసేజ్ సెంట్ చేయబడినది ";
+$lang['galley_mail_succ'] 				= 	"మెసేజ్ పంపబడింది ";
+$lang['gretting_mail_succ'] 			= 	"మెసేజ్ పంపబడింది";
+$lang['cinema_mail_succ'] 			    = 	"మెసేజ్ పంపబడింది ";
+$lang['news_mail_succ'] 			    = 	"మెసేజ్ పంపబడింది";
+$lang['mahila_mail_succ'] 			    = 	"మెసేజ్ పంపబడింది";

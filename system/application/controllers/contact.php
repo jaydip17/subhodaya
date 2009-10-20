@@ -79,9 +79,9 @@ class contact extends Controller {
 			$city=$_POST['city'];
 			$this->session->set_flashdata('city',$city);
 			}
-			$to='admin@subhodaya.com';
+			$to='malleswari@tech-pundits.com';
 			$subject='For Advertise';
-			$from='www.subhodaya.com';
+			$from=$mailid;
 			$from_name=$name;
 			
 			$message='Name:'.$name.',<br>phone:'.$phone.',<br>Email_id:'
@@ -92,7 +92,7 @@ class contact extends Controller {
 				$success='Thankyou for Intresting to advertise with us.</br>Our marketing executiws will respond you 
 				              with in 24 hours</br>.Thanku have a greate day!';
 				$this->session->set_flashdata('messagesent',$success);
-				redirect(base_url().'contact/message');
+				redirect(base_url().'contact/message_sent');
 			}else {
 				$error='please enter details again';
 				$this->session->set_flashdata('messagesent',$error);
@@ -146,7 +146,7 @@ class contact extends Controller {
 			$city=$_POST['city'];
 			$this->session->set_flashdata('city',$city);
 			}
-			$to='admin@subhodaya.com';
+			$to='malleswari@tech-pundits.com';
 			$subject='For Contact';
 			$from='www.subhodaya.com';
 			$from_name=$name;
@@ -212,7 +212,7 @@ class contact extends Controller {
 			$city=$_POST['city'];
 			$this->session->set_flashdata('city',$city);
 			}
-			$to='pradeep@tech-pundits.com';
+			$to='malleswari@tech-pundits.com';
 			$subject='For Feedback';
 			$from=$mailid;
 			$from_name=$name;

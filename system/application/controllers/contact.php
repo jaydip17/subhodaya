@@ -156,12 +156,13 @@ class contact extends Controller {
 					
 			$status=$this->send_mail($to,$subject,$message,$from,$from_name);
 			if($status==1){
-				echo $success='Your message have been sent.</br>Thanyou for contact. Have a great day!';
-				$this->session->set_flashdata('successs',$success);
-				
+				$success='Your message have been sent.</br>Thanyou for contact. Have a great day!';
+				$this->session->set_flashdata('messagesent',$success);
+				redirect(base_url().'contact/message_sent');
 			}else {
-				echo $error='please enter details again';
-				
+				$error='please enter details again';
+				$this->session->set_flashdata('messagesent',$error);
+				redirect(base_url().'contact/message_sent');
 			}
 			
 			
@@ -221,12 +222,13 @@ class contact extends Controller {
 					
 			$status=$this->send_mail($to,$subject,$message,$from,$from_name);
 			if($status==1){
-				echo $success='Thanyou for your feedback. Have a great day!';
-				$this->session->set_flashdata('successs',$success);
-				
+				$success='Thanyou for your feedback. Have a great day!';
+				$this->session->set_flashdata('messagesent',$success);
+				redirect(base_url().'contact/message_sent');
 			}else {
-				echo $error='please enter details again';
-				
+				$error='please enter details again';
+				$this->session->set_flashdata('messagesent',$error);
+				redirect(base_url().'contact/message_sent');
 			}
 		}
 	function send_mail($to,$subject,$message,$from,$from_name)

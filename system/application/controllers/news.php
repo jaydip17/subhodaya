@@ -1,16 +1,13 @@
 <?php
 class News extends Controller {
 	var $layout = 'default'; 
-	function News(){
+	function News()
+	{
 		parent::Controller();
-		$this->load->model("admin/News_Model");
-		$this->load->model("admin/Poll_Model");
-		$this->load->model("admin/Cinema_Model");
-		$this->load->model("admin/Sahithi_Model");
-		$this->load->model("admin/Mahila_Model");
 		
 	}
-	function index(){
+	function index()
+	{
 		$more=$this->News_Model->more_news();
 		$details=$this->News_Model->get_newstype1(1);
 		$news_type2=$this->News_Model->get_newstype1(2);
@@ -130,6 +127,7 @@ class News extends Controller {
 							'home' => $more['2']->matter,
 		); 		
 		$bread_crumb = $this->bread_crumb->get_code($segments);
+		print_r($segments);
 		$data=array('result'   		=>   $result,
 					 'more'    		=>   $more,
 				'cinema_type1' 		=>   $cinema_type1,

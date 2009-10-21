@@ -85,5 +85,12 @@ class Greeting_Model extends Model {
   		$this->db->where('id',$id);	
   		$this->db->update('greetings',$data);		
     }
+   function get_root_cat_by_id($id)
+    {
+    	$this->db->where('id',$id);
+    	$rs = $this->db->get('greeting_cat');
+    	$result = $rs->row();
+    	return $result->gree_cat;
+    }
 }
 ?>

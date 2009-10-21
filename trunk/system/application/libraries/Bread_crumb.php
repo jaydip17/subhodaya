@@ -43,6 +43,7 @@ class Bread_crumb{
 	}
 	function get_code($segments)
 	{ 
+		
 		$bread_crum = '<div style="float:left" class="pages"  >&nbsp;'.anchor('',$segments['home']);
 		if($segments['seg1']!='' || $segments['seg1']!=0)
 		{
@@ -50,6 +51,15 @@ class Bread_crumb{
 			switch($segments['seg1'])
 			{
 				case 'news': 
+							$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'],$segments['main']);
+							break;
+				case 'cinema': 
+							$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'],$segments['main']);
+							break;
+				case 'greetings': 
+							$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'],$segments['main']);
+							break;
+				case 'gallery': 
 							$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'],$segments['main']);
 							break;
 			}
@@ -74,6 +84,41 @@ class Bread_crumb{
 							$second = $this->CI->News_Model->get_root_cat_by_id($root_cat_id);
 							$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$seg3,$second);
 							break;
+				case 'cinema': 
+						$seg2 = 'details';
+							$this->CI->load->model("admin/Cinema_Model");
+							$second = $this->CI->Cinema_Model->get_root_cat_by_id($root_cat_id);
+							$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$seg3,$second);
+							break;
+				case 'greetings': 
+						$seg2 = 'content';
+							$this->CI->load->model("admin/Greeting_Model");
+							$second = $this->CI->Greeting_Model->get_root_cat_by_id($root_cat_id);
+							$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$seg3,$second);
+							break;
+				case 'gallery': 
+					if($segments['seg2']=='categeory')
+					{
+						$seg2='categeory';
+							$this->CI->load->model("admin/Gallery_Model");
+							$second = $this->CI->Gallery_Model->get_root_cat_by_id($root_cat_id);
+							$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$seg3,$second);
+					}else 
+					if($segments['seg2']=='inner')
+					{
+						$seg2='categeory';
+						$root_cat_id = $segments['seg3'];
+							$this->CI->load->model("admin/Gallery_Model");
+							$second = $segments['title_cat'];
+							$second_id = $segments['title_id'];
+							//$second = $this->CI->Gallery_Model->get_root_cat_by_id($root_cat_id);
+							$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$second_id,$second);
+						 $seg2 = 'inner';
+								$segments['heading'] = $this->CI->Gallery_Model->get_root_cat_by_id($root_cat_id);
+								(isset($segments['heading'])) ? $segments['heading']!='' ? $heading = $segments['heading'] : '' : '';
+								$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$segments['seg3'].'/'.$segments['seg4'],$heading);	
+					}
+							break;
 			}
 			
 		}
@@ -85,6 +130,28 @@ class Bread_crumb{
 							$seg2 = 'newsdetails';
 							(isset($segments['heading'])) ? $segments['heading']!='' ? $heading = $segments['heading'] : '' : '';
 							$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$segments['seg3'].'/'.$segments['seg4'],$heading);
+							break;
+				case 'cinema': 
+							$seg2 = 'inner';
+							(isset($segments['heading'])) ? $segments['heading']!='' ? $heading = $segments['heading'] : '' : '';
+							$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$segments['seg3'].'/'.$segments['seg4'],$heading);
+							break;
+				case 'greetings': 
+							$seg2 = 'inner';
+							(isset($segments['heading'])) ? $segments['heading']!='' ? $heading = $segments['heading'] : '' : '';
+							$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$segments['seg3'].'/'.$segments['seg4'],$heading);
+							break;
+				case 'gallery': 
+							$seg2 = 'content';
+							(isset($segments['heading'])) ? $segments['heading']!='' ? $heading = $segments['heading'] : '' : '';
+							$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$segments['seg3'].'/'.$segments['seg4'],$heading);
+							/*if($segments['seg2']=='content')
+							{
+								$seg2 = 'content';
+								$segments['heading'] = $this->CI->Gallery_Model->get_root_cat_by_id($root_cat_id);
+								(isset($segments['heading'])) ? $segments['heading']!='' ? $heading = $segments['heading'] : '' : '';
+								$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$segments['seg3'].'/'.$segments['seg4'],$heading);
+							}*/
 							break;
 			}
 		}

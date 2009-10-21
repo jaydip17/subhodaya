@@ -352,7 +352,22 @@
   		$query=$this->db->get_where('gallery_images');
   		return $query->result();
 	}
-	
+    function get_root_cat_by_id($id)
+    {
+    	$this->db->where('id',$id);
+    	$rs = $this->db->get('gallery_categeory');
+    	$result = $rs->row();
+    	return $result->catname;
+    }
+    function get_root_cat_by_id1($id)
+    {
+    	$this->db->where('id',$id);
+    	$rs = $this->db->get('gallery_categeory');
+    	$result = $rs->row();
+    	print_r($result->catname);
+    	return $result->catname;
+    	
+    }
 	
   	
  }

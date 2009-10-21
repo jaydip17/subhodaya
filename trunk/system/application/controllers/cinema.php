@@ -6,7 +6,8 @@ class Cinema extends Controller {
 		parent::Controller();
 		$this->load->model('admin/Flash_model');
 	}
-	function index(){
+	function index()
+	{
 		$query=$this->Flash_model->get_flash_images();
 		$img=$query->result();
 		//print_r($img);
@@ -57,6 +58,19 @@ class Cinema extends Controller {
 	    $gall_topviews=$this->Gallery_Model->top_views();
 	    $sprytabs=array();
 	    $tabs=array();
+	    
+	    $current_url = current_url();
+		//$navigation = array ($current_url);
+		$segments = array(	'seg1' => $this->uri->segment(1,0),
+						   	'seg2' => $this->uri->segment(2,0),
+							'seg3' => $this->uri->segment(3,0),
+							'seg4' => $this->uri->segment(4,0),
+							'seg5' => $this->uri->segment(5,0),
+							'main' => $more['4']->matter,
+							'home' => $more['2']->matter,
+		); 
+		$bread_crumb = $this->bread_crumb->get_code($segments);
+		//print_r($bread_crumb);
 		$data=array('cinema_type1'		=>	$cinema_type1,
 					'cinema_type2'		=>	$cinema_type2,
 					'cinema_type3'		=>	$cinema_type3,
@@ -72,11 +86,13 @@ class Cinema extends Controller {
 		          'video_result'     	=>  $video_result,
 					'sprytabs'			=>	$sprytabs,
 						'tabs'			=>  $tabs,
-						'img'			=> $img
+						'img'			=> $img,
+						'bread_crumb'  => $bread_crumb 
 		);
 		$this->load->view('cinema_view',$data);
 	}
-	function details(){
+	function details()
+	{
 		$type=$this->uri->segment(3);
 		$onload = "loadNews('content','".base_url()."cinemalist/listview/".$type."')";
 		$more=$this->News_Model->more_news();
@@ -98,6 +114,19 @@ class Cinema extends Controller {
 		$sahithi_cat=$this->Sahithi_Model->get_sahithitype();
 		//print_r($sahithi);
 		$tabs=array();
+		$current_url = current_url();
+		//$navigation = array ($current_url);
+		$segments = array(	'seg1' => $this->uri->segment(1,0),
+						   	'seg2' => $this->uri->segment(2,0),
+							'seg3' => $this->uri->segment(3,0),
+							'seg4' => $this->uri->segment(4,0),
+							'seg5' => $this->uri->segment(5,0),
+							'main' => $more['4']->matter,
+							'home' => $more['2']->matter,
+		); 
+		//print_r($segments);
+		$bread_crumb = $this->bread_crumb->get_code($segments);
+		//print_r($bread_crumb);
 		$data=array('more'			=>	$more,
 					'result'		=>	$result,
 					'onload' 		=> 	$onload,
@@ -110,10 +139,13 @@ class Cinema extends Controller {
 					'sahithi'       =>  $sahithi,
 					'sahithi1'      =>  $sahithi1,
 					'sahithi_cat'	=>	$sahithi_cat,
-					'tabs'			=> $tabs);
+					'tabs'			=> $tabs,
+					'bread_crumb'  => $bread_crumb
+		);
 		$this->load->view('cinema_content',$data);
 	}
-	function inner(){
+	function inner()
+	{
 		$more=$this->News_Model->more_news();
 		$news_type4=$this->News_Model->get_newstype1(4);
 		$id=$this->uri->segment(3,0);
@@ -130,6 +162,18 @@ class Cinema extends Controller {
 	    $videos=$this->Video_Model->get_videos('active',2);
 	   	$video_result=$videos->result();
 		$telegu_typing=array();
+			$current_url = current_url();
+		//$navigation = array ($current_url);
+		$segments = array(	'seg1' => $this->uri->segment(1,0),
+						   	'seg2' => $this->uri->segment(2,0),
+							'seg3' => $this->uri->segment(3,0),
+							'seg4' => $this->uri->segment(4,0),
+							'seg5' => $this->uri->segment(5,0),
+							'heading' => $result[0]->heading,
+							'main' => $more['4']->matter,
+							'home' => $more['2']->matter,
+		); 
+		$bread_crumb = $this->bread_crumb->get_code($segments);
 		$data=array('more'   		 => $more,
 					'result' 		 => $result,
 					'news_type4'	 => $news_type4,
@@ -139,7 +183,8 @@ class Cinema extends Controller {
 					'mahila_details1'=>	$mahila_details1,
 					'result1'		 => $result1,
 		          'video_result'     =>  $video_result,
-					'telegu_typing'	 =>	$telegu_typing
+					'telegu_typing'	 =>	$telegu_typing,
+					'bread_crumb'	 => $bread_crumb
 	
 					);
 		$this->load->view('cinema_inner',$data);

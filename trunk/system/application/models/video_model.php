@@ -5,7 +5,6 @@ class Video_model extends Model
 	{
 		parent::Model();
 	}
-	
 	function more_video(){
     	$result=$this->db->get('more');
     	return $result->result();

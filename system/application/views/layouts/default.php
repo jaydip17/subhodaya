@@ -51,13 +51,10 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
 				$(".advertise").colorbox({width:"550px", height:"350px", iframe:true});
 				
 				//Example of preserving a JavaScript event for inline calls.
-				$("#importcontacts").click(function(){
-				alert("img");
-				$("#importcontacts").colorbox({href:"<?=base_url()?>contact/feedback"});
+				$("#importcontacts").click(function(){ 
+					$("#advertise").colorbox({iframe:true, width:500, height:500, open:true}); 
 				});
-				$("#advertise").colorbox({href:"<?=base_url()?>contact/feedback"});
-				});
-			
+			});
 		</script>
 
 <!-- thick box -->

@@ -397,3 +397,4 @@ Spry.Widget.TabbedPanels.prototype.attachBehaviors = function(element)
 
 	this.showPanel(this.defaultTab);
 };
+

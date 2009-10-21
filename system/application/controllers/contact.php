@@ -30,7 +30,7 @@ class contact extends Controller {
 	}
 	function message_sent(){
 		$message = $this->session->flashdata('message');
-		echo $this->session->flashdata('messagesent');
+		$this->session->flashdata('messagesent');
 		$this->load->view('message_sent');
 		
 	}

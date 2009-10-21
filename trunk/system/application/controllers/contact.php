@@ -30,6 +30,7 @@ class contact extends Controller {
 	}
 	function message_sent(){
 		$message = $this->session->flashdata('message');
+		echo $this->session->flashdata('messagesent');
 		$this->load->view('message_sent');
 		
 	}
@@ -221,6 +222,8 @@ class contact extends Controller {
 					.$mailid.',<br>City:'.$city.',<br>Message:'.$messa.'.';
 					
 			$status=$this->send_mail($to,$subject,$message,$from,$from_name);
+			$success='Thanyou for your feedback. Have a great day!';
+				$this->session->set_flashdata('messagesent',$success);
 			if($status==1){
 				$success='Thanyou for your feedback. Have a great day!';
 				$this->session->set_flashdata('messagesent',$success);

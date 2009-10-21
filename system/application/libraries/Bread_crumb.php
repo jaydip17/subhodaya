@@ -43,7 +43,6 @@ class Bread_crumb{
 	}
 	function get_code($segments)
 	{ 
-		
 		$bread_crum = '<div style="float:left" class="pages"  >&nbsp;'.anchor('',$segments['home']);
 		if($segments['seg1']!='' || $segments['seg1']!=0)
 		{

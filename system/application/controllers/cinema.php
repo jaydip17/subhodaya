@@ -1,7 +1,8 @@
 <?php
 class Cinema extends Controller {
 	var $layout='default';
-	function Cinema(){
+	function Cinema()
+	{
 		parent::Controller();
 		$this->load->model('admin/Flash_model');
 	}

@@ -2,9 +2,8 @@
 class Video_Model extends Model {
 	
        
-	 function addcategeory(){
-	 	
-		
+	 function addcategeory()
+	 {	
 		$this->db->insert('videos_categeory',array('name'=>$_POST['name']));
 	 }
 	

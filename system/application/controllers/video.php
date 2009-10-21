@@ -1,9 +1,11 @@
 <?php
 class Video extends Controller {
 	var $layout = 'default'; 
-	function video(){
+	function video()
+	{
 		parent::Controller();
 		$this->load->model("video_Model");
+		
 	}
 	function index(){
 		

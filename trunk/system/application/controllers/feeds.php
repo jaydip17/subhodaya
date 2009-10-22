@@ -13,11 +13,9 @@ class Feeds extends Controller {
 	$output = '<rss version="2.0">';
     $output .= '<channel>';
     $output .= '<image>
-      				<width>126</width>
-                    <height>15</height>
-                    <link>'.base_url().'</link>
+      				<link>'.base_url().'</link>
                     <title>Subhodaya.com</title>
-                    <url>'.base_url().'assets/imgs/logo.jpg</url>
+                    <url>'.base_url().'assets/imgs/logo128 x 31.jpg</url>
                </image>';
     $output .= '<title>About Rss Feed</title>';
     $output .= '<description>Explaining about RSS Feeds</description>';

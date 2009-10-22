@@ -20,6 +20,15 @@ class Contacts extends Controller {
 		);
 		$this->load->view('admin/contactsform',$data);
 	}
+    function invite_friends_form()
+	{
+		$message = $this->session->flashdata('message');
+		$data = array(//'type'=> 'advertise',
+		            //  'url' => 'contact/send_advertise',
+		             // 'onsubmit' =>'advertise_validate',
+						'message'=> $message);
+		$this->load->view('invite_friends',$data);
+	}
 	function import()
 	{
 		

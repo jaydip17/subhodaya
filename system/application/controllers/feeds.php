@@ -27,7 +27,7 @@ foreach($query->result() as $row)
                     <link>".base_url()."news/newsdetails/".($row->id)."/".($row->type)."</link>
                     <pubDate>".strip_tags($row->insert_date)."</pubDate>
                                        
-<description>"."<![CDATA[<p><a href=".base_url()."news/newsdetails/".($row->id)."/".($row->type).">"."<img src=http://localhost/subhodaya/assets/rssimages/loksatta.jpg align=left width=126 height=76 align=left></a></p><p>".strip_tags($row->summary)."]]>"."</description>
+<description>"."<![CDATA[<p><a href=".base_url()."news/newsdetails/".($row->id)."/".($row->type).">"."<img src=".base_url()."assets/news/news_img".($row->id)."_thumb.jpg  align=left></a></p><p>".strip_tags($row->summary)."]]>"."</description>
                 </item>
                 "."<br/>"."<br/>"."<br/>"."<br/>"."<br/>"."<br/>"."<br/>"."<br/>"."<br/>"."<br/>"."<br/>"."<br/>";
 }

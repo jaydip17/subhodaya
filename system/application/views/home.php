@@ -330,7 +330,7 @@ function test()
                		 <div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>news/details/<?if(isset($active_news['0'])){ echo $active_news['0']->type; }?>"><?=$more['0']->matter?></a></span></div>
                 </div>
                 </td>
-                <td valign="top" id="img-center"><img src="<?=base_url();?>assets/imgs/tock-line-boyom1.jpg" width="5" height="283" /></td>
+                 <td valign="top" id="img-center"><img src="<?=base_url();?>assets/imgs/tock-line-boyom1.jpg" width="5" height="283" /></td>
               </tr>
             </table>
           </td>
@@ -343,9 +343,9 @@ function test()
       <table width="99%" height="463" border="0" cellpadding="0" cellspacing="0">
         <tr>
           <td width="4" valign="top"><img src="<?=base_url();?>assets/imgs/add-line-left.jpg" width="4" height="456" /></td>
-          <td width="206" valign="top" id="add-line"><table width="100%" height="439" border="0" cellpadding="0" cellspacing="0">
+         <td width="206" valign="top" id="add-line"><table width="100%" height="439" border="0" cellpadding="0" cellspacing="0">
               <tr>
-                <td height="67" valign="middle"><div align="center" id="newsletter"><img id="newsletter-img" src="<?=base_url();?>assets/imgs/newsletter-img.jpg" width="199" height="59" /></div></td>
+                <td height="67" valign="middle"><div align="center" id="newsletter"><img style="cursor:pointer;" id="newsletter-img" src="<?=base_url();?>assets/imgs/newsletter-img.jpg" width="199" height="59" /></div></td>
               </tr>
               <tr>
                 <td height="193" valign="top"><img src="<?=base_url();?>assets/ads/Home3.jpg" width="199" height="177" /></td>
@@ -440,7 +440,8 @@ function test()
                       <td><img src="<?=base_url();?>assets/imgs/photogalleri-botom-lin.jpg" width="481" height="4" /></td>
                     </tr>
                   </table>
-                </td><td>
+                </td>  <td>
+                <img style="cursor:pointer;padding-left:3px;" id="invite-img" src="<?=base_url();?>assets/imgs/inviteFriends.jpg" /><!--
                 <table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" >
          <tr>
              <td width="6" valign="top"><img src="<?=base_url();?>assets/imgs/tock-line.jpg" width="7" height="35" /></td>
@@ -454,7 +455,7 @@ function test()
              <td valign="top" id="center-line"><img src="<?=base_url();?>assets/imgs/tock-line-boyom.jpg" width="7" height="166" /></td>
              <td valign="top" width="100%" id="center-line"><table width="100%" border="0" cellpadding="0" cellspacing="0">
          <tr>
-             <td height="165" valign="top" style="background-image:url(assets/imgs/gmailseline.jpg);background-repeat:repeat-x;border-bottom:1px solid #166DBC;">
+         <td height="165" valign="top" style="background-image:url(assets/imgs/gmailseline.jpg);background-repeat:repeat-x;border-bottom:1px solid #166DBC;">
       <form action="<?=base_url()?>admin/contacts/import" method="POST" onSubmit="return checkEmpty(this);" name="loginForm">
       <input type="hidden" name="page" value="home" />
 	<table border="0" align="center" cellpadding="0" cellspacing="2" style="padding: 5px 0px 0px 15px;">
@@ -489,10 +490,10 @@ function test()
              </td>
          </tr>
        </table>
-     </td>
+     </td> 
      <td valign="top" id="center-line"><img src="<?=base_url();?>assets/imgs/tock-line-boyom1.jpg" width="5" height="165"/></td>
     </tr>
-    </table></td>
+    </table></td>-->
               </tr>
             </table>
             <table  width="100%" border="0" style="margin-left:1px"  cellpadding="0" cellspacing="5">

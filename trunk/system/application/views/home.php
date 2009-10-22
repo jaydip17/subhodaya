@@ -611,7 +611,7 @@ function test()
 							        <?php foreach($video_result as $item){?>
 							        	<td align="left"><div style="padding-top:5px;width:128px;text-align: center;">
 							        	<a href="<?=base_url();?>video/index/<?php if(isset($item)) {echo $item->id;}?>"><div id="latestvideo_time"><?=$item->time?></div><img id="img" src="<?=base_url();?>assets/videos/image_preview/home_image<?=$item->id?>_thumb.jpg" height="100px" width="130px" ></a></div>
-							        		<div style="width:132px;text-align: center;" id="video_botto_img"><a href="<?=base_url();?>video/index/<?php if(isset($item)) {echo $item->id;}?>"><?=$item->name?></a></div></td>
+							        		<div style="width:132px;text-align:center;" id="video_botto_img"><a href="<?=base_url();?>video/index/<?php if(isset($item)) {echo $item->id;}?>"><?=$item->name?>/<?=$item->video_cat_id?></a></div></td>
                                    <? }?>
 							       </tr>
 							        </table>

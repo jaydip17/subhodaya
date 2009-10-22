@@ -127,7 +127,7 @@ class News extends Controller {
 							'home' => $more['2']->matter,
 		); 		
 		$bread_crumb = $this->bread_crumb->get_code($segments);
-		print_r($segments);
+		//print_r($segments);
 		$data=array('result'   		=>   $result,
 					 'more'    		=>   $more,
 				'cinema_type1' 		=>   $cinema_type1,

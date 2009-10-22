@@ -47,6 +47,17 @@ class Video extends Controller {
 		$this->flash_video->initialize($config);
 		$jslinks = $this->flash_video->getcode();
 	 	$sprytabs=array();
+	 	
+	 	$segments = array(	'seg1' => $this->uri->segment(1,0),
+						   	'seg2' => $this->uri->segment(2,0),
+							'seg3' => $this->uri->segment(3,0),
+							'seg4' => $this->uri->segment(4,0),
+							'seg5' => $this->uri->segment(5,0),
+							'main' => $more['5']->matter,
+							'home' => $more['2']->matter,
+		); 
+		$bread_crumb = $this->bread_crumb->get_code($segments);
+		
 	    $data=array( 'title'		=>	'video',
                    'videoplayer' 	=> 	$jslinks,
                         'more'		=>	$more,
@@ -54,7 +65,8 @@ class Video extends Controller {
                   'videocategeories'=>	$videocategeories,
                  'topviewedvideos'	=>	$topviewedvideos,
 	                  'onload'		=>		$onload,
-	    				'sprytabs'	=>	$sprytabs
+	    				'sprytabs'	=>	$sprytabs,
+	    			'bread_crumb'	=> $bread_crumb
 	                 
           
         );

@@ -114,7 +114,7 @@ class Cinema extends Controller {
 		$sahithi_cat=$this->Sahithi_Model->get_sahithitype();
 		//print_r($sahithi);
 		$tabs=array();
-		$current_url = current_url();
+		//$current_url = current_url();
 		//$navigation = array ($current_url);
 		$segments = array(	'seg1' => $this->uri->segment(1,0),
 						   	'seg2' => $this->uri->segment(2,0),
@@ -124,9 +124,7 @@ class Cinema extends Controller {
 							'main' => $more['4']->matter,
 							'home' => $more['2']->matter,
 		); 
-		//print_r($segments);
 		$bread_crumb = $this->bread_crumb->get_code($segments);
-		//print_r($bread_crumb);
 		$data=array('more'			=>	$more,
 					'result'		=>	$result,
 					'onload' 		=> 	$onload,

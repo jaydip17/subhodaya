@@ -162,5 +162,12 @@ class Sahithi_Model extends Model {
     	$query=$this->db->get('sahithi');
     	return $query->result();
     }
+   function get_root_cat_by_id($id)
+    {
+    	$this->db->where('id',$id);
+    	$rs = $this->db->get('sahithi_cat');
+    	$result = $rs->row();
+    	return $result->cat_name;
+    }
 }
 ?>

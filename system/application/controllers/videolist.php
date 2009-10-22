@@ -24,11 +24,22 @@ class Videolist extends Controller {
       
    		 $result = $this->paginationnew->getQuery(TRUE);
    		 $hotvideos=$result;
-   		 $paginate = $this->paginationnew->paginate();            
+   		 $paginate = $this->paginationnew->paginate(); 
+   		 $segments = array(	'seg1' => $this->uri->segment(1,0),
+						   	'seg2' => $this->uri->segment(2,0),
+							'seg3' => $this->uri->segment(3,0),
+							'seg4' => $this->uri->segment(4,0),
+							'seg5' => $this->uri->segment(5,0),
+							'main' => $more['5']->matter,
+							'home' => $more['2']->matter,
+		); 
+		$bread_crumb = $this->bread_crumb->get_code($segments);           
 	     //pagination for hot videos view 		
-		 $data=array( 	'more' =>$more,			
-		                'paginate'=>$paginate,
-		                'hotvideos' =>$hotvideos);
+		 $data=array( 	'more' 		 =>	$more,			
+		                'paginate'	 =>	$paginate,
+		                'hotvideos'  =>	$hotvideos,
+		 				'bread_crumb'=> $bread_crumb
+		 );
 		$this->load->view('video_view',$data);
 	}
       function videonamesview()
@@ -53,9 +64,21 @@ class Videolist extends Controller {
    		 //exit;		
   	     $paginate_videosnames = $this->paginationnew->paginate(); 
 	     //pagination for mottam videosnames view	
-		 $data=array( 	'more' =>$more,			
-		                'paginate_videosnames'=> $paginate_videosnames,
-		                'videosnames' =>$videosnames);
+	     $segments = array(	'seg1' => $this->uri->segment(1,0),
+						   	'seg2' => $this->uri->segment(2,0),
+							'seg3' => $this->uri->segment(3,0),
+							'seg4' => $this->uri->segment(4,0),
+							'seg5' => $this->uri->segment(5,0),
+							'main' => $more['5']->matter,
+							'home' => $more['2']->matter,
+		); 
+		$bread_crumb = $this->bread_crumb->get_code($segments); 
+  	     
+		 $data=array( 	'more' 					=>	$more,			
+		                'paginate_videosnames'	=> 	$paginate_videosnames,
+		                'videosnames' 			=> 	$videosnames,
+		 				'bread_crumb'			=>	$bread_crumb
+		 );
 		$this->load->view('total_videos_view',$data);
 	}
 }

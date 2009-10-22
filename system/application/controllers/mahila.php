@@ -1,13 +1,12 @@
 <?php
 class Mahila extends Controller {
 	var $layout = 'default'; 
-	function mahila(){
+	function mahila()
+	{
 		parent::Controller();
-		 $this->load->model('admin/Sahithi_Model');
-		$this->load->model("admin/News_Model");
 	}
-	function index(){
-		
+	function index()
+	{
 		$more=$this->News_Model->more_news();
 		$details=$this->Mahila_Model->get_Mahilatype();
 		//print_r($details);
@@ -19,28 +18,37 @@ class Mahila extends Controller {
 		foreach($details_sahithi as $item)
 		$details_more_sahithi[$item->id]=$this->Sahithi_Model->getdetails($item->id,'yes',8);
 	
-		
 		$types = array_keys($details_more);
 		$types_sahithi =array_keys($details_sahithi);
 		//print_r($details_more_sahithi);
+		$segments = array(	'seg1' => $this->uri->segment(1,0),
+						   	'seg2' => $this->uri->segment(2,0),
+							'seg3' => $this->uri->segment(3,0),
+							'seg4' => $this->uri->segment(4,0),
+							'seg5' => $this->uri->segment(5,0),
+							'main' => $more['8']->matter,
+							'home' => $more['2']->matter,
+		); 
+		$bread_crumb = $this->bread_crumb->get_code($segments);
+		
 		$data=array('more'      	=>	$more,
 		            'details'   	=>	$details,
 		            'details_more' 	=> 	$details_more,
 		             'types'       	=> 	$types,
 		    'details_more_sahithi'  =>	$details_more_sahithi,
-		        'details_sahithi'   => 	$details_sahithi
+		        'details_sahithi'   => 	$details_sahithi,
+				'bread_crumb'		=>	$bread_crumb
 		             );
 		$this->load->view('mahila_view',$data);
   }
-    function mahiladetails(){
+    function mahiladetails()
+    {
  	   $this->load->model('admin/Sahithi_Model');
  	    $news_type2=$this->News_Model->get_newstype1(1);
 		$more=$this->Mahila_Model->more_mahila();
 		$cinema_type1=$this->Cinema_Model->get_cinematype(1);
 		$this->load->model("admin/News_Model");
 		$details=array();
-		//$news_type1=$this->News_Model->get_newstype(5);
-		//print_r($news_type1);
 		$id=$this->uri->segment(3,0);
 		$result=$this->Mahila_Model->inner_mahila($id);
 		$details=$this->Mahila_Model->get_mahilatype();
@@ -49,13 +57,23 @@ class Mahila extends Controller {
 	    $key = key($details_more);
 		$evenmore=$this->Mahila_Model->evenmore($id);
 		
-		
 		$this->load->Model('Video_Model');
 	   
-	     $videos=$this->Video_Model->get_videos('active',2);
+	    $videos=$this->Video_Model->get_videos('active',2);
 	   	  
-	     $video_result=$videos->result();
+	    $video_result=$videos->result();
 		$telegu_typing=array();
+		$segments = array(	'seg1' => $this->uri->segment(1,0),
+						   	'seg2' => $this->uri->segment(2,0),
+							'seg3' => $this->uri->segment(3,0),
+							'seg4' => $this->uri->segment(4,0),
+							'seg5' => $this->uri->segment(5,0),
+							'main' => $more['8']->matter,
+							'home' => $more['2']->matter,
+						 'heading' => $result[0]->heading
+		); 
+		$bread_crumb = $this->bread_crumb->get_code($segments);
+		
 		$data=array('result'   =>   $result,
 					 'more'    =>   $more,
 				'cinema_type1' =>   $cinema_type1,
@@ -67,13 +85,15 @@ class Mahila extends Controller {
 		    'video_result'     =>  $video_result,
 	              'news_type2' =>	$news_type2,
 	                 'key'     =>  $key,
-				'telegu_typing'=>  $telegu_typing
+				'telegu_typing'=>  $telegu_typing,
+				'bread_crumb'  =>	$bread_crumb
 				
 		     	);
 				
 		$this->load->view('mahila_inner',$data);
 	}
-    function details(){
+    function details()
+    {
    	    $this->load->model('admin/Poll_Model');
    	    $details_sahithi=$this->Sahithi_Model->get_sahithitype();
    	    $sahithi_details=$this->Sahithi_Model->active_sahithi(3,$type='home');
@@ -84,9 +104,7 @@ class Mahila extends Controller {
 		$more=$this->Mahila_Model->more_mahila();
 		$type=$this->uri->segment(3,0);
 		$onload = "loadNews('content','".base_url()."mahilalist/listview/".$type."')";
-		//print_r($details_more);
 		$total_rows=$this->Mahila_Model->count($type);
-		//echo $total_rows;
 	    $this->load->library('pagination');
 		$config['base_url'] = base_url()."mahila/details/";
     	$config['total_rows'] = $total_rows;
@@ -95,10 +113,16 @@ class Mahila extends Controller {
 		$pagination=$this->pagination->create_links();
 		$mahila=$this->Mahila_Model->get_mahila($type,$count=false);
 		$cinemapoll=$this->Poll_Model->get_newspolls($type=5);
-		//print_r($sahithi_details);
-		//print_r($details_sahithi);
 		$tabs=array();
-		//echo $onload;
+		$segments = array(	'seg1' => $this->uri->segment(1,0),
+						   	'seg2' => $this->uri->segment(2,0),
+							'seg3' => $this->uri->segment(3,0),
+							'seg4' => $this->uri->segment(4,0),
+							'seg5' => $this->uri->segment(5,0),
+							'main' => $more['8']->matter,
+							'home' => $more['2']->matter,
+		); 
+		$bread_crumb = $this->bread_crumb->get_code($segments);
 		$data=array(	
 						'news'  =>	$mahila,
 						'more'	=>	$more,
@@ -111,7 +135,8 @@ class Mahila extends Controller {
 				 'cinemapoll'   =>  $cinemapoll,
 			'details_sahithi'   =>  $details_sahithi,
 			'sahithi_details'	=>  $sahithi_details,
-				'tabs'          =>  $tabs
+				'tabs'          =>  $tabs,
+				'bread_crumb'	=>	$bread_crumb
 		);
 		$this->load->view("mahila_content",$data);
 	}

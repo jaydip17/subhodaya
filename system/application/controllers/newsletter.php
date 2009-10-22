@@ -11,6 +11,15 @@ class Newsletter extends Controller {
 	{
 		echo "Success";
 	}
+	function show_subscribe_form()
+	{
+		$message = $this->session->flashdata('message');
+		$data = array('type'=> 'advertise',
+		              'url' => 'contact/send_advertise',
+		              'onsubmit' =>'advertise_validate',
+						'message'=> $message);
+		$this->load->view('newsletter',$data);
+	}
 		
 	function subscribe()
 	{
@@ -26,15 +35,31 @@ class Newsletter extends Controller {
 	               'email' => $email ,
 	                     );
 				if($this->db->insert('newsletter', $data))
-					echo "&nbsp;&nbsp;&nbsp;&nbsp;Successful";
+				{
+					$message='Thankyou for Intresting to advertise with us.</br>Our marketing executiws will respond you 
+				              with in 24 hours</br>.Thanku have a greate day!';
+				
+				
+					//echo "&nbsp;&nbsp;&nbsp;&nbsp;Successful";
+				}
 				else
-					echo "&nbsp;&nbsp;&nbsp;&nbsp;System Error";
+					$message="&nbsp;&nbsp;&nbsp;&nbsp;System Error";
 			}
 			 else 
-			 echo "&nbsp;&nbsp;&nbsp;&nbsp;Email Exists";
+			 $message="&nbsp;&nbsp;&nbsp;&nbsp;Email Exists";
 		}
 		else
-		echo "&nbsp;&nbsp;&nbsp;&nbsp;Invalid Email";
+		 $message="&nbsp;&nbsp;&nbsp;&nbsp;Invalid Email";
+		
+		$this->session->set_flashdata('messagesent',$message);
+				redirect(base_url().'newsletter/subscribed');
+		
+	}
+    function subscribed(){
+		$message = $this->session->flashdata('message');
+		$this->session->flashdata('messagesent');
+		$this->load->view('newsletter_subscribed');
+		
 	}
 	
 }

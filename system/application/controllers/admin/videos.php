@@ -50,10 +50,7 @@ class Videos extends Controller {
 	}
 	function addvideo()
 	{
-		print_r($_FILES);
-		exit;
-		//$message=$this->Video_Model->addvideo();
-	    $name=$this->input->post('name');
+		$name=$this->input->post('name');
 		$time=$this->input->post('time');
 		$no_of_views=$this->input->post('no_of_views');
 		$video_cat_id=$this->input->post('video_cat_id');
@@ -71,14 +68,13 @@ class Videos extends Controller {
 			$result=$this->db->insert('videos',$data);
 			$i=$this->db->insert_id();
 		}
-		//exit;
 		if($result==1)
 		{
 		$dir =  './assets/videos';   
 	    $config['upload_path'] =$dir;
-		$config['allowed_types'] = 'flv';
+		$config['allowed_types'] = 'flv|wmp';
 		$config['max_size']	= '90000000';		
-		//$this->upload->initialize($config);
+		
 		$this->load->library('upload',$config);
 		if (!$this->upload->do_upload('video'))
 		{
@@ -86,7 +82,6 @@ class Videos extends Controller {
 			$this->db->where('id',$i);
 			$this->db->delete('videos');
 			$this->session->set_flashdata('message',$error);
-			redirect(base_url().'admin/videos/viewaddvideo',$error);
 		}	
 		else
 		{
@@ -96,24 +91,20 @@ class Videos extends Controller {
 	       $this->db->where('id',$i);
 	       $this->db->update('videos',array('video_uploaded'=>'1'));
 	       $message='Video Added Successfully';
-		   $this->session->set_flashdata('message',$message);	
 		
 			$dir1 =  './assets/videos/image_preview';   
 		    $config1['upload_path'] = $dir1;
 			$config1['allowed_types'] = 'gif|jpg|png';
-			$config1['max_size']	= '100';
+			$config1['max_size']	= '100000';
 			$config1['max_width']  = '1024';
 			$config1['max_height']  = '768';
   
-		    $this->load->library('image_lib');      
-	    	$this->image_lib->initialize($config);
-	
+	       $this->upload->initialize($config1);
 			if (!$this->upload->do_upload('image'))
 			{
 				$error = array('error' => $this->upload->display_errors());
 				$this->session->set_flashdata('message',$error);
-				redirect(base_url().'admin/videos/viewaddvideo',$error);
-				//print_r($error);
+				print_r($error);
 			}	
 			else
 			{
@@ -138,14 +129,9 @@ class Videos extends Controller {
 	    	{
 	    		$error = array('error' => $this->image_lib->display_errors());
 	    		$this->session->set_flashdata('message',$error);
-	    		redirect(base_url().'admin/videos/viewaddvideo',$error);
-				//print_r($error);
 	    	}
 	    	$this->image_lib->clear();
     	
-    	
-		//generating image to display in top list
-		
     	$filename = 'image'.$i.'.jpg';
     	
     	$config3['image_library'] = 'gd2';
@@ -162,14 +148,11 @@ class Videos extends Controller {
     	{
     		$error = array('error' => $this->image_lib->display_errors());
     		$this->session->set_flashdata('message',$error);
-    		redirect(base_url().'admin/videos/viewaddvideo',$error);
-			//print_r($error);
     	}
 		}
 	 }
 	}
 		redirect(base_url()."admin/videos/viewaddvideo",$message);
-		//print_r($message);
 		
 		
 	}

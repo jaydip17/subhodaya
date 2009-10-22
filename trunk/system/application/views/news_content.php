@@ -172,7 +172,7 @@ padding-left: 20px;
           </table></td>
           <td width="245" valign="top"><img src="<?=base_url();?>assets/imgs/add-img.jpg"></img></td>
           <td width="185" align="center" valign="top" rowspan="2" >
-			<div width="100%" style="height:830px;border:1px solid #FF0000;background-color:#808080;">Google Adds
+			<div width="100%" style="height:830px;border:1px solid #FF0000;background-color:#808080;">Google Ads
 			   <!--  <tr>
 				<td style="border:1px solid #3789C3;height: 25px;" id="news_heading">Latest Gallery</td>
 			     </tr>

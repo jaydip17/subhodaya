@@ -7,7 +7,7 @@ class Newsletter_model extends Model  {
     }
    
 	function check_email_address($email) {
-		echo $email;
+		
 	  // First, we check that there's one @ symbol, 
 	  // and that the lengths are right.
 	  if (!ereg("^[^@]{1,64}@[^@]{1,255}$", $email)) {

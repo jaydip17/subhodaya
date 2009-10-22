@@ -213,7 +213,7 @@ line-height:16px;
           <?php 
           if(!empty($sahithi_details)){ 
 			if(file_exists("./assets/sahithi/news_img".$sahithi_details['0']->id."_thumb.jpg")){ ?>	        
-	              	<a href="<?=base_url();?>sahithi/sahithidetails/<?=$sahithi_details['0']->id?>"><img src="<?=base_url();?>assets/sahithi/news_img<?php if(isset($sahithi_details['0'])){echo $sahithi_details['0']->id;}?>_thumb.jpg" style="float:left;margin:4px 20px 4px 4px;text-align: justify;" align="top" id="img"/></a>
+	              	<a href="<?=base_url();?>sahithi/sahithidetails/<?=$sahithi_details['0']->id?>/<?=$sahithi_details['0']->cat_id?>"><img src="<?=base_url();?>assets/sahithi/news_img<?php if(isset($sahithi_details['0'])){echo $sahithi_details['0']->id;}?>_thumb.jpg" style="float:left;margin:4px 20px 4px 4px;text-align: justify;" align="top" id="img"/></a>
 	            	<? } ?>
           <span id="mainnews" style="font-size: 14px;"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$sahithi_details[0]->id?>/<?=$sahithi_details[0]->cat_id?>"><?=$sahithi_details[0]->heading?></a><br>
           <?=$sahithi_details[0]->summary?></span>

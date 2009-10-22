@@ -309,10 +309,10 @@ line-height:16px;
            <div style="height: 125px;">
            <? if(!empty($sahithi)){
            if(file_exists("./assets/sahithi/news_img".$sahithi['0']->id."_thumb.jpg")){ ?>
-          		<a href="<?=base_url()?>sahithi/sahithidetails/<?php if(isset($sahithi['0'])) { echo $sahithi['0']->id;} ?>">
+          		<a href="<?=base_url()?>sahithi/sahithidetails/<?=$sahithi['0']->id?>/<?=$sahithi['0']->cat_id?>">
           		<img src="<?=base_url()?>assets/sahithi/news_img<?php if(isset($sahithi['0'])) { echo $sahithi['0']->id;} ?>_thumb.jpg" style="margin: 3px 20px 2px 1px;float: left;" id="img"/></a>
           		<?} ?>
-          		<div id="mainnews" style="padding-top: 5px;"><a href="<?=base_url()?>sahithi/sahithidetails/<?php if(isset($sahithi['0'])) { echo $sahithi['0']->id;} ?>"><?php if(isset($sahithi['0'])) { echo $sahithi['0']->heading;} ?></a></div>
+          		<div id="mainnews" style="padding-top: 5px;"><a href="<?=base_url()?>sahithi/sahithidetails/<?=$sahithi['0']->id?>/<?=$sahithi['0']->cat_id?>"><?php if(isset($sahithi['0'])) { echo $sahithi['0']->heading;} ?></a></div>
           		<font style="font-size: 14px;"><?php if(isset($sahithi['0'])) { echo $sahithi['0']->summary;} ?></font>
           		<ul id="mainnews">
           		<? $count=0;
@@ -323,7 +323,7 @@ line-height:16px;
 	          	continue;
 	          	echo $count;
           		} ?> 
-          		<li><a href="<?=base_url()?>sahithi/sahithidetails/<?=$row->id?>"><?=$row->heading?></a></li>
+          		<li><a href="<?=base_url()?>sahithi/sahithidetails/<?=$row->id?>/<?=$row->cat_id?>"><?=$row->heading?></a></li>
           		<? if($count==3){
 				   break;
 				  }else{
@@ -338,7 +338,7 @@ line-height:16px;
           <td width="8">&nbsp;</td>
           <td valign="top"><img src="<?=base_url();?>assets/imgs/botom-lef.jpg" width="5" height="150" /></td>
           <td valign="top" id="botom-ser">
-          	<div id="mainnews" style="height: 128px;padding-top: 4px;"><a href="<?=base_url()?>sahithi/sahithidetails/<?php if(isset($sahithi1['0'])) { echo $sahithi1['0']->id;} ?>"><?php if(isset($sahithi1['0'])) { echo $sahithi1['0']->heading;} ?></a><br>
+          	<div id="mainnews" style="height: 128px;padding-top: 4px;"><a href="<?=base_url()?>sahithi/sahithidetails/<?=$sahithi1['0']->id ?>/<?=$sahithi1['0']->cat_id ?>"><?php if(isset($sahithi1['0'])) { echo $sahithi1['0']->heading;} ?></a><br>
           		<font style="font-size: 14px;"><?php if(isset($sahithi1['0'])) { echo $sahithi1['0']->summary;} ?></font>
           		<ul id="mainnews">
           		<? $count=0;
@@ -349,7 +349,7 @@ line-height:16px;
 	          	continue;
 	          	echo $count;
           		} ?> 
-          		<li><a href="<?=base_url()?>sahithi/sahithidetails/<?=$row->id?>"><?=$row->heading?></a></li>
+          		<li><a href="<?=base_url()?>sahithi/sahithidetails/<?=$row->id?>/<?=$row->cat_id?>"><?=$row->heading?></a></li>
           		<? if($count==4){
 				   break;
 				  }else{

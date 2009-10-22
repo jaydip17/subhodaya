@@ -440,8 +440,9 @@ function test()
                       <td><img src="<?=base_url();?>assets/imgs/photogalleri-botom-lin.jpg" width="481" height="4" /></td>
                     </tr>
                   </table>
-                </td>  <td>
-                <img style="cursor:pointer;padding-left:3px;" id="invite-img" src="<?=base_url();?>assets/imgs/inviteFriends.jpg" /><!--
+                </td>  <td align="center">
+                <img style="cursor:pointer;padding-left:3px;" id="invite-img" src="<?=base_url();?>assets/imgs/inviteFriends.jpg" />
+                 <img src="<?=base_url();?>assets/ads/Home2.jpg" width="242" height="117"/><!--
                 <table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" >
          <tr>
              <td width="6" valign="top"><img src="<?=base_url();?>assets/imgs/tock-line.jpg" width="7" height="35" /></td>
@@ -608,11 +609,12 @@ function test()
 							        <div id="tab1"><p>
 							         <table cellspacing="5" align="left">
 							        	<tr>
-							        <?php foreach($video_result as $item){?>
+							        <?php if(!empty($video_result)){
+							        foreach($video_result as $item){?>
 							        	<td align="left"><div style="padding-top:5px;width:128px;text-align: center;">
-							        	<a href="<?=base_url();?>video/index/<?php if(isset($item)) {echo $item->id;}?>"><div id="latestvideo_time"><?=$item->time?></div><img id="img" src="<?=base_url();?>assets/videos/image_preview/home_image<?=$item->id?>_thumb.jpg" height="100px" width="130px" ></a></div>
-							        		<div style="width:132px;text-align:center;" id="video_botto_img"><a href="<?=base_url();?>video/index/<?php if(isset($item)) {echo $item->id;}?>"><?=$item->name?></a></div></td>
-                                   <? }?>
+							        	<a href="<?=base_url();?>video/index/<?=$item->id?>/<?=$item->video_cat_id?>"><div id="latestvideo_time"><?=$item->time?></div><img id="img" src="<?=base_url();?>assets/videos/image_preview/home_image<?=$item->id?>_thumb.jpg" height="100px" width="130px" ></a></div>
+							        		<div style="width:132px;text-align:center;" id="video_botto_img"><a href="<?=base_url();?>video/index/<?=$item->id?>/<?=$item->video_cat_id?>"><?=$item->name?></a></div></td>
+                                   <? }}?>
 							       </tr>
 							        </table>
 							        </p></div>

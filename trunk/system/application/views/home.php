@@ -15,7 +15,7 @@ input {
 -->
 </style>
 
-<script type="text/javascript" >
+<script type="text/javascript">
 function reload()
 	 {
 		 //document.getElementById('newsloading').style.display="none";
@@ -217,11 +217,11 @@ function test()
 							        			
 								        			<? 
 								        			if(!empty($cinema_type1))
-								        			{
+								        			{if(isset($cinema_type1['4'])){ 
 								        			if(file_exists("./assets/cinema/ceni_img".$cinema_type1['4']->id."_home_thumb.jpg")){ ?>
 								        				<a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['4'])){echo $cinema_type1['4']->id;}?>/<?=$cinema_type1['4']->type?>"><img src="<?=base_url();?>assets/cinema/ceni_img<?php if(isset($cinema_type1['4'])){echo $cinema_type1['4']->id;}?>_home_thumb.jpg" style="margin: 0px 10px 0px 0px;float: left;;" align="top" id="img"></a>
-								        			<?} ?>
-							        				<div id="home_bottom"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['4'])){echo $cinema_type1['4']->id;}?>/<?=$cinema_type1['4']->type?>"><?php if(isset($cinema_type1['4'])){echo $cinema_type1['4']->heading;}?></a></div><div id="more-news-div"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['4'])){echo $cinema_type1['4']->id;}?>/<?=$cinema_type1['4']->type?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div></td>
+								        			<?}} ?>
+							        				<div id="home_bottom"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['4'])){echo $cinema_type1['4']->id;}?>/<? if(isset($cinema_type1['4'])){echo $cinema_type1['4']->type;}?>"><?php if(isset($cinema_type1['4'])){echo $cinema_type1['4']->heading;}?></a></div><div id="more-news-div"><a href="<?=base_url();?>cinema/inner/<?php if(isset($cinema_type1['4'])){echo $cinema_type1['4']->id;}?>/<?if(isset($cinema_type1['4'])){echo $cinema_type1['4']->type;}?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div></td>
 							        			<td width="50%" valign="top">
 							        			<? if(!empty($cinema_type1['5'])){ ?>
 							        			<? if(file_exists("./assets/cinema/ceni_img".$cinema_type1['5']->id."_home_thumb.jpg")){ ?>
@@ -345,7 +345,7 @@ function test()
           <td width="4" valign="top"><img src="<?=base_url();?>assets/imgs/add-line-left.jpg" width="4" height="456" /></td>
           <td width="206" valign="top" id="add-line"><table width="100%" height="439" border="0" cellpadding="0" cellspacing="0">
               <tr>
-                <td height="67" valign="middle"><div align="center" id="newsletter"><img src="<?=base_url();?>assets/imgs/newsletter-img.jpg" width="199" height="59" onclick="show_subscribe()" /></div></td>
+                <td height="67" valign="middle"><div align="center" id="newsletter"><img id="newsletter-img" src="<?=base_url();?>assets/imgs/newsletter-img.jpg" width="199" height="59" /></div></td>
               </tr>
               <tr>
                 <td height="193" valign="top"><img src="<?=base_url();?>assets/ads/Home3.jpg" width="199" height="177" /></td>

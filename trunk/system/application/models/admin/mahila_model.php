@@ -140,6 +140,13 @@ class Mahila_Model extends Model {
 		$query = $this->db->get_where();
 		return $query->result();
     }
+   function get_root_cat_by_id($id)
+    {
+    	$this->db->where('id',$id);
+    	$rs = $this->db->get('mahila_cat');
+    	$result = $rs->row();
+    	return $result->cat_name;
+    }
    
 }
 ?>

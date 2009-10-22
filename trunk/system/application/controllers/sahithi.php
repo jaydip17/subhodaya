@@ -1,13 +1,12 @@
 <?php
 class Sahithi extends Controller {
 	var $layout = 'default'; 
-	function Sahithi(){
+	function Sahithi()
+	{
 		parent::Controller();
-		$this->load->model("admin/Sahithi_Model");
-		$this->load->model("admin/News_Model");
-		$this->load->model("admin/Cinema_Model");
 	}
-	function index(){
+	function index()
+	{
 		$this->load->model('admin/mahila_Model');
 		$more=$this->News_Model->more_news();
 		$details=$this->Sahithi_Model->get_sahithitype();
@@ -15,7 +14,7 @@ class Sahithi extends Controller {
 		foreach($details as $item)
 		$details_more[$item->id]=$this->Sahithi_Model->getdetails($item->id,'yes',6);
 		
-			$details_mahila=$this->mahila_Model->get_mahilatype();
+		$details_mahila=$this->mahila_Model->get_mahilatype();
 		$details_more_mahila=array();
 		foreach($details_mahila as $item)
 		$details_more_mahila[$item->id]=$this->mahila_Model->getdetails($item->id,'yes',8);
@@ -24,17 +23,30 @@ class Sahithi extends Controller {
 		$types_mahila =array_keys($details_mahila);
 		//print_r($details_more);
 		//print_r($types);
-		$data=array('more'      		=>	$more,
-		            'details'  			=>	$details,
+		$segments = array(	'seg1' => $this->uri->segment(1,0),
+						   	'seg2' => $this->uri->segment(2,0),
+							'seg3' => $this->uri->segment(3,0),
+							'seg4' => $this->uri->segment(4,0),
+							'seg5' => $this->uri->segment(5,0),
+							'main' => $more['9']->matter,
+							'home' => $more['2']->matter,
+		); 
+		$bread_crumb = $this->bread_crumb->get_code($segments);
+		
+		$data=array('more'      		=> $more,
+		            'details'  			=> $details,
 		            'details_more' 		=> $details_more,
-		             'types'        	=>   $types,        
+		             'types'        	=> $types,        
 		          'details_more_mahila' => $details_more_mahila,
 		             'details_mahila'   => $details_mahila,
-		             'types_mahila'  	=> $types_mahila);
+		             'types_mahila'  	=> $types_mahila,
+						'bread_crumb'	=> $bread_crumb
+		);
 		
 		$this->load->view('sahithi_view',$data);
    }
-   function sahithidetails(){
+   function sahithidetails()
+   {
        	$this->load->model('admin/mahila_Model');
        	$news_type2=$this->News_Model->get_newstype1(2);
        	$more=$this->Sahithi_Model->more_sahithi();
@@ -55,30 +67,43 @@ class Sahithi extends Controller {
 	     $videos=$this->Video_Model->get_videos('top',2);
 	   	  
 	     $video_result=$videos->result();
-	     $telegu_typing=array();
-	    $data=array('result'   =>   $result,
-					 'more'    =>   $more,
-				'cinema_type1' =>   $cinema_type1,
-		        'details'   =>  $details,
-		        'evenmore'  =>$evenmore,
-		        'details_more'  => $details_more,
-		         'type'=>'sahithi',
-		         'link' =>'mahila',
-		          'video_result'     =>  $video_result,
+	     $segments = array(	'seg1' => $this->uri->segment(1,0),
+						   	'seg2' => $this->uri->segment(2,0),
+							'seg3' => $this->uri->segment(3,0),
+							'seg4' => $this->uri->segment(4,0),
+							'seg5' => $this->uri->segment(5,0),
+							'main' => $more['9']->matter,
+							'home' => $more['2']->matter,
+	     				  'heading'=> $result[0]->heading
+		); 
+		$bread_crumb = $this->bread_crumb->get_code($segments);
+		
+	    $telegu_typing=array();
+	    $data=array('result'   	=>  $result,
+					 'more'    	=>  $more,
+				'cinema_type1' 	=>  $cinema_type1,
+		        'details'   	=>  $details,
+		        'evenmore'  	=>	$evenmore,
+		        'details_more'  => 	$details_more,
+		         'type'			=>	'sahithi',
+		         'link' 		=>	'mahila',
+		          'video_result'=>  $video_result,
 	              'news_type2'  =>	$news_type2,
-	             'key'         =>  $key,
-	    		'telegu_typing'=>$telegu_typing
+	             'key'         	=>  $key,
+	    		'telegu_typing'	=>	$telegu_typing,
+	    		'bread_crumb'	=>	$bread_crumb
 				);
 				
 		$this->load->view('mahila_inner',$data);
 	}
-   function details(){
-   	   $this->load->model('admin/Poll_Model');
-   	 $newspoll=$this->Poll_Model->get_newspolls($type=4);
-   	 $cinemapoll=$this->Poll_Model->get_newspolls($type=5);
+   function details()
+   {
+   	   	$this->load->model('admin/Poll_Model');
+   	 	$newspoll=$this->Poll_Model->get_newspolls($type=4);
+   	 	$cinemapoll=$this->Poll_Model->get_newspolls($type=5);
 		$yes_poll=$this->Poll_Model->get_yes_newspoll($type=4);
-   	$details=$this->Sahithi_Model->get_sahithitype();
-   	$details_more=array();
+   		$details=$this->Sahithi_Model->get_sahithitype();
+   		$details_more=array();
 		foreach($details as $item)
 		$details_more[$item->id]=$this->Sahithi_Model->getdetails($item->id,'yes',6);
 		$more=$this->Sahithi_Model->more_sahithi();
@@ -95,6 +120,15 @@ class Sahithi extends Controller {
 		$sahithi=$this->Sahithi_Model->get_sahithi($type,$count=false);
 		$details_sahithi=$this->Sahithi_Model->get_sahithitype();
 		$tabs=array();
+		 $segments = array(	'seg1' => $this->uri->segment(1,0),
+						   	'seg2' => $this->uri->segment(2,0),
+							'seg3' => $this->uri->segment(3,0),
+							'seg4' => $this->uri->segment(4,0),
+							'seg5' => $this->uri->segment(5,0),
+							'main' => $more['9']->matter,
+							'home' => $more['2']->matter,
+		); 
+		$bread_crumb = $this->bread_crumb->get_code($segments);
 		
 		$data=array(	'news'  	=>	$sahithi,
 						'more'		=>	$more,
@@ -107,7 +141,8 @@ class Sahithi extends Controller {
 		               'type'		=>	'sahithi',
 		              'cinemapoll'  =>  $cinemapoll,
 				'details_sahithi'	=>	$details_sahithi,
-				'tabs'             => $tabs
+				'tabs'             	=> 	$tabs,
+				'bread_crumb'		=>	$bread_crumb
 		             );
 		$this->load->view("mahila_content",$data);
 	}

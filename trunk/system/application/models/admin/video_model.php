@@ -213,6 +213,13 @@ class Video_Model extends Model {
    	 $this->db->update('videos',array('id' => $_POST['id'], 'name' => $_POST['name'], 'no_of_views' => $_POST['no_of_views'] , 'rating' => $_POST['rating']));
    	 	
    }
+    function get_root_cat_by_id($id)
+    {
+    	$this->db->where('id',$id);
+    	$rs = $this->db->get('videos_categeory');
+    	$result = $rs->row();
+    	return $result->name;
+    }
 
 /* function active()
     {

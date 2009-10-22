@@ -37,6 +37,7 @@ function test()
 <tr><td width="10" align="right" valign="top"><img src="<?=base_url()?>assets/imgs/loginleft.jpg"></td>
 	<td id="loginimg" valign="top" align="center">
 	<div style="text-align: center;font-size: 16px;color: #FFFFFF;font-weight: bold;padding-top: 20px;">Enter Details</div>
+	<form method="get" action="<?=base_url()?>admin/contacts/import">
 	  <table cellspacing="10" cellpadding="10" align="center" style="border: 1px solid #99c6E4;padding-top: 20px;">
     	<tr> 
 		      <td align="left"><div align="left"><strong>Username:</strong></div></td>
@@ -57,12 +58,13 @@ function test()
     	</tr>
     	<tr> 
       		<td colspan="2"  align="left">
-      		<input id='importcontacts' alt='' onclick="test()" class="thickbox" type="button" name="Submit" value="Import Contacts" class="button" style="width:100%"></td>
+      		<input id='importcontacts' alt='' onclick="test()" class="thickbox" type="submit" name="Submit" value="Import Contacts" class="button" style="width:100%"></td>
     	</tr>
     	<tr> 
       		<td colspan="2"  align="center"><?=$message;?></td>
     	</tr>
   	</table>
+  	</form>
 	</td>
 	<td width="10" valign="top"><img src="<?=base_url()?>assets/imgs/loginright.jpg"></td></tr>
 </table>

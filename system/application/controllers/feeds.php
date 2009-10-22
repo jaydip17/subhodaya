@@ -9,8 +9,16 @@ class Feeds extends Controller {
 		{
 			$query=$this->feeds_model->news();
 			header('Content-type: text/xml');
+			
 	$output = '<rss version="2.0">';
     $output .= '<channel>';
+    $output .= '<image>
+      				<width>126</width>
+                    <height>15</height>
+                    <link>'.base_url().'</link>
+                    <title>Subhodaya.com</title>
+                    <url>'.base_url().'assets/imgs/logo.jpg</url>
+               </image>';
     $output .= '<title>About Rss Feed</title>';
     $output .= '<description>Explaining about RSS Feeds</description>';
     $output .= '<link>http://www.subhodaya.com/news</link>';
@@ -24,7 +32,6 @@ foreach($query->result() as $row)
 <description>"."<![CDATA[<p><a href=".base_url()."news/newsdetails/".($row->id)."/".($row->type).">"."<img src=http://localhost/subhodaya/assets/rssimages/loksatta.jpg align=left width=126 height=76 align=left></a></p><p>".strip_tags($row->summary)."]]>"."</description>
                 </item>
                 ";
-	
 }
   $output .= '</channel>';
   $output .= '</rss>';

@@ -29,7 +29,7 @@ foreach($query->result() as $row)
                                        
 <description>"."<![CDATA[<p><a href=".base_url()."news/newsdetails/".($row->id)."/".($row->type).">"."<img src=http://localhost/subhodaya/assets/rssimages/loksatta.jpg align=left width=126 height=76 align=left></a></p><p>".strip_tags($row->summary)."]]>"."</description>
                 </item>
-                ";
+                "."<br/>"."<br/>"."<br/>"."<br/>"."<br/>"."<br/>"."<br/>"."<br/>"."<br/>"."<br/>"."<br/>"."<br/>";
 }
   $output .= '</channel>';
   $output .= '</rss>';

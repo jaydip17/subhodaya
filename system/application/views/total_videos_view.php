@@ -22,7 +22,7 @@ messages[<?=$count?>] = new Array('<?=base_url ()?>assets/videos/image_preview/i
                           $count_another=1;
                           foreach($videosnames as $item){
                           ?>
-                           <td><div style="font-size:13px;color:#000000;padding-left:25px;padding-top:8px;text-decoration:none;text-align:left;"class="viname"><a href="<?=base_url();?>video/index/<?=$item->id?>" ><?=$item->name?></a></div></td>
+                           <td><div style="font-size:13px;color:#000000;padding-left:25px;padding-top:8px;text-decoration:none;text-align:left;"class="viname"><a href="<?=base_url();?>video/index/<?=$item->id?>/<?=$item->video_cat_id?>"><?=$item->name?></a></div></td>
       
                                  
                                <?

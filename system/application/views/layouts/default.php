@@ -22,7 +22,7 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
 
 <link REL="SHORTCUT ICON" HREF="<?=base_url();?>assets/favicon.ico">
 <!-- main style sheet -->
-
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://localhost/subhodaya/feeds/news" />
 <link href="<?=base_url();?>assets/style.css" rel="stylesheet" type="text/css" />
 <!-- for tabs js ans css -->
 <?php if(isset($tabs)){?>

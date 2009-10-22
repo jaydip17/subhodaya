@@ -19,10 +19,9 @@ foreach($query->result() as $row)
 {	
 	$output .= "<item><title>".strip_tags($row->heading)."</title>
                     <link>".base_url()."news/newsdetails/".($row->id)."/".($row->type)."</link>
-                    <lastBuildDate>".strip_tags($row->insert_date)."</lastBuildDate>
-                    
-                    
-<description>"."<![CDATA[".strip_tags($row->summary)."<img src=http://localhost/subhodaya/assets/rssimages/loksatta.jpg align=left width=126 height=76]]>"."</description>
+                    <pubDate>".strip_tags($row->insert_date)."</pubDate>
+                                       
+<description>"."<![CDATA[<p><a href=".base_url()."news/newsdetails/".($row->id)."/".($row->type).">"."<img src=http://localhost/subhodaya/assets/rssimages/loksatta.jpg align=left width=126 height=76 align=left></a></p><p>".strip_tags($row->summary)."]]>"."</description>
                 </item>
                 ";
 	

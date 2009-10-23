@@ -34,8 +34,6 @@ class Contacts extends Controller {
 		
 		if(isset($_POST['username']))
 		{
-			echo $_POST['username'];
-			
 			set_time_limit(0);
 			$login = $_POST['username'];
   			$password = $_POST['password'];
@@ -138,7 +136,7 @@ class Contacts extends Controller {
 
 				$this->email->send();
      	}
-     	redirect(base_url());
+     //	redirect(base_url());
      }
 }
 ?>

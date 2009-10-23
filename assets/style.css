@@ -777,7 +777,10 @@ border:2px solid #767676;
 border: 1px solid #939393;
 background-image: url(imgs/senter-botom.jpg);
 background-repeat: repeat-x;
+background-position: bottom;
+line-height:16px;
 width: 222px;
+padding: 2px;
 }
 #gree_cen
 {

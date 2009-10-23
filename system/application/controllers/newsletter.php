@@ -36,8 +36,7 @@ class Newsletter extends Controller {
 	                     );
 				if($this->db->insert('newsletter', $data))
 				{
-					$message='Thankyou for Intresting to advertise with us.</br>Our marketing executiws will respond you 
-				              with in 24 hours</br>.Thanku have a great day!';
+					$message='Thankyou for subscribing with us</br>.Have a great day!!!';
 				
 				
 					//echo "&nbsp;&nbsp;&nbsp;&nbsp;Successful";

@@ -398,7 +398,7 @@ padding-left: 30px;
               				<td align="right">
               					<input type="hidden" name="poll_id" value="<?=$newspoll['0']->id?>">
               					<? $attributes = 'onClick= "loadPoll(\''.base_url().'poll/index/'.$newspoll[0]->id.'\',this.value,\''.base_url().'assets/imgs/bigrotation2.gif\')";' ?>
-              					<?=form_radio('answer','a',True,$attributes) ?>
+              					<?=form_radio('answer','a',FALSE,$attributes) ?>
               				</td>
               				<td align="left"><?=$more['18']->matter ?></td></tr>
               			<tr><td align="right"><?=form_radio('answer','b',FALSE,$attributes) ?></td><td align="left"><?=$more['19']->matter ?></td></tr>

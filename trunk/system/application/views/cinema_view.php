@@ -145,7 +145,7 @@ else
      </table>
      </td>
      <td width="220" valign="top" align="center" style="padding: 5px;">
-     	<div style="width: 220px;height: 337px;border: 1px solid blue;" >
+     	<div style="width: 220px;height: 337px;border: 1px solid #50BCFC;" >
             <img src="<?=base_url();?>assets/ads/Cinema1.jpg" style="border: 1px solid #50BCFC;margin: 4px;width: 210px"></img>
 			<img src="<?=base_url();?>assets/ads/Cinema2.jpg" style="border: 1px solid #50BCFC;margin: 5px;width: 210px;"></img></div>
      </td>     <td width="185" align="center" valign="top" rowspan="3">
@@ -196,7 +196,7 @@ else
               				<td align="right">
               					<input type="hidden" name="poll_id" value="<?=$cinemapoll['0']->id?>">
               					<? $attributes = 'onClick= "loadPoll(\''.base_url().'poll/index/'.$cinemapoll[0]->id.'\',this.value,\''.base_url().'assets/imgs/bigrotation2.gif\')";' ?>
-              					<?=form_radio('answer','a',True,$attributes) ?>
+              					<?=form_radio('answer','a',FALSE,$attributes) ?>
               				</td>
               				<td align="left"><?=$more['18']->matter ?></td></tr>
               			<tr><td align="right"><?=form_radio('answer','b',FALSE,$attributes) ?></td><td align="left"><?=$more['19']->matter ?></td></tr>

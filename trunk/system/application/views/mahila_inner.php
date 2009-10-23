@@ -169,7 +169,7 @@ line-height:16px;
           				 		?>
           				          <li><a href="<?=base_url();?><?=$link?>/<?=$link?>details/<?=$article->id?>"><? echo $article->heading;?></a></li>
           				       <?
-							if($i>=4)
+							if($i>=3)
 								break;
 								$i++;}
 								} 

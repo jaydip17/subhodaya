@@ -112,8 +112,8 @@
 	    $config['upload_path'] = $dir;
 		$config['allowed_types'] = 'gif|jpg|png';
 		$config['max_size']	= '1000';
-		$config['max_width']  = '700';
-		$config['max_height']  = '1000';
+		$config['max_width']  = '750';
+		$config['max_height']  = '1500';
 
 		$config1['upload_path'] = $dir;
 		$config1['allowed_types'] = 'gif|jpg|png';

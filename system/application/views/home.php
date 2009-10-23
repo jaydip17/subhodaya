@@ -583,7 +583,7 @@ function test()
 						          	endforeach; 
                         	}
 						      ?>
-               </ul>
+                  </ul>
 	                   		</div>
 	                        <div id="more-news-div" style="width: 99%;" ><span ><a href="<?=base_url();?>cinema/details/<?=$cinema_type2['0']->type?>"><?=$more['0']->matter ?>...</a></span></div>
                         </td>

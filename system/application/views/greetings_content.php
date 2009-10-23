@@ -198,7 +198,7 @@ else
      	</table>
      	</td>
      	<td width="300" align="center" valign="top" >
-		<div style="background-color: gray;width: 290px;height: 330px;">google adds</div>
+		<div style="background-color: gray;width: 290px;height: 330px;">google ads</div>
 		</td>
 		</tr>
 	<tr>

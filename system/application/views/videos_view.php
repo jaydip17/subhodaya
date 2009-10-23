@@ -11,7 +11,7 @@
 		       		<table width="100%"  border="0" cellpadding="0" cellspacing="0">
 		     			<tr><td height="4" valign="bottom"><!--<img src="<?=base_url();?>assets/imgs/top-cor-line.jpg" width="500" height="4" />--></td></tr>
 		            </table>
-	                <table width="100%"  border="0"  style="border-left:1px solid #0872BC; border-right:1px solid #0872BC;" cellpadding="0" cellspacing="0">
+	                <table width="100%"  border="0"   style="border-left:1px solid #0872BC; border-right:1px solid #0872BC;" cellpadding="0" cellspacing="0">
 	                    <tr><td height="360"><?=$videoplayer?></td>
 	                    </tr>
 	                </table></td></tr>
@@ -22,7 +22,7 @@
      </table>
      </td>
      <td  valign="top" align="center" height="370">
-        <table width="240" height="370" align="center" style="border:1px solid #0872BC;cellspacing:0px cellpadding:0px;">
+        <table width="230" height="370" align="center" style="border:1px solid #0872BC;cellspacing:0px cellpadding:0px;">
             <tr>
            <td colspan="2"  style="border:1px solid #50BFC;height:25px; padding-top:0px;font-size:14px;font-weight:bold;text-align:center" id="video_heading"><?=$more['32']->matter ?></td>
             </tr>

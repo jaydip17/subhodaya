@@ -21,9 +21,6 @@
  <td height="9" width="600"><img height="9" width="600" alt="" src="<?=base_url()?>assets/imgs/notice2_03.jpg"/></td>
  </tr>
  </tbody></table>
-
-
-
 <!-- <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td><a href="http://www.subhodaya.com"><img  border="0px" src="<?=base_url();?>assets/imgs/logo.jpg" alt="subhodaya.com" width="240" height="60" /></a></td>

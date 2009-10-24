@@ -9,7 +9,7 @@ padding-left: 20px;
 	<td valign="top" width="2px"><img src="<?=base_url()?>assets/imgs/body-left.jpg"></td>
 	<td id="gal_center-top" width="745px;" align="left">
 			<div style="width: 50%;text-align: left;float: left;color: #8B0000;font-weight: bold;font-size: 14px;"><?=$result['0']->catname ?></div>
-			<div style="text-align: right;color: #8B0000;font-weight: bold;font-size: 14px;">View Most Viewed</div>
+			<div style="text-align: right;color: #8B0000;font-weight: bold;font-size: 14px;"></div>
 	</td>
 	<td valign="top" width="2px"><img src="<?=base_url()?>assets/imgs/body-right.jpg"></td>
 	<td valign="top" rowspan="3" align="center" style="height: 500px;">
@@ -47,7 +47,7 @@ padding-left: 20px;
 		<?if($count!=0) {?>
 			<div id="gal_middle_line" style="height: 31px;margin-top: 5px;">
 				<div style="width: 50%;text-align: left;float: left;color: #8B0000;font-weight: bold;font-size: 14px;padding: 5px 0px 0px 5px;"><?=$sub['name'] ?></div>
-				<div style="text-align: right;color: #8B0000;font-weight: bold;font-size: 14px;padding: 3px 5px 0px 0px;">View Most Viewed</div>
+				<div style="text-align: right;color: #8B0000;font-weight: bold;font-size: 14px;padding: 3px 5px 0px 0px;"></div>
 			</div>
 			<?} ?>
 		<table width="90%" cellpadding="5" cellspacing="5" align="center" >
@@ -69,7 +69,7 @@ padding-left: 20px;
 				}?>
 				<tr><td colspan="5" height="15px;" style="text-align: right;padding-bottom: 10px;"><a href="<?=base_url()?>gallery/categeory/<?=$sub['id'] ?>"><?=$more['0']->matter?></a></td></tr>
 		</table>
-		</div>
+		</div><br>
 		<?$count++;}}?>
 		</div>
 	</td>

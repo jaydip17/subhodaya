@@ -167,7 +167,7 @@ line-height:16px;
 								$i=0;
           				        foreach($details_more as $article){
           				 		?>
-          				          <li><a href="<?=base_url();?><?=$link?>/<?=$link?>details/<?=$article->id?>"><? echo $article->heading;?></a></li>
+          				          <li><a href="<?=base_url();?><?=$link?>/<?=$link?>details/<?=$article->id?>/<?=$article->cat_id?>"><? echo $article->heading;?></a></li>
           				       <?
 							if($i>=3)
 								break;

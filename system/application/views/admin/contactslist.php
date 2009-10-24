@@ -1,5 +1,5 @@
 <div align="center" style="padding:5; background-color: #EEEEEE; width:350;">
-<form method="POST" action="<?=$formaction?>" name="inviteform" id="inviteform">
+<form method="POST" action="<?echo base_url().''.$formaction?>" name="inviteform" id="inviteform">
 <table style="background-color:white; border:black solid thin;">
 <SCRIPT LANGUAGE="JavaScript">
 function togglechecked(){ 

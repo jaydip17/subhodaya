@@ -108,7 +108,7 @@ padding-left: 20px;
 				<td><div id="gallery_image" style="margin-bottom: 4px;">
 				<a href="<?=base_url()?>gallery/inner/<?=$row->parentid?>"><img src="<?=base_url()?>assets/gallery/thumimg<?=$row->id?>.jpg"  id='img'></a></div>
 				<div id="gall_botom_image" style="text-align: center;font-weight: bold;font-size: 14px;"><div style="margin-top: 3px;">
-				<span><a href="<?=base_url()?>gallery/content/<?=$row->parentid?>"><?=$row->title?></a></span><br>
+				<span><a href="<?=base_url()?>gallery/inner/<?=$row->parentid?>"><?=$row->title?></a></span><br>
 				<span><?echo $row->insert_date; ?></span>
 				</div>
 				</div></td>

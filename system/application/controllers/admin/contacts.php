@@ -117,10 +117,10 @@ class Contacts extends Controller {
      }
      function sendmail(){
      	
-     	if(isset($_POST['addresses']))
+     		if(isset($_POST['addresses']))
      		{
      		$subject="[SUBHODAYA.COM] $_POST[uname] has invited to view subhodaya.com";
-		 	$message="Dear Sir/Madam  \n\n Your Friend $_POST[uname] has recently viewed subhodaya.com .
+		 	$data['message']="Dear Sir/Madam  \n\n Your Friend $_POST[uname] has recently viewed subhodaya.com .
 		 		      \n To accept this invitation  click  the below link .\n http://www.subhodaya.com";
 		 	
 	     		$addresses=$_POST['addresses'];
@@ -135,8 +135,10 @@ class Contacts extends Controller {
 				$this->email->message($html_message); 
 
 				$this->email->send();
+				$this->session->set_flashdata('messagesent','message sent successfully to selected contacts.');
      	}
-     //	redirect(base_url());
+     	
+     	redirect(base_url().'contact/message_sent');
      }
 }
 ?>

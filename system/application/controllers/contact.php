@@ -29,7 +29,7 @@ class contact extends Controller {
 		$this->load->view('advertise',$data);
 	}
 	function message_sent(){
-		$message = $this->session->flashdata('message');
+		//$message = $this->session->flashdata('message');
 		$this->session->flashdata('messagesent');
 		$this->load->view('message_sent');
 		

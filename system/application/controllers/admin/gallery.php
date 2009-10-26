@@ -242,7 +242,8 @@
 		  $id = $this->input->post('id');
 		  $parentid = $this->input->post('parentid'); 
 		  $title = $this->input->post('title');
-		  $this->Gallery_model->editimage($id,$title);
+		  $active=$this->input->post('active');
+		  $this->Gallery_model->editimage($id,$title,$active);
 		  redirect('admin/gallery/image_view/'.$parentid);
 		   
 	}

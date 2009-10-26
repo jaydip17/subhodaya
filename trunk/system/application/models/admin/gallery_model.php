@@ -191,10 +191,11 @@
      	   	
      }
      //edit image
-    function editimage($id,$title)
+    function editimage($id,$title,$active)
     {
+    	//echo $active; exit;
     	$this->db->where('id',$id);
- 		$this->db->update('gallery_images',array('title' => $title));
+ 		$this->db->update('gallery_images',array('title' => $title,'active'=>$active));
  		
     }
     //delete image

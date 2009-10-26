@@ -12,7 +12,9 @@ image title
 <?=form_input('title',$img[0]->title)?>
 </td>
 </tr>
-
+<tr>
+<td>For Homepage</td><td><?=form_checkbox('active',true)?></td>
+</tr>
 <tr>
 <td>
 </td>

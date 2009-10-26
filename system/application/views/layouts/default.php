@@ -22,7 +22,6 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
 
 <link REL="SHORTCUT ICON" HREF="<?=base_url();?>assets/favicon.ico">
 <!-- main style sheet -->
-<<<<<<< .mine
 <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?=base_url()?>feeds/news" />
 
 <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?=base_url();?>feeds/news" />

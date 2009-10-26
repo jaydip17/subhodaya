@@ -19,9 +19,15 @@ class  Poll extends Controller {
 		$polltype=$this->input->post('polltype');
 		$question=$this->input->post('question');
 		$on_date=$this->input->post('on_date');
-		$data=array('cat_id'=>$polltype,
-					'question'=>$question,
-					'displaydate'=>$on_date);
+		$datestring = "%Y-%m-%d";
+		$time = time();
+		$date=mdate($datestring, $time);
+		$data=array('cat_id'		=>	$polltype,
+					'question'		=>	$question,
+					'displaydate'	=>	$on_date,
+					'insert-date'	=>  $date
+		
+		);
 		if(!empty($data)){
 		$result=$this->db->insert('poll',$data);
 		//$id=$this->db->insert_id();

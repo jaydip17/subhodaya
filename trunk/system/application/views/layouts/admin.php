@@ -49,10 +49,10 @@ ddsmoothmenu.init({
 				<li><a href="<?=base_url();?>admin/news/getnewstypes">Edit News</a></li>
 			</ul>
 			</li>
-			<li><a href="#">Movies</a>
+			<li><a href="#">Cinema</a>
 			<ul>
 				<li><a href="<?=base_url();?>admin/cinema">Insert</a></li>
-				<li><a href="<?=base_url();?>admin/cinema/getcinematype">Edit News</a></li>
+				<li><a href="<?=base_url();?>admin/cinema/getcinematype">Edit Cinema</a></li>
 			</ul>
 			</li>
 			<li><a href="#">Video</a>

@@ -1,7 +1,7 @@
 
 <table align="center" width="50%" id="tableadmin">
 	<thead>
-		Cinema
+		NEWS
 	</thead>
    <?php if(!empty($details))
 {?>
@@ -40,7 +40,7 @@ foreach ($details as $item):
 	
 	<tr>
 	<td colspan =4>
-	  <?php // echo $this->paginationnew->paginate();?>
+	 
 	  </td>
 	  </tr>
 </table>
@@ -48,8 +48,3 @@ foreach ($details as $item):
 	
 <h2>Add News to display</h2>	
 <? }?>
-
-
-
-
-?>

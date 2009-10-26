@@ -145,10 +145,32 @@ class News extends Controller {
 			redirect(base_url().'admin/news',$message);
 		}
 	}
-	function getnews($type){
-		$this->load->model('admin/News_Model');
-		$details=$this->News_Model->getnews_details($type);
-		$data=array('details'=>$details);
+	function getnews(){
+		$id=$this->uri->segment(4,0);
+		//$details=$this->News_Model->getnews_details($type);
+		
+		$query=$this->News_Model->get_news1($id);
+		//print_r($query);
+	    $a =base_url().'admin/news/getnews/'.$id;
+		 //pagination
+    	$this->load->library('paginationnew');
+    	
+    	$this->paginationnew->start = ($this->uri->segment(5)) ? $this->uri->segment(5) : '0';
+    	$this->paginationnew->limit =9;
+        $this->paginationnew->filePath =$a;
+      
+        $this->paginationnew->select_what = '*';
+        $this->paginationnew->nbItems = $this->News_Model->count($id);
+        $this->paginationnew->add_query = $query;
+        
+   		$result = $this->paginationnew->getQuery(TRUE);
+   		$details=$result->result();
+   		// print_r($details);
+  	    $paginate = $this->paginationnew->paginate1(); 
+		$data=array(
+					'details' => $details,
+					'paginate'=> $paginate
+		);
 		$this->load->view('admin/news_edit',$data);
 	}
 	function delete(){

@@ -144,10 +144,31 @@ class Cinema extends Controller {
 		
 	}
 	function getcinema(){
-		$type=$this->uri->segment(4,0);
-		$this->load->model('admin/Cinema_Model');
-		$details=$this->Cinema_Model->getcinema_details($type);
-		$data=array('details'=>$details);
+		$id=$this->uri->segment(4,0);
+		//$details=$this->Cinema_Model->getcinema_details($type);
+		$query=$this->Cinema_Model->get_cinema1($id);
+		//print_r($query);
+	    $a =base_url().'admin/cinema/getcinema/'.$id;
+		 //pagination
+    	$this->load->library('paginationnew');
+    	
+    	$this->paginationnew->start = ($this->uri->segment(5)) ? $this->uri->segment(5) : '0';
+    	$this->paginationnew->limit =9;
+        $this->paginationnew->filePath =$a;
+      
+        $this->paginationnew->select_what = '*';
+        $this->paginationnew->nbItems = $this->Cinema_Model->count($id);
+        $this->paginationnew->add_query = $query;
+        
+   		$result = $this->paginationnew->getQuery(TRUE);
+   		$details=$result->result();
+   		// print_r($details);
+  	    $paginate = $this->paginationnew->paginate1(); 
+		
+		$data=array(
+				'details'	=>	$details,
+				'pagination'=>  $paginate
+		);
 		$this->load->view('admin/cinema_edit',$data);
 	}
 	function edit(){

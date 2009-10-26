@@ -6,7 +6,8 @@ class Poll_Model extends Model {
 		$deatils=$this->db->get('more');
 		return $deatils->result();
 	}
-	function get_polls(){
+	function get_polls($id){
+		$this->db->where('cat_id',$id);
 		$result=$this->db->get('poll');
 		return $result->result();
 	}
@@ -138,6 +139,18 @@ class Poll_Model extends Model {
   					);
   		$this->db->where('id',$id);	
   		$this->db->update('poll',$data);
+	}
+	function poll_paginate($type)
+	{
+		$query="from poll where cat_id=$type order by poll.id desc";
+		return $query;
+	}
+	function count($type)
+	{
+		$this->db->where('cat_id',$type);
+		$this->db->from('poll');
+		$count =$this->db->count_all_results();
+		return $count;
 	}
 }
 ?>

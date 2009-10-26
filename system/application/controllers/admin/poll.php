@@ -44,8 +44,32 @@ class  Poll extends Controller {
 		
 	}
 	function getpoll(){
-		$details=$this->Poll_Model->get_polls();
-		$data=array('details'=>$details);
+		$id=$this->uri->segment(4,0);
+		//$details=$this->Poll_Model->get_polls($id);
+		
+		
+		$query=$this->Poll_Model->poll_paginate($id);
+		//print_r($query);
+	    $a =base_url().'admin/poll/getpoll/'.$id;
+		 //pagination
+    	$this->load->library('paginationnew');
+    	
+    	$this->paginationnew->start = ($this->uri->segment(5)) ? $this->uri->segment(5) : '0';
+    	$this->paginationnew->limit =9;
+        $this->paginationnew->filePath =$a;
+      
+        $this->paginationnew->select_what = '*';
+        $this->paginationnew->nbItems = $this->Poll_Model->count($id);
+        $this->paginationnew->add_query = $query;
+        
+   		$result = $this->paginationnew->getQuery(TRUE);
+   		$details=$result->result();
+   		// print_r($details);
+  	    $paginate = $this->paginationnew->paginate1(); 
+		$data=array(	
+						'details'		=>	$details,
+					'pagination'   		=>  $paginate
+				);
 		$this->load->view('admin/polledit_view',$data);
 	}
 	function delete(){
@@ -73,6 +97,12 @@ class  Poll extends Controller {
    	 $this->Poll_Model->edit1($id,$active);
    	redirect(base_url().'admin/poll/getpoll');
 	}
-
+	function getpolltype()
+	{
+		$details=$this->Poll_Model->get_polltype();
+		//print_r($details);
+		$data=array('details'=>$details);
+		$this->load->view('admin/poll_cate',$data);
+	}
 }
 ?>

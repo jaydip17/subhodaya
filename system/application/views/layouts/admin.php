@@ -93,7 +93,7 @@ ddsmoothmenu.init({
 			<li><a href="#">Poll</a>
 			<ul>
 				<li><a href="<?=base_url();?>admin/poll">Poll Add</a></li>
-				<li><a href="<?=base_url();?>admin/poll/getpoll">Edit/Change</a></li>
+				<li><a href="<?=base_url();?>admin/poll/getpolltype">Edit/Change</a></li>
 			</ul>
 			</li>
 			<li><a href="#">Other</a>

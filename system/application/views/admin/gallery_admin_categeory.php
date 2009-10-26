@@ -18,10 +18,6 @@ if (isset ( $cat )) {
 $js='onsubmit= "return validate(this)"';
 echo form_open ( 'admin/gallery/addCategeory',$js );
 ?>
-
-	
-	
-	
 	<tr>
 		<td>
 <?

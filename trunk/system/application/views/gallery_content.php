@@ -576,15 +576,16 @@ padding-left: 20px;
 	<td valign="top" width="1px"><img src="<?=base_url()?>assets/imgs/body-left.jpg"></td>
 	<td id="gal_center-top"  align="left" height="30" width="750">
 			<div style="text-align: left;float: left;width: 70%;text-align: left;float: left;width: 50%;padding-left: 3px;font-size: 14px;font-weight: bold;" >
-					<? if(isset($links)):?>
-						<?if(isset($links['prev'])){ ?>
-						<a href="<?=base_url();?>gallery/content/<?=$links['prev']?>/<?=$image['0']->parentid?>">Previous</a>						
+						<? if(isset($links)):?>
+					<?if(isset($links['next'])){ ?>
+						<a href="<?=base_url();?>gallery/content/<?=$links['next']?>/<?=$image['0']->parentid?>">Previous</a>
 					<?}endif; ?>
 					</div>
 					<div style="text-align: right;padding-right: 3px;font-size: 14px;font-weight: bold;">
+				
 					<? if(isset($links)):?>
-					<?if(isset($links['next'])){ ?>
-						<a href="<?=base_url();?>gallery/content/<?=$links['next']?>/<?=$image['0']->parentid?>">Next</a>
+						<?if(isset($links['prev'])){ ?>
+						<a href="<?=base_url();?>gallery/content/<?=$links['prev']?>/<?=$image['0']->parentid?>">Next</a>						
 					<?}endif; ?>
 					</div>
 	</td>
@@ -664,14 +665,14 @@ padding-left: 20px;
 	<td id="gal_center-botom"  align="left" valign="bottom">
 	<div style="text-align: left;float: left;width: 50%;text-align: left;float: left;width: 50%;padding-left: 3px;font-size: 14px;font-weight: bold;" >
 					<? if(isset($links)):?>
-						<?if(isset($links['prev'])){ ?>
-						<a href="<?=base_url();?>gallery/content/<?=$links['prev']?>/<?=$image['0']->parentid?>">Previous</a>						
+					<?if(isset($links['next'])){ ?>
+						<a href="<?=base_url();?>gallery/content/<?=$links['next']?>/<?=$image['0']->parentid?>">Previous</a>
 					<?}endif; ?>
 					</div>
 					<div style="text-align: right;padding-right: 3px;font-size: 14px;font-weight: bold;margin-bottom: 6px;">
-					<? if(isset($links)):?>
-					<?if(isset($links['next'])){ ?>
-						<a href="<?=base_url();?>gallery/content/<?=$links['next']?>/<?=$image['0']->parentid?>">Next</a>
+						<? if(isset($links)):?>
+						<?if(isset($links['prev'])){ ?>
+						<a href="<?=base_url();?>gallery/content/<?=$links['prev']?>/<?=$image['0']->parentid?>">Next</a>						
 					<?}endif; ?>
 					</div>
 	</td>

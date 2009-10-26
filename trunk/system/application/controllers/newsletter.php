@@ -38,32 +38,35 @@ class Newsletter extends Controller {
 				if($this->db->insert('newsletter', $data))
 				{
 					
-					
-					//echo "&nbsp;&nbsp;&nbsp;&nbsp;Successful";
+					$messa='Thankyou for subscribing with us</br>.Have a great day!!!';
+					$messagesent='Thankyou for subscribing with us</br>.Have a great day!!!';
+					$this->session->set_flashdata('messagesent',$messagesent); 
+					$to=$email;
+					 $subject='Subhodaya Newsletter';
+					 $from='dontreply@subhodaya.com';
+					 $from_name=$name;
+					 $this->send_mail($to,$subject,$messa,$from,$from_name);
+							//echo "&nbsp;&nbsp;&nbsp;&nbsp;Successful";
 				}
 				else
-					$message="&nbsp;&nbsp;&nbsp;&nbsp;System Error";
+					$messagesent="&nbsp;&nbsp;&nbsp;&nbsp;System Error";
+					$this->session->set_flashdata('messagesent',$messagesent);
 			}
 			 else 
-			 $message="&nbsp;&nbsp;&nbsp;&nbsp;Email Exists";
-			 $messa='Thankyou for subscribing with us</br>.Have a great day!!!';
-			 $to=$email;
-			 $subject='Subhodaya Newsletter';
-			 $from='dontreply@subhodaya.com';
-			 $from_name=$name;
-			 $this->send_mail($to,$subject,$messa,$from,$from_name);
+			 $messagesent="&nbsp;&nbsp;&nbsp;&nbsp;Email Exists";
+			 $this->session->set_flashdata('messagesent',$messagesent);
 				//echo $stuats;exit;
 		}
 		else
-		 $message="&nbsp;&nbsp;&nbsp;&nbsp;Invalid Email";
+		 $messagesent="&nbsp;&nbsp;&nbsp;&nbsp;Invalid Email";
 		
-		$this->session->set_flashdata('messagesent',$message);
+		$this->session->set_flashdata('messagesent',$messagesent);
 				redirect(base_url().'newsletter/subscribed');
 		
 	}
     function subscribed(){
 		$message= $this->session->flashdata('message');
-		$this->session->flashdata('messagesent');
+		$this->session->flashdata('messagesent',$message);
 		$this->load->view('newsletter_subscribed');
 		
 	}
@@ -84,7 +87,6 @@ class Newsletter extends Controller {
 		
 		$this->email->send();
 		//echo $this->email->print_debugger();
-	
 		return true;
 	 }
 	

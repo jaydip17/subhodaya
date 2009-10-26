@@ -236,15 +236,15 @@ function test()
 									<div id="tab4">
 									     <div style="height: 169px;" id="telugufont1">
 							        	<? if(!empty($mahila_details_yoga['0'])){if(file_exists("./assets/mahila/news_img".$mahila_details_yoga['0']->id."_thumb.jpg")){ ?>
-							        		<a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['0'])){echo $mahila_details_yoga['0']->id;}?>"><img src="<?=base_url();?>assets/mahila/news_img<?php if(isset($mahila_details_yoga['0'])){echo $mahila_details_yoga['0']->id;}?>_thumb.jpg" align="top" style="margin: 0px 22px 1px 2px;float: left;" id="img"></img></a>
+							        		<a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details_yoga['0']->id?>/<?=$mahila_details_yoga['0']->cat_id?>"><img src="<?=base_url();?>assets/mahila/news_img<?php if(isset($mahila_details_yoga['0'])){echo $mahila_details_yoga['0']->id;}?>_thumb.jpg" align="top" style="margin: 0px 22px 1px 2px;float: left;" id="img"></img></a>
 							        	<?} ?>
-    									<font id="mainnews"><a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['0'])){echo $mahila_details_yoga['0']->id;}?>"><?php if(isset($mahila_details_yoga['0'])){echo $mahila_details_yoga['0']->heading;}?></a></font><br>
+    									<font id="mainnews"><a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details_yoga['0']->id?>/<?=$mahila_details_yoga['0']->cat_id?>"><?php if(isset($mahila_details_yoga['0'])){echo $mahila_details_yoga['0']->heading;}?></a></font><br>
 							        	<font style="font-size: 14px;text-align: justify;"><?php if(isset($mahila_details_yoga['0'])){echo $mahila_details_yoga['0']->summary;}?></font>
 							        	<div id="more-news-div"><a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details_yoga['0']->id?>"><?php if(isset($more['0'])){echo $more['1']->matter;}?></a></div>
 							        	<ul id="mainnews">
-                                        <li style="padding: 2px"><a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['1'])){echo $mahila_details_yoga['1']->id;}?>"><?php if(isset($mahila_details_yoga['1'])){echo $mahila_details_yoga['1']->heading;}?></a></li>
-							        		<li style="padding: 2px"><a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['2'])){echo $mahila_details_yoga['2']->id;}?>"><?php if(isset($mahila_details_yoga['2'])){echo $mahila_details_yoga['2']->heading;}?></a></li>
-							        		<li style="padding: 2px"><a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['3'])){echo $mahila_details_yoga['3']->id;}?>"><?php if(isset($mahila_details_yoga['3'])){echo $mahila_details_yoga['3']->heading;}?></a></li>
+                                        <li style="padding: 2px"><a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details_yoga['1']->id?>/<?=$mahila_details_yoga['1']->cat_id?>"><?php if(isset($mahila_details_yoga['1'])){echo $mahila_details_yoga['1']->heading;}?></a></li>
+							        		<li style="padding: 2px"><a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details_yoga['2']->id?>/<?=$mahila_details_yoga['2']->cat_id?>"><?php if(isset($mahila_details_yoga['2'])){echo $mahila_details_yoga['2']->heading;}?></a></li>
+							        		<li style="padding: 2px"><a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details_yoga['3']->id?>/<?=$mahila_details_yoga['3']->cat_id?>"><?php if(isset($mahila_details_yoga['3'])){echo $mahila_details_yoga['3']->heading;}?></a></li>
 							        	</ul>
 							        		<?} ?>
 							        	</div>
@@ -257,15 +257,15 @@ function test()
 							        			<td width="50%" valign="top">
 							        			<? if(!empty($mahila_details_yoga['4'])){ ?>
 								        			<? if(file_exists("./assets/mahila/news_img".$mahila_details_yoga['4']->id."_home_thumb.jpg")){ ?>
-								        				<a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['4'])){echo $mahila_details_yoga['4']->id;}?>"><img src="<?=base_url();?>assets/mahila/news_img<?php if(isset($mahila_details_yoga['4'])){echo $mahila_details_yoga['4']->id;}?>_home_thumb.jpg" style="margin: 0px 10px 0px 0px;float: left;;width: 60px;" align="top" id="img"></a>
+								        				<a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details_yoga['4']->id?>/<?=$mahila_details_yoga['4']->cat_id?>"><img src="<?=base_url();?>assets/mahila/news_img<?php if(isset($mahila_details_yoga['4'])){echo $mahila_details_yoga['4']->id;}?>_home_thumb.jpg" style="margin: 0px 10px 0px 0px;float: left;;width: 60px;" align="top" id="img"></a>
 								        			<?} }?>
-							        				<div id="home_bottom"><a href="<?=base_url();?>cinema/inner/<?php if(isset($mahila_details_yoga['4'])){echo $mahila_details_yoga['4']->id;}?>"><?php if(isset($mahila_details_yoga['4'])){echo $mahila_details_yoga['4']->heading;}?></a></div><div  id="more-news-div"><a href="<?=base_url();?>maila/mahiladetails/<?php if(isset($mahila_details_yoga['4'])){echo $mahila_details_yoga['4']->id;}?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div></td>
+							        				<div id="home_bottom"><a href="<?=base_url();?>cinema/inner/<?=$mahila_details_yoga['4']->id?>/<?=$mahila_details_yoga['4']->cat_id?>"><?php if(isset($mahila_details_yoga['4'])){echo $mahila_details_yoga['4']->heading;}?></a></div><div  id="more-news-div"><a href="<?=base_url();?>maila/mahiladetails/<?php if(isset($mahila_details_yoga['4'])){echo $mahila_details_yoga['4']->id;}?>/<?=$mahila_details_yoga['4']->cat_id?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div></td>
 							        			<td width="50%" valign="top">
 							        			<? if(!empty($mahila_details_yoga['5'])){ ?>
 							        			<? if(file_exists("./assets/mahila/news_img".$mahila_details_yoga['5']->id."_home_thumb.jpg")){ ?>
 							        			<a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['5'])){echo $mahila_details_yoga['5']->id;}?>/<?=$mahila_details_yoga['5']->cat_id?>"><img src="<?=base_url();?>assets/mahila/news_img<?php if(isset($mahila_details_yoga['5'])){echo $mahila_details_yoga['5']->id;}?>_home_thumb.jpg" style="margin: 0px 10px 0px 0px;float: left;width: 60px;" align="top" id="img"></a>
 							        			<?} ?>
-							        			<div id="home_bottom"><a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['5'])){echo $mahila_details_yoga['5']->id;}?>"><?php if(isset($mahila_details_yoga['5'])){echo $mahila_details_yoga['5']->heading;}?></a></div><div  id="more-news-div"><a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['5'])){echo $mahila_details_yoga['5']->id;}?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div><?} ?></td>
+							        			<div id="home_bottom"><a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['5'])){echo $mahila_details_yoga['5']->id;}?>/<?=$mahila_details_yoga['5']->cat_id?>"><?php if(isset($mahila_details_yoga['5'])){echo $mahila_details_yoga['5']->heading;}?></a></div><div  id="more-news-div"><a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['5'])){echo $mahila_details_yoga['5']->id;}?>/<?=$mahila_details_yoga['5']->cat_id?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div><?} ?></td>
 							        		
 							        		</tr>
 							        		
@@ -399,9 +399,12 @@ function test()
 							   			endforeach;
 							   			endforeach; }
 							   			else 'No data found';?>
-							   			<td width="11%" valign="bottom"><div style="width: 90%;height: 15px;margin-bottom: 2px;" id="more-news-div"><a href="<?=base_url();?>gallery/inner/<?php if(!empty($sub['parentid'])) {echo $sub['parentid'];}?>"><?=$more['0']->matter;?></a></div></td>
+							   			<!--<td width="11%" valign="bottom"><div style="width: 90%;height: 15px;margin-bottom: 2px;" id="more-news-div"><a href="<?=base_url();?>gallery/inner/<?php if(!empty($sub['parentid'])) {echo $sub['parentid'];}?>"><?=$more['0']->matter;?></a></div></td>
+							   			--></tr>
+							   			<!--<tr>
+							   				<td colspan="3" style="text-align: right;"><a href="<?=base_url();?>gallery/inner/<?php if(!empty($sub['parentid'])) {echo $sub['parentid'];}?>"><?=$more['0']->matter;?></a></td>
 							   			</tr>
-							   			</table>
+							   			--></table>
 							        </p></div>
 							        <div id="tab2"><p>
 							        <table width="100%" height="100%">
@@ -420,9 +423,10 @@ function test()
 											$count++;
 										}endforeach;}
 										?>
-									<td width="11%" valign="bottom"><div style="width: 90%;height: 15px;margin-bottom: 2px;" id="more-news-div"><a href="<?=base_url();?>gallery/inner/<?php if(!empty($gall_topviews)) {echo $row->parentid;}?>"><?=$more['0']->matter;?></a></div></td>
-							   		</tr>
-							   		</table>
+									<!--<td width="11%" valign="bottom"><div style="width: 90%;height: 15px;margin-bottom: 2px;" id="more-news-div"><a href="<?=base_url();?>gallery/inner/<?php if(!empty($gall_topviews)) {echo $row->parentid;}?>"><?=$more['0']->matter;?></a></div></td>
+							   		--></tr>
+							   		<!--<tr><td colspan="3" style="text-align: right;"><a href="<?=base_url();?>gallery/inner/<?php if(!empty($gall_topviews)) {echo $row->parentid;}?>"><?=$more['0']->matter;?></a></td></tr>
+							   		--></table>
 							        </p></div>
 							        <!--<div id="tab3"><p>Tab Three Content</p></div>
     							--></div>
@@ -440,9 +444,9 @@ function test()
                       <td><img src="<?=base_url();?>assets/imgs/photogalleri-botom-lin.jpg" width="481" height="4" /></td>
                     </tr>
                   </table>
-                </td>  <td align="center">
+                </td>  <td align="center" valign="top">
                 <img style="cursor:pointer;padding-left:3px;" id="invite-img" src="<?=base_url();?>assets/imgs/inviteFriends.jpg" />
-                 <img src="<?=base_url();?>assets/ads/Home2.jpg" width="242" height="117"/><!--
+                 <img src="<?=base_url();?>assets/ads/Home2.jpg" width="240" height="115" style="padding: 3px;"/><!--
                 <table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" >
          <tr>
              <td width="6" valign="top"><img src="<?=base_url();?>assets/imgs/tock-line.jpg" width="7" height="35" /></td>

@@ -100,6 +100,7 @@ ddsmoothmenu.init({
 			<ul>
 				<li><a href="<?=base_url();?>admin/player/flowplayer">Flowplayer</a></li>
 				<li><a href="<?=base_url();?>admin/contacts">Contacts</a></li>
+				<li><a href="<?=base_url();?>admin/newsletter">Newsletter</a></li>
 				<li> <a href="#">Cinema flash Images</a>
 				<ul>
 					<li><a href="<?=base_url()?>admin/slideimages/add" >Add Image</a>

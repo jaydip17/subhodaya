@@ -69,5 +69,11 @@ class Newsletter_model extends Model  {
 		$this->db->where('id',$id);
 		$this->db->delete('newsletter');
 	}
+	function count()
+	{
+		$this->db->from('newsletter');
+		$count =$this->db->count_all_results();
+		return $count;
+	}
 }
 ?>

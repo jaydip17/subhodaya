@@ -5,6 +5,7 @@ class Contacts extends Controller {
 	{
 		parent::Controller();
 		$this->load->helper('email');
+		$this->lang->load('telugu', 'telugu');
 	}
 	function index()
 	{
@@ -120,14 +121,21 @@ class Contacts extends Controller {
 		}
      }
      function sendmail(){
+     	$subhodaya=$this->lang->line('subhodaya');
+	 	$com=$this->lang->line('com');
      		if(isset($_POST['addresses']))
      		{
      		$subject="[SUBHODAYA.COM] $_POST[uname] has invited to view subhodaya.com";
-		 	$data['message']="Dear Sir/Madam  \n\n Your Friend $_POST[uname] has recently viewed subhodaya.com .
+		 	$message="Dear Sir/Madam  \n\n Your Friend $_POST[uname] has recently viewed subhodaya.com .
 		 		      \n To accept this invitation  click  the below link .\n http://www.subhodaya.com";
 		 	
+		 		    $data=array('message'  =>$message,
+		 		    			'subhodaya'=>$subhodaya,
+		 		    			'com'      => $com
+		 		    
+		 		    );  
+		 		      
 	     		$addresses=$_POST['addresses'];
-
 	     		$this->load->library('email');
 	     		$this->email->clear();
 				$this->email->from('dontreply@subhodaya.com', 'Subhodaya');
@@ -136,7 +144,6 @@ class Contacts extends Controller {
 				$html_message  = $this->load->view('email_layout/invitation_friend',$data,TRUE);
 				$this->email->subject($subject);
 				$this->email->message($html_message); 
-
 				$this->email->send();
 				//echo $this->email->print_debugger();
 				//exit;

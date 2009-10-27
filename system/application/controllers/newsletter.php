@@ -5,6 +5,7 @@ class Newsletter extends Controller {
 	{
 		parent::Controller();	
 		$this->load->model('Newsletter_model');
+		$this->lang->load('telugu', 'telugu');
 	}
 	
 	function index()
@@ -20,10 +21,8 @@ class Newsletter extends Controller {
 						'message'=> $message);
 		$this->load->view('newsletter',$data);
 	}
-		
 	function subscribe()
-	{
-		
+	{	
 		$email = $this->input->get_post('email', TRUE);
 		$name=$this->input->get_post('name', TRUE);
 		$validate = $this->Newsletter_model->check_email_address($email);
@@ -37,11 +36,11 @@ class Newsletter extends Controller {
 	                     );
 				if($this->db->insert('newsletter', $data))
 				{
-					
-					$messa='Thankyou for subscribing with us</br>.Have a great day!!!';
+					$messa='Thankyou for subscribing with us.';
 					$messagesent='Thankyou for subscribing with us</br>.Have a great day!!!';
 					$this->session->set_flashdata('messagesent',$messagesent); 
-					$to=$email;
+					
+					 $to=$email;
 					 $subject='Subhodaya Newsletter';
 					 $from='dontreply@subhodaya.com';
 					 $from_name=$name;
@@ -72,8 +71,12 @@ class Newsletter extends Controller {
 	}
 	 function send_mail($to,$subject,$messa,$from,$from_name)
 	 {
+	 	$subhodaya=$this->lang->line('subhodaya');
+	 	$com=$this->lang->line('com');
 	 	$data = array (
-	 					'message' => $messa,
+	 					'message'   => $messa,
+	 					'subhodaya' => $subhodaya,
+	 					 'com'		=> $com
 	 	);
 	 	$this->load->library('email');
 		$this->email->clear();

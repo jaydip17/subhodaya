@@ -159,10 +159,31 @@ class Sahithi extends Controller {
 		//print_r($deatails);
 		$this->load->view('admin/sahithitypes',$data);
 	}
-   function getsahithi(){
+   function getsahithi()
+   {
    		
-		$details=$this->Sahithi_Model->getdetails($this->uri->segment(4),'no','');
-		$data=array('details'=>$details,
+		//$details=$this->Sahithi_Model->getdetails($this->uri->segment(4),'no','');
+		$id=$this->uri->segment(4,0);
+		$query=$this->Sahithi_Model->get_sahithi1($id);
+		//print_r($query);
+	    $a =base_url().'admin/sahithi/getsahithi/'.$id;
+		 //pagination
+    	$this->load->library('paginationnew');
+    	
+    	$this->paginationnew->start = ($this->uri->segment(5)) ? $this->uri->segment(5) : '0';
+    	$this->paginationnew->limit =9;
+        $this->paginationnew->filePath =$a;
+      
+        $this->paginationnew->select_what = '*';
+        $this->paginationnew->nbItems = $this->Sahithi_Model->count($id);
+        $this->paginationnew->add_query = $query;
+        
+   		$result = $this->paginationnew->getQuery(TRUE);
+   		$details=$result->result();
+   		// print_r($details);
+  	    $paginate = $this->paginationnew->paginate1(); 	 	
+		$data=array('details' => $details,
+					'paginate'=> $paginate,
 		              'cat_id' =>$this->uri->segment(4));
 		//print_r($deatails);
 		$this->load->view('admin/sahithi_edit',$data);

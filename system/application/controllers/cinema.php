@@ -188,5 +188,9 @@ class Cinema extends Controller {
 		$this->load->view('cinema_inner',$data);
 	}
 	
+    function mail_box(){
+	 	
+	 	$this->load->view('mail_box');	
+	 }
 }
 ?>

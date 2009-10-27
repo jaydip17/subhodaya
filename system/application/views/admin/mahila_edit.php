@@ -88,7 +88,7 @@ foreach ($details as $item):
 	</tr>
 	<tr>
 	<td colspan =4>
-	  <?php // echo $this->paginationnew->paginate();?>
+	  <?php echo $paginate;?>
 	  </td>
 	  </tr>
 </table>

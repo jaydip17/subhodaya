@@ -48,8 +48,3 @@ foreach ($details as $item):
 	
 <h2>Add Greetings to display</h2>	
 <? }?>
-
-
-
-
-?>

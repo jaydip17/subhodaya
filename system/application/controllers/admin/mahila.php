@@ -151,23 +151,46 @@ class Mahila extends Controller {
 			redirect(base_url().'admin/mahila',$message);
 	
 	}
-	 function getmahilatype(){
+	 function getmahilatype()
+	 {
    		
 		$details=$this->Mahila_Model-> get_mahilatype();
 		$data=array('details'=>$details);
 		//print_r($deatails);
 		$this->load->view('admin/mahilatypes',$data);
 	}
-    function getmahila(){
-   		
-		$details=$this->Mahila_Model->getdetails($this->uri->segment(4),'no','');
-		$data=array('details'=>$details,
-		              'cat_id' =>$this->uri->segment(4));
+    function getmahila()
+    {
+   	 //$details=$this->Mahila_Model->getdetails($this->uri->segment(4),'no','');
+   	 	$id=$this->uri->segment(4,0);
+		$query=$this->Mahila_Model->get_mahila1($id);
+		//print_r($query);
+	    $a =base_url().'admin/mahila/getmahila/'.$id;
+		 //pagination
+    	$this->load->library('paginationnew');
+    	
+    	$this->paginationnew->start = ($this->uri->segment(5)) ? $this->uri->segment(5) : '0';
+    	$this->paginationnew->limit =9;
+        $this->paginationnew->filePath =$a;
+      
+        $this->paginationnew->select_what = '*';
+        $this->paginationnew->nbItems = $this->Mahila_Model->count($id);
+        $this->paginationnew->add_query = $query;
+        
+   		$result = $this->paginationnew->getQuery(TRUE);
+   		$details=$result->result();
+   		// print_r($details);
+  	    $paginate = $this->paginationnew->paginate1(); 
+    	
+    	$data=array('details' => $details,
+    				'paginate'=> $paginate,
+		            'cat_id' =>$this->uri->segment(4));
 		//print_r($deatails);
 		$this->load->view('admin/mahila_edit',$data);
 	}
 	
-	function delete(){
+	function delete()
+	{
 	$this->load->model('admin/Mahila_Model');
 	$id=$this->uri->segment(4,0);
 	$cat_id=$this->uri->segment(5);
@@ -175,7 +198,8 @@ class Mahila extends Controller {
 	redirect(base_url()."admin/mahila/getmahila/".$cat_id);
 	}
 	
-	function edit(){
+	function edit()
+	{
 	 $id =$this->uri->segment(4,0);
 	 $edit = $this->Mahila_Model->edit($id);
      $message = $this->session->flashdata('message');

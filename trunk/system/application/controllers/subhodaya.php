@@ -193,5 +193,7 @@ class Subhodaya extends Controller {
 		$this->email->send();
 		return true;
 	 }
+	 
+	 
 }
 ?>

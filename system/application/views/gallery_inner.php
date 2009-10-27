@@ -106,9 +106,9 @@ padding-left: 20px;
 			<?$count=1;
 			 foreach ($result as $row): ?>
 				<td><div id="gallery_image" style="margin-bottom: 4px;">
-				<a href="<?=base_url()?>gallery/content/<?=$row->id?>/<?=$row->parentid?>"><img src="<?=base_url()?>assets/gallery/thumimg<?=$row->id?>.jpg"  id='img'></a></div>
+				<a href="<?=base_url()?>galleryimage/image<?=$row->id?>/<?=$row->parentid?>" target="_"><img src="<?=base_url()?>assets/gallery/thumimg<?=$row->id?>.jpg"  id='img'></a></div>
 				<div id="gall_botom_image" style="text-align: center;font-weight: bold;font-size: 14px;"><div style="margin-top: 3px;">
-				<span><a href="<?=base_url()?>gallery/content/<?=$row->id?>/<?=$row->parentid?>"><?=$row->title?></a></span><br>
+				<span><a href="<?=base_url()?>galleryimage/image/<?=$row->id?>/<?=$row->parentid?>"><?=$row->title?></a></span><br>
 				</div>
 				</div></td>
 				<? if($count==4){

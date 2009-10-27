@@ -29,6 +29,10 @@ class Contacts extends Controller {
 						'message'=> $message);
 		$this->load->view('invite_friends',$data);
 	}
+	function message_sent()
+	{
+		$this->load->view('message_sent');
+	}
 	function import()
 	{
 		
@@ -116,7 +120,6 @@ class Contacts extends Controller {
 		}
      }
      function sendmail(){
-     	
      		if(isset($_POST['addresses']))
      		{
      		$subject="[SUBHODAYA.COM] $_POST[uname] has invited to view subhodaya.com";
@@ -135,10 +138,12 @@ class Contacts extends Controller {
 				$this->email->message($html_message); 
 
 				$this->email->send();
+				//echo $this->email->print_debugger();
+				//exit;
 				$this->session->set_flashdata('messagesent','message sent successfully to selected contacts.');
      	}
      	
-     	redirect(base_url().'contact/message_sent');
+     	redirect(base_url().'admin/contacts/message_sent');
      }
 }
 ?>

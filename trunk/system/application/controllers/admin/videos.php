@@ -12,14 +12,14 @@ class Videos extends Controller {
 		$this->load->library('flash_video');
 		$config['id'] = 'n0';
 		$config['autostart'] = 'true';
-		$config['height'] = '280';
-		$config['width']  = '400';
+		$config['height'] = '360';
+		$config['width']  = '500';
 		$config['file'] = 'http://localhost/subhodaya/assets/videos/video'.$id.'.flv';//file full path
 		$config['skin'] = 'swift'; 
 		$config['previewimage']	='http://localhost/subhodaya/assets/videos/image_preview/image'.$id.'.jpg';
 		$this->flash_video->initialize($config);
 		$jslinks = $this->flash_video->getcode();
-		$data = array('videoplayer' => $jslinks, 'catid'=>$catid );
+		$data = array('videoplayer' => $jslinks, 'catid'=>$catid ); 
 		$this->load->view('admin/addvideocategeory.php',$data);       
 			 
 		
@@ -32,9 +32,10 @@ class Videos extends Controller {
 		}
 	    $this->load->view('admin/addvideocategeory');
 	}
-	
+
+	 
 	function viewaddvideo()
-	{
+	 {
 		$message = $this->session->flashdata('message');
 		print_r($message);
 		$options = $this->Video_Model->getvideocategeories();
@@ -190,7 +191,7 @@ class Videos extends Controller {
 		if(isset($_POST['edit']))
 		{
 			$id=$_POST['id'];
-			$this->Video_Model->editvideo($id);
+			$this->Video_Model->editvideo($id); 
 			$catid= $_POST['video_cat_id'];
 		    redirect(base_url().'admin/videos/getvideos/'.$catid);
 		}

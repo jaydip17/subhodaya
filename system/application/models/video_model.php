@@ -38,8 +38,9 @@ class Video_model extends Model
 		return $query;
 		
     }
+    
     function count_videos($catid)
-    {
+     {
     	//echo $catid;
     	if($catid!=0)
     	{
@@ -128,7 +129,7 @@ function getlatestvideos($limit,$catid,$id)
 	{
 		$this->db->where('video_uploaded',1);
 		$this->db->order_by('no_of_views','desc');
-		$this->db->limit($limit);     
+		$this->db->limit($limit);                       
 		$query = $this->db->get('videos');
 		return $query->result();
 	}

@@ -132,9 +132,9 @@ class Video_Model extends Model {
       	return $query;
        }
 	
- function deletecategeory($id)
-   {   	
-   	$removeid=array();
+   function deletecategeory($id)
+    {   	
+    	$removeid=array();
    	  if(isset($_POST['removeid'])){
    	  	$removeid = $_POST['removeid'];
    	  }
@@ -179,7 +179,7 @@ class Video_Model extends Model {
   function getvideodetails($id)
    {
    	$this->db->where('id',$id);
-   	$query = $this->db->get('videos');
+   	$query = $this->db->get('videos');       
    	return $query->result_array();
    	   	
    }

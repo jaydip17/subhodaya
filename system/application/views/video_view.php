@@ -1,3 +1,4 @@
+
 <?php      
    foreach($hotvideos->result() as $video){
         ?>

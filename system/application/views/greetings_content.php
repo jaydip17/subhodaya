@@ -101,7 +101,7 @@ function display_text(sample) {
 	}
 	 
 }
-var limit_time = 2000;
+var limit_time = 4000;
 function display_text_1(){
 	detectBrowser();
 	display_text(1);

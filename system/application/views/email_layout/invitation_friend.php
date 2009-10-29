@@ -4,7 +4,7 @@
  </tr>
  <tr>
 
-  <td style="padding: 10px 20px; font-family: Verdana; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-size-adjust: none; font-stretch: normal; -x-system-font: none; color: rgb(33, 33, 33); text-align: left;"><p><a href="http://subhodaya.com"><img src="<?=base_url();?>assets/imgs/mail_logo.jpg" width="224" border="0" height="56" /></a></p>
+  <td style="padding: 10px 20px; font-family: Verdana; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-size-adjust: none; font-stretch: normal; -x-system-font: none; color: rgb(33, 33, 33); text-align: left;"><p><a href="http://subhodaya.com"><img src="<?=base_url();?>assets/imgs/logo_v1.png" width="224" border="0" height="56" /></a></p>
    <hr />
     <p style="color: #0b6094;font-size: 18px;font-weight: bold;">Dear User</p>
     <p style="font-size: small;font-weight: bold;"><span class="style7">Welcome to the</span> <span style="color: #0b6094">maillist@subhodaya.com</span> <span style="color: #fb1811">mailing list!</span></p>
@@ -26,6 +26,10 @@
  <td height="9" width="600"><img height="9" width="600" alt="" src="<?=base_url()?>assets/imgs/notice2_03.jpg"/></td>
  </tr>
  </tbody></table>
+ <div><h6>This message has been forwarded at the request of maillist@subhodaya.com.If you dont like to get mails from subhodaya.com or unsubscribe, <a href="www.subhodaya.com">Click Here</a><br><br>
+
+In case of any assistance, contact support@subhodaya.com<br>
+Copyright © 2009 subhodaya.com. All rights reserved.</h6></div>
 <!-- <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td><a href="http://www.subhodaya.com"><img  border="0px" src="<?=base_url();?>assets/imgs/logo.jpg" alt="subhodaya.com" width="240" height="60" /></a></td>

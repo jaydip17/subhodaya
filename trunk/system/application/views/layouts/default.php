@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<title>Subhodaya.com | Leaders In Telugu News | AP Politics On The Net</title>	
+<title>Subhodaya.com | Leaders In Telugu News | AP Politics On The Net|<?php if(isset($engheading)){echo $engheading;}?></title>	
 <meta http-equiv=Content-Type content="text/html; charset=iso-8859-1">	
 <meta name=ROBOTS content="INDEX,FOLLOW">	
 <meta name="Description" content="Subhodaya.com, Leaders In Telugu News, AP Politics On The Net" />	

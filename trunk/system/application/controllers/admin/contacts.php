@@ -105,7 +105,18 @@ class Contacts extends Controller {
 		   
 		  redirect(base_url());
 		 }
-		else{	
+		else{	$maxin = count($emails);		
+		 		for ($i=0; $i<$maxin; ++$i)
+                   {
+                     $emails[$i] = trim($emails[$i]);
+                     if ($emails[$i]!="" && eregi("@", $emails[$i]))
+                     {
+                     	//$count = $this->Newsletter_Model->check_newsletter_email($emails[$i]);
+          					   $emails[$i] = strtolower($emails[$i]);
+          					   		$data1=array('email'=>$emails[$i]);
+          							$this->db->insert('invite_emails', $data1); 		   
+                     }
+                   }
 			
 		         $data = array('login' 	=> $login,
 							  'names'	=> $names,
@@ -123,22 +134,8 @@ class Contacts extends Controller {
 		}
      }
      function sendmail(){
-     	$emails=$_POST['addresses'];
-     	$maxin = count($emails);		
-		 		for ($i=0; $i<$maxin; ++$i)
-                   {
-                     $emails[$i] = trim($emails[$i]);
-                     if ($emails[$i]!="" && eregi("@", $emails[$i]))
-                     {
-                     	$count = $this->Newsletter_Model->check_newsletter_email($emails[$i]);
-                     	if($count==0){
-          					   $emails[$i] = strtolower($emails[$i]);
-          					   		$data1=array('email'=>$emails[$i]);
-          							$this->db->insert('invite_emails', $data1); 
-                     	}
-								   
-                     }
-                   }     	
+     	//$emails=$_POST['addresses'];
+     	     	
      	$subhodaya=$this->lang->line('subhodaya');
 	 	$com=$this->lang->line('com');
      		if(isset($_POST['addresses']))

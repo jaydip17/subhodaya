@@ -45,12 +45,14 @@ class News extends Controller {
 		$heading=$this->input->post('heading');
 		$summery=$this->input->post('summary');
 		$description=$this->input->post('description');
+		$eng_heading=$this->input->post('engheading');
 		$data=array('type'    => $type,
 					'heading' => $heading,
 					'summary' => $summery,
 				'description' => $description,
 				'breking_news'=> $breaking_news,
-				'active'      =>$active
+				'active'      =>$active,
+				'eng_heading' =>$eng_heading
 		);
 		if(!empty($data))
 		{

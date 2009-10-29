@@ -108,6 +108,7 @@ class News extends Controller {
 		$id=$this->uri->segment(3,0);
 		$type=$this->uri->segment(4,0);
 		$result=$this->News_Model->inner_news($id);
+		$engheading=$result['0']->eng_heading;
 		$news=$this->News_Model->get_news($type,$count=false);
 		$mahila_details=$this->Mahila_Model->active_mahila($type=4);
 		$cinema_type5=$this->Cinema_Model->get_cinematype(5);
@@ -136,9 +137,10 @@ class News extends Controller {
 				'cinema_type3'		=>   $cinema_type3,
 				'news'				=>	 $news,
 				'news_cat'			=>	 $news_cat,
-		          'video_result'     =>  $video_result,
-				'bread_crumb' => $bread_crumb,
-				'telegu_typing'=>$telegu_typing
+		          'video_result'    => 	 $video_result,
+				'bread_crumb' 		=> 	 $bread_crumb,
+				'telegu_typing'		=>	 $telegu_typing,
+				'engheading'		=>	 $engheading
 				);
 				
 		$this->load->view('news_inner',$data);

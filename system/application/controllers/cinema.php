@@ -150,6 +150,7 @@ class Cinema extends Controller {
 		$type=$this->uri->segment(4,0);
 		$result1=$this->Cinema_Model->get_all($type);
 		$result=$this->Cinema_Model->inner($id);
+		$engheading=$result['0']->eng_heading;
 		$mahila_details=$this->Mahila_Model->active_mahila(6);
 		//print_r($mahila_details);
 		$news_type2=$this->News_Model->get_newstype1(2);
@@ -182,7 +183,8 @@ class Cinema extends Controller {
 					'result1'		 => $result1,
 		          'video_result'     =>  $video_result,
 					'telegu_typing'	 =>	$telegu_typing,
-					'bread_crumb'	 => $bread_crumb
+					'bread_crumb'	 => $bread_crumb,
+					'engheading'	 => $engheading
 	
 					);
 		$this->load->view('cinema_inner',$data);

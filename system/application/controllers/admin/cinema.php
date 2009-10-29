@@ -41,11 +41,13 @@ class Cinema extends Controller {
 		$heading=$this->input->post('heading');
 		$summery=$this->input->post('summary');
 		$description=$this->input->post('description');
+		$eng_heading=$this->input->post('engheading');
 		$data=array('type'    => $type,
 					'heading' => $heading,
 					'summary' => $summery,
 				'description' => $description,
-				'active'	  => $active
+				'active'	  => $active,
+				'eng_heading' => $eng_heading
 		);
 		if(!empty($data))
 		{

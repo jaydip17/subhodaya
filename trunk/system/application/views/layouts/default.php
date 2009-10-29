@@ -100,7 +100,7 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
         <tr>
           <td  height="0px" style="padding-bottom: 0px;">
           <div id="tabs"  style="padding-top:0px;">
-          <img src="<?=base_url();?>assets/imgs/logo.jpg" style="padding: 0px 1px 0px 1px;float: left;width: 235px;"></img>
+          <img src="<?=base_url();?>assets/imgs/logo_v1.png" style="padding: 0px 1px 0px 1px;float: left;width: 235px;"></img>
 			  <ul style="padding-top: 35px;">
 			
 			<? $current_url = current_url();

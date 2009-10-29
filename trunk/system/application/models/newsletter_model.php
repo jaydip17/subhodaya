@@ -69,11 +69,35 @@ class Newsletter_model extends Model  {
 		$this->db->where('id',$id);
 		$this->db->delete('newsletter');
 	}
-	function count()
+	function count($limit)
 	{
+	if(isset($limit) && $limit>=0 )
+  	   			{
+  	  				$this->db->limit(500,$limit);
+  	    		}
+		$this->db->limit($limit);
+		
 		$this->db->from('newsletter');
 		$count =$this->db->count_all_results();
 		return $count;
+		
+	}
+	function count1()
+	{		
+		$this->db->from('newsletter');
+		$count =$this->db->count_all_results();
+		return $count;
+		
+	}
+	function get_newsletter($limit)
+	{
+		if(isset($limit) && $limit>=0 )
+  	   			{
+  	  				$this->db->limit(501,$limit);
+  	    		}
+		$result=$this->db->get('newsletter');
+		return $result->result();
+		
 	}
 }
 ?>

@@ -1,5 +1,16 @@
 <div align="center" style="padding:5; background-color: #EEEEEE; width:350;">
 <form method="POST" action="<?echo base_url().''.$formaction?>" name="inviteform" id="inviteform">
+<?php $mess=$this->session->flashdata('messagesent');
+if(isset($mess)){
+	echo $mess;
+}
+?>
+<table><tr>
+<td>Message<td>
+<?php $data=array('name'=>'message',
+				  'rows'=>5,
+				  'cols'=>30);?>
+<td><?=form_textarea($data)?></td></tr></table>
 <table style="background-color:white; border:black solid thin;">
 <SCRIPT LANGUAGE="JavaScript">
 function togglechecked(){ 
@@ -14,8 +25,8 @@ function togglechecked(){
       document.inviteform.allbox.checked = !document.inviteform.allbox.checked;
         togglechecked();}
 </SCRIPT>
-<!--<tr bgcolor="#FFFFFF"><td colspan="3" align="center"><h1 align="center">Invite Contacts</h></td></tr>
- --><tr> <td colspan="3" style="padding:4" align="center"><input name="submit" type="submit" value="Send Invitation" style="width:50%;height: 25px;"></td>
+<!--<tr bgcolor="#FFFFFF"><td colspan="3" align="center"><h1 align="center">Invite Contacts</h></td></tr> -->
+<tr> <td colspan="3" style="padding:4" align="center"><input name="submit" type="submit" value="Send Invitation" style="width:50%;height: 25px;"></td>
            </tr>
 <tr bgcolor="#CCCCCC"><td>
 <input type="checkbox" name="allbox" id="allbox" value="nothing" onClick="togglechecked()" checked> 
@@ -23,12 +34,10 @@ function togglechecked(){
 <input type="hidden" name="formname" value="invite">
 <input type="hidden" name="sender" value="<?=$login?>">
 <?
-//$maxin = count($names);
-
-
-                   for ($i=0; $i<$count; ++$i)
+$count = count($emails);
+                   for ($i=0; $i<$count; $i++)
                    {
-                     $emails[$i] = trim($emails[$i]);
+                      $emails[$i] = trim($emails[$i]);
                      if ($emails[$i]!="" && eregi("@", $emails[$i]))
                      {
           					   $emails[$i] = strtolower($emails[$i]);
@@ -41,7 +50,7 @@ function togglechecked(){
 
             --><tr><td colspan="3"><hr></td></tr><tr><td colspan="3" style="padding:4" align="center"><input name="submit" type="submit" value="Send Invitation" style="width:50%;height: 25px;"></td>
            </tr>
+           <tr><?php echo $pagination;?></tr>
           </table>
-          <!--<?=form_hidden('uname',$username) ?>
-          --></form>
+          </form>
 </div>

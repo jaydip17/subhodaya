@@ -245,6 +245,8 @@ function test()
                                         <li style="padding: 2px"><a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details_yoga['1']->id?>/<?=$mahila_details_yoga['1']->cat_id?>"><?php if(isset($mahila_details_yoga['1'])){echo $mahila_details_yoga['1']->heading;}?></a></li>
 							        		<li style="padding: 2px"><a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details_yoga['2']->id?>/<?=$mahila_details_yoga['2']->cat_id?>"><?php if(isset($mahila_details_yoga['2'])){echo $mahila_details_yoga['2']->heading;}?></a></li>
 							        		<li style="padding: 2px"><a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details_yoga['3']->id?>/<?=$mahila_details_yoga['3']->cat_id?>"><?php if(isset($mahila_details_yoga['3'])){echo $mahila_details_yoga['3']->heading;}?></a></li>
+							        		<li style="padding: 2px"><a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details_yoga['4']->id?>/<?=$mahila_details_yoga['4']->cat_id?>"><?php if(isset($mahila_details_yoga['4'])){echo $mahila_details_yoga['4']->heading;}?></a></li>
+							        		<li style="padding: 2px"><a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details_yoga['5']->id?>/<?=$mahila_details_yoga['5']->cat_id?>"><?php if(isset($mahila_details_yoga['3'])){echo $mahila_details_yoga['5']->heading;}?></a></li>
 							        	</ul>
 							        		<?} ?>
 							        	</div>
@@ -255,17 +257,17 @@ function test()
 							        	
 							        		<tr>
 							        			<td width="50%" valign="top">
-							        			<? if(!empty($mahila_details_yoga['4'])){ ?>
-								        			<? if(file_exists("./assets/mahila/news_img".$mahila_details_yoga['4']->id."_home_thumb.jpg")){ ?>
-								        				<a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details_yoga['4']->id?>/<?=$mahila_details_yoga['4']->cat_id?>"><img src="<?=base_url();?>assets/mahila/news_img<?php if(isset($mahila_details_yoga['4'])){echo $mahila_details_yoga['4']->id;}?>_home_thumb.jpg" style="margin: 0px 10px 0px 0px;float: left;;width: 60px;" align="top" id="img"></a>
+							        			<? if(!empty($mahila_details_yoga['6'])){ ?>
+								        			<? if(file_exists("./assets/mahila/news_img".$mahila_details_yoga['6']->id."_home_thumb.jpg")){ ?>
+								        				<a href="<?=base_url();?>mahila/mahiladetails/<?=$mahila_details_yoga['6']->id?>/<?=$mahila_details_yoga['6']->cat_id?>"><img src="<?=base_url();?>assets/mahila/news_img<?php if(isset($mahila_details_yoga['6'])){echo $mahila_details_yoga['6']->id;}?>_home_thumb.jpg" style="margin: 0px 10px 0px 0px;float: left;;width: 60px;" align="top" id="img"></a>
 								        			<?} }?>
-							        				<div id="home_bottom"><a href="<?=base_url();?>cinema/inner/<?=$mahila_details_yoga['4']->id?>/<?=$mahila_details_yoga['4']->cat_id?>"><?php if(isset($mahila_details_yoga['4'])){echo $mahila_details_yoga['4']->heading;}?></a></div><div  id="more-news-div"><a href="<?=base_url();?>maila/mahiladetails/<?php if(isset($mahila_details_yoga['4'])){echo $mahila_details_yoga['4']->id;}?>/<?=$mahila_details_yoga['4']->cat_id?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div></td>
+							        				<div id="home_bottom"><a href="<?=base_url();?>cinema/inner/<?=$mahila_details_yoga['6']->id?>/<?=$mahila_details_yoga['6']->cat_id?>"><?php if(isset($mahila_details_yoga['6'])){echo $mahila_details_yoga['6']->heading;}?></a></div><div  id="more-news-div"><a href="<?=base_url();?>maila/mahiladetails/<?php if(isset($mahila_details_yoga['6'])){echo $mahila_details_yoga['6']->id;}?>/<?=$mahila_details_yoga['6']->cat_id?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div></td>
 							        			<td width="50%" valign="top">
-							        			<? if(!empty($mahila_details_yoga['5'])){ ?>
-							        			<? if(file_exists("./assets/mahila/news_img".$mahila_details_yoga['5']->id."_home_thumb.jpg")){ ?>
-							        			<a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['5'])){echo $mahila_details_yoga['5']->id;}?>/<?=$mahila_details_yoga['5']->cat_id?>"><img src="<?=base_url();?>assets/mahila/news_img<?php if(isset($mahila_details_yoga['5'])){echo $mahila_details_yoga['5']->id;}?>_home_thumb.jpg" style="margin: 0px 10px 0px 0px;float: left;width: 60px;" align="top" id="img"></a>
+							        			<? if(!empty($mahila_details_yoga['7'])){ ?>
+							        			<? if(file_exists("./assets/mahila/news_img".$mahila_details_yoga['7']->id."_home_thumb.jpg")){ ?>
+							        			<a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['7'])){echo $mahila_details_yoga['7']->id;}?>/<?=$mahila_details_yoga['7']->cat_id?>"><img src="<?=base_url();?>assets/mahila/news_img<?php if(isset($mahila_details_yoga['7'])){echo $mahila_details_yoga['7']->id;}?>_home_thumb.jpg" style="margin: 0px 10px 0px 0px;float: left;width: 60px;" align="top" id="img"></a>
 							        			<?} ?>
-							        			<div id="home_bottom"><a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['5'])){echo $mahila_details_yoga['5']->id;}?>/<?=$mahila_details_yoga['5']->cat_id?>"><?php if(isset($mahila_details_yoga['5'])){echo $mahila_details_yoga['5']->heading;}?></a></div><div  id="more-news-div"><a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['5'])){echo $mahila_details_yoga['5']->id;}?>/<?=$mahila_details_yoga['5']->cat_id?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div><?} ?></td>
+							        			<div id="home_bottom"><a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['7'])){echo $mahila_details_yoga['7']->id;}?>/<?=$mahila_details_yoga['7']->cat_id?>"><?php if(isset($mahila_details_yoga['7'])){echo $mahila_details_yoga['7']->heading;}?></a></div><div  id="more-news-div"><a href="<?=base_url();?>mahila/mahiladetails/<?php if(isset($mahila_details_yoga['7'])){echo $mahila_details_yoga['7']->id;}?>/<?=$mahila_details_yoga['7']->cat_id?>"><?php if(isset($more['1'])){echo $more['1']->matter;}?></a></div><?} ?></td>
 							        		
 							        		</tr>
 							        		
@@ -446,7 +448,7 @@ function test()
                   </table>
                 </td>  <td align="center" valign="top">
                 <img style="cursor:pointer;padding-left:3px;" id="invite-img" src="<?=base_url();?>assets/imgs/inviteFriends.jpg" />
-                 <img src="<?=base_url();?>assets/ads/Home2.jpg" width="240" height="115" style="padding: 3px;"/><!--
+                 <img src="<?=base_url();?>assets/ads/Home2.jpg" width="223" height="115" style="padding: 3px;"/><!--
                 <table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" >
          <tr>
              <td width="6" valign="top"><img src="<?=base_url();?>assets/imgs/tock-line.jpg" width="7" height="35" /></td>

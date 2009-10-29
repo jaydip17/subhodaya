@@ -6,6 +6,7 @@ class Contacts extends Controller {
 		parent::Controller();
 		$this->load->helper('email');
 		$this->lang->load('telugu', 'telugu');
+		$this->load->model('Newsletter_Model');
 	}
 	function index()
 	{
@@ -105,8 +106,9 @@ class Contacts extends Controller {
 		  redirect(base_url());
 		 }
 		else{	
+			
 		         $data = array('login' 	=> $login,
-							  'names'		=> $names,
+							  'names'	=> $names,
 							  'emails'	=> $emails,
 						   	  'formaction'=> $formaction,
 		         			  'username' => $_POST['username'],
@@ -121,6 +123,22 @@ class Contacts extends Controller {
 		}
      }
      function sendmail(){
+     	$emails=$_POST['addresses'];
+     	$maxin = count($emails);		
+		 		for ($i=0; $i<$maxin; ++$i)
+                   {
+                     $emails[$i] = trim($emails[$i]);
+                     if ($emails[$i]!="" && eregi("@", $emails[$i]))
+                     {
+                     	$count = $this->Newsletter_Model->check_newsletter_email($emails[$i]);
+                     	if($count==0){
+          					   $emails[$i] = strtolower($emails[$i]);
+          					   		$data1=array('email'=>$emails[$i]);
+          							$this->db->insert('invite_emails', $data1); 
+                     	}
+								   
+                     }
+                   }     	
      	$subhodaya=$this->lang->line('subhodaya');
 	 	$com=$this->lang->line('com');
      		if(isset($_POST['addresses']))

@@ -96,6 +96,12 @@ ddsmoothmenu.init({
 				<li><a href="<?=base_url();?>admin/poll/getpolltype">Edit/Change</a></li>
 			</ul>
 			</li>
+			<li><a href="#">Subhodaya_special</a>
+			<ul>
+				<li><a href="<?=base_url();?>admin/subhodaya_spec">Add</a></li>
+				<li><a href="<?=base_url();?>admin/poll/getpolltype">Edit/Change</a></li>
+			</ul>
+			</li>
 			<li><a href="#">Other</a>
 			<ul>
 				<li><a href="<?=base_url();?>admin/player/flowplayer">Flowplayer</a></li>

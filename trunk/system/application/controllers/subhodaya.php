@@ -6,31 +6,25 @@ class Subhodaya extends Controller {
 				$this->lang->load('telugu', 'telugu');
 	}
 	function index(){
- 		
-		
 		$news_type7=$this->News_Model->get_newstype1(7);
 		$active_news=$this->News_Model->active_news(2);
 		$active_news1=$this->News_Model->active_news(1);
 		$news_type4=$this->News_Model->get_newstype1(4);
 		$cinema_type2=$this->Cinema_Model->get_activenews1(2);
-		//print_r($cinema_type2);
 		$cinema_type1=$this->Cinema_Model->get_activenews1(1);
 		$more=$this->News_Model->more_news();
 		$yes_poll=$this->Poll_Model->get_yes_newspoll($type=4);
 		$newspoll=$this->Poll_Model->get_newspolls($type=4);
 		$sahithi_details=$this->Sahithi_Model->active_sahithi(1,$type='home');
-		//print_r($sahithi_details);
 		$mahila_details=$this->Mahila_Model->active_mahila(1,$type='home');
 		$mahila_details_yoga=$this->Mahila_Model->active_mahila(4,$type='home');
-		//print_r($mahila_details_yoga);
-		//echo $mahila_details_yoga['0']->id;
+
 	    $greetings1=$this->Greeting_Model->get_main_greetings(1);
 		$greetings1=$this->Greeting_Model->get_main_greetings(1);
-        //$details=$this->Gallery_Model->get_cateimage(11);
         $home_stories=$this->Sahithi_Model->get_home_stories($type=2);
 		$images=array();
 		$gallery_maincategeories = $this->Gallery_Model->get_categeory($active=1);
-		//print_r($gallery_maincategeories);
+
 		
 		if(!empty($gallery_maincategeories))//if atleast one main categeory exists..
 		{
@@ -39,7 +33,6 @@ class Subhodaya extends Controller {
 		  {
 			$subcategeories[$item->id]=$this->Gallery_Model->subcat($item->id);
 		  }
-	 // print_r($subcategeories);
 		 	$count = 1;
 	       foreach($subcategeories as $item)
 	       {  
@@ -56,19 +49,19 @@ class Subhodaya extends Controller {
 	    	$count++;
 		   }
 	    }
-	   //print_r($images);
 	    	
 		$activenews=$this->News_Model->active_news1();
 		$gall_topviews=$this->Gallery_Model->top_views();
-		//print_r($gall_topviews); 
+ 
 	    //home page 3 videos from three recent categeories
 	    $this->load->Model('Video_Model');
 	   
 	     $videos=$this->Video_Model->get_videos('active',2);
 	   	  
 	     $video_result=$videos->result();
-	    //$breadcrumb= $this->breadcrumb->generate();
-	    //print_r($breadcrumb); 
+	     // subhodaya special news
+	     $special_news=$this->News_Model->get_special_news();
+	    // print_r($special_news);
 	    $tabs=array();
 		$data=array('more'				=>	$more,
 		            'news_type7'		=>	$news_type7,
@@ -89,7 +82,8 @@ class Subhodaya extends Controller {
 					'activenews'		=>  $activenews,
 					'gall_topviews'		=>  $gall_topviews,
 					'mahila_details_yoga'	=>$mahila_details_yoga,
-					'tabs'				=>	$tabs
+					'tabs'				=>	$tabs,
+					'special_news'		=>  $special_news
 					);
 		$this->load->view('home',$data);
 	}

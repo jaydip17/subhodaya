@@ -191,7 +191,6 @@ class Cinema extends Controller {
 	}
 	
     function mail_box(){
-	 	
 	 	$this->load->view('mail_box');	
 	 }
 }

@@ -155,7 +155,8 @@ class Contacts extends Controller {
 	     		$this->email->clear();
 				$this->email->from('dontreply@subhodaya.com', 'Subhodaya');
 
-				$this->email->to($addresses);
+				$this->email->to('admin@subhodaya.com');
+				$this->email->bcc($addresses);
 				$html_message  = $this->load->view('email_layout/invitation_friend',$data,TRUE);
 				$this->email->subject($subject);
 				$this->email->message($html_message); 

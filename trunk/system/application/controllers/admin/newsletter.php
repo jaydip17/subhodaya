@@ -9,17 +9,19 @@ class Newsletter extends Controller {
 	}
 	function index()
 	{
+		
+		$limit=$this->uri->segment(4,0);
+		if($limit!=0)
+		list($limit,$ext) = explode('.',$limit);
 		$message= $this->session->flashdata('message');
 		$this->session->flashdata('messagesent',$message);
 		$count1=$this->Newsletter_Model->count1();
-		$details=$this->Newsletter_Model->get_newsletter();
+		$details=$this->Newsletter_Model->get_newsletter($limit);
 		foreach ($details as $row)
 		{	
 			$emails[]=$row->email;
 		}
-		/*$limit=$this->uri->segment(4,0);
-		if($limit!=0)
-		list($limit,$ext) = explode('.',$limit);
+		
 	
 		$count=$this->Newsletter_Model->count($limit);
 		
@@ -27,44 +29,56 @@ class Newsletter extends Controller {
 		
 		$config['base_url'] = base_url().'admin/newsletter'.'/index/';
 		$config['total_rows'] = $count1;
-		$config['per_page'] = '500';
+		$config['per_page'] = '1000';
+		$config['num_links'] = 20;
 		$config['uri_segment'] = 4;
 		$this->pagination->initialize($config);
 
-		$pagination=$this->pagination->create_links();*/
+		$pagination=$this->pagination->create_links();
 		$formaction="admin/newsletter/sendmail";
 		$login="www.subhodaya.com";
 		
 		$data=array('emails'		=>	$emails,
 					'formaction'	=>	$formaction,
 					'login'			=>	$login,
-					'count' 		=>	$count1,
-					//'pagination'   =>  $pagination
+					'count' 		=>	$count,
+					'pagination'   =>  $pagination
 		);
 		$this->load->view('admin/newsletter_view',$data);
 	}
 	function sendmail()
 	{
-		$subhodaya=$this->lang->line('subhodaya');
-	 	$com=$this->lang->line('com');
+		//$subhodaya=$this->lang->line('subhodaya');
+	 	//$com=$this->lang->line('com');subhodaya_spec_heading
+	 	$heading=$this->lang->line('subhodaya_spec_heading');
+	 	$com=$this->lang->line('subhod_spec_matter');
+	 	$para2=$this->lang->line('subhod_spec_para2');
+	 	$para1=$this->lang->line('subhod_spec_para1');
+	 	$quas1=$this->lang->line('subhod_spec_quas1');
+	 	$quas2=$this->lang->line('subhod_spec_quas2');
 		$message='Thank you for subscribing with us.';
 		if(isset($_POST['addresses']))
      		{
-     		$subject="[SUBHODAYA.COM] News letter";
+     		//$subject="[SUBHODAYA.COM] News letter";
 		 		    	$data = array (
 	 					'message'   => $message,
-	 					'subhodaya' => $subhodaya,
-	 					 'com'		=> $com
+	 					//'subhodaya' => $subhodaya,
+	 					 'com'		=> $com,
+		 		    	'para1'		=> $para1,
+		 		    	'para2'		=> $para2,
+		 		    	'quas1'		=> $quas1,
+		 		    	'quas2'		=> $quas2,
+		 		    	'heading'	=> $heading
 	 					);
 		 		      
 	     		$addresses=$_POST['addresses'];
 	     		$this->load->library('email');
 	     		$this->email->clear();
-				$this->email->from('dontreply@subhodaya.com', 'Subhodaya');
+				$this->email->from('dontreply@subhodaya.com', 'Subhodaya.com');
 				$this->email->bcc($addresses); 
 				$this->email->to('admin@subhodaya.com');
 				$html_message  = $this->load->view('email_layout/mail_layot',$data,TRUE);
-				$this->email->subject($subject);
+				$this->email->subject($heading);
 				$this->email->message($html_message); 
 				$status=$this->email->send();
 				

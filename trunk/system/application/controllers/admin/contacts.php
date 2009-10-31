@@ -105,7 +105,24 @@ class Contacts extends Controller {
 		   
 		  redirect(base_url());
 		 }
-		else{	$maxin = count($emails);		
+		else{	
+			$maxin = count($emails);
+			
+		for ($i=0; $i<$maxin; ++$i)
+                   {
+                     $emails[$i] = trim($emails[$i]);
+                     if ($emails[$i]!="" && eregi("@", $emails[$i]))
+                     {
+                     	$emails[$i] = strtolower($emails[$i]);
+						$validate = $this->Newsletter_model->check_email_address($emails[$i]);
+				   		if($validate==FALSE){
+				   			redirect('admin/contacts');
+				   		}
+                     }
+                   }
+			
+			
+					
 		 		for ($i=0; $i<$maxin; ++$i)
                    {
                      $emails[$i] = trim($emails[$i]);

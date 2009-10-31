@@ -73,7 +73,7 @@ class Newsletter_model extends Model  {
 	{
 	if(isset($limit) && $limit>=0 )
   	   			{
-  	  				$this->db->limit(500,$limit);
+  	  				$this->db->limit(1000,$limit);
   	    		}
 		$this->db->limit($limit);
 		
@@ -89,12 +89,12 @@ class Newsletter_model extends Model  {
 		return $count;
 		
 	}
-	function get_newsletter()
+	function get_newsletter($limit)
 	{
-		/*if(isset($limit) && $limit>=0 )
+		if(isset($limit) && $limit>=0 )
   	   			{
-  	  				$this->db->limit(501,$limit);
-  	    		}*/
+  	  				$this->db->limit(1001,$limit);
+  	    		}
 		$result=$this->db->get('newsletter');
 		return $result->result();
 		

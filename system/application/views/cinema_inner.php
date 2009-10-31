@@ -77,6 +77,10 @@ line-height:16px;
 		<td valign="top" >
 			<div><table cellpadding="1px" width="100%">
 			<tr><td align="left"><div id="news_heading" class="heading"><div id="newsheading" style="padding-top: 5px;"><?php if(isset($result['0'])){echo $result['0']->heading;}?></div></div></td></tr>
+			<?php $flash_mesg=$this->session->flashdata('cinema');
+			if($flash_mesg!=''){?>
+			<tr><td align="center"><span style="color: black;background-color: yellow;"><?=$this->session->flashdata('cinema')?></span></td></tr>
+			<?php }?>
 			<tr><td align="center" id="telugufont1"><div  id="maindiv-news">
 			<div  style="text-align: justify; padding: 7px;font-size: 14px;">
 			<?if(!empty($result)){
@@ -85,10 +89,6 @@ line-height:16px;
 			<?}} ?>
 			<font style="padding: 2px;"><?php if(isset($result['0'])){echo $result['0']->description;}?></font></div>
 			</div></td></tr>
-			<?php $flash_mesg=$this->session->flashdata('cinema');
-			if($flash_mesg!=''){?>
-			<tr><td align="center"><div style="color: black;background-color: yellow;"><?=$this->session->flashdata('cinema')?></div></td></tr>
-			<?php }?>
 			<tr><td><div id="news_heading" class="heading"><span id="newsheading"><?php if(isset($more['25'])){echo $more['25']->matter;}?></span></div></td></tr>
 			<tr><td align="center"><div style="border:1px solid #9FA0A0;">
 			<?=form_open('index.php/subhodaya/sendmail','name="telugu_send"') ?>

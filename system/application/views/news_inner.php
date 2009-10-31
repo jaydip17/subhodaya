@@ -76,6 +76,10 @@ line-height:18px;
 		<td valign="top" >
 			<div><table cellpadding="1px" width="100%">
 			<tr><td align="left"><div id="news_heading" style="font-weight: bold;font-size: 14px;border: 1px solid #9FA0A0;"><div style="padding-top: 5px;">&nbsp;<?php if(isset($result['0'])){echo $result['0']->heading;}else{echo $result1['0']->heading;}?></div></div></td></tr>
+			<?php $flash_mesg = $this->session->flashdata('news');
+			if($flash_mesg!=""){?>
+			<tr><td style="color: black;" align="center"><span style="background-color: yellow;"><?=$this->session->flashdata('news')?></span></td></tr>
+			<?php }?>
 			<tr><td align="center"><div  id="maindiv-news">
 			<div class="maindiv-news">
 			<? if(!empty($result['0'])){
@@ -84,17 +88,8 @@ line-height:18px;
 			<?}?>
 			<?=$result['0']->description ?>
 			<?php }?>
-			<? if(!empty($result1['0'])){
-			if(file_exists("./".$image_path."/news_img".$result1['0']->id."_thumb.jpg")){ ?>
-			<img src="<?=base_url();?><?=$image_path?>/news_img<?=$result1['0']->id?>.jpg" style="float: left;padding:2px 2px 2px 2px;border: 1px solid  #9FA0A0; margin: 10px 10px 10px 10px;" ></img>
-			<?}} ?>
-			<?=$result1['0']->description ?>
 			</div>
 			</div></td></tr>
-			<?php $flash_mesg = $this->session->flashdata('news');
-			if($flash_mesg!=""){?>
-			<tr><td style="color: black;" align="center"><div style="background-color: yellow;"><?=$this->session->flashdata('news')?></div></td></tr>
-			<?php }?>
 			<tr><td><div id="news_heading" class="heading"><span id="newsheading"><?php if(isset($more['25'])){echo $more['25']->matter;}?></span></div></td></tr>
 			<tr><td align="center"><div style="border:1px solid #9FA0A0;">
 			<?=form_open('index.php/subhodaya/sendmail','name="telugu_send"') ?>

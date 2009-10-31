@@ -105,14 +105,16 @@ class News extends Controller {
 	{   
 		$id=$this->uri->segment(3,0);
 		//for subhodaya special news
-		$result1=$this->News_Model->get_special_news();
-		if(!empty($result1)){
-			$engheading=$result1['0']->eng_heading;	
+		$seg=$this->uri->segment(5,0);
+		if($seg==1){
+		$result=$this->News_Model->get_special_news();
+		
+			$engheading=$result['0']->eng_heading;	
 			$image_path="assets/special_newsimg";
-			$heading=$result1[0]->heading;
-		}
-		$result=$this->News_Model->inner_news($id);
-		if(!empty($result)){
+			$heading=$result[0]->heading;
+		}else{
+		
+			$result=$this->News_Model->inner_news($id);
 			$engheading=$result['0']->eng_heading;	
 			$image_path="assets/news";
 			$heading=$result[0]->heading;
@@ -131,7 +133,6 @@ class News extends Controller {
 		$this->load->Model('Video_Model');
 	    $videos=$this->Video_Model->get_videos('active',2);
 	   	$video_result=$videos->result();
-	 
 	   	$telegu_typing=array();
 		$segments = array(	'seg1' => $this->uri->segment(1,0),
 						   	'seg2' => $this->uri->segment(2,0),
@@ -145,7 +146,6 @@ class News extends Controller {
 		$bread_crumb = $this->bread_crumb->get_code($segments);
 		//print_r($segments);		
 		$data=array('result'   		=>   $result,
-					'result1'		=>	 $result1,
 					 'more'    		=>   $more,
 				'cinema_type1' 		=>   $cinema_type1,
 				'mahila_details'	=>	 $mahila_details,

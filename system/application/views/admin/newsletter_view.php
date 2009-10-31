@@ -49,8 +49,8 @@ $count = count($emails);
                <!--<tr><td><input type="checkbox" name="allbox2" value="nothing" onClick="toggleselect()" checked></td><td><a href="javascript:toggleselect()">Select/Deselect All</a></td><td></td></tr>
 
             --><tr><td colspan="3"><hr></td></tr><tr><td colspan="3" style="padding:4" align="center"><input name="submit" type="submit" value="Send Invitation" style="width:50%;height: 25px;"></td>
-           </tr><!--
+           </tr>
            <tr><?php echo $pagination;?></tr>
-          --></table>
+          </table>
           </form>
 </div>

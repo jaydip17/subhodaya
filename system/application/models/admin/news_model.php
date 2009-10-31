@@ -143,5 +143,13 @@ class News_Model extends Model
     	$result = $rs->row();
     	return $result->news_cat;
     }
+    
+    //special new
+ 	function get_special_news()
+ 	{
+ 		$this->db->order_by('id','desc');
+		$result=$this->db->get('subhodaya_spec');
+		return $result->result();
+	}
 }
 ?>

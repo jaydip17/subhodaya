@@ -75,14 +75,21 @@ line-height:18px;
 		</td>
 		<td valign="top" >
 			<div><table cellpadding="1px" width="100%">
-			<tr><td align="left"><div id="news_heading" style="font-weight: bold;font-size: 14px;border: 1px solid #9FA0A0;"><div style="padding-top: 5px;">&nbsp;<?=$result['0']->heading ?></div></div></td></tr>
+			<tr><td align="left"><div id="news_heading" style="font-weight: bold;font-size: 14px;border: 1px solid #9FA0A0;"><div style="padding-top: 5px;">&nbsp;<?php if(isset($result['0'])){echo $result['0']->heading;}else{echo $result1['0']->heading;}?></div></div></td></tr>
 			<tr><td align="center"><div  id="maindiv-news">
 			<div class="maindiv-news">
 			<? if(!empty($result['0'])){
-			if(file_exists("./assets/news/news_img".$result['0']->id."_thumb.jpg")){ ?>
-			<img src="<?=base_url();?>assets/news/news_img<?=$result['0']->id?>.jpg" style="float: left;padding:2px 2px 2px 2px;border: 1px solid  #9FA0A0; margin: 10px 10px 10px 10px;" ></img>
+			if(file_exists("./".$image_path."/news_img".$result['0']->id."_thumb.jpg")){ ?>
+			<img src="<?=base_url();?><?=$image_path?>/news_img<?=$result['0']->id?>.jpg" style="float: left;padding:2px 2px 2px 2px;border: 1px solid  #9FA0A0; margin: 10px 10px 10px 10px;" ></img>
+			<?}?>
+			<?=$result['0']->description ?>
+			<?php }?>
+			<? if(!empty($result1['0'])){
+			if(file_exists("./".$image_path."/news_img".$result1['0']->id."_thumb.jpg")){ ?>
+			<img src="<?=base_url();?><?=$image_path?>/news_img<?=$result1['0']->id?>.jpg" style="float: left;padding:2px 2px 2px 2px;border: 1px solid  #9FA0A0; margin: 10px 10px 10px 10px;" ></img>
 			<?}} ?>
-			<?=$result['0']->description ?></div>
+			<?=$result1['0']->description ?>
+			</div>
 			</div></td></tr>
 			<?php $flash_mesg = $this->session->flashdata('news');
 			if($flash_mesg!=""){?>
@@ -95,7 +102,10 @@ line-height:18px;
 			<input type="hidden" name="url" value="<?=current_url()?>">
 			<table id="formdiv" cellspacing="5">
 				<tr><td valign="top" colspan="2"><div style="background-color: #B5E8FD;height:20px;"></div></td></tr>
-				<tr><td width="150px" align="left" style="padding-left: 15px"><?=$more['27']->matter;?></td><td><input type="text" name="name" size="30"> <?=form_hidden('heading',$result[0]->heading)?></td></tr>
+				<tr><td width="150px" align="left" style="padding-left: 15px"><?=$more['27']->matter;?></td><td><input type="text" name="name" size="30">
+				<?php if(isset($result[0]->heading)){?> <?=form_hidden('heading',$result[0]->heading)?> <?php }?>
+				<?php if(isset($result1[0]->heading)){?> <?=form_hidden('heading',$result1[0]->heading)?> <?php }?>
+				</td></tr>
 								<tr><td width="150px" align="left" style="padding-left: 15px;"><?=$more['38']->matter;?></td><td><input type="text" name="uemail" size="30"></td></tr>
 				<tr><td width="150px" align="left" style="padding-left: 15px;"><?=$more['39']->matter;?></td><td><input type="text" name="fname" size="30"></td></tr>
 				<tr><td width="150px" align="left" style="padding-left: 15px"><?=$more['28']->matter;?></td><td><input type="text" name="email" size="30"></td></tr>

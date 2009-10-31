@@ -376,10 +376,19 @@ font-weight: bold;
 }
 
 /*-------main manu tabs------ */
-#tabs {
+
+/*#tabs {
 	float:left;
-	width:100%;
 	font-size:93%;
+	line-height:normal;
+	border-bottom:7px solid #0772b9;
+	margin-bottom:0em; margin between menu and rest of page
+	overflow:hidden;
+	}*/
+#hometabs{
+	float:left;
+	font-size:93%;
+	width: 100%;
 	line-height:normal;
 	border-bottom:7px solid #0772b9;
 	margin-bottom:0em; /*margin between menu and rest of page*/
@@ -387,7 +396,6 @@ font-weight: bold;
 	}
 #tabs ul {
 	margin:0;
-	padding:10px 10px 0px 235px;
 	list-style:none;
 	}
 #tabs li {
@@ -1080,6 +1088,7 @@ font-size: 13px;
 {
 	background-image:url(imgs/gmailseline.jpg);
 	background-repeat:repeat-x;
+	background-position: bottom;
 }
 #tabs_backgrou_gree
 {

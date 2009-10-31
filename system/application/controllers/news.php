@@ -101,14 +101,28 @@ class News extends Controller {
 				);
 		$this->load->view("news_content",$data);
 	}
-	function newsdetails(){
-		
+	function newsdetails()
+	{   
+		$id=$this->uri->segment(3,0);
+		//for subhodaya special news
+		$result1=$this->News_Model->get_special_news();
+		if(!empty($result1)){
+			$engheading=$result1['0']->eng_heading;	
+			$image_path="assets/special_newsimg";
+			$heading=$result1[0]->heading;
+		}
+		$result=$this->News_Model->inner_news($id);
+		if(!empty($result)){
+			$engheading=$result['0']->eng_heading;	
+			$image_path="assets/news";
+			$heading=$result[0]->heading;
+		}
 		$more=$this->News_Model->more_news();
 		$cinema_type1=$this->Cinema_Model->get_cinematype(1);
-		$id=$this->uri->segment(3,0);
+		
 		$type=$this->uri->segment(4,0);
-		$result=$this->News_Model->inner_news($id);
-		$engheading=$result['0']->eng_heading;
+		
+		
 		$news=$this->News_Model->get_news($type,$count=false);
 		$mahila_details=$this->Mahila_Model->active_mahila($type=4);
 		$cinema_type5=$this->Cinema_Model->get_cinematype(5);
@@ -117,19 +131,21 @@ class News extends Controller {
 		$this->load->Model('Video_Model');
 	    $videos=$this->Video_Model->get_videos('active',2);
 	   	$video_result=$videos->result();
+	 
 	   	$telegu_typing=array();
 		$segments = array(	'seg1' => $this->uri->segment(1,0),
 						   	'seg2' => $this->uri->segment(2,0),
 							'seg3' => $this->uri->segment(3,0),
 							'seg4' => $this->uri->segment(4,0),
 							'seg5' => $this->uri->segment(5,0),
-							'heading' => $result[0]->heading,
+							'heading' => $heading,
 							'main' => $more['3']->matter,
 							'home' => $more['2']->matter,
 		); 		
 		$bread_crumb = $this->bread_crumb->get_code($segments);
-		//print_r($segments);
+		//print_r($segments);		
 		$data=array('result'   		=>   $result,
+					'result1'		=>	 $result1,
 					 'more'    		=>   $more,
 				'cinema_type1' 		=>   $cinema_type1,
 				'mahila_details'	=>	 $mahila_details,
@@ -140,9 +156,9 @@ class News extends Controller {
 		          'video_result'    => 	 $video_result,
 				'bread_crumb' 		=> 	 $bread_crumb,
 				'telegu_typing'		=>	 $telegu_typing,
-				'engheading'		=>	 $engheading
-				);
-				
+				'engheading'		=>	 $engheading,
+				'image_path'		=>	 $image_path
+				);	
 		$this->load->view('news_inner',$data);
 	}
 }

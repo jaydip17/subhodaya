@@ -99,9 +99,10 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
 	  
         <tr>
           <td  height="0px" style="padding-bottom: 0px;">
-          <div id="tabs"  style="padding-top:0px;">
-          <img src="<?=base_url();?>assets/imgs/logo_v1.png" style="padding: 0px 1px 0px 1px;float: left;width: 235px;"></img>
-			  <ul style="padding-top: 35px;">
+          <div   style="padding-top:0px;float: left;" id="hometabs">
+        <a href="<?=base_url();?>"><img src="<?=base_url();?>assets/imgs/logo_v1.png" style="padding: 0px 1px 0px 1px;float: left;width: 235px;" border="0"></img></a>
+     <div id="tabs" style="text-align: right;">
+			  <ul style="padding-top: 35px;" >
 			
 			<? $current_url = current_url();
 			   
@@ -117,6 +118,7 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
 			    <li <?if (eregi('sahithi', $current_url)) {echo "id='current'";} ?>><a href="<?=base_url();?>sahithi/"><span><?=$more['9']->matter?></span></a></li>
 
 			  </ul>
+	</div>
 			</div>
           </td>
         </tr>

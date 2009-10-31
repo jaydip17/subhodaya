@@ -11,17 +11,18 @@ class Newsletter extends Controller {
 	{
 		$message= $this->session->flashdata('message');
 		$this->session->flashdata('messagesent',$message);
-		
-		$limit=$this->uri->segment(4,0);
-		if($limit!=0)
-		list($limit,$ext) = explode('.',$limit);
-		$details=$this->Newsletter_Model->get_newsletter($limit);
+		$count1=$this->Newsletter_Model->count1();
+		$details=$this->Newsletter_Model->get_newsletter();
 		foreach ($details as $row)
 		{	
 			$emails[]=$row->email;
 		}
+		/*$limit=$this->uri->segment(4,0);
+		if($limit!=0)
+		list($limit,$ext) = explode('.',$limit);
+	
 		$count=$this->Newsletter_Model->count($limit);
-		$count1=$this->Newsletter_Model->count1();
+		
 		$this->load->library('pagination');
 		
 		$config['base_url'] = base_url().'admin/newsletter'.'/index/';
@@ -30,15 +31,15 @@ class Newsletter extends Controller {
 		$config['uri_segment'] = 4;
 		$this->pagination->initialize($config);
 
-		$pagination=$this->pagination->create_links();
+		$pagination=$this->pagination->create_links();*/
 		$formaction="admin/newsletter/sendmail";
 		$login="www.subhodaya.com";
 		
 		$data=array('emails'		=>	$emails,
 					'formaction'	=>	$formaction,
 					'login'			=>	$login,
-					'count' 		=>	$count,
-					'pagination'   =>  $pagination
+					'count' 		=>	$count1,
+					//'pagination'   =>  $pagination
 		);
 		$this->load->view('admin/newsletter_view',$data);
 	}
@@ -61,8 +62,8 @@ class Newsletter extends Controller {
 	     		$this->email->clear();
 				$this->email->from('dontreply@subhodaya.com', 'Subhodaya');
 				$this->email->bcc($addresses); 
-				//$this->email->to($addresses);
-				$html_message  = $this->load->view('email_layout/invitation_friend',$data,TRUE);
+				$this->email->to('admin@subhodaya.com');
+				$html_message  = $this->load->view('email_layout/mail_layot',$data,TRUE);
 				$this->email->subject($subject);
 				$this->email->message($html_message); 
 				$status=$this->email->send();

@@ -45,7 +45,7 @@ class Subhodaya_spec extends Controller {
 		$result=$this->db->insert('subhodaya_spec',$data);
 		$id=$this->db->insert_id();
 		}
-		if($result==1 && $_FILES['image']['name']!=""){
+		if($result==1){
 		$config['upload_path'] ='assets/special_newsimg/';
 		$config['allowed_types'] = 'gif|jpg|png';
 		$config['max_size']	= '1000';

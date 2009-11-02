@@ -1,5 +1,5 @@
 
-<table background="<?=base_url();?>assets/imgs/background.jpg" width="760px" style="padding:100px 102px 0px 102px" height="1140px" border="0" align="center" >
+<table background="<?=base_url();?>assets/imgs/background.jpg" width="760px" style="margin:100px 102px 0px 102px" height="1140px" border="0" align="center" >
 
   <tr>
   <td width="100%" align="left" height="20px;">

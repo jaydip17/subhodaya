@@ -138,21 +138,23 @@ class Subhodaya_spec extends Controller {
 		}
 		   redirect(base_url().'admin/subhodaya_spec',$message);
 	}
-   function getsahithitype(){
+ 	
+function getspecialnews(){
    		
-		$details=$this->Sahithi_Model-> get_sahithitype();
+		$details=$this->News_Model->get_special_news();
 		$data=array('details'=>$details);
 		//print_r($deatails);
-		$this->load->view('admin/sahithitypes',$data);
-	}
-   function getsahithi()
+		$this->load->view('admin/special_edit',$data);		
+		
+}	
+   function getspecial()
    {
    		
 		//$details=$this->Sahithi_Model->getdetails($this->uri->segment(4),'no','');
 		$id=$this->uri->segment(4,0);
-		$query=$this->Sahithi_Model->get_sahithi1($id);
+		$query=$this->News_Model->get_special1($id);
 		//print_r($query);
-	    $a =base_url().'admin/sahithi/getsahithi/'.$id;
+	    $a =base_url().'admin/subhodaya_spec/getspecial/'.$id;
 		 //pagination
     	$this->load->library('paginationnew');
     	
@@ -161,7 +163,7 @@ class Subhodaya_spec extends Controller {
         $this->paginationnew->filePath =$a;
       
         $this->paginationnew->select_what = '*';
-        $this->paginationnew->nbItems = $this->Sahithi_Model->count($id);
+        $this->paginationnew->nbItems = $this->News_Model->specialcount($id);
         $this->paginationnew->add_query = $query;
         
    		$result = $this->paginationnew->getQuery(TRUE);
@@ -170,22 +172,22 @@ class Subhodaya_spec extends Controller {
   	    $paginate = $this->paginationnew->paginate1(); 	 	
 		$data=array('details' => $details,
 					'paginate'=> $paginate,
-		              'cat_id' =>$this->uri->segment(4));
+		              'heading' =>$this->uri->segment(4));
 		//print_r($deatails);
-		$this->load->view('admin/sahithi_edit',$data);
+		$this->load->view('admin/special_edit',$data);
 	}
 	
 	function delete(){
-	$this->load->model('admin/Sahithi_Model');
+	$this->load->model('admin/News_Model');
 	$id=$this->uri->segment(4,0);
 	$cat_id=$this->uri->segment(5);
-	$result=$this->Sahithi_Model->delete($id);
-	redirect(base_url()."admin/sahithi/getsahithi/".$cat_id);
+	$result=$this->News_Model->specialdelete($id);
+	redirect(base_url()."admin/subhodaya_spec/getspecialnews/".$cat_id);
 	}
 	
 	function edit(){
 	 $id =$this->uri->segment(4,0);
-	  $edit = $this->Sahithi_Model->get_sahithi_details($id);
+	  $edit = $this->News_Model->get_special_details($id);
         
      $message = $this->session->flashdata('message');
 		$this->load->model('admin/Openwysiwyg_Model');
@@ -199,21 +201,21 @@ class Subhodaya_spec extends Controller {
 							'message'	=> $message,
 		                    'edit'      =>  $edit
 		);
-		$this->load->view('admin/editsahithi',$data);
+		$this->load->view('admin/editspecial',$data);
 	}
 	
   function edit1()
    {
-   	if(!isset($_POST['homepage']))
+   	if(!isset($_POST['active']))
    	{
-		$homepage=0;
+		$active=0;
    	}else{
-   		$homepage=$_POST['homepage'];
+   		$active=$_POST['active'];
    	}
-   	 $cat_id =$_POST['cat_id'];
+   	 
 	 $id=$_POST['id'];
-   	 $this->Sahithi_Model->edit1($id,$homepage);
-  	redirect(base_url().'admin/sahithi/getsahithi/'.$cat_id);
+   	 $this->News_Model->specialedit1($id,$active);
+  	redirect(base_url().'admin/subhodaya_spec/getspecialnews/'.$heading);
    }
 	
 }

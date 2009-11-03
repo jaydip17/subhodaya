@@ -144,7 +144,7 @@ class News_Model extends Model
     	return $result->news_cat;
     }
     
-    //special new
+    //special news
  	function get_special_news()
  	{
  		$this->db->order_by('id','desc');
@@ -175,11 +175,11 @@ class News_Model extends Model
 		
 			return $query->result();
 	}
-	function get_special1($type)
-	{
-		$query="from Subhodaya_spec where heading=$type order by Subhodaya_spec.insert_date desc";
+   function get_special1($type)
+	 {
+		$query="from Subhodaya_spec where type=$type order by Subhodaya_spec.insert_date desc";
 		return $query;
-	}
+	 }
 
  
   function specialedit1($id,$active)
@@ -202,7 +202,7 @@ class News_Model extends Model
  function specialcount($type)
 	{
 		
-    	$this->db->where('heading',$type);
+    	$this->db->where('type',$type);
 		$this->db->from('subhodaya_spec');
 		$count =$this->db->count_all_results();
 		return $count;

@@ -92,23 +92,47 @@ line-height:18px;
 			</div></td></tr>
 			<tr><td><div id="news_heading" class="heading"><span id="newsheading"><?php if(isset($more['25'])){echo $more['25']->matter;}?></span></div></td></tr>
 			<tr><td align="center"><div style="border:1px solid #9FA0A0;">
+			<?php echo validation_errors(); ?>
 			<?=form_open('index.php/subhodaya/sendmail','name="telugu_send"') ?>
 			
 			<input type="hidden" name="url" value="<?=current_url()?>">
 			<table id="formdiv" cellspacing="5">
-				<tr><td valign="top" colspan="2"><div style="background-color: #B5E8FD;height:20px;"></div></td></tr>
-				<tr><td width="150px" align="left" style="padding-left: 15px"><?=$more['27']->matter;?></td><td><input type="text" name="name" size="30">
+				<tr>
+					<td valign="top" colspan="3" align="center"><div style="background-color: #B5E8FD;height:20px;color: red;font-weight: bold;"><?=$this->session->flashdata('yourname')?></div></td>
+				</tr>
+				<tr>
+					<td style="color: red;">*</td>
+					<td width="150px" align="left" style="padding-left: 15px"><?=$more['27']->matter;?></td>
+					<td><input type="text" name="name" value="<?php echo set_value('name'); ?>" size="30">
 				<?php if(isset($result[0]->heading)){?> <?=form_hidden('heading',$result[0]->heading)?> <?php }?>
-				<?php if(isset($result1[0]->heading)){?> <?=form_hidden('heading',$result1[0]->heading)?> <?php }?>
-				</td></tr>
-								<tr><td width="150px" align="left" style="padding-left: 15px;"><?=$more['38']->matter;?></td><td><input type="text" name="uemail" size="30"></td></tr>
-				<tr><td width="150px" align="left" style="padding-left: 15px;"><?=$more['39']->matter;?></td><td><input type="text" name="fname" size="30"></td></tr>
-				<tr><td width="150px" align="left" style="padding-left: 15px"><?=$more['28']->matter;?></td><td><input type="text" name="email" size="30"></td></tr>
-				<tr><td valign="top" colspan="2"><div style="background-color: #B5E8FD;height:20px;"></div></td></tr>
-				<tr><td colspan="2" align="left" style="padding-left: 10px;"><input type="checkbox" id="checkboxId" onclick="javascript:checkboxClickHandler()" name="telugu_type">&nbsp;Type in telugu</td></tr>
-				<tr><td colspan="2" align="center"><textarea style="height: 190px;width: 95%" name="description" id="transl2"></textarea></td></tr>
-				<tr><td colspan="2" align="center"><input type="submit" name="send" value="Send"><input type="reset" ></td></tr>
-				<tr><td valign="top" colspan="2"><div style="background-color: #B5E8FD;height:20px;"></div></td></tr>
+					</td>
+				</tr>
+				<tr>
+					<td style="color: red;">*</td>
+					<td width="150px" align="left" style="padding-left: 15px;"><?=$more['38']->matter;?></td>
+					<td><input type="text" name="uemail" value="<?php echo set_value('uemail'); ?>" size="30"></td>
+				</tr>
+				<tr>
+					<td style="color: red;">*</td>
+					<td width="150px" align="left" style="padding-left: 15px;"><?=$more['39']->matter;?></td>
+					<td><input type="text" name="fname" value="<?php echo set_value('fname'); ?>" size="30"></td>
+				</tr>
+				<tr>
+					<td style="color: red;">*</td>
+					<td width="150px" align="left" style="padding-left: 15px"><?=$more['28']->matter;?></td>
+					<td><input type="text" name="email" value="<?php echo set_value('email'); ?>" size="30"></td>
+				</tr>
+				<tr>
+					<td valign="top" colspan="3"><div style="background-color: #B5E8FD;height:20px;font-weight: bold;"><span style="color: red">*</span>&nbsp;Your Message</div></td>
+				</tr>
+				<tr>
+					<td colspan="3" align="left" style="padding-left: 10px;"><input type="checkbox" id="checkboxId" onclick="javascript:checkboxClickHandler()" name="telugu_type">&nbsp;Type in telugu</td>
+				</tr>
+				<tr>
+					<td colspan="3" align="center"><textarea style="height: 190px;width: 95%" name="description" id="transl2"></textarea></td>
+				</tr>
+				<tr><td colspan="3" align="center"><input type="submit" name="send" value="Send" onClick="return Validate()"><input type="reset" ></td></tr>
+				<tr><td valign="top" colspan="3"><div style="background-color: #B5E8FD;height:20px;"></div></td></tr>
 			</table>
 			</form>
 			</div></td></tr>

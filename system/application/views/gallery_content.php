@@ -626,34 +626,39 @@ padding-left: 20px;
 		<div style="margin: 10px 0px 10px 0px">
 		<?=form_open('index.php/subhodaya/sendmail','name="telugu_send"') ?>
 					<input type="hidden" name="url" value="<?=current_url()?>">
-			
+						<span style="color: red;font-weight: bold;"><?=$this->session->flashdata('yourname')?></span>
 						<table align="center" width="500px" style="border: 1px solid #939393;">
 							<tr>
-								<td colspan='2' align="center"><div  id="gree_bar1"><?=$more['25']->matter?></div></td>
+								<td colspan='3' align="center"><div  id="gree_bar1"><?=$more['25']->matter?></div></td>
 							</tr>
 							<tr>
+								<td style="color: red">*</td>
 								<td width="25%" align="left" style="padding-left: 10px;"><?=$more['27']->matter?></td>
 								<td align="left" width="75%"><input type="text" name="name" size="30"></td>
 							</tr>
 							<tr>
+								<td style="color: red">*</td>
 								<td align="left" width="25%" style="padding-left: 10px;"><?=$more['38']->matter?></td>
 								<td align="left" width="75%"><input type="text" name="uemail" size="30"></td>
 							</tr>
 							<tr>
+								<td style="color: red">*</td>
 								<td width="150px" align="left" style="padding-left: 10px;"><?php if(isset($more['39'])){ echo $more['39']->matter;}?></td>
 								<td align="left"><input type="text" name="fname" size="30"><?=form_hidden('type','Gallery')?></td>
 							</tr>
 							<tr>
+								<td style="color: red">*</td>
 								<td align="left" style="padding-left: 10px;"><?=$more['28']->matter?></td>
 								<td align="left"><input type="text" name="email" size="30"></td>
 							</tr>
 							<tr>
-								<td colspan="2" align="left" style="padding-left: 10px;"><input type="checkbox" id="checkboxId" onclick="javascript:checkboxClickHandler()" id="telugu_type" name="telugu_type">Type in telugu</td></tr>
+								<td colspan="3" align="left" style="padding-left: 10px;"><input type="checkbox" id="checkboxId" onclick="javascript:checkboxClickHandler()" id="telugu_type" name="telugu_type">Type in telugu</td></tr>
 				            <tr>
+				            <td style="color: red;" valign="top">*</td>
 							<td align="center" colspan="2"><textarea style="height: 190px;width: 95%" name="description" id="transl2"></textarea></td>
 							</tr>
 							<tr>
-								<td align="center" colspan="2"><input type="submit" name="send" value="Send"><input type="reset" ></td>
+								<td align="center" colspan="3"><input type="submit" name="send" value="Send"><input type="reset" ></td>
 							</tr>
 							</table>
 						</form>

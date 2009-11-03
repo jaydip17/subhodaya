@@ -42,7 +42,7 @@ class Video extends Controller {
 		$config['width']  = '500';
 		$config['autostart'] = 'true'; 
 		$config['file'] = base_url().'assets/videos/video'.$videoid.'.flv';//file full path
-		$config['skin'] = 'simple'; 
+		$config['skin'] = 'swift'; 
 		$config['previewimage']	= base_url().'assets/videos/image_preview/image'.$videoid.'.jpg';
 		$this->flash_video->initialize($config);
 		$jslinks = $this->flash_video->getcode();

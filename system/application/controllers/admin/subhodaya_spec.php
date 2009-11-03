@@ -215,7 +215,7 @@ function getspecialnews(){
    	 
 	 $id=$_POST['id'];
    	 $this->News_Model->specialedit1($id,$active);
-  	redirect(base_url().'admin/subhodaya_spec/getspecialnews/'.$heading);
+  	redirect(base_url().'admin/subhodaya_spec/getspecialnews/');
    }
 	
 }

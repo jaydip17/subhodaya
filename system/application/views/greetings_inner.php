@@ -19,35 +19,40 @@
 				<tr>
 					<td valign="top" align="center">
 					<?=form_open('index.php/subhodaya/sendmail','name="telugu_send"') ?>
+						<span style="color: red;font-weight: bold;"><?=$this->session->flashdata('yourname')?></span>
 						<table align="center" width="550px" border="0" style="border: 1px solid #939393;">
 							<tr>
-								<td colspan='2' align="center"><div  id="gree_bar1"><?=$more['25']->matter?></div></td>
+								<td colspan='3' align="center"><div  id="gree_bar1"><?=$more['25']->matter?></div></td>
 							</tr>
 							<tr>
 							<?=form_hidden('type','Greeting')?></td>
 							<input type="hidden" name="url" value="<?=current_url()?>">
+								<td style="color: red;">*</td>
 								<td align="left" width="30%" style="padding-left: 10px;"><?=$more['27']->matter?></td>
 								<td align="left" width="70%"><input type="text" name="name" size="30"></td>
 							</tr>
 							<tr>
+								<td style="color: red;">*</td>
 								<td align="left" width="30%" style="padding-left: 10px;"><?=$more['38']->matter?></td>
 								<td align="left" width="70%"><input type="text" name="uemail" size="30"></td>
 							</tr>
 							<tr>
+								<td style="color: red;">*</td>
 								<td align="left" width="30%" style="padding-left: 10px;"><?=$more['39']->matter?></td>
 								<td align="left" width="70%"><input type="text" name="fname" size="30"><?=form_hidden('type','Greeting')?></td>
 							</tr>
 							<tr>
+								<td style="color: red;">*</td>
 								<td align="left" style="padding-left: 10px;"><?=$more['28']->matter?></td>
 								<td align="left"><input type="text" name="email" size="30"></td>
 							</tr>
 							<tr><td align="left" colspan="2" style="padding-left: 10px;"><input type="checkbox" id="checkboxId" onclick="javascript:checkboxClickHandler()" name="telugu_type">Type in telugu</td></tr>
-				
 							<tr>
-							<td align="center" colspan="2"><textarea style="height: 190px;width: 95%" name="description" id="transl2"></textarea></td>
+							<td style="color: red;" valign="top">*</td>
+							<td align="center" colspan="3"><textarea style="height: 190px;width: 95%" name="description" id="transl2"></textarea></td>
 							</tr>
 							<tr>
-								<td align="center" colspan="2"><input type="submit" name="send" value="Send"><input type="reset" ></td>
+								<td align="center" colspan="3"><input type="submit" name="send" value="Send"><input type="reset" ></td>
 							</tr>
 						</table>
 						</form>

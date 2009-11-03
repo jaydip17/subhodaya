@@ -170,6 +170,7 @@ class Bread_crumb{
 							$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$segments['seg3'].'/'.$segments['seg4'],$heading);
 							break;
 				case 'gallery': 
+					if($seg2 != 'inner'){
 							$seg2 = 'content';
 							(isset($segments['heading'])) ? $segments['heading']!='' ? $heading = $segments['heading'] : '' : '';
 							$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$segments['seg3'].'/'.$segments['seg4'],$heading);
@@ -180,6 +181,7 @@ class Bread_crumb{
 								(isset($segments['heading'])) ? $segments['heading']!='' ? $heading = $segments['heading'] : '' : '';
 								$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$segments['seg3'].'/'.$segments['seg4'],$heading);
 							}*/
+					}
 							break;
 				case 'mahila': 
 							$seg2 = 'mahiladetails';

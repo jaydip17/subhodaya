@@ -16,7 +16,7 @@ class Contacts extends Controller {
 			$message = "<b style=\"color:red\">Invalid Login</b>";
 		}
 		else
-		 	$message = '';
+		 	$message = $this->session->flashdata('message');
 		$data = array(
 						'message'		=>	$message, 
 		);
@@ -106,42 +106,30 @@ class Contacts extends Controller {
 		  redirect(base_url());
 		 }
 		else{	
-			$maxin = count($emails);
-			
-		for ($i=0; $i<$maxin; ++$i)
-                   {
-                     $emails[$i] = trim($emails[$i]);
-                     if ($emails[$i]!="" && eregi("@", $emails[$i]))
-                     {
-                     	$emails[$i] = strtolower($emails[$i]);
-						$validate = $this->Newsletter_model->check_email_address($emails[$i]);
-				   		if($validate==FALSE){
-				   			redirect('admin/contacts');
-				   		}
-                     }
-                   }
-			
-			
-					
+			$this->load->library('email');
+				$maxin = count($emails);
 		 		for ($i=0; $i<$maxin; ++$i)
                    {
                      $emails[$i] = trim($emails[$i]);
                      if ($emails[$i]!="" && eregi("@", $emails[$i]))
                      {
-                     	//$count = $this->Newsletter_Model->check_newsletter_email($emails[$i]);
-          					   $emails[$i] = strtolower($emails[$i]);
-          					   		$data1=array('email'=>$emails[$i]);
-          							$this->db->insert('invite_emails', $data1); 		   
+          					  		$emails[$i] = strtolower($emails[$i]);
+          					  		$validate=$this->email->valid_email($emails[$i]);
+          					  		if($validate){
+          					  			//$this->session->set_flashdata('email_invalid_address',$message);
+          					  			$emails_s[] = strtolower($emails[$i]);
+          					  			$names_s[] = $names[$i];
+          					  			$data1=array('email'=>$emails[$i]);
+          								$this->db->insert('invite_emails', $data1); 
+          					  		}
                      }
                    }
-			
 		         $data = array('login' 	=> $login,
-							  'names'	=> $names,
-							  'emails'	=> $emails,
+							  'names'	=> $names_s,
+							  'emails'	=> $emails_s,
 						   	  'formaction'=> $formaction,
 		         			  'username' => $_POST['username'],
 			          );
-			          //print_r($emails);
 			  
 
 			

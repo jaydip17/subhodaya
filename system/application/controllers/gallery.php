@@ -87,12 +87,13 @@ class Gallery extends Controller {
   	    $paginate = $this->paginationnew->paginate1();
   	    //end pagination
    		
-  	   	$images=array();
 		foreach($details as $item)
 		{
 			$images[$item->id]=$this->Gallery_Model->getimage($item->id);
 		}
-		
+		if(!empty($images)){
+			redirect(base_url().'gallery');
+		}
 		$result=$this->Gallery_Model->get_categeory(0);
 		   		
 		//$current_url = current_url();
@@ -118,6 +119,9 @@ class Gallery extends Controller {
   	}
   	function inner(){
   		$type=$this->uri->segment(3,0);
+  		if($type==0){
+  			redirect(base_url()."gallery");
+  		}
   		$cate=$this->Gallery_Model->get_categeory(0);
   		//print_r($cate);
   		$more=$this->News_Model->more_news();
@@ -169,8 +173,14 @@ class Gallery extends Controller {
   		$this->load->model('ratings_model', 'ratings');
   		$id=$this->uri->segment(3,0);
   		$parentid=$this->uri->segment(4,0);
+  		if($parentid==0){
+  			redirect(base_url().'gallery');
+  		}
   		$more=$this->News_Model->more_news();
   		$image=$this->Gallery_Model->get_image($id);
+  		if(!empty($image)){
+  			redirect(base_url().'gallery');
+  		}
   		$query=$this->Gallery_Model->get_allimages($parentid);
   		$result=$query->result();
   		$views=array();

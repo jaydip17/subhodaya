@@ -23,18 +23,18 @@ function togglechecked(){
 <input type="hidden" name="formname" value="invite">
 <input type="hidden" name="sender" value="<?=$login?>">
 <?
-$maxin = count($names);
-
-
+$maxin = count($emails);
                    for ($i=0; $i<$maxin; ++$i)
                    {
-                     $emails[$i] = trim($emails[$i]);
+                    $emails[$i] = trim($emails[$i]);
                      if ($emails[$i]!="" && eregi("@", $emails[$i]))
                      {
           					   $emails[$i] = strtolower($emails[$i]);
+			
                        echo "<tr><td>" . "<input type=\"checkbox\" name=\"addresses[]\" value=\"$emails[$i]\" checked>" . "</td><td>$names[$i]</td><td>$emails[$i]</td></tr>";
                      }
                    }
+                  
 
 ?>
 <tr>

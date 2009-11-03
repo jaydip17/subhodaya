@@ -90,17 +90,35 @@ line-height:16px;
 			
 			<input type="hidden" name="url" value="<?=current_url()?>">
 			<table id="formdiv" cellspacing="5">
-				<tr><td valign="top" colspan="2"><div style="background-color: #B5E8FD;height:20px;"></div></td></tr>
-				<tr><td width="150px" align="left" style="padding-left: 15px"><?=$more['27']->matter;?></td><td><input type="text" name="name" size="30"></td></tr>
+				<tr><td valign="top" colspan="3" align="center"><div style="background-color: #B5E8FD;height:20px;color: red;font-weight: bold;"><?=$this->session->flashdata('yourname')?></div></td></tr>
+				<tr>
+					<td style="color: red;">*</td>
+					<td width="150px" align="left" style="padding-left: 15px"><?=$more['27']->matter;?></td>
+					<td><input type="text" name="name" size="30"></td>
+				</tr>
 				<?=form_hidden('heading',$result['0']->heading)?>
-				<tr><td width="150px" align="left" style="padding-left: 15px;"><?php if(isset($more['38'])){ echo $more['38']->matter;}?></td><td><input type="text" name="uemil" size="30"></td></tr>
-				<tr><td width="150px" align="left" style="padding-left: 15px;"><?php if(isset($more['39'])){ echo $more['39']->matter;}?></td><td><input type="text" name="fname" size="30"></td></tr>
-				<tr><td width="150px" align="left" style="padding-left: 15px"><?=$more['28']->matter;?></td><td><input type="text" name="email" size="30"></td></tr>
-				<tr><td valign="top" colspan="2"><div style="background-color: #B5E8FD;height:20px;"></div></td></tr>
-				<tr><td colspan="2" align="left" style="padding-left: 10px;"><input type="checkbox" id="checkboxId" onclick="javascript:checkboxClickHandler()" name="telugu_type">&nbsp;Type in telugu</td></tr>
-				<tr><td colspan="2" align="center"><textarea style="height: 190px;width: 95%" name="description" id="transl2"></textarea></td></tr>
-				<tr><td colspan="2" align="center"><input type="submit" name="send" value="Send"><input type="reset" ></td></tr>
-				<tr><td valign="top" colspan="2"><div style="background-color: #B5E8FD;height:20px;"></div></td></tr>
+				<tr>
+					<td style="color: red;">*</td>
+					<td width="150px" align="left" style="padding-left: 15px;"><?php if(isset($more['38'])){ echo $more['38']->matter;}?></td>
+					<td><input type="text" name="uemil" size="30"></td>
+				</tr>
+				<tr>
+					<td style="color: red;">*</td>
+					<td width="150px" align="left" style="padding-left: 15px;"><?php if(isset($more['39'])){ echo $more['39']->matter;}?></td>
+					<td><input type="text" name="fname" size="30"></td>
+				</tr>
+				<tr>
+					<td style="color: red;">*</td>
+					<td width="150px" align="left" style="padding-left: 15px"><?=$more['28']->matter;?></td>
+					<td><input type="text" name="email" size="30"></td>
+				</tr>
+				<tr>
+					<td valign="top" colspan="3"><div style="background-color: #B5E8FD;height:20px;font-weight: bold;"><span style="color: red;">*</span>&nbsp;Your Message</div></td>
+				</tr>
+				<tr><td colspan="3" align="left" style="padding-left: 10px;"><input type="checkbox" id="checkboxId" onclick="javascript:checkboxClickHandler()" name="telugu_type">&nbsp;Type in telugu</td></tr>
+				<tr><td colspan="3" align="center"><textarea style="height: 190px;width: 95%" name="description" id="transl2"></textarea></td></tr>
+				<tr><td colspan="3" align="center"><input type="submit" name="send" value="Send"><input type="reset" ></td></tr>
+				<tr><td valign="top" colspan="3"><div style="background-color: #B5E8FD;height:20px;"></div></td></tr>
 			</table>
 			</form>
 		</td></tr>

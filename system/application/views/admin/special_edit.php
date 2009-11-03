@@ -59,10 +59,10 @@ foreach ($details as $item):
 </td>
 		
 		<td width='50px'><a
-			href="<?=base_url()?>admin/Subhodaya_spec/delete/<?=$item->id?>"
+			href="<?=base_url()?>admin/subhodaya_spec/delete/<?=$item->id?>"
 			onclick='return confirm("are you sure want to delete");'><img
 			src="<?=base_url();?>assets/imgs/delete_on.gif" border='0' /></a></td>
-		<td width='50px'><a href="<?=base_url()?>admin/Subhodaya_spec/edit/<?=$item->id?>"><img
+		<td width='50px'><a href="<?=base_url()?>admin/subhodaya_spec/edit/<?=$item->id?>"><img
 			src="<?=base_url();?>assets/imgs/b_edit.png" border='0' /></a></td>
 	</tr>
 

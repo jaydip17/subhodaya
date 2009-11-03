@@ -108,7 +108,7 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
 			   
 			?>
 
-			    <li ><a href="<?=base_url();?>"><span><?=$more['2']->matter?></span></a></li>
+			    <li><a href="<?=base_url();?>"><span><?=$more['2']->matter?></span></a></li>
 			    <li <?if (eregi('news', $current_url)) {echo "id='current'";} ?> ><a href="<?=base_url();?>news/"><span><?=$more['3']->matter?></span></a></li>
 			    <li <?if (eregi('cinema', $current_url)) {echo "id='current'";} ?> ><a href="<?=base_url();?>cinema/"><span><?=$more['4']->matter?></span></a></li>
 			    <li <?if (eregi('video', $current_url)) {echo "id='current'";} ?>><a href="<?=base_url();?>video/"><span><?=$more['5']->matter?></span></a></li>

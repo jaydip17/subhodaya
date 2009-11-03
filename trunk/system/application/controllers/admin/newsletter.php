@@ -29,8 +29,8 @@ class Newsletter extends Controller {
 		
 		$config['base_url'] = base_url().'admin/newsletter'.'/index/';
 		$config['total_rows'] = $count1;
-		$config['per_page'] = '1000';
-		$config['num_links'] = 20;
+		$config['per_page'] = '500';
+		$config['num_links'] = 50;
 		$config['uri_segment'] = 4;
 		$this->pagination->initialize($config);
 

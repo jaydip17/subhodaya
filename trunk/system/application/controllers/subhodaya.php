@@ -4,6 +4,8 @@ class Subhodaya extends Controller {
 	function Subhodaya(){
 		parent::Controller();
 				$this->lang->load('telugu', 'telugu');
+				$this->load->helper(array('form', 'url','language'));
+				//$this->load->language('form_validation_lang');
 	}
 	function index(){
 		$news_type7=$this->News_Model->get_newstype1(7);
@@ -89,6 +91,29 @@ class Subhodaya extends Controller {
 	}
 	function sendmail()
 	{
+		$this->load->library('form_validation');
+		$this->form_validation->set_rules('name', 'Username', 'required');
+		$this->form_validation->set_rules('uemail', 'Email', 'required');
+		$this->form_validation->set_rules('fname', 'Username', 'required');
+		$this->form_validation->set_rules('email', 'Email', 'required');
+		$this->form_validation->set_rules('description', 'Message', 'required');
+		
+		if ($this->form_validation->run() == FALSE)
+		{		
+			$this->session->set_flashdata('yourname', $this->lang->line('required'));
+			redirect($_POST['url']);
+		}
+		else
+		{
+			$this->load->library('email');
+			$email=$_POST['email'];
+			$validate=$this->email->valid_email($email);
+			if($validate==0)
+			{
+				$this->session->set_flashdata('yourname', $this->lang->line('valid_email'));
+				redirect($_POST['url']);	
+			}else {
+				
 		if(isset($_POST['send']))
 		{
 		$to = $_POST['email'];
@@ -160,15 +185,16 @@ class Subhodaya extends Controller {
 //        else
 //        $status= "-1";
 		}
-		$status=1;
 		$this->session->set_flashdata('gallery', $this->lang->line('galley_mail_succ'));
 		$this->session->set_flashdata('greetings', $this->lang->line('gretting_mail_succ'));
 		$this->session->set_flashdata('cinema', $this->lang->line('cinema_mail_succ'));
 		$this->session->set_flashdata('news', $this->lang->line('news_mail_succ'));
 		$this->session->set_flashdata('mahila', $this->lang->line('mahila_mail_succ'));
 		$this->session->set_flashdata('sahithi', $this->lang->line('mahila_mail_succ'));
-        redirect($_POST['url'].'/'.$status);
+        redirect($_POST['url']);
 	 }
+	}
+	}
 	 function send_mail($to,$subject,$message,$from,$from_name)
 	 {
 	 	$data = array (

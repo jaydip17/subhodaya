@@ -369,19 +369,20 @@ function test()
       </table>
       <table width="99%" height="463" border="0" cellpadding="0" cellspacing="0">
         <tr>
-          <td width="4" valign="top"><img src="<?=base_url();?>assets/imgs/add-line-left.jpg" width="4" height="456" /></td>
-         <td width="206" valign="top" id="add-line"><table width="100%" height="439" border="0" cellpadding="0" cellspacing="0">
+         <td width="206" valign="top" style="background-color:#bdcbd2;"><table width="100%" height="439" border="0" cellpadding="0" cellspacing="0">
               <tr>
                 <td height="67" valign="middle"><div align="center" id="newsletter"><img style="cursor:pointer;" id="newsletter-img" src="<?=base_url();?>assets/imgs/newsletter-img.jpg" width="199" height="59" /></div></td>
               </tr>
               <tr>
-                <td height="193" valign="top"><img src="<?=base_url();?>assets/ads/Home3.jpg" width="199" height="177" /></td>
+                <td  valign="top" align="center"><!--
+                <img src="<?=base_url();?>assets/ads/Home3.jpg" width="215" height="196" />
+            	<img src="<?=base_url();?>assets/ads/Home4.jpg" width="219" height="100" style="margin-top:6px;"/>
+                --><!-- VCricket Score Feed Code Start v 3.00 --><script language="JavaScript" type="text/JavaScript" src="http://ifeed.vcricket.com/get_code.aspx?dk=A6084745CB6346C68AB20E40D178F2B0&amp;sc=&amp;sz=180x320"></script><noscript><a href="http://www.vcricket.com/help.aspx?q=java_disable"  target="_blank"><img src="/images/error_java_180x320.gif"  alt="Javascript is disabled." width="220" height="380" border="0" /></a></noscript><!-- Please note this will not work if directly run in browser. --><!-- VCricket Score Feed Code End -->
+                <div style="padding-top: 4px;"><img src="<?=base_url()?>assets/imgs/ad2-200x100.gif" width="190"></div>
+                </td>
               </tr>
-              <tr>
-                <td valign="top"><img src="<?=base_url();?>assets/ads/Home4.jpg" width="199" height="179" /></td>
-              </tr>
+             
           </table></td>
-          <td width="4" valign="top"><img src="<?=base_url();?>assets/imgs/add-line-right.jpg" width="4" height="456" /></td>
           <td width="100%" valign="top"  colspan="2">
           	<table width="0"  border="0"  id="photog-md" cellpadding="0" cellspacing="0" style="margin-left:5px;">
               <tr>

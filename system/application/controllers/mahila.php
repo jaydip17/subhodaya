@@ -50,7 +50,16 @@ class Mahila extends Controller {
 		$this->load->model("admin/News_Model");
 		$details=array();
 		$id=$this->uri->segment(3,0);
+		$type=$this->uri->segment(4,0);
+		$cate=$this->db->get_where('mahila_cat',array('id'=>$type));
+		$mahilacate=$cate->result();
+		if(empty($mahilacate)){
+			redirect(base_url().'mahila');
+		}
 		$result=$this->Mahila_Model->inner_mahila($id);
+		if(empty($result)){
+			redirect(base_url().'mahila');
+		}
 		$details=$this->Mahila_Model->get_mahilatype();
 		
 		$details_more=$this->Sahithi_Model->getdetails(2,'yes',5);
@@ -112,6 +121,9 @@ class Mahila extends Controller {
 		$this->pagination->initialize($config); 
 		$pagination=$this->pagination->create_links();
 		$mahila=$this->Mahila_Model->get_mahila($type,$count=false);
+		if(empty($mahila)){
+			redirect(base_url().'mahila');
+		}
 		$cinemapoll=$this->Poll_Model->get_newspolls($type=5);
 		$tabs=array();
 		$segments = array(	'seg1' => $this->uri->segment(1,0),

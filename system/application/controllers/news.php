@@ -72,6 +72,9 @@ class News extends Controller {
 		$active_news3=$this->News_Model->active_news(3);
 		$active_news4=$this->News_Model->active_news(4);
 		$tabs=array();
+		if(empty($news)){
+			redirect(base_url().'news');
+		}
 		$segments = array(	'seg1' => $this->uri->segment(1,0),
 						   	'seg2' => $this->uri->segment(2,0),
 							'seg3' => $this->uri->segment(3,0),
@@ -112,18 +115,27 @@ class News extends Controller {
 			$engheading=$result['0']->eng_heading;	
 			$image_path="assets/special_newsimg";
 			$heading=$result[0]->heading;
-		}else{
-		
+		}else
+		{
 			$result=$this->News_Model->inner_news($id);
+			if(empty($result))
+			{
+	   		redirect(base_url().'news');
+	   		}
 			$engheading=$result['0']->eng_heading;	
 			$image_path="assets/news";
 			$heading=$result[0]->heading;
 		}
+
 		$more=$this->News_Model->more_news();
 		$cinema_type1=$this->Cinema_Model->get_cinematype(1);
 		
 		$type=$this->uri->segment(4,0);
-		
+		$cate=$this->db->get_where('news_types', array('id' => $type));
+		$newscate=$cate->result();
+		if(empty($newscate)){
+			redirect(base_url().'news');
+		}
 		
 		$news=$this->News_Model->get_news($type,$count=false);
 		$mahila_details=$this->Mahila_Model->active_mahila($type=4);
@@ -134,6 +146,7 @@ class News extends Controller {
 	    $videos=$this->Video_Model->get_videos('active',2);
 	   	$video_result=$videos->result();
 	   	$telegu_typing=array();
+	  
 		$segments = array(	'seg1' => $this->uri->segment(1,0),
 						   	'seg2' => $this->uri->segment(2,0),
 							'seg3' => $this->uri->segment(3,0),

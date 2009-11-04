@@ -52,7 +52,16 @@ class Sahithi extends Controller {
        	$more=$this->Sahithi_Model->more_sahithi();
 		$cinema_type1=$this->Cinema_Model->get_cinematype(1);
 		$id=$this->uri->segment(3,0);
+		$type=$this->uri->segment(4,0);
+		$cate=$this->db->get_where('sahithi_cat',array('id'=>$type));	
+		$sahithicate=$cate->result();
+		if(empty($sahithicate)){
+			redirect(base_url().'sahithi');
+		}
 		$result=$this->Sahithi_Model->inner_sahithi($id);
+		if(empty($result)){
+			redirect(base_url().'sahithi');
+		}
 		$evenmore=$this->Sahithi_Model->evenmore($id);
 		$details=$this->Sahithi_Model->get_sahithitype();
 		//$details_mahila=$this->mahila_Model->get_mahilatype();
@@ -118,6 +127,9 @@ class Sahithi extends Controller {
 		$this->pagination->initialize($config); 
 		$pagination=$this->pagination->create_links();
 		$sahithi=$this->Sahithi_Model->get_sahithi($type,$count=false);
+		if(empty($sahithi)){
+			redirect(base_url().'sahithi');
+		}
 		$details_sahithi=$this->Sahithi_Model->get_sahithitype();
 		$tabs=array();
 		 $segments = array(	'seg1' => $this->uri->segment(1,0),

@@ -72,7 +72,7 @@ padding-left: 20px;
 <tr>
 	<td  width="2px" height="28"><img src="<?=base_url()?>assets/imgs/body-left.jpg"></td>
 	<td id="gal_center-top" width="745px;" valign="bottom" height="28" align="center" >
-		<div style="padding-bottom: 7px;width: 50%"><span style="font-size: 14px;color:#8B0000;font-weight: bold;"><?=$result['0']->title?></span></div></td>
+		<div style="padding-bottom: 7px;width: 50%"><span style="font-size: 14px;color:#8B0000;font-weight: bold;"></span></div></td>
 	<td  width="2px" height="28" ><img src="<?=base_url()?>assets/imgs/body-right.jpg"></td>
 	<td valign="top" rowspan="3" align="center" >
 		<table  cellpadding="0" cellspacing="0" style="margin: 0px 3px 0px 3px;" width="95%">

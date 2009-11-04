@@ -98,6 +98,9 @@ class Cinema extends Controller {
 		$more=$this->News_Model->more_news();
 		$id=$this->uri->segment(3,0);
 		$result=$this->Cinema_Model->get_all($id);
+		if(empty($result)){
+			redirect(base_url().'cinema');
+		}
 		//active news for side heaidngs
 		$active_news=$this->Cinema_Model->get_activenews();
 		//active news for tabs
@@ -150,6 +153,9 @@ class Cinema extends Controller {
 		$type=$this->uri->segment(4,0);
 		$result1=$this->Cinema_Model->get_all($type);
 		$result=$this->Cinema_Model->inner($id);
+		if(empty($result)){
+			redirect(base_url().'cinema');
+		}
 		$engheading=$result['0']->eng_heading;
 		$mahila_details=$this->Mahila_Model->active_mahila(6);
 		//print_r($mahila_details);
@@ -163,6 +169,12 @@ class Cinema extends Controller {
 		$telegu_typing=array();
 			$current_url = current_url();
 		//$navigation = array ($current_url);
+
+		$cate=$this->db->get_where('cinema_cat',array('id'=>$type));
+		$cinemacate=$cate->result();
+		if(empty($cinemacate)){
+			redirect(base_url().'cinema');
+		}
 		$segments = array(	'seg1' => $this->uri->segment(1,0),
 						   	'seg2' => $this->uri->segment(2,0),
 							'seg3' => $this->uri->segment(3,0),

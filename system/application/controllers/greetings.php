@@ -59,7 +59,13 @@ class Greetings extends Controller {
   	$more=$this->News_Model->more_news();
   	$type=$this->uri->segment(3,0);
   	$greetings=$this->Greeting_Model->get_greetings($type);
+  	if(empty($greetings)){
+  		redirect(base_url().'greetings');
+  	}
   	$query=$this->Greeting_Model->greeings_pagi($type);
+  	if(empty($query)){
+  		redirect(base_url().'greetings');
+  	}
 	$a =base_url().'greetings/content/'.$type;
 		 //pagination
     	$this->load->library('paginationnew');
@@ -99,7 +105,16 @@ class Greetings extends Controller {
   function inner()
   {
   	$id=$this->uri->segment(3,0);
+  	$type=$this->uri->segment(4,0);
+  	$cate=$this->db->get_where('greeting_cat',array('id'=>$type));
+  	$greetingcate=$cate->result();
+  	if(empty($greetingcate)){
+  		redirect(base_url().'greetings');
+  	}
   	$result=$this->Greeting_Model->get_details($id);
+  	if(empty($result)){
+  		redirect(base_url().'greetings');
+  	}
   	$more=$this->News_Model->more_news();
   	$telegu_typing=array();
   	//print_r($result);

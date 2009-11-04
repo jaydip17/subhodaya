@@ -126,26 +126,26 @@ class Bread_crumb{
 						 $seg2 = 'inner';
 								$segments['heading'] = $this->CI->Gallery_Model->get_root_cat_by_id($root_cat_id);
 								(isset($segments['heading'])) ? $segments['heading']!='' ? $heading = $segments['heading'] : '' : '';
-								$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$segments['seg3'].'/'.$segments['seg4'],$heading);	
+								$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$segments['seg3'].'/'.$segments['seg4'],strip_tags($heading));	
 					}
 							break;
 				case 'mahila': 
 						$seg2 = 'details';
 							$this->CI->load->model("admin/Mahila_Model");
 							$second = $this->CI->Mahila_Model->get_root_cat_by_id($root_cat_id);
-							$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$seg3,$second);
+							$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$seg3,strip_tags($second));
 							break;
 				case 'sahithi': 
 						$seg2 = 'details';
 							$this->CI->load->model("admin/Sahithi_Model");
 							$second = $this->CI->Sahithi_Model->get_root_cat_by_id($root_cat_id);
-							$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$seg3,$second);
+							$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$seg3,strip_tags($second));
 							break;
 				case 'video': 
 						$seg2 = 'details';
 							$this->CI->load->model("Video_Model");
 							$second = $this->CI->Video_Model->get_root_cat_by_id($root_cat_id);
-							$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$seg3,$second);
+							$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$seg3,strip_tags($second));
 							break;
 			}
 			
@@ -157,23 +157,23 @@ class Bread_crumb{
 				case 'news': 
 							$seg2 = 'newsdetails';
 							(isset($segments['heading'])) ? $segments['heading']!='' ? $heading = $segments['heading'] : '' : '';
-							$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$segments['seg3'].'/'.$segments['seg4'],$heading);
+							$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$segments['seg3'].'/'.$segments['seg4'],strip_tags($heading));
 							break;
 				case 'cinema': 
 							$seg2 = 'inner';
 							(isset($segments['heading'])) ? $segments['heading']!='' ? $heading = $segments['heading'] : '' : '';
-							$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$segments['seg3'].'/'.$segments['seg4'],$heading);
+							$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$segments['seg3'].'/'.$segments['seg4'],strip_tags($heading));
 							break;
 				case 'greetings': 
 							$seg2 = 'inner';
 							(isset($segments['heading'])) ? $segments['heading']!='' ? $heading = $segments['heading'] : '' : '';
-							$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$segments['seg3'].'/'.$segments['seg4'],$heading);
+							$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$segments['seg3'].'/'.$segments['seg4'],strip_tags($heading));
 							break;
 				case 'gallery': 
-					if($seg2 != 'inner'){
+					if($segments['seg2'] != 'inner'){
 							$seg2 = 'content';
 							(isset($segments['heading'])) ? $segments['heading']!='' ? $heading = $segments['heading'] : '' : '';
-							$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$segments['seg3'].'/'.$segments['seg4'],$heading);
+							$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$segments['seg3'].'/'.$segments['seg4'],strip_tags($heading));
 							/*if($segments['seg2']=='content')
 							{
 								$seg2 = 'content';
@@ -186,12 +186,12 @@ class Bread_crumb{
 				case 'mahila': 
 							$seg2 = 'mahiladetails';
 							(isset($segments['heading'])) ? $segments['heading']!='' ? $heading = $segments['heading'] : '' : '';
-							$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$segments['seg3'].'/'.$segments['seg4'],$heading);
+							$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$segments['seg3'].'/'.$segments['seg4'],strip_tags($heading));
 							break;
 				case 'sahithi': 
 							$seg2 = 'sahithidetails';
 							(isset($segments['heading'])) ? $segments['heading']!='' ? $heading = $segments['heading'] : '' : '';
-							$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$segments['seg3'].'/'.$segments['seg4'],$heading);
+							$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$segments['seg3'].'/'.$segments['seg4'],strip_tags($heading));
 							break;
 			}
 		}

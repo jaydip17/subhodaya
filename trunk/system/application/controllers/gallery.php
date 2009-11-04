@@ -91,7 +91,7 @@ class Gallery extends Controller {
 		{
 			$images[$item->id]=$this->Gallery_Model->getimage($item->id);
 		}
-		if(!empty($images)){
+		if(empty($images)){
 			redirect(base_url().'gallery');
 		}
 		$result=$this->Gallery_Model->get_categeory(0);
@@ -145,6 +145,9 @@ class Gallery extends Controller {
    		$details=$result->result();
   	    $paginate = $this->paginationnew->paginate1();
 		//print_r($details);
+		if(empty($details)){
+			redirect(base_url().'gallery');
+		}
 		$segments = array(	'seg1' => $this->uri->segment(1,0),
 						   	'seg2' => $this->uri->segment(2,0),
 							'seg3' => $this->uri->segment(3,0),
@@ -178,7 +181,7 @@ class Gallery extends Controller {
   		}
   		$more=$this->News_Model->more_news();
   		$image=$this->Gallery_Model->get_image($id);
-  		if(!empty($image)){
+  		if(empty($image)){
   			redirect(base_url().'gallery');
   		}
   		$query=$this->Gallery_Model->get_allimages($parentid);

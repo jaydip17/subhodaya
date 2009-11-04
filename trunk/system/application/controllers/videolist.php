@@ -25,6 +25,9 @@ class Videolist extends Controller {
    		 $result = $this->paginationnew->getQuery(TRUE);
    		 $hotvideos=$result;
    		 $paginate = $this->paginationnew->paginate(); 
+   		 if(empty($hotvideos)){
+   		 	redirect(base_url().'video');
+   		 }
    		 $segments = array(	'seg1' => $this->uri->segment(1,0),
 						   	'seg2' => $this->uri->segment(2,0),
 							'seg3' => $this->uri->segment(3,0),
@@ -64,6 +67,9 @@ class Videolist extends Controller {
    		 //exit;		
   	     $paginate_videosnames = $this->paginationnew->paginate(); 
 	     //pagination for mottam videosnames view	
+	     if(empty($videosnames)){
+	     	redirect(base_url().'video');
+	     }
 	     $segments = array(	'seg1' => $this->uri->segment(1,0),
 						   	'seg2' => $this->uri->segment(2,0),
 							'seg3' => $this->uri->segment(3,0),

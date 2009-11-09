@@ -136,7 +136,8 @@ class News extends Controller {
 		if(empty($newscate)){
 			redirect(base_url().'news');
 		}
-		
+		$comments=$this->News_Model->get_comments($id);
+		//print_r($comments);
 		$news=$this->News_Model->get_news($type,$count=false);
 		$mahila_details=$this->Mahila_Model->active_mahila($type=4);
 		$cinema_type5=$this->Cinema_Model->get_cinematype(5);
@@ -157,7 +158,9 @@ class News extends Controller {
 							'home' => $more['2']->matter,
 		); 		
 		$bread_crumb = $this->bread_crumb->get_code($segments);
-		//print_r($segments);		
+		//print_r($segments);	
+		 $res=$this->db->count_all('comments');	
+		
 		$data=array('result'   		=>   $result,
 					 'more'    		=>   $more,
 				'cinema_type1' 		=>   $cinema_type1,
@@ -170,9 +173,33 @@ class News extends Controller {
 				'bread_crumb' 		=> 	 $bread_crumb,
 				'telegu_typing'		=>	 $telegu_typing,
 				'engheading'		=>	 $engheading,
-				'image_path'		=>	 $image_path
+				'image_path'		=>	 $image_path,
+				'comments'			=>	 $comments,
+				'res'				=>	 $res
 				);	
 		$this->load->view('news_inner',$data);
+	}
+	function comments()
+	{
+			if(isset($_POST['email'])){
+			 $email=$_POST['email'];
+			 $name=$this->input->post('name');
+			 $message=$this->input->post('message');
+			 $newsid=$this->input->post('newsid');
+			$current_url=$this->input->post('url');
+			 $data=array(
+			 		'newsid' => $newsid,
+			 		'name'   => $name,
+			 		'mailid'  => $email,
+			 		'comment'=> $message,
+			 		
+			 );
+			$result=$this->db->insert('comments',$data);
+			if($result==1){
+				redirect($current_url);
+			}
+		}
+		
 	}
 }
 ?>

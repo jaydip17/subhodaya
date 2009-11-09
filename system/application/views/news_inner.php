@@ -112,7 +112,10 @@ myEl.style.display = (myEl.style.display == 'block') ? 'none' : 'block';
 							<td align="left"><input type='text' name='email'></td>
 						</tr>
 						<tr>
-							<?php if(isset($result[0]->id)){?> <?=form_hidden('newsid',$result[0]->id)?> <?php }?>
+							<?php if($seg==1){
+								form_hidden('newsid');
+							}else{
+							if(isset($result[0]->id)){?> <?=form_hidden('newsid',$result[0]->id)?> <?php }}?>
 							<input type="hidden" name="url" value="<?=current_url()?>">
 							<td style="padding-left: 10px;" colspan="4"><input type="checkbox" id="checkboxId" onclick="javascript:checkboxClickHandler()" name="telugu_type">&nbsp;&nbsp;&nbsp;&nbsp;Type in telugu</td>
 						</tr>

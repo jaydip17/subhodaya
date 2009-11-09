@@ -11,6 +11,13 @@ font-size:14px;
 line-height:18px;
 }
 </style>
+<script type="text/javascript">
+function toggle(el)
+{
+myEl = document.getElementById(el);
+myEl.style.display = (myEl.style.display == 'block') ? 'none' : 'block';
+}
+</script>
 <table width="99%">
 	<tr>
 		<td width="185" height="100%" valign="top" >
@@ -90,16 +97,57 @@ line-height:18px;
 			<?php }?>
 			</div>
 			</div></td></tr>
-			<tr><td>
-				<div id="news_heading" class="heading" style="width: 50%;float: left;"><span id="newsheading"><?php if(isset($more['25'])){echo $more['25']->matter;}?></span></div>
-				<div style="width: 50%">Comments</div>
+			<tr><td id="news_heading" class="heading">
+				<div  style="width: 50%;float: right;text-align: right;margin-right:3px;"><span id="newsheading"><a href="javascript:void(0)" onclick="toggle('c');"><?php if(isset($more['25'])){echo $more['25']->matter;}?></a></span></div>
+				<div style="width: 50%;margin-left:3px"><a href="javascript:void(0)" onclick="toggle('b')">Post your Comment(<?php if(isset($res)){echo $res;}?>)</div>
 			</td></tr>
-			<!--<tr><td align="center"><div style="border:1px solid #9FA0A0;">
+			<tr>
+				<td><div style="border: 1px solid gray;background-color: #F9F8F3;display: none;" id='b'>
+				<form action="<?=base_url();?>news/comments" method="post">
+					<table width="80%" style="margin-top: 5px;" cellspacing="5">
+						<tr>
+							<td style="padding-left: 10px;"><span style="color: red">*</span>&nbsp;Name</td>
+							<td><input type='text' name='name'></td>
+							<td align="center"><span style="color: red">*</span>&nbsp;Email</td>
+							<td align="left"><input type='text' name='email'></td>
+						</tr>
+						<tr>
+							<?php if(isset($result[0]->id)){?> <?=form_hidden('newsid',$result[0]->id)?> <?php }?>
+							<input type="hidden" name="url" value="<?=current_url()?>">
+							<td style="padding-left: 10px;" colspan="4"><input type="checkbox" id="checkboxId" onclick="javascript:checkboxClickHandler()" name="telugu_type">&nbsp;&nbsp;&nbsp;&nbsp;Type in telugu</td>
+						</tr>
+						<tr>
+						<td valign="top" align="right"><span style="color: red">*</span></td>
+							<td colspan="3" align="left"><textarea style="height: 100px;width: 95%" name="message" id="transl2"></textarea></td>
+						</tr>
+						<tr><td style="padding-left: 10px;" colspan="2"><input type='submit' name='submit' value="submit"></td>
+							<td align="right" colspan="2" style="font-weight: bold;"><a href="javascript:void(0)" onclick="toggle('a');">View comments</a></td>
+						</tr>
+					</table></form>
+					</div>
+					<div style="border: 1px solid gray;margin-top: 5px;display: none;" id='a'>
+						<?php if(!empty($comments)){
+							foreach ($comments as $comment){?>
+							<div style="border: 0px solid #B4DCE6;margin: 5px;background-color:#F9F8F3 ">
+								<table cellspacing="7" width="100%">
+								<tr><td width="50%" align="left" style="font-weight: bold;"><?=$comment->name?></td><td align="right"><?=$comment->insert_date?></td></tr>
+								<tr><td colspan="2" align="left"><?=$comment->comment?></td></tr>
+								</table>
+							</div>
+							<?php }
+						}else{
+							echo 'No Comments for this artical';
+						}
+						?>
+						
+					</div>
+				
+			<div style="border:1px solid #9FA0A0;display: none;width: 552px;text-align: center;" id='c' >
 			<?php echo validation_errors(); ?>
 			<?=form_open('index.php/subhodaya/sendmail','name="telugu_send"') ?>
 			
 			<input type="hidden" name="url" value="<?=current_url()?>">
-			<table id="formdiv" cellspacing="5">
+			<table id="formdiv" cellspacing="5" width="100%">
 				<tr>
 					<td valign="top" colspan="3" align="center"><div style="background-color: #B5E8FD;height:20px;color: red;font-weight: bold;"><?=$this->session->flashdata('yourname')?></div></td>
 				</tr>
@@ -132,13 +180,13 @@ line-height:18px;
 					<td colspan="3" align="left" style="padding-left: 10px;"><input type="checkbox" id="checkboxId" onclick="javascript:checkboxClickHandler()" name="telugu_type">&nbsp;Type in telugu</td>
 				</tr>
 				<tr>
-					<td colspan="3" align="center"><textarea style="height: 190px;width: 95%" name="description" id="transl2"></textarea></td>
+					<td colspan="3" align="center"><textarea style="height: 100px;width: 95%" name="description" id="transl2"></textarea></td>
 				</tr>
 				<tr><td colspan="3" align="center"><input type="submit" name="send" value="Send" onClick="return Validate()"><input type="reset" ></td></tr>
 				<tr><td valign="top" colspan="3"><div style="background-color: #B5E8FD;height:20px;"></div></td></tr>
 			</table>
 			</form>
-			</div></td></tr>-->
+			</div></td></tr>
 			<tr><td><div id="news_heading" class="heading" style="height: 23px"><span id="newsheading"><?php if(isset($more['26'])){echo $more['26']->matter;}?></span></div></td></tr>
 			<tr><td>
 				<div style="border:1px solid #9FA0A0;">

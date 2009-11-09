@@ -261,6 +261,13 @@ class News_Model extends Model
     	$query=$this->db->get('subhodaya_spec');
     	return $query->result();
     }
+    function get_comments($id){
+    	$this->db->where('newsid',$id);
+    	$this->db->limit(5);
+    	$this->db->order_by('id','desc');
+    	$result=$this->db->get('comments');
+    	return $result->result();
+    }
 	
 }
 

@@ -136,7 +136,12 @@ class News extends Controller {
 		if(empty($newscate)){
 			redirect(base_url().'news');
 		}
-		$comments=$this->News_Model->get_comments($id);
+		if($seg==1){
+			$comments=$this->News_Model->get_comments($id=0);
+		}else {
+			$comments=$this->News_Model->get_comments($id);
+		}
+		
 		//print_r($comments);
 		$news=$this->News_Model->get_news($type,$count=false);
 		$mahila_details=$this->Mahila_Model->active_mahila($type=4);
@@ -159,7 +164,8 @@ class News extends Controller {
 		); 		
 		$bread_crumb = $this->bread_crumb->get_code($segments);
 		//print_r($segments);	
-		 $res=$this->db->count_all('comments');	
+		
+		 //$res=$this->db->count_all('comments');	
 		
 		$data=array('result'   		=>   $result,
 					 'more'    		=>   $more,
@@ -175,7 +181,7 @@ class News extends Controller {
 				'engheading'		=>	 $engheading,
 				'image_path'		=>	 $image_path,
 				'comments'			=>	 $comments,
-				'res'				=>	 $res
+				'seg'				=>	 $seg
 				);	
 		$this->load->view('news_inner',$data);
 	}

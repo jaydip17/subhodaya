@@ -48,9 +48,14 @@ line-height:16px;
 	              <?if(!empty($details_more[$i])){
 	              	$j=1;
 	              foreach($details_more[$i] as $item) {
-                   if($j==9) break;?>
+	              	if($j==1){
+	              		$j++;
+	              		continue;
+	              	}
+                   ?>
 	             <li><a href="<?=base_url();?><?=$type?>/<?=$type?>details/<?=$item->id?>/<?=$item->cat_id?>"><?=$item->heading ?></a></li>
-	                <?$j++;}} ?>
+	                <?if($j==9) break;
+	                $j++;}} ?>
 	                 </ul>
 	                 </div>
 					 </div>

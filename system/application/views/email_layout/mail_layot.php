@@ -11,8 +11,8 @@
 	<div style="padding: 0px 100px 0px 100px;">  	
   	<hr/>
   	<span style="color: red;font-size: 15px;"><?=$heading?></span><br/>
-  	<a href="http://www.subhodaya.com"><img src="<?=base_url();?>assets/imgs/email1.jpg" style="float: left;margin: 2px 4px 2px 2px;" border="0"></a>
-  	 <?=$com?><br/>
+  	<a href="http://www.subhodaya.com"><img src="<?=base_url();?>assets/imgs/email1.jpg" style="float: left;margin: 2px 6px 2px 2px;" border="0"></a>
+  	 <?=$com?><br/><br/>
   	 <a href="http://www.subhodaya.com"><img src="<?=base_url();?>assets/imgs/email4.jpg" style="float: right;margin: 2px 2px 2px 4px;" border="0"></a>
   	 <span style="color: red;"><?=$quas1?></span><br>
   	 <?=$para1?><br/>

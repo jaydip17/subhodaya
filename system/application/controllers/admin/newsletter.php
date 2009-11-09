@@ -48,27 +48,27 @@ class Newsletter extends Controller {
 	}
 	function sendmail()
 	{
-		//$subhodaya=$this->lang->line('subhodaya');
-	 	//$com=$this->lang->line('com');subhodaya_spec_heading
-	 	$heading=$this->lang->line('subhodaya_spec_heading');
+		$subhodaya=$this->lang->line('subhodaya');
+	 	$com=$this->lang->line('com');
+	 	/*$heading=$this->lang->line('subhodaya_spec_heading');
 	 	$com=$this->lang->line('subhod_spec_matter');
 	 	$para2=$this->lang->line('subhod_spec_para2');
 	 	$para1=$this->lang->line('subhod_spec_para1');
 	 	$quas1=$this->lang->line('subhod_spec_quas1');
-	 	$quas2=$this->lang->line('subhod_spec_quas2');
+	 	$quas2=$this->lang->line('subhod_spec_quas2');*/
 		$message='Thank you for subscribing with us.';
 		if(isset($_POST['addresses']))
      		{
-     		//$subject="[SUBHODAYA.COM] News letter";
+     		$subject="[SUBHODAYA.COM] News letter";
 		 		    	$data = array (
 	 					'message'   => $message,
-	 					//'subhodaya' => $subhodaya,
+	 					'subhodaya' => $subhodaya,
 	 					 'com'		=> $com,
-		 		    	'para1'		=> $para1,
+		 		    /*	'para1'		=> $para1,
 		 		    	'para2'		=> $para2,
 		 		    	'quas1'		=> $quas1,
 		 		    	'quas2'		=> $quas2,
-		 		    	'heading'	=> $heading
+		 		    	'heading'	=> $heading*/
 	 					);
 		 		      
 	     		$addresses=$_POST['addresses'];
@@ -77,8 +77,8 @@ class Newsletter extends Controller {
 				$this->email->from('dontreply@subhodaya.com', 'Subhodaya.com');
 				$this->email->bcc($addresses); 
 				$this->email->to('admin@subhodaya.com');
-				$html_message  = $this->load->view('email_layout/mail_layot',$data,TRUE);
-				$this->email->subject($heading);
+				$html_message  = $this->load->view('email_layout/invitation_friend',$data,TRUE);
+				$this->email->subject($subject);
 				$this->email->message($html_message); 
 				$status=$this->email->send();
 				

@@ -90,8 +90,11 @@ line-height:18px;
 			<?php }?>
 			</div>
 			</div></td></tr>
-			<tr><td><div id="news_heading" class="heading"><span id="newsheading"><?php if(isset($more['25'])){echo $more['25']->matter;}?></span></div></td></tr>
-			<tr><td align="center"><div style="border:1px solid #9FA0A0;">
+			<tr><td>
+				<div id="news_heading" class="heading" style="width: 50%;float: left;"><span id="newsheading"><?php if(isset($more['25'])){echo $more['25']->matter;}?></span></div>
+				<div style="width: 50%">Comments</div>
+			</td></tr>
+			<!--<tr><td align="center"><div style="border:1px solid #9FA0A0;">
 			<?php echo validation_errors(); ?>
 			<?=form_open('index.php/subhodaya/sendmail','name="telugu_send"') ?>
 			
@@ -135,7 +138,7 @@ line-height:18px;
 				<tr><td valign="top" colspan="3"><div style="background-color: #B5E8FD;height:20px;"></div></td></tr>
 			</table>
 			</form>
-			</div></td></tr>
+			</div></td></tr>-->
 			<tr><td><div id="news_heading" class="heading" style="height: 23px"><span id="newsheading"><?php if(isset($more['26'])){echo $more['26']->matter;}?></span></div></td></tr>
 			<tr><td>
 				<div style="border:1px solid #9FA0A0;">

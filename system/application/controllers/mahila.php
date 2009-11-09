@@ -43,13 +43,7 @@ class Mahila extends Controller {
   }
     function mahiladetails()
     {
- 	   $this->load->model('admin/Sahithi_Model');
- 	    $news_type2=$this->News_Model->get_newstype1(1);
-		$more=$this->Mahila_Model->more_mahila();
-		$cinema_type1=$this->Cinema_Model->get_cinematype(1);
-		$this->load->model("admin/News_Model");
-		$details=array();
-		$id=$this->uri->segment(3,0);
+    	$id=$this->uri->segment(3,0);
 		$type=$this->uri->segment(4,0);
 		$cate=$this->db->get_where('mahila_cat',array('id'=>$type));
 		$mahilacate=$cate->result();
@@ -60,6 +54,13 @@ class Mahila extends Controller {
 		if(empty($result)){
 			redirect(base_url().'mahila');
 		}
+ 	   $this->load->model('admin/Sahithi_Model');
+ 	    $news_type2=$this->News_Model->get_newstype1(1);
+		$more=$this->Mahila_Model->more_mahila();
+		$cinema_type1=$this->Cinema_Model->get_cinematype(1);
+		$this->load->model("admin/News_Model");
+		$details=array();
+	
 		$details=$this->Mahila_Model->get_mahilatype();
 		
 		$details_more=$this->Sahithi_Model->getdetails(2,'yes',5);

@@ -47,11 +47,8 @@ class Sahithi extends Controller {
    }
    function sahithidetails()
    {
-       	$this->load->model('admin/mahila_Model');
-       	$news_type2=$this->News_Model->get_newstype1(2);
-       	$more=$this->Sahithi_Model->more_sahithi();
-		$cinema_type1=$this->Cinema_Model->get_cinematype(1);
-		$id=$this->uri->segment(3,0);
+   	
+  		 $id=$this->uri->segment(3,0);
 		$type=$this->uri->segment(4,0);
 		$cate=$this->db->get_where('sahithi_cat',array('id'=>$type));	
 		$sahithicate=$cate->result();
@@ -62,6 +59,11 @@ class Sahithi extends Controller {
 		if(empty($result)){
 			redirect(base_url().'sahithi');
 		}
+       	$this->load->model('admin/mahila_Model');
+       	$news_type2=$this->News_Model->get_newstype1(2);
+       	$more=$this->Sahithi_Model->more_sahithi();
+		$cinema_type1=$this->Cinema_Model->get_cinematype(1);
+		
 		$evenmore=$this->Sahithi_Model->evenmore($id);
 		$details=$this->Sahithi_Model->get_sahithitype();
 		//$details_mahila=$this->mahila_Model->get_mahilatype();
@@ -69,7 +71,9 @@ class Sahithi extends Controller {
 		
 		//foreach($details_mahila as $item)
 		$details_more=$this->mahila_Model->getdetails(2,'yes',5);
-		
+		if(empty($details_more)){
+			redirect(base_url().'sahithi');
+		}
 		$key = key($details_more);
 		$this->load->Model('Video_Model');
 	   

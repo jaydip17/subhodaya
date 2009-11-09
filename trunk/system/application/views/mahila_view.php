@@ -7,7 +7,7 @@ id:'menu2', //use unique quoted id (quoted) REQUIRED!!
 user_defined_stylesheet:false, //if true, prevents script from generating stylesheet for this menu
 user_defined_markup:false, //if true, prevents script from generating markup for this menu
 design_mode:false,  //if true, generates a report of the script generated/intended styles and markup (as a design aid)
-menutop:145,     // initial top offset - except for top menu, where it is meaningless
+menutop:260,     // initial top offset - except for top menu, where it is meaningless
 menuleft:'45%',    // initial left offset - only for top menu, as pixels (can be a quoted percentage - ex: '50%')
 keepinview:80,   // Use false (for not static) - OR - true or numeric top offset when page scrolls
 menuspeed:20,    // Speed of menu sliding smaller is faster (interval of milliseconds)
@@ -96,7 +96,7 @@ padding-top:0px;
 <table width="99%"  border="0" cellpadding="0" cellspacing="0" >
 <tr>
         <td  valign="top">
-	     <img src="<?=base_url();?>assets/imgs/sahithi1.jpg" width="680" height="96" />
+	     <object type='application/x-shockwave-flash' data='<?=base_url()?>assets/MhlaBanner.swf' width='680' height='96'><param name='flashvars' value='clickTag=&clickTarget=_self' /><param name='allowScriptAccess' value='always' /><param name='movie' value='file.swf' /><param name='bgcolor' value='#000000'></object>
 					</td>
 					<td rowspan="5" valign="top" style="padding-left:10px";> 
 					<table cellpadding="0" cellspacing="0">

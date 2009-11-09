@@ -41,7 +41,7 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
 <script src="<?=base_url();?>assets/SpryAssets/SpryTabbedPanels.js" type="text/javascript" ></script>
 
 <?php }?>
-
+<!-- follow us -->
 <!-- color box -->
 <link href="<?=base_url();?>assets/colorbox.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="<?=base_url()?>assets/js/jquery.min.js"></script>
@@ -92,7 +92,22 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
   <tr>
     <td width="985"  align="center" valign="top"><table width="988" border="0" align="center" cellpadding="0" cellspacing="0">
       <tr>
-        <td width="936" valign="top" class="topline"></td>
+        <td width="936" valign="top" class="topline" align="right">
+        <script type="text/javascript" src="<?=base_url();?>assets/js/dropdowncontent.js"></script>
+			<p><a href="http://www.subhodaya.com" id="searchlink" rel="subcontent" ><img src="<?=base_url();?>assets/imgs/follow.png" border="0"></a></p>
+			<DIV id="subcontent" style="position:absolute; visibility: hidden; border: 0px solid orange; background-color: white; width: 96px;height: 60px;">
+			<div><img src="<?=base_url();?>assets/imgs/top_linef.gif"></div>
+			<div style="border-left: 1px solid #0F73BE;border-right: 1px solid #0F73BE;height: 25px;">
+				<table width="100%"><tr><td align="right" style="font-weight: bold;"><a href="https://twitter.com/subhodaya" target="_blank">Twitter</a></td>
+				<td align="left"><a href="https://twitter.com/subhodaya"><img src="<?=base_url();?>assets/imgs/tw.png" border="0"></img></a></td></tr></table>
+			</div>
+			<div><img src="<?=base_url();?>assets/imgs/bootm_linef.gif" align="top"></div>
+			</DIV>
+			<script type="text/javascript">
+			//Call dropdowncontent.init("anchorID", "positionString", glideduration, "revealBehavior") at the end of the page:
+			dropdowncontent.init("searchlink", "right-bottom", 50, "mouseover")
+			</script>
+        </td>
       </tr>
 </table>
       <table width="96%"  border="0" align="center" cellpadding="0" cellspacing="0" >

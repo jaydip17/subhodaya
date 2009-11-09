@@ -6,8 +6,9 @@
 
   <td style="padding: 10px 20px; font-family: Verdana; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-size-adjust: none; font-stretch: normal; -x-system-font: none; color: rgb(33, 33, 33); text-align: left;"><p><a href="http://subhodaya.com"><img src="<?=base_url();?>assets/imgs/logo_v1.png" width="224" border="0" height="56" /></a></p>
    <hr />
+   <?php if(isset($subhodaya)){?>
     <p style="color: #0b6094;font-size: 18px;font-weight: bold;">Dear User</p>
-    <p style="font-size: small;font-weight: bold;"><span class="style7">Welcome to the</span> <span style="color: #0b6094">maillist@subhodaya.com</span> <span style="color: #fb1811">mailing list!</span></p>
+    <p style="font-size: small;font-weight: bold;"><span class="style7">Welcome to the</span> <span style="color: #0b6094">maillist@subhodaya.com</span> <span style="color: #fb1811">mailing list!</span></p><?php }?>
     <p> <?= nl2br($message)?></p>
      <?php if(isset($subhodaya)){?>
     <p>

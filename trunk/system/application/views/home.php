@@ -354,7 +354,7 @@ function test()
                 	<font id="mainnews"><a href="<?=base_url()?>news/newsdetails/<?=$special_news['0']->id?>/<?=$cat_id?>/<?=1?>"><?=$special_news['0']->heading?></a></font><br>
                 	<font style="text-align: justify;text-align: left;font-size: 14px;"><?=$special_news['0']->summary?></font>
                 	</div>
-                	<div id="more-news-div" style="margin:0px 2px 2px 0px;"><a href="<?=base_url()?>news/newsdetails/<?=$special_news['0']->id?>/<?=$cat_id?>/"><?php if(isset($more['0'])){echo $more['1']->matter;}?></a></div>
+                	<div id="more-news-div" style="margin:0px 2px 2px 0px;"><a href="<?=base_url()?>news/newsdetails/<?=$special_news['0']->id?>/<?=$cat_id?>/<?=1?>"><?php if(isset($more['0'])){echo $more['1']->matter;}?></a></div>
                 	<?php }?>
 	                 </td>
 					</tr>

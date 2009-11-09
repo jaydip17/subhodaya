@@ -299,10 +299,11 @@ border: 3px thin solid black;
 #maindiv-news{
 border:1px solid #9FA0A0;
 padding:20px;
-background-image: url(imgs/images3.jpg);
+background-image: url(imgs/imgnews2.png);
 text-align: justify;
 margin: 5px;
 font-size: 14px;
+line-height: 21px;
 }
 #maindiv-news img{
 	padding: 10px;

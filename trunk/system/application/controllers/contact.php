@@ -37,7 +37,7 @@ class contact extends Controller {
 	function send_advertise()
 		{
 		if(!empty($_POST['name'])){
-				$name=$_POST['name'];
+			$name=$_POST['name'];
 			$this->session->set_flashdata('name',$name);	 
 			}else {
 			$name1='Enter Your name';
@@ -80,29 +80,33 @@ class contact extends Controller {
 			$city=$_POST['city'];
 			$this->session->set_flashdata('city',$city);
 			}
-			$to='malleswari@tech-pundits.com';
+			
+				$mailid=$_POST['mailid'];
+				$name=$_POST['name'];
+				$phone=$_POST['phone'];
+				$city=$_POST['city'];
+				$location=$_POST['location'];
+				$messa=$_POST['message'];
+			
+			$to='advertise@subhodaya.com';
 			$subject='For Advertise';
 			$from=$mailid;
 			$from_name=$name;
 			
-			$message='Name:'.$name.',<br>phone:'.$phone.',<br>Email_id:'
-					.$mailid.',<br>City:'.$city.',<br>Location for add:'.$location.',<br>Message:'.$messa.'.';
+			$message='Name:'.$name.',<br>
+					 phone:'.$phone.',<br>
+					 Email_id:'.$mailid.',<br>City:'.$city.',<br>Location for add:'.$location.',<br>Message:'.$messa.'.';
 					
-			$status=$this->send_mail($to,$subject,$message,$from,$from_name);
-			if($status==1){
-				$success='Thankyou for Intresting to advertise with us.</br>Our marketing executiws will respond you 
+			$this->send_mail($to,$subject,$message,$from,$from_name);
+				/*$success='Thankyou for Intresting to advertise with us.</br>Our marketing executiws will respond you 
 				              with in 24 hours</br>.Thanku have a greate day!';
+				$this->session->set_flashdata('messagesent',$success);*/
+			$success='Thankyou for Intresting to advertise with us.';
 				$this->session->set_flashdata('messagesent',$success);
-				redirect(base_url().'contact/message_sent');
-			}else {
-				$error='please enter details again';
-				$this->session->set_flashdata('messagesent',$error);
-				redirect(base_url().'contact/message_sent');
-			}	
+				redirect(base_url().'contact/message_sent');	
 		}
 	function send_contact()
 	{
-		
 			if(!empty($_POST['name'])){
 				$name=$_POST['name'];
 			$this->session->set_flashdata('name',$name);	 
@@ -147,26 +151,18 @@ class contact extends Controller {
 			$city=$_POST['city'];
 			$this->session->set_flashdata('city',$city);
 			}
-			$to='malleswari@tech-pundits.com';
+			$to='contact@subhodaya.com';
 			$subject='For Contact';
-			$from='www.subhodaya.com';
+			$from=$mailid;
 			$from_name=$name;
 			
 			$message='Company:'.$company.',<br>Name:'.$name.',<br>phone:'.$phone.',<br>Email_id:'
 					.$mailid.',<br>City:'.$city.',<br>Message:'.$messa.'.';
 					
-			$status=$this->send_mail($to,$subject,$message,$from,$from_name);
-			if($status==1){
+				$this->send_mail($to,$subject,$message,$from,$from_name);
 				$success='Your message have been sent.</br>Thanyou for contact. Have a great day!';
 				$this->session->set_flashdata('messagesent',$success);
 				redirect(base_url().'contact/message_sent');
-			}else {
-				$error='please enter details again';
-				$this->session->set_flashdata('messagesent',$error);
-				redirect(base_url().'contact/message_sent');
-			}
-			
-			
 	}
 	function send_feedback(){
 	if(!empty($_POST['name'])){
@@ -203,8 +199,6 @@ class contact extends Controller {
 			$this->session->set_flashdata('message1',$mess);
 			redirect(base_url().'contact/feedback');
 			}
-			
-			
 			if(isset($_POST['company'])){
 			$company=$_POST['company'];
 			$this->session->set_flashdata('comp',$company);
@@ -213,7 +207,7 @@ class contact extends Controller {
 			$city=$_POST['city'];
 			$this->session->set_flashdata('city',$city);
 			}
-			$to='malleswari@tech-pundits.com';
+			$to='feedback@subhodaya.com';
 			$subject='For Feedback';
 			$from=$mailid;
 			$from_name=$name;
@@ -221,18 +215,10 @@ class contact extends Controller {
 			$message='<br>Name:'.$name.',<br>phone:'.$phone.',<br>Email_id:'
 					.$mailid.',<br>City:'.$city.',<br>Message:'.$messa.'.';
 					
-			$status=$this->send_mail($to,$subject,$message,$from,$from_name);
+			$this->send_mail($to,$subject,$message,$from,$from_name);
 			$success='Thanyou for your feedback. Have a great day!';
 				$this->session->set_flashdata('messagesent',$success);
-			if($status==1){
-				$success='Thanyou for your feedback. Have a great day!';
-				$this->session->set_flashdata('messagesent',$success);
 				redirect(base_url().'contact/message_sent');
-			}else {
-				$error='please enter details again';
-				$this->session->set_flashdata('messagesent',$error);
-				redirect(base_url().'contact/message_sent');
-			}
 		}
 	function send_mail($to,$subject,$message,$from,$from_name)
 	 {
@@ -242,7 +228,7 @@ class contact extends Controller {
 	 	$this->load->library('email');
 		$this->email->clear();
 		$this->email->from($from, $from_name);
-		$this->email->to('pradeep@tech-pundits.com');
+		$this->email->to($to);
 		//$this->email->cc('another@another-example.com');
 		//$this->email->bcc('them@their-example.com');
 		$html_message  = $this->load->view('email_layout/invitation_friend',$data,TRUE);

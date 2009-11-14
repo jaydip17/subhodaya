@@ -17,6 +17,33 @@ function toggle(el)
 myEl = document.getElementById(el);
 myEl.style.display = (myEl.style.display == 'block') ? 'none' : 'block';
 }
+function toggle1(el,ee)
+{
+	myE2 = document.getElementById(ee);
+	myE2.style.display='none';
+	myEl = document.getElementById(el);
+	myEl.style.display = (myEl.style.display == 'block') ? 'none' : 'block';
+}
+function Validate(){
+	 var x=document.getElementById("name").value;
+	  if(x=="")
+		{
+		  alert('Enter your name');
+		  return false;
+		}
+	  var y=document.getElementById("email").value;
+	  if(y=="")
+		  {
+		  alert('Enter your E-mail');
+		  return false;
+	  	  }
+	  var z=document.getElementByName("message").value;
+	  if(z=="")
+		  {
+		  alert('Enter your comment');
+		  return false;
+		  }
+}
 </script>
 <table width="99%">
 	<tr>
@@ -65,7 +92,7 @@ myEl.style.display = (myEl.style.display == 'block') ? 'none' : 'block';
 								$count=0; foreach ($cinema_type3 as $row):?>
 								<li id="mainnews" ><a href="<?=base_url();?>cinema/inner/<?=$row->id?>/<?=$row->type?>"><?=$row->heading?></a></li>
 								<?php
-								if($count==2){
+								if($count==4){
 								break;}
 								else{$count++;}
 								 endforeach;
@@ -98,8 +125,8 @@ myEl.style.display = (myEl.style.display == 'block') ? 'none' : 'block';
 			</div>
 			</div></td></tr>
 			<tr><td id="news_heading" class="heading">
-				<div  style="width: 50%;float: right;text-align: right;margin-right:3px;"><span id="newsheading"><a href="javascript:void(0)" onclick="toggle('c');"><?php if(isset($more['25'])){echo $more['25']->matter;}?></a></span></div>
-				<div style="width: 50%;margin-left:3px"><a href="javascript:void(0)" onclick="toggle('b')">Post your Comment(<?php if(isset($res)){echo $res;}?>)</div>
+				<div  style="width: 50%;float: right;text-align: right;margin-right:3px;"><span id="newsheading"><a href="javascript:void(0)" onclick="return toggle1('c','b');"><?php if(isset($more['25'])){echo $more['25']->matter;}?></a></span></div>
+				<div style="width: 50%;margin-left:3px"><a href="javascript:void(0)" onclick="return toggle1('b','c');">Post your Comment</a>&nbsp;&nbsp;<a href="javascript:void(0)" onclick="return toggle('a')"><?php if(isset($res)){echo '('.$res.')';}?></a></div>
 			</td></tr>
 			<tr>
 				<td><div style="border: 1px solid gray;background-color: #F9F8F3;display: none;" id='b'>
@@ -107,9 +134,9 @@ myEl.style.display = (myEl.style.display == 'block') ? 'none' : 'block';
 					<table width="80%" style="margin-top: 5px;" cellspacing="5">
 						<tr>
 							<td style="padding-left: 10px;"><span style="color: red">*</span>&nbsp;Name</td>
-							<td><input type='text' name='name'></td>
+							<td><input type='text' name='name' id="name" value=""></td>
 							<td align="center"><span style="color: red">*</span>&nbsp;Email</td>
-							<td align="left"><input type='text' name='email'></td>
+							<td align="left"><input type='text' name='email' id="email" value=""></td>
 						</tr>
 						<tr>
 							<?php if($seg==1){
@@ -123,7 +150,7 @@ myEl.style.display = (myEl.style.display == 'block') ? 'none' : 'block';
 						<td valign="top" align="right"><span style="color: red">*</span></td>
 							<td colspan="3" align="left"><textarea style="height: 100px;width: 95%" name="message" id="transl2"></textarea></td>
 						</tr>
-						<tr><td style="padding-left: 10px;" colspan="2"><input type='submit' name='submit' value="submit"></td>
+						<tr><td style="padding-left: 10px;" colspan="2"><input type='submit' name='submit' value="submit" onClick="return Validate()"></td>
 							<td align="right" colspan="2" style="font-weight: bold;"><a href="javascript:void(0)" onclick="toggle('a');">View comments</a></td>
 						</tr>
 					</table></form>
@@ -185,7 +212,7 @@ myEl.style.display = (myEl.style.display == 'block') ? 'none' : 'block';
 				<tr>
 					<td colspan="3" align="center"><textarea style="height: 100px;width: 95%" name="description" id="transl2"></textarea></td>
 				</tr>
-				<tr><td colspan="3" align="center"><input type="submit" name="send" value="Send" onClick="return Validate()"><input type="reset" ></td></tr>
+				<tr><td colspan="3" align="center"><input type="submit" name="send" value="Send" ><input type="reset" ></td></tr>
 				<tr><td valign="top" colspan="3"><div style="background-color: #B5E8FD;height:20px;"></div></td></tr>
 			</table>
 			</form>

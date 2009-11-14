@@ -268,7 +268,12 @@ class News_Model extends Model
     	$result=$this->db->get('comments');
     	return $result->result();
     }
-	
+	function count_comments($id){
+		$this->db->like('newsid', $id);
+		$this->db->from('comments');
+		$res=$this->db->count_all_results();
+		return $res;
+	}
 }
 
 ?>

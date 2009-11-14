@@ -87,7 +87,10 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
 <script type="text/javascript" src="<?=base_url()?>assets/js/telugu.js"></script>
 <?php } ?>
 <body onload="<? if(isset($onload)) echo $onload; ?>">
-
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="550" height="400" id="Presents" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="<?=base_url();?>assets/Presents.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#000000" /><embed src="Presents.swf" quality="high" bgcolor="#000000" width="550" height="400" name="Presents" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
 <table width="999"  border="0" align="center" cellpadding="0" cellspacing="0" >
   <tr>
     <td width="985"  align="center" valign="top"><table width="988" border="0" align="center" cellpadding="0" cellspacing="0">

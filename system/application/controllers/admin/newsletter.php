@@ -29,8 +29,8 @@ class Newsletter extends Controller {
 		
 		$config['base_url'] = base_url().'admin/newsletter'.'/index/';
 		$config['total_rows'] = $count1;
-		$config['per_page'] = '500';
-		$config['num_links'] = 50;
+		$config['per_page'] = '300';
+		$config['num_links'] = 70;
 		$config['uri_segment'] = 4;
 		$this->pagination->initialize($config);
 
@@ -56,14 +56,19 @@ class Newsletter extends Controller {
 	 	$para1=$this->lang->line('subhod_spec_para1');
 	 	$quas1=$this->lang->line('subhod_spec_quas1');
 	 	$quas2=$this->lang->line('subhod_spec_quas2');*/
-		$message='Thank you for subscribing with us.';
+		//$message='Thank you for subscribing with us.';
+		$message=$this->lang->line('subhodaya_ysjagan');
+		$more=$this->lang->line('enkachadavandi');
 		if(isset($_POST['addresses']))
      		{
-     		$subject="[SUBHODAYA.COM] News letter";
+     		//$subject="[SUBHODAYA.COM] News letter";
+     		$subject=$this->lang->line('subhodaya_sub');
 		 		    	$data = array (
 	 					'message'   => $message,
 	 					'subhodaya' => $subhodaya,
 	 					 'com'		=> $com,
+		 		    	'more'     =>  $more,
+		 		    	'subject'  =>  $subject
 		 		    /*	'para1'		=> $para1,
 		 		    	'para2'		=> $para2,
 		 		    	'quas1'		=> $quas1,
@@ -77,12 +82,13 @@ class Newsletter extends Controller {
 				$this->email->from('dontreply@subhodaya.com', 'Subhodaya.com');
 				$this->email->bcc($addresses); 
 				$this->email->to('admin@subhodaya.com');
-				$html_message  = $this->load->view('email_layout/invitation_friend',$data,TRUE);
+				$html_message  = $this->load->view('email_layout/news_sent',$data,TRUE);
 				$this->email->subject($subject);
 				$this->email->message($html_message); 
 				$status=$this->email->send();
 				
-				$this->email->print_debugger();
+				echo $this->email->print_debugger();
+			    exit;
 				$this->session->set_flashdata('messagesent','message sent successfully to selected contacts.');
 				redirect(base_url()."admin/newsletter");
 				

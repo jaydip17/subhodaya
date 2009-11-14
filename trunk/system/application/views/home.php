@@ -119,7 +119,7 @@ function test()
                           	<div id="demo" class="yui-navset" style="color: #EDF5FF;">
 	    						<ul class="yui-nav">
 							        <li class="selected"><a href="#tab1"><em style="padding: 5px 2px 0px 4px;"><span id="telugufont"><?=$more['10']->matter ?></span></em></a></li>
-							        <li><a href="#tab2"><em style="padding:5px 4px 0px 25px;"><span id="telugufont"><?=$more['11']->matter ?></span></em></a></li>
+							        <li><a href="#tab2" on><em style="padding:5px 4px 0px 25px;"><span id="telugufont"><?=$more['11']->matter ?></span></em></a></li>
 							        <li><a href="#tab3"><em style="padding:5px 4px 0px 20px;"><span id="telugufont"><?=$more['4']->matter ?></span></em></a></li>
 									<li><a href="#tab4"><em style="padding:5px 4px 0px 25px;"><span id="telugufont"><?=$more['8']->matter ?></span></em></a></li>
 	    						</ul>            

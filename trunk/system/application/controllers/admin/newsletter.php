@@ -50,30 +50,37 @@ class Newsletter extends Controller {
 	{
 		$subhodaya=$this->lang->line('subhodaya');
 	 	$com=$this->lang->line('com');
-	 	/*$heading=$this->lang->line('subhodaya_spec_heading');
-	 	$com=$this->lang->line('subhod_spec_matter');
-	 	$para2=$this->lang->line('subhod_spec_para2');
-	 	$para1=$this->lang->line('subhod_spec_para1');
-	 	$quas1=$this->lang->line('subhod_spec_quas1');
-	 	$quas2=$this->lang->line('subhod_spec_quas2');*/
-		//$message='Thank you for subscribing with us.';
-		$message=$this->lang->line('subhodaya_ysjagan');
-		$more=$this->lang->line('enkachadavandi');
+	 	$h1=$this->lang->line('subhodaya_heading1');
+	 	$h3=$this->lang->line('subhodaya_heading3');
+	 	$h4=$this->lang->line('subhodaya_heading4');
+	 	$h5=$this->lang->line('subhodaya_heading5');
+	 	$h2=$this->lang->line('subhodaya_heading2');
+	 	$h6=$this->lang->line('subhodaya_heading6');
+	 	$h7=$this->lang->line('subhodaya_heading7');
+	 	$h8=$this->lang->line('subhodaya_heading8');
+	 	$h9=$this->lang->line('subhodaya_heading9');
+	 	$h10=$this->lang->line('subhodaya_heading10');
+		$message='Thank you for subscribing with us.';
 		if(isset($_POST['addresses']))
      		{
      		//$subject="[SUBHODAYA.COM] News letter";
-     		$subject=$this->lang->line('subhodaya_sub');
+     		$subject="[SUBHODAYA.COM] Thank you for being with us!";
+     		//$subject=$this->lang->line('subhodaya_sub');
 		 		    	$data = array (
 	 					'message'   => $message,
 	 					'subhodaya' => $subhodaya,
 	 					 'com'		=> $com,
-		 		    	'more'     =>  $more,
-		 		    	'subject'  =>  $subject
-		 		    /*	'para1'		=> $para1,
-		 		    	'para2'		=> $para2,
-		 		    	'quas1'		=> $quas1,
-		 		    	'quas2'		=> $quas2,
-		 		    	'heading'	=> $heading*/
+		 		    	'subject'  =>  $subject,
+		 		    	'h1'	   => $h1,
+		 		    	'h2'	   => $h2,
+		 		    	'h3'	   => $h3,
+		 		    	'h4'	   => $h4,
+		 		    	'h5'	   => $h5,
+		 		    	'h6'	   => $h6,
+		 		    	'h7'	   => $h7,
+		 		    	'h9'	   => $h9,
+		 		    	'h8'	   => $h8,
+		 		    	'h10'	   => $h10,
 	 					);
 		 		      
 	     		$addresses=$_POST['addresses'];
@@ -88,7 +95,7 @@ class Newsletter extends Controller {
 				$status=$this->email->send();
 				
 				echo $this->email->print_debugger();
-			    exit;
+				exit;
 				$this->session->set_flashdata('messagesent','message sent successfully to selected contacts.');
 				redirect(base_url()."admin/newsletter");
 				

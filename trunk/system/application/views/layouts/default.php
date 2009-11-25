@@ -22,6 +22,9 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
 <meta name="classification" content="Leaders In Telugu News, AP Politics On The Net " />
 
 <link REL="SHORTCUT ICON" HREF="<?=base_url();?>assets/favicon.ico">
+ <!-- Begin AdsBanger code  -->
+<script type='text/javascript' src='http://www.adsbanger.com/adserver.php?channelid=450'></script>
+<!-- End AdsBanger code  --> 
 <!-- main style sheet -->
 <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?=base_url()?>feeds/news" />
 

@@ -22,17 +22,18 @@ class Ratings_model extends Model
         $tense = "votes"; // 0 votes
         
         // get votes, values, ips for the current rating bar
-        if (!$numbers = $this->findBy_id($id))
-        {
-            // insert the id in the DB if it doesn't exist already
-            $data = array(
-                'id' => $id,
-                'total_votes' => $count,
-                'total_value' => $current_rating,
-                'used_ips' => '',
-            );
-            $this->insert($data);
-        }
+		if (!$numbers = $this->findBy_id($id))
+		{
+			// insert the id in the DB if it doesn't exist already
+			$data = array(
+				'id' => $id,
+				'total_votes' => $count,
+				'total_value' => $current_rating,
+				'vote_limit'  => $units,        //set the vote limit
+				'used_ips' => '',
+			);
+			$this->insert($data);
+		}
         else
         {
             $count = $numbers['total_votes']; //how many votes total        
@@ -40,8 +41,16 @@ class Ratings_model extends Model
             $tense = ($count == 1) ? "vote" : "votes"; //plural form votes/vote
         }
         
-        $voted = (bool)$this->countBy_ip($ip, $id);
-
+		// MODIFICATION ADDED BELOW - THIS FROM ORIGINAL
+        //$voted = (bool)$this->countBy_ip($ip, $id);
+		
+		
+		$voted = '';
+		if (!$static){
+			$voted = (bool)$this->countBy_ip($ip, $id);
+		} 
+		
+		
         //more default values
         $rating_width = 0;
         $rating1 = 0;
@@ -71,20 +80,20 @@ class Ratings_model extends Model
         
         if ($static == 'static')
         {
-            return $this->load->view('static_rating_view', $data, TRUE);
+            return $this->load->view('static_rating', $data, TRUE);
         }
         else
         {
-            return $this->load->view('dynamic_rating_view', $data, TRUE);
+            return $this->load->view('dynamic_rating', $data, TRUE);
         }
     }
     
     function findBy_id($id)
-    {
-        $this->db->select('total_votes, total_value, used_ips');
-        $query = $this->db->getwhere('ratings', "id = '{$id}'");
-        return $query->row_array();
-    }
+	{
+		$this->db->select('total_votes, total_value, vote_limit, used_ips');
+		$query = $this->db->getwhere('ratings', "id = '$id'");
+		return $query->row_array();
+	} 
     
     function countBy_ip($ip, $id)
     {

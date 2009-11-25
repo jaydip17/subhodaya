@@ -4,6 +4,7 @@ class Gallery extends Controller {
 	function Gallery()
 	{
 		parent::Controller();
+		$this->load->model('ratings_model', 'ratings');
 	}
 	function index()
 	{

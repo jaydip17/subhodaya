@@ -21,15 +21,13 @@ class Newsletter extends Controller {
 		{	
 			$emails[]=$row->email;
 		}
-		
-	
 		$count=$this->Newsletter_Model->count($limit);
 		
 		$this->load->library('pagination');
 		
 		$config['base_url'] = base_url().'admin/newsletter'.'/index/';
 		$config['total_rows'] = $count1;
-		$config['per_page'] = '300';
+		$config['per_page'] = '750';
 		$config['num_links'] = 70;
 		$config['uri_segment'] = 4;
 		$this->pagination->initialize($config);
@@ -60,7 +58,8 @@ class Newsletter extends Controller {
 	 	$h8=$this->lang->line('subhodaya_heading8');
 	 	$h9=$this->lang->line('subhodaya_heading9');
 	 	$h10=$this->lang->line('subhodaya_heading10');
-		$message='Thank you for subscribing with us.';
+	 	$h11=$this->lang->line('subhodaya_heading11');
+		$message='Thank you for subscribing with us';
 		if(isset($_POST['addresses']))
      		{
      		//$subject="[SUBHODAYA.COM] News letter";
@@ -81,6 +80,7 @@ class Newsletter extends Controller {
 		 		    	'h9'	   => $h9,
 		 		    	'h8'	   => $h8,
 		 		    	'h10'	   => $h10,
+		 		    	'h11'	   => $h11,
 	 					);
 		 		      
 	     		$addresses=$_POST['addresses'];

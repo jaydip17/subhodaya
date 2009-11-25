@@ -363,7 +363,7 @@ function test()
 					</tr>
 					</table>
            <!--<img src="<?=base_url();?>assets/ads/Home1.jpg" width="215" height="196" />
-            --><img src="<?=base_url();?>assets/ads/Home2.jpg" width="219" height="100" style="margin-top:6px;"/>
+            --><img style="cursor:pointer;padding:3px 0px 0px 3px;" id="invite-img" src="<?=base_url();?>assets/imgs/inviteFriends.jpg" />
           </td>
           </tr>
       </table>
@@ -473,8 +473,32 @@ function test()
                     </tr>
                   </table>
                 </td>  <td align="center" valign="top">
-                <img style="cursor:pointer;padding-left:3px;" id="invite-img" src="<?=base_url();?>assets/imgs/inviteFriends.jpg" />
-                 <img src="<?=base_url();?>assets/ads/Home2.jpg" width="223" height="115" style="padding: 3px;"/><!--
+                	 <table cellpadding="0" cellspacing="0" height="196" width="200">
+					<tr>
+					<td width="7" height="30px" valign="top" align="right"><img src="<?=base_url();?>assets/imgs/beauty-top-left1.gif"  /></td>
+					<td  height="30px;" width="300px;" style="background-image:url(<?=base_url();?>assets/imgs/beauty-top-center1.gif);background-repeat: repeat-x" valign="bottom" align="left"><div style="margin-bottom: 1px;"><span id="newsheading"><img src="<?=base_url()?>assets/imgs/001.png" align="top"/>Birthday Wishes</span></div></td>
+					<td width="8" height="30px" valign="top"><img src="<?=base_url();?>assets/imgs/beauty-top-right1.gif"  alt="gg" /></td>
+					</tr>
+					<tr>
+					<td valign="top" colspan="3" style="background-image:url(<?=base_url();?>assets/imgs/KitchenTips-cr.gif);background-repeat:repeat-x; border:1px solid #0A70BB;border-bottom:0px; background-position: bottom;">
+					<div style="text-align: justify;padding: 2px;height: 150px;">
+          		<?php if(!empty($special_news)){
+          			$cat_id=1;
+          		if(file_exists("./assets/special_newsimg/news_img".$special_news['0']->id."_home_thumb.jpg")){?>
+                	<a href="<?=base_url()?>news/newsdetails/<?=$special_news['0']->id?>/<?=$cat_id?>/<?=1?>"><img src="<?=base_url()?>assets/special_newsimg/news_img<?=$special_news['0']->id?>_home_thumb.jpg" id="img" style="margin: 2px 10px 1px 2px;float: left;"></a>
+                	<?php }?>
+                	<font id="mainnews"><a href="<?=base_url()?>news/newsdetails/<?=$special_news['0']->id?>/<?=$cat_id?>/<?=1?>"><?=$special_news['0']->heading?></a></font><br>
+                	<font style="text-align: justify;text-align: left;font-size: 14px;"><?=$special_news['0']->summary?></font>
+                	</div>
+                	<div id="more-news-div" style="margin:0px 2px 2px 0px;"><a href="<?=base_url()?>news/newsdetails/<?=$special_news['0']->id?>/<?=$cat_id?>/<?=1?>"><?php if(isset($more['0'])){echo $more['1']->matter;}?></a></div>
+                	<?php }?>
+	                 </td>
+					</tr>
+					<tr>
+					<td colspan="3" width="224" height="7"><img src="<?=base_url();?>assets/imgs/beauty-bottom-img.gif" width="224px" height="7px "  /></td>
+					</tr>
+					</table>
+                 <!--
                 <table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0" >
          <tr>
              <td width="6" valign="top"><img src="<?=base_url();?>assets/imgs/tock-line.jpg" width="7" height="35" /></td>

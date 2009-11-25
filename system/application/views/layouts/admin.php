@@ -27,7 +27,7 @@ ddsmoothmenu.init({
 })
 </script>
 <SCRIPT language="JavaScript">
-<!--
+//<!--
 //window.location="javascript:(t13nb=window.t13nb||function(l){var%20t=t13nb,d=document,o=d.body,c=\"createElement\",a=\"appendChild\",w=\"clientWidth\",i=d[c](\"span\"),s=i.style,x=o[a](d[c](\"script\"));if(o){if(!t.l){t.l=x.id=\"t13ns\";o[a](i).id=\"t13n\";i.innerHTML=\"Loading%20transliteration\";s.cssText=\"z-index:99;font-size:18px;background:#FFF1A8;top:0\";s.position=d.all?\"absolute\":\"fixed\";s.left=((o[w]-i[w])/2)+\"px\";x.src=\"http://t13n.googlecode.com/svn/trunk/blet/rt13n.js?l=\"+l}}else%20setTimeout(t,500)})('te')";
 //-->
 </SCRIPT>
@@ -107,14 +107,21 @@ ddsmoothmenu.init({
 				<li><a href="<?=base_url();?>admin/player/flowplayer">Flowplayer</a></li>
 				<li><a href="<?=base_url();?>admin/contacts">Contacts</a></li>
 				<li><a href="<?=base_url();?>admin/newsletter">Newsletter</a></li>
+				<li> <a href="#">Birthday</a>
+					<ul>
+						<li><a href="<?=base_url();?>admin/birthdays">Add birthdays</a></li>
+						<li><a href="<?=base_url();?>admin/birthdays/get_birthday">View/Manage</a>
+						</li>
+					</ul>
+				</li>
 				<li> <a href="#">Cinema flash Images</a>
-				<ul>
-					<li><a href="<?=base_url()?>admin/slideimages/add" >Add Image</a>
-					</li>
-					<li><a href="<?=base_url()."admin/slideimages" ?>">View/Manage</a>
-					</li>
-				</ul>
-			</li>
+					<ul>
+						<li><a href="<?=base_url()?>admin/slideimages/add" >Add Image</a>
+						</li>
+						<li><a href="<?=base_url()."admin/slideimages" ?>">View/Manage</a>
+						</li>
+					</ul>
+				</li>
 			<li> <a href="#">Greeting flash Images</a>
 				<ul>
 					<li><a href="<?=base_url()?>admin/flash_greet" >Add Image</a>

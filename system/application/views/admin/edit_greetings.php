@@ -27,7 +27,7 @@ function fun1()
 
 $i=1;	
 
-echo form_open('admin/greetings/delete');
+echo form_open('admin/birthdays/delete');
  ?>
 <table align="center" width="50%" id="tableadmin">
 	<th colspan="3">
@@ -95,9 +95,7 @@ foreach ($details as $item):
 	  </tr>
 </table>
 <? }else { ?>
-	
 <h2>Add Greetings to display</h2>	
 <? }?>
-
 </form>
 

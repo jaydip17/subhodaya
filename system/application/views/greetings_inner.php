@@ -11,6 +11,8 @@
 							<img src="<?=base_url();?>assets/greetings/gree_img<?php if(isset($result)){echo $result['0']->id;}?>.jpg" style="border: 3px solid #939393;margin: 7px 0px 7px 0px;">
 					</td>
 				</tr>
+				<tr>
+				</tr>
 				<?php $flash_mesg=$this->session->flashdata('greetings');
 				if($flash_mesg!=''){
 				?>

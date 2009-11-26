@@ -3,11 +3,21 @@ class Subhodaya extends Controller {
 	var $layout = 'default'; 
 	function Subhodaya(){
 		parent::Controller();
-				$this->lang->load('telugu', 'telugu');
-				$this->load->helper(array('form', 'url','language'));
+		$this->load->library('Home', 'home');
+		$this->lang->load('telugu', 'telugu');
+		$this->load->helper(array('form', 'url','language'));
 				//$this->load->language('form_validation_lang');
 	}
 	function index(){
+		//for telugu content
+		//$sub_spec=$this->lang->line('subh_spec');
+		//$news_ardikam=$this->lang->line('news_ardikam');
+		//home_blocks
+		$right_block = $this->home->right_block('Aardikam');
+		$left_block = $this->home->left_block($sub_spec);
+		$middle_block = $this->home->middle_block('Actors');
+		$home_poll = $this->home->home_poll('Actors');
+		
 		$news_type7=$this->News_Model->get_newstype1(7);
 		$active_news=$this->News_Model->active_news(2);
 		$active_news1=$this->News_Model->active_news(1);
@@ -85,7 +95,11 @@ class Subhodaya extends Controller {
 					'gall_topviews'		=>  $gall_topviews,
 					'mahila_details_yoga'	=>$mahila_details_yoga,
 					'tabs'				=>	$tabs,
-					'special_news'		=>  $special_news
+					'special_news'		=>  $special_news,
+					'right_block'		=>	$right_block,
+					'left_block'		=>  $left_block,
+					'middle_block'		=>	$middle_block,
+					'home_poll'			=>	$home_poll
 					);
 		$this->load->view('home',$data);
 	}

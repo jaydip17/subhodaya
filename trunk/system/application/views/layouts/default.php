@@ -10,8 +10,7 @@
 <meta name="Keywords" content="subhodaya.com, leaders in telugu news, Latest Telugu News, Telugu News Website, Telugu Cinema News, Telugu Cinema Website, Telugu Mahila, Telugu Cinema Gallery, Telugu News On The Net,  Telugu Movie Trailers, Telugu Sahithi,
 The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting Cards" />	
 <meta name="copyright" content=" 2009 Subhodaya.com" />	
-<meta name="content-language" content="EN" />
-<meta type="" content="wmkKLOGf9JSw_6tj9tlcKlliNag"/>	
+<meta name="content-language" content="EN" />	
 <meta name="author" content="www.subhodaya.com" />	
 <meta name="resource-type" content="document" />	
 <meta name="distribution" content="GLOBAL" />	
@@ -22,62 +21,106 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
 <meta name="classification" content="Leaders In Telugu News, AP Politics On The Net " />
 
 <link REL="SHORTCUT ICON" HREF="<?=base_url();?>assets/favicon.ico">
- <!-- Begin AdsBanger code  -->
-<script type='text/javascript' src='http://www.adsbanger.com/adserver.php?channelid=450'></script>
-<!-- End AdsBanger code  --> 
-<!-- main style sheet -->
-<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?=base_url()?>feeds/news" />
-
-<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?=base_url();?>feeds/news" />
-
-<link href="<?=base_url();?>assets/style.css" rel="stylesheet" type="text/css" />
+<!-- for rss feeds -->
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?=base_url()?>feeds/news" />
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?=base_url();?>feeds/news" />
+<!-- main style sheet --><!--
+	<link href="<?=base_url();?>assets/css/news.css" rel="stylesheet" type="text/css" />
+    --><link  href="<?=base_url();?>assets/css/black.css" rel="stylesheet" type="text/css" />
+	<link id="theme" href="<?=base_url();?>assets/css/blue.css" rel="stylesheet" type="text/css" /> 
 <!-- for tabs js ans css -->
-<?php if(isset($tabs)){?>
-<script src="<?=base_url();?>assets/Scripts/swfobject_modified.js" type="text/javascript"></script>
-<script src="<?=base_url();?>assets/js/yahoo-dom-event.js" type="text/javascript"></script>
-<script type="text/javascript" src="<?=base_url();?>assets/js/element-min.js"></script>
-<script type="text/javascript" src="<?=base_url();?>assets/js/tabview-min.js"></script>
-<link href="<?=base_url();?>assets/fonts-min.css" rel="stylesheet" type="text/css" />
-<link href="<?=base_url();?>assets/tabview.css" rel="stylesheet" type="text/css" />
-<?php }?>
-<!-- video and cinema page tabs -->
-<?php if(isset($sprytabs)) {?>
-<script src="<?=base_url();?>assets/SpryAssets/SpryTabbedPanels.js" type="text/javascript" ></script>
-
-<?php }?>
-<!-- follow us -->
-<!-- color box -->
-<link href="<?=base_url();?>assets/colorbox.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="<?=base_url()?>assets/js/jquery.min.js"></script>
-<script type="text/javascript" src="<?=base_url()?>assets/js/colorbox/jquery.colorbox.js"></script>
-<script type="text/javascript">
-			$(document).ready(function(){
-				//Examples of how to assign the ColorBox event to elements
-				$(".feedback").colorbox({width:"550px", height:"350px", iframe:true});
-				$(".contact").colorbox({width:"550px", height:"350px", iframe:true});
-				$(".advertise").colorbox({width:"550px", height:"350px", iframe:true});
-				$(".sendtofriend").colorbox({width:"550px", height:"350px", iframe:true});
-				//Example of preserving a JavaScript event for inline calls.
-				$("#newsletter-img").colorbox({href:"<?=base_url();?>newsletter/show_subscribe_form",width:"500px", height:"180px",iframe:true});
-			    $("#invite-img").colorbox({href:"<?=base_url();?>admin/contacts",width:"550px", height:"450px",iframe:true});
-				$("#importcontacts").click(function(){ 
-					$("#advertise").colorbox({href:"<?=base_url();?>newsletter/show_subscribe_form"}); 
-				});
+	<script src="<?=base_url();?>assets/jq.tabs/jquery-1.1.3.1.pack.js" type="text/javascript"></script>
+	<script src="<?=base_url();?>assets/jq.tabs/jquery.history_remote.pack.js" type="text/javascript"></script>
+	<script src="<?=base_url();?>assets/jq.tabs/jquery.tabs.pack.js" type="text/javascript"></script>
+	<script type="text/javascript">
+            $(function() {
+                $('#container-1').tabs({ remote: true ,fxShow: { height: 'show', opacity: 'show' }, 		fxSpeed: 'normal' });
+                $('#container-2').tabs({ remote: true ,fxShow: { height: 'show', opacity: 'show' }, fxSpeed: 'normal' });
+                $('#container-3').tabs({ remote: true ,fxShow: { height: 'show', opacity: 'show' }, fxSpeed: 'normal' });
+                $('#container-4').tabs({ remote: true ,fxShow: { height: 'show', opacity: 'show' }, fxSpeed: 'normal' });
 			});
-			
+	</script>
+	<script type="text/javascript">
+				var csslink ="assets/css";
+				var styleurl = '';
+				function checkCookie()
+				{
+					 sthemetype = getCookie('theme');
+					 if (sthemetype!=null && sthemetype!="")
+					   {
+						 changeTheme(sthemetype);
+					   }
+					 else
+					   {
+						 
+						
+					   }
+				}
+				function changeTheme(themename)
+				{
+					 setCookie('theme',themename,365);
+					styleurl = csslink+'/'+themename+'.css';
+					document.getElementById('theme').href = styleurl;
+
+				}
+				function getCookie(c_name)
+				{
+				if (document.cookie.length>0)
+				  {
+				  c_start=document.cookie.indexOf(c_name + "=");
+				  if (c_start!=-1)
+					{
+					c_start=c_start + c_name.length+1;
+					c_end=document.cookie.indexOf(";",c_start);
+					if (c_end==-1) c_end=document.cookie.length;
+					return unescape(document.cookie.substring(c_start,c_end));
+					}
+				  }
+				return "";
+				}
+
+				function setCookie(c_name,value,expiredays)
+				{
+				var exdate=new Date();
+				exdate.setDate(exdate.getDate()+expiredays);
+				document.cookie=c_name+ "=" +escape(value)+
+				((expiredays==null) ? "" : ";expires="+exdate.toGMTString());
+				}
 		</script>
+         <style type="text/css" media="screen, projection">
 
-<!-- thick box -->
-<!--<script type="text/javascript" src="<?=base_url()?>assets/js/jquery.min.js"></script>-->
-<!--<script type="text/javascript">-->
-<!--var tb_pathToImage = "<?=base_url()?>assets/imgs/loadingAnimation.gif";-->
-<!--</script>-->
-<!--<script type="text/javascript" src="<?=base_url()?>assets/js/thickbox-compressed.js"></script>-->
-<link rel="stylesheet" href="<?=base_url()?>assets/thickbox.css" type="text/css" media="screen" />
-<!-- start tabs -->
-
-
-<!-- end tabs -->
+            /* Not required for Tabs, just to make this demo look better... */
+            body {
+                font-size: 16px; /* @ EOMB */
+            }
+            * html body {
+                font-size: 100%; /* @ IE */
+            }
+            body * {
+                font-size: 87.5%;
+                font-family: "Trebuchet MS", Trebuchet, Verdana, Helvetica, Arial, sans-serif;
+            }
+            body * * {
+                font-size: 100%;
+            }
+            h1 {
+                margin: 1em 0 1.5em;
+                font-size: 18px;
+            }
+            h2 {
+                margin: 2em 0 1.5em;
+                font-size: 16px;
+            }
+            p {
+                margin: 0;
+            }
+            pre, pre+p, p+p {
+                margin: 1em 0 0;
+            }
+            code {
+                font-family: "Courier New", Courier, monospace;
+            }
+        </style> 
 <script src="<?=base_url();?>assets/js/SpryDOMUtils.js"></script>
 <script src="<?=base_url();?>assets/js/tp_unobtrusive.js"></script>
 <script type="text/javascript" src="<?=base_url();?>assets/js/pollLoader.js"></script>
@@ -91,61 +134,59 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
 <script type="text/javascript" src="<?=base_url()?>assets/js/telugu.js"></script>
 <?php } ?>
 <body onload="<? if(isset($onload)) echo $onload; ?>">
-
-<table width="999"  border="0" align="center" cellpadding="0" cellspacing="0" >
-  <tr>
-    <td width="985"  align="center" valign="top"><table width="988" border="0" align="center" cellpadding="0" cellspacing="0">
-      <tr>
-        <td width="936" valign="top" class="topline" align="right">
-        <script type="text/javascript" src="<?=base_url();?>assets/js/dropdowncontent.js"></script>
-			<p><a href="http://www.subhodaya.com" id="searchlink" rel="subcontent" ><img src="<?=base_url();?>assets/imgs/follow.png" border="0"></a></p>
-			<DIV id="subcontent" style="position:absolute; visibility: hidden; border: 0px solid orange; background-color: white; width: 96px;height: 60px;">
-			<div><img src="<?=base_url();?>assets/imgs/top_linef.gif"></div>
-			<div style="border-left: 1px solid #0F73BE;border-right: 1px solid #0F73BE;height: 25px;">
-				<table width="100%"><tr><td align="right" style="font-weight: bold;"><a href="https://twitter.com/subhodaya" target="_blank">Twitter</a></td>
-				<td align="left"><a href="https://twitter.com/subhodaya"><img src="<?=base_url();?>assets/imgs/tw.png" border="0"></img></a></td></tr></table>
+<center>
+<div style="width:963px; background-color:#fff;border:0px dotted #000">
+	<div id="header" style="border:0px solid #ccc; margin-bottom:0px;float:left;background-color:#fff; width:100%">
+		<div id="change_lang" style="height:34px">
+			<div id="make_myhome" style="float:left;margin-top:5px;margin-bottom:5px;">
+				<a href="" style="color:#646464; margin-left:5px;font-size:13px">Make Subhodaya.com! my home page</a>
 			</div>
-			<div><img src="<?=base_url();?>assets/imgs/bootm_linef.gif" align="top"></div>
-			</DIV>
-			<script type="text/javascript">
-			//Call dropdowncontent.init("anchorID", "positionString", glideduration, "revealBehavior") at the end of the page:
-			dropdowncontent.init("searchlink", "right-bottom", 50, "mouseover")
-			</script>
-        </td>
-      </tr>
-</table>
-      <table width="96%"  border="0" align="center" cellpadding="0" cellspacing="0" >
-	  
-        <tr>
-          <td  height="0px" style="padding-bottom: 0px;">
-          <div   style="padding-top:0px;float: left;" id="hometabs">
-        <a href="<?=base_url();?>"><img src="<?=base_url();?>assets/imgs/logo_v1.png" style="padding: 0px 1px 0px 1px;float: left;width: 235px;" border="0"></img></a>
-     <div id="tabs" style="text-align: right;">
-			  <ul style="padding-top: 35px;" >
-			
-			<? $current_url = current_url();
-			   
-			?>
-
-			    <li><a href="<?=base_url();?>"><span><?=$more['2']->matter?></span></a></li>
-			    <li <?if (eregi('news', $current_url)) {echo "id='current'";} ?> ><a href="<?=base_url();?>news/"><span><?=$more['3']->matter?></span></a></li>
-			    <li <?if (eregi('cinema', $current_url)) {echo "id='current'";} ?> ><a href="<?=base_url();?>cinema/"><span><?=$more['4']->matter?></span></a></li>
-			    <li <?if (eregi('video', $current_url)) {echo "id='current'";} ?>><a href="<?=base_url();?>video/"><span><?=$more['5']->matter?></span></a></li>
-			    <li <?if (eregi('gallery', $current_url)) {echo "id='current'";} ?>><a href="<?=base_url();?>gallery/"><span><?=$more['6']->matter?></span></a></li>
-			    <li <?if (eregi('greetings', $current_url)) {echo "id='current'";} ?>><a href="<?=base_url();?>greetings/"><span><?=$more['7']->matter?></span></a></li>
-			    <li <?if (eregi('mahila', $current_url)) {echo "id='current'";} ?>><a href="<?=base_url();?>mahila/"><span><?=$more['8']->matter?></span></a></li>
-			    <li <?if (eregi('sahithi', $current_url)) {echo "id='current'";} ?>><a href="<?=base_url();?>sahithi/"><span><?=$more['9']->matter?></span></a></li>
-
-			  </ul>
-	</div>
+			<div id="language" style="color:#3398FF;margin-top:5px;margin-right:5px;margin-bottom:5px; font-size:13px;float:right">
+				<font style="color:#646464">Change Language: </font>
+				<a href="" id="ln">English</a>|
+				<a href="" id="ln">Hindi</a>|
+				<a href="" id="ln">Tamil</a>|
+				<a href="" id="ln">Telugu</a>|
+				<a href="" id="ln">Unknown</a>|
+				<a href="" id="ln">Punjabi</a>|
+				<a href="" id="ln">Unknown</a>|
+				<a href="" id="ln">Kannada</a>|
+				<a href="" id="ln">Marati</a>|
+				<a href="" id="ln">Malayalam</a>
 			</div>
-          </td>
-        </tr>
-          <tr>
-          <td id="scrollingnews" style="border-left: 2px solid #0A70BB;border-right: 2px solid #0A70BB;">
-        
-           <script language="JavaScript1.2">
-
+		</div>
+		<div id="logo_add" style="height:80px; margin-left:5px;margin-bottom:5px">
+			<a href="#" style="float:left">
+					<div id="logo"></div>
+			</a>
+			<a href="#" style="float:right; margin-right:5px;">
+				<img src="<?=base_url()?>assets/home_images/ads/header_ad.jpg" border="0">
+			</a>
+		</div>
+		<div id="menu">
+        	<ul class="solidblockmenu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="news.html" class="current">Varthalu</a></li>
+                <li><a href="#">Cinema</a></li>
+                <li><a href="#">video</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Greetings</a></li>
+            	<li><a href="#">Mahila</a></li>
+                <li><a href="#">Sahithi</a></li>
+                <li><a href="#">Kridalu</a></li>
+           </ul>
+        	<div id="ch_color">
+              <span style="color:white;">Change color:</span>
+              <span><img src="<?=base_url();?>assets/image/1cr.gif"  onclick="changeTheme('blue');" /></span>
+              <span><img src="<?=base_url();?>assets/image/2cr.gif"  onclick="changeTheme('yellow');" /></span>
+              <span><img src="<?=base_url();?>assets/image/3cr.gif"  onclick="changeTheme('ornge');" /></span>
+              <span><img src="<?=base_url();?>assets/image/4cr.gif"  onclick="changeTheme('green');" /></span>
+              <span><img src="<?=base_url();?>assets/image/5cr.gif"  onclick="changeTheme('red');" /></span>
+              <span><img src="<?=base_url();?>assets/image/6cr.gif"  onclick="changeTheme('black');" /></span>
+          	</div>
+		</div>
+		<div style="height:25px;background-color:#FDF7D5;margin-bottom:5px;">
+					<script language="JavaScript1.2">
 //Specify the marquee's width (in pixels)
 var marqueewidth = "930px"
 //Specify the marquee's height
@@ -153,7 +194,7 @@ var marqueeheight="25px"
 //Specify the marquee's marquee speed (larger is faster 1-10)
 var marqueespeed=2
 //configure background color:
-var marqueebgcolor="#FFFFFF"
+var marqueebgcolor=""
 //Pause marquee onMousever (0=no. 1=yes)?
 var pauseit=1
 //Specify the marquee's content (don't delete <nobr> tag)
@@ -225,32 +266,72 @@ document.write('</td></table>')
 }
 }
 </script>
-
+					</div>
 <?=(isset($bread_crumb)) ? $bread_crumb : '' ?>
-</td>
-        </tr>
-     <tr><td width="100%"  align="left" style="border: 2px solid #0A70BB;border-top: 0px solid #0A70BB;padding:0px 0px 25px 5px">
 {yield}
-  
-    <div id="footer">
+<div id="hr" style="background-color:#fff; float:left; width:100%">
+	<div style="width:95%">
+		<div id="" style="width:100%; float:left">
+			<hr></hr>
+		</div>
+		<div style="width:100%; float:left">
+			<div id="" style="float:left; width:162px">
+				<span style="color:#FF0D16;font-size:16px"><u>News Partnars</u></span>
+				<div style="color:#0101FF;height:26px">Sakshi, Eenadu</div>
+				<div style="color:#0101FF;height:26px">Andhrajyothy,</div>
+				<div style="color:#0101FF;height:26px">Vaartha, Surya</div>
+				<div style="color:#0101FF;height:26px">Andhrabhoomi</div>
+				<div style="color:#0101FF;height:26px">Prajashakthi</div>
+			</div>
+			<div id="" style="float:left; width:200px">
+				<span style="color:#008000;font-size:16px"><u>TV Partnars</u></span>
+				<div style="color:#0101FF; height:26px">Sakshi, TV-9, NTV</div>
+				<div style="color:#0101FF; height:26px">TV-5, i-NEWS	</div>
+				<div style="color:#0101FF; height:26px">ETV-2, HMTV</div>
+				<div style="color:#0101FF; height:26px">STUDIO N, TV-1</div>
+				<div style="color:#0101FF; height:26px">Maha TV, Z-24 Gantalu</div>
+			</div>
+			<div id="" style="float:left; width:220px">
+				<span style="color:#FF00FF; font-size:16px"><u>TV Programs</u></span>
+				<div style="color:#0101FF; line-height:25px">Sakshi, Gemini, ETV</div>
+				<div style="color:#0101FF;line-height:25px">Maa.TV, Z-Telugu</div>
+				<div style="color:#810081; margin-top:10px;font-size:16px"><u>Technical Partnars</u></div>
+				<div style="margin-top:5px">
+					<a href="http://www.tech-pundits.com/">
+						<img src="<?=base_url()?>assets/image/tech_pundits.jpg" border="0">
+					</a>
+				</div>
+				supports@tech-pundits.com
+			</div>
+			<div id="" style="float:left;width:140px;">	
+				<div style="margin-top:10px; margin-bottom:10px">
+				<a href="#"><img src="<?=base_url()?>assets/image/facebook.jpg" border="0"></a>
+				</div>
+				<div><a href="#"><img src="<?=base_url()?>assets/image/rss.jpg" border="0"></a></div>
+			</div>
+			<div id="" style="float:left;width:190px;">
+				<div><a href="#"><img src="<?=base_url()?>assets/image/twitter.jpg" border="0"></a></div>
+			</div>
+		</div>
+		<div id="" style="width:100%; float:left"><hr></hr></div>
+	</div>
+</div>
+<div id="footer" style="background-color:#fff;float:left; width:100%">
+	<div id="" style="color:#359BFF; height:25px">
+		<span style="color:#05AEF1;font-weight:bold">Subhodaya</span><span style="color:#FE0000; font-weight:bold">.</span><span style="color:#016CB4; font-weight:bold">com</span><span style="color:#2C5F96;font-weight:bold">! News In:</span>
+		English | Hindi | Tamil | Hujarathi | Punjabi | unknown | Kannada | Marati | Malayalam
+	</div>
+	<div id="" style="color:#359BFF; height:25px">Sitemap | Feedback | Advertise With Us | Contact Us</div>
+	<div id="" style="color:#359BFF; height:25px">Copyright &copy; 2009. <span style="color:#05AEF1;font-weight:bold">Subhodaya</span><span style="color:#FE0000;font-weight:bold">.</span><span style="color:#016CB4;font-weight:bold">com</span> All rights reserved.</div>
+	<div id="footer_menu" style="color:#fff">
+		<div id="footer_left"></div>	
+		<div id="footer_right"></div>
+		<div style="line-height:30px;">Home | Varthalu | Cinema | Video | Gallery | Greetings | Mahila | Sahithi | Sampradinchu | Feedback | Advertise</div>
+	</div>
+</div>
+</center>  
 
-    <a href="<?=base_url();?>"><?=$more['2']->matter?></a>|
-    <a href="<?=base_url();?>news/"><?=$more['3']->matter?></a>|
-     <a href="<?=base_url();?>cinema/"><?=$more['4']->matter?></a>|
-      <a href="<?=base_url();?>video/"><?=$more['5']->matter?></a>|
-      <a href="<?=base_url();?>gallery/"><?=$more['6']->matter?></a>|
-      <a href="<?=base_url();?>greetings/"><?=$more['7']->matter?></a>|
-      <a href="<?=base_url();?>mahila/"><?=$more['8']->matter?></a>|
-      <a href="<?=base_url();?>sahithi/"><?=$more['9']->matter?></a>|
-      <a href="<?=base_url()?>contact" class="contact" title="Contact Us"><?=$more['40']->matter?></a>|
-      <a class="feedback" href="<?=base_url()?>contact/feedback" title="Feedback"><?=$more['41']->matter?></a>|
-      <a href="<?=base_url()?>contact/advertise" class="advertise" title="Advertise With Us"><?=$more['42']->matter?></a>
-    </div>
-   
- </td>
- </tr>
-</table>
-</table>
+<!-- script -->
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));

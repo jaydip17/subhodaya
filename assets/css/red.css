@@ -1,0 +1,393 @@
+@charset "utf-8";
+body {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 10px;
+	font-style: normal;
+	color: #000;
+	margin: 0px;
+	padding: 0px;
+	background-color:#C0B5B5;
+	
+}
+#header
+{
+	border:1px solid #ccc; 
+	border-bottom: 0px;
+	margin-bottom:0px;
+	float:left;
+	background-color:#fff; 
+	width:100%;
+}
+a{
+color:#228BEE; font-size:12px; text-decoration:none;
+}
+.newsletter
+{
+background-color:#BDE0E9;
+border-top:1px solid #A9CCDE;
+border-bottom:1px solid #A9CCDE;
+}
+.ardikam{
+border-top:1px solid #B57171;border-left:1px solid #B57171;border-right:1px solid #B57171;
+}
+ul{
+	margin:0px;
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left:25px;
+}
+li{
+	color:#228BEE;
+}
+#ln{
+	color:#3398FF; font-size:13px; text-decoration:none;
+}
+#logo{
+	background-image:url(../image/logo.png);
+	height:62px;
+	width:263px;
+}
+#menu{
+	background-image:url(../image/img4.gif);
+	background-repeat:repeat-x;
+	background-position:0px -1px;
+	height:29px;
+	width:100%;
+	margin-bottom:2px;
+}
+#sub_window_title{
+	background-image:url(../image/img4.gif);
+	background-repeat:repeat-x;
+	background-position:0px -61px;
+	width:100%;
+	height:29px;
+}
+#sub_window_title_tab{
+	background-image:url(../image/img4.gif);
+	background-repeat:repeat-x;
+	background-position:0px -61px;
+	width:110px;
+	height:29px;
+}
+#title_left_curve{
+	background-image:url(../image/img4.gif);
+	background-position:0px -32px;
+	background-repeat:no-repeat;
+	width:11px;
+	height:29px;
+	float:left;
+}
+#title_right_curve{
+	background-image:url(../image/img4.gif);
+	background-position:0px -90px;
+	background-repeat:no-repeat;
+	width:12px;
+	height:29px;
+	float:right;
+}
+#sub_window_content{
+	padding-top:0px;
+	margin-top:0px;
+	border-left:1px solid #B57171;
+	border-right:1px solid #B57171;
+}
+#sub_window_footer{
+	height:8px;
+	width:100%;
+	background-image:url(../image/img4.gif);
+	background-repeat:repeat-x;
+	background-position:0px -142px;
+}
+#footer_left_curve{
+	background-image:url(../image/img4.gif);
+	background-position:0px -127px;
+	width:12px;
+	height:8px;
+	float:left;
+}
+#footer_right_curve{
+	background-image:url(../image/img4.gif);
+	background-position:0px -171px;
+	width:12px;
+	height:8px;
+	float:right;
+}
+#news_window_title{
+	background-image:url(../image/img4.gif);
+	background-repeat:repeat-x;
+	background-position:0px -229px;
+	width:100%;
+	height:24px;
+}
+#news_title_left_curve{
+	background-image:url(../image/img4.gif);
+	background-position:0px -197px;
+	width:11px;
+	height:24px;
+	float:left;
+}
+#news_title_right_curve{
+	background-image:url(../image/img4.gif);
+	background-position:0px -261px;
+	width:11px;
+	height:24px;
+	float:right;
+}
+#news_window_content{
+	border-left:1px solid #757575;
+	border-right:1px solid #757575;
+	border-top:1px solid #757575;
+	background-color:#F6F6F6;
+}
+#newslet_letter{
+	height:81px;
+	width:100%;
+}
+#newslet_left{
+	background-image:url(../image/news_letter.png);
+	background-repeat:none;
+	background-position:0px -0px;
+	height:81px;
+	width:5px;
+	float:left;
+}
+#newslet_middle{
+	background-image:url(../image/news_letter.png);
+	background-repeat:repeat-x;
+	background-position:0px -105px;
+	height:81px;
+	width:155px;
+	float:left;
+}
+#newslet_right{
+	background-image:url(../image/news_letter.png);
+	background-repeat:none;
+	background-position:0px -212px;
+	height:81px;
+	width:5px;
+	float:left;
+}
+#top_img{
+	background-image:url(../image/news_que.png);
+	background-repeat:none;
+	background-position:0px 0px;
+	height:6px;
+	width:100%;
+}
+#bot_img{
+	background-image:url(../image/news_que.png);
+	background-repeat:none;
+	background-position:0px -7px;
+	height:6px;
+	width:100%;
+}
+#news_window_footer{
+	height:8px;
+	width:100%;
+	background-image:url(../image/img4.gif);
+	background-repeat:repeat-x;
+	background-position:0px -309px;
+
+}
+#news_footer_left_curve{
+	background-image:url(../image/img4.gif);
+	background-position:0px -332px;
+	width:12px;
+	height:8px;
+	float:left;
+}
+#news_footer_right_curve{
+	background-image:url(../image/img4.gif);
+	background-position:0px -290px;
+	width:12px;
+	height:8px;
+	float:right;
+}
+
+#footer_left{
+	background-image:url(../image/footer.png);
+	background-position:0px 0px;
+	width:18px;
+	height:32px;
+	float:left;
+}
+#footer_menu{
+	background-image:url(../image/footer.png);
+	background-position:0px -33px;
+	background-repeat:repeat-x;
+	width:100%;
+	height:32px;
+}
+#footer_right{
+	background-image:url(../image/footer.png);
+	background-position:0px -67px;
+	width:18px;
+	height:32px;
+	float:right;
+}
+#enati_vishe{
+color:#563BBF; font-size:14px; line-height:29px;
+text-align:left;
+font-weight:600;
+}
+#special{
+color:#563BBF; 
+font-size:14px;
+line-height:30px;
+}
+#sangeetham {
+	list-style-image: url(../image/side.gif);
+}
+/* for cilk more news */
+#news_more
+{
+color:#AEAEAE;
+font-size:10px;
+text-align:right;
+margin-right:4px;
+}
+#news_more a
+{
+color:#AEAEAE;
+font-size:10px;
+text-align:right;
+margin-right:4px;
+text-decoration:none;
+}
+/* main menu */
+.solidblockmenu{
+margin: 0;
+padding: 0;
+float: left;
+font:  13px Arial;
+overflow: hidden;
+margin-bottom: 1em;
+border-width: 0px 0;
+}
+
+.solidblockmenu li{
+display: inline;
+color: #FFF;
+}
+
+.solidblockmenu li a{
+float: left;
+padding: 0px 8px;
+text-decoration: none;
+height:26px;
+color: #FFF;
+margin-top:7px;
+text-align: center;
+}
+
+.solidblockmenu li a:visited{
+}
+.solidblockmenu li a:hover, .solidblockmenu li .current{
+color: rgb(190, 191, 59);
+}
+#ch_color
+{
+	float:right;
+	margin-top:5px;
+	padding-right:4px;
+	color:#FFF;
+	width:auto;
+}
+/* newspage */
+/* Caution! Ensure accessibility in print and other media types... */
+@media projection, screen { /* Use class for showing/hiding tab content, so that visibility can be better controlled in different media types... */
+    .tabs-hide {
+        display: none;
+    }
+}
+
+/* Hide useless elements in print layouts... */
+@media print {
+    .tabs-nav {
+        display: none;
+    }
+}
+
+/* Skin */
+.tabs-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 0;
+}
+.tabs-nav:after { /* clearing without presentational markup, IE gets extra treatment */
+    display: block;
+    clear: both;
+    content: " ";
+}
+.tabs-nav li {
+    float: left;
+    margin: 0 0 0 0;
+    min-width: 84px; /* be nice to Opera */
+}
+.tabs-nav a, .tabs-nav a span {
+    display: block;
+    padding: 0px 10px;
+    background: url(../image/tab_4.png) no-repeat;
+}
+.tabs-nav a {
+    position: relative;
+    top: 1px;
+    z-index: 2;
+    padding-left: 0;
+    color: #27537a;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap; /* required in IE 6 */    
+}
+.tabs-nav .tabs-selected a {
+    color: #E82020;
+}
+.tabs-nav .tabs-selected a, .tabs-nav a:hover, .tabs-nav a:focus, .tabs-nav a:active {
+    background-position: 100% -127px;
+    outline: 0; /* prevent dotted border in Firefox */
+}
+.tabs-nav a, .tabs-nav .tabs-disabled a:hover, .tabs-nav .tabs-disabled a:focus, .tabs-nav .tabs-disabled a:active {
+    background-position: 100% -100px;
+}
+.tabs-nav a span {
+    width: 60px; /* IE 6 treats width as min-width */
+    min-width: 64px;
+    height: 18px; /* IE 6 treats height as min-height */
+    min-height: 18px;
+    padding-top: 6px;
+    padding-right: 0;
+}
+*>.tabs-nav a span { /* hide from IE 6 */
+    width: auto;
+    height: auto;
+}
+.tabs-nav .tabs-selected a span {
+    padding-top: 7px;
+}
+.tabs-nav .tabs-selected a span, .tabs-nav a:hover span, .tabs-nav a:focus span, .tabs-nav a:active span {
+    background-position: 0px -27px;
+}
+.tabs-nav a span, .tabs-nav .tabs-disabled a:hover span, .tabs-nav .tabs-disabled a:focus span, .tabs-nav .tabs-disabled a:active span {
+    background-position: 0 0;
+}
+.tabs-nav .tabs-selected a:link, .tabs-nav .tabs-selected a:visited, .tabs-nav .tabs-disabled a:link, .tabs-nav .tabs-disabled a:visited { /* @ Opera, use pseudo classes otherwise it confuses cursor... */
+    cursor: text;
+}
+.tabs-nav a:hover, .tabs-nav a:focus, .tabs-nav a:active { /* @ Opera, we need to be explicit again here now... */
+    cursor: pointer;
+}
+.tabs-nav .tabs-disabled {
+    opacity: .4;
+}
+.tabs-container {
+    border: 1px solid #B57171;
+    padding: 1em 8px;
+    background: #fff; /* declare background color for container to avoid distorted fonts in IE while fading */
+}
+.tabs-loading em {
+    padding: 0 0 0 20px;
+    background: url(../image/loading.gif) no-repeat 0 50%;
+}

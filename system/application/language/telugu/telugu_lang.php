@@ -1,13 +1,14 @@
 <?php
-
-$lang['galley_mail_succ'] 				= 	"మెసేజ్ పంపబడింది ";
-$lang['gretting_mail_succ'] 			= 	"మెసేజ్ పంపబడింది";
-$lang['cinema_mail_succ'] 			    = 	"మెసేజ్ పంపబడింది ";
-$lang['news_mail_succ'] 			    = 	"మెసేజ్ పంపబడింది";
-$lang['mahila_mail_succ'] 			    = 	"మెసేజ్ పంపబడింది";
-$lang['subhodaya'] 			    		= 	"శుభోదయ";
-$lang['com'] 			    			= 	"కామ్";
-$lang['subhodaya_special'] 			    = 	"శుభోదయ స్పెషల్ ";
+$lang['subh_spec'] 			    			= 	"శుభోదయ. కామ్ ప్రత్యేకం";
+$lang['news_ardikam'] 			    		= 	"ఆర్దికం";
+$lang['galley_mail_succ'] 					= 	"మెసేజ్ పంపబడింది ";
+$lang['gretting_mail_succ'] 				= 	"మెసేజ్ పంపబడింది";
+$lang['cinema_mail_succ'] 			    	= 	"మెసేజ్ పంపబడింది ";
+$lang['news_mail_succ'] 			    	= 	"మెసేజ్ పంపబడింది";
+$lang['mahila_mail_succ'] 			    	= 	"మెసేజ్ పంపబడింది";
+$lang['subhodaya'] 			    			= 	"శుభోదయ";
+$lang['com'] 			    				= 	"కామ్";
+$lang['subhodaya_special'] 			    	= 	"శుభోదయ స్పెషల్ ";
 $lang['subhodaya_heading1'] 			    = 	" చంద్రబాబు కి 'ముని' శాపం  ";
 $lang['subhodaya_heading2'] 			    = 	"ఏదీ నిఘా ? ";
 $lang['subhodaya_heading3'] 			    = 	"అవినీతి చెద !";

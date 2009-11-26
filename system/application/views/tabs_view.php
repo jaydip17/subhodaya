@@ -1,0 +1,1 @@
+<?= (isset($tabs_block)) ? $tabs_block : '' ?>

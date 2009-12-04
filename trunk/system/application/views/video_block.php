@@ -1,0 +1,1 @@
+<?= (isset($videos)) ? $videos : '' ?>

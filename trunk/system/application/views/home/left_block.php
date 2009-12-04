@@ -15,7 +15,7 @@
 									A government health insurance plan included in the House bill is in the
 								</div>
 								<div id="" align="right" >
-									<a href="#" style="color:red; text-decoration:none;margin-right:4px;">Inka chaduvandi</a>
+									<a href="#" style="color:red; text-decoration:none;margin-right:4px;"><?=(isset($eenka)) ? $eenka : ''?></a>
 								</div>
 							</div>
 							<div id="sub_window_footer">

@@ -10,15 +10,44 @@ class Subhodaya extends Controller {
 	}
 	function index(){
 		//for telugu content
-		//$sub_spec=$this->lang->line('subh_spec');
-		//$news_ardikam=$this->lang->line('news_ardikam');
+		$sub_spec=$this->lang->line('subh_spec');
+		$bavishyam=$this->lang->line('bavishyam');
+		$eenati_vishe=$this->lang->line('eenati_vishe');
+		//cinema
+		$srungaram=$this->lang->line('srungaram');
+		$reviews=$this->lang->line('reviews');
+		$sangitham=$this->lang->line('sangitham');
+		$cini_vishesm=$this->lang->line('cini_vishesm');
+		$cini_pukarlu=$this->lang->line('cini_pukarlu');
+		//poll
+		$homepoll=$this->lang->line('homepoll');
+		//news
+		$news_ardikam=$this->lang->line('news_ardikam');
+		$news_rasriyam=$this->lang->line('news_rasriyam');
+		$news_jathiyam=$this->lang->line('news_jathiyam');
+		$news_antharja=$this->lang->line('news_antharja');
+		$news_kridalu=$this->lang->line('news_kridalu');
+		//videos
+		$videos=$this->lang->line('videos');
+		//greetings
+		$greetings=$this->lang->line('greetings');
+		//gallery
+		$photo_gallery=$this->lang->line('photo_gallery');
+		//mahila
+		$mahila=$this->lang->line('mahila');
+		//sahithi
+		$sahithi=$this->lang->line('sahithi');
 		//home_blocks
-		$right_block = $this->home->right_block('Aardikam');
-		$left_block = $this->home->left_block($sub_spec);
-		$middle_block = $this->home->middle_block('Actors');
-		$home_poll = $this->home->home_poll('Actors');
+		$ardikam_block = $this->home->right_block($news_ardikam);
+		$Bhavisham_block = $this->home->right_block($bavishyam);
+		$srugaram_block = $this->home->right_block($srungaram);
+		$special_block = $this->home->left_block($sub_spec);
+		$songs_block = $this->home->left_block($sangitham);
+		$reviews_block = $this->home->left_block($reviews);
+		$middle_block = $this->home->middle_block($eenati_vishe);
+		$home_poll = $this->home->home_poll($homepoll);
 		
-		$news_type7=$this->News_Model->get_newstype1(7);
+		/*$news_type7=$this->News_Model->get_newstype1(7);
 		$active_news=$this->News_Model->active_news(2);
 		$active_news1=$this->News_Model->active_news(1);
 		$news_type4=$this->News_Model->get_newstype1(4);
@@ -72,10 +101,10 @@ class Subhodaya extends Controller {
 	   	  
 	     $video_result=$videos->result();
 	     // subhodaya special news
-	     $special_news=$this->News_Model->get_special_news();
+	     $special_news=$this->News_Model->get_special_news();*/
 	    // print_r($special_news);
-	    $tabs=array();
-		$data=array('more'				=>	$more,
+	   // $tabs=array();
+		$data=array(/*'more'				=>	$more,
 		            'news_type7'		=>	$news_type7,
 					'news_type4'		=>	$news_type4,
 					'cinema_type2'		=>	$cinema_type2,
@@ -95,11 +124,35 @@ class Subhodaya extends Controller {
 					'gall_topviews'		=>  $gall_topviews,
 					'mahila_details_yoga'	=>$mahila_details_yoga,
 					'tabs'				=>	$tabs,
-					'special_news'		=>  $special_news,
-					'right_block'		=>	$right_block,
-					'left_block'		=>  $left_block,
+					'special_news'		=>  $special_news,*/
+		
+					'Bhavisham_block'	=>	$Bhavisham_block,
+					'special_block'		=>  $special_block,
 					'middle_block'		=>	$middle_block,
-					'home_poll'			=>	$home_poll
+					'home_poll'			=>	$home_poll,
+		//news
+					'news_kridalu'		=>	$news_kridalu,
+					'news_antharja'		=>  $news_antharja,
+					'news_jathiyam'		=> 	$news_jathiyam,
+					'news_rasriyam'		=>	$news_rasriyam,
+					'ardikam_block'		=>  $ardikam_block,
+		//cinema
+					'srugaram_block'	=>	$srugaram_block,
+					'songs_block'		=>	$songs_block,
+					'reviews_block'		=>	$reviews_block,	
+					'cini_pukarlu'		=>	$cini_pukarlu,
+					'cini_vishesm'		=>	$cini_vishesm,
+		//vidos
+					'videos'			=>	$videos,
+		//greetings
+					'greetings'			=>	$greetings,
+		//gallry
+					'photo_gallery'		=>	$photo_gallery,
+		//sahithi
+					'sahithi'			=>	$sahithi,
+		//mahila
+					'mahila'			=>	$mahila,
+					
 					);
 		$this->load->view('home',$data);
 	}

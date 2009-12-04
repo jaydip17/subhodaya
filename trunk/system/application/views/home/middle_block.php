@@ -4,10 +4,10 @@
 								</div>
 								<div id="title_right_curve">
 								</div>
-								<div id="enati_vishe">Eenati Visheshalu</div>
+								<div id="enati_vishe"><?=(isset($sub_heading)) ? $sub_heading : ''?></div>
 							</div>
 							<div id="sub_window_content" >
-								<div id="" style="width:98%;" align="left">
+								<div id="" style="width:98%;padding-left: 10px;" align="left" >
 								
 									<img style="float:left; margin:5px 20px 2px 0px; " src="<?=base_url()?>assets/home_images/news/latest.jpg">
 										<ul style="margin:0px; padding:0px">
@@ -31,8 +31,14 @@
 											<li>
 												<a href="#">Oye</a>
 											</li>
+											<li>
+												<a href="#">Oye</a>
+											</li>
+											<li>
+												<a href="#">Oye</a>
+											</li>
 									</ul>		
-										<div id="news_more"><a href="#">marinni</a>	</div>
+										<div id="news_more"><a href="#"><?=(isset($more)) ? $more : ''?></a>	</div>
 										
 									</div>
 							</div>

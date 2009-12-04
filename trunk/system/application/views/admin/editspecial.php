@@ -1,6 +1,6 @@
 
 <?
-echo form_open_multipart("admin/subhodaya_spec/edit1/") ?>
+echo form_open_multipart("admin/".$url."/edit1/") ?>
 <center><?
 if(isset($message) && !is_array($message) ) echo($message);?>
 		<? 

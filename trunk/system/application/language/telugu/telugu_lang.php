@@ -1,6 +1,37 @@
 <?php
-$lang['subh_spec'] 			    			= 	"శుభోదయ. కామ్ ప్రత్యేకం";
+//home page
+$lang['subh_spec'] 			    			= 	"శుభోదయ. కామ్ ప్రత్యేకం"; 
+$lang['bavishyam'] 			    			= 	"భవిష్యవాణి";
+$lang['srungaram'] 			    			= 	"శృంగారం";
+$lang['eenati_vishe'] 			    		= 	"ఈనాటి విశేషాలు";
+$lang['enka_chavandi'] 			    		= 	"ఇంక చదవండి";
+$lang['more'] 			    				= 	"మరిన్ని";
+//for news
 $lang['news_ardikam'] 			    		= 	"ఆర్దికం";
+$lang['news_rasriyam'] 			    		= 	"రాష్ట్రీయం";
+$lang['news_jathiyam'] 			    		= 	"జాతీయం";
+$lang['news_antharja'] 			    		= 	"అంతర్జాతీయం";
+$lang['news_kridalu'] 			    		= 	"క్రీడలు";
+// cinema page
+$lang['reviews'] 			    			= 	"మూవీ రివ్యూస్";
+$lang['sangitham'] 			    			= 	"సంగీతం";
+$lang['cini_vishesm'] 			    		= 	"సిని విశేషాలు";
+$lang['cini_pukarlu'] 			    		= 	"సినీ పుకార్లు";
+// poll
+$lang['homepoll'] 			    			= 	"మీ అభిప్రాయం";
+//gallery
+$lang['photo_gallery'] 			    		= 	"ఫోటో గ్యాలరీ";
+//videos
+$lang['videos'] 			    			= 	"వీడియోస్";
+//greeings
+$lang['greetings'] 			    			= 	"గ్రీటింగ్స్";
+//mahila
+$lang['mahila'] 			    			= 	"మహిళా";
+//sahithi
+$lang['sahithi'] 			    			= 	"సాహితి";
+
+$lang['greetings'] 			    			= 	"గ్రీటింగ్స్";
+//heading for mails sending
 $lang['galley_mail_succ'] 					= 	"మెసేజ్ పంపబడింది ";
 $lang['gretting_mail_succ'] 				= 	"మెసేజ్ పంపబడింది";
 $lang['cinema_mail_succ'] 			    	= 	"మెసేజ్ పంపబడింది ";

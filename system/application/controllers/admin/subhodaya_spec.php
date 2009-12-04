@@ -141,7 +141,7 @@ class Subhodaya_spec extends Controller {
  	
 function getspecialnews(){
    		
-		$details=$this->News_Model->get_special_news();
+		$details=$this->Subho_Model->get_special_news();
 		$data=array('details'=>$details);
 		//print_r($deatails);
 		$this->load->view('admin/special_edit',$data);		
@@ -152,7 +152,7 @@ function getspecialnews(){
    		
 		//$details=$this->Sahithi_Model->getdetails($this->uri->segment(4),'no','');
 		$id=$this->uri->segment(4,0);
-		$query=$this->News_Model->get_special1($id);
+		$query=$this->Subho_Model->get_special1($id);
 		//print_r($query);
 	    $a =base_url().'admin/subhodaya_spec/getspecial/'.$id;
 		 //pagination
@@ -163,7 +163,7 @@ function getspecialnews(){
         $this->paginationnew->filePath =$a;
       
         $this->paginationnew->select_what = '*';
-        $this->paginationnew->nbItems = $this->News_Model->specialcount($id);
+        $this->paginationnew->nbItems = $this->Subho_Model->specialcount($id);
         $this->paginationnew->add_query = $query;
         
    		$result = $this->paginationnew->getQuery(TRUE);
@@ -178,16 +178,16 @@ function getspecialnews(){
 	}
 	
 	function delete(){
-	$this->load->model('admin/News_Model');
+	$this->load->model('admin/Subho_Model');
 	$id=$this->uri->segment(4,0);
 	$cat_id=$this->uri->segment(5);
-	$result=$this->News_Model->specialdelete($id);
+	$result=$this->Subho_Model->specialdelete($id);
 	redirect(base_url()."admin/subhodaya_spec/getspecialnews/".$cat_id);
 	}
 	
 	function edit(){
 	 $id =$this->uri->segment(4,0);
-	  $edit = $this->News_Model->get_special_details($id);
+	  $edit = $this->Subho_Model->get_special_details($id);
         
      $message = $this->session->flashdata('message');
 		$this->load->model('admin/Openwysiwyg_Model');
@@ -199,7 +199,8 @@ function getspecialnews(){
 		$data=array(
 							'jslinks'   => $links,
 							'message'	=> $message,
-		                    'edit'      =>  $edit
+		                    'edit'      =>  $edit,
+							'url'		=>	'subhodaya_spec'
 		);
 		$this->load->view('admin/editspecial',$data);
 	}
@@ -214,7 +215,7 @@ function getspecialnews(){
    	}
    	 
 	 $id=$_POST['id'];
-   	 $this->News_Model->specialedit1($id,$active);
+   	 $this->Subho_Model->specialedit1($id,$active);
   	redirect(base_url().'admin/subhodaya_spec/getspecialnews/');
    }
 	

@@ -4,7 +4,7 @@
 								</div>
 								<div id="news_title_right_curve">
 								</div>
-								News Poll
+								<?=(isset($sub_heading)) ? $sub_heading : ''?>
 							</div>
 							<div id="news_window_content" >
 								<div id="question">

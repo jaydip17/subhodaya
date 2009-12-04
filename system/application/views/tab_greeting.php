@@ -1,0 +1,1 @@
+<?= (isset($video_block)) ? $video_block : '' ?>

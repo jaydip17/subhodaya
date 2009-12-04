@@ -128,10 +128,10 @@ class Mahila_Model extends Model {
 		$query = $this->db->get_where();
 		return $query->result();
     }
-    function active_mahila($id)
+    function active_mahila()
     {
     	$this->db->select('*');
-    	$array=array('mahila.cat_id'=>$id,'mahila.homepage'=>1);
+    	$array=array('mahila.active'=>1);
     	$this->db->where($array);
     	$this->db->order_by("mahila.insert_date", "desc");
 		$this->db->from('mahila_cat');

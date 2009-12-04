@@ -1,3 +1,4 @@
+
 <div id="" style="width:98%;" align="left">
 								
 									<img style="float:left; margin:5px 20px 2px 0px; " src="<?=base_url()?>assets/home_images/news/latest.jpg">
@@ -23,6 +24,6 @@
 												<a href="#" style="color:#228BEE; font-size:12px; text-decoration:none">Oye</a>
 											</li>
 									</ul>		
-										<div style="color:#AEAEAE; font-size:10px; margin-top:0px" align="right">marinni	</div>
+										<div style="color:#AEAEAE; font-size:10px; margin-top:0px" align="right"><?= (isset($more)) ? $more : '' ?></div>
 										
 									</div>

@@ -8,13 +8,13 @@
 							</div>
 							<div id="sub_window_content">
 								<center>
-								<img style="margin:5px 0px 2px 0px; " src="<?=base_url()?>assets/home_images/news/latest.jpg">
-								<div id="story_title" style="color:#2571C4; font-size:12px">Veerappa Moili
+								<img style="margin:5px 0px 2px 0px; " src="<?=(isset($image_link)) ? $image_link : ''?>">
+								<div id="story_title" style="color:#2571C4; font-size:12px"><?=$details['0']->heading?>
 								</div>
-								<div id="story" align="justify" style="line-height:20px; width:90%">
-									A government health insurance plan included in the House bill is in the
+								<div id="story" align="justify" style="line-height:20px; width:90%;font-size:12px">
+									<?=$details['0']->summary?>
 								</div>
-								<div id="" align="right" >
+								<div id="" align="right" style="font-size: 12px;">
 									<a href="#" style="color:red; text-decoration:none;margin-right:4px;"><?=(isset($eenka)) ? $eenka : ''?></a>
 								</div>
 							</div>

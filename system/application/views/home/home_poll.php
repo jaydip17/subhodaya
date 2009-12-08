@@ -1,22 +1,22 @@
 <div id="news_poll">
-							<div id="news_window_title" style="color:#FE0002">
+							<div id="news_window_title" style="color:#FE0002;">
 								<div id="news_title_left_curve">
 								</div>
 								<div id="news_title_right_curve">
 								</div>
 								<?=(isset($sub_heading)) ? $sub_heading : ''?>
 							</div>
-							<div id="news_window_content" >
-								<div id="question">
-									mukyamanthriga rosaiah samardhudena...?
+							<div id="news_window_content" style="">
+								<div id="question" style="font-size: 12px;">
+								<?=(isset($details[0]->question)) ? $details[0]->question : ''?>
 								</div>
-								<div id="options" align="left" style="font-size:11px; margin-left:10px">
+								<div id="options" align="left" style="font-size:12px; margin-left:10px">
 								
-										<input type="radio" name="sex" value="male" /> Avunu
+										<input type="radio" name="sex" value="male" /><?=(isset($yes)) ? $yes : ''?>
 											<br />
-										<input type="radio" name="sex" value="female" /> Kadu
+										<input type="radio" name="sex" value="female" /><?=(isset($no)) ? $no : ''?>
 										<br />
-										<input type="radio" name="sex" value="female" /> Teliyadu
+										<input type="radio" name="sex" value="female" /><?=(isset($yes_no)) ? $yes_no : ''?>
 								</div>
 								<div style="width:100%; height:50px; ">
 									<div style="float:left; height:46px;margin-left:5px;margin-top:0px; width:100px;font-size:11px;color:#FF0000" align="left">

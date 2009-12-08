@@ -12,13 +12,22 @@ $lang['news_rasriyam'] 			    		= 	"రాష్ట్రీయం";
 $lang['news_jathiyam'] 			    		= 	"జాతీయం";
 $lang['news_antharja'] 			    		= 	"అంతర్జాతీయం";
 $lang['news_kridalu'] 			    		= 	"క్రీడలు";
+$lang['news_setier'] 			    		= 	"సెటైర్";
+$lang['state_news'] 			    		= 	"జిల్లా వార్తలు";
 // cinema page
 $lang['reviews'] 			    			= 	"మూవీ రివ్యూస్";
 $lang['sangitham'] 			    			= 	"సంగీతం";
 $lang['cini_vishesm'] 			    		= 	"సిని విశేషాలు";
 $lang['cini_pukarlu'] 			    		= 	"సినీ పుకార్లు";
+$lang['cini_news'] 			    			= 	"సినీ వార్తలు";
+$lang['cini_shedul'] 			    		= 	"మూవీ షెడ్యుల్ ";
+$lang['interviews'] 			    		= 	"ఇంటర్వ్యూలు ";
+$lang['therachatu'] 			    		= 	"తేరచాటు ";
 // poll
 $lang['homepoll'] 			    			= 	"మీ అభిప్రాయం";
+$lang['yes'] 			    				= 	"అవును";
+$lang['no'] 			    				= 	"కాదు";
+$lang['yes_no'] 			    			= 	"చెప్పలేం";
 //gallery
 $lang['photo_gallery'] 			    		= 	"ఫోటో గ్యాలరీ";
 //videos

@@ -11,12 +11,17 @@ class Poll_Model extends Model {
 		$result=$this->db->get('poll');
 		return $result->result();
 	}
-	function get_newspolls($type){
+	function get_newspolls($type,$active){
+		if(empty($active)){
+		$active=0;
+		}
 		$datestring = " %Y-%m-%d ";
 		$today=mdate($datestring);
-		$array=array('cat_id'=>$type,'displaydate'=>$today);
+		$array=array('cat_id'=>$type,'displaydate'=>$today,'active'=>$active);
+		$this->db->limit(1);
 		$this->db->where($array);
 		$result=$this->db->get('poll');
+		//print_r($result->result());
 		return $result->result();	
 	}
 	function get_newspolls1($type){

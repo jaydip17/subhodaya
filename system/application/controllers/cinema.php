@@ -5,13 +5,22 @@ class Cinema extends Controller {
 	{
 		parent::Controller();
 		$this->load->model('admin/Flash_model');
+		$this->load->library('Cinema_lib', 'cinema_lib');
+		$this->lang->load('telugu', 'telugu');
 	}
 	function index()
 	{
 		$query=$this->Flash_model->get_flash_images();
 		$img=$query->result();
+		$newscss=array();
+		$cine_news=$this->cinema_lib->cinema_block($this->lang->line('cini_news'));
+		$cin_pukarlu=$this->cinema_lib->cinema_block($this->lang->line('cini_pukarlu'));
+		$cin_riviews=$this->cinema_lib->cinema_block($this->lang->line('reviews'));
+		$cin_shedule=$this->cinema_lib->cinema_block($this->lang->line('cini_shedul'));
+		$cin_interviews=$this->cinema_lib->cinema_block($this->lang->line('interviews'));
+		$cin_therachatu=$this->cinema_lib->cinema_block($this->lang->line('therachatu'));
 		//print_r($img);
-		$more=$this->News_Model->more_news();
+		/*$more=$this->News_Model->more_news();
 		$cinema_type1=$this->Cinema_Model->get_cinematype(1);
 		$cinema_type2=$this->Cinema_Model->get_cinematype(2);
 		$cinema_type3=$this->Cinema_Model->get_cinematype(3);
@@ -57,9 +66,9 @@ class Cinema extends Controller {
 	   	$video_result=$videos->result();
 	    $gall_topviews=$this->Gallery_Model->top_views();
 	    $sprytabs=array();
-	    $tabs=array();
+	    $tabs=array();*/
 	    
-	    $current_url = current_url();
+	   /* $current_url = current_url();
 		//$navigation = array ($current_url);
 		$segments = array(	'seg1' => $this->uri->segment(1,0),
 						   	'seg2' => $this->uri->segment(2,0),
@@ -69,25 +78,20 @@ class Cinema extends Controller {
 							'main' => $more['4']->matter,
 							'home' => $more['2']->matter,
 		); 
-		$bread_crumb = $this->bread_crumb->get_code($segments);
+		$bread_crumb = $this->bread_crumb->get_code($segments);*/
 		//print_r($bread_crumb);
-		$data=array('cinema_type1'		=>	$cinema_type1,
-					'cinema_type2'		=>	$cinema_type2,
-					'cinema_type3'		=>	$cinema_type3,
-					'cinema_type4'		=>	$cinema_type4,
-					'cinema_type5'		=>	$cinema_type5,
-					'cinema_type6'		=>	$cinema_type6,
-						'more'			=>	$more,
-						'cinemapoll'	=>	$cinemapoll,
-						'yes_poll'		=>	$yes_poll,
+		$data=array(
 						'onload' 		=> 	"display_text_1()",
-						'images'		=> 	$images,
-						'gall_topviews' => 	$gall_topviews,
-		          'video_result'     	=>  $video_result,
-					'sprytabs'			=>	$sprytabs,
-						'tabs'			=>  $tabs,
 						'img'			=> $img,
-						'bread_crumb'  => $bread_crumb 
+						'newscss'		=>	$newscss,
+						'cin_pukarlu'	=>	$cin_pukarlu,
+						'cine_news'		=>	$cine_news,
+						'cin_riviews'	=>	$cin_riviews,
+						'cin_shedule'	=>	$cin_shedule,
+						'cin_interviews'=>	$cin_interviews,
+						'cin_therachatu'=>	$cin_therachatu,
+						'cine_news'		=>	$cine_news
+						//'bread_crumb'  => $bread_crumb 
 		);
 		$this->load->view('cinema_view',$data);
 	}

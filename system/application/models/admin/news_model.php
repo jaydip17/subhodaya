@@ -62,7 +62,9 @@ class News_Model extends Model
     {
     	$this->db->select('*');
     	$this->db->order_by("news.insert_date", "desc");
-    	$this->db->where('type',$type);
+    	$array=array('type'=>$type,'news.active'=>0);
+    	$this->db->where($array);
+    	$this->db->limit(8);
 		$this->db->from('news_types');
 		$this->db->join('news', 'news.type= news_types.id');
 		$query = $this->db->get_where();
@@ -121,12 +123,17 @@ class News_Model extends Model
 		return $query->result();
     	
     }
-     function active_news1()
+     function active_news1($limit)
     {
     	$this->db->select('*');
     	$array=array('news.breking_news'=>1);
     	$this->db->where($array);
-    	$this->db->limit(10);
+    	if(!empty($limit)){
+    		$this->db->limit($limit);
+    	}else{
+    		$this->db->limit(10);
+    	}
+    	
     	$this->db->order_by("insert_date", "desc");
 		$this->db->from('news_types');
 		$this->db->join('news', 'news.type= news_types.id');
@@ -145,7 +152,7 @@ class News_Model extends Model
     	return $result->news_cat;
     }
     
-    //special news
+    //comments news
  	
     function get_comments($id){
     	$this->db->where('newsid',$id);
@@ -159,6 +166,15 @@ class News_Model extends Model
 		$this->db->from('comments');
 		$res=$this->db->count_all_results();
 		return $res;
+	}
+	//all active news
+	function all_active_news()
+	{
+		$this->db->where('active',1);
+		$this->db->order_by('id','desc');
+		$this->db->limit(8);
+		$query=$this->db->get('news');
+		return $query->result();
 	}
 }
 

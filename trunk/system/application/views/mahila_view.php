@@ -71,435 +71,69 @@ menuItems:[
 ]}; // REQUIRED!! do not edit or remove
 make_menus();
 </script>
-<style type="text/css">
-ul{
-list-style-image:url(<?=base_url()?>assets/imgs/pandagalu-cru.jpg);
-padding-left: 20px;
-}
-li
-{
-padding-top:3px;
-line-height:16px;
-}
-body{
-font-size:14px;
-line-height:16px;
-}
-#tdmahila
-{
-padding-left:5px;
-background-image:url(<?=base_url();?>assets/imgs/sahithi-top.gif);
-background-repeat-x;
-padding-top:0px;
-}
-</style>
-<table width="99%"  border="0" cellpadding="0" cellspacing="0" >
-<tr>
-        <td  valign="top">
-	     <object type='application/x-shockwave-flash' data='<?=base_url()?>assets/MhlaBanner.swf' width='680' height='96'><param name='flashvars' value='clickTag=&clickTarget=_self' /><param name='allowScriptAccess' value='always' /><param name='movie' value='file.swf' /><param name='bgcolor' value='#000000'></object>
-					</td>
-					<td rowspan="5" valign="top" style="padding-left:10px";> 
-					<table cellpadding="0" cellspacing="0">
-					<tr>
-					<td><img src="<?=base_url();?>assets/imgs/beauty-top-left.gif" width="8" height="23" /></td>
-					<td width="208px" style="background-image:url(<?=base_url();?>assets/imgs/beauty-top-center.gif);background-repeat-x;"><span id="newsheading"><?=$details_sahithi['0']->cat_name?></span></td>
-					<td><img src="<?=base_url();?>assets/imgs/beauty-top-right.gif" width="8" height="23" alt="gg" /></td>
-					</tr>
-					<tr>
-					<td height="151px" valign="top" colspan="3" style="background-image:url(<?=base_url();?>assets/imgs/KitchenTips-cr.gif);background-repeat-x;border:1px solid #0A70BB;border-bottom:0px;">
-					<div style="height: 120px;padding: 3px;width:215px;" id="telugufont">
-					<ul id="mainnews">
-	              <?if(!empty($details_more_sahithi['1'])){
-	              $count=0; 
-	              foreach($details_more_sahithi['1'] as $item):?>
-
-	              <li style="padding: 1px;"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$item->id?>/<?=$item->cat_id?>"><?=$item->heading?></li>
-	              <? if($count==5)
-	              break;
-	              else $count++;
-					endforeach;} ?>
-	                 </ul>
-	                 </div>
-	                 <div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>sahithi/details/<?if(isset($types_sahithi['1'])){ echo $types_sahithi['1']; }?>"><?=$more['0']->matter?></a></span></div></td>
-					</tr>
-					<tr>
-					<td colspan="3" width="224" height="7"><img src="<?=base_url();?>assets/imgs/beauty-bottom-img.gif" width="224px" height="7px "  /></td>
-					</tr>
-					</table>
-					<table cellpadding="0" cellspacing="0" style="margin:7px 0px 7px 0px;">
-					<tr>
-					<td><img src="<?=base_url();?>assets/imgs/beauty-top-left.gif" width="8" height="23" /></td>
-					<td width="208px" style="background-image:url(<?=base_url();?>assets/imgs/beauty-top-center.gif);background-repeat-x;"><span id="newsheading"><?=$details_sahithi['1']->cat_name?></span></td>
-					<td><img src="<?=base_url();?>assets/imgs/beauty-top-right.gif" width="8" height="23" alt="gg" /></td>
-					</tr>
-					<tr>
-					<td height="151px" valign="top" colspan="3" style="background-image:url(<?=base_url();?>assets/imgs/KitchenTips-cr.gif);background-repeat-x;border: 1px solid #0A70BB;border-bottom: 0px;">
-					 <div style="height: 120px;padding: 3px;width:215px" id="telugufont">
-					 <ul id="mainnews">
-	              <?if(!empty($details_more_sahithi['2'])){
-	              	$count=0;
-	              foreach($details_more_sahithi['2'] as $row):?>
-
-	              <li style="padding:1px;"><a href="<?=base_url();?>sahithi/sahithidetails/<?=$row->id?>/<?=$row->cat_id?>"><?=$row->heading?></a></li>
-	              <? if($count==5)
-	              break;
-	              else $count++;
-	              endforeach;} ?>
-	                 </ul>
-	                 </div>
-	                 <div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>sahithi/details/<?if(isset($types_sahithi['2'])){ echo $types_sahithi['2']; }?>"><?=$more['0']->matter?></a></span></div></td>
-					</tr>
-					<tr>
-					<td colspan="3" width="224" height="7"><img src="<?=base_url();?>assets/imgs/beauty-bottom-img.gif" width="224px" height="7px "  /></td>
-					</tr>
-					</table>
-					<img src="<?=base_url();?>assets/ads/Side_right1.jpg" width="221px" height="132px" style="padding-bottom:7px;" />
-					<img src="<?=base_url();?>assets/ads/Side_right2.jpg" width="221px" height="132px" style="padding-bottom:6px;" />
-					<img src="<?=base_url();?>assets/ads/Side_right3.jpg" width="224px" height="227px"/>
-					
-					</td>
-					</tr>
-	     			<tr><td style="padding-top:7px"><img src="<?=base_url();?>assets/imgs/top-cru.gif" width="681px" height="11"/></td></tr>
-	               <tr> 
-	              <td valign="top" style="border: 1px solid #0A70BB;border-top: 0px;border-bottom: 0px;">
-	              <table id="sahithi-table" cellpadding="0" cellspacing="5px"  width="675px">
-	              <tr>
-	            <td>
-	            <table width="332px" align="center" style="border: 1px solid #0A70BB;" cellpadding="0" cellspacing="0">
-	            <tr>
-	            <td height="22px" id="tdmahila"><span id="newsheading"><?=$details['0']->cat_name?></span></td>
-	           
-	            </tr>
-	            <tr>
-	            <td width="50%" valign="top" height="219px" style="background-image:url(<?=base_url();?>assets/imgs/Pandugalu-cr.gif);background-repeat-y;">
-	            <div id="telugufont1">
-	              <div style="height: 183px;padding:3px;">
-	              <?if(!empty($details_more['1'])){
-	             if(file_exists("./assets/mahila/news_img".$details_more['1']['0']->id."_thumb.jpg")){
-	             ?>
-	              <a href="<?=base_url();?>mahila/mahiladetails/<?=$details_more['1']['0']->id?>/<?=$details_more['1']['0']->cat_id?>"><img src="<?=base_url();?>assets/mahila/news_img<?=$details_more['1']['0']->id?>_thumb.jpg" style="float:left;margin:4px 20px 4px 4px;text-align: justify;"  align="top" id="img"  alt="gg"/></a>
-	              <?} ?>
-	             <font id="telugufont"><a href="<?=base_url();?>mahila/mahiladetails/<?=$details_more['1']['0']->id?>/<?=$details_more['1']['0']->cat_id?>"><?php echo $details_more['1']['0']->heading?></a></font><br>
-	              <?=$details_more['1']['0']->summary; }?>
-	                 <ul id="mainnews">
-	              <?if(!empty($details_more['1'])){
-	              	$count=0;
-	              foreach($details_more['1'] as $item) {if($count==0)
-							           {$count++;
-							            continue;
-							           }
-							            if($count>6)
-							           {
-							           break;
-                                       }$count++;?>
-
-	             <li><a href="<?=base_url();?>mahila/mahiladetails/<?=$item->id?>/<?=$item->cat_id?>"><?=$item->heading ?></a></li>
-	                <?}} ?>
-	                 </ul>
-	                 </div>
-	                 <div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>mahila/details/<?if(isset($types['0'])){ echo $types['0']; }?>"><?=$more['0']->matter?></a></span></div>
-	                 </div>
-	                  </td>
-	            </tr>
-	            </table>
-	            </td>
-	            <td>
-	            <table width="332px" align="center" style="border: 1px solid #0A70BB;" cellpadding="0" cellspacing="0">
-	            <tr>
-	            <td height="22px" id="tdmahila"><span id="newsheading"><?=$details['1']->cat_name?></span>
-	            </td>
-	            </tr>
-	            <tr>
-	             <td width="50%" valign="top" height="219px" style="background-image:url(<?=base_url();?>assets/imgs/Pandugalu-cr.gif);background-repeat-y;">
-	              <div id="telugufont1">
-	              <div style="height: 183px;padding:3px;">
-	              <?if(!empty($details_more['2'])){
-	             if(file_exists("./assets/mahila/news_img".$details_more['2']['0']->id."_thumb.jpg")){
-	             ?>
-	              <a href="<?=base_url();?>mahila/mahiladetails/<?=$details_more['2']['0']->id?>/<?=$details_more['2']['0']->cat_id?>"><img src="<?=base_url();?>assets/mahila/news_img<?=$details_more['2']['0']->id?>_thumb.jpg" style="float:left;margin:4px 20px 4px 4px;text-align: justify;" align="top" id="img"/></a>
-	              <?}} ?>
-	            <?if(!empty($details_more['2'])){?>
-	             <font id="telugufont"><a href="<?=base_url();?>mahila/mahiladetails/<?=$details_more['2']['0']->id?>/<?=$details_more['2']['0']->cat_id?>"><?php echo $details_more['2']['0']->heading?></a></font><br>
-	              <?=$details_more['2']['0']->summary; }?>
-	              <ul id="mainnews">
-	             <?if(!empty($details_more['2'])){
-	             	$count=0;
-	              foreach($details_more['2'] as $item) {if($count==0)
-							           {$count++;
-							            continue;
-							           } if($count>6)
-							           {
-							           break;
-                                       }$count++;?>
-
-	              <li><a href="<?=base_url();?>mahila/mahiladetails/<?=$item->id?>/<?=$item->cat_id?>"><?=$item->heading ?></a></li>
-	              <?}} ?>
-	                
-	                </ul>
-	                </div>
-	                <div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>mahila/details/<?if(isset($types['1'])){ echo $types['1']; }?>"><?=$more['0']->matter?></a></span></div>
-	                  </div>
-	            </td>
-	            </tr>
-	            </table>
-	            </td>
-	           </tr>
-	            <tr>
-	            <td>
-	            <table width="332px" align="center" style="border: 1px solid #0A70BB;" cellpadding="0" cellspacing="0">
-	            <tr>
-	            <td height="22px" id="tdmahila"><span id="newsheading"><?=$details['2']->cat_name?></span>
-	            </td>
-	           
-	            </tr>
-	            <tr>
-	             <td height="116px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/MathruBashacr.gif);background-repeat-y;">
-	             <div id="telugufont1">
-	             <div style="height:80px;padding: 3px;">
-	             <?if(!empty($details_more['3'])){
-	             if(file_exists("./assets/mahila/news_img".$details_more['3']['0']->id."_thumb.jpg")){
-	             ?>
-	             	<a href="<?=base_url();?>mahila/mahiladetails/<?=$details_more['3']['0']->id?>/<?=$details_more['3']['0']->cat_id?>"><img  src="<?=base_url();?>assets/mahila/news_img<?=$details_more['3']['0']->id?>_thumb.jpg" style="float:left;margin:4px 20px 4px 4px;text-align: justify;" align="top" id="img"/></a>
-	             <?}} ?>
-	              <?if(!empty($details_more['3'])){?>
-	              <font id="telugufont"><a href="<?=base_url();?>mahila/mahiladetails/<?=$details_more['3']['0']->id?>/<?=$details_more['3']['0']->cat_id?>"><?php echo $details_more['3']['0']->heading?></a></font><br>
-	              <?=$details_more['3']['0']->summary; }?>
-	              <ul id="mainnews">
-	              <?if(!empty($details_more['3'])){
-	              	$count=0;
-	              foreach($details_more['3'] as $item) {if($count==0)
-							           {$count++;
-							            continue;
-							           }
-							            if($count>2)
-							           {
-							           break;
-                                       }$count++;?>
-
-	             <li><a href="<?=base_url();?>mahila/mahiladetails/<?=$item->id?>/<?=$item->cat_id?>"><?=$item->heading ?></a></li>
-	               <?}} ?>
-	                 </ul>
-	                 </div>
-	                 <div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>mahila/details/<?if(isset($types['2'])){ echo $types['2']; }?>"><?=$more['0']->matter?></a></span></div>
-	                   </td>
-	            </tr>
-	            </table>
-	            </td>
-	            <td>
-	            <table width="332px" align="center" style="border: 1px solid #0A70BB;" cellpadding="0" cellspacing="0">
-	            <tr>
-	            <td height="22px" id="tdmahila"><span id="newsheading"><?=$details['3']->cat_name?></span>
-	            </td>
-	           
-	            </tr>
-	            <tr>
-	             <td height="116px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/MathruBashacr.gif);background-repeat-y;">
-	              <div id="telugufont1"> 
-	              <div style="height:80px;padding: 3px;">
-	             <?if(!empty($details_more['3'])){
-	             if(file_exists("./assets/mahila/news_img".$details_more['4']['0']->id."_thumb.jpg")){
-	             ?>
-	             	<a href="<?=base_url();?>mahila/mahiladetails/<?=$details_more['4']['0']->id?>/<?=$details_more['4']['0']->cat_id?>"><img  src="<?=base_url();?>assets/mahila/news_img<?=$details_more['4']['0']->id?>_thumb.jpg" style="float:left;margin:4px 20px 4px 4px;text-align: justify;" align="top" id="img"/></a>
-	             <?}} ?>
-	              <?if(!empty($details_more['3'])){?>
-	              <font id="telugufont"><a href="<?=base_url();?>mahila/mahiladetails/<?=$details_more['4']['0']->id?>/<?=$details_more['4']['0']->cat_id?>"><?php echo $details_more['4']['0']->heading?></a></font><br>
-	              <?=$details_more['4']['0']->summary; }?>
-	              <ul id="mainnews">
-	              <?if(!empty($details_more['4'])){
-	              	$count=0;
-	              foreach($details_more['4'] as $item){if($count==0)
-							           {$count++;
-							            continue;
-							           }
-							            if($count>2)
-							           {
-							           break;
-                                       }$count++;?>
-
-
-	              <li><a href="<?=base_url();?>mahila/mahiladetails/<?=$item->id?>/<?=$item->cat_id?>"><?=$item->heading ?></a></li>
-	              <?}} ?>	                 </ul> 
-	              </div>
-	             <div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>mahila/details/<?if(isset($types['3'])){ echo $types['3']; }?>"><?=$more['0']->matter?></a></span></div> 
-	                  </td>
-	            </tr>
-	            </table>
-	            </td>
-	           </tr>
-	           
-	            <tr>
-	            <td>
-	            <table width="332px" align="center" style="border: 1px solid #0A70BB;" cellpadding="0" cellspacing="0">
-	            <tr>
-	            <td height="22px" id="tdmahila"><span id="newsheading"><?=$details['4']->cat_name?></span>
-	            </td>
-	           
-	            </tr>
-	            <tr>
-	             <td  height="116px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/MathruBashacr.gif);background-repeat-y;"> 
-	              <div id="telugufont1">
-	              <div style="height:80px;padding: 3px;">
-	              <?if(!empty($details_more['5'])){
-	             if(file_exists("./assets/mahila/news_img".$details_more['5']['0']->id."_thumb.jpg")){
-	             ?>
-	              <a href="<?=base_url();?>mahila/mahiladetails/<?=$details_more['5']['0']->id?>/<?=$details_more['5']['0']->cat_id?>"><img src="<?=base_url();?>assets/mahila/news_img<?=$details_more['5']['0']->id?>_thumb.jpg" style="float:left;margin:4px 20px 4px 4px;text-align: justify;" align="top" id="img"/></a>
-	              <?}} ?>
-	              <?if(!empty($details_more['5'])){?>
-	              <font id="telugufont"><a href="<?=base_url();?>mahila/mahiladetails/<?=$details_more['5']['0']->id?>/<?=$details_more['5']['0']->cat_id?>"><?php echo $details_more['5']['0']->heading?></a></font><br>
-	              <?=$details_more['5']['0']->summary; }?>
-	              <ul id="mainnews">
-	             <?if(!empty($details_more['5'])){
-	             	$count=0;
-	              foreach($details_more['5'] as $item) {if($count==0)
-							           {$count++;
-							            continue;
-							           }
-							            if($count>3)
-							           {
-							           break;
-                                       }$count++;?>
-
-	             <li><a href="<?=base_url();?>mahila/mahiladetails/<?=$item->id?>/<?=$item->cat_id?>"><?=$item->heading ?></a></li>
-	              <?}} ?>
-	                 </ul>
-	                 </div>
-	                 <div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>mahila/details/<?if(isset($types['4'])){ echo $types['4']; }?>"><?=$more['0']->matter?></a></span></div>
-	                   </td>
-	            </tr>
-	            </table>
-	            </td>
-	            <td>
-	            <table width="332px" align="center" style="border: 1px solid #0A70BB;" cellpadding="0" cellspacing="0">
-	            <tr>
-	            <td height="22px" id="tdmahila"><span id="newsheading"><?=$details['5']->cat_name?></span>
-	            </td>
-	           
-	            </tr>
-	            <tr>
-	             <td height="116px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/MathruBashacr.gif);background-repeat-y;">
-	              <div id="telugufont1">
-	              <div style="padding: 3px; height:80px;">
-                 <?if(!empty($details_more['6'])){
-	             if(file_exists("./assets/mahila/news_img".$details_more['6']['0']->id."_thumb.jpg")){
-	             ?>
-	              <a href="<?=base_url();?>mahila/mahiladetails/<?=$details_more['6']['0']->id?>/<?=$details_more['6']['0']->cat_id?>"><img src="<?=base_url();?>assets/mahila/news_img<?=$details_more['6']['0']->id?>_thumb.jpg" style="float:left;margin:4px 20px 4px 4px;text-align: justify;" align="top" id="img"/></a>
-	              <?}} ?>
-                 <?if(!empty($details_more['6'])){?>
-	              <font id="telugufont"><a href="<?=base_url();?>mahila/mahiladetails/<?=$details_more['6']['0']->id?>/<?=$details_more['6']['0']->cat_id?>"><?php echo $details_more['6']['0']->heading?></a></font><br>
-	              <?=$details_more['6']['0']->summary; }?>
-	             <ul id="mainnews">
-	              <?if(!empty($details_more['6'])){
-	              	$count=0;
-	              foreach($details_more['6'] as $item) {if($count==0)
-							           {$count++;
-							            continue;
-							           }
-							            if($count>3)
-							           {
-							           break;
-                                       }$count++;?>
-
-	             <li><a href="<?=base_url();?>mahila/mahiladetails/<?=$item->id?>/<?=$item->cat_id?>"><?=$item->heading ?></a></li>
-	              <?}} ?>
-	                 </ul> 
-	                 </div>
-	                 <div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>mahila/details/<?if(isset($types['5'])){ echo $types['5']; }?>"><?=$more['0']->matter?></a></span></div>
-	                   </td>
-	            </tr>
-	            </table>
-	            </td>
-	           </tr>
-			   
-	            <tr>
-	            <td colspan="2">
-				<div style="float:left;padding-right:4px;">
-	            <table width="450px" align="center" style="border: 1px solid #0A70BB;" cellpadding="0" cellspacing="0">
-	            <tr>
-	            <td height="22px" id="tdmahila"><span id="newsheading"><?=$details['6']->cat_name?></span>
-	            </td>
-	           
-	            </tr>
-	            <tr>
-	             <td  height="163px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/Janapadalu-cr.gif);background-repeat-x;">
-	             <div id="telugufont1">
-	              <div style="padding: 3px;height:128px;" >
-	               <?if(!empty($details_more['7'])){
-	             if(file_exists("./assets/mahila/news_img".$details_more['7']['0']->id."_thumb.jpg")){
-	             ?>
-	             	<a href="<?=base_url();?>mahila/mahiladetails/<?=$details_more['7']['0']->id?>/<?=$details_more['7']['0']->cat_id?>"><img  src="<?=base_url();?>assets/mahila/news_img<?=$details_more['7']['0']->id?>_thumb.jpg" style="float:left;margin:4px 20px 4px 4px;text-align: justify;" align="top" id="img"/></a>
-	             <?}} ?>
-	               <?if(!empty($details_more['7'])){?>
-	              <font id="telugufont"><a href="<?=base_url();?>mahila/mahiladetails/<?=$details_more['7']['0']->id?>/<?=$details_more['7']['0']->cat_id?>"><?php echo $details_more['7']['0']->heading?></a></font><br>
-	              <?=$details_more['7']['0']->summary; }?>
-	              <ul id="mainnews">
-	             <?if(!empty($details_more['7'])){
-	             	$count=0;
-	              foreach($details_more['7'] as $item) {if($count==0)
-							           {$count++;
-							            continue;
-							           }
-							            if($count>5)
-							           {
-							           break;
-                                       }$count++;?>
-
-	              <li><a href="<?=base_url();?>mahila/mahiladetails/<?=$item->id?>/<?=$item->cat_id?>"><?=$item->heading ?></a></li>
-	             <?}} ?>
-	                 </ul>
-	               </div>
-	               <div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>mahila/details/<?if(isset($types['6'])){ echo $types['6']; }?>"><?=$more['0']->matter?></a></span></div>
-	               </div>
-	                   </td>
-	            </tr>
-	            </table>
-	           </div>
-	           
-	            <table width="213px" align="center" style="border: 1px solid #0A70BB;" cellpadding="0" cellspacing="0">
-	            <tr>
-	            <td height="22px" id="tdmahila"><span id="newsheading"><?=$details['7']->cat_name?></span>
-	            </td>
-	           
-	            </tr>
-	            <tr>
-	             <td height="163px" valign="top" style="background-image:url(<?=base_url();?>assets/imgs/Janapadalu-cr.gif);background-repeat-x;"> 
-	             <div id="telugufont1">
-	             <div style="padding: 3px;height:128px;">
-	             <?if(!empty($details_more['8'])){
-	             	if(file_exists("./assets/mahila/news_img".$details_more['8']['0']->id."_thumb.jpg")){
-	             ?>
-	             	<a href="<?=base_url();?>mahila/mahiladetails/<?=$details_more['8']['0']->id?>/<?=$details_more['8']['0']->cat_id?>"><img src="<?=base_url();?>assets/mahila/news_img<?=$details_more['8']['0']->id?>_thumb.jpg" style="float:left;margin:4px 20px 4px 4px;text-align: justify;" align="top" id="img"/></a>
-	             <?}} ?>
-	              <?if(!empty($details_more['8'])){?>
-	              <font id="telugufont"><a href="<?=base_url();?>mahila/mahiladetails/<?=$details_more['8']['0']->id?>/<?=$details_more['8']['0']->cat_id?>"><?php echo $details_more['8']['0']->heading?></a></font><br>
-	              <?=$details_more['8']['0']->summary; }?>
-	             <ul id="mainnews" >
-	             <?if(!empty($details_more['8'])){
-	             	$count=0;
-	              foreach($details_more['8'] as $item) {if($count==0)
-							           {$count++;
-							            continue;
-							           }
-							            if($count>3)
-							           {
-							           break;
-                                       }$count++;?>
-
-	              <li><a href="<?=base_url();?>mahila/mahiladetails/<?=$item->id?>/<?=$item->cat_id?>"><?=$item->heading?></a></li>
-	              <?}} ?>
-	                 </ul> </div>
-	                 <div id="more-news-div"><span id="news-more"><a href="<?=base_url();?>mahila/details/<?if(isset($types['7'])){ echo $types['7']; }?>"><?=$more['0']->matter?></a></span></div>
-	                  </td>
-	                 
-	                 
-	                  
-	            </tr>
-	            </table>
-	            </td>
-	           </tr>
-	           
-	            </table>
-	              </td>
-				  </tr>
-				 <tr>
-	     			<td><img src="<?=base_url();?>assets/imgs/bottm-cru.gif" width="681px" height="11" /><td></tr>
-	            </table>
+<div style="width:100%; height:100%px; float:left">
+	<div style="width: 700px; height:100%;float: left;">
+	<div style="width: 700px;float: left;padding-left: 10px;">
+			<div style="float:left;">
+				                <object type='application/x-shockwave-flash' data='<?=base_url()?>assets/MhlaBanner.swf' width='680' height='96'><param name='flashvars' value='clickTag=&clickTarget=_self' /><param name='allowScriptAccess' value='always' /><param name='movie' value='file.swf' /><param name='bgcolor' value='#000000'></object>                                	
+			</div>
+	</div>
+			<div style="700px; height:100%;">
+				<div style="width: 700px;float: left;"><hr style="border: 1px solid #cee2ed;width: 98%;" /></div>
+					<div id="mahila_main" style="width: 700px;">
+						 <?= (isset($cine_news)) ? $cine_news : '' ?>
+						   <div style="float:left;width:2px; height:200px;"><img src="<?=base_url()?>assets/image/line.gif" /></div>
+						 <?= (isset($cin_pukarlu)) ? $cin_pukarlu : '' ?>
+					</div>
+					<div style="width: 700px;float: left;"><hr style="border: 1px solid #cee2ed;width: 98%;" /></div>
+					<div id="mahila_main" style="width: 700px;">
+						 <?= (isset($cine_news)) ? $cine_news : '' ?>
+						   <div style="float:left;width:2px; height:200px;"><img src="<?=base_url()?>assets/image/line.gif" /></div>
+						 <?= (isset($cin_pukarlu)) ? $cin_pukarlu : '' ?>
+					</div>
+					<div style="width: 700px;float: left;"><hr style="border: 1px solid #cee2ed;width: 98%;" /></div>
+					<div id="mahila_main" style="width: 700px;">
+						 <?= (isset($cine_news)) ? $cine_news : '' ?>
+						   <div style="float:left;width:2px; height:200px;"><img src="<?=base_url()?>assets/image/line.gif" /></div>
+						 <?= (isset($cin_pukarlu)) ? $cin_pukarlu : '' ?>
+					</div>
+				
+			</div>
+			
+	 </div>
+	 <div style="width: 26%;float: right;">
+	 	<img src="<?=base_url()?>assets/home_images/ads/mahila_ad1.jpg"/>
+	 	<img src="<?=base_url()?>assets/home_images/ads/mahila_ad.jpg"/>
+	 	<img src="<?=base_url()?>assets/home_images/ads/mahila_ad2.jpg"/>
+	 </div>
+</div>
+	 <!--
+	<div style="width:100%; height:100%;">
+	<div style="float:right; width:230px; height:100%; border-left:0px solid #b3d3e2; padding-top:5px;text-align: left;">
+		<div style="height: 218px;width: 212px;">
+		</div>
+		<div><img src="<?=base_url()?>assets/home_images/ads/mahila_ad.jpg" width="204" height="531" /></div>
+	</div>
+	<div id="hr"><hr style="border: 1px solid #cee2ed;width: 98%" /></div>
+	<div id="mahila_main">
+						 <?= (isset($cine_news)) ? $cine_news : '' ?>
+						   <div style="float:left;width:2px; height:200px;"><img src="<?=base_url()?>assets/image/line.gif" /></div>
+						 <?= (isset($cin_pukarlu)) ? $cin_pukarlu : '' ?>
+						  <div style="float:left;width:2px; height:200px;"><img src="<?=base_url()?>assets/image/line.gif" /></div>	  
+	</div>
+					  <div id="hr"><hr style="border: 1px solid #cee2ed;width: 98%;" /></div>
+					  <div id="mahila_main">
+					   <?= (isset($cin_riviews)) ? $cin_riviews : '' ?>
+						   <div style="float:left;width:2px; height:200px;"><img src="<?=base_url()?>assets/image/line.gif" /></div>
+						 <?= (isset($cin_shedule)) ? $cin_shedule : '' ?>
+						  <div style="float:left;width:2px; height:200px;"><img src="<?=base_url()?>assets/image/line.gif" /></div>
+				  	</div>
+					  <div id="hr"><hr style="border: 1px solid #cee2ed;width: 98%;" /></div>
+					  <div id="mahila_main">
+					   <?= (isset($cin_interviews)) ? $cin_interviews : '' ?>
+						   <div style="float:left;width:2px; height:200px;"><img src="<?=base_url()?>assets/image/line.gif" /></div>
+						 <?= (isset($cin_therachatu)) ? $cin_therachatu : '' ?>
+						  <div style="float:left;width:2px; height:200px;"><img src="<?=base_url()?>assets/image/line.gif" /></div>
+						  </div>
+	</div>
+-->

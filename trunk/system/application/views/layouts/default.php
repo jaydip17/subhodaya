@@ -24,9 +24,14 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
 <!-- for rss feeds -->
 	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?=base_url()?>feeds/news" />
 	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?=base_url();?>feeds/news" />
-<!-- main style sheet --><!--
+<!-- main style sheet -->
+<?php if(isset($newscss)){?>
 	<link href="<?=base_url();?>assets/css/news.css" rel="stylesheet" type="text/css" />
-    --><link  href="<?=base_url();?>assets/css/black.css" rel="stylesheet" type="text/css" />
+	<?php }?>
+<?php if(isset($cinemacss)){?>
+	<link href="<?=base_url();?>assets/css/cinema.css" rel="stylesheet" type="text/css" />
+	<?php }?>
+    <link  href="<?=base_url();?>assets/css/black.css" rel="stylesheet" type="text/css" />
 	<link id="theme" href="<?=base_url();?>assets/css/blue.css" rel="stylesheet" type="text/css" /> 
 <!-- for tabs js ans css -->
 	<script src="<?=base_url();?>assets/jq.tabs/jquery-1.1.3.1.pack.js" type="text/javascript"></script>
@@ -143,8 +148,8 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
 			</div>
 			<div id="language" style="color:#3398FF;margin-top:5px;margin-right:5px;margin-bottom:5px; font-size:13px;float:right">
 				<font style="color:#646464">Change Language: </font>
-				<a href="" id="ln">English</a>|
-				<a href="" id="ln">Hindi</a>|
+				<a href="http://english.subhodaya.com/" id="ln">English</a>|
+				<a href="http://hindi.subhodaya.com/" id="ln">Hindi</a>|
 				<a href="" id="ln">Tamil</a>|
 				<a href="" id="ln">Telugu</a>|
 				<a href="" id="ln">Unknown</a>|
@@ -165,14 +170,14 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
 		</div>
 		<div id="menu">
         	<ul class="solidblockmenu">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="news.html" class="current">Varthalu</a></li>
-                <li><a href="#">Cinema</a></li>
-                <li><a href="#">video</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">Greetings</a></li>
-            	<li><a href="#">Mahila</a></li>
-                <li><a href="#">Sahithi</a></li>
+                <li><a href="<?=base_url();?>" class="current">Home</a></li>
+                <li><a href="<?=base_url()?>news" >Varthalu</a></li>
+                <li><a href="<?=base_url()?>cinema">Cinema</a></li>
+                <li><a href="<?=base_url()?>video">video</a></li>
+                <li><a href="<?=base_url()?>gallery">Gallery</a></li>
+                <li><a href="<?=base_url()?>greetings">Greetings</a></li>
+            	<li><a href="<?=base_url()?>mahila">Mahila</a></li>
+                <li><a href="<?=base_url()?>sahithi">Sahithi</a></li>
                 <li><a href="#">Kridalu</a></li>
            </ul>
         	<div id="ch_color">

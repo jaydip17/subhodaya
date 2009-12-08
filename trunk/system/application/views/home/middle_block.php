@@ -8,36 +8,14 @@
 							</div>
 							<div id="sub_window_content" >
 								<div id="" style="width:98%;padding-left: 10px;" align="left" >
-								
-									<img style="float:left; margin:5px 20px 2px 0px; " src="<?=base_url()?>assets/home_images/news/latest.jpg">
-										<ul style="margin:0px; padding:0px">
-											<li>
-												<a href="#" style="color:#228BEE; font-size:12px; text-decoration:none">
-												Arya 2
-												</a>
-											</li>
-											<li>
-												<a href="#">Ek Niranjan</a>
-											</li>
-											<li>
-												<a href="#">Bendu Apparao</a>
-											</li>
-											<li>
-												<a href="#">Bumper Offer</a>
-											</li>
-											<li>
-												<a href="#">Magadheera</a>
-											</li>
-											<li>
-												<a href="#">Oye</a>
-											</li>
-											<li>
-												<a href="#">Oye</a>
-											</li>
-											<li>
-												<a href="#">Oye</a>
-											</li>
-									</ul>		
+								<? if(file_exists("./assets/news/news_img".$details[0]->id."_thumb.jpg")){ ?>
+									<img style="float:left; margin:5px 20px 2px 0px; " src="<?=(isset($image_link)) ? $image_link : ''?>">
+									<?php }?>
+										<ul style="margin:0px; padding-left:25px;">
+										<?php foreach ($details as $row):?>
+											<li><a href="#" style="font-size:12px;margin-top: 5px; "><?=$row->heading?></a></li>
+											<?php endforeach;?>		
+										</ul>		
 										<div id="news_more"><a href="#"><?=(isset($more)) ? $more : ''?></a>	</div>
 										
 									</div>

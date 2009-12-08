@@ -79,6 +79,10 @@ class Home{
 				$temp=$this->get_srungaram();
 				$image_link=base_url().'assets/srungaram/news_img'.$temp[0]->id.'_home_thumb.jpg';
 				break;
+			case $this->CI->lang->line('bavishyam'):
+				$temp=$this->get_srungaram();
+				$image_link=base_url().'assets/srungaram/news_img'.$temp[0]->id.'_home_thumb.jpg';
+				break;
 				
 		}
 				$data = array(
@@ -93,39 +97,62 @@ class Home{
 	}
 	function left_block($heading){
 		$image_link='';
-		//$reviews=$this->CI->lang->line('reviews');
 		$more=$this->CI->lang->line('more');
 		$eenka=$this->CI->lang->line('enka_chavandi');
 		switch ($heading){
 			case $this->CI->lang->line('subh_spec'):
 				 $temp=$this->get_sub_special();
-				 $image_link=base_url().'assets/news/news_img'.$temp[0]->id.'_home_thumb.jpg';
+				 $image_link=base_url().'assets/special_newsimg/news_img'.$temp[0]->id.'_thumb.jpg';
+				break;
+			case $this->CI->lang->line('sangitham'):
+				 $temp=$this->get_sub_special();
+				 $image_link=base_url().'assets/special_newsimg/news_img'.$temp[0]->id.'_thumb.jpg';
+				break;
+			case $this->CI->lang->line('reviews'):
+				 $temp=$this->get_sub_special();
+				 $image_link=base_url().'assets/special_newsimg/news_img'.$temp[0]->id.'_thumb.jpg';
+				break;
 		}
 				$data = array(
 						'data' => 'somtext',
 						'sub_heading'	=> $heading,
 						'more'			=>	$more,
-						'eenka'			=>	$eenka
+						'eenka'			=>	$eenka,
+						'image_link'	=> 	$image_link,
+						'details'		=>  $temp
 		);
 		return $this->CI->load->view('home/left_block',$data,TRUE);
 	}
 	function middle_block($heading){
 		$more=$this->CI->lang->line('more');
+		$temp=$this->active_news();
+		$image_link=base_url().'assets/news/news_img'.$temp[0]->id.'_thumb.jpg';
 				$data = array(
 						'data' 			=> 'somtext',
 						'sub_heading'	=> $heading,
-						'more'			=> $more
+						'more'			=> $more,
+						'details'		=> $temp,
+						'image_link'	=> $image_link
 		);
 		return $this->CI->load->view('home/middle_block',$data,TRUE);
 	}
 	function home_poll($heading){
 		$homepoll=$this->CI->lang->line('homepoll');
+		$yes=$this->CI->lang->line('yes');
+		$no=$this->CI->lang->line('no');
+		$yes_no=$this->CI->lang->line('yes_no');
 		switch ($heading){
 			case $homepoll:
+				$temp=$this->get_homepoll();
+				break;
 		}
 				$data = array(
-						'data' => 'somtext',
+						'data' 			=> 'somtext',
 						'sub_heading'	=> $heading,
+						'details'		=>	$temp,
+						'yes'			=>	$yes,
+						'no'			=>  $no,
+						'yes_no'		=>  $yes_no
 		);
 		return $this->CI->load->view('home/home_poll',$data,TRUE);
 	}
@@ -157,11 +184,18 @@ class Home{
 	}
 	function get_sub_special(){
 		$details=$this->CI->Subho_Model->get_home_stories(0);
-		print_r($details);
 		return $details;
 	}
 	function get_srungaram(){
 		$details=$this->CI->Srungaram_Model->active_srung(0);
+		return $details;
+	}
+	function get_homepoll(){
+		$details=$this->CI->Poll_Model->get_newspolls(4,1);
+		return $details;
+	}
+	function active_news(){
+		$details=$this->CI->News_Model->all_active_news(0);
 		return $details;
 	}
 }

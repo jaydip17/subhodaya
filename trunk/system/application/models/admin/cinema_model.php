@@ -48,6 +48,7 @@ class Cinema_Model extends Model {
    		$this->db->select('*');
    		$this->db->order_by("cinema.insert_date", "desc");
    		$this->db->where('type',$type);
+   		$this->db->limit(8);
 		$this->db->from('cinema_cat');
 		$this->db->join('cinema','cinema.type=cinema_cat.id');
 		$details = $this->db->get_where();

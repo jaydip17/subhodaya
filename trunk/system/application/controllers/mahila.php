@@ -4,10 +4,20 @@ class Mahila extends Controller {
 	function mahila()
 	{
 		parent::Controller();
+		$this->load->model('admin/Flash_model');
+		$this->load->library('Cinema_lib', 'cinema_lib');
+		$this->lang->load('telugu', 'telugu');
 	}
 	function index()
 	{
-		$more=$this->News_Model->more_news();
+		$newscss=array();
+		$cine_news=$this->cinema_lib->cinema_block($this->lang->line('cini_news'));
+		$cin_pukarlu=$this->cinema_lib->cinema_block($this->lang->line('cini_pukarlu'));
+		$cin_riviews=$this->cinema_lib->cinema_block($this->lang->line('reviews'));
+		$cin_shedule=$this->cinema_lib->cinema_block($this->lang->line('cini_shedul'));
+		$cin_interviews=$this->cinema_lib->cinema_block($this->lang->line('interviews'));
+		$cin_therachatu=$this->cinema_lib->cinema_block($this->lang->line('therachatu'));
+		/*$more=$this->News_Model->more_news();
 		$details=$this->Mahila_Model->get_Mahilatype();
 		//print_r($details);
 		foreach($details as $item)
@@ -29,15 +39,23 @@ class Mahila extends Controller {
 							'main' => $more['8']->matter,
 							'home' => $more['2']->matter,
 		); 
-		$bread_crumb = $this->bread_crumb->get_code($segments);
+		$bread_crumb = $this->bread_crumb->get_code($segments);*/
 		
-		$data=array('more'      	=>	$more,
+		$data=array(/*'more'      	=>	$more,
 		            'details'   	=>	$details,
 		            'details_more' 	=> 	$details_more,
 		             'types'       	=> 	$types,
 		    'details_more_sahithi'  =>	$details_more_sahithi,
 		        'details_sahithi'   => 	$details_sahithi,
-				'bread_crumb'		=>	$bread_crumb
+				'bread_crumb'		=>	$bread_crumb*/
+					'newscss'		=>	$newscss,
+					'cin_pukarlu'	=>	$cin_pukarlu,
+						'cine_news'		=>	$cine_news,
+						'cin_riviews'	=>	$cin_riviews,
+						'cin_shedule'	=>	$cin_shedule,
+						'cin_interviews'=>	$cin_interviews,
+						'cin_therachatu'=>	$cin_therachatu,
+						'cine_news'		=>	$cine_news
 		             );
 		$this->load->view('mahila_view',$data);
   }

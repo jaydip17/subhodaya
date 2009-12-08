@@ -111,7 +111,7 @@ function get_special_news()
     	$this->db->select('id,heading,summary');
     	$where=array('active'=>'1');
     	$this->db->where($where);
-    	$this->db->limit(4);
+    	$this->db->limit(1);
     	$this->db->order_by('id','desc');
     	$query=$this->db->get('subhodaya_spec');
     	return $query->result();

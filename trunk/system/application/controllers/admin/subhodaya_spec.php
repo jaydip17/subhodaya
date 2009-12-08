@@ -106,7 +106,7 @@ class Subhodaya_spec extends Controller {
 	        $config1['source_image'] = $image_path.$filename;
 			$config1['create_thumb'] = TRUE;
 			$config1['maintain_ratio'] = TRUE;
-			$config1['width'] = 100;
+			$config1['width'] = 130;
 			$config1['height'] = $height;
 	    	
 	    	$this->image_lib->initialize($config1);

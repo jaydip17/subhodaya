@@ -132,7 +132,7 @@ class Home{
 						'sub_heading'	=> $heading,
 						'more'			=> $more,
 						'details'		=> $temp,
-						'image_link'	=> $image_link
+						'image_link'	=> $image_link,
 		);
 		return $this->CI->load->view('home/middle_block',$data,TRUE);
 	}

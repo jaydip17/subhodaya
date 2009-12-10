@@ -14,6 +14,8 @@ $lang['news_antharja'] 			    		= 	"అంతర్జాతీయం";
 $lang['news_kridalu'] 			    		= 	"క్రీడలు";
 $lang['news_setier'] 			    		= 	"సెటైర్";
 $lang['state_news'] 			    		= 	"జిల్లా వార్తలు";
+$lang['thaja_vartha']						=	"తాజా వార్త ";
+$lang['marinni_visheshalu']					=	"మరిన్ని వార్తా విశేషాలు ";
 // cinema page
 $lang['reviews'] 			    			= 	"మూవీ రివ్యూస్";
 $lang['sangitham'] 			    			= 	"సంగీతం";
@@ -36,10 +38,28 @@ $lang['videos'] 			    			= 	"వీడియోస్";
 $lang['greetings'] 			    			= 	"గ్రీటింగ్స్";
 //mahila
 $lang['mahila'] 			    			= 	"మహిళా";
+$lang['mahi_buty'] 			    			= 	"బ్యుటి టిప్స్ ";
+$lang['mahila_spec'] 			    		= 	"ఆడవాళ్ళ ప్రత్యేకం";
+$lang['home_carer'] 			    		= 	"హోం & కరీర్ ";
+$lang['mahila_fashon'] 			    		= 	"ఫ్యాషన్";
+$lang['mahila_yoga'] 			    		= 	"యోగ";
+$lang['mahila_food'] 			    		= 	"ఆహారం";
+$lang['dite_helth'] 			    		= 	"డైట్ & హెల్త్ ";
+$lang['mahila_mehandi'] 			    	= 	"మెహంది ";
 //sahithi
 $lang['sahithi'] 			    			= 	"సాహితి";
+$lang['sahi_festiva'] 			    		= 	"పండుగలు";
+$lang['sahi_kathalu'] 			    		= 	"కథలు";
+$lang['matru_basha'] 			    		= 	"మాతృ భాష";
+$lang['sahi_sametha'] 			    		= 	"సామెతలు";
+$lang['sahi_kavithalu'] 			    	= 	"కవితలు";
+$lang['sahi_kavithm'] 			    		= 	"కవిత్వం";
+$lang['sahi_janapadam'] 			    	= 	"జానపదాలు";
+$lang['sahi_vyasam'] 			    		= 	"వ్యాసం";
 
-$lang['greetings'] 			    			= 	"గ్రీటింగ్స్";
+
+
+
 //heading for mails sending
 $lang['galley_mail_succ'] 					= 	"మెసేజ్ పంపబడింది ";
 $lang['gretting_mail_succ'] 				= 	"మెసేజ్ పంపబడింది";

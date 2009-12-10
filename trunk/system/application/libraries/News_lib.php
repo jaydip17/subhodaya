@@ -51,6 +51,7 @@ class News_lib{
 					if(!empty($temp))
 					{
 						$image_link=base_url()."assets/news/news_img".$temp[0]->id."_thumb.jpg";
+						$content_link=base_url()."news/details/".$temp[0]->type;
 					}
 					break;
 			case $this->CI->lang->line('news_jathiyam'):
@@ -58,6 +59,7 @@ class News_lib{
 					if(!empty($temp))
 					{
 						$image_link=base_url()."assets/news/news_img".$temp[0]->id."_thumb.jpg";
+						$content_link=base_url()."news/details/".$temp[0]->type;
 					}
 					break;
 			case $this->CI->lang->line('news_antharja'):
@@ -65,6 +67,7 @@ class News_lib{
 					if(!empty($temp))
 					{
 						$image_link=base_url()."assets/news/news_img".$temp[0]->id."_thumb.jpg";
+						$content_link=base_url()."news/details/".$temp[0]->type;
 					}
 					break;
 			case $this->CI->lang->line('state_news'):
@@ -72,6 +75,7 @@ class News_lib{
 					if(!empty($temp))
 					{
 						$image_link=base_url()."assets/news/news_img".$temp[0]->id."_thumb.jpg";
+						$content_link=base_url()."news/details/".$temp[0]->type;
 					}
 					break;
 		}
@@ -80,7 +84,8 @@ class News_lib{
 						'sub_heading'	=> $heading,
 						'more'			=> $more,
 						'details'		=> $temp,
-						'image_link'	=> $image_link
+						'image_link'	=> $image_link,
+						'content_link'	=>	$content_link
 		);
 		return $this->CI->load->view('news/news_block',$data,TRUE);
 	}
@@ -95,6 +100,7 @@ class News_lib{
 				if(!empty($temp))
 				{
 					$details=$temp;
+					$content_link=base_url()."news/details/".$temp[0]->type;
 				}
 				break;
 			case $this->CI->lang->line('news_setier'):
@@ -102,6 +108,7 @@ class News_lib{
 				if(!empty($temp))
 				{
 					$details=$temp;
+					$content_link=base_url()."news/details/".$temp[0]->type;
 				}
 				break;
 			case $this->CI->lang->line('news_setier'):
@@ -109,6 +116,7 @@ class News_lib{
 				if(!empty($temp))
 				{
 					$details=$temp;
+					$content_link=base_url()."news/details/".$temp[0]->type;
 				}
 				break;
 		}
@@ -116,7 +124,8 @@ class News_lib{
 						'data' 			=> 'somtext',
 						'sub_heading'	=> $heading,
 						'more'			=> $more,
-						'details'       => $details
+						'details'       => $details,
+						'content_link'	=> $content_link
 		);
 		return $this->CI->load->view('news/news_left',$data,TRUE);
 	}
@@ -126,10 +135,6 @@ class News_lib{
 		if(!empty($temp)){
 			
 			$details=$temp;
-			$count=0;
-			foreach ($temp as $row){
-				$count++;
-			}
 		}
 		$data = array(
 						'data' => 'somtext',
@@ -138,6 +143,24 @@ class News_lib{
 		);
 		return $this->CI->load->view('news/news_main',$data,TRUE);
 	}
+	function news_content($news_cat)
+	{
+		$more_news=$this->CI->lang->line('marinni_visheshalu');
+		$temp=$this->get_news_details($news_cat);
+		$active_news=$this->most_read_news($news_cat);
+		$thaja_varhta=$this->thaja_vartha($news_cat);
+		
+				$data = array(
+						'data' 			=> 'somtext',
+						'sub_heading'	=> $news_cat,
+						'details'		=>	$temp,
+						'active_news'	=>	$active_news,
+						'thaja_varhta'	=>	$thaja_varhta,
+						'more_news'		=>	$more_news
+		);
+		return $this->CI->load->view('news/news_content',$data,TRUE);
+	}
+//news main page
 	function get_rastiya()
 	{
 		$details=$this->CI->News_Model->get_newstype1(1);
@@ -170,9 +193,23 @@ class News_lib{
 	}
 	function breking_news()
 	{
-		$details=$this->CI->News_Model->active_news1(3);
-		//print_r($details);
+		$details=$this->CI->News_Model->active_news1(4);
 		return $details;
 	}
-	
+//news contentpage
+	function get_news_details($news_cat)
+	{
+		$details=$this->CI->News_Model->get_news($news_cat);
+		return $details;
+	}
+	function most_read_news($news_cat)
+	{
+		$details=$this->CI->News_Model->active_news($news_cat);
+		return $details;
+	}
+	function thaja_vartha($news_cat)
+	{
+		$details=$this->CI->News_Model->breaking_news($news_cat);
+		return $details;
+	}
 }

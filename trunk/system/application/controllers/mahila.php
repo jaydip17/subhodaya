@@ -4,19 +4,20 @@ class Mahila extends Controller {
 	function mahila()
 	{
 		parent::Controller();
-		$this->load->model('admin/Flash_model');
 		$this->load->library('Cinema_lib', 'cinema_lib');
 		$this->lang->load('telugu', 'telugu');
 	}
 	function index()
 	{
 		$newscss=array();
-		$cine_news=$this->cinema_lib->cinema_block($this->lang->line('cini_news'));
-		$cin_pukarlu=$this->cinema_lib->cinema_block($this->lang->line('cini_pukarlu'));
-		$cin_riviews=$this->cinema_lib->cinema_block($this->lang->line('reviews'));
-		$cin_shedule=$this->cinema_lib->cinema_block($this->lang->line('cini_shedul'));
-		$cin_interviews=$this->cinema_lib->cinema_block($this->lang->line('interviews'));
-		$cin_therachatu=$this->cinema_lib->cinema_block($this->lang->line('therachatu'));
+		$ma_special=$this->cinema_lib->mahila_block($this->lang->line('mahila_spec'));
+		$home_carer=$this->cinema_lib->mahila_block($this->lang->line('home_carer'));
+		$mahila_fashon=$this->cinema_lib->mahila_block($this->lang->line('mahila_fashon'));
+		$mahila_yoga=$this->cinema_lib->mahila_block($this->lang->line('mahila_yoga'));
+		$dite_helth=$this->cinema_lib->mahila_block($this->lang->line('dite_helth'));
+		$mahila_mehandi=$this->cinema_lib->mahila_block($this->lang->line('mahila_mehandi'));
+		$mahi_buty=$this->cinema_lib->mahila_block($this->lang->line('mahi_buty'));
+		$mahila_food=$this->cinema_lib->mahila_block($this->lang->line('mahila_food'));
 		/*$more=$this->News_Model->more_news();
 		$details=$this->Mahila_Model->get_Mahilatype();
 		//print_r($details);
@@ -42,20 +43,16 @@ class Mahila extends Controller {
 		$bread_crumb = $this->bread_crumb->get_code($segments);*/
 		
 		$data=array(/*'more'      	=>	$more,
-		            'details'   	=>	$details,
-		            'details_more' 	=> 	$details_more,
-		             'types'       	=> 	$types,
-		    'details_more_sahithi'  =>	$details_more_sahithi,
-		        'details_sahithi'   => 	$details_sahithi,
 				'bread_crumb'		=>	$bread_crumb*/
 					'newscss'		=>	$newscss,
-					'cin_pukarlu'	=>	$cin_pukarlu,
-						'cine_news'		=>	$cine_news,
-						'cin_riviews'	=>	$cin_riviews,
-						'cin_shedule'	=>	$cin_shedule,
-						'cin_interviews'=>	$cin_interviews,
-						'cin_therachatu'=>	$cin_therachatu,
-						'cine_news'		=>	$cine_news
+					'ma_special'	=>	$ma_special,
+					'home_carer'	=>	$home_carer,
+					'mahila_fashon' =>	$mahila_fashon,
+					'mahila_yoga'	=>	$mahila_yoga,
+					'dite_helth'	=>  $dite_helth,
+					'mahila_mehandi'=>	$mahila_mehandi,
+					'mahi_buty'		=>	$mahi_buty,
+					'mahila_food'	=>	$mahila_food
 		             );
 		$this->load->view('mahila_view',$data);
   }

@@ -4,10 +4,21 @@ class Sahithi extends Controller {
 	function Sahithi()
 	{
 		parent::Controller();
+		$this->load->library('Cinema_lib', 'cinema_lib');
+		$this->lang->load('telugu', 'telugu');
 	}
 	function index()
 	{
-		$this->load->model('admin/mahila_Model');
+		$newscss=array();
+		$sahi_festiva=$this->cinema_lib->mahila_block($this->lang->line('sahi_festiva'));
+		$sahi_kathalu=$this->cinema_lib->mahila_block($this->lang->line('sahi_kathalu'));
+		$matru_basha=$this->cinema_lib->mahila_block($this->lang->line('matru_basha'));
+		$sahi_sametha=$this->cinema_lib->mahila_block($this->lang->line('sahi_sametha'));
+		$sahi_kavithalu=$this->cinema_lib->mahila_block($this->lang->line('sahi_kavithalu'));
+		$sahi_kavithm=$this->cinema_lib->mahila_block($this->lang->line('sahi_kavithm'));
+		$sahi_janapadam=$this->cinema_lib->mahila_block($this->lang->line('sahi_janapadam'));
+		$sahi_vyasam=$this->cinema_lib->mahila_block($this->lang->line('sahi_vyasam'));
+		/*$this->load->model('admin/mahila_Model');
 		$more=$this->News_Model->more_news();
 		$details=$this->Sahithi_Model->get_sahithitype();
 		$details_more=array();
@@ -31,16 +42,26 @@ class Sahithi extends Controller {
 							'main' => $more['9']->matter,
 							'home' => $more['2']->matter,
 		); 
-		$bread_crumb = $this->bread_crumb->get_code($segments);
+		$bread_crumb = $this->bread_crumb->get_code($segments);*/
 		
-		$data=array('more'      		=> $more,
+		$data=array(/*'more'      		=> $more,
 		            'details'  			=> $details,
 		            'details_more' 		=> $details_more,
 		             'types'        	=> $types,        
 		          'details_more_mahila' => $details_more_mahila,
 		             'details_mahila'   => $details_mahila,
 		             'types_mahila'  	=> $types_mahila,
-						'bread_crumb'	=> $bread_crumb
+						'bread_crumb'	=> $bread_crumb*/
+					'newscss'			=>	$newscss,
+					'sahi_festiva'		=>	$sahi_festiva,
+					'sahi_kathalu'		=>	$sahi_kathalu,
+					'matru_basha'		=>	$matru_basha,
+					'sahi_sametha'		=>	$sahi_sametha,
+					'sahi_kavithalu'	=>	$sahi_kavithalu,
+					'sahi_kavithm'		=>	$sahi_kavithm,
+					'sahi_janapadam'	=>	$sahi_janapadam,
+					'sahi_vyasam'		=>	$sahi_vyasam
+					
 		);
 		
 		$this->load->view('sahithi_view',$data);

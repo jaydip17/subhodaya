@@ -7,5 +7,5 @@
 								<?php endforeach;?>
 							</ul>
 							</div>
-							<div id="news_more"><a href="#"><?=(isset($more)) ? $more : ''?></a></div>
+							<div id="news_more"><a href="<?=(isset($content_link)) ? $content_link : ''?>"><?=(isset($more)) ? $more : ''?></a></div>
 						</div>

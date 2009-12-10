@@ -80,24 +80,29 @@ make_menus();
 	</div>
 			<div style="700px; height:100%;">
 				<div style="width: 700px;float: left;"><hr style="border: 1px solid #cee2ed;width: 98%;" /></div>
-					<div id="mahila_main" style="width: 700px;">
-						 <?= (isset($cine_news)) ? $cine_news : '' ?>
-						   <div style="float:left;width:2px; height:200px;"><img src="<?=base_url()?>assets/image/line.gif" /></div>
-						 <?= (isset($cin_pukarlu)) ? $cin_pukarlu : '' ?>
+					<div id="mahila_main" style="width: 700px;height: 200px;">
+						 <?= (isset($ma_special)) ? $ma_special : '' ?>
+						   <div style="float:left;width:2px; "><img src="<?=base_url()?>assets/image/line.gif" /></div>
+						 <?= (isset($home_carer)) ? $home_carer : '' ?>
 					</div>
 					<div style="width: 700px;float: left;"><hr style="border: 1px solid #cee2ed;width: 98%;" /></div>
-					<div id="mahila_main" style="width: 700px;">
-						 <?= (isset($cine_news)) ? $cine_news : '' ?>
-						   <div style="float:left;width:2px; height:200px;"><img src="<?=base_url()?>assets/image/line.gif" /></div>
-						 <?= (isset($cin_pukarlu)) ? $cin_pukarlu : '' ?>
+					<div id="mahila_main" style="width: 700px;height: 200px;">
+						 <?= (isset($mahila_fashon)) ? $mahila_fashon : '' ?>
+						   <div style="float:left;width:2px; "><img src="<?=base_url()?>assets/image/line.gif" /></div>
+						 <?= (isset($mahila_yoga)) ? $mahila_yoga : '' ?>
 					</div>
 					<div style="width: 700px;float: left;"><hr style="border: 1px solid #cee2ed;width: 98%;" /></div>
-					<div id="mahila_main" style="width: 700px;">
-						 <?= (isset($cine_news)) ? $cine_news : '' ?>
+					<div id="mahila_main" style="width: 700px;height: 200px;">
+						 <?= (isset($dite_helth)) ? $dite_helth : '' ?>
 						   <div style="float:left;width:2px; height:200px;"><img src="<?=base_url()?>assets/image/line.gif" /></div>
-						 <?= (isset($cin_pukarlu)) ? $cin_pukarlu : '' ?>
+						 <?= (isset($mahila_mehandi)) ? $mahila_mehandi : '' ?>
 					</div>
-				
+					<div style="width: 700px;float: left;"><hr style="border: 1px solid #cee2ed;width: 98%;" /></div>
+					<div id="mahila_main" style="width: 700px;height: 200px;">
+						 <?= (isset($mahi_buty)) ? $mahi_buty : '' ?>
+						   <div style="float:left;width:2px; height:200px;"><img src="<?=base_url()?>assets/image/line.gif" /></div>
+						 <?= (isset($mahila_food)) ? $mahila_food : '' ?>
+					</div>
 			</div>
 			
 	 </div>
@@ -107,33 +112,3 @@ make_menus();
 	 	<img src="<?=base_url()?>assets/home_images/ads/mahila_ad2.jpg"/>
 	 </div>
 </div>
-	 <!--
-	<div style="width:100%; height:100%;">
-	<div style="float:right; width:230px; height:100%; border-left:0px solid #b3d3e2; padding-top:5px;text-align: left;">
-		<div style="height: 218px;width: 212px;">
-		</div>
-		<div><img src="<?=base_url()?>assets/home_images/ads/mahila_ad.jpg" width="204" height="531" /></div>
-	</div>
-	<div id="hr"><hr style="border: 1px solid #cee2ed;width: 98%" /></div>
-	<div id="mahila_main">
-						 <?= (isset($cine_news)) ? $cine_news : '' ?>
-						   <div style="float:left;width:2px; height:200px;"><img src="<?=base_url()?>assets/image/line.gif" /></div>
-						 <?= (isset($cin_pukarlu)) ? $cin_pukarlu : '' ?>
-						  <div style="float:left;width:2px; height:200px;"><img src="<?=base_url()?>assets/image/line.gif" /></div>	  
-	</div>
-					  <div id="hr"><hr style="border: 1px solid #cee2ed;width: 98%;" /></div>
-					  <div id="mahila_main">
-					   <?= (isset($cin_riviews)) ? $cin_riviews : '' ?>
-						   <div style="float:left;width:2px; height:200px;"><img src="<?=base_url()?>assets/image/line.gif" /></div>
-						 <?= (isset($cin_shedule)) ? $cin_shedule : '' ?>
-						  <div style="float:left;width:2px; height:200px;"><img src="<?=base_url()?>assets/image/line.gif" /></div>
-				  	</div>
-					  <div id="hr"><hr style="border: 1px solid #cee2ed;width: 98%;" /></div>
-					  <div id="mahila_main">
-					   <?= (isset($cin_interviews)) ? $cin_interviews : '' ?>
-						   <div style="float:left;width:2px; height:200px;"><img src="<?=base_url()?>assets/image/line.gif" /></div>
-						 <?= (isset($cin_therachatu)) ? $cin_therachatu : '' ?>
-						  <div style="float:left;width:2px; height:200px;"><img src="<?=base_url()?>assets/image/line.gif" /></div>
-						  </div>
-	</div>
--->

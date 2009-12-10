@@ -62,7 +62,7 @@ class News_Model extends Model
     {
     	$this->db->select('*');
     	$this->db->order_by("news.insert_date", "desc");
-    	$array=array('type'=>$type,'news.active'=>0);
+    	$array=array('type'=>$type,'news.active'=>0,'news.breking_news'=>0);
     	$this->db->where($array);
     	$this->db->limit(8);
 		$this->db->from('news_types');
@@ -175,6 +175,25 @@ class News_Model extends Model
 		$this->db->limit(8);
 		$query=$this->db->get('news');
 		return $query->result();
+	}
+	//breaking news
+	function breaking_news($news_cat)
+	{
+		$array=array('breking_news'=>1,'type'=>$news_cat);
+		$this->db->where($array);
+		$this->db->order_by('id','desc');
+		$this->db->limit(8);
+		$query=$this->db->get('news');
+		return $query->result();	
+	}
+ 	function thaja_news()
+	{
+		$array=array('breking_news'=>1);
+		$this->db->where($array);
+		$this->db->order_by('id','desc');
+		$this->db->limit(8);
+		$query=$this->db->get('news');
+		return $query->result();	
 	}
 }
 

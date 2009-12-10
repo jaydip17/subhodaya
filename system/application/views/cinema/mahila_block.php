@@ -1,6 +1,6 @@
-  <div id="mahi_content">
+  <div id="mahi_content" style="height: 200px;">
 	<span style="letter-spacing: 2px;"><?= (isset($sub_heading)) ? $sub_heading : '' ?></span><br />
-	<?php if(file_exists("./assets/cinema/ceni_img".$details[0]->id."_thumb.jpg")){ ?>
+	<?php if(file_exists("./assets/mahila/news_img".$details[0]->id."_thumb.jpg")){ ?>
 	<img src="<?= (isset($img_link)) ? $img_link : '' ?>" id="mahila_img"/>
 	<?php }?>
 	<span id="headings"><a href="#"><?=$details[0]->heading?></a></span><br />
@@ -13,7 +13,7 @@
 	          	continue;
           		} ?>
 		<li><a href="#"><?=$row->heading?></a></li>
-	<? if($count==6){
+	<? if($count==4){
 		break;
 		}else{
 		$count++;

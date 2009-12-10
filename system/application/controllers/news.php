@@ -19,7 +19,7 @@ class News extends Controller {
 		$setier=$this->news_lib->news_left($this->lang->line('news_setier'));
 		$ardikam=$this->news_lib->news_left($this->lang->line('news_ardikam'));
 		$main_news=$this->news_lib->news_main('');
-		
+		$thaja_varhta=$this->News_Model->thaja_news();
 		$newscss=array();
 		//$current_url = current_url();
 		//$navigation = array ($current_url);
@@ -43,13 +43,19 @@ class News extends Controller {
 					'state'			  	=> $state,
 					'ardikam'		  	=> $ardikam,
 					'setier'		 	=> $setier,
-					'main_news'			=> $main_news
+					'main_news'			=> $main_news,
+					'thaja_varhta'		=> $thaja_varhta	
 		);
 		$this->load->view("news_main",$data);
 	}
-	function details(){
-		
+	function details()
+	{
+		$newscss=array();
 		$type=$this->uri->segment(3);
+		//$setier=$this->news_lib->news_left($this->lang->line('news_setier'));
+		$news_content=$this->news_lib->news_content($type);
+		$onload = "loadNews('content','".base_url()."newslist/listview/".$type."')";
+		/*$type=$this->uri->segment(3);
 		$onload = "loadNews('content','".base_url()."newslist/listview/".$type."')";
 		$more=$this->News_Model->more_news();
 		$type=$this->uri->segment(3,0);
@@ -66,8 +72,8 @@ class News extends Controller {
 		$tabs=array();
 		if(empty($news)){
 			redirect(base_url().'news');
-		}
-		$segments = array(	'seg1' => $this->uri->segment(1,0),
+		}*/
+	/*	$segments = array(	'seg1' => $this->uri->segment(1,0),
 						   	'seg2' => $this->uri->segment(2,0),
 							'seg3' => $this->uri->segment(3,0),
 							'seg4' => $this->uri->segment(4,0),
@@ -75,11 +81,10 @@ class News extends Controller {
 							'main' => $more['3']->matter,
 							'home' => $more['2']->matter
 		); 
-		$bread_crumb = $this->bread_crumb->get_code($segments);
+		$bread_crumb = $this->bread_crumb->get_code($segments);*/
 		//print_r($active_news4);
-		$data=array(	'news'  		   =>	$news,
+		$data=array(	/*'news'  		   =>	$news,
 						'more'			   =>	$more,
-						'onload'    	   => 	$onload,
 						'active_news'	   =>	$active_news,
 						'mahila_details'   =>   $mahila_details,
 						'mahila_details1'  =>   $mahila_details1,
@@ -88,10 +93,11 @@ class News extends Controller {
 						'active_news3'	   =>	$active_news3,
 						'active_news4'	   =>   $active_news4,
 						'mahila_details2'  =>	$mahila_details2,
-						'bread_crumb' 	   =>  $bread_crumb,
-						'tabs'			   =>  $tabs
-						
-						
+						'tabs'			   =>  $tabs*/
+						'newscss'		  	=> $newscss,
+						//'setier'			=> $setier,
+						'news_content'		=> $news_content,
+						'onload'    	   => 	$onload,	
 						
 				);
 		$this->load->view("news_content",$data);

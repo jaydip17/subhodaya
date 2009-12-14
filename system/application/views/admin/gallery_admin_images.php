@@ -114,7 +114,7 @@ echo form_textarea ($array);
 		<td>
 <?
 echo form_label ( 'Thumb image', 'thumb0' );
-?>(130x160)
+?>(126x150)
 </td>
 		<td>
 <?=form_upload('thumb0');?>

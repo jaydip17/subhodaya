@@ -14,7 +14,7 @@ class Gallery extends Controller {
 		//print_r($result);
 		foreach ($result as $cate)
 		{
-			$subcats=$this->Gallery_Model->get_cateimage($cate->id,$limit="8");
+			$subcats=$this->Gallery_Model->get_cateimage($cate->id,$limit="5");
 			
 			foreach ($subcats as $sub_cat)
 			{
@@ -25,7 +25,8 @@ class Gallery extends Controller {
 									'catname'	=> $sub_cat->catname,
 									'imageid'  => (isset($ss->id)) ? $ss->id : 0,
 									'imagename'  => (isset($ss->title)) ? $ss->title : 0, 
-									);   
+									); 
+									  
 			}
 			$cats[] = array (
 							'id' => $cate->id,
@@ -76,7 +77,7 @@ class Gallery extends Controller {
 		 
     	$this->load->library('paginationnew');
     	$this->paginationnew->start = ($this->uri->segment(4)) ? $this->uri->segment(4) : '0';
-    	$this->paginationnew->limit =16;
+    	$this->paginationnew->limit =20;
         $this->paginationnew->filePath =$a;
       
         $this->paginationnew->select_what = '*';
@@ -135,7 +136,7 @@ class Gallery extends Controller {
     	$this->load->library('paginationnew');
     	
     	$this->paginationnew->start = ($this->uri->segment(4)) ? $this->uri->segment(4) : '0';
-    	$this->paginationnew->limit =16;
+    	$this->paginationnew->limit =20;
         $this->paginationnew->filePath =$a;
       
         $this->paginationnew->select_what = '*';

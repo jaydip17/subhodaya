@@ -126,7 +126,7 @@ class Bread_crumb{
 						 $seg2 = 'inner';
 								$segments['heading'] = $this->CI->Gallery_Model->get_root_cat_by_id($root_cat_id);
 								(isset($segments['heading'])) ? $segments['heading']!='' ? $heading = $segments['heading'] : '' : '';
-								$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$segments['seg3'].'/'.$segments['seg4'],strip_tags($heading));	
+								//$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$segments['seg3'].'/'.$segments['seg4'],strip_tags($heading));	
 					}
 							break;
 				case 'mahila': 

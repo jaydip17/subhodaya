@@ -1,82 +1,121 @@
-<style type="text/css">
-ul{
-list-style-image:url(<?=base_url()?>assets/imgs/cr.png);
-padding-left: 20px;
-}
-</style>
-<table width="100%" cellpadding="0" cellspacing="0">
-<tr>
-	<td valign="top" width="2px"><img src="<?=base_url()?>assets/imgs/body-left.jpg"></td>
-	<td id="gal_center-top" width="745px;" align="left">
-			<div style="width: 50%;text-align: left;float: left;color: #8B0000;font-weight: bold;font-size: 14px;"><?=$result['0']->catname ?></div>
-			<div style="text-align: right;color: #8B0000;font-weight: bold;font-size: 14px;"></div>
-	</td>
-	<td valign="top" width="2px"><img src="<?=base_url()?>assets/imgs/body-right.jpg"></td>
-	<td valign="top" rowspan="3" align="center" style="height: 500px;">
-		<table  cellpadding="0" cellspacing="0" style="margin: 0px 3px 0px 3px;" width="95%">
-		<tr>
-			<td valign="top" width="4px"><img src="<?=base_url()?>assets/imgs/menu-left.jpg"></td>
-			<td id="menu_center_gall" width="99%" align="center" style="font-weight: bold;color: #FFFFFF;font-size: 14px;">Gallery Categories</td>
-			<td valign="top" width="4px" align="left"><img src="<?=base_url()?>assets/imgs/menu-right.jpg"></td>
-		</tr>
-		<tr>
-			<td colspan="3" align="left"><div style="height: 250px;background-color: #9CD8FC;font-size: 14px;">
-				<ul>
-				<?php if(!empty($result)){
-					foreach ($result as $item): 
-				?>
-				<li style="padding: 3px;"><a href="<?=base_url()?>gallery/categeory/<?=$item->id?>"><?=$item->catname?></a></li>
-				<?endforeach;} ?>
-				</ul>
-			 </div>
-			 <div >
-			 <img src="<?=base_url()?>assets/imgs/add.jpg">
-			 </div>
-			 </td>
-		</tr>
-	</table>
-	</td>
-</tr>
-<tr>
-	<td colspan="3"  id="gal_middle" align="center"> 
-		<div>
-		<? if(!empty($cats)){
-		$count=0;
-		foreach ($cats as $sub){ ?>
-		<div style="height: 500px;">
-		<?if($count!=0) {?>
-			<div id="gal_middle_line" style="height: 31px;margin-top: 5px;">
-				<div style="width: 50%;text-align: left;float: left;color: #8B0000;font-weight: bold;font-size: 14px;padding: 5px 0px 0px 5px;"><?=$sub['name'] ?></div>
-				<div style="text-align: right;color: #8B0000;font-weight: bold;font-size: 14px;padding: 3px 5px 0px 0px;"></div>
-			</div>
-			<?} ?>
-		<table width="90%" cellpadding="5" cellspacing="5" align="center" >
-			<tr>
-				<?$count1 = 1;
-				foreach ($sub['subcats'] as $img){
+
+	
+	<div style="width:963px; background-color:#fff;border:0px dotted #000">
+		 <div id="header" style="border:1px solid #ccc; margin-bottom:0px;float:left;background-color:#fff; width:100%">
 					
-				?>
-				
-				<td><div id="gallery_image" style="margin-bottom: 4px;"><a href="<?=base_url()?>gallery/inner/<?=$img['id']?>"><img src="<?=base_url()?>assets/gallery/thumimg<?=$img['imageid']?>.jpg" id="img" ></a></div>
-				<div id="gall_botom_image" style="text-align: center;font-weight: bold;font-size: 14px;"><div style="margin-top: 5px;">
-					<span><a href="<?=base_url()?>gallery/inner/<?=$img['id']?>"><?=$img['imagename']?></a></span><br>
-					<span style="color:#000000;"><?=$img['date']?></span></div>
-				</div></td>
-				<? if($count1==4){
-					$count1 = 0;
-					echo '</tr><tr>';
-				} $count1++;
-				}?>
-				<tr><td colspan="5" height="15px;" style="text-align: right;padding-bottom: 10px;"><a href="<?=base_url()?>gallery/categeory/<?=$sub['id'] ?>"><?=$more['0']->matter?></a></td></tr>
-		</table>
-		</div><br>
-		<?$count++;}}?>
+					
+				<div style="width:100%; height:100%px; float:left">
+					<div   style="float:right; height:100%;"><img src="<?=base_url()?>assets/home_images/ads/mahila_ad1.jpg" width="243" height="194" />
+					      <div><img src="<?=base_url()?>assets/home_images/ads/mahila_ad.jpg" width="243" height="487" /></div>
+					      <div style="border:1px #000 solid;"><img src="<?=base_url()?>assets/home_images/ads/mahila_ad2.jpg" width="243" height="268" /></div>
+					   </div>
+					
+					        <? if(!empty($cats)){
+						     	$count=0;
+						     	foreach ($cats as $sub){
+						     
+						     ?>
+					     
+					    <div id="new" style="border-top:1px solid #00CCFF; padding-top:4px;padding-bottom:6px;">
+					       
+					          <? if($count!==0){?>
+						   <div style="float:left; width:90%;">
+						     
+						   
+						     <div align="left" style="font-size:16px;color:#3598FD;"><b><?=$sub['name']?></b></div>
+						     </div>
+						     <?}?>
+						 
+						      
+						       
+						       <? $count1=1;
+						         foreach ($sub['subcats'] as $img){
+						       ?>
+					            <div id="img"><a href="<?=base_url()?>gallery/inner/<?=$img['id']?>"><img src="<?=base_url()?>assets/gallery/thumimg<?=$img['imageid']?>.jpg" id="img2"></a><div style="height:36px; width:128px;background-color:#f7f7f7; border:1px solid #dcdcdc;"><span id="anchor"><a href="<?=base_url()?>gallery/inner/<?=$img['id']?>"><?=$img['imagename']?></span></a><br /> <?=$img['date']?></div>
+							    </div>
+							   <? if($count1==4){
+							          $count = 0;
+							          echo '<div></div>'; 
+							   }
+							    $count1++;
+						         }			
+						        // print_r($sub);		        
+							          ?>
+							  
+							  <div style="float:right;" id="anchor"><a href="<?=base_url()?>gallery/categeory/<?=$sub['id'] ?>"><?=$more['0']->matter?></a></div>
+							  
+					     </div>
+					     <?$count++;}}?>
+						 
+						 <!-- <div id="new">
+						   <div style="float:left; width:90%;">
+						    <div align="left"><b>Heroes</b></div>
+						  </div>
+					           <div id="img"><img src="<?=base_url()?>assets/gallery/imgb.jpg"/><div style="background-color:#f7f7f7; border:1px solid #dcdcdc;"><span>susmitha</span><br /> 26-11-2009</div>
+							   </div>
+							   <div id="img"><img src="<?=base_url()?>assets/gallery/imgc.jpg"/><div style="background-color:#f7f7f7; border:1px solid #dcdcdc;"><span>susmitha</span><br /> 26-11-2009</div>
+							   </div>
+							   <div id="img"><img src="<?=base_url()?>assets/gallery/imga.jpg"/><div style="background-color:#f7f7f7; border:1px solid #dcdcdc;"><span>susmitha</span><br /> 26-11-2009</div>
+							  
+							   </div>
+							   <div id="img"><img src="<?=base_url()?>assets/gallery/imgd.jpg"/><div style="background-color:#f7f7f7; border:1px solid #dcdcdc;"><span>susmitha</span><br /> 26-11-2009</div>
+							  
+							   </div>
+							   <div id="img1"><img src="<?=base_url()?>assets/gallery/imge.jpg"/><div style="background-color:#f7f7f7; border:1px solid #dcdcdc;"><span>susmitha</span><br /> 26-11-2009</div>
+							  
+							   </div>
+							   <div style="float:right;">More...</div>
+					     </div>
+						 
+						 <div id="new">
+						  <div style="float:left; width:90%;">
+						  <div align="left"><b>Cinema</b></div>
+						 </div>
+					           <div id="img"><img src="<?=base_url()?>assets/gallery/imga.jpg"/><div style="background-color:#f7f7f7; border:1px solid #dcdcdc;"><span>susmitha</span><br /> 26-11-2009</div>
+							   </div>
+							   <div id="img"><img src="<?=base_url()?>assets/gallery/imga.jpg"/><div style="background-color:#f7f7f7; border:1px solid #dcdcdc;"><span>susmitha</span><br /> 26-11-2009</div>
+							   </div>
+							   <div id="img"><img src="<?=base_url()?>assets/gallery/imga.jpg"/><div style="background-color:#f7f7f7; border:1px solid #dcdcdc;"><span>susmitha</span><br /> 26-11-2009</div>
+							  
+							   </div>
+							  <div id="img"><img src="<?=base_url()?>assets/gallery/imga.jpg"/><div style="background-color:#f7f7f7; border:1px solid #dcdcdc;"><span>susmitha</span><br /> 26-11-2009</div>
+							  
+							  </div>
+							  <div id="img1"><img src="<?=base_url()?>assets/gallery/imga.jpg"/><div style="background-color:#f7f7f7; border:1px solid #dcdcdc;" ><span>susmitha</span><br /> 26-11-2009</div>
+							  
+							  </div>
+							  <div style="float:right;">More...</div>
+					     </div>
+						 
+						<div id="new">
+						  <div style="float:left; width:90%;">
+						    <div align="left"><b>Events</b></div>
+						   </div>
+					          <div id="img"><img src="<?=base_url()?>assets/gallery/imga.jpg"/><div style="background-color:#f7f7f7; border:1px solid #dcdcdc;"><span>susmitha</span><br /> 26-11-2009</div>
+							   </div>
+							   <div id="img"><img src="<?=base_url()?>assets/gallery/imga.jpg"/><div style="background-color:#f7f7f7; border:1px solid #dcdcdc;"><span>susmitha</span><br /> 26-11-2009</div>
+							   </div>
+							   <div id="img"><img src="<?=base_url()?>assets/gallery/imga.jpg"/><div style="background-color:#f7f7f7; border:1px solid #dcdcdc;"><span>susmitha</span><br /> 26-11-2009</div>
+							  
+							   </div>
+							  <div id="img"><img src="<?=base_url()?>assets/gallery/imga.jpg"/><div style="background-color:#f7f7f7; border:1px solid #dcdcdc;"><span>susmitha</span><br /> 26-11-2009</div>
+							  
+							  </div>
+							  <div id="img1"><img src="<?=base_url()?>assets/gallery/imga.jpg"/><div style="background-color:#f7f7f7; border:1px solid #dcdcdc;"><span>susmitha</span><br /> 26-11-2009</div>
+							  
+							  </div>
+							  <div style="float:right;">More...</div
+					     </div>>-->
+					      
+						 
+					   
+				  </div>
+			</div>
+					
+					
+					
 		</div>
-	</td>
-</tr>
-<tr>
-	<td valign="bottom" width="2px"><img src="<?=base_url()?>assets/imgs/body-bottomLeft.jpg"></td>
-	<td id="gal_center-botom" width="750px;" align="left" valign="bottom"></td>
-	<td valign="bottom" width="2px;"><img src="<?=base_url()?>assets/imgs/body-bottomRight.jpg"></td>
-</tr>
-</table>
+				
+			
+		
+	

@@ -177,7 +177,7 @@
                   <tr>
                     <td ><img src="<?=base_url();?>assets/imgs/all-video-topline.jpg"></td>
                   </tr>
-                  <tr ><td><div style="height:142px;width:660px;border-left: 1px solid #9D9D9D; border-right: 1px solid #9D9D9D;">
+                  <tr><td><div style="height:142px;width:660px;border-left: 1px solid #9D9D9D; border-right: 1px solid #9D9D9D;">
                          <div id="allvi"><?=$more['35']->matter?></div>
                            
                           <div id="divallimg" style="width:660px;">

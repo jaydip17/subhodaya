@@ -10,19 +10,9 @@ class Subhodaya extends Controller {
 	}
 	function index(){
 		//for telugu content
-		$sub_spec=$this->lang->line('subh_spec');
-		$bavishyam=$this->lang->line('bavishyam');
-		$eenati_vishe=$this->lang->line('eenati_vishe');
-		//cinema
-		$srungaram=$this->lang->line('srungaram');
-		$reviews=$this->lang->line('reviews');
-		$sangitham=$this->lang->line('sangitham');
 		$cini_vishesm=$this->lang->line('cini_vishesm');
 		$cini_pukarlu=$this->lang->line('cini_pukarlu');
-		//poll
-		$homepoll=$this->lang->line('homepoll');
 		//news
-		$news_ardikam=$this->lang->line('news_ardikam');
 		$news_rasriyam=$this->lang->line('news_rasriyam');
 		$news_jathiyam=$this->lang->line('news_jathiyam');
 		$news_antharja=$this->lang->line('news_antharja');
@@ -38,14 +28,14 @@ class Subhodaya extends Controller {
 		//sahithi
 		$sahithi=$this->lang->line('sahithi');
 		//home_blocks
-		$ardikam_block = $this->home->right_block($news_ardikam);
-		$Bhavisham_block = $this->home->right_block($bavishyam);
-		$srugaram_block = $this->home->right_block($srungaram);
-		$special_block = $this->home->left_block($sub_spec);
-		$songs_block = $this->home->left_block($sangitham);
-		$reviews_block = $this->home->left_block($reviews);
-		$middle_block = $this->home->middle_block($eenati_vishe);
-		$home_poll = $this->home->home_poll($homepoll);
+		$ardikam_block = $this->home->right_block($this->lang->line('news_ardikam'));
+		$Bhavisham_block = $this->home->right_block($this->lang->line('bavishyam'));
+		$srugaram_block = $this->home->right_block($this->lang->line('srungaram'));
+		$special_block = $this->home->left_block($this->lang->line('subh_spec'));
+		$songs_block = $this->home->songs_block($this->lang->line('sangitham'));
+		$reviews_block = $this->home->reviews_block($this->lang->line('reviews'));
+		$middle_block = $this->home->middle_block($this->lang->line('eenati_vishe'));
+		$home_poll = $this->home->home_poll($this->lang->line('homepoll'));
 		
 		/*$news_type7=$this->News_Model->get_newstype1(7);
 		$active_news=$this->News_Model->active_news(2);

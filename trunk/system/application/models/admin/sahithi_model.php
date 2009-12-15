@@ -94,7 +94,8 @@ class Sahithi_Model extends Model {
     {   
  		$this->db->select('*');
  		$this->db->order_by("sahithi.insert_date", "desc");
-    	$this->db->where('cat_id',$type);
+ 		$array=array('cat_id'=>$type,'sahithi.active'=>0);
+    	$this->db->where($array);
 		$this->db->from('sahithi_cat');
 		$this->db->join('sahithi', 'sahithi.cat_id= sahithi_cat.id');
 		$query = $this->db->get_where();
@@ -168,6 +169,30 @@ class Sahithi_Model extends Model {
     	$rs = $this->db->get('sahithi_cat');
     	$result = $rs->row();
     	return $result->cat_name;
+    }
+    function most_read_sahithi_news($cat_id){
+        		$array=array(
+			'cat_id'			=>	$cat_id,
+		);
+		$this->db->order_by('views','desc');
+		$this->db->order_by('id','desc');
+		$this->db->where($array);
+		$this->db->limit(15);
+		$result=$this->db->get('sahithi');
+		return $result->result();	
+    }
+    function sahithi_active_news($cat_id)
+    {
+    	$this->db->select('*');
+    	$array=array('sahithi.active'=>1,'cat_id'=>$cat_id);
+    	$this->db->where($array);
+    	$this->db->limit(8);
+    	$this->db->order_by("sahithi.insert_date", "desc");
+		$this->db->from('sahithi_cat');
+		$this->db->join('sahithi', 'sahithi.cat_id= sahithi_cat.id');
+		$this->db->order_by('sahithi.id','desc');
+		$query = $this->db->get_where();
+		return $query->result();
     }
 }
 ?>

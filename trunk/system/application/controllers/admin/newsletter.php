@@ -48,39 +48,17 @@ class Newsletter extends Controller {
 	{
 		$subhodaya=$this->lang->line('subhodaya');
 	 	$com=$this->lang->line('com');
-	 	$h1=$this->lang->line('subhodaya_heading1');
-	 	$h3=$this->lang->line('subhodaya_heading3');
-	 	$h4=$this->lang->line('subhodaya_heading4');
-	 	$h5=$this->lang->line('subhodaya_heading5');
-	 	$h2=$this->lang->line('subhodaya_heading2');
-	 	$h6=$this->lang->line('subhodaya_heading6');
-	 	$h7=$this->lang->line('subhodaya_heading7');
-	 	$h8=$this->lang->line('subhodaya_heading8');
-	 	$h9=$this->lang->line('subhodaya_heading9');
-	 	$h10=$this->lang->line('subhodaya_heading10');
-	 	$h11=$this->lang->line('subhodaya_heading11');
-		$message='Thank you for subscribing with us';
 		if(isset($_POST['addresses']))
      		{
+     			$message=$_POST['message'];     			
      		//$subject="[SUBHODAYA.COM] News letter";
-     		$subject="[SUBHODAYA.COM] Thank you for being with us!";
+     		$subject="[SUBHODAYA.COM] Breaking news";
      		//$subject=$this->lang->line('subhodaya_sub');
 		 		    	$data = array (
 	 					'message'   => $message,
 	 					'subhodaya' => $subhodaya,
 	 					 'com'		=> $com,
 		 		    	'subject'  =>  $subject,
-		 		    	'h1'	   => $h1,
-		 		    	'h2'	   => $h2,
-		 		    	'h3'	   => $h3,
-		 		    	'h4'	   => $h4,
-		 		    	'h5'	   => $h5,
-		 		    	'h6'	   => $h6,
-		 		    	'h7'	   => $h7,
-		 		    	'h9'	   => $h9,
-		 		    	'h8'	   => $h8,
-		 		    	'h10'	   => $h10,
-		 		    	'h11'	   => $h11,
 	 					);
 		 		      
 	     		$addresses=$_POST['addresses'];

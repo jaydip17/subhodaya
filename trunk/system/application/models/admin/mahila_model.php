@@ -75,7 +75,8 @@ class Mahila_Model extends Model {
     {
     	$this->db->select('*');
     	$this->db->order_by("mahila.insert_date", "desc");
-    	$this->db->where('type',$type);
+    	$arrary=array('cat_id'=>$type,'mahila.active'=>0);
+    	$this->db->where($arrary);
 		$this->db->from('mahila_cat');
 		$this->db->join('mahila', 'mahila.cat_id= mahila_cat.id');
 		$query = $this->db->get_where();
@@ -146,6 +147,30 @@ class Mahila_Model extends Model {
     	$rs = $this->db->get('mahila_cat');
     	$result = $rs->row();
     	return $result->cat_name;
+    }
+    function most_read_mahila_news($mahila_cat)
+    {
+    		$array=array(
+			'cat_id'			=>	$mahila_cat,
+		);
+		$this->db->order_by('views','desc');
+		$this->db->order_by('id','desc');
+		$this->db->where($array);
+		$this->db->limit(15);
+		$result=$this->db->get('mahila');
+		return $result->result();
+    }
+    function mahila_active_news($mahil_cat){
+    		$this->db->select('*');
+    	$array=array('mahila.active'=>1,'cat_id'=>$mahil_cat);
+    	$this->db->where($array);
+    	$this->db->limit(8);
+    	$this->db->order_by("mahila.insert_date", "desc");
+		$this->db->from('mahila_cat');
+		$this->db->join('mahila', 'mahila.cat_id= mahila_cat.id');
+		$this->db->order_by('mahila.id','desc');
+		$query = $this->db->get_where();
+		return $query->result();
     }
    
 }

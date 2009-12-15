@@ -13,8 +13,8 @@
 								<img style="margin:10px 0px 5px 0px; " src="<?=base_url()?>assets/image/submit.jpg">
 							</div>
 						</div>
-						<?= (isset($songs_block)) ? $songs_block: '' ?>
 						<?= (isset($reviews_block)) ? $reviews_block : '' ?>
+						<?= (isset($songs_block)) ? $songs_block: '' ?>
 					</div>
 					<div id="middle_content" style="width:479px;margin-left:3px; float:left">
 						<?= (isset($middle_block)) ? $middle_block : '' ?>

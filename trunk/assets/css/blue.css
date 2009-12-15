@@ -28,6 +28,10 @@ ul{
 a{
 color:#228BEE; font-size:12px; text-decoration:none;
 }
+#img{
+	border: 1px solid gray;
+	padding: 1px;
+	}
 li{
 	color:#228BEE;
 	line-height: 16px;

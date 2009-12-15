@@ -7,8 +7,8 @@
 					<div id="newsmain" style="height:220px;">
 						<div id="thaja_vartha" style="width:430px;">
 							<div><span style="font-size: 18px;"><?=$this->lang->line('thaja_vartha');?></span></div>
-							<a href="#"><img src="<?=base_url()?>assets/news/news_img<?=$thaja_varhta[0]->id?>_thumb.jpg" style="float: left;"/></a>
-							<span id="headings"><a href="#"><?=$thaja_varhta[0]->heading?></a></span><br/>
+							<a href="<?=base_url()?>news/newsdetails/<?=$thaja_varhta[0]->id?>/<?=$thaja_varhta[0]->type?>"><img src="<?=base_url()?>assets/news/news_img<?=$thaja_varhta[0]->id?>_thumb.jpg" style="float: left;"/></a>
+							<span id="headings"><a href="<?=base_url()?>news/newsdetails/<?=$thaja_varhta[0]->id?>/<?=$thaja_varhta[0]->type?>"><?=$thaja_varhta[0]->heading?></a></span><br/>
                             <span id="summery"><?=$thaja_varhta[0]->summary?></span>        
 						</div>
 				  		<div id="side_add" style="width:245px;">
@@ -20,7 +20,7 @@
 	          											$count++;
 	          											continue;
           											} ?>
-								<li><a href="#"><?=$row->heading?></a></li>
+								<li><a href="<?=base_url()?>news/newsdetails/<?=$row->id?>/<?=$row->type?>"><?=$row->heading?></a></li>
 									<? if($count==6){
 							         					break;
 							          					}else{

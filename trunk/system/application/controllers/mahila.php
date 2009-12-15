@@ -5,6 +5,7 @@ class Mahila extends Controller {
 	{
 		parent::Controller();
 		$this->load->library('Cinema_lib', 'cinema_lib');
+		$this->load->library('News_lib', 'news_lib');
 		$this->lang->load('telugu', 'telugu');
 	}
 	function index()
@@ -60,7 +61,9 @@ class Mahila extends Controller {
     {
     	$id=$this->uri->segment(3,0);
 		$type=$this->uri->segment(4,0);
-		$cate=$this->db->get_where('mahila_cat',array('id'=>$type));
+		$newscss=array();
+		$mahila_inner=$this->news_lib->mahila_inner($id,$type);
+	/*	$cate=$this->db->get_where('mahila_cat',array('id'=>$type));
 		$mahilacate=$cate->result();
 		if(empty($mahilacate)){
 			redirect(base_url().'mahila');
@@ -97,9 +100,9 @@ class Mahila extends Controller {
 							'home' => $more['2']->matter,
 						 'heading' => $result[0]->heading
 		); 
-		$bread_crumb = $this->bread_crumb->get_code($segments);
+		$bread_crumb = $this->bread_crumb->get_code($segments);*/
 		
-		$data=array('result'   =>   $result,
+		$data=array(/*'result'   =>   $result,
 					 'more'    =>   $more,
 				'cinema_type1' =>   $cinema_type1,
 		         'evenmore'    =>   $evenmore,
@@ -111,15 +114,20 @@ class Mahila extends Controller {
 	              'news_type2' =>	$news_type2,
 	                 'key'     =>  $key,
 				'telegu_typing'=>  $telegu_typing,
-				'bread_crumb'  =>	$bread_crumb
-				
+				'bread_crumb'  =>	$bread_crumb*/
+				'newscss'	   =>	$newscss,
+				'news_inner' =>	$mahila_inner
 		     	);
 				
-		$this->load->view('mahila_inner',$data);
+		$this->load->view('news_inner',$data);
 	}
     function details()
     {
-   	    $this->load->model('admin/Poll_Model');
+    	$newscss=array();
+    	$type=$this->uri->segment(3,0);
+    	$mahila_content=$this->news_lib->mahila_content($type);
+    	$onload = "loadNews('content','".base_url()."mahilalist/listview/".$type."')";
+   	 /*   $this->load->model('admin/Poll_Model');
    	    $details_sahithi=$this->Sahithi_Model->get_sahithitype();
    	    $sahithi_details=$this->Sahithi_Model->active_sahithi(3,$type='home');
 		$yes_poll=$this->Poll_Model->get_yes_newspoll($type=4);
@@ -127,8 +135,6 @@ class Mahila extends Controller {
 		foreach($details as $item)
 		$details_more[$item->id]=$this->Mahila_Model->getdetails($item->id,'yes',6);
 		$more=$this->Mahila_Model->more_mahila();
-		$type=$this->uri->segment(3,0);
-		$onload = "loadNews('content','".base_url()."mahilalist/listview/".$type."')";
 		$total_rows=$this->Mahila_Model->count($type);
 	    $this->load->library('pagination');
 		$config['base_url'] = base_url()."mahila/details/";
@@ -150,12 +156,11 @@ class Mahila extends Controller {
 							'main' => $more['8']->matter,
 							'home' => $more['2']->matter,
 		); 
-		$bread_crumb = $this->bread_crumb->get_code($segments);
+		$bread_crumb = $this->bread_crumb->get_code($segments);*/
 		$data=array(	
-						'news'  =>	$mahila,
+					/*	'news'  =>	$mahila,
 						'more'	=>	$more,
 					'pagination'=>	$pagination,
-		             'onload' 	=>	$onload,
 		            'details' 	=>	$details,
 				 'yes_poll'    	=>  $yes_poll,
 		         'details_more' =>	$details_more,
@@ -164,9 +169,12 @@ class Mahila extends Controller {
 			'details_sahithi'   =>  $details_sahithi,
 			'sahithi_details'	=>  $sahithi_details,
 				'tabs'          =>  $tabs,
-				'bread_crumb'	=>	$bread_crumb
+				'bread_crumb'	=>	$bread_crumb*/
+				'news_content'	=>	$mahila_content,
+					 'onload' 	=>	$onload,
+					'newscss'	=>	$newscss
 		);
-		$this->load->view("mahila_content",$data);
+		$this->load->view("news_content",$data);
 	}
 
 }

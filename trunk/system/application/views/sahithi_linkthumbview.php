@@ -1,41 +1,12 @@
-<style type="text/css">
-li{
-line-height:16px;
-}
-body{
-font-size:14px;
-line-height:16px;
-}
+<div style="height: 400px;width: 599px;text-align: left;">
+<?  foreach($details as $row):?>
 
-</style>
-
-
-<div style="height:490px">
-
-<? $count=0; foreach($details as $row):
-if(isset($type) && $type=="sahithi")
-{?>
-<div style="height: 110px" id="telugufont1">
-<a href="<?=base_url()?>sahithi/sahithidetails/<?=$row->id?>/<?=$row->cat_id?>"><? if(file_exists("./assets/sahithi/news_img".$row->id."_thumb.jpg")){ ?><img src="<?=base_url();?>assets/sahithi/news_img<?=$row->id ?>_thumb.jpg"  style="margin: 2px 4px 2px 2px;float: left;" id="img"></img><?} ?><? echo $row->heading; ?></a>
-<font id="mainnews">
-<a href="<?=base_url()?>sahithi/sahithidetails/<?=$row->id?>/<?=$row->cat_id?>"></a></font><br>
-<? echo $row->summary; ?>
-</div><hr />
-<? }
-else if(isset($type) && $type=="mahila"){?>
-<div style="height: 110px" id="telugufont1">
-<a href="<?=base_url()?>mahila/mahiladetails/<?=$row->id?>/<?=$row->cat_id?>"><? if(file_exists("./assets/mahila/news_img".$row->id."_thumb.jpg")){ ?><img src="<?=base_url();?>assets/mahila/news_img<?=$row->id ?>_thumb.jpg" style="margin: 2px 4px 2px 2px;float: left;" id="img"></img><?} echo $row->heading; ?></a>
-<font id="mainnews">
-<a href="<?=base_url()?>mahila/mahiladetails/<?=$row->id?>/<?=$row->cat_id?>"></a></font><br>
-<? echo $row->summary; ?>
-</div><hr />
-
-<?}if($count==3){
-	break;
-}else{
-	$count++;
-}
-endforeach; ?>
-
+<div id="leftdiv">
+<a href="<?=base_url()?><?=$link?><?=$row->id?>/<?=$row->cat_id?>"><img src="<?=$image_link?>news_img<?=$row->id ?>_home_thumb.jpg" border="0" style="margin: 2px;"  align="middle" height="49px" width="49px"></img></a>
+<span><a href="<?=base_url()?><?=$link?><?=$row->id?>"><? echo $row->heading; ?></a></span>
 </div>
-<div align="right" style="width:100%;"><? echo $paginate;?></div>
+<?
+endforeach; ?>
+</div>
+</div>
+<div align="right" style="width: 100%"><? echo $paginate;?></div>

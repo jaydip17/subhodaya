@@ -67,6 +67,7 @@ class Home{
 	}
 	function right_block($heading){
 		$image_link='';
+		$cat_id='';
 		$more=$this->CI->lang->line('more');
 		$eenka=$this->CI->lang->line('enka_chavandi');
 		switch ($heading)
@@ -74,24 +75,30 @@ class Home{
 			case $this->CI->lang->line('news_ardikam'):
 				$temp=$this->get_ardikam();
 				$image_link=base_url().'assets/news/news_img'.$temp[0]->id.'_home_thumb.jpg';
+				$link=base_url().'news/newsdetails/';
+				$cat_id=$temp[0]->type;
 				break;			
 			case $this->CI->lang->line('srungaram'):
 				$temp=$this->get_srungaram();
 				$image_link=base_url().'assets/srungaram/news_img'.$temp[0]->id.'_home_thumb.jpg';
+				$link=base_url().'news/newsdetails/';
 				break;
 			case $this->CI->lang->line('bavishyam'):
 				$temp=$this->get_srungaram();
 				$image_link=base_url().'assets/srungaram/news_img'.$temp[0]->id.'_home_thumb.jpg';
+				$link=base_url().'news/newsdetails/';
 				break;
 				
 		}
 				$data = array(
 						'data' 			=> 'somtext',
-						'sub_heading'	=> $heading,
+						'sub_heading'	=> 	$heading,
 						'more'			=>	$more,
 						'eenka'			=>	$eenka,
 						'image_link'	=>	$image_link,
-						'details'		=> $temp,
+						'details'		=>  $temp,
+						'link'			=>	$link,
+						'cat_id'		=>	$cat_id
 		);
 		return $this->CI->load->view('home/right_block',$data,TRUE);
 	}
@@ -103,14 +110,17 @@ class Home{
 			case $this->CI->lang->line('subh_spec'):
 				 $temp=$this->get_sub_special();
 				 $image_link=base_url().'assets/special_newsimg/news_img'.$temp[0]->id.'_thumb.jpg';
+				 $link=base_url().'news/newsdetails';
 				break;
 			case $this->CI->lang->line('sangitham'):
 				 $temp=$this->get_sub_special();
 				 $image_link=base_url().'assets/special_newsimg/news_img'.$temp[0]->id.'_thumb.jpg';
+				 $link=base_url().'news/newsdetails';
 				break;
 			case $this->CI->lang->line('reviews'):
 				 $temp=$this->get_sub_special();
 				 $image_link=base_url().'assets/special_newsimg/news_img'.$temp[0]->id.'_thumb.jpg';
+				 $link=base_url().'news/newsdetails/';
 				break;
 		}
 				$data = array(
@@ -119,9 +129,49 @@ class Home{
 						'more'			=>	$more,
 						'eenka'			=>	$eenka,
 						'image_link'	=> 	$image_link,
-						'details'		=>  $temp
+						'details'		=>  $temp,
+						'link'			=>	 $link
 		);
 		return $this->CI->load->view('home/left_block',$data,TRUE);
+	}
+	function songs_block()
+	{
+		$more=$this->CI->lang->line('more');
+		$heading=$this->CI->lang->line('sangitham');
+		$data=array(
+				'more'		=>	$more,
+				'heading'	=>	$heading
+		);
+		return $this->CI->load->view('home/songs_block',$data,TRUE);
+	}
+	function reviews_block()
+	{
+		$details=array();
+		$more=$this->CI->lang->line('more');
+		$heading=$this->CI->lang->line('reviews');
+		$temp=$this->get_movie_reviews();
+		
+		$i=0;
+		foreach ($temp as $row){
+		$rating=$this->get_movie_rating($row->id);
+		if(!empty($rating)){
+			$value=$this->get_rating($rating);
+		}
+		else{
+			$value=0.5;
+		}
+		$details[$i]->rating=$value;
+		$details[$i]->heading=$row->heading;
+		$details[$i]->id=$row->id;
+		$details[$i]->cat_id=$row->type;
+		 $i++;
+		}
+		$data=array(
+				'more'	=>	$more,
+			'heading'	=>	$heading,
+			'details'	=>	$details
+		);
+		return $this->CI->load->view('home/reviews_block',$data,TRUE);
 	}
 	function middle_block($heading){
 		$more=$this->CI->lang->line('more');
@@ -170,32 +220,85 @@ class Home{
 		);
 		return $this->CI->load->view('home/video_block',$data,TRUE);
 	}
-	function get_mahila(){
+	function get_mahila()
+	{
 		$details=$this->CI->Mahila_Model->active_mahila(0);
 		return $details;
 	}
-	function get_sahithi(){
+	function get_sahithi()
+	{
 		$details=$this->CI->Sahithi_Model->active_mahila(0);
 		return $details;
 	}
-	function get_ardikam(){
+	function get_ardikam()
+	{
 		$details=$this->CI->News_Model->active_news(5);
 		return $details;
 	}
-	function get_sub_special(){
+	function get_sub_special()
+	{
 		$details=$this->CI->Subho_Model->get_home_stories(0);
 		return $details;
 	}
-	function get_srungaram(){
+	function get_srungaram()
+	{
 		$details=$this->CI->Srungaram_Model->active_srung(0);
 		return $details;
 	}
-	function get_homepoll(){
+	function get_homepoll()
+	{
 		$details=$this->CI->Poll_Model->get_newspolls(4,1);
 		return $details;
 	}
-	function active_news(){
+	function active_news()
+	{
 		$details=$this->CI->News_Model->all_active_news(0);
 		return $details;
 	}
+	function get_movie_reviews()
+	{
+		$details=$this->CI->Cinema_Model->get_cinematype(3);
+		return $details;
+		
+	}
+	function get_movie_rating($id)
+	{
+		$details=$this->CI->Cinema_Model->reviews_rating($id);
+		return $details;
+	}
+	function get_rating($rating)
+	{
+		$total_votes=$rating[0]->total_votes;
+		$total_value=$rating[0]->total_value;
+		if($total_votes!=0 && $total_value!=0){
+		$rat_value=$total_value/$total_votes;
+		}
+		else{
+			$value=0.5;
+			return $value;
+		}
+		$value=$this->ceil_temp($rat_value);
+		return $value;
+	}
+	 function ceil_temp($value)
+   {
+   	$temp = explode('.',$value);
+   	if(isset($temp[1]))
+   	{
+	   	if($temp[1] < 5)
+	   	{
+	   		$temp = floor($value);
+	   	}
+	   	else if($temp[1] > 5)
+	   	{
+	   		$temp = round($value);
+	   	}
+	   	else 
+	   	 $temp = $value;
+   	}
+   	else 
+   	 $temp = $value;
+   	 return $temp;
+   } 
+	
 }

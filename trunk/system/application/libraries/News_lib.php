@@ -52,6 +52,7 @@ class News_lib{
 					{
 						$image_link=base_url()."assets/news/news_img".$temp[0]->id."_thumb.jpg";
 						$content_link=base_url()."news/details/".$temp[0]->type;
+						$link=base_url()."news/newsdetails/";
 					}
 					break;
 			case $this->CI->lang->line('news_jathiyam'):
@@ -60,6 +61,7 @@ class News_lib{
 					{
 						$image_link=base_url()."assets/news/news_img".$temp[0]->id."_thumb.jpg";
 						$content_link=base_url()."news/details/".$temp[0]->type;
+						$link=base_url()."news/newsdetails/";
 					}
 					break;
 			case $this->CI->lang->line('news_antharja'):
@@ -68,6 +70,7 @@ class News_lib{
 					{
 						$image_link=base_url()."assets/news/news_img".$temp[0]->id."_thumb.jpg";
 						$content_link=base_url()."news/details/".$temp[0]->type;
+						$link=base_url()."news/newsdetails/";
 					}
 					break;
 			case $this->CI->lang->line('state_news'):
@@ -76,6 +79,7 @@ class News_lib{
 					{
 						$image_link=base_url()."assets/news/news_img".$temp[0]->id."_thumb.jpg";
 						$content_link=base_url()."news/details/".$temp[0]->type;
+						$link=base_url()."news/newsdetails/";
 					}
 					break;
 		}
@@ -85,7 +89,8 @@ class News_lib{
 						'more'			=> $more,
 						'details'		=> $temp,
 						'image_link'	=> $image_link,
-						'content_link'	=>	$content_link
+						'content_link'	=>	$content_link,
+						'link'			=>	$link
 		);
 		return $this->CI->load->view('news/news_block',$data,TRUE);
 	}
@@ -101,6 +106,7 @@ class News_lib{
 				{
 					$details=$temp;
 					$content_link=base_url()."news/details/".$temp[0]->type;
+					$link=base_url()."news/newsdetails/";
 				}
 				break;
 			case $this->CI->lang->line('news_setier'):
@@ -109,6 +115,7 @@ class News_lib{
 				{
 					$details=$temp;
 					$content_link=base_url()."news/details/".$temp[0]->type;
+					$link=base_url()."news/newsdetails/";
 				}
 				break;
 			case $this->CI->lang->line('news_setier'):
@@ -117,6 +124,7 @@ class News_lib{
 				{
 					$details=$temp;
 					$content_link=base_url()."news/details/".$temp[0]->type;
+					$link=base_url()."news/newsdetails/";
 				}
 				break;
 		}
@@ -125,13 +133,15 @@ class News_lib{
 						'sub_heading'	=> $heading,
 						'more'			=> $more,
 						'details'       => $details,
-						'content_link'	=> $content_link
+						'content_link'	=> $content_link,
+						'link'			=>	$link
 		);
 		return $this->CI->load->view('news/news_left',$data,TRUE);
 	}
 	function news_main($heading)
 	{
 		$temp=$this->breking_news();
+		$link=base_url()."news/newsdetails/";
 		if(!empty($temp)){
 			
 			$details=$temp;
@@ -140,6 +150,7 @@ class News_lib{
 						'data' => 'somtext',
 						'sub_heading'	=> $heading,
 						'details'		=> $details,
+						'link'			=> $link
 		);
 		return $this->CI->load->view('news/news_main',$data,TRUE);
 	}
@@ -147,19 +158,147 @@ class News_lib{
 	{
 		$more_news=$this->CI->lang->line('marinni_visheshalu');
 		$temp=$this->get_news_details($news_cat);
-		$active_news=$this->most_read_news($news_cat);
+		$most_read_news=$this->most_read_news($news_cat);
 		$thaja_varhta=$this->thaja_vartha($news_cat);
+		$link=base_url()."news/newsdetails/";
+		$image_link=base_url().'assets/news/news_img'.$thaja_varhta[0]->id.'_thumb.jpg';
+		$list='newslist';
 		
 				$data = array(
-						'data' 			=> 'somtext',
-						'sub_heading'	=> $news_cat,
 						'details'		=>	$temp,
-						'active_news'	=>	$active_news,
+						'most_read_news'=>	$most_read_news ,
 						'thaja_varhta'	=>	$thaja_varhta,
-						'more_news'		=>	$more_news
+						'more_news'		=>	$more_news,
+						'link'			=>	$link,
+						'image_link'	=>	$image_link,
+						'list'			=>	$list,
+						'cat_id'		=>	$news_cat
 		);
 		return $this->CI->load->view('news/news_content',$data,TRUE);
 	}
+	function cinema_content($cine_cat)
+	{
+		$more_news=$this->CI->lang->line('marinni_visheshalu');
+		$most_read_news=$this->most_read_cini_news($cine_cat);
+		$thaja_varhta=$this->cine_thaja_vartha($cine_cat);
+		$link=base_url()."cinema/inner/";
+		$image_link=base_url().'assets/cinema/ceni_img'.$thaja_varhta[0]->id.'_thumb.jpg';
+		$list='cinemalist';
+		
+				$data = array(
+						'data' 			=> 'somtext',
+						'sub_heading'	=> $cine_cat,
+						'most_read_news'	=>	$most_read_news,
+						'thaja_varhta'	=>	$thaja_varhta,
+						'more_news'		=>	$more_news,
+						'link'			=>  $link,
+						'image_link'	=>  $image_link,
+						'list'			=>	$list,
+						'cat_id'		=>	$cine_cat
+		);
+		return $this->CI->load->view('news/news_content',$data,TRUE);
+	}
+	function mahila_content($mahila_cat)
+	{
+		$more_news=$this->CI->lang->line('marinni_visheshalu');
+		$most_read_news=$this->most_read_mahila_news($mahila_cat);
+		$thaja_varhta=$this->mahila_thaja_vartha($mahila_cat);
+		$link=base_url()."mahila/mahiladetails/";
+		$image_link=base_url().'assets/mahila/ceni_img'.$thaja_varhta[0]->id.'_thumb.jpg';
+		$list='mahilalist';
+				$data = array(
+						'most_read_news'	=>	$most_read_news,
+						'thaja_varhta'	=>	$thaja_varhta,
+						'more_news'		=>	$more_news,
+						'link'			=>  $link,
+						'image_link'	=>  $image_link,
+						'list'			=>	$list,
+						'cat_id'		=>	$mahila_cat
+		);
+		return $this->CI->load->view('news/news_content',$data,TRUE);
+	}
+	function sahithi_content($sahithi_cat)
+	{
+		$more_news=$this->CI->lang->line('marinni_visheshalu');
+		$most_read_news=$this->most_read_sahithi_news($sahithi_cat);
+		$thaja_varhta=$this->sahithi_thaja_vartha($sahithi_cat);
+		$link=base_url()."sahithi/sahithidetails/";
+		$image_link=base_url().'assets/sahithi/ceni_img'.$thaja_varhta[0]->id.'_thumb.jpg';
+		$list='sahithilist';
+				$data = array(
+						'most_read_news'	=>	$most_read_news,
+						'thaja_varhta'	=>	$thaja_varhta,
+						'more_news'		=>	$more_news,
+						'link'			=>  $link,
+						'image_link'	=>  $image_link,
+						'list'			=>	$list,
+						'cat_id'		=>	$sahithi_cat
+		);
+		return $this->CI->load->view('news/news_content',$data,TRUE);
+	}
+	function news_inner($id,$cat_id)
+	{
+		$temp=$this->get_this_news($id);
+		$realtion=$this->realtion_news($cat_id);
+		$link=base_url()."assets/news/";
+		$more_news=$this->more_news($cat_id);
+		$data=array(
+			'details' => $temp,
+			'link'	  => $link,
+			'realtion'=> $realtion,
+			'morenews'=> $more_news
+		);
+		return $this->CI->load->view('news/news_inner',$data,TRUE);
+	}
+	function cinema_inner($id,$cat_id)
+	{
+		$temp=$this->get_cinema_news($id);
+		$realtion=$this->cinema_realtion_news($cat_id);
+		$link=base_url()."assets/cinema/";
+		$more_news=$this->more_news($cat_id);
+		$this->CI->load->model('ratings_model', 'ratings');
+		if($cat_id==3){
+		$rating=1;
+		}else 
+		$rating=0;
+		$data=array(
+			'details' => $temp,
+			'link'	  => $link,
+			'realtion'=> $realtion,
+			'morenews'=> $more_news,
+			'rating'  => $rating
+		);
+		return $this->CI->load->view('news/news_inner',$data,TRUE);
+	}
+	function mahila_inner($id,$cat_id)
+	{
+		$temp=$this->get_mahila_news($id);
+		$realtion=$this->mahila_realtion_news($cat_id);
+		$link=base_url()."assets/mahila/";
+		$more_news=$this->mahila_active_news($cat_id);
+		$data=array(
+			'details' => $temp,
+			'link'	  => $link,
+			'realtion'=> $realtion,
+			'morenews'=> $more_news
+		);
+		return $this->CI->load->view('news/news_inner',$data,TRUE);
+	}
+	function sahithi_inner($id,$cat_id)
+	{
+		$temp=$this->get_sahithi_news($id);
+		$realtion=$this->sahithi_realtion_news($cat_id);
+		$link=base_url()."assets/sahithi/";
+		$more_news=$this->sahithi_active_news($cat_id);
+		$data=array(
+			'details' => $temp,
+			'link'	  => $link,
+			'realtion'=> $realtion,
+			'morenews'=> $more_news
+		);
+		return $this->CI->load->view('news/news_inner',$data,TRUE);
+	}
+	
 //news main page
 	function get_rastiya()
 	{
@@ -204,12 +343,109 @@ class News_lib{
 	}
 	function most_read_news($news_cat)
 	{
-		$details=$this->CI->News_Model->active_news($news_cat);
+		$details=$this->CI->News_Model->most_read_news($news_cat);
 		return $details;
 	}
 	function thaja_vartha($news_cat)
 	{
 		$details=$this->CI->News_Model->breaking_news($news_cat);
+		return $details;
+	}
+//cinema content
+	function cine_thaja_vartha($cine_cat)
+	{
+		$details=$this->CI->Cinema_Model->breaking_news($cine_cat);
+		return $details;	
+	}
+	function most_read_cini_news($news_cat)
+	{
+		$details=$this->CI->Cinema_Model->most_read_news($news_cat);
+		return $details;
+	}
+//news inner news
+	function get_this_news($id)
+	{
+		$details=$this->CI->News_Model->inner_news($id);
+		return $details;
+	}
+	function realtion_news($cat_id)
+	{
+		$details=$this->CI->News_Model->get_news($cat_id);
+		return $details;
+	}
+	function more_news($cat_id)
+	{
+		$details=$this->CI->News_Model->breaking_news($cat_id);
+		return $details;	
+	}
+//mahila content page
+	function most_read_mahila_news($mahila_cat)
+	{
+		$details=$this->CI->Mahila_Model->most_read_mahila_news($mahila_cat);
+		return $details;
+	}
+	function mahila_thaja_vartha($mahila_cat)
+	{
+		$details=$this->CI->Mahila_Model->mahila_active_news($mahila_cat);
+		return $details;
+	}
+//sahithi content page
+	function most_read_sahithi_news($sahithi_cat)
+	{
+		$details=$this->CI->Sahithi_Model->most_read_sahithi_news($sahithi_cat);
+		return $details;
+	}
+	function sahithi_thaja_vartha($sahithi_cat)
+	{
+		$details=$this->CI->Sahithi_Model->sahithi_active_news($sahithi_cat);
+		return $details;
+	}
+//cinema inner page
+	function get_cinema_news($id)
+	{
+		$details=$this->CI->Cinema_Model->inner($id);
+		return $details;
+	}
+	function cinema_realtion_news($cat_id)
+	{
+	$details=$this->CI->Cinema_Model->get_cinematype($cat_id);
+	return $details;
+	}
+	function active_cinema_news($cat_id)
+	{
+		$details=$this->CI->Cinema_Model->get_activenews1($cat_id);
+		return $details;
+	}
+//mahila inner page
+	function get_mahila_news($id)
+	{
+		$details=$this->CI->Mahila_Model->inner_mahila($id);
+		return $details;
+	}
+	function mahila_realtion_news($cat_id)
+	{
+		$details=$this->CI->Mahila_Model->get_mahilatype1($cat_id);
+		return $details;
+	}
+	function mahila_active_news($cat_id)
+	{
+		$details=$this->CI->Mahila_Model->mahila_active_news($cat_id);
+		return $details;
+	}
+//sahithi inner page
+	function get_sahithi_news($id)
+	{
+		$details=$this->CI->Sahithi_Model->inner_sahithi($id);
+		return $details;
+	}
+	function sahithi_realtion_news($cat_id)
+	{
+		$details=$this->CI->Sahithi_Model->get_sahithi($cat_id);
+		return $details;
+	}
+	function sahithi_active_news($cat_id)
+	{
+		$details=$this->CI->Sahithi_Model->sahithi_active_news($cat_id);
 		return $details;
 	}
 }

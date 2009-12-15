@@ -16,6 +16,8 @@ $lang['news_setier'] 			    		= 	"సెటైర్";
 $lang['state_news'] 			    		= 	"జిల్లా వార్తలు";
 $lang['thaja_vartha']						=	"తాజా వార్త ";
 $lang['marinni_visheshalu']					=	"మరిన్ని వార్తా విశేషాలు ";
+$lang['sambanditha']						=	"సంబందిత వార్తలు";
+$lang['evikuda_read']						=	"ఇవి కూడా చదవండి ";
 // cinema page
 $lang['reviews'] 			    			= 	"మూవీ రివ్యూస్";
 $lang['sangitham'] 			    			= 	"సంగీతం";

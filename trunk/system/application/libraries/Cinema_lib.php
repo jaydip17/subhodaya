@@ -44,48 +44,62 @@ class Cinema_lib{
 	function cinema_block($heading)
 	{
 		$more=$this->CI->lang->line('more');
+		$link=base_url().'cinema/inner/';
 		switch ($heading)
 		{
 			case $this->CI->lang->line('cini_news'):
 				$temp=$this->cine_news();
 				if(!empty($temp))
 				{
-					$img_link=base_url()."assets/cinema/ceni_img".$temp[0]->id."_thumb.jpg";
+					$img_link=base_url()."assets/cinema/news_img".$temp[0]->id."_thumb.jpg";
+					$content_link=base_url()."cinema/details/".$temp[0]->type;
+					$cate=$temp[0]->type;
 				}
 				break;
 			case $this->CI->lang->line('cini_pukarlu'):
 				$temp=$this->cine_pukarlu();
 				if(!empty($temp))
 				{
-					$img_link=base_url()."assets/cinema/ceni_img".$temp[0]->id."_thumb.jpg";
+					$img_link=base_url()."assets/cinema/news_img".$temp[0]->id."_thumb.jpg";
+					$content_link=base_url()."cinema/details/".$temp[0]->type;
+					$cate=$temp[0]->type;
 				}
 				break;
 			case $this->CI->lang->line('reviews'):
 				$temp=$this->cine_riviews();
 				if(!empty($temp))
 				{
-					$img_link=base_url()."assets/cinema/ceni_img".$temp[0]->id."_thumb.jpg";
+					$img_link=base_url()."assets/cinema/news_img".$temp[0]->id."_thumb.jpg";
+					$content_link=base_url()."cinema/details/".$temp[0]->type;
+					$cate=$temp[0]->type;
 				}
 				break;
 			case $this->CI->lang->line('cini_shedul'):
 				$temp=$this->cine_shedul();
 				if(!empty($temp))
 				{
-					$img_link=base_url()."assets/cinema/ceni_img".$temp[0]->id."_thumb.jpg";
+					$img_link=base_url()."assets/cinema/news_img".$temp[0]->id."_thumb.jpg";
+					$content_link=base_url()."cinema/details/".$temp[0]->type;
+					$cate=$temp[0]->type;
 				}
 				break;
 			case $this->CI->lang->line('interviews'):
 				$temp=$this->cine_interviews();
 				if(!empty($temp))
 				{
-					$img_link=base_url()."assets/cinema/ceni_img".$temp[0]->id."_thumb.jpg";
+					$img_link=base_url()."assets/cinema/news_img".$temp[0]->id."_thumb.jpg";
+					$content_link=base_url()."cinema/details/".$temp[0]->type;
+					$cate=$temp[0]->type;
 				}
 				break;
 			case $this->CI->lang->line('therachatu'):
 				$temp=$this->cine_therachatu();
 				if(!empty($temp))
 				{
-					$img_link=base_url()."assets/cinema/ceni_img".$temp[0]->id."_thumb.jpg";
+					$img_link=base_url()."assets/cinema/news_img".$temp[0]->id."_thumb.jpg";
+					$content_link=base_url()."cinema/details/".$temp[0]->type;
+					$cate=$temp[0]->type;
+					
 				}
 				break;
 		}
@@ -94,7 +108,10 @@ class Cinema_lib{
 						'sub_heading'	=> $heading,
 						'more'			=> $more,
 						'details'		=> $temp,
-						'img_link'		=> $img_link
+						'img_link'		=> $img_link,
+						'content_link'	=> $content_link,
+						'link'			=> $link,
+						'cate'			=> $cate
 		);
 		return $this->CI->load->view('cinema/cinema_block',$data,TRUE);
 	}
@@ -108,6 +125,9 @@ class Cinema_lib{
 				if(!empty($temp))
 				{
 					$img_link=base_url()."assets/mahila/news_img".$temp[0]->id."_thumb.jpg";
+					$content_link=base_url().'mahila/details/'.$temp[0]->cat_id;
+					$link=base_url().'mahila/mahiladetails/';
+					$page='mahila';
 				}
 				break;
 			case $this->CI->lang->line('home_carer'):
@@ -115,6 +135,9 @@ class Cinema_lib{
 				if(!empty($temp))
 				{
 					$img_link=base_url()."assets/mahila/news_img".$temp[0]->id."_thumb.jpg";
+					$content_link=base_url().'mahila/details/'.$temp[0]->cat_id;
+					$link=base_url().'mahila/mahiladetails/';
+					$page='mahila';
 				}
 				break;
 			case $this->CI->lang->line('mahila_fashon'):
@@ -122,6 +145,9 @@ class Cinema_lib{
 				if(!empty($temp))
 				{
 					$img_link=base_url()."assets/mahila/news_img".$temp[0]->id."_thumb.jpg";
+					$content_link=base_url().'mahila/details/'.$temp[0]->cat_id;
+					$link=base_url().'mahila/mahiladetails/';
+					$page='mahila';
 				}
 				break;
 			case $this->CI->lang->line('mahila_yoga'):
@@ -129,6 +155,9 @@ class Cinema_lib{
 				if(!empty($temp))
 				{
 					$img_link=base_url()."assets/mahila/news_img".$temp[0]->id."_thumb.jpg";
+					$content_link=base_url().'mahila/details/'.$temp[0]->cat_id;
+					$link=base_url().'mahila/mahiladetails/';
+					$page='mahila';
 				}
 				break;
 			case $this->CI->lang->line('dite_helth'):
@@ -136,6 +165,9 @@ class Cinema_lib{
 				if(!empty($temp))
 				{
 					$img_link=base_url()."assets/mahila/news_img".$temp[0]->id."_thumb.jpg";
+					$content_link=base_url().'mahila/details/'.$temp[0]->cat_id;
+					$link=base_url().'mahila/mahiladetails/';
+					$page='mahila';
 				}
 				break;
 			case $this->CI->lang->line('mahila_mehandi'):
@@ -143,6 +175,9 @@ class Cinema_lib{
 				if(!empty($temp))
 				{
 					$img_link=base_url()."assets/mahila/news_img".$temp[0]->id."_thumb.jpg";
+					$content_link=base_url().'mahila/details/'.$temp[0]->cat_id;
+					$link=base_url().'mahila/mahiladetails/';
+					$page='mahila';
 				}
 				break;
 			case $this->CI->lang->line('mahi_buty'):
@@ -150,6 +185,9 @@ class Cinema_lib{
 				if(!empty($temp))
 				{
 					$img_link=base_url()."assets/mahila/news_img".$temp[0]->id."_thumb.jpg";
+					$content_link=base_url().'mahila/details/'.$temp[0]->cat_id;
+					$link=base_url().'mahila/mahiladetails/';
+					$page='mahila';
 				}
 				break;
 			case $this->CI->lang->line('mahila_food'):
@@ -157,62 +195,90 @@ class Cinema_lib{
 				if(!empty($temp))
 				{
 					$img_link=base_url()."assets/mahila/news_img".$temp[0]->id."_thumb.jpg";
+					$content_link=base_url().'mahila/details/'.$temp[0]->cat_id;
+					$link=base_url().'mahila/mahiladetails/';
+					$page='mahila';
 				}
 				break;
+			//sahithi main page
 			case $this->CI->lang->line('sahi_festiva'):
 				$temp=$this->sahithi_festival();
 				if(!empty($temp))
 				{
-					$img_link=base_url()."assets/mahila/news_img".$temp[0]->id."_thumb.jpg";
+					$img_link=base_url()."assets/sahithi/news_img".$temp[0]->id."_thumb.jpg";
+					$content_link=base_url().'sahithi/details/'.$temp[0]->cat_id;
+					$link=base_url().'sahithi/sahithidetails/';
+					$page='sahithi';
 				}
 				break;
 			case $this->CI->lang->line('sahi_kathalu'):
 				$temp=$this->sahi_kathalu();
 				if(!empty($temp))
 				{
-					$img_link=base_url()."assets/mahila/news_img".$temp[0]->id."_thumb.jpg";
+					$img_link=base_url()."assets/sahithi/news_img".$temp[0]->id."_thumb.jpg";
+					$content_link=base_url().'sahithi/details/'.$temp[0]->cat_id;
+					$link=base_url().'sahithi/sahithidetails/';
+					$page='sahithi';
 				}
 				break;
 			case $this->CI->lang->line('matru_basha'):
 				$temp=$this->matru_basha();
 				if(!empty($temp))
 				{
-					$img_link=base_url()."assets/mahila/news_img".$temp[0]->id."_thumb.jpg";
+					$img_link=base_url()."assets/sahithi/news_img".$temp[0]->id."_thumb.jpg";
+					$content_link=base_url().'sahithi/details/'.$temp[0]->cat_id;
+					$link=base_url().'sahithi/sahithidetails/';
+					$page='sahithi';
 				}
 				break;
 			case $this->CI->lang->line('sahi_sametha'):
 				$temp=$this->sahi_sametha();
 				if(!empty($temp))
 				{
-					$img_link=base_url()."assets/mahila/news_img".$temp[0]->id."_thumb.jpg";
+					$img_link=base_url()."assets/sahithi/news_img".$temp[0]->id."_thumb.jpg";
+					$content_link=base_url().'sahithi/details/'.$temp[0]->cat_id;
+					$link=base_url().'sahithi/sahithidetails/';
+					$page='sahithi';
 				}
 				break;
 			case $this->CI->lang->line('sahi_kavithalu'):
 				$temp=$this->sahi_kavithalu();
 				if(!empty($temp))
 				{
-					$img_link=base_url()."assets/mahila/news_img".$temp[0]->id."_thumb.jpg";
+					$img_link=base_url()."assets/sahithi/news_img".$temp[0]->id."_thumb.jpg";
+					$content_link=base_url().'sahithi/details/'.$temp[0]->cat_id;
+					$link=base_url().'sahithi/sahithidetails/';
+					$page='sahithi';
 				}
 				break;
 			case $this->CI->lang->line('sahi_kavithm'):
 				$temp=$this->sahi_kavithm();
 				if(!empty($temp))
 				{
-					$img_link=base_url()."assets/mahila/news_img".$temp[0]->id."_thumb.jpg";
+					$img_link=base_url()."assets/sahithi/news_img".$temp[0]->id."_thumb.jpg";
+					$content_link=base_url().'sahithi/details/'.$temp[0]->cat_id;
+					$link=base_url().'sahithi/sahithidetails/';
+					$page='sahithi';
 				}
 				break;
 			case $this->CI->lang->line('sahi_janapadam'):
 				$temp=$this->sahi_janapadam();
 				if(!empty($temp))
 				{
-					$img_link=base_url()."assets/mahila/news_img".$temp[0]->id."_thumb.jpg";
+					$img_link=base_url()."assets/sahithi/news_img".$temp[0]->id."_thumb.jpg";
+					$content_link=base_url().'sahithi/details/'.$temp[0]->cat_id;
+					$link=base_url().'sahithi/sahithidetails/';
+					$page='sahithi';
 				}
 				break;
 			case $this->CI->lang->line('sahi_vyasam'):
 				$temp=$this->sahi_vyasam();
 				if(!empty($temp))
 				{
-					$img_link=base_url()."assets/mahila/news_img".$temp[0]->id."_thumb.jpg";
+					$img_link=base_url()."assets/sahithi/news_img".$temp[0]->id."_thumb.jpg";
+					$content_link=base_url().'sahithi/details/'.$temp[0]->cat_id;
+					$link=base_url().'sahithi/sahithidetails/';
+					$page='sahithi';
 				}
 				break;
 		}
@@ -221,7 +287,10 @@ class Cinema_lib{
 						'sub_heading'	=> $heading,
 						'more'			=> $more,
 						'img_link'		=> $img_link,
-						'details'		=>	$temp
+						'details'		=>	$temp,
+						'content_link'	=>  $content_link,
+						'link'			=>	$link,
+						'page'			=>	$page
 		);
 		
 		return $this->CI->load->view('cinema/mahila_block',$data,TRUE);

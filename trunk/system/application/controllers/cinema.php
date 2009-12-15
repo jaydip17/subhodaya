@@ -6,6 +6,7 @@ class Cinema extends Controller {
 		parent::Controller();
 		$this->load->model('admin/Flash_model');
 		$this->load->library('Cinema_lib', 'cinema_lib');
+		$this->load->library('News_lib', 'news_lib');
 		$this->lang->load('telugu', 'telugu');
 	}
 	function index()
@@ -97,6 +98,7 @@ class Cinema extends Controller {
 	}
 	function details()
 	{
+		$newscss=array();
 		$type=$this->uri->segment(3);
 		$onload = "loadNews('content','".base_url()."cinemalist/listview/".$type."')";
 		$more=$this->News_Model->more_news();
@@ -105,7 +107,8 @@ class Cinema extends Controller {
 		if(empty($result)){
 			redirect(base_url().'cinema');
 		}
-		//active news for side heaidngs
+		$cinema_content=$this->news_lib->cinema_content($type);
+		/*//active news for side heaidngs
 		$active_news=$this->Cinema_Model->get_activenews();
 		//active news for tabs
 		$active_news1=$this->Cinema_Model->get_activenews1(1);
@@ -131,30 +134,24 @@ class Cinema extends Controller {
 							'main' => $more['4']->matter,
 							'home' => $more['2']->matter,
 		); 
-		$bread_crumb = $this->bread_crumb->get_code($segments);
+		$bread_crumb = $this->bread_crumb->get_code($segments);*/
 		$data=array('more'			=>	$more,
 					'result'		=>	$result,
 					'onload' 		=> 	$onload,
-					'active_news'	=>	$active_news,
-					'active_news1'  =>  $active_news1,
-					'active_news2'	=>  $active_news2,
-					'active_news3'	=>  $active_news3,
-					'active_news4'	=>	$active_news4,
-					'greetings4'	=>  $greetings4,
-					'sahithi'       =>  $sahithi,
-					'sahithi1'      =>  $sahithi1,
-					'sahithi_cat'	=>	$sahithi_cat,
-					'tabs'			=> $tabs,
-					'bread_crumb'  => $bread_crumb
+					'news_content'	=>	$cinema_content,
+					'newscss'		=>	$newscss
 		);
-		$this->load->view('cinema_content',$data);
+		$this->load->view('news_content',$data);
 	}
 	function inner()
 	{
-		$more=$this->News_Model->more_news();
-		$news_type4=$this->News_Model->get_newstype1(4);
 		$id=$this->uri->segment(3,0);
 		$type=$this->uri->segment(4,0);
+		$cinema_inner=$this->news_lib->cinema_inner($id,$type);
+		$newscss=array();
+		
+	/*	$more=$this->News_Model->more_news();
+		$news_type4=$this->News_Model->get_newstype1(4);
 		$result1=$this->Cinema_Model->get_all($type);
 		$result=$this->Cinema_Model->inner($id);
 		if(empty($result)){
@@ -188,8 +185,8 @@ class Cinema extends Controller {
 							'main' => $more['4']->matter,
 							'home' => $more['2']->matter,
 		); 
-		$bread_crumb = $this->bread_crumb->get_code($segments);
-		$data=array('more'   		 => $more,
+		$bread_crumb = $this->bread_crumb->get_code($segments);*/
+		$data=array(/*'more'   		 => $more,
 					'result' 		 => $result,
 					'news_type4'	 => $news_type4,
 					'mahila_details' =>	$mahila_details,
@@ -200,10 +197,11 @@ class Cinema extends Controller {
 		          'video_result'     =>  $video_result,
 					'telegu_typing'	 =>	$telegu_typing,
 					'bread_crumb'	 => $bread_crumb,
-					'engheading'	 => $engheading
-	
+					'engheading'	 => $engheading*/
+					'news_inner'	 =>	$cinema_inner,
+					'newscss'		 =>	$newscss,	
 					);
-		$this->load->view('cinema_inner',$data);
+		$this->load->view('news_inner',$data);
 	}
 	
     function mail_box(){

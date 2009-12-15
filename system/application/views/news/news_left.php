@@ -3,7 +3,7 @@
 							<span style="letter-spacing: 2px;"><?=(isset($sub_heading)) ? $sub_heading : ''?></span>
 							<ul>
 							 <?php foreach ($details as $row):?>
-								<li><a href="#"><?=$row->heading?></a></li>
+								<li><a href="<?=$link?><?=$row->id?>/<?=$row->type?>"><?=$row->heading?></a></li>
 								<?php endforeach;?>
 							</ul>
 							</div>

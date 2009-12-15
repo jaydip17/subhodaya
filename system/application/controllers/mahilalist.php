@@ -25,11 +25,12 @@ class mahilalist extends Controller {
    		 		
   	    $paginate = $this->paginationnew->paginate(); 
    		//pagination
-   		
-		 $data=array('details'=>$details,
-		 				'more'=>$more,
-		                'paginate'=>$paginate,
-		                'type' =>'mahila');
+   		$link=base_url().'mahila/mahiladetails/'; 
+		 $data=array('details'		=>	$details,
+		 				'more'		=>	$more,
+		                'paginate'	=>	$paginate,
+		 				'link'		=>	$link
+		     );
 		$this->load->view('sahithi_linklistview.php',$data);
 	}
 	function thumbview(){
@@ -51,13 +52,17 @@ class mahilalist extends Controller {
    		$result = $this->paginationnew->getQuery(TRUE);
    		$details=$result->result();
    		 		
-  	    $paginate = $this->paginationnew->paginate(); 
+  	    $paginate = $this->paginationnew->paginate();
+  	    $link=base_url().'mahila/mahiladetails/'; 
+  	    $image_link=base_url().'assets/mahila/';
    		//pagination
-		 $data=array('details'=>$details,
-		 			'more'=>$more,
-		            'paginate' => $paginate,
-		            'type' =>'mahila');
-		$this->load->view('sahithi_linkthumbview.php',$data);
+		 $data=array('details'	=>$details,
+		 			'more'		=>$more,
+		            'paginate' 	=> $paginate,
+		 			'link'	   	=> $link,
+		 			'image_link'=> $image_link
+				);
+		$this->load->view('sahithi_linkthumbview',$data);
 	}
 }
 ?>

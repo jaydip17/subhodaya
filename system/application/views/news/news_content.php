@@ -1,15 +1,14 @@
 <div>
 	<div style="width:641px ;height:77px;float: left;text-align: left;">
 		<div style="padding-left: 10px;">links</div>
-		<div style="padding-left: 10px;height: 20px;"><span style="font-size: 17px;"><?=$active_news[0]->news_cat?></span></div>
+		<div style="padding-left: 10px;height: 20px;"><span style="font-size: 17px;"></span></div>
 		<div id="hr"><hr style="border: 1px solid #cee2ed;width: 95%" /></div>
 		<div>
 				<div id="thaja_vartha" style="width:395px;">
 							<div><span style="font-size: 18px;"><?=$this->lang->line('thaja_vartha');?></span></div>
-							<a href="#"><img src="<?=base_url()?>assets/news/news_img<?=$thaja_varhta[0]->id?>_thumb.jpg" style="float: left;"/></a>
-							<span id="headings"><a href="#"><?=$thaja_varhta[0]->heading?></a></span><br/>
-                            <span id="summery"><?=$thaja_varhta[0]->summary?></span>
-                            
+							<a href="<?=$link?><?=$thaja_varhta[0]->id?>/<?=$cat_id?>"><img src="<?=(isset($image_link)) ? $image_link : ''?>" style="float: left;"/></a>
+							<span id="headings"><a href="<?=$link?><?=$thaja_varhta[0]->id?>/<?=$cat_id?>"><?=$thaja_varhta[0]->heading?></a></span><br/>
+                            <span id="summery"><?=$thaja_varhta[0]->summary?></span>    
 				</div>
 				<div id="side_add" style="width:225px;">
 						<div>
@@ -20,7 +19,7 @@
 	          											$count++;
 	          											continue;
           											} ?>
-								<li><a href="#"><?=$row->heading?></a></li>
+								<li><a href="<?=$link?><?=$row->id?>/<?=$cat_id?>"><?=$row->heading?></a></li>
 										<? if($count==7){
 							         					break;
 							          					}else{
@@ -46,8 +45,8 @@
 		<div style="text-align: left;padding-left: 25px;"><span style="font-size: 17px;"><?=$this->lang->line('marinni_visheshalu');?></span></div>
 	</div>
 	<div style="float: right;width: 50%;height: 35px;"><span>view</span>
-	<img src="<?=base_url();?>assets/imgs/LIN.png" style="cursor: pointer"onclick="loadNews('content','<?=base_url()?>newslist/listview/<?=$active_news[0]->type?>')" />
-    <img style="cursor: pointer; " src="<?=base_url();?>assets/imgs/FUL.png" onclick="loadNews('content','<?=base_url()?>newslist/thumbview/<?=$active_news[0]->type?>')" />
+	<img src="<?=base_url();?>assets/imgs/LIN.png" style="cursor: pointer"onclick="loadNews('content','<?=base_url()?><?=$list?>/listview/<?=$cat_id?>')" />
+    <img style="cursor: pointer; " src="<?=base_url();?>assets/imgs/FUL.png" onclick="loadNews('content','<?=base_url()?><?=$list?>/thumbview/<?=$cat_id?>')" />
 	</div>
 	<div id="divcontent">
 		<div style="margin: 200px 0px 0px 80px;border: 1px solid silver;height: 41px;width: 216px;">
@@ -59,8 +58,8 @@
 <div id="content_left_news">
 	<div id="content_left" ><div style="padding-top: 7px;">Most Read Stories</div></div>
 	<ul style="text-align: left;">
-		<?php foreach ($active_news as $heading):?>
-		<li><a href=""><?=$heading->heading?></a></li>
+		<?php foreach ($most_read_news as $heading):?>
+		<li><a href="<?=$link?><?=$heading->id?>/<?=$cat_id?>"><?=$heading->heading?></a></li>
 		<?php endforeach;?>
 		
 	</ul>

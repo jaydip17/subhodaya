@@ -25,11 +25,13 @@ class Sahithilist extends Controller {
    		 		
   	    $paginate = $this->paginationnew->paginate(); 
    		//pagination
-   		
-		 $data=array('details'=>$details,
-		 				'more'=>$more,
-		                'paginate'=>$paginate,
-		                 'type' =>'sahithi');
+   		$link=base_url().'sahithi/sahithidetails/';
+		 $data=array('details'		=>	$details,
+		 				'more'		=>	$more,
+		                'paginate'	=>	$paginate,
+		 				'link'		=>	$link,
+		 
+);
 		$this->load->view('sahithi_linklistview.php',$data);
 	}
 	function thumbview(){
@@ -53,10 +55,14 @@ class Sahithilist extends Controller {
    		 		
   	    $paginate = $this->paginationnew->paginate(); 
    		//pagination
-		 $data=array('details'=>$details,
-		 			'more'=>$more,
-		            'paginate' => $paginate,
-		             'type' =>'sahithi');
+   		$link=base_url().'sahithi/sahithidetails/';
+   		$image_link=base_url().'assets/sahithi/';
+		 $data=array('details'	=>	$details,
+		 			'more'		=>	$more,
+		            'paginate' 	=> $paginate,
+		 			'link'		=>	$link,
+		 			'image_link'=>	$image_link
+);
 		$this->load->view('sahithi_linkthumbview.php',$data);
 	}
 }

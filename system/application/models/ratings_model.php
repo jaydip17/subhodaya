@@ -15,7 +15,7 @@ class Ratings_model extends Model
         
         $ip = $this->input->ip_address();
         $rating_unitwidth = $this->config->item('rating_unitwidth');
-        
+      
         //default values
         $count = 0;
         $current_rating = 0;

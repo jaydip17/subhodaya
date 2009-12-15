@@ -8,14 +8,14 @@
 							</div>
 							<div id="sub_window_content">
 								<center>
-								<img style="margin:5px 0px 2px 0px; " src="<?=(isset($image_link)) ? $image_link : ''?>">
+								<a href=""><img style="margin:5px 0px 2px 0px; " src="<?=(isset($image_link)) ? $image_link : ''?>" id="img"></a>
 								<div id="story_title" style="color:#2571C4; font-size:12px"><?=$details['0']->heading?>
 								</div>
 								<div id="story" align="justify" style="line-height:20px; width:90%;font-size:12px">
 									<?=$details['0']->summary?>
 								</div>
 								<div id="" align="right" style="font-size: 12px;">
-									<a href="#" style="color:red; text-decoration:none;margin-right:4px;"><?=(isset($eenka)) ? $eenka : ''?></a>
+									<a href="" style="color:red; text-decoration:none;margin-right:4px;"><?=(isset($eenka)) ? $eenka : ''?></a>
 								</div>
 							</div>
 							<div id="sub_window_footer">

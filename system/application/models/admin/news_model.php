@@ -195,6 +195,18 @@ class News_Model extends Model
 		$query=$this->db->get('news');
 		return $query->result();	
 	}
+//most_read_news
+	function most_read_news($news_cat){
+		$array=array(
+			'type'			=>	$news_cat,
+		);
+		$this->db->order_by('views','desc');
+		$this->db->order_by('id','desc');
+		$this->db->where($array);
+		$this->db->limit(15);
+		$result=$this->db->get('news');
+		return $result->result();
+	}
 }
 
 ?>

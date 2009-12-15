@@ -5,6 +5,7 @@ class Sahithi extends Controller {
 	{
 		parent::Controller();
 		$this->load->library('Cinema_lib', 'cinema_lib');
+		$this->load->library('News_lib', 'news_lib');
 		$this->lang->load('telugu', 'telugu');
 	}
 	function index()
@@ -71,7 +72,9 @@ class Sahithi extends Controller {
    	
   		 $id=$this->uri->segment(3,0);
 		$type=$this->uri->segment(4,0);
-		$cate=$this->db->get_where('sahithi_cat',array('id'=>$type));	
+		$sahithi_inner=$this->news_lib->sahithi_inner($id,$type);
+		$newscss=array();
+		/*$cate=$this->db->get_where('sahithi_cat',array('id'=>$type));	
 		$sahithicate=$cate->result();
 		if(empty($sahithicate)){
 			redirect(base_url().'sahithi');
@@ -112,8 +115,8 @@ class Sahithi extends Controller {
 		); 
 		$bread_crumb = $this->bread_crumb->get_code($segments);
 		
-	    $telegu_typing=array();
-	    $data=array('result'   	=>  $result,
+	    $telegu_typing=array();*/
+	    $data=array(/*'result'   	=>  $result,
 					 'more'    	=>  $more,
 				'cinema_type1' 	=>  $cinema_type1,
 		        'details'   	=>  $details,
@@ -125,14 +128,20 @@ class Sahithi extends Controller {
 	              'news_type2'  =>	$news_type2,
 	             'key'         	=>  $key,
 	    		'telegu_typing'	=>	$telegu_typing,
-	    		'bread_crumb'	=>	$bread_crumb
+	    		'bread_crumb'	=>	$bread_crumb*/
+	    		'news_inner' =>	$sahithi_inner,
+	    		'newscss'		=>	$newscss
 				);
 				
-		$this->load->view('mahila_inner',$data);
+		$this->load->view('news_inner',$data);
 	}
    function details()
    {
-   	   	$this->load->model('admin/Poll_Model');
+   	$type=$this->uri->segment(3,0);
+   	$onload = "loadNews('content','".base_url()."sahithilist/listview/".$type."')";
+   	$sahithi_content=$this->news_lib->sahithi_content($type);
+   	$newscss=array();
+   	   /*	$this->load->model('admin/Poll_Model');
    	 	$newspoll=$this->Poll_Model->get_newspolls($type=4);
    	 	$cinemapoll=$this->Poll_Model->get_newspolls($type=5);
 		$yes_poll=$this->Poll_Model->get_yes_newspoll($type=4);
@@ -141,8 +150,6 @@ class Sahithi extends Controller {
 		foreach($details as $item)
 		$details_more[$item->id]=$this->Sahithi_Model->getdetails($item->id,'yes',6);
 		$more=$this->Sahithi_Model->more_sahithi();
-		$type=$this->uri->segment(3,0);
-		$onload = "loadNews('content','".base_url()."sahithilist/listview/".$type."')";
 		$total_rows=$this->Sahithi_Model->count($type);
 		//echo $total_rows;
 	    $this->load->library('pagination');
@@ -165,12 +172,11 @@ class Sahithi extends Controller {
 							'main' => $more['9']->matter,
 							'home' => $more['2']->matter,
 		); 
-		$bread_crumb = $this->bread_crumb->get_code($segments);
+		$bread_crumb = $this->bread_crumb->get_code($segments);*/
 		
-		$data=array(	'news'  	=>	$sahithi,
+		$data=array(	/*'news'  	=>	$sahithi,
 						'more'		=>	$more,
 					'pagination'	=>	$pagination,
-		             'onload' 		=>	$onload,
 				     'newspoll'    	=>  $newspoll,
 				      'yes_poll'    =>  $yes_poll,
 		             'details' 		=>	$details,
@@ -179,9 +185,12 @@ class Sahithi extends Controller {
 		              'cinemapoll'  =>  $cinemapoll,
 				'details_sahithi'	=>	$details_sahithi,
 				'tabs'             	=> 	$tabs,
-				'bread_crumb'		=>	$bread_crumb
+				'bread_crumb'		=>	$bread_crumb*/
+				      'onload' 		=>	$onload,
+				'news_content'		=>	$sahithi_content,
+				'newscss'			=>	$newscss
 		             );
-		$this->load->view("mahila_content",$data);
+		$this->load->view("news_content",$data);
 	}
 }
 ?>

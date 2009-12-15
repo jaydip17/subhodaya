@@ -8,8 +8,8 @@ if(isset($mess)){
 <table><tr>
 <td>Message<td>
 <?php $data=array('name'=>'message',
-				  'rows'=>5,
-				  'cols'=>30);?>
+				  'rows'=>10,
+				  'cols'=>50);?>
 <td><?=form_textarea($data)?></td></tr></table>
 <table style="background-color:white; border:black solid thin;">
 <SCRIPT LANGUAGE="JavaScript">

@@ -31,9 +31,18 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
 <?php if(isset($cinemacss)){?>
 	<link href="<?=base_url();?>assets/css/cinema.css" rel="stylesheet" type="text/css" />
 	<?php }?>
+	
     <link  href="<?=base_url();?>assets/css/black.css" rel="stylesheet" type="text/css" />
 	<link id="theme" href="<?=base_url();?>assets/css/blue.css" rel="stylesheet" type="text/css" /> 
 	<link href="<?=base_url();?>assets/css/gallery.css" rel="stylesheet" type="text/css"/>
+	<!-- for videomenu css -->
+	
+	<link href="<?=base_url();?>assets/css/video.css" rel="stylesheet" type="text/css"/>
+	<link href="<?=base_url();?>assets/css/videomenu.css" rel="stylesheet" type="text/css"/>
+	
+	
+	
+	
 <!-- for tabs js ans css -->
 	<script src="<?=base_url();?>assets/jq.tabs/jquery-1.1.3.1.pack.js" type="text/javascript"></script>
 	<script src="<?=base_url();?>assets/jq.tabs/jquery.history_remote.pack.js" type="text/javascript"></script>

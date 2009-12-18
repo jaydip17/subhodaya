@@ -1,198 +1,121 @@
-<link href="<?=base_url();?>assets/SpryTabbedPanels.css" rel="stylesheet" type="text/css" />
-<table width="99%"  border="0" cellpadding="0" cellspacing="0">
-<tr>
-    <td width="420" valign="top" >
-    <table width="100%" border="0" cellpadding="0" cellspacing="0">
-   	<tr>
-       	<td valign="top">
-       	<table width="0"  border="0" cellpadding="0" cellspacing="0">
-    		<tr>
-	       		<td  valign="top" width="500">
-		       		<table width="100%"  border="0" cellpadding="0" cellspacing="0">
-		     			<tr><td height="4" valign="bottom"><!--<img src="<?=base_url();?>assets/imgs/top-cor-line.jpg" width="500" height="4" />--></td></tr>
-		            </table>
-	                <table width="100%"  border="0"   style="border-left:1px solid #0872BC; border-right:1px solid #0872BC;" cellpadding="0" cellspacing="0">
-	                    <tr><td height="366"><?=$videoplayer?></td>
-	                    </tr>
-	                </table></td></tr>
-	                <tr><td><!--<img src="<?=base_url();?>assets/imgs/top-crow-botom.jpg" width="500"/>--></td></tr>
-         </table>
-         </td>
-     </tr>
-     </table>
-     </td>
-     <td  valign="top" align="center" height="370">
-        <table width="230" height="370" align="center" style="border:1px solid #0872BC;cellspacing:0px cellpadding:0px;">
-            <tr>
-           <td colspan="2"  style="border:1px solid #50BFC;height:25px; padding-top:0px;font-size:14px;font-weight:bold;text-align:center" id="video_heading"><?=$more['32']->matter ?></td>
-            </tr>
-            <?
-            foreach($latestvideos->result() as $item ) {
-            ?>          
-           
-           <tr>
-           <td><div style="margin-left:15px;"><a href="<?=base_url();?>video/index/<?=$item->id?>/<?=$item->video_cat_id?>"><div id="latevideo_time"><?=$item->time?></div><img id="img" src="<?=base_url();?>assets/videos/image_preview/image<?=$item->id?>_thumb.jpg" width="96"height="66"></a></div></td>
-           <td><div id="li-vi"><?=$item->insert_date?><br/><?=$item->name?><br/><span style="color:#FF6507;"><?=$item->no_of_views?> views</span><br/><?=$more['36']->matter?>:<span style="color:#FF6507;"><?=$item->rating?></span></div></td>
-          </tr>
-          <?} ?> 
-	      
-	      
-          <tr>
-          <td colspan="2" align="right" id="vi_heading" class="hiname"><!--<a href="#"><?=$more['0']->matter?></a>--></td>
-          </tr>
-        </table>
-        
-        
-     </td>
-   
-       <td  align="center" valign="top">
-		<table width="185" style="border:1px solid #50BCFC;">
-			<tr>
-				<td align="center"><div><img src="<?=base_url();?>assets/ads/Videos_page1.jpg"></div></td>
-			</tr>
-			    <tr>
-			    <td align="center"><div><img  src="<?=base_url();?>assets/ads/Videos_page2.jpg"></div></td>
-			    </tr>
-			    
-			</table>
-			 
-          </td>
-         </tr>
-  </table> 
-          
-          <table>
-          
-          <tr>
-         
-          <td  valign="top" height="375px" width="660px">
-            <table border="0" align="left" style="margin-top:20px; margin-right:5px;" width="100%" cellspacing="0" cellpadding="0">
-            <tr>
-            <td><img src="<?=base_url();?>assets/imgs/hot-video-topline.jpg"></td>
-            </tr>
-            
-            <tr ><td><div style="height:375px; width:660px;border-left:1px solid #9D9D9D; border-right:1px solid #9D9D9D;"> 
-            <table width="100%" style="margin-left:4px margin-right:2px;padding-left:3px;">
-                <div id="hotvideo"><?=$more['33']->matter ?><!--<span style="padding-left:300px;">Search for Videos:<input type="text" name="search" value="" size="13"></span></div>-->
-          
-            <tr>
-               <td  style="width:640px; padding-left:4px;"> 
-             
-             
-<div id="TabbedPanels1" class="TabbedPanels" style="height:350px;">
 
-  <ul class="TabbedPanelsTabGroup">
-  <?foreach($videocategeories->result() as $item){ ?>
-   <li class="TabbedPanelsTab" onclick="javascript:loadNews('<?=$item->id?>','<?=base_url()?>videolist/videoview/<?=$item->id?>')"><?=$item->name ?></li>
-  <?}?>
-  </ul>
-  <div class="TabbedPanelsContentGroup" style="width: 600px;">    
- <?php  foreach($videocategeories->result() as $key=>$item){
- 
-  $count=1;?>
-    <div class="TabbedPanelsContent" id="div<?=$item->id?>" > 
-     <img src="<?=base_url();?>assets/imgs/loadingAnimation.gif" align="middle" style="padding:100px 0px 0px 80px;"></img> 
-           </div>
-     
-
-  
-  
-  
-    <?php } ?> 
-       
-    
-  
-               
-      
-      </div>   
-       <!--  <img src="<?=base_url();?>assets/imgs/loadingAnimation.gif" align="middle" style="padding:100px 0px 0px 80px;"></img>-->        
-       </div>  
-                          
-            </td>
-           
-            </tr>
-            
-             </table>   
-           </div></td></tr>
-                 
-           <tr>
-           <td><img src="<?=base_url();?>assets/imgs/hot-video-bottomline.jpg"></td>
-           </tr>
-          </table>
-          	        
-          	</td>
-          	
-          	<td align="left" valign="top" rowspan="2" style="height:570px;" >
-          	 <table border="0" style="margin-top:14px;margin-left:15px;" cellspacing="0" cellpadding="0"  >
-          	    <tr>
-          	    <td style="height:4px; width:241;"></td>
-          	    </tr>
-          	     <tr><td>
-          	     <div id="top-videocure"></div>
-          	     
-          	     <div style="height:558px;border-left: 1px solid #9D9D9D; border-right: 1px solid #9D9D9D;" id="backimg">
-          	     
-          	         <table width="95%" style="margin-left:6px;margin-right:4px; margin-top:6px;">
-          	          <tr style="height:20px;">
-          	       			<td colspan="2" id="topvideo"><?=$more['34']->matter?></td>
-          	          <tr>
-          	          
-          	          <!--<tr>
-          	            <td>Display:</td>
-          	            <td><input type="text" name="Today" value="Today"></td>
-          	          </tr>
-          	          --></table> 
-          	          
-          	            <table width="95%" style="margin-left:6px;margin-right:4px; margin-top:7px;">
-          	            
-          	            <?
-          	            foreach($topviewedvideos->result() as $item){  
-          	            ?>
-          	          <tr>
-          	            <td><div style="padding-top:5px;"><a href="<?=base_url();?>video/index/<?=$item->id?>/<?=$item->video_cat_id?>"><div id="topvideo_time"><?=$item->time?></div><img id="img" src="<?=base_url();?>assets/videos/image_preview/image<?=$item->id?>_thumb.jpg" width="90" height="60"></div></a></td>
-          	            <td  valign="top" id="topvi"><?=$item->name?><br/><?=$item->insert_date?><br/><span style="color:#FF6507;"><?=$item->no_of_views?> Views</span><br/><div id="topimg" style=height:15px;width:101px;padding-left:4px;margin-top:4px;padding-top:2px;"><?=$more['36']->matter?>:<span style="color:#FF6507;"> <?=$item->rating?></span></div></td>
-          	            </tr>
-          	          <?}?><!-- 
-          	           
-          	            <tr>
-          	               <td colspan="2" align="right" style="padding-top:15px;"class="hiname"><a href="#"><?=$more['0']->matter?></td>
-          	              </tr>
-          	             
-          	           --></table>
-          	            
-          	                  
-          	    </div></td></tr>
-          	       <tr>
-          	       <td style="height:10px;width:242px;background-image: url('<?=base_url();?>assets/imgs/bottom-video-line.jpg'); background-repeat: no-repeat;"></td>
-          	      </tr> 
-          	     
-          	 </table>
-          	
-          	</td>
-          </tr>
-         
-              
-            <tr>
-             <td  valign="top" style="height:150px; width:660px;">
-               <table  border="0" width="660" align="left" style="margin-top:10px;height:150px;" cellspacing="0" cellpadding="0">
-                  <tr>
-                    <td ><img src="<?=base_url();?>assets/imgs/all-video-topline.jpg"></td>
-                  </tr>
-                  <tr><td><div style="height:142px;width:660px;border-left: 1px solid #9D9D9D; border-right: 1px solid #9D9D9D;">
-                         <div id="allvi"><?=$more['35']->matter?></div>
-                           
-                          <div id="divallimg" style="width:660px;">
-                          
-                         
-                         
-                        
-                   </div></td></tr>
-                      <tr>
-                  <td style="height:10px;width:662px;text-align:right;background-image:url('<?=base_url();?>assets/imgs/all-video-bottomline.jpg');background-repeat:no-repeat;"></td>
-                 </tr>        
-               </table>
-            </td>
-            </tr>   
-        
-          </table>
-
-  
+	
+		
+			<div style="width:963px; background-color:#fff;border:0px dotted #000">
+				<div id="header" style="border:1px solid #ccc; margin-bottom:0px;float:left;background-color:#fff; width:100%">
+					
+					
+					<div style="width:100%; height:950px; float:left">
+					<div style="width:144px; height:350px; float:left; border:1px solid #979797;">
+					
+					        <div id="videomenu">
+		                  <ul>
+			
+			   <?foreach($videocategeories->result() as $item){?>
+			<li><a href="<?=base_url()?>video/index/<?=$item->id?>"><?=$item->name ?></a></li>
+			 <?}?>
+			
+			
+			
+		                </ul>
+	                    </div> 
+					
+					
+					
+					</div>
+					 <div   style="float:right; height:900px;;"><img src="<?=base_url()?>assets/home_images/ads/mahila_ad1.jpg" width="243" height="194" />
+					   <div><img src="<?=base_url()?>assets/home_images/ads/mahila_ad.jpg" width="243" height="487" /></div>
+					   <div style="border:1px #000 solid;"><img src="<?=base_url()?>assets/home_images/ads/mahila_ad2.jpg" width="243" height="268" /></div>
+				      </div>
+					       
+					      
+					    <div style="width:560px; height:900px; float:left; margin-left:5px;border:1px solid #cee2ec;">
+						     
+						      <div style="width:560px; height:50px;" id="bgslis">
+					          <div style=" height:50px;" id="tvshows">TV Shows</div>
+							  <div style="width:385px; height:44px; background-color:#f4f4f4; float:left;" id="bgcolor">
+							    <div style="float:left;"><img src="<?=base_url();?>assets/gallery/left.gif" /></div>
+									
+									<div style="float:right;"><img src="<?=base_url();?>assets/gallery/right.gif" /></div>
+							        <div style="float:left;"><img src="<?=base_url();?>assets/gallery/etv.png" /><img src="<?=base_url();?>assets/gallery/ctv.png"  border="0px"/><img src="<?=base_url();?>assets/gallery/gemini.png" /><img src="<?=base_url();?>assets/gallery/maa.png" /><img src="<?=base_url();?>assets/gallery/inews.png" /><img src="<?=base_url();?>assets/gallery/vissa.png" /><img src="<?=base_url();?>assets/gallery/ztelugu.png" /></div>
+							  </div>
+							  </div>
+							                
+							        <div style="float:right; width:560px; text-align:right; margin-top:20px;margin-right:20px;"><!-- <img src="<?=base_url();?>assets/image/small.png" style="padding-bottom:1px;"/>--><?echo $paginate; ?><!-- <img src="<?=base_url();?>assets/image/small1.png" style="padding-bottom:1px;" />--></div>
+									     
+									<div style="float:left; width:560px; height:93px; margin-top:20px;">
+									          
+									       <? 
+                                             if(($latestvideos->num_rows() == 0 ))
+		                                   {   echo"<div style='text-align:center' width='560px'>";
+		                                     	echo" <h4>No Results to display</h4></td>";
+		                                   }
+			                                else{
+			                                $i=1; foreach ($hotvideos->result() as $item) {?>
+									       
+									     <div id="vi_d"><span id="vi_div">views:<?=$item->no_of_views?></span><br /><div id="video_img"><a href="<?=base_url();?>video/playvideo/<?=$item->id?>/<?=$item->video_cat_id?>"><img src="<?=base_url();?>assets/image/buttion.png" border="0px"/></a></div><div id="video_time"><a href="<?=base_url();?>video/playvideo/<?=$item->id?>/<?=$item->video_cat_id?>"><?=$item->time?></a></div><a href="<?=base_url();?>video/playvideo/<?=$item->id?>/<?=$item->video_cat_id?>"><img src="<?=base_url();?>assets/videos/image_preview/home_image<?=$item->id?>_thumb.jpg" id="img2" height="88" width="126"/></a><br /><span id="vi_div"><a href="<?=base_url();?>video/playvideo/<?=$item->id?>/<?=$item->video_cat_id?>"><?=$item->name?></a></span></div>
+									         <? 
+		
+			       
+			                           if($i%4==0)
+			                             {
+			       	                   echo"<div></div>";
+			                              }
+                                       $i++;  }?>
+                                       
+			                         
+									  <!--<div id="vi_d"><span id="vi_div">4rf5tg6y</span><br /><div id="video_img"><img src="<?=base_url();?>assets/image/buttion.png"/></div><div id="video_time">00:03</div><img src="<?=base_url();?>assets/gallery/im1.jpg" id="img2" height="88" width="126"/><br /><span id="vi_div">hbdvhv</span></div>
+									  <div id="vi_d"><span id="vi_div">4rf5tg6y</span><br /><div id="video_img"><img src="<?=base_url();?>assets/image/buttion.png"/></div><div id="video_time">00:03</div><img src="<?=base_url();?>assets/gallery/im1.jpg" id="img2" height="88" width="126"/><br /><span id="vi_div">hbdvhv</span></div>
+									  <div id="vi_d"><span id="vi_div">4rf5tg6y</span><br /><div id="video_img"><img src="<?=base_url();?>assets/image/buttion.png"/></div><div id="video_time">00:03</div><img src="<?=base_url();?>assets/gallery/im1.jpg" id="img2" height="88" width="126"/><br /><span id="vi_div">hbdvhv</span></div>-->
+									 
+									 <div style="float:left;"></div>
+							            <?}?>
+							        </div>
+									
+									
+									 
+									<!-- <div style="float:left; width:560px; height:93px; margin-top:60px;">
+									<div id="vi_d"><span id="vi_div">4rf5tg6y</span><br /><div id="video_img"><img src="<?=base_url();?>assets/image/buttion.png"/></div><div id="video_time">00:03</div><img src="<?=base_url();?>assets/gallery/im1.jpg" id="img2" height="88" width="126"/><br /><span id="vi_div">hbdvhv</span></div>
+									<div id="vi_d"><span id="vi_div">4rf5tg6y</span><br /><div id="video_img"><img src="<?=base_url();?>assets/image/buttion.png"/></div><div id="video_time">00:03</div><img src="<?=base_url();?>assets/gallery/im1.jpg" id="img2" height="88" width="126"/><br /><span id="vi_div">hbdvhv</span></div>
+									<div id="vi_d"><span id="vi_div">4rf5tg6y</span><br /><div id="video_img"><img src="<?=base_url();?>assets/image/buttion.png"/></div><div id="video_time">00:03</div><img src="<?=base_url();?>assets/gallery/im1.jpg" id="img2" height="88" width="126"/><br /><span id="vi_div">hbdvhv</span></div>
+									<div id="vi_d"><span id="vi_div">4rf5tg6y</span><br /><div id="video_img"><img src="<?=base_url();?>assets/image/buttion.png"/></div><div id="video_time">00:03</div><img src="<?=base_url();?>assets/gallery/im1.jpg" id="img2" height="88" width="126"/><br /><span id="vi_div">hbdvhv</span></div>
+									<div style="float:left;"></div>
+							        </div>-->
+									
+									
+								 
+									<!--  <div style="float:left; width:560px; height:93px; margin-top:50px;">
+									  <div id="vi_d"><span id="vi_div">4rf5tg6y</span><br /><div id="video_img"><img src="<?=base_url();?>assets/image/buttion.png"/></div><div id="video_time">00:03</div><img src="<?=base_url();?>assets/gallery/im1.jpg" id="img2" height="88" width="126" /><br /><span id="vi_div">hbdvhv</span></div>
+									  <div id="vi_d"><span id="vi_div">4rf5tg6y</span><br /><div id="video_img"><img src="<?=base_url();?>assets/image/buttion.png"/></div><div id="video_time">00:03</div><img src="<?=base_url();?>assets/gallery/im1.jpg" id="img2" height="88" width="126"/><br /><span id="vi_div">hbdvhv</span></div>
+									  <div id="vi_d"><span id="vi_div">4rf5tg6y</span><br /><div id="video_img"><img src="<?=base_url();?>assets/image/buttion.png"/></div><div id="video_time">00:03</div><img src="<?=base_url();?>assets/gallery/im1.jpg" id="img2" height="88" width="126"/><br /><span id="vi_div">hbdvhv</span></div>
+									  <div id="vi_d"><span id="vi_div">4rf5tg6y</span><br /><div id="video_img"><img src="<?=base_url();?>assets/image/buttion.png"/></div><div id="video_time">00:03</div><img src="<?=base_url();?>assets/gallery/im1.jpg" id="img2" height="88" width="126"/><br /><span id="vi_div">hbdvhv</span></div>
+									  <div style="float:left;"></div>
+							        </div>-->
+							        <!-- <div style="float:left; width:560px; height:93px; margin-top:50px;">
+									  <div id="vi_d"><span id="vi_div">4rf5tg6y</span><br /><div id="video_img"><img src="<?=base_url();?>assets/image/buttion.png"/></div><div id="video_time">00:03</div><img src="<?=base_url();?>assets/gallery/im1.jpg" id="img2" height="88" width="126"/><br /><span id="vi_div">hbdvhv</span></div>
+									  <div id="vi_d"><span id="vi_div">4rf5tg6y</span><br /><div id="video_img"><img src="<?=base_url();?>assets/image/buttion.png"/></div><div id="video_time">00:03</div><img src="<?=base_url();?>assets/gallery/im1.jpg" id="img2" height="88" width="126"/><br /><span id="vi_div">hbdvhv</span></div>
+									  <div id="vi_d"><span id="vi_div">4rf5tg6y</span><br /><div id="video_img"><img src="<?=base_url();?>assets/image/buttion.png"/></div><div id="video_time">00:03</div><img src="<?=base_url();?>assets/gallery/im1.jpg" id="img2" height="88" width="126"/><br /><span id="vi_div">hbdvhv</span></div>
+									  <div id="vi_d"><span id="vi_div">4rf5tg6y</span><br /><div id="video_img"><img src="<?=base_url();?>assets/image/buttion.png"/></div><div id="video_time">00:03</div><img src="<?=base_url();?>assets/gallery/im1.jpg" id="img2" height="88" width="126"/><br /><span id="vi_div">hbdvhv</span></div>
+									  <div style="float:left;"></div>
+							        </div>-->
+							       <!--  <div style="float:left; width:560px; height:93px; margin-top:50px;">
+									  <div id="vi_d"><span id="vi_div">4rf5tg6y</span><br /><div id="video_img"><img src="<?=base_url();?>assets/image/buttion.png"/></div><div id="video_time">00:03</div><img src="<?=base_url();?>assets/gallery/im1.jpg" id="img2" height="88" width="126"/><br /><span id="vi_div">hbdvhv</span></div>
+									  <div id="vi_d"><span id="vi_div">4rf5tg6y</span><br /><div id="video_img"><img src="<?=base_url();?>assets/image/buttion.png"/></div><div id="video_time">00:03</div><img src="<?=base_url();?>assets/gallery/im1.jpg" id="img2" height="88" width="126"/><br /><span id="vi_div">hbdvhv</span></div>
+									  <div id="vi_d"><span id="vi_div">4rf5tg6y</span><br /><div id="video_img"><img src="<?=base_url();?>assets/image/buttion.png"/></div><div id="video_time">00:03</div><img src="<?=base_url();?>assets/gallery/im1.jpg" id="img2" height="88" width="126"/><br /><span id="vi_div">hbdvhv</span></div>
+									  <div id="vi_d"><span id="vi_div">4rf5tg6y</span><br /><div id="video_img"><img src="<?=base_url();?>assets/image/buttion.png"/></div><div id="video_time">00:03</div><img src="<?=base_url();?>assets/gallery/im1.jpg" id="img2" height="88" width="126"/><br /><span id="vi_div">hbdvhv</span></div>
+									  <div style="float:left;"></div>
+							        </div>-->
+							          
+							        </div>
+							        
+								</div>
+									
+							</div>
+					</div>
+					
+					
+					
+				
+				
+		
+	

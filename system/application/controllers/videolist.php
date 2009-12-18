@@ -8,6 +8,7 @@ class Videolist extends Controller {
 	}
 	function videoview()
 	{
+		
 		$this->load->model('admin/News_Model');
 		 $more=$this->News_Model->more_news();
 		 //pagination for hot videos view
@@ -15,13 +16,13 @@ class Videolist extends Controller {
 		 $query=" from videos where video_cat_id=$id order by insert_date desc ";
 		 $a =base_url().'videolist/videoview/'.$id;
 		 $this->load->library('paginationnew');$this->paginationnew->start = ($this->uri->segment(4)) ? $this->uri->segment(4) : '0';
-    	 $this->paginationnew->limit =6;
+    	 $this->paginationnew->limit =20;
          $this->paginationnew->filePath ='javascript:loadNews(\''.$id.'\',\''.$a;
       
          $this->paginationnew->select_what = '*';
          $this->paginationnew->nbItems = $this->video_Model->count_videos($id);
          $this->paginationnew->add_query = $query;
-      
+            
    		 $result = $this->paginationnew->getQuery(TRUE);
    		 $hotvideos=$result;
    		 $paginate = $this->paginationnew->paginate(); 
@@ -43,7 +44,7 @@ class Videolist extends Controller {
 		                'hotvideos'  =>	$hotvideos,
 		 				'bread_crumb'=> $bread_crumb
 		 );
-		$this->load->view('video_view',$data);
+		$this->load->view('videos_view',$data);
 	}
       function videonamesview()
 	{

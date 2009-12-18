@@ -145,6 +145,15 @@ ddsmoothmenu.init({
 			</li>
 		</ul>
 	</li>
+	
+	    <li> <a href="#">Astrolagy</a>
+	     <ul>
+			<li><a href="<?=base_url();?>admin/astrolagy/index">Add Astrolagy</a>
+			</li>
+			<li><a href="<?=base_url();?>admin/astrolagy/getastrolagycats">Edit/Delete</a>
+			</li>
+		</ul>
+	</li>
 			</ul>
 			</li>
 			<!--<li><a href="#">Other</a>

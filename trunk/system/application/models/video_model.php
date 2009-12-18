@@ -155,7 +155,7 @@ function getlatestvideos($limit,$catid,$id)
     	$this->db->where('id',$id);
     	$rs = $this->db->get('videos_categeory');
     	$result = $rs->row();
-    	return $result->name;
+    	//return $result->name;
     }
 }
 ?>

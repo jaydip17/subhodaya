@@ -14,16 +14,7 @@
 			<?foreach($videocategeories->result() as $item){?>
 			<li><a href="<?=base_url()?>video/index/<?=$item->id?>"><?=$item->name ?></a></li>
 			 <?}?>
-			<!-- <li><a href="#2">Blog Videos</a></li>
-			<li><a href="#3">Movi-Trailers</a></li>
-			<li><a href="#4">Yoga</a></li>
-			<li><a href="#1">Commedy Videos</a></li>
-			<li><a href="#1">Music Videos</a></li>
-			<li><a href="#5">Believe It Or Not</a></li>
-			<li><a href="videomenu1.zip">Religious Journey</a></li>
-			<li><a href="#2">Movie Scenes</a></li>
-			<li><a href="#3">TV Shows</a></li>
-			<li><a href="#4">Emotional Scenes</a></li>-->
+			
 			
 			
 		                </ul>

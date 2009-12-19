@@ -27,7 +27,7 @@ class Video extends Controller {
 	    $this->video_Model->increase_viewcount($videoid);
 	    	 
 		$latestvideos = $this->video_Model->get_videos('latest',20);
-		$topviewedvideos = $this->video_Model->get_videos('top',20);
+		$topviewedvideos = $this->video_Model->get_videos('top',8);
 		$videocategeories = $this->video_Model->getvideocategeories(8);
 		
 	    //this is the first categeory which is displayed in the div first on loading the page

@@ -41,7 +41,7 @@
 							  </div>
 							  </div>
 							                
-							        <div style="float:right; width:560px; text-align:right; margin-top:20px;margin-right:20px;"><!-- <img src="<?=base_url();?>assets/image/small.png" style="padding-bottom:1px;"/>--><?echo $paginate; ?><!-- <img src="<?=base_url();?>assets/image/small1.png" style="padding-bottom:1px;" />--></div>
+							        <div style="float:right; width:560px; text-align:right; margin-top:20px;margin-right:20px;"> <img src="<?=base_url();?>assets/image/small.png" style="padding-bottom:1px;"/><!--<?echo $paginate; ?>-->Preview Next <img src="<?=base_url();?>assets/image/small1.png" style="padding-bottom:1px;" /></div>
 									     
 									<div style="float:left; width:560px; height:93px; margin-top:20px;">
 									          
@@ -53,7 +53,7 @@
 			                                else{
 			                                $i=1; foreach ($hotvideos->result() as $item) {?>
 									       
-									     <div id="vi_d"><span id="vi_div">views:<?=$item->no_of_views?></span><br /><div id="video_img"><a href="<?=base_url();?>video/playvideo/<?=$item->id?>/<?=$item->video_cat_id?>"><img src="<?=base_url();?>assets/image/buttion.png" border="0px"/></a></div><div id="video_time"><a href="<?=base_url();?>video/playvideo/<?=$item->id?>/<?=$item->video_cat_id?>"><?=$item->time?></a></div><a href="<?=base_url();?>video/playvideo/<?=$item->id?>/<?=$item->video_cat_id?>"><img src="<?=base_url();?>assets/videos/image_preview/home_image<?=$item->id?>_thumb.jpg" id="img2" height="88" width="126"/></a><br /><span id="vi_div"><a href="<?=base_url();?>video/playvideo/<?=$item->id?>/<?=$item->video_cat_id?>"><?=$item->name?></a></span></div>
+									     <div id="vi_d"><span id="vi_div"><a href="<?=base_url();?>video/playvideo/<?=$item->id?>/<?=$item->video_cat_id?>">views:<?=$item->no_of_views?></a></span><br /><div id="video_img"><a href="<?=base_url();?>video/playvideo/<?=$item->id?>/<?=$item->video_cat_id?>"><img src="<?=base_url();?>assets/image/buttion.png" border="0px"/></a></div><div id="video_time"><a href="<?=base_url();?>video/playvideo/<?=$item->id?>/<?=$item->video_cat_id?>"><?=$item->time?></a></div><a href="<?=base_url();?>video/playvideo/<?=$item->id?>/<?=$item->video_cat_id?>"><img src="<?=base_url();?>assets/videos/image_preview/home_image<?=$item->id?>_thumb.jpg" id="img2" height="88" width="126"/></a><br /><span id="vi_div"><a href="<?=base_url();?>video/playvideo/<?=$item->id?>/<?=$item->video_cat_id?>"><?=$item->name?></a></span></div>
 									         <? 
 		
 			       

@@ -23,12 +23,18 @@ class Astrolagy_Model extends Model
    }
  	
   function getastrolagy_details($id){
+  	
+  	
   	  $result=$this->db->get_where('astrolagy',array('id'=>$id));
 		return $result->result();
    	
    }
    
    function get_astrolagy1($type){
+   	     
+   	      $this->db->select('distinct(astrolagy_types.id),astrolagy_types.astrolagy_type,astrolagy.astrolagy_type');
+			$this->db->from('astrolagy');
+			$this->db->join('astrolagy_types','astrolagy_types.id=astrolagy.astrolagy_type');
    
 		$query="from astrolagy where astrolagy_cat=$type order by astrolagy.id desc";
 		return $query;
@@ -120,9 +126,7 @@ $remove=array();
 	
 	
 	
-	/*$this->db->select('distinct(movies.id),movies.movie_name,trailors.movie_id');
-			$this->db->from('trailors');
-			$this->db->join('movies','movies.id=trailors.movie_id');*/
+	
 	
 	
 	

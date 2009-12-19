@@ -13,14 +13,14 @@
 					    <div  style="float:left; height:25px; width:700px; background-color:#EFE1E1; text-align:left; padding-top:4px; padding-left:6px; border-top:1px solid #999;"><?echo $paginate; ?></div>
 					      
 					     
-					    <div id="new" style="margin-top:0px;">
+					    <div id="gallerynew" style="margin-top:0px;">
 						  <div style="float:left; width:90%;"></div>
 						   
 						  
 						     <?$count=1;
 					          foreach ($result as $row):
 					           ?>
-					           <div id="img"><a href="<?=base_url()?>assets/gallery/image<?=$row->id?>.jpg" class="pagelink" target="_blank"><img src="<?=base_url()?>assets/gallery/thumimg<?=$row->id?>.jpg" id="img2"></a><div style="height:36px; width:128px;background-color:#f7f7f7; border:1px solid #dcdcdc;"><span id="anchor"><a href="<?=base_url()?>assets/gallery/image<?=$row->id?>.jpg" class="pagelink" target="_blank"><?=$row->title?></a></span><br /> <?=$row->insert_date?></div>
+					           <div id="img4"><a href="<?=base_url()?>assets/gallery/image<?=$row->id?>.jpg" class="pagelink" target="_blank"><img src="<?=base_url()?>assets/gallery/thumimg<?=$row->id?>.jpg" id="img3"></a><div style="height:36px; width:128px;background-color:#f7f7f7; border:1px solid #dcdcdc;"><span id="anchor"><a href="<?=base_url()?>assets/gallery/image<?=$row->id?>.jpg" class="pagelink" target="_blank"><?=$row->title?></a></span><br /> <?=$row->insert_date?></div>
 							   </div>
 							   
 							   <?if($count==4){

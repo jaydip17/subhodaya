@@ -17,8 +17,8 @@ if(isset($message) && !is_array($message) ) echo($message);?>
 		<td style="font-size: 18px;" colspan='2' align='center'>Astrolagy</td>
 	  </tr>
 	  <tr>
-		<td>Select type</td>
-		<td><?=form_dropdown('astrolagy_cat',$options)?></td>
+		<td >Select type</td>
+		<td style="align:left;"><?=form_dropdown('astrolagy_cat',$options)?></td>
 	  </tr>
 	   <tr>
 		<td>Select zodiac sun-sign </td>

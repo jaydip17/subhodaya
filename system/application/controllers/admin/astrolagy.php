@@ -57,7 +57,7 @@ class Astrolagy extends Controller {
 	            $result=$this->db->insert('astrolagy',$data);
 	                }
 	            if($result==1){
-	            $message='Astrolagy Add Successfully';	
+	            $message='<span style="color:green;">Astrolagy Add Successfully</span>';	
 	            $this->session->set_flashdata('message',$message);    
 		        redirect(base_url()."admin/astrolagy/index",$message);     
 	            }
@@ -71,15 +71,15 @@ class Astrolagy extends Controller {
 	}
 
  function getastrolagycats(){
- 	$details=$this->Astrolagy_Model->get_astrolagycat();
- 	$data=array('details'=>$details);
- 	$this->load->view('admin/viewastrolagy_cat',$data);
+ 	    $details=$this->Astrolagy_Model->get_astrolagycat();
+ 	    $data=array('details'=>$details);
+ 	    $this->load->view('admin/viewastrolagy_cat',$data);
  	
  }
 	 
 function getastrolagy(){
 
-    $id=$this->uri->segment(4,0);
+        $id=$this->uri->segment(4,0);
 		//$details=$this->Astrolagy_Model->getastrolagy_details($type);
 		
 		$query=$this->Astrolagy_Model->get_astrolagy1($id);
@@ -110,10 +110,10 @@ function getastrolagy(){
 	 
  function edit(){
  	
- 	$id =$this->uri->segment(4,0);
-    $edit = $this->Astrolagy_Model->getastrolagy_details($id);
+ 	    $id =$this->uri->segment(4,0);
+        $edit = $this->Astrolagy_Model->getastrolagy_details($id);
     
-    $message = $this->session->flashdata('message');
+        $message = $this->session->flashdata('message');
 		$this->load->model('admin/Openwysiwyg_Model');
 		$textarea[]= array('textarea' => 'description',
 						   'skin'	  => 'full');
@@ -125,7 +125,7 @@ function getastrolagy(){
 		                    'edit'      =>  $edit,
 		                   
 		);
-    $this->load->view('admin/editastrolagytype',$data);
+       $this->load->view('admin/editastrolagytype',$data);
  	
  }
  
@@ -133,29 +133,19 @@ function getastrolagy(){
  	
  	 $id=$_POST['id'];
    	 $this->Astrolagy_Model->edit1($id);
-   	redirect(base_url().'admin/astrolagy/getastrolagy/'.$id);
+   	 redirect(base_url().'admin/astrolagy/getastrolagy/'.$id);
  	
  	
  }
 	 
 function delete(){
-	$this->load->model('admin/Astrolagy_Model');
-	$id=$this->uri->segment(4,0);
-	$result=$this->Astrolagy_Model->delete($id);
-	redirect(base_url().'admin/astrolagy/getastrolagy/'.$id);
+	 $this->load->model('admin/Astrolagy_Model');
+	 $id=$this->uri->segment(4,0);
+	 $result=$this->Astrolagy_Model->delete($id);
+	 redirect(base_url().'admin/astrolagy/getastrolagy/'.$id);
 	}
 	 
-/*function editcategeory(){
-	$this->Astrolagy_Model->editcategeory($id); 
-	$this->load->view('admin/editastrolagycat',$data);
-}
-	 
-function deletecategeory()
-	    {
-		$id=$this->uri->segment(4);
-		$this->Astrolagy_Model->deletecategeory($id);
-		redirect(base_url().'admin/astrolagy/getastrolagycats');
-	}*/
+
 
 }
 ?>

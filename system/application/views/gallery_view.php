@@ -84,30 +84,10 @@
 							  
 							  </div>
 							  <div style="float:right;">More...</div>
-					     </div>
+					     </div>-->
 						 
-						<div id="new">
-						  <div style="float:left; width:90%;">
-						    <div align="left"><b>Events</b></div>
-						   </div>
-					          <div id="img"><img src="<?=base_url()?>assets/gallery/imga.jpg"/><div style="background-color:#f7f7f7; border:1px solid #dcdcdc;"><span>susmitha</span><br /> 26-11-2009</div>
-							   </div>
-							   <div id="img"><img src="<?=base_url()?>assets/gallery/imga.jpg"/><div style="background-color:#f7f7f7; border:1px solid #dcdcdc;"><span>susmitha</span><br /> 26-11-2009</div>
-							   </div>
-							   <div id="img"><img src="<?=base_url()?>assets/gallery/imga.jpg"/><div style="background-color:#f7f7f7; border:1px solid #dcdcdc;"><span>susmitha</span><br /> 26-11-2009</div>
-							  
-							   </div>
-							  <div id="img"><img src="<?=base_url()?>assets/gallery/imga.jpg"/><div style="background-color:#f7f7f7; border:1px solid #dcdcdc;"><span>susmitha</span><br /> 26-11-2009</div>
-							  
-							  </div>
-							  <div id="img1"><img src="<?=base_url()?>assets/gallery/imga.jpg"/><div style="background-color:#f7f7f7; border:1px solid #dcdcdc;"><span>susmitha</span><br /> 26-11-2009</div>
-							  
-							  </div>
-							  <div style="float:right;">More...</div
-					     </div>>-->
-					      
-						 
-					   
+						
+					         
 				  </div>
 			</div>
 					

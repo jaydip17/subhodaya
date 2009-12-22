@@ -60,7 +60,7 @@ foreach ($details as $item):
 		<td width='300px'><input type="checkbox" id='c<?=$i++;?>' name="removeid[]" value=<?=$item->id?>>
 			<?=$item->astrolagy_type?>
 
-</td>
+        </td>
 		
 		<td width='50px' align="center"><a
 			href="<?=base_url()?>admin/astrolagy/delete/<?=$item->id?>"
@@ -74,23 +74,24 @@ foreach ($details as $item):
       endforeach ;?>
       
       <tr>
-		<td></td>
-		<td colspan="3" align="center"><a  onclick="fun();" href="javascript:void(0)">checkall</a>&nbsp;
-		<a  onclick="fun1();" href="javascript:void(0)">uncheckall</a></td>
-		<td></td>
-		<td></td>
-	</tr>
+		 <td></td>
+		 <td colspan="3" align="center"><a  onclick="fun();" href="javascript:void(0)">checkall</a>&nbsp;
+		 <a  onclick="fun1();" href="javascript:void(0)">uncheckall</a></td>
+		 <td></td>
+		 <td></td>
+	 </tr>
 	
 	<tr>
 		<td></td>
 		<td>
-<? echo form_submit('remove','remove selected');?>  
-</td>
-<td></td>
-		<td></td>
+      <? echo form_submit('remove','remove selected');?>  
+      </td>
+     <td></td>
+	 <td></td>
 	</tr>
+	
 	<tr>
-	<td colspan =4>
+	  <td colspan =4>
 	  <?php echo $paginate;?>
 	  </td>
 	  </tr>

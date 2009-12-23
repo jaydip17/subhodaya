@@ -39,7 +39,7 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
 	
 	<link href="<?=base_url();?>assets/css/video.css" rel="stylesheet" type="text/css"/>
 	<link href="<?=base_url();?>assets/css/videomenu.css" rel="stylesheet" type="text/css"/>
-	
+	<link href="<?=base_url();?>assets/css/astrolagy.css" rel="stylesheet" type="text/css"/>
 	
 	
 	

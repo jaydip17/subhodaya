@@ -162,6 +162,7 @@
     function subcat($uriseg)
 	{
 		$this->db->where('parentid',$uriseg);
+		$this->db->limit(4);
 		$query =$this->db->get('gallery_categeory');
 		if(!empty($query->result))
 		print_r($query->result);
@@ -283,13 +284,12 @@
   		$query=$this->db->get_where('gallery_images');
   		return $query->result();
   	}
- 	function getimage1($parentid)
+ 	function getimage1()
 	{
 		$this->db->order_by('id','desc');
 		//$this->db->select('id,title','parentid');
-		$this->db->limit(1);
+		$this->db->limit(4);
 		$array=array(
-			'parentid'	=>	$parentid,
 			'active'	=>	1
 		 );
 		$this->db->where($array);

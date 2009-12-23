@@ -167,7 +167,7 @@ class Bread_crumb{
 				case 'greetings': 
 							$seg2 = 'inner';
 							(isset($segments['heading'])) ? $segments['heading']!='' ? $heading = $segments['heading'] : '' : '';
-							$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$segments['seg3'].'/'.$segments['seg4'],strip_tags($heading));
+							$bread_crum .= '&nbsp;&raquo;&nbsp;';
 							break;
 				case 'gallery': 
 					if($segments['seg2'] != 'inner'){

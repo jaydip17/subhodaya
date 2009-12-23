@@ -44,10 +44,10 @@ class Cinema_Model extends Model {
     		unlink('./assets/cinema/news_img'.$item.'_thumb.jpg');
     	}
 	}
-    function get_cinematype($type=""){
+    function get_cinematype($type="",$active){
    		$this->db->select('*');
    		$this->db->order_by("cinema.insert_date", "desc");
-   		$array=array('type'=>$type,'cinema.active'=>0);
+   		$array=array('type'=>$type,'cinema.active'=>$active);
     	$this->db->where($array);
    		$this->db->limit(8);
 		$this->db->from('cinema_cat');
@@ -142,6 +142,27 @@ class Cinema_Model extends Model {
 		$query=$this->db->get('ratings');
 		$result=$query->result();
 		return $result;
+	}
+	function get_views($id)
+	{
+		$this->db->where('id',$id);
+  		$this->db->select('id, views');
+  		$query=$this->db->get_where('cinema');
+  		$result=$query->result();
+		//print_r($result);
+		 $pre_views=$result['0']->views;
+				 $id=$result['0']->id;
+		$this->insert_views($id,$pre_views);
+	
+	}
+	function insert_views($id,$pre_views)
+	{
+		$this->db->where('id', $id);
+		$views=$pre_views+1;
+		$data=array(
+				'cinema.views'	=>	$views
+			);
+		$this->db->update('cinema', $data);
 	}
 }
 ?>

@@ -109,12 +109,29 @@ function get_special_news()
   function get_home_stories()
     {
     	$this->db->select('id,heading,summary');
-    	$where=array('active'=>'1');
+    	$where=array('active'=>'0');
     	$this->db->where($where);
     	$this->db->limit(1);
     	$this->db->order_by('id','desc');
     	$query=$this->db->get('subhodaya_spec');
     	return $query->result();
     }
+   function most_subho_news()
+   {
+	   	$this->db->order_by('views','desc');
+	   	$this->db->order_by('id','desc');
+	   	$this->db->limit(15);
+	   	$query=$this->db->get('subhodaya_spec');
+	   	return $query->result();
+   }
+   function active_subho_news()
+   {
+   		$this->db->where('active',1);
+   		$this->db->limit(8);
+   		$this->db->order_by('id','desc');
+	   	$query=$this->db->get('subhodaya_spec');
+	   	return $query->result();
+   }
+   
 }
 ?>

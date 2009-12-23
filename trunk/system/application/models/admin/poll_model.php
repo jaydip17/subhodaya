@@ -157,5 +157,21 @@ class Poll_Model extends Model {
 		$count =$this->db->count_all_results();
 		return $count;
 	}
+	function get_allpolls($limit)
+	{
+			if(isset($limit) && $limit>=0 )
+  	   			{
+  	  				$this->db->limit(5,$limit);
+  	    		}
+		$result=$this->db->get('poll');
+		return $result->result();
+	}
+	function get_allcount()
+	{		
+		$this->db->from('poll');
+		$count =$this->db->count_all_results();
+		return $count;
+		
+	}
 }
 ?>

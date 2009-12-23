@@ -20,16 +20,16 @@
 						<?= (isset($middle_block)) ? $middle_block : '' ?>
 						<div id="container-1" align="left">
             				<ul>
-				                <li><a href="<?=base_url()?>tabs"><span><?= (isset($news_rasriyam)) ? $news_rasriyam : '' ?></span></a></li>
-				                <li><a href="<?=base_url()?>tabs"><span><?= (isset($news_jathiyam)) ? $news_jathiyam : '' ?></span></a></li>
-				                <li><a href="<?=base_url()?>tabs"><span><?= (isset($news_antharja)) ? $news_antharja : '' ?></span></a></li>
-								<li><a href="<?=base_url()?>tabs"><span><?= (isset($news_kridalu)) ? $news_kridalu : '' ?></span></a></li>
+				                <li><a href="<?=base_url()?>tabs/rastriya"><span><?= (isset($news_rasriyam)) ? $news_rasriyam : '' ?></span></a></li>
+				                <li><a href="<?=base_url()?>tabs/jathiyam"><span><?= (isset($news_jathiyam)) ? $news_jathiyam : '' ?></span></a></li>
+				                <li><a href="<?=base_url()?>tabs/antharja"><span><?= (isset($news_antharja)) ? $news_antharja : '' ?></span></a></li>
+								<li><a href="<?=base_url()?>tabs/kridalu"><span><?= (isset($news_kridalu)) ? $news_kridalu : '' ?></span></a></li>
             				</ul>
         				</div>
 						<div id="container-2" align="left">
 				            <ul>
-				                <li><a href="<?=base_url()?>tabs"><span><?= (isset($cini_pukarlu)) ? $cini_pukarlu : '' ?></span></a></li>
-				                <li><a href="<?=base_url()?>tabs"><span><?= (isset($cini_vishesm)) ? $cini_vishesm : '' ?></span></a></li>
+				                <li><a href="<?=base_url()?>tabs/cini_pukarlu"><span><?= (isset($cini_pukarlu)) ? $cini_pukarlu : '' ?></span></a></li>
+				                <li><a href="<?=base_url()?>tabs/cini_varthalu"><span><?= (isset($cini_vishesm)) ? $cini_vishesm : '' ?></span></a></li>
 				            </ul>
 				            
 				        </div>
@@ -37,13 +37,13 @@
 				            <ul>
 				                <li><a href="<?=base_url()?>tabs/photo_gallery"><span><?= (isset($photo_gallery)) ? $photo_gallery : '' ?></span></a></li>
 				                <li><a href="<?=base_url()?>tabs/video_home"><span><?= (isset($videos)) ? $videos : '' ?></span></a></li>
-				                <li><a href="<?=base_url()?>tabs"><span><?= (isset($greetings)) ? $greetings : '' ?></span></a></li>
+				                <li><a href="<?=base_url()?>tabs/greetings_home"><span><?= (isset($greetings)) ? $greetings : '' ?></span></a></li>
 				            </ul>
 				        </div>
 						<div id="container-4" align="left">
 				           <ul>
 				                <li><a href="<?=base_url()?>tabs"><span><?= (isset($mahila)) ? $mahila : '' ?></span></a></li>
-				                <li><a href="<?=base_url()?>tabs"><span><?= (isset($sahithi)) ? $sahithi : '' ?></span></a></li>
+				                <li><a href="<?=base_url()?>tabs/sahithi"><span><?= (isset($sahithi)) ? $sahithi : '' ?></span></a></li>
 				          </ul>
 				        </div>	
 					</div>

@@ -6,6 +6,13 @@ class Greeting_Model extends Model {
 		$result=$this->db->get('greeting_cat');
 		return $result->result();
 	}
+	function get_gre_type($id)
+	{
+		$this->db->select('id,gree_cat');
+		$this->db->where('id',$id);
+		$result=$this->db->get('greeting_cat');
+		return $result->result();
+	}
 	function rename($data,$id)
 	{
 		$oldname='assets/greetings/'.$data['upload_data']['file_name'];
@@ -29,11 +36,12 @@ class Greeting_Model extends Model {
 		$details = $this->db->get_where();
     	return $details->result();
     }
-    function get_main_greetings($type){
+    function get_main_greetings($type,$limit){
     	$this->db->select('*');
    		$this->db->order_by("greetings.insert_date", "desc");
-   		$array=array('type'=>$type,'greetings.active'=>1);
+   		$array=array('type'=>$type);
    		$this->db->where($array);
+   		$this->db->limit($limit);
 		$this->db->from('greeting_cat');
 		$this->db->join('greetings','greetings.type=greeting_cat.id');
 		$details = $this->db->get_where();
@@ -92,5 +100,38 @@ class Greeting_Model extends Model {
     	$result = $rs->row();
     	return $result->gree_cat;
     }
+	function get_views($id)
+	{
+		$this->db->where('id',$id);
+  		$this->db->select('id, views');
+  		$query=$this->db->get_where('greetings');
+  		$result=$query->result();
+		//print_r($result);
+		 $pre_views=$result['0']->views;
+				 $id=$result['0']->id;
+		$this->insert_views($id,$pre_views);
+	
+	}
+	function insert_views($id,$pre_views)
+	{
+		$this->db->where('id', $id);
+		$views=$pre_views+1;
+		$data=array(
+				'greetings.views'	=>	$views
+			);
+		$this->db->update('greetings', $data);
+	}
+	function get_active()
+	{
+		$this->db->select('*');
+   		$this->db->order_by("greetings.insert_date", "desc");
+   		$array=array('greetings.active'=>1);
+   		$this->db->where($array);
+   		$this->db->limit(3);
+		$this->db->from('greeting_cat');
+		$this->db->join('greetings','greetings.type=greeting_cat.id');
+		$details = $this->db->get_where();
+    	return $details->result();
+	}
 }
 ?>

@@ -20,7 +20,7 @@ class Cinema extends Controller {
 		$cin_shedule=$this->cinema_lib->cinema_block($this->lang->line('cini_shedul'));
 		$cin_interviews=$this->cinema_lib->cinema_block($this->lang->line('interviews'));
 		$cin_therachatu=$this->cinema_lib->cinema_block($this->lang->line('therachatu'));
-		//print_r($img);
+		$cinemapoll=$this->Poll_Model->get_newspolls($type=5,0);
 		/*$more=$this->News_Model->more_news();
 		$cinema_type1=$this->Cinema_Model->get_cinematype(1);
 		$cinema_type2=$this->Cinema_Model->get_cinematype(2);
@@ -28,7 +28,6 @@ class Cinema extends Controller {
 		$cinema_type4=$this->Cinema_Model->get_cinematype(4);
 		$cinema_type5=$this->Cinema_Model->get_cinematype(5);
 		$cinema_type6=$this->Cinema_Model->get_cinematype(6);
-		$cinemapoll=$this->Poll_Model->get_newspolls($type=5);
 		$yes_poll=$this->Poll_Model->get_yes_newspoll($type=5);
 	$images=array();
 		$gallery_maincategeories = $this->Gallery_Model->get_categeory($active=1);
@@ -91,7 +90,8 @@ class Cinema extends Controller {
 						'cin_shedule'	=>	$cin_shedule,
 						'cin_interviews'=>	$cin_interviews,
 						'cin_therachatu'=>	$cin_therachatu,
-						'cine_news'		=>	$cine_news
+						'cine_news'		=>	$cine_news,
+						'cinemapoll'	=>	$cinemapoll
 						//'bread_crumb'  => $bread_crumb 
 		);
 		$this->load->view('cinema_view',$data);

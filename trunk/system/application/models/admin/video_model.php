@@ -220,18 +220,48 @@ class Video_Model extends Model {
     	$result = $rs->row();
     	return $result->name;
     }
-
-/* function active()
+	function get_videos($type,$limit)
     {
-    	$this->db->select('*');
-    	$array=array('videos.active'=>1);
+    	$this->db->where('video_uploaded',1);
+    	//$this->db->order_by('no_of_views','desc');
+		$this->db->limit($limit);
+		if($type=='latest')
+		{
+			$this->db->order_by('id','desc');
+		}
+		else if($type=='top')
+		{
+			$this->db->order_by('no_of_views','desc');
+		}
+		else if($type=='active')
+		{
+			$this->db->where('active',$type);
+		}
+		else
+		{
+			$this->db->where('video_cat_id',$type);
+		}
+       
+		$query = $this->db->get('videos');
+		//print_r($query);
+		
+		return $query->result();
+		
+    }
+
+function active()
+    {
+    	$array=array('videos.active'=>1,'video_uploaded'=>1);
     	$this->db->where($array);
-		$this->db->from('videos_categeory');
-		$this->db->join('videos', 'videos.categeory= videos_categeory.id');
-		$query = $this->db->get_where();
+    	$this->db->limit(4);
+    	$this->db->order_by('videos.id','desc');
+    	$this->db->order_by('no_of_views','desc');
+    	$this->db->order_by('rating','desc');
+		$query=$this->db->get('videos');
+		//print_r($query->result());
 		return $query->result();
     	
-    }*/
+    }
    
 }
 ?>

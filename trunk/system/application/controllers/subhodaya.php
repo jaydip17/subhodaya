@@ -10,6 +10,7 @@ class Subhodaya extends Controller {
 	}
 	function index(){
 		//for telugu content
+			$more=$this->News_Model->more_news();
 		$cini_vishesm=$this->lang->line('cini_vishesm');
 		$cini_pukarlu=$this->lang->line('cini_pukarlu');
 		//news
@@ -29,7 +30,7 @@ class Subhodaya extends Controller {
 		$sahithi=$this->lang->line('sahithi');
 		//home_blocks
 		$ardikam_block = $this->home->right_block($this->lang->line('news_ardikam'));
-		$Bhavisham_block = $this->home->right_block($this->lang->line('bavishyam'));
+		$Bhavisham_block = $this->home->bavishyam_block($this->lang->line('bavishyam'));
 		$srugaram_block = $this->home->right_block($this->lang->line('srungaram'));
 		$special_block = $this->home->left_block($this->lang->line('subh_spec'));
 		$songs_block = $this->home->songs_block($this->lang->line('sangitham'));
@@ -142,6 +143,7 @@ class Subhodaya extends Controller {
 					'sahithi'			=>	$sahithi,
 		//mahila
 					'mahila'			=>	$mahila,
+						'more'   	 	=>  $more,
 					
 					);
 		$this->load->view('home',$data);

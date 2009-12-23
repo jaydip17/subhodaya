@@ -33,12 +33,12 @@ class Greetings extends Controller {
 			$active=$_POST['active'];
 		}
 		$type=$this->input->post('type');
-		$heading=$this->input->post('name');
-		$summery=$this->input->post('summery');
+		//$heading=$this->input->post('name');
+		//$summery=$this->input->post('summery');
 
 		$data=array('type'    => $type,
-					'name' => $heading,
-					'summery' => $summery,
+					//'name' => $heading,
+					//'summery' => $summery,
 					'active'   => $active
 				
 		);
@@ -76,8 +76,8 @@ class Greetings extends Controller {
 	        $config['source_image'] = $image_path.$filename;
 			$config['create_thumb'] = TRUE;
 			$config['maintain_ratio'] = TRUE;
-			$config['width'] = 143;
-			$config['height'] = 148;
+			$config['width'] = 120;
+			$config['height'] = 94;
 	    	$this->load->library('image_lib');      
 	    	$this->image_lib->initialize($config);
 	    	if(!$this->image_lib->resize())

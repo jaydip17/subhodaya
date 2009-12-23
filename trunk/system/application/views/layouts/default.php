@@ -31,18 +31,20 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
 <?php if(isset($cinemacss)){?>
 	<link href="<?=base_url();?>assets/css/cinema.css" rel="stylesheet" type="text/css" />
 	<?php }?>
-	
     <link  href="<?=base_url();?>assets/css/black.css" rel="stylesheet" type="text/css" />
 	<link id="theme" href="<?=base_url();?>assets/css/blue.css" rel="stylesheet" type="text/css" /> 
+<?php if(isset($gallerycss)){?>
 	<link href="<?=base_url();?>assets/css/gallery.css" rel="stylesheet" type="text/css"/>
-	<!-- for videomenu css -->
-	
-	<link href="<?=base_url();?>assets/css/video.css" rel="stylesheet" type="text/css"/>
-	<link href="<?=base_url();?>assets/css/videomenu.css" rel="stylesheet" type="text/css"/>
-	<link href="<?=base_url();?>assets/css/astrolagy.css" rel="stylesheet" type="text/css"/>
-	
-	
-	
+<?php }?>
+<!-- for more dropdown -->
+
+<link herf="<?=base_url()?>assets/css/gre_css.css" rel="stylesheet" type="text/css"/>
+
+<!-- for more dropdown -->
+<script type="text/javascript" src="<?=base_url()?>assets/java-script/dropdown.js"></script>
+<!-- video and greeting page side menu -->
+<link herf="<?=base_url()?>assets/css/video.css" rel="stylesheet" type="text/css"/>
+<link href="<?=base_url()?>assets/css/videomenu.css" rel="stylehett" type="text/css"/>
 <!-- for tabs js ans css -->
 	<script src="<?=base_url();?>assets/jq.tabs/jquery-1.1.3.1.pack.js" type="text/javascript"></script>
 	<script src="<?=base_url();?>assets/jq.tabs/jquery.history_remote.pack.js" type="text/javascript"></script>
@@ -67,8 +69,6 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
 					   }
 					 else
 					   {
-						 
-						
 					   }
 				}
 				function changeTheme(themename)
@@ -136,6 +136,42 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
                 font-family: "Courier New", Courier, monospace;
             }
         </style> 
+        <style type="text/css">
+a.sample_attach, a.sample_attach:visited, div.sample_attach
+{
+  display: block;
+  width:150px;
+  border:  1px solid #FFF;
+  background: #1E637A;
+  text-decoration: none;
+  font-family: Verdana, Sans-Sherif;
+  font-size: 14px;
+  color:   #FFFFFF;
+}
+
+a.sample_attach, a.sample_attach:visited { border-bottom: none; }
+span#sample_attach_menu_child             { border-bottom: 1px solid #FFFFFF; }
+
+form.sample_attach
+{
+  position: absolute;
+  visibility: hidden;
+
+  border:  1px solid #FFFFFF;
+  padding: 0px 5px 2px 5px;
+
+  background: #FFFFEE;
+}
+
+form.sample_attach
+{
+  font-family: Verdana, Sans-Sherif;
+  font-size: 14px;
+}
+
+input.sample_attach { margin: 1px 0px; }
+
+</style>
 <script src="<?=base_url();?>assets/js/SpryDOMUtils.js"></script>
 <script src="<?=base_url();?>assets/js/tp_unobtrusive.js"></script>
 <script type="text/javascript" src="<?=base_url();?>assets/js/pollLoader.js"></script>
@@ -180,17 +216,31 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
 		</div>
 		<div id="menu">
         	<ul class="solidblockmenu">
-                <li><a href="<?=base_url();?>" class="current">Home</a></li>
-                <li><a href="<?=base_url()?>news" >Varthalu</a></li>
-                <li><a href="<?=base_url()?>cinema">Cinema</a></li>
-                <li><a href="<?=base_url()?>video">video</a></li>
-                <li><a href="<?=base_url()?>gallery">Gallery</a></li>
-                <li><a href="<?=base_url()?>greetings">Greetings</a></li>
-            	<li><a href="<?=base_url()?>mahila">Mahila</a></li>
-                <li><a href="<?=base_url()?>sahithi">Sahithi</a></li>
-                <li><a href="#">Kridalu</a></li>
+                <li><a href="<?=base_url();?>" class="current"><?=$this->lang->line('home');?></a></li>
+                <li><a href="<?=base_url()?>news" ><?=$this->lang->line('news');?></a></li>
+                <li><a href="<?=base_url()?>cinema"><?=$this->lang->line('cinema');?></a></li>
+                <li><a href="<?=base_url()?>video"><?=$this->lang->line('video');?></a></li>
+                <li><a href="<?=base_url()?>gallery"><?=$this->lang->line('gallery');?></a></li>
+                <li><a href="<?=base_url()?>greetings"><?=$this->lang->line('greetings');?></a></li>
+            	<li><a href="<?=base_url()?>mahila"><?=$this->lang->line('mahila');?></a></li>
+                <li><a href="<?=base_url()?>sahithi"><?=$this->lang->line('sahithi');?></a></li>
+                <li><a href="<?=base_url()?>news/details/8"><?=$this->lang->line('news_kridalu');?></a></li>
            </ul>
         	<div id="ch_color">
+        	<div style="width: 80px;float: left;">
+        		<span id="sample_attach_menu_parent" class="sample_attach" style="color: #FFF;"><?=$this->lang->line('more');?> </span>
+				<span id="sample_attach_menu_child" style="font-size: 14px;">
+				<a class="sample_attach" href="<?=base_url()?>special_sub"><?=$this->lang->line('subh_spec');?></a>
+				<a class="sample_attach" href="<?=base_url()?>sex"><?=$this->lang->line('srungaram');?></a>
+				<a class="sample_attach" href=""><?=$this->lang->line('bavishyam');?></a>
+				<a class="sample_attach" href=""><?=$this->lang->line('sangitham');?></a>
+				</span>
+				
+				<script type="text/javascript">
+				at_attach("sample_attach_menu_parent", "sample_attach_menu_child", "hover", "y", "pointer");
+				</script>
+			</div>
+			<div style="float: right;">
               <span style="color:white;">Change color:</span>
               <span><img src="<?=base_url();?>assets/image/1cr.gif"  onclick="changeTheme('blue');" /></span>
               <span><img src="<?=base_url();?>assets/image/2cr.gif"  onclick="changeTheme('yellow');" /></span>
@@ -198,6 +248,7 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
               <span><img src="<?=base_url();?>assets/image/4cr.gif"  onclick="changeTheme('green');" /></span>
               <span><img src="<?=base_url();?>assets/image/5cr.gif"  onclick="changeTheme('red');" /></span>
               <span><img src="<?=base_url();?>assets/image/6cr.gif"  onclick="changeTheme('black');" /></span>
+            </div>
           	</div>
 		</div>
 		<div style="height:25px;background-color:#FDF7D5;margin-bottom:5px;">

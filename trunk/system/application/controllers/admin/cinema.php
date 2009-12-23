@@ -105,14 +105,14 @@ class Cinema extends Controller {
 		  else 
 		  rename('assets/cinema/news_img_main'.$id.'.jpg','assets/cinema/news_img'.$id.'.jpg');	
 		
-		    $height=$aspect_ratio * 100;
+		    $height=$aspect_ratio * 110;
 			$filename = 'news_img'.$id.'.jpg'; 
 			$image_path='assets/cinema/';
 	    	$config1['image_library'] = 'gd2';
 	        $config1['source_image'] = $image_path.$filename;
 			$config1['create_thumb'] = TRUE;
 			$config1['maintain_ratio'] = TRUE;
-			$config1['width'] = 100;
+			$config1['width'] = 140;
 			$config1['height'] =$height;
 			$this->load->library('image_lib');      
 	    	$this->image_lib->initialize($config1);

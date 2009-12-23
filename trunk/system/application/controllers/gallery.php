@@ -8,6 +8,7 @@ class Gallery extends Controller {
 	}
 	function index()
 	{
+		$gallerycss=array();
 		$more=$this->News_Model->more_news();
 		$result=$this->Gallery_Model->get_categeory(0);
 		$details=array();
@@ -58,6 +59,7 @@ class Gallery extends Controller {
 		$bread_crumb = $this->bread_crumb->get_code($segments);
 	
 		$data=array(
+					'gallerycss'	=>	$gallerycss,
 					'more'   		=> $more,
 					'result' 		=> $result,
 					'images' 		=> $images,

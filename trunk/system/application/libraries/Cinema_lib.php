@@ -48,57 +48,72 @@ class Cinema_lib{
 		switch ($heading)
 		{
 			case $this->CI->lang->line('cini_news'):
-				$temp=$this->cine_news();
-				if(!empty($temp))
+				$details=$this->cine_news();
+				if(!empty($details))
 				{
-					$img_link=base_url()."assets/cinema/news_img".$temp[0]->id."_thumb.jpg";
-					$content_link=base_url()."cinema/details/".$temp[0]->type;
-					$cate=$temp[0]->type;
+					$img_link=base_url()."assets/cinema/news_img".$details[0]->id."_thumb.jpg";
+					$content_link=base_url()."cinema/details/".$details[0]->type;
+					$cate=$details[0]->type;
 				}
 				break;
 			case $this->CI->lang->line('cini_pukarlu'):
-				$temp=$this->cine_pukarlu();
-				if(!empty($temp))
+				$details=$this->cine_pukarlu();
+				if(!empty($details))
 				{
-					$img_link=base_url()."assets/cinema/news_img".$temp[0]->id."_thumb.jpg";
-					$content_link=base_url()."cinema/details/".$temp[0]->type;
-					$cate=$temp[0]->type;
+					$img_link=base_url()."assets/cinema/news_img".$details[0]->id."_thumb.jpg";
+					$content_link=base_url()."cinema/details/".$details[0]->type;
+					$cate=$details[0]->type;
 				}
 				break;
 			case $this->CI->lang->line('reviews'):
-				$temp=$this->cine_riviews();
-				if(!empty($temp))
+				$details=$this->cine_riviews();
+				if(!empty($details))
 				{
-					$img_link=base_url()."assets/cinema/news_img".$temp[0]->id."_thumb.jpg";
-					$content_link=base_url()."cinema/details/".$temp[0]->type;
-					$cate=$temp[0]->type;
+					$img_link=base_url()."assets/cinema/news_img".$details[0]->id."_thumb.jpg";
+					$content_link=base_url()."cinema/details/".$details[0]->type;
+					$cate=$details[0]->type;
 				}
+				$i=0;
+				foreach ($details as $row){
+				$rating=$this->get_movie_rating($row->id);
+				if(!empty($rating)){
+					$value=$this->get_rating($rating);
+				}
+				else{
+					$value=0.5;
+				}
+				$details[$i]->rating=$value;
+				$details[$i]->heading=$row->heading;
+				$details[$i]->id=$row->id;
+				$details[$i]->cat_id=$row->type;
+				 $i++;
+		}
 				break;
 			case $this->CI->lang->line('cini_shedul'):
-				$temp=$this->cine_shedul();
-				if(!empty($temp))
+				$details=$this->cine_shedul();
+				if(!empty($details))
 				{
-					$img_link=base_url()."assets/cinema/news_img".$temp[0]->id."_thumb.jpg";
-					$content_link=base_url()."cinema/details/".$temp[0]->type;
-					$cate=$temp[0]->type;
+					$img_link=base_url()."assets/cinema/news_img".$details[0]->id."_thumb.jpg";
+					$content_link=base_url()."cinema/details/".$details[0]->type;
+					$cate=$details[0]->type;
 				}
 				break;
 			case $this->CI->lang->line('interviews'):
-				$temp=$this->cine_interviews();
-				if(!empty($temp))
+				$details=$this->cine_interviews();
+				if(!empty($details))
 				{
-					$img_link=base_url()."assets/cinema/news_img".$temp[0]->id."_thumb.jpg";
-					$content_link=base_url()."cinema/details/".$temp[0]->type;
-					$cate=$temp[0]->type;
+					$img_link=base_url()."assets/cinema/news_img".$details[0]->id."_thumb.jpg";
+					$content_link=base_url()."cinema/details/".$details[0]->type;
+					$cate=$details[0]->type;
 				}
 				break;
 			case $this->CI->lang->line('therachatu'):
-				$temp=$this->cine_therachatu();
-				if(!empty($temp))
+				$details=$this->cine_therachatu();
+				if(!empty($details))
 				{
-					$img_link=base_url()."assets/cinema/news_img".$temp[0]->id."_thumb.jpg";
-					$content_link=base_url()."cinema/details/".$temp[0]->type;
-					$cate=$temp[0]->type;
+					$img_link=base_url()."assets/cinema/news_img".$details[0]->id."_thumb.jpg";
+					$content_link=base_url()."cinema/details/".$details[0]->type;
+					$cate=$details[0]->type;
 					
 				}
 				break;
@@ -107,7 +122,7 @@ class Cinema_lib{
 						'data' 			=> 'somtext',
 						'sub_heading'	=> $heading,
 						'more'			=> $more,
-						'details'		=> $temp,
+						'details'		=> $details,
 						'img_link'		=> $img_link,
 						'content_link'	=> $content_link,
 						'link'			=> $link,
@@ -409,4 +424,43 @@ class Cinema_lib{
 		$details=$this->CI->Sahithi_Model->get_sahithi(8);
 		return $details;
 	}
+	function get_movie_rating($id)
+	{
+		$details=$this->CI->Cinema_Model->reviews_rating($id);
+		return $details;
+	}
+	function get_rating($rating)
+	{
+		$total_votes=$rating[0]->total_votes;
+		$total_value=$rating[0]->total_value;
+		if($total_votes!=0 && $total_value!=0){
+		$rat_value=$total_value/$total_votes;
+		}
+		else{
+			$value=0.5;
+			return $value;
+		}
+		$value=$this->ceil_temp($rat_value);
+		return $value;
+	}
+	function ceil_temp($value)
+   	{
+	   	$temp = explode('.',$value);
+	   	if(isset($temp[1]))
+	   	{
+		   	if($temp[1] < 5)
+		   	{
+		   		$temp = floor($value);
+		   	}
+		   	else if($temp[1] > 5)
+		   	{
+		   		$temp = round($value);
+		   	}
+		   	else 
+		   	 $temp = $value;
+	   	}
+	   	else 
+	   	 $temp = $value;
+	   	 return $temp;
+   }
 }

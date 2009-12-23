@@ -46,6 +46,10 @@ li{
 	height:62px;
 	width:263px;
 }
+#img{
+	border: 1px solid gray;
+	padding: 1px;
+	}
 #menu{
 	background-image:url(../image/img3.gif);
 	background-repeat:repeat-x;

@@ -4,6 +4,7 @@ class Poll extends Controller {
 		parent::Controller();
 		$this->load->model('admin/Poll_Model');
 		$this->load->model('admin/News_Model');
+		$this->lang->load('telugu', 'telugu');
 		$this->load->helper('date');
 	}
 	function index(){
@@ -30,6 +31,7 @@ class Poll extends Controller {
 		//$this->load->view('poll_result',$data);
 		$this->load->view('pre_result.html',$data);
 	}
+
 	
 }
 ?>

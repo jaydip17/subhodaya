@@ -18,7 +18,7 @@
 										<br />
 										<input type="radio" name="sex" value="female" /><?=(isset($yes_no)) ? $yes_no : ''?>
 								</div>
-								<div style="width:100%; height:50px; ">
+								<div style="width:100%; height:40px; ">
 									<div style="float:left; height:46px;margin-left:5px;margin-top:0px; width:100px;font-size:11px;color:#FF0000" align="left">
 										<div style="margin-top:5px">
 										<div id=""><a href="" style="color:#FF0000; text-decoration:none">View Result</a></div>
@@ -31,7 +31,7 @@
 										</a>
 									</div>
 								</div>
-							
+								<div style="height: 15px;text-align: right;font-size: 11px;padding-right: 5px;"><a href="<?=base_url()?>home_poll">More</a></div>
 							</div>
 							
 							<div id="news_window_footer" style="height:9px;width:100%" align="left">

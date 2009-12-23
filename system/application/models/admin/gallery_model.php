@@ -1,6 +1,6 @@
 <?php
- class Gallery_model extends Model {
- 	function Gallery_model()
+ class Gallery_Model extends Model {
+ 	function Gallery_Model()
  	{
  		parent::Model();
  	}
@@ -112,7 +112,7 @@
 	    $config['upload_path'] = $dir;
 		$config['allowed_types'] = 'gif|jpg|png';
 		$config['max_size']	= '1000';
-		$config['max_width']  = '750';
+		$config['max_width']  = '800';
 		$config['max_height']  = '1500';
 
 		$config1['upload_path'] = $dir;
@@ -207,13 +207,10 @@
  		$this->db->delete('gallery_images');
   	}
   	//get categeories for main page
-	function get_categeory($active)
+	function get_categeory()
 	{
-		if($active==1)
-		{
-			$this->db->where('active',1);
-		}
-		$this->db->order_by('update_date','desc');
+		
+		$this->db->order_by('id','desc');
 		$this->db->where('parentid',0);
 		$query=$this->db->get('gallery_categeory');
 		return $query->result();

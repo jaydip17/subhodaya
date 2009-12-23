@@ -16,8 +16,6 @@
 											<li><a href="<?=base_url()?>news/newsdetails/<?=$row->id?>/<?=$row->type?>" style="font-size:12px;margin-top: 5px; "><?=$row->heading?></a></li>
 											<?php endforeach;?>		
 										</ul>		
-										<div id="news_more"><a href="<?=base_url()?>news"><?=(isset($more)) ? $more : ''?></a>	</div>
-										
 									</div>
 							</div>
 							<div id="sub_window_footer">

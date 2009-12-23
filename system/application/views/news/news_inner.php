@@ -124,7 +124,7 @@ display:inline;
 			<div style="padding-top: 8px;float: left;">
 			<div style="height: 30px;padding-top: 4px;"><font id="headings" style="font-size: 18px;font-weight: bold;"><?=(isset($details[0]->heading)) ? $details[0]->heading : ''?></font></div>
 				<div style="float: left;width: 56px;margin-left: 15px;"><img src="<?=base_url()?>assets/image/email.jpg" style="float: left;">Email</div>
-				<div style="float: left;width: 67px;"><img src="<?=base_url()?>assets/image/tweet.jpg" style="float: left;">twitter</div>
+				<div style="float: left;width: 67px;"><a href="http://twitter.com/login" id="tweet_id"><img src="<?=base_url()?>assets/image/tweet.jpg" style="float: left;border: 0px;">twitter</a></div>
 				<div style="float: left;"><img src="<?=base_url()?>assets/image/face_bk.jpg" style="float: left;">Facebook</div>
 			</div>
 			<?php if(isset($rating)){
@@ -138,7 +138,7 @@ display:inline;
 		<?php }}?>
 		</div>
 		<div style="width: 645px;padding-top: 7px;" >
-			<img src="<?=$link?>news_img<?=$details[0]->id?>.jpg" style="float: left;margin: 2px 5px 2px 1px;" border="1px;">
+			<img src="<?=$link?>news_img<?=$details[0]->id?>.jpg" style="float: left;margin: 2px 5px 2px 1px;" id="img">
 			<font id="summery" style="font-size: 14px;line-height: 24px;"><?=(isset($details[0]->description)) ? $details[0]->description : ''?></font>
 		</div>
 		<div style="float: left;width: 183px;">
@@ -149,7 +149,7 @@ display:inline;
 			        <div style="padding-left: 20px;color: #375B71">
 			        	<a href="">Comment</a>&nbsp;&nbsp;&nbsp;|&nbsp;
 			        	<a href="">Email</a>&nbsp;&nbsp;&nbsp;  |&nbsp;
-			        	<a href="">Tweet it</a>&nbsp;&nbsp;&nbsp;  |&nbsp;
+			        	<a href="http://twitter.com/login">Tweet it</a>&nbsp;&nbsp;&nbsp;  |&nbsp;
 			        	<a href="">Share in Facebook</a> 
 			        </div> 
 			</div>
@@ -161,7 +161,7 @@ display:inline;
 			 if($count==1){$count++;continue;}
 			?>
 				<div style="float: left;width:151px;padding-top: 4px;text-align: center;margin: 1px 0px 2px 1px;">
-					<img src="<?=base_url()?>assets/news/news_img<?=$row->id?>_thumb.jpg"/><br>
+					<img src="<?=base_url()?>assets/news/news_img<?=$row->id?>_thumb.jpg" id="img"/><br>
 					<a href=""><?=$row->heading?></a>
 				</div>	
 			<? if($count==3){break;}else{$count++;}endforeach; if($count==0){echo 'No data found';}?>

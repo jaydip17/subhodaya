@@ -96,5 +96,42 @@ function get_special_news()
     	return $result->result();
     	//print_r($result->result());
     }
+    function sex_read_news()
+    {
+    	$this->db->order_by('views','desc');
+	   	$this->db->order_by('id','desc');
+	   	$this->db->limit(15);
+	   	$query=$this->db->get('srungaram');
+	   	return $query->result();
+    }
+    function sex_thaja_vartha()
+    {
+    	$this->db->where('active',1);
+   		$this->db->limit(8);
+   		$this->db->order_by('id','desc');
+	   	$query=$this->db->get('srungaram');
+	   	return $query->result();
+    }
+	function get_views($id)
+	{
+		$this->db->where('id',$id);
+  		$this->db->select('id, views');
+  		$query=$this->db->get_where('srungaram');
+  		$result=$query->result();
+		//print_r($result);
+		 $pre_views=$result['0']->views;
+				 $id=$result['0']->id;
+		$this->insert_views($id,$pre_views);
+	
+	}
+	function insert_views($id,$pre_views)
+	{
+		$this->db->where('id', $id);
+		$views=$pre_views+1;
+		$data=array(
+				'srungaram.views'	=>	$views
+			);
+		$this->db->update('srungaram', $data);
+	}
 }
 ?>

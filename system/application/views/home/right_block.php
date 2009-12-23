@@ -13,7 +13,7 @@
 										<a href="<?=$link?><?=$details[0]->id?>/<?=$cat_id?>" style="color:#228BEE; font-size:12px; text-decoration:none"><?=$details[0]->heading?></a>
 												<div style="color:#000; font-size:12px" align="justify"><?=$details[0]->summary?></div>
 												<div style="color:red; font-size:12px; margin-top:2px; line-height:8px" align="right">
-													<a href="<?=$link?>" style="text-decoration:none;color:red"><?=(isset($eenka)) ? $eenka : ''?></a>
+													<a href="<?=$link?><?=$details[0]->id?>/<?=$cat_id?>" style="text-decoration:none;color:red"><?=(isset($eenka)) ? $eenka : ''?></a>
 												</div>
 										<ul>
 											<? $count=0; foreach($details as $row):
@@ -38,7 +38,7 @@
 										</ul>
 										
 										<div id="news_more">
-											<a href="#" ><?=(isset($more)) ? $more : ''?></a>
+											<a href="<?=(isset($more_link)) ? $more_link : ''?>" ><?=(isset($more)) ? $more : ''?></a>
 											</div>
 									</div>
 								

@@ -5,12 +5,18 @@ class Greetings extends Controller {
 	{
 		parent::Controller();
 		$this->load->model('admin/Flash_model');
+		$this->lang->load('telugu', 'telugu');
 	}
 	function index()
 	{
 		$type=$this->Greeting_Model->get_type();
-		//print_r($type);
-		$greetings1=$this->Greeting_Model->get_main_greetings(1);
+		$newscss=array();
+		$greetings1=$this->Greeting_Model->get_main_greetings($type[8]->id,8);
+		$greetings2=$this->Greeting_Model->get_main_greetings($type[15]->id,8);
+		$greetings3=$this->Greeting_Model->get_main_greetings($type[16]->id,8);
+		$more=$this->News_Model->more_news();
+		//print_r($cat_id);
+		/*$greetings1=$this->Greeting_Model->get_main_greetings(1);
 		$greetings2=$this->Greeting_Model->get_main_greetings(2);
 		$greetings12=$this->Greeting_Model->get_main_greetings(12);
 		$greetings10=$this->Greeting_Model->get_main_greetings(10);
@@ -20,9 +26,9 @@ class Greetings extends Controller {
 		$greetings6=$this->Greeting_Model->get_main_greetings(6);
 		//print_r($greetings9);
 		$greetings7=$this->Greeting_Model->get_main_greetings(7);
-		$more=$this->News_Model->more_news();
+		
 		$tabs=array();
-		$query=$this->Flash_model->flash_greetings();
+		$query=$this->Flash_model->flash_greetings();*/
 		
 		$current_url = current_url();
 		//$navigation = array ($current_url);
@@ -36,7 +42,7 @@ class Greetings extends Controller {
 		); 
 		$bread_crumb = $this->bread_crumb->get_code($segments);
 		
-		$data=array('greetings1' 	=> 	$greetings1,
+		$data=array(/*'greetings1' 	=> 	$greetings1,
 					'greetings2' 	=> 	$greetings2,
 					'greetings12'	=> 	$greetings12,
 					'greetings10'	=> 	$greetings10,
@@ -48,16 +54,25 @@ class Greetings extends Controller {
 					'more'       	=> 	$more,
 					'type'       	=> 	$type,
 					'onload' 		=> 	"display_text_1()",
-					'tabs'			=> $tabs,
 					'query'         => $query,
+					'tabs'			=> $tabs,*/
+					'newscss'		=>	$newscss,
+					'greetings1'	=>	$greetings1,
+					'greetings3'	=>	$greetings3,
+					'greetings2'	=>	$greetings2,
+					'type'			=>	$type,
 					'bread_crumb'   => $bread_crumb
 			);
 		$this->load->view('greetings_content',$data);
   }
   function content()
   {
+  	$newscss=array();
+  	$cat=$this->Greeting_Model->get_type();
   	$more=$this->News_Model->more_news();
   	$type=$this->uri->segment(3,0);
+  	$greet_cat=$this->Greeting_Model->get_gre_type($type);
+  	//$greetings1=$this->Greeting_Model->get_main_greetings($type,8);
   	$greetings=$this->Greeting_Model->get_greetings($type);
   	if(empty($greetings)){
   		redirect(base_url().'greetings');
@@ -94,18 +109,23 @@ class Greetings extends Controller {
 							'home' => $more['2']->matter,
 		); 
 		$bread_crumb = $this->bread_crumb->get_code($segments);
-		
+		//print_r($details);
   	    $data=array('greetings'  	=>  $details,
   					'more'   	 	=>  $more,
   				'pagination'   		=>  $paginate,
-  	    		'bread_crumb'		=>  $bread_crumb
+  	    		'bread_crumb'		=>  $bread_crumb,
+  	    		'type'				=>	$cat,
+  	    		'newscss'		=>	$newscss,
+  	    		'greet_cat'		=>	$greet_cat
   	    );
   	$this->load->view('greetings_view',$data);
   }
   function inner()
   {
+  	
   	$id=$this->uri->segment(3,0);
   	$type=$this->uri->segment(4,0);
+  	$this->Greeting_Model->get_views($id);
   	$cate=$this->db->get_where('greeting_cat',array('id'=>$type));
   	$greetingcate=$cate->result();
   	if(empty($greetingcate)){
@@ -117,6 +137,7 @@ class Greetings extends Controller {
   	}
   	$more=$this->News_Model->more_news();
   	$telegu_typing=array();
+  	
   	//print_r($result);
   	$current_url = current_url();
 		//$navigation = array ($current_url);

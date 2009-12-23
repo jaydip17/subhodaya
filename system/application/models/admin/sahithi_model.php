@@ -136,17 +136,12 @@ class Sahithi_Model extends Model {
 		$query = $this->db->get_where();
 		return $query->result();
     }
-    function active_sahithi($id,$type)
+    function active_sahithi($limit)
     {
-    	if($type=="home")
-    	{
-    		$this->db->select('sahithi.id,heading,summary,cat_id');
-    	}
-    	else {
     	$this->db->select('*');
-    	}
-    	$array=array('sahithi.cat_id'=>$id,'sahithi.active'=>1);
+    	$array=array('sahithi.active'=>1);
     	$this->db->where($array);
+    	$this->db->limit($limit);
 		$this->db->from('sahithi_cat');
 		$this->db->join('sahithi', 'sahithi.cat_id= sahithi_cat.id');
 		$this->db->order_by('sahithi.id','desc');
@@ -194,5 +189,26 @@ class Sahithi_Model extends Model {
 		$query = $this->db->get_where();
 		return $query->result();
     }
+	function get_views($id)
+	{
+		$this->db->where('id',$id);
+  		$this->db->select('id, views');
+  		$query=$this->db->get_where('sahithi');
+  		$result=$query->result();
+		//print_r($result);
+		 $pre_views=$result['0']->views;
+				 $id=$result['0']->id;
+		$this->insert_views($id,$pre_views);
+	
+	}
+	function insert_views($id,$pre_views)
+	{
+		$this->db->where('id', $id);
+		$views=$pre_views+1;
+		$data=array(
+				'sahithi.views'	=>	$views
+			);
+		$this->db->update('sahithi', $data);
+	}
 }
 ?>

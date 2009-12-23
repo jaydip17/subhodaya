@@ -139,8 +139,8 @@ class Videos extends Controller {
         $config3['source_image'] = $dir1.'/'.$filename;
       	$config3['create_thumb'] = TRUE;
 		$config3['maintain_ratio'] = TRUE;
-		$config3['width'] = 87;
-		$config3['height'] =67;
+		$config3['width'] = 102;
+		$config3['height'] =72;
     	
     	$this->load->library('image_lib'); 
     	$this->image_lib->initialize($config3);

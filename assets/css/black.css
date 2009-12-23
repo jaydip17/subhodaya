@@ -19,6 +19,10 @@ body {
 	background-color:#fff; 
 	width:100%;
 }
+#img{
+	border: 1px solid gray;
+	padding: 1px;
+	}
 a{
 color:#228BEE; font-size:12px; text-decoration:none;
 }

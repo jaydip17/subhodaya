@@ -116,7 +116,7 @@ class News_Model extends Model
     	$array=array('news.type'=>$type,'news.active'=>1);
     	$this->db->where($array);
     	$this->db->order_by("insert_date", "desc"); 
-    	$this->db->limit(5);
+    	$this->db->limit(8);
 		$this->db->from('news_types');
 		$this->db->join('news', 'news.type= news_types.id');
 		$query = $this->db->get_where();
@@ -206,6 +206,27 @@ class News_Model extends Model
 		$this->db->limit(15);
 		$result=$this->db->get('news');
 		return $result->result();
+	}
+ 	function get_views($id)
+	{
+		$this->db->where('id',$id);
+  		$this->db->select('id, views');
+  		$query=$this->db->get_where('news');
+  		$result=$query->result();
+		//print_r($result);
+		 $pre_views=$result['0']->views;
+				 $id=$result['0']->id;
+		$this->insert_views($id,$pre_views);
+	
+	}
+	function insert_views($id,$pre_views)
+	{
+		$this->db->where('id', $id);
+		$views=$pre_views+1;
+		$data=array(
+				'news.views'	=>	$views
+			);
+		$this->db->update('news', $data);
 	}
 }
 

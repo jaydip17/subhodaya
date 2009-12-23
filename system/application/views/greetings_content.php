@@ -1,4 +1,4 @@
-<script>
+<!--<script>
 menu[2] = {  // REQUIRED!!  This menu explicitly declares all available options even if they are the same as the defaults
 id:'menu2', //use unique quoted id (quoted) REQUIRED!!
 /////////////////////////////////////
@@ -73,7 +73,7 @@ make_menus();
 </script>
 
 <script language="javascript">
-//<!--
+//
 function detectBrowser()
 {
 var browser = navigator.appName;
@@ -133,47 +133,36 @@ function display(value)
   document.getElementById('flash-content').innerHTML = content;
 }
 
-//-->
+//
 </script> 
-<table width="99%"  border="0" cellpadding="0" cellspacing="0">
-	<tr>
-    	<td  valign="top">
-    	<table width="100%" border="0" cellpadding="0" cellspacing="8">
-   		<tr>
-       	<td valign="top">
-       	<table width="0"  border="0" cellpadding="0" cellspacing="0">
-    		<tr>
-	       		<td  valign="top" width="604" >
-		       		
-	                <table width="100%"  border="0" cellpadding="0" cellspacing="0">
-	                    <tr>
+--><!--
 	                    
 	                     <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="604" height="319">
   <param name="movie" value="<?=base_url();?>assets/greetingd.swf" />
   <param name="quality" value="high" />
   <param name="wmode" value="opaque" />
   <param name="swfversion" value="9.0.45.0" />
-  <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don’t want users to see the prompt. -->
+   This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don’t want users to see the prompt. 
   <param name="expressinstall" value="<?=base_url();?>assets/Scripts/expressInstall.swf" />
-  <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. -->
-  <!--[if !IE]>-->
+   Next object tag is for non-IE browsers. So hide it from IE using IECC. 
+  [if !IE]>
   <object id="sample123" type="application/x-shockwave-flash" data="<?=base_url();?>assets/greetingd.swf" width="604" height="319">
-    <!--<![endif]-->
+    <![endif]
     <param name="quality" value="high" />
     <param name="wmode" value="opaque" />
     <param name="swfversion" value="9.0.45.0" />
     <param name="expressinstall" value="<?=base_url();?>assets/Scripts/expressInstall.swf" />
-    <!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. -->
+     The browser displays the following alternative content for users with Flash Player 6.0 and older. 
     <div>
       <h4>Content on this page requires a newer version of Adobe Flash Player.</h4>
       <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" /></a></p>
     </div>
-    <!--[if !IE]>-->
+    [if !IE]>
   </object>
-  <!--<![endif]-->
+  <![endif]
 </object>
 <script type="text/javascript">
-//<!--
+//
 var browser = navigator.appName;
 if(browser == 'Microsoft Internet Explorer')
 {
@@ -181,7 +170,7 @@ if(browser == 'Microsoft Internet Explorer')
 }
 else
 	swfobject.registerObject("sample123");
-//-->
+//
 </script>
 <div id="flash-content" style="position:absolute; width:604px; top: 425px; color:white; padding:0px 5px 20px 5px; vertical-align:top; left:41px; height: 40px;text-align: left;"> 
 <?=$query['0']->text?>
@@ -189,159 +178,104 @@ else
 <? foreach ($query as $image): ?>
 <div id='flash_<?=$image->id?>' style="display: none;"><?=$image->text?></div>
 <?endforeach; ?>
-					</td></tr>
-	                </table></td></tr>
-	                <tr><td></td></tr>
-         </table>
-         </td>
-    	 </tr>
-     	</table>
-     	</td>
-     	<td width="300" align="center" valign="top" >
-		<div style="background-color: gray;width: 290px;height: 330px;">google ads</div>
-		</td>
-		</tr>
-	<tr>
-		<td align="left">
-			<table>
-				<tr>
-					<td colspan="2" valign="top"><div id="gree_bar" style="padding: 0px 0px 0px 10px;"><?php if(isset($more['23'])){echo $more['23']->matter;}?></div></td>
-				</tr>
-				<tr>
-					<td width="50%" align="left" valign="top">
-						<div id="gree_cen">
-							<div style="height: 140px;width: 290px;"><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings10['0'])) {echo $greetings10['0']->type;}?>"><img src="<?=base_url();?>assets/greetings/gree_img<?php if(isset($greetings10['0'])) {echo $greetings10['0']->id;}?>_thumb.jpg" style="margin: 5px 10px 5px 10px;float: left;text-align: justify;" id="img"></a>
-							<div style="padding: 6px 15px 0px 0px;"><span id="more-news-div"><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings10['0'])) {echo $greetings10['0']->type;}?>"><?php if(isset($greetings10['0'])) {echo $greetings10['0']->name;}?></a></span></div>
-							<span><?php if(isset($greetings10['0'])) {echo $greetings10['0']->summery;}?></span></div>
-							<div style="" id="more-news-div"><span><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings10['0'])) {echo $greetings10['0']->type;}?>"><?php if(isset($more['0'])){ echo $more['0']->matter;}?></a></span></div>
-						</div>
-						<div id="gree_bar1" ><span style="padding: 5px 10px 0px 100px;"><?php if(isset($greetings10['0'])){echo $greetings10['0']->gree_cat;}?></span></div>
-					</td>
-					<td width="50%" align="left" valign="top">
-						<div id="gree_cen">
-							<div style="height: 140px;width: 290px;"><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings9['0'])) {echo $greetings9['0']->type;}?>"><img src="<?=base_url();?>assets/greetings/gree_img<?php if(isset($greetings9['0'])) {echo $greetings9['0']->id;}?>_thumb.jpg" style="margin: 5px 10px 5px 10px;float: left;text-align: justify;" id="img"></a>
-							<div style="padding: 6px 15px 0px 0px;"><span id="more-news-div"><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings9['0'])) {echo $greetings9['0']->type;}?>"><?php if(isset($greetings9['0'])) {echo $greetings9['0']->name;}?></a></span></div>
-							<span><?php if(isset($greetings9['0'])) {echo $greetings9['0']->summery;}?></span></div>
-							<div style="" id="more-news-div"><span><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings9['0'])) {echo $greetings9['0']->type;}?>"><?php if(isset($more['0'])){ echo $more['0']->matter;}?></a></span></div>
-						</div>
-						<div id="gree_bar1" ><span style="padding: 5px 10px 0px 100px;"><?php if(isset($greetings9['0'])){echo $greetings9['0']->gree_cat;}?></span></div>
-					</td>
-				</tr>
-				<tr>
-					<td width="50%" align="left" valign="top">
-						<div id="gree_cen">
-							<div style="height: 140px; width: 290px;"><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings8['0'])) {echo $greetings8['0']->type;}?>"><img src="<?=base_url();?>assets/greetings/gree_img<?php if(isset($greetings8['0'])) {echo $greetings8['0']->id;}?>_thumb.jpg" style="margin: 5px 10px 5px 10px;float: left;text-align: justify;" id="img"></a>
-							<div style="padding: 6px 15px 0px 0px;"><span id="more-news-div"><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings8['0'])) {echo $greetings8['0']->type;}?>"><?php if(isset($greetings8['0'])) {echo $greetings8['0']->name;}?></a></span></div>
-							<?php if(isset($greetings8['0'])) {echo $greetings8['0']->summery;}?></div>
-							<div style="" id="more-news-div"><span><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings8['0'])) {echo $greetings8['0']->type;}?>"><?php if(isset($more['0'])){ echo $more['0']->matter;}?></a></span></div>
-						</div>
-						<div id="gree_bar1" ><span style="padding: 5px 10px 0px 100px;"><?php if(isset($greetings8['0'])){echo $greetings8['0']->gree_cat;}?></span></div>
-					</td>
-					<td width="50%" align="left" valign="top">
-						<div id="gree_cen">
-							<div style="height: 140px; width: 290px;"><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings6['0'])) {echo $greetings6['0']->type;}?>"><img src="<?=base_url();?>assets/greetings/gree_img<?php if(isset($greetings6['0'])) {echo $greetings6['0']->id;}?>_thumb.jpg" style="margin: 5px 10px 5px 10px;float: left;text-align: justify;" id="img"></a>
-							<div style="padding: 6px 15px 0px 0px;"><span id="more-news-div"><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings6['0'])) {echo $greetings6['0']->type;}?>"><?php if(isset($greetings6['0'])) {echo $greetings6['0']->name;}?></a></span></div>
-							<?php if(isset($greetings6['0'])) {echo $greetings6['0']->summery;}?></div>
-							<div style="" id="more-news-div"><span><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings6['0'])) {echo $greetings6['0']->type;}?>"><?php if(isset($more['0'])){ echo $more['0']->matter;}?></a></span></div>
-						</div>
-						<div id="gree_bar1" ><span style="padding: 5px 10px 0px 100px;"><?php if(isset($greetings6['0'])){echo $greetings6['0']->gree_cat;}?></span></div>
-					</td>
-				</tr>
-				<tr>
-					<td width="50%" align="left" valign="top">
-						<div id="gree_cen">
-							<div style="height: 140px; width: 290px;"><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings4['0'])) {echo $greetings4['0']->type;}?>"><img src="<?=base_url();?>assets/greetings/gree_img<?php if(isset($greetings4['0'])) {echo $greetings4['0']->id;}?>_thumb.jpg" style="margin: 5px 10px 5px 10px;float: left;text-align: justify;" id="img"></a>
-							<div style="padding: 6px 15px 0px 0px;"><span id="more-news-div"><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings4['0'])) {echo $greetings4['0']->type;}?>"><?php if(isset($greetings4['0'])) {echo $greetings4['0']->name;}?></a></span></div>
-							<?php if(isset($greetings4['0'])) {echo $greetings4['0']->summery;}?></div>
-							<div style="" id="more-news-div"><span><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings4['0'])) {echo $greetings4['0']->type;}?>"><?php if(isset($more['0'])){ echo $more['0']->matter;}?></a></span></div>
-						</div>
-						<div id="gree_bar1" ><span style="padding: 5px 10px 0px 100px;"><?php if(isset($greetings4['0'])){echo $greetings4['0']->gree_cat;}?></span></div>
-					</td>
-					<td width="50%" align="left" valign="top">
-						<div id="gree_cen">
-							<div style="height: 140px; width: 290px;"><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings7['0'])) {echo $greetings7['0']->type;}?>"><img src="<?=base_url();?>assets/greetings/gree_img<?php if(isset($greetings7['0'])) {echo $greetings7['0']->id;}?>_thumb.jpg" style="margin: 5px 10px 5px 10px;float: left;text-align: justify;" id="img"></a>
-							<div style="padding: 6px 15px 0px 0px;"><span id="more-news-div"><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings7['0'])) {echo $greetings7['0']->type;}?>"><?php if(isset($greetings7['0'])) {echo $greetings7['0']->name;}?></a></span></div>
-							<?php if(isset($greetings7['0'])) {echo $greetings7['0']->summery;}?></div>
-							<div style="" id="more-news-div"><span><a href="<?=base_url();?>greetings/content/<?php if(isset($greetings7['0'])) {echo $greetings7['0']->type;}?>"><?php if(isset($more['0'])){ echo $more['0']->matter;}?></a></span></div>
-						</div>
-						<div id="gree_bar1" ><span style="padding: 5px 10px 0px 100px;"><?php if(isset($greetings7['0'])){echo $greetings7['0']->gree_cat;}?></span></div>
-					</td>
-				</tr>
-				<tr>
-					<td colspan="2"><div id="gree_bar" style="padding: 0px 0px 0px 10px;"></div></td>
-				</tr>
-			</table>
-		</td>
-		<td rowspan="5" align="left" valign="top">
-		<div id="gre_tabs_div">
-		         <div class=" yui-skin-sam" style="width: 299px; border: 1px solid #50BCFC; height: 590px;padding: 2px;" >
-                      	<div id="demo1" class="yui-navset" style="color: #EDF5FF;">
-	    						<ul class="yui-nav">
-							       <li class="selected" style="text-align: center;"><a href="#tab1"><em style="width: 70px;"><?php if(isset($greetings1['0'])){echo $greetings1['0']->gree_cat;}?></em></a></li>
-							        <li style="text-align: center;"><a href="#tab2"><em style="width: 70px;"><span id="telugufont"><?php if(isset($greetings2['0'])){echo $greetings2['0']->gree_cat;}?></span></em></a></li>
-							         <li style="text-align: center;"><a href="#tab2"><em style="width: 70px;"><span id="telugufont"><?php if(isset($greetings12['0'])){echo $greetings12['0']->gree_cat;}?></span></em></a></li>
-	    						</ul>            
-    							<div class="yui-content" style="height: 150px;" >
-							        <div id="tab1"><p>
-							        <?php if(!empty($greetings1)){ $count=1; foreach($greetings1 as $row):?>
-							       	<div style="height:97px;">
-							        	<div style="padding:1px;">
-							        		<a href="<?=base_url();?>greetings/content/<?=$row->type?>"><img src="<?=base_url();?>assets/greetings/gree_img<?=$row->id?>_thumb.jpg" width="80px;" height="87px;" style="float: left;margin:2px 5px 2px 2px;" id="img"></a>
-							        		<font ><a href="<?=base_url();?>greetings/content/<?=$row->type?>"><?=$row->name;?></a></font>
-							        		<div><?=$row->summery;?></div>
-							        	</div>
-							        </div>
-							        <hr>
-							        <?php if($count==5){ break;}else { $count++;}endforeach;}
-							        else{ echo 'No data found';}?>
-							        </p></div>
-							        <div id="tab2"><p>
-							        	<?php if(!empty($greetings2)){ $count=1; foreach($greetings2 as $row):?>
-							       		<div style="height:97px;">
-							        	<div style="padding:1px;">
-							        		<a href="<?=base_url();?>greetings/content/<?=$row->type?>"><img src="<?=base_url();?>assets/greetings/gree_img<?=$row->id?>_thumb.jpg" height="87px;" width="70px" style="float: left;margin:2px 5px 2px 2px;" id="img"></a>
-							        		<font ><a href="<?=base_url();?>greetings/content/<?=$row->type?>"><?=$row->name;?></a></font>
-							        		<div><?=$row->summery;?></div>
-							        	</div>
-							        </div>
-							       <hr>
-							        <?php 
-									if($count==5){ break;}else { $count++;}
-							        endforeach;}
-							        else { echo 'No data found';}?>
-							        </p></div>
-							        <div id="tab3"><p>
-							        <?php if(!empty($greetings12)){ $count=1; foreach($greetings12 as $row):?>
-							       	<div style="height:97px;">
-							        	<div style="padding:1px;">
-							        		<a href="<?=base_url();?>greetings/content/<?=$row->type?>"><img src="<?=base_url();?>assets/greetings/gree_img<?=$row->id?>_thumb.jpg" height="87px;" width="70px" style="float: left;margin:2px 5px 2px 2px;" id="img"></a>
-							        		<font style="text-align: left;"><a href="<?=base_url();?>greetings/inner/<?=$row->type?>"><?=$row->name;?></a></font>
-							        		<div ><?=$row->summery;?></div>
-							        	</div>
-							        </div>
-							       <hr>
-							        <?php 
-									if($count==5){ break;}else { $count++;}
-							        endforeach;}
-							        else {
-							        	echo 'No data found';
-							        }
-							        ?>
-							        	
-							        </p></div>
-    							
-<script>
-(function() {
-    var tabView = new YAHOO.widget.TabView('demo1');
-    YAHOO.log("The example has finished loading; as you interact with it, you'll see log messages appearing here.", "info", "example");
-})();
-</script>
-						</div>
-						</div>
-		</div>
-		</div>
-		</td>
-	</tr>
-	
-</table>
-		
+				-->
+	<div style="width:100%; float:left">
+					<div style="width:144px; height:350px; float:left;">
+					 <div id="greet_menu">
+		<ul>
+		    <li id="categori"></li>
+		    <?php foreach ($type as $cat):?>
+			<li><a href="<?=base_url()?>greetings/content/<?=$cat->id?>"><?=$cat->gree_cat?></a></li>
+			<?php endforeach;?>
+		</ul>
+	</div>
+					</div>
+					 <div   style="float:right; height:100%;"><img src="<?=base_url()?>assets/home_images/ads/mahila_ad1.jpg" width="243" height="194" />
+					   <div   ><img src="<?=base_url()?>assets/home_images/ads/mahila_ad.jpg" width="243" height="487" /></div>
+					   <div style="border:1px #000 solid;"><img src="<?=base_url()?>assets/home_images/ads/mahila_ad1.jpg" width="243" height="268" /></div>
+				      </div>
+					    <div id="main_gree_div">
+						      <div style="width:560px; height:28px;" id="bgsonelis">
+						          <div id="bgslis"><div id="greet_font" style="float: left;width: 50%"><?=$greetings3['0']->gree_cat?></div>
+						          <div id="paginate_div" style="font-size: 12px;"><a href="<?=base_url()?>greetings/content/<?=$greetings3['0']->type?>"><?=$this->lang->line('more');?></a></div></div>
+							  </div>
+						      	<div id="gree_div">
+									<table align="center">
+										<tr>
+										<?php $count=0;
+										foreach ($greetings3 as $row):?>
+										<td align="center">
+											<div id="gree_img_div"><a href="<?=base_url()?>greetings/inner/<?=$row->id?>/<?=$row->type?>"><img src="<?=base_url()?>assets/greetings/gree_img<?=$row->id?>_thumb.jpg" width="118" height="93"/></a>
+												<div id="gree_bottom">
+													<div style="text-align: center;color:#4F00EF ">Views:<?=$row->views?></div>
+													<div style="text-align: center;">
+													<a href="<?=base_url()?>greetings/inner/<?=$row->id?>/<?=$row->type?>"><img src="<?=base_url()?>assets/image/gre_mail.jpg" align="top"/><span>quick Send</span></a></div>
+												</div>
+											</div>
+										</td>
+										<?php $count++;
+										if($count==4){
+											echo '</tr><tr>';
+										}
+										endforeach;
+										?>
+										</tr>
+									</table>
+                         		</div>
+									<div id="bgslis">
+									<div id="greet_font" style="float: left;width: 50%"><?=$greetings2['0']->gree_cat?></div>
+							          <div id="paginate_div" style="font-size: 12px;"><a href="<?=base_url()?>greetings/content/<?=$greetings2['0']->type?>"><?=$this->lang->line('more');?></a></div>
+						          </div>
+									<div id="gree_div">
+									<table align="center">
+										<tr>
+										<?php $count=0;
+										foreach ($greetings2 as $row):?>
+										<td align="center">
+											<div id="gree_img_div"><a href="<?=base_url()?>greetings/inner/<?=$row->id?>/<?=$row->type?>"><img src="<?=base_url()?>assets/greetings/gree_img<?=$row->id?>_thumb.jpg" width="118" height="93"/></a>
+											<div id="gree_bottom">
+													<div style="text-align: center;color:#4F00EF">Views:<?=$row->views?></div>
+													<div style="text-align: center;">
+													<a href="<?=base_url()?>greetings/inner/<?=$row->id?>/<?=$row->type?>"><img src="<?=base_url()?>assets/image/gre_mail.jpg" align="top"/><span>quick Send</span></a></div>
+												</div>
+											</div>
+										</td>
+										<?php $count++;
+										if($count==4){
+											echo '</tr><tr>';
+										}
+										endforeach;
+										?>
+										</tr>
+									</table>
+                         		</div>
+                         		<div id="bgslis">
+									<div id="greet_font" style="float: left;width: 50%"><?=$greetings1['0']->gree_cat?></div>
+							          <div id="paginate_div" style="font-size: 12px;"><a href="<?=base_url()?>greetings/content/<?=$greetings1['0']->type?>"><?=$this->lang->line('more');?></a></div>
+						          </div>
+                         		<div id="gree_div">
+									<table align="center">
+										<tr>
+										<?php $count=0;
+										foreach ($greetings1 as $row):?>
+										<td align="center">
+											<div id="gree_img_div"><a href="<?=base_url()?>greetings/inner/<?=$row->id?>/<?=$row->type?>"><img src="<?=base_url()?>assets/greetings/gree_img<?=$row->id?>_thumb.jpg" width="118" height="93"/></a>
+											<div id="gree_bottom">
+													<div style="text-align: center;color:#4F00EF">Views:<?=$row->views?></div>
+													<div style="text-align: center;">
+													<a href="<?=base_url()?>greetings/inner/<?=$row->id?>/<?=$row->type?>"><img src="<?=base_url()?>assets/image/gre_mail.jpg" align="top"/>
+													<span>quick Send</span></a></div>
+												</div>
+											</div>
+										</td>
+										<?php $count++;
+										if($count==4){
+											echo '</tr><tr>';
+										}
+										endforeach;
+										?>
+										</tr>
+									</table>
+                         		</div>
+			          	</div>
+									</div>

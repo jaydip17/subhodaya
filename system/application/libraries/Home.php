@@ -40,28 +40,84 @@ class Home{
 		//loads necessary libraries
 		$this->CI->lang->load('telugu', 'telugu');
 	}
-	function tabs_block($tab){
-		$image_link='';
-		$details=array();
+	function tabs_block($tab)
+	{
 		$more=$this->CI->lang->line('more');
-			switch ($tab)
-			{
-				case $this->CI->lang->line('mahila'):
-					 $temp	=	$this->get_mahila(0);
-					 $count=0;
-					 foreach ($temp as $item){
-					 	$image_link=base_url().'assets/mahila/';
-					 	$count++;
-					 }
-				case $this->CI->lang->line('sahithi'):
-					$temp=$this->get_mahila(0);
-			}
+		 $link_cate='';
+		switch ($tab)
+		{
+			case $this->CI->lang->line('mahila'):
+				 $temp=$this->get_mahila();
+				 $image_link=base_url().'assets/mahila/news_img'.$temp[0]->id.'_thumb.jpg';
+				 $temp[0]->cat='mahila';
+				 $more_link=base_url().'mahila';
+				 $link=base_url().'mahila/mahiladetails/';
+				break;
+			case $this->CI->lang->line('news_rasriyam'):
+				 $temp=$this->get_ardikam($cat_id=1);
+				 $image_link=base_url().'assets/news/news_img'.$temp[0]->id.'_thumb.jpg';
+				 $temp[0]->cat='news';
+				 $more_link=base_url().'news/details/'.$temp[0]->type;
+				 $link=base_url().'mahila/inner/';
+				 $link_cate=$temp[0]->type;
+				break;
+			case $this->CI->lang->line('news_jathiyam'):
+				 $temp=$this->get_ardikam($cat_id=2);
+				 $image_link=base_url().'assets/news/news_img'.$temp[0]->id.'_thumb.jpg';
+				 $temp[0]->cat='news';
+				 $more_link=base_url().'news/details/'.$temp[0]->type;
+				 $link=base_url().'mahila/inner/';
+				 $link_cate=$temp[0]->type;
+				break;
+			case $this->CI->lang->line('news_antharja'):
+				 $temp=$this->get_ardikam($cat_id=3);
+				 $image_link=base_url().'assets/news/news_img'.$temp[0]->id.'_thumb.jpg';
+				 $temp[0]->cat='news';
+				 $more_link=base_url().'news/details/'.$temp[0]->type;
+				 $link=base_url().'mahila/inner/';
+				 $link_cate=$temp[0]->type;
+				break;
+			case $this->CI->lang->line('news_kridalu'):
+				  $temp=$this->get_ardikam($cat_id=8);
+				  $image_link=base_url().'assets/news/news_img'.$temp[0]->id.'_thumb.jpg';
+				  $temp[0]->cat='news';
+				  $more_link=base_url().'news/details/'.$temp[0]->type;
+				  $link=base_url().'news/inner/';
+				  $link_cate=$temp[0]->type;
+				break;
+			case $this->CI->lang->line('cini_pukarlu'):
+				  $temp=$this->get_movie_reviews($cat_id=2,1);
+				  $image_link=base_url().'assets/cinema/news_img'.$temp[0]->id.'_thumb.jpg';
+				  $temp[0]->cat='cinema';
+				  $more_link=base_url().'cinema/details/'.$temp[0]->type;
+				  $link=base_url().'cinema/inner/';
+				  $link_cate=$temp[0]->type;
+				break;
+			case $this->CI->lang->line('cini_vishesm'):
+				  $temp=$this->get_movie_reviews($cat_id=1,1);
+				  $image_link=base_url().'assets/cinema/news_img'.$temp[0]->id.'_thumb.jpg';
+				  $temp[0]->cat='cinema';
+				  $more_link=base_url().'cinema/details/'.$temp[0]->type;
+				  $link=base_url().'cinema/inner/';
+				  $link_cate=$temp[0]->type;
+				break;
+			case $this->CI->lang->line('sahithi'):
+				 $temp=$this->get_sahithi();
+				 $image_link=base_url().'assets/sahithi/news_img'.$temp[0]->id.'_thumb.jpg';
+				 $temp[0]->cat='sahithi';
+				 $more_link=base_url().'sahithi';
+				 $link=base_url().'sahithi/sahithidetails/';
+				break;
+		}
 				$data = array(
 						'data' 			=> 'somtext',
 						'sub_heading'	=> $tab,
 						'more'			=> $more,
-						'details'		=> $details,
-						'image_link'	=> $image_link
+						'details'		=> $temp,
+						'image_link'	=> $image_link,
+						'more_link'		=> $more_link,
+						'link'			=> $link,
+						'link_cate'		=> $link_cate
 		);
 		return $this->CI->load->view('home/tabs_block',$data,TRUE);
 	}
@@ -73,20 +129,18 @@ class Home{
 		switch ($heading)
 		{
 			case $this->CI->lang->line('news_ardikam'):
-				$temp=$this->get_ardikam();
+				$temp=$this->get_ardikam($cat_id=5);
 				$image_link=base_url().'assets/news/news_img'.$temp[0]->id.'_home_thumb.jpg';
 				$link=base_url().'news/newsdetails/';
 				$cat_id=$temp[0]->type;
+				$more_link=base_url().'news/details/'.$temp[0]->type;
 				break;			
 			case $this->CI->lang->line('srungaram'):
 				$temp=$this->get_srungaram();
 				$image_link=base_url().'assets/srungaram/news_img'.$temp[0]->id.'_home_thumb.jpg';
-				$link=base_url().'news/newsdetails/';
-				break;
-			case $this->CI->lang->line('bavishyam'):
-				$temp=$this->get_srungaram();
-				$image_link=base_url().'assets/srungaram/news_img'.$temp[0]->id.'_home_thumb.jpg';
-				$link=base_url().'news/newsdetails/';
+				$link=base_url().'sex/inner/';
+				$more_link=base_url().'sex';
+				$cat_id=9;
 				break;
 				
 		}
@@ -98,9 +152,18 @@ class Home{
 						'image_link'	=>	$image_link,
 						'details'		=>  $temp,
 						'link'			=>	$link,
-						'cat_id'		=>	$cat_id
+						'cat_id'		=>	$cat_id,
+						'more_link'		=>	$more_link
 		);
 		return $this->CI->load->view('home/right_block',$data,TRUE);
+	}
+	function bavishyam_block($heading)
+	{
+		
+		$data=array(
+		'heading'=>$heading,
+		);
+		return $this->CI->load->view('home/bavishyam_block',$data,TRUE);
 	}
 	function left_block($heading){
 		$image_link='';
@@ -110,17 +173,7 @@ class Home{
 			case $this->CI->lang->line('subh_spec'):
 				 $temp=$this->get_sub_special();
 				 $image_link=base_url().'assets/special_newsimg/news_img'.$temp[0]->id.'_thumb.jpg';
-				 $link=base_url().'news/newsdetails';
-				break;
-			case $this->CI->lang->line('sangitham'):
-				 $temp=$this->get_sub_special();
-				 $image_link=base_url().'assets/special_newsimg/news_img'.$temp[0]->id.'_thumb.jpg';
-				 $link=base_url().'news/newsdetails';
-				break;
-			case $this->CI->lang->line('reviews'):
-				 $temp=$this->get_sub_special();
-				 $image_link=base_url().'assets/special_newsimg/news_img'.$temp[0]->id.'_thumb.jpg';
-				 $link=base_url().'news/newsdetails/';
+				 $link=base_url().'special_sub/inner/'.$temp[0]->id.'/0';
 				break;
 		}
 				$data = array(
@@ -134,22 +187,21 @@ class Home{
 		);
 		return $this->CI->load->view('home/left_block',$data,TRUE);
 	}
-	function songs_block()
+	function songs_block($heading)
 	{
 		$more=$this->CI->lang->line('more');
-		$heading=$this->CI->lang->line('sangitham');
 		$data=array(
 				'more'		=>	$more,
 				'heading'	=>	$heading
 		);
 		return $this->CI->load->view('home/songs_block',$data,TRUE);
 	}
-	function reviews_block()
+	function reviews_block($heading)
 	{
+		$cat_id=3;
 		$details=array();
 		$more=$this->CI->lang->line('more');
-		$heading=$this->CI->lang->line('reviews');
-		$temp=$this->get_movie_reviews();
+		$temp=$this->get_movie_reviews($cat_id,0);
 		
 		$i=0;
 		foreach ($temp as $row){
@@ -206,33 +258,49 @@ class Home{
 		);
 		return $this->CI->load->view('home/home_poll',$data,TRUE);
 	}
-	function photo_gallery($heading){
+	function photo_gallery($heading)
+	{
+		$temp=$this->get_gallry();
 				$data = array(
 						'data' => 'somtext',
 						'sub_heading'	=> $heading,
+						'details'		=> $temp
 		);
 		return $this->CI->load->view('home/photo_gallery',$data,TRUE);
 	}
-	function video_block($heading){
+	function video_block($heading)
+	{
+		$temp=$this->get_home_videos();
 				$data = array(
-						'data' => 'somtext',
+						'data' 			=> 'somtext',
 						'sub_heading'	=> $heading,
+						'details'		=> $temp
 		);
 		return $this->CI->load->view('home/video_block',$data,TRUE);
 	}
+	function greeting_block($heading)
+	{
+		$temp=$this->get_home_greetings();
+				$data = array(
+						'data' 			=> 'somtext',
+						'sub_heading'	=> $heading,
+						'details'		=>	$temp
+		);
+		return $this->CI->load->view('home/greeting_block',$data,TRUE);
+	}
 	function get_mahila()
 	{
-		$details=$this->CI->Mahila_Model->active_mahila(0);
+		$details=$this->CI->Mahila_Model->active_mahila(8);
 		return $details;
 	}
 	function get_sahithi()
 	{
-		$details=$this->CI->Sahithi_Model->active_mahila(0);
+		$details=$this->CI->Sahithi_Model->active_sahithi(8);
 		return $details;
 	}
-	function get_ardikam()
+	function get_ardikam($cat_id)
 	{
-		$details=$this->CI->News_Model->active_news(5);
+		$details=$this->CI->News_Model->active_news($cat_id);
 		return $details;
 	}
 	function get_sub_special()
@@ -255,9 +323,9 @@ class Home{
 		$details=$this->CI->News_Model->all_active_news(0);
 		return $details;
 	}
-	function get_movie_reviews()
+	function get_movie_reviews($cat_id,$active)
 	{
-		$details=$this->CI->Cinema_Model->get_cinematype(3);
+		$details=$this->CI->Cinema_Model->get_cinematype($cat_id,$active);
 		return $details;
 		
 	}
@@ -300,5 +368,44 @@ class Home{
    	 $temp = $value;
    	 return $temp;
    } 
-	
+   function get_home_greetings()
+   {
+   		$details=$this->CI->Greeting_Model->get_active();
+   		return $details;
+   }
+   function get_home_videos()
+   {
+   		$details=$this->CI->Video_Model->active();
+   		return $details;
+   }
+   function get_gallry(){
+		$gallery_maincategeories = $this->CI->Gallery_Model->get_categeory();
+
+		
+		if(!empty($gallery_maincategeories))//if atleast one main categeory exists..
+		{
+			
+		  foreach($gallery_maincategeories as $item)
+		  {
+			$subcategeories[$item->id]=$this->CI->Gallery_Model->subcat($item->id);
+		  }
+		 	$count = 1;
+		 	
+	       foreach($subcategeories as $item)
+	       {  
+	       	$eachone=$item->result();
+	    	if(!empty($eachone))
+	    	{
+	    		foreach ($eachone as $row)
+	    		{
+	 				$images[$row->id]=$this->CI->Gallery_Model->getimage1($row->id);
+	    		}
+	    	}
+	    	if($count>=3)
+	 				break;
+	    	$count++;
+		   }
+	    }
+	    print_r($images);
+   }
 }

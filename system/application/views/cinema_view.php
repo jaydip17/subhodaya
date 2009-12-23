@@ -125,13 +125,15 @@ else
 	<div style="width:100%; height:100%;">
 	<div style="float:right; width:230px; height:100%; border-left:0px solid #b3d3e2; padding-top:5px;text-align: left;">
 		<div style="height: 218px;width: 212px;">
-			<span>mee abhipram</span>
-			<div>cinema poll question</div>
+			<span style="font-size: 16px;"><?=$this->lang->line('homepoll')?></span>
+			<div style="padding:10px 0px 7px 10px;font-size: 14px;color: #0066C9;line-height: 25px;"><?=$cinemapoll[0]->question?></div>
 			<form>
-			<div><input type="radio" name="yes"/> YES</div>
-			<div><input type="radio" name="yes"/> YES</div>
-			<div><input type="radio" name="yes"/> YES</div>
+			<div style="padding:1px 0px 2px 35px;font-size: 12px;"><input type="radio" name="yes"/><?=$this->lang->line('yes')?></div>
+			<div style="padding:1px 0px 2px 35px;font-size: 12px;"><input type="radio" name="yes"/><?=$this->lang->line('no')?></div>
+			<div style="padding:1px 0px 2px 35px;font-size: 12px;"><input type="radio" name="yes"/><?=$this->lang->line('yes_no')?></div>
+			<div style="padding-left: 10px;"><input type="submit" name="vote" value="Vote"/></div>
 			</form>
+			<div style="text-align: right;"><a href="<?=base_url()?>poll/allpolls"><?=$this->lang->line('other_poll')?></a></div>
 		</div>
 		<div><img src="<?=base_url()?>assets/home_images/ads/ads.jpg" width="204" height="531" /></div>
 	</div>

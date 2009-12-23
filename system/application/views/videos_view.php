@@ -34,10 +34,10 @@
 						      <div style="width:560px; height:50px;" id="bgslis">
 					          <div style=" height:50px;" id="tvshows">TV Shows</div>
 							  <div style="width:385px; height:44px; background-color:#f4f4f4; float:left;" id="bgcolor">
-							    <div style="float:left;"><img src="<?=base_url();?>assets/gallery/left.gif" /></div>
+							    <div style="float:left;"><img src="<?=base_url();?>assets/image/left.gif" /></div>
 									
-									<div style="float:right;"><img src="<?=base_url();?>assets/gallery/right.gif" /></div>
-							        <div style="float:left;"><img src="<?=base_url();?>assets/gallery/etv.png" /><img src="<?=base_url();?>assets/gallery/ctv.png"  border="0px"/><img src="<?=base_url();?>assets/gallery/gemini.png" /><img src="<?=base_url();?>assets/gallery/maa.png" /><img src="<?=base_url();?>assets/gallery/inews.png" /><img src="<?=base_url();?>assets/gallery/vissa.png" /><img src="<?=base_url();?>assets/gallery/ztelugu.png" /></div>
+									<div style="float:right;"><img src="<?=base_url();?>assets/image/right.gif" /></div>
+							        <div style="float:left;"><img src="<?=base_url();?>assets/image/etv.png" border="0px"/><img src="<?=base_url();?>assets/image/ctv.png"  border="0px"/><img src="<?=base_url();?>assets/image/gemini.png" /><img src="<?=base_url();?>assets/image/maa.png" /><img src="<?=base_url();?>assets/image/inews.png" /><img src="<?=base_url();?>assets/image/vissa.png" /><img src="<?=base_url();?>assets/image/ztelugu.png" /></div>
 							  </div>
 							  </div>
 							                

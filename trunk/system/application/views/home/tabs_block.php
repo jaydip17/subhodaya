@@ -7,7 +7,7 @@
 									<?php }?>
 										<ul style="margin:0px; padding:0px 0px 0px 10px;">
 										<?php foreach ($details as $row):?>
-											<li style="color:#228BEE;" >
+											<li style="color:#228BEE;line-height: 19px;" >
 												<a href="<?=$link?><?=$row->id?>/<?php if(!empty($link_cate)){echo $link_cate;}else{echo $row->cat_id;}?>" style="color:#228BEE; font-size:12px; text-decoration:none">
 												<?=$row->heading?>
 												</a>

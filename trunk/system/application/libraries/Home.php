@@ -378,34 +378,9 @@ class Home{
    		$details=$this->CI->Video_Model->active();
    		return $details;
    }
-   function get_gallry(){
-		$gallery_maincategeories = $this->CI->Gallery_Model->get_categeory();
-
-		
-		if(!empty($gallery_maincategeories))//if atleast one main categeory exists..
-		{
-			
-		  foreach($gallery_maincategeories as $item)
-		  {
-			$subcategeories[$item->id]=$this->CI->Gallery_Model->subcat($item->id);
-		  }
-		 	$count = 1;
-		 	
-	       foreach($subcategeories as $item)
-	       {  
-	       	$eachone=$item->result();
-	    	if(!empty($eachone))
-	    	{
-	    		foreach ($eachone as $row)
-	    		{
-	 				$images[$row->id]=$this->CI->Gallery_Model->getimage1($row->id);
-	    		}
-	    	}
-	    	if($count>=3)
-	 				break;
-	    	$count++;
-		   }
-	    }
-	    print_r($images);
+   function get_gallry()
+   {
+		$details=$this->CI->Gallery_Model->getimage1();
+		return $details;
    }
 }

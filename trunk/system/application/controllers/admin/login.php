@@ -39,7 +39,7 @@ class Login extends Controller {
 				);
 				
 			}
-			$this->load->view('admin/home',$data);
+			$this->load->view('admin/admin_login',$data);
 	}
 	function logout()
 	{

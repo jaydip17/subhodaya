@@ -4,15 +4,13 @@ class Video extends Controller {
 	function video()
 	{
 		parent::Controller();
-		$this->load->model("video_Model");
-		
 	}
 	function index(){
 		
 		
 		//show_error('message');
 		
-		$more=$this->video_Model->more_video();
+		/*$more=$this->video_Model->more_video();
 		 if($this->uri->segment(3)!=0)
 	    {
 	      $videoid = $this->uri->segment(3);
@@ -20,8 +18,9 @@ class Video extends Controller {
 	       else {
 	    //for latest videoid
 	    $result_videoid=$this->video_Model->get_videos('active',1);
-	    $video_result=$result_videoid->result();
-	    $videoid=$video_result['0']->id;
+	   // print_r($result_videoid);
+	    //$video_result=$result_videoid->result();
+	    $videoid=$result_videoid['0']->id;
 	    //for latest videoid
 	     }
 	    $this->video_Model->increase_viewcount($videoid);
@@ -95,9 +94,9 @@ class Video extends Controller {
 	    			'bread_crumb'	=> $bread_crumb
 	                 
           
-        );
+        );*/
           
-	   $this->load->view('videos_view',$data);
+	   $this->load->view('videos_view');
 	  
 	  
 	    

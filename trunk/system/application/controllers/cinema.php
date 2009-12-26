@@ -4,10 +4,6 @@ class Cinema extends Controller {
 	function Cinema()
 	{
 		parent::Controller();
-		$this->load->model('admin/Flash_model');
-		$this->load->library('Cinema_lib', 'cinema_lib');
-		$this->load->library('News_lib', 'news_lib');
-		$this->lang->load('telugu', 'telugu');
 	}
 	function index()
 	{

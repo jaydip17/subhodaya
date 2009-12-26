@@ -1,7 +1,7 @@
 	<div style="width:100%; height:900px; float:left">
 					<div style="width:144px; height:350px; float:left; border:0px solid #979797;">
-					<div id="greet_menu">
-		<ul>
+					<div id="greet_menu" >
+		<ul style="list-style: none;padding: 0px;margin: 0px;">
 		    <li id="categori"></li>
 		    <?php foreach ($type as $cat):?>
 			<li><a href="<?=base_url()?>greetings/content/<?=$cat->id?>"><?=$cat->gree_cat?></a></li>

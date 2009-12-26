@@ -4,9 +4,6 @@ class News extends Controller {
 	function News()
 	{
 		parent::Controller();
-		$this->load->library('Home', 'home');
-		$this->load->library('News_lib', 'news_lib');
-		$this->lang->load('telugu', 'telugu');
 	}
 	function index()
 	{

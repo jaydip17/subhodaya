@@ -48,7 +48,7 @@ class Cinema_lib{
 		switch ($heading)
 		{
 			case $this->CI->lang->line('cini_news'):
-				$details=$this->cine_news();
+				$details=$this->cine_news(1);
 				if(!empty($details))
 				{
 					$img_link=base_url()."assets/cinema/news_img".$details[0]->id."_thumb.jpg";
@@ -57,7 +57,7 @@ class Cinema_lib{
 				}
 				break;
 			case $this->CI->lang->line('cini_pukarlu'):
-				$details=$this->cine_pukarlu();
+				$details=$this->cine_news(2);
 				if(!empty($details))
 				{
 					$img_link=base_url()."assets/cinema/news_img".$details[0]->id."_thumb.jpg";
@@ -66,7 +66,7 @@ class Cinema_lib{
 				}
 				break;
 			case $this->CI->lang->line('reviews'):
-				$details=$this->cine_riviews();
+				$details=$this->cine_news(3);
 				if(!empty($details))
 				{
 					$img_link=base_url()."assets/cinema/news_img".$details[0]->id."_thumb.jpg";
@@ -90,7 +90,7 @@ class Cinema_lib{
 		}
 				break;
 			case $this->CI->lang->line('cini_shedul'):
-				$details=$this->cine_shedul();
+				$details=$this->cine_news(4);
 				if(!empty($details))
 				{
 					$img_link=base_url()."assets/cinema/news_img".$details[0]->id."_thumb.jpg";
@@ -99,7 +99,7 @@ class Cinema_lib{
 				}
 				break;
 			case $this->CI->lang->line('interviews'):
-				$details=$this->cine_interviews();
+				$details=$this->cine_news(5);
 				if(!empty($details))
 				{
 					$img_link=base_url()."assets/cinema/news_img".$details[0]->id."_thumb.jpg";
@@ -108,7 +108,7 @@ class Cinema_lib{
 				}
 				break;
 			case $this->CI->lang->line('therachatu'):
-				$details=$this->cine_therachatu();
+				$details=$this->cine_news(6);
 				if(!empty($details))
 				{
 					$img_link=base_url()."assets/cinema/news_img".$details[0]->id."_thumb.jpg";
@@ -312,34 +312,9 @@ class Cinema_lib{
 	}
 	
 // cinema pages
-	function cine_news()
+	function cine_news($cat_id)
 	{
-		$details=$this->CI->Cinema_Model->get_cinematype(1);
-		return $details;
-	}
-	function cine_pukarlu()
-	{
-		$details=$this->CI->Cinema_Model->get_cinematype(2);
-		return $details;
-	}
-	function cine_riviews()
-	{
-		$details=$this->CI->Cinema_Model->get_cinematype(3);
-		return $details;
-	}
-	function cine_shedul()
-	{
-		$details=$this->CI->Cinema_Model->get_cinematype(4);
-		return $details;
-	}
-	function cine_interviews()
-	{
-		$details=$this->CI->Cinema_Model->get_cinematype(5);
-		return $details;
-	}
-	function cine_therachatu()
-	{
-		$details=$this->CI->Cinema_Model->get_cinematype(6);
+		$details=$this->CI->Cinema_Model->get_cinematype($cat_id,0);
 		return $details;
 	}
 // mahila pages

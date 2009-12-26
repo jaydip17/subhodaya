@@ -39,7 +39,7 @@
 |	$autoload['libraries'] = array('database', 'session', 'xmlrpc');
 */
 
-$autoload['libraries'] = array('database', 'session','bread_crumb');
+$autoload['libraries'] = array('database', 'session','bread_crumb','home','news_lib','cinema_lib');
 
 
 /*
@@ -51,7 +51,7 @@ $autoload['libraries'] = array('database', 'session','bread_crumb');
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('url', 'file','form','date','directory');
+$autoload['helper'] = array('url', 'file','form','date','directory','language');
 
 
 /*
@@ -95,7 +95,7 @@ $autoload['config'] = array('ratings');
 |
 */
 
-$autoload['language'] = array();
+$autoload['language'] = array('telugu');
 
 
 /*
@@ -119,6 +119,7 @@ $autoload['model'] = array('admin/Login_Model',
 							'admin/Srungaram_Model',
 							'admin/Subho_Model',
 							'admin/Video_Model',
+							'admin/Flash_model'
                            	);
 
 

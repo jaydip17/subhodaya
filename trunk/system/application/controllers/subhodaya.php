@@ -1,12 +1,9 @@
 <?php
 class Subhodaya extends Controller {
 	var $layout = 'default'; 
-	function Subhodaya(){
+	function Subhodaya()
+	{
 		parent::Controller();
-		$this->load->library('Home', 'home');
-		$this->lang->load('telugu', 'telugu');
-		$this->load->helper(array('form', 'url','language'));
-				//$this->load->language('form_validation_lang');
 	}
 	function index(){
 		//for telugu content

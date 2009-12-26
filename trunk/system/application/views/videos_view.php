@@ -1,6 +1,3 @@
-
-	
-		
 			<div style="width:963px; background-color:#fff;border:0px dotted #000">
 				<div id="header" style="border:1px solid #ccc; margin-bottom:0px;float:left;background-color:#fff; width:100%">
 					
@@ -41,7 +38,7 @@
 							  </div>
 							  </div>
 							                
-							        <div style="float:right; width:560px; text-align:right; margin-top:20px;margin-right:20px;"> <img src="<?=base_url();?>assets/image/small.png" style="padding-bottom:1px;"/><!--<?echo $paginate; ?>-->Preview Next <img src="<?=base_url();?>assets/image/small1.png" style="padding-bottom:1px;" /></div>
+							        <div style="float:right; width:560px; text-align:right; margin-top:20px;margin-right:20px;"> <img src="<?=base_url();?>assets/image/small.png" style="padding-bottom:1px;"/><?echo $paginate; ?>Preview Next <img src="<?=base_url();?>assets/image/small1.png" style="padding-bottom:1px;" /></div>
 									     
 									<div style="float:left; width:560px; height:93px; margin-top:20px;">
 									          
@@ -64,9 +61,9 @@
                                        $i++;  }?>
                                        
 			                         
-									  <!--<div id="vi_d"><span id="vi_div">4rf5tg6y</span><br /><div id="video_img"><img src="<?=base_url();?>assets/image/buttion.png"/></div><div id="video_time">00:03</div><img src="<?=base_url();?>assets/gallery/im1.jpg" id="img2" height="88" width="126"/><br /><span id="vi_div">hbdvhv</span></div>
 									  <div id="vi_d"><span id="vi_div">4rf5tg6y</span><br /><div id="video_img"><img src="<?=base_url();?>assets/image/buttion.png"/></div><div id="video_time">00:03</div><img src="<?=base_url();?>assets/gallery/im1.jpg" id="img2" height="88" width="126"/><br /><span id="vi_div">hbdvhv</span></div>
-									  <div id="vi_d"><span id="vi_div">4rf5tg6y</span><br /><div id="video_img"><img src="<?=base_url();?>assets/image/buttion.png"/></div><div id="video_time">00:03</div><img src="<?=base_url();?>assets/gallery/im1.jpg" id="img2" height="88" width="126"/><br /><span id="vi_div">hbdvhv</span></div>-->
+									  <div id="vi_d"><span id="vi_div">4rf5tg6y</span><br /><div id="video_img"><img src="<?=base_url();?>assets/image/buttion.png"/></div><div id="video_time">00:03</div><img src="<?=base_url();?>assets/gallery/im1.jpg" id="img2" height="88" width="126"/><br /><span id="vi_div">hbdvhv</span></div>
+									  <div id="vi_d"><span id="vi_div">4rf5tg6y</span><br /><div id="video_img"><img src="<?=base_url();?>assets/image/buttion.png"/></div><div id="video_time">00:03</div><img src="<?=base_url();?>assets/gallery/im1.jpg" id="img2" height="88" width="126"/><br /><span id="vi_div">hbdvhv</span></div>
 									 
 									 <div style="float:left;"></div>
 							            <?}?>
@@ -74,13 +71,13 @@
 									
 									
 									 
-									<!-- <div style="float:left; width:560px; height:93px; margin-top:60px;">
+									 <div style="float:left; width:560px; height:93px; margin-top:60px;">
 									<div id="vi_d"><span id="vi_div">4rf5tg6y</span><br /><div id="video_img"><img src="<?=base_url();?>assets/image/buttion.png"/></div><div id="video_time">00:03</div><img src="<?=base_url();?>assets/gallery/im1.jpg" id="img2" height="88" width="126"/><br /><span id="vi_div">hbdvhv</span></div>
 									<div id="vi_d"><span id="vi_div">4rf5tg6y</span><br /><div id="video_img"><img src="<?=base_url();?>assets/image/buttion.png"/></div><div id="video_time">00:03</div><img src="<?=base_url();?>assets/gallery/im1.jpg" id="img2" height="88" width="126"/><br /><span id="vi_div">hbdvhv</span></div>
 									<div id="vi_d"><span id="vi_div">4rf5tg6y</span><br /><div id="video_img"><img src="<?=base_url();?>assets/image/buttion.png"/></div><div id="video_time">00:03</div><img src="<?=base_url();?>assets/gallery/im1.jpg" id="img2" height="88" width="126"/><br /><span id="vi_div">hbdvhv</span></div>
 									<div id="vi_d"><span id="vi_div">4rf5tg6y</span><br /><div id="video_img"><img src="<?=base_url();?>assets/image/buttion.png"/></div><div id="video_time">00:03</div><img src="<?=base_url();?>assets/gallery/im1.jpg" id="img2" height="88" width="126"/><br /><span id="vi_div">hbdvhv</span></div>
 									<div style="float:left;"></div>
-							        </div>-->
+							        </div>
 									
 									
 						
@@ -90,10 +87,3 @@
 									
 							</div>
 					</div>
-					
-					
-					
-				
-				
-		
-	

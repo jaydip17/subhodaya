@@ -344,7 +344,7 @@ function more_video(){
  function getvideoname($id)
 	{
 		$this->db->where('id',$id);
-		$this->db->select('name');
+		$this->db->select('name,no_of_views,rating');
 		$query = $this->db->get('videos');
 		return $query->result();
 		

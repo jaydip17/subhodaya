@@ -1,6 +1,3 @@
-
-	
-		
 			<div style="width:963px; background-color:#fff;border:0px dotted #000">
 				<div id="header" style="border:1px solid #ccc; margin-bottom:0px;float:left;background-color:#fff; width:100%">
 					

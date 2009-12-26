@@ -219,7 +219,7 @@ input.sample_attach { margin: 1px 0px; }
                 <li><a href="<?=base_url();?>" class="current"><?=$this->lang->line('home');?></a></li>
                 <li><a href="<?=base_url()?>news" ><?=$this->lang->line('news');?></a></li>
                 <li><a href="<?=base_url()?>cinema"><?=$this->lang->line('cinema');?></a></li>
-                <li><a href="<?=base_url()?>video"><?=$this->lang->line('video');?></a></li>
+                <li><a href="<?=base_url()?>videos"><?=$this->lang->line('video');?></a></li>
                 <li><a href="<?=base_url()?>gallery"><?=$this->lang->line('gallery');?></a></li>
                 <li><a href="<?=base_url()?>greetings"><?=$this->lang->line('greetings');?></a></li>
             	<li><a href="<?=base_url()?>mahila"><?=$this->lang->line('mahila');?></a></li>

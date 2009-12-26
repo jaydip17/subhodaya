@@ -1,11 +1,14 @@
 <?php
-class Videos extends Controller {
+class Videos extends Controller 
+{
 	var $layout='admin';
-	function Videos(){
+	function Videos()
+	{
 		parent::Controller();
 		$this->load->model('admin/Video_Model');
 	}
-	function index(){
+	function index()
+	{
 		
 	    $catid =$this->uri->segment(5);
 		$id=$this->uri->segment(4);

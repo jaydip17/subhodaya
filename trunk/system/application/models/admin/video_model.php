@@ -1,17 +1,20 @@
 <?php
-class Video_Model extends Model {
+class Video_Model extends Model
+ {
 	 function addcategeory()
 	 {	
 		$this->db->insert('videos_categeory',array('name'=>$_POST['name']));
 	 }
 	
-  	function getvideocategeories(){
+  	function getvideocategeories()
+	{
   		
 		$query=$this->db->get('videos_categeory');
 		return $query->result();
 	}
 	
-	function addvideo(){
+	function addvideo()
+	{
 		
 		$name=$this->input->post('name');
 		$time=$this->input->post('time');

@@ -17,7 +17,7 @@
 											<div id="">
 											<form action="">
 												<select name="cars">
-													<option value="volvo">Me rasi palam</option>
+													<option value="volvo"><?=$this->lang->line('rasi_palam');?></option>
 													<option value="saab">Saab</option>
 													<option value="fiat">Fiat</option>
 													<option value="audi">Audi</option>

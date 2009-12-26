@@ -12,6 +12,7 @@ $lang['day']								=	"దినము";
 $lang['week']								=	"వారము";
 $lang['month']								=	"మాసము ";
 $lang['year']								=	"సంవస్తారం";
+$lang['rasi_palam']							=	"మీ రాసి పలం";
 //for news
 $lang['news']								=	"వార్తలు";
 $lang['news_ardikam'] 			    		= 	"ఆర్దికం";

@@ -232,7 +232,7 @@ input.sample_attach { margin: 1px 0px; }
 				<span id="sample_attach_menu_child" style="font-size: 14px;">
 				<a class="sample_attach" href="<?=base_url()?>special_sub"><?=$this->lang->line('subh_spec');?></a>
 				<a class="sample_attach" href="<?=base_url()?>sex"><?=$this->lang->line('srungaram');?></a>
-				<a class="sample_attach" href=""><?=$this->lang->line('bavishyam');?></a>
+				<a class="sample_attach" href="<?=base_url()?>astrolagy"><?=$this->lang->line('bavishyam');?></a>
 				<a class="sample_attach" href=""><?=$this->lang->line('sangitham');?></a>
 				</span>
 				

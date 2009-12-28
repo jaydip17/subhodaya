@@ -1,5 +1,5 @@
 <?php
-class Home extends Controller {
+class Adminhome extends Controller {
 	
 	var $layout = 'admin';
 	

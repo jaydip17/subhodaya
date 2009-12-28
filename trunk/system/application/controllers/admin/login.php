@@ -11,7 +11,7 @@ class Login extends Controller {
 		echo $this->uri->segment(4);
 		$session = $this->session->userdata('uname');
 		
-		$this->load->view('admin/home');
+		$this->load->view('admin/adminhome');
 	}
 	
 	// login form submition and validation 

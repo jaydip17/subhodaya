@@ -159,9 +159,10 @@ class Home{
 	}
 	function bavishyam_block($heading)
 	{
-		
+		$rasi=$this->get_rasi();
 		$data=array(
-		'heading'=>$heading,
+			'heading'	=>	$heading,
+			'rasi'		=>	$rasi
 		);
 		return $this->CI->load->view('home/bavishyam_block',$data,TRUE);
 	}
@@ -382,5 +383,10 @@ class Home{
    {
 		$details=$this->CI->Gallery_Model->getimage1();
 		return $details;
+   }
+   function get_rasi()
+   {
+   	$details=$this->CI->Astrolagy_Model->get_astrolagytype();
+	return $details;
    }
 }

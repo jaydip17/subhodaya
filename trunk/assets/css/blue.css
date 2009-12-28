@@ -274,7 +274,7 @@ width: 100px;
 }
 
 .solidblockmenu li a{
-	font:  14px Arial;
+font:  14px Arial;
 float: left;
 padding: 0px 8px;
 text-decoration: none;
@@ -471,6 +471,7 @@ greet_menu ul {
   	voice-family: "\"}\""; 
   	voice-family: inherit;
 	text-decoration: none;
+	text-align: left;
 	}	
 	
 #greet_menu li a:link, #greet_menu li a:visited {
@@ -479,6 +480,7 @@ greet_menu ul {
 	background:url(../image/main.jpg);
 	background-repeat:no-repeat;
 	padding:3px 0 0 30px;
+	text-align: left;
 	}
 	
 #greet_menu li a:hover {
@@ -486,12 +488,14 @@ greet_menu ul {
 	background: url(../image/hover.jpg);
 	background-repeat:no-repeat;
 	padding:3px 0 0 30px;
+	text-align: left;
 	}
 	
 #greet_menu li a:active {
 	color: #26370A;
 	background: url(../image/li-img2.gif) repeat-x;
 	padding: 4px 0 0 30px;
+	text-align: left;
 	}
 
 .content #info3 #Left-footer {

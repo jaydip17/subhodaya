@@ -1,23 +1,23 @@
 <?php
 
-class  Astrolagy extends Controller {
-	    
-	    var $layout='default';
-	    
-     function astrolagy(){
-       
+class  Astrolagy extends Controller
+{
+	 var $layout='default';
+     function astrolagy()
+     {
      	parent::Controller();
-     	$this->load->model('admin/astrolagy_model');
-     	
      }
-	
-	 function index(){
-	 	$this->load->view('astrolagy_view');
-	 }
-	
-	
-	
-	
-	
+	 function index()
+	 {
+	 	$newscss=array();
+	 	//$types=$this->Astrolagy_Model->get_astrolagycat();
+	 	$astrology=$this->astrology_lib->astrology_block();
+	 	$data=array(
+	 			//'types' 	=> $types,
+	 			'newscss'	=>	$newscss,
+	 			'tabs_block'=>	$astrology
+	 	);
+	 	$this->load->view('tab_view',$data);
+	 }	
 }
 ?>

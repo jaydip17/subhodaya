@@ -160,9 +160,13 @@ class Home{
 	function bavishyam_block($heading)
 	{
 		$rasi=$this->get_rasi();
+		foreach ($rasi as $res )
+				{
+					$options[$res->id] = $res->astrolagy_type;
+				}
 		$data=array(
 			'heading'	=>	$heading,
-			'rasi'		=>	$rasi
+			'rasi'		=>	$options
 		);
 		return $this->CI->load->view('home/bavishyam_block',$data,TRUE);
 	}

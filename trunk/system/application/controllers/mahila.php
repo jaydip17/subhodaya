@@ -4,9 +4,6 @@ class Mahila extends Controller {
 	function mahila()
 	{
 		parent::Controller();
-		$this->load->library('Cinema_lib', 'cinema_lib');
-		$this->load->library('News_lib', 'news_lib');
-		$this->lang->load('telugu', 'telugu');
 	}
 	function index()
 	{

@@ -489,7 +489,7 @@ greet_menu ul {
 	
 #greet_menu li a:hover {
 	color: #000;
-	background: url(../image/hover2.jpg);
+	background: url(../image/hover.jpg);
 	background-repeat:no-repeat;
 	padding:3px 0 0 30px;
 	text-align: left;
@@ -500,7 +500,7 @@ greet_menu ul {
 	background: url(../image/li-img2.gif) repeat-x;
 	padding: 4px 0 0 30px;
 	text-align: left;
-		}
+	}
 
 .content #info3 #Left-footer {
 	background-image: url(../image/left-footer.jpg);
@@ -539,7 +539,7 @@ greet_menu ul {
 	text-transform: none;
 }
 #categori{
-background-image:url(../image/categories3.jpg);
+background-image:url(../image/categories.jpg);
 width:145px;
 height:28px;
 background-repeat:no-repeat;
@@ -565,4 +565,7 @@ margin-top:2px;
 .pages a{
 font-size: 13px;
 }
-
+#main_gree_div
+{
+	width:560px;float:left; margin-left:5px;border:1px solid #cee2ec;
+}

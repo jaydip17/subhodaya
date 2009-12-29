@@ -67,25 +67,64 @@ class Astrolagy_Model extends Model
 	
 	
 	
-function delete($id){
-	
-     $remove=array();
+function delete($id)
+	{
+	     $remove=array();
     	if(isset($_POST['remove']))
     	{
     		$remove = $_POST['removeid'];
-    		
     	}
-    	else {
+    	else 
+    	{
     		$remove = array($id);
     	}
     	foreach($remove as $item)
     	  {
     		$this->db->where('id',$item);
     		$this->db->delete('astrolagy');
-    		
     	  }
-}
-	
+	}
+	function get_today_rasi($date,$astrolagy_cat)
+	{
+		$array=array('display_date'=>$date,'astrolagy_cat'=>$astrolagy_cat);
+		$this->db->where($array);
+		//$this->db->select('description','astrolagy.id','astrolagy_types.id');
+		$this->db->from('astrolagy');
+		$this->db->join('astrolagy_types', 'astrolagy_types.id = astrolagy.astrolagy_type');
+		$query = $this->db->get();
+		return $query->result();
+	}
+	function get_day_details($ct_id,$date,$id)
+	{
+		$this->db->select('description');
+		$arrary=array(
+			'astrolagy_type'=>$ct_id,
+			'display_date' =>$date,
+			'astrolagy_cat'=>$id
+		);
+		$this->db->where($arrary);
+		$query=$this->db->get('astrolagy');
+		return $query->result();
+	}
+	function get_week_details($cat_id,$week,$id)
+	{
+		//$sql='SELECT * FROM astrolagy WHERE astrolagy_type='.$cat_id.' and week(display_date)='.$week;
+		$sql='SELECT * FROM `astrolagy` WHERE astrolagy_type='.$cat_id.'and astrolagy_cat='.$id.' and week(display_date)='.$week;
+		$result=$this->db->query($sql);
+		return $result->result();
+	}
+	function get_month_details($cat_id,$m,$id)
+	{
+		$sql='SELECT * FROM `astrolagy` WHERE astrolagy_type='.$cat_id.'and astrolagy_cat='.$id.' and month(display_date)='.$m;
+		$result=$this->db->query($sql);
+		return $result->result();
+	}
+	function get_year_details($cat_id,$m,$id)
+	{
+		$sql='SELECT * FROM `astrolagy` WHERE astrolagy_type='.$cat_id.'and astrolagy_cat='.$id.' and month(display_date)='.$m;
+		$result=$this->db->query($sql);
+		return $result->result();
+	}
 
 	
 

@@ -40,20 +40,36 @@ class Astrology_lib{
 		//loads necessary libraries
 		$this->CI->lang->load('telugu', 'telugu');
 	}
-	function astrology_block()
+	function astrology_block($cat_id)
 	{
-		$type=$this->get_astrolagycat();
+		$rasi_details=array();
+		$type=$this->get_astrolagytype();
 		$rasi=$this->get_rasi();
-		//print_r($type);
+		if($cat_id==0){
+		$temp=$this->get_today_rasi(1);
+		}
+		else{
+		
+			$day=$this->get_day_details($cat_id,1);
+			$month=$this->get_month_details($cat_id,3);
+			$week=$this->get_week_details($cat_id,2);
+			$year=$this->get_year_details($cat_id);
+			$rasi_details[0]->day=$day[0]->description;
+			$rasi_details[0]->month=$month[0]->description;
+			$rasi_details[0]->week=$week[0]->description;
+			$rasi_details[0]->year=$year[0]->description;
+				}
+		print_r($rasi_details);
 		$data=array(
-		'types'	=>	$type,
-		'rasi'	=>	$rasi
+				'types'		=>	$type,
+				'rasi'		=>	$rasi,
+		
 		);
 		return $this->CI->load->view('cinema/astrology_block',$data,TRUE);
 	}
-	function get_astrolagycat()
+	function get_astrolagytype()
 	{
-		$details=$this->CI->Astrolagy_Model->get_astrolagycat();
+		$details=$this->CI->Astrolagy_Model->get_astrolagytype();
 		return $details;
 	}
 	function get_rasi()
@@ -61,9 +77,47 @@ class Astrology_lib{
 		$details=$this->CI->Astrolagy_Model->get_astrolagytype();
 		return $details;
 	}
-	function get_today_rasi()
+	function get_today_rasi($as_cat)
 	{
-		$details=$this->CI->Astrolagy_Model->get_astrolagytype();
+		$datestring = "%Y-%m-%d";
+		$date=mdate($datestring);
+		$details=$this->CI->Astrolagy_Model->get_today_rasi($date,$as_cat);
 		return $details;
 	}
+	function get_day_details($as_cat,$id)
+	{
+		$datestring = "%Y-%m-%d";
+		$date=mdate($datestring);
+		$day_details=$this->CI->Astrolagy_Model->get_day_details($as_cat,$date,$id);	
+		return $day_details;
+	}
+	function get_week_details($as_cat,$id)
+	{
+		$ye= "%Y";
+		$y=mdate($ye);
+		$mo="%m";
+		$m=mdate($mo);
+		$da="%d";
+		$d=mdate($da);
+		$date=mktime(0,0,0,$m,$d,$y);
+		echo $week = (int)date('W', $date);
+		$week1=$week-1;
+		$day_details=$this->CI->Astrolagy_Model->get_week_details($as_cat,$week1,$id);
+		return $day_details;
+	}
+	function get_month_details($cat_id,$id)
+	{
+		$mo="%m";
+		$m=mdate($mo);
+		$month_details=$this->CI->Astrolagy_Model->get_month_details($cat_id,$m,$id);
+		return $month_details;
+	}
+	function get_year_details($cat_id,$id)
+	{
+		$mo="%Y";
+		$m=mdate($mo);
+		$month_details=$this->CI->Astrolagy_Model->get_year_details($cat_id,$m,$id);
+		return $month_details;
+	}
+	
 }

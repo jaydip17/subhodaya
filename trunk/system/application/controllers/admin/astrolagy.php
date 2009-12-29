@@ -5,11 +5,8 @@ class Astrolagy extends Controller {
 	function Astrolagy(){
 		parent::Controller();
 		$this->load->model('admin/Astrolagy_Model');
-	  }
-	  
-	  
+	  }	  
 	 function index(){
-	 	
 	 	$message = $this->session->flashdata('message');
 	 	$details=$this->Astrolagy_Model->get_astrolagycat();
 	 	   foreach($details as $res)
@@ -50,7 +47,8 @@ class Astrolagy extends Controller {
 	     $data=array('astrolagy_cat'=>$astrolagy_cat,
 	                 'astrolagy_type'=>$astrolagy_type,
 	                 'description'=>$description,
-	                 'display_date' => $display_date
+	                 'display_date' => $display_date,
+	     			// 'insert_date' => now()
 	                );
 	                
 	           if(!empty($data)){

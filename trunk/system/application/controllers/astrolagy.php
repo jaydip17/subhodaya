@@ -1,5 +1,4 @@
 <?php
-
 class  Astrolagy extends Controller
 {
 	 var $layout='default';
@@ -11,13 +10,26 @@ class  Astrolagy extends Controller
 	 {
 	 	$newscss=array();
 	 	//$types=$this->Astrolagy_Model->get_astrolagycat();
-	 	$astrology=$this->astrology_lib->astrology_block();
+	 	$astrology=$this->astrology_lib->astrology_block(0);
 	 	$data=array(
 	 			//'types' 	=> $types,
 	 			'newscss'	=>	$newscss,
 	 			'tabs_block'=>	$astrology
 	 	);
 	 	$this->load->view('tab_view',$data);
-	 }	
+	 }
+	 function details()
+	 {
+	 	$newscss=array();
+		$cat_id=$this->uri->segment(3,0);
+		
+	 	$astrology=$this->astrology_lib->astrology_block($cat_id);
+	 	$data=array(
+	 			//'types' 	=> $types,
+	 			'newscss'	=>	$newscss,
+	 			'tabs_block'=>	$astrology
+	 	);
+	 	$this->load->view('tab_view',$data);	
+	 }
 }
 ?>

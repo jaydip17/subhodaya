@@ -23,7 +23,7 @@ class  Astrolagy extends Controller
 	 	$newscss=array();
 		$cat_id=$this->uri->segment(3,0);
 		
-	 	$astrology=$this->astrology_lib->astrology_block($cat_id);
+	 	$astrology=$this->astrology_lib->rasi_block($cat_id);
 	 	$data=array(
 	 			//'types' 	=> $types,
 	 			'newscss'	=>	$newscss,

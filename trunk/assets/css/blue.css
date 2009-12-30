@@ -565,4 +565,5 @@ font-size: 13px;
 #main_gree_div
 {
 	width:560px;float:left; margin-left:5px;border:1px solid #cee2ec;
+	border-top: 0px;
 }

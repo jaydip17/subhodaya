@@ -414,14 +414,16 @@ width: 45px;
 	margin-top: 4px;
 	}
 #bgslis{
-background-image:url(../image/bg.gif);
+background-image:url(../image/color5.gif);
 background-repeat:repeat-x;
 float:right; width:560px; height:28px; text-align:left;
 }
 #greet_font
 {
-	padding-left: 10px;font-size: 16px;
-	color:#FFFFFF;
+	padding-left: 10px;font-size: 15px;
+	color: #275666;
+	font-weight: bold;
+	margin-top: 3px;
 }
 
 .top-menu {
@@ -482,7 +484,7 @@ greet_menu ul {
 #greet_menu li a:link, #greet_menu li a:visited {
 	color: #225E73;
 	display: block;
-	background:url(../image/main.jpg);
+	background:url(../image/main6.jpg);
 	background-repeat:no-repeat;
 	padding:3px 0 0 30px;
 	text-align: left;
@@ -549,9 +551,11 @@ margin-top:2px;
 #paginate_div
 {
 	float: right;width: 40%;text-align: right;padding-right: 5px;color: white;
+	margin-top: 3px;
 }
 #paginate_div a{
-	color: white;
+	color: #275666;
+	font-weight: bold;
 }
 .pages {
 	font-weight: bold;
@@ -566,5 +570,9 @@ margin-top:2px;
 .pages a{
 font-size: 13px;
 }
-
+#main_gree_div
+{
+	width:560px;float:left; margin-left:5px;border:1px solid #808080;
+	border-top: 0px;
+}
 

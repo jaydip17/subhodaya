@@ -36,15 +36,30 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
 <?php if(isset($gallerycss)){?>
 	<link href="<?=base_url();?>assets/css/gallery.css" rel="stylesheet" type="text/css"/>
 <?php }?>
-<!-- for more dropdown -->
+<!-- color box js and css -->
+	<link href="<?=base_url();?>assets/css/colorbox.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="<?=base_url()?>assets/java-script/jquery.min.js"></script>
+	<script type="text/javascript" src="<?=base_url()?>assets/java-script/jquery.colorbox.js"></script>
+	<script type="text/javascript">
+			$(document).ready(function(){
+				//Examples of how to assign the ColorBox event to elements
+				$(".feedback").colorbox({width:"550px", height:"350px", iframe:true});
+				$(".contact").colorbox({width:"550px", height:"350px", iframe:true});
+				$(".advertise").colorbox({width:"550px", height:"350px", iframe:true});
+				$(".sendtofriend").colorbox({width:"550px", height:"350px", iframe:true});
+				//Example of preserving a JavaScript event for inline calls.
+				$("#newsletter-img").colorbox({href:"<?=base_url();?>newsletter/show_subscribe_form",width:"500px", height:"180px",iframe:true});
+			    $("#invite-img").colorbox({href:"<?=base_url();?>admin/contacts",width:"550px", height:"450px",iframe:true});
+				$("#importcontacts").click(function(){ 
+					$("#advertise").colorbox({href:"<?=base_url();?>newsletter/show_subscribe_form"}); 
+				});
+			});
+		</script>
+<!-- end color box js and css -->
 
-<link herf="<?=base_url()?>assets/css/gre_css.css" rel="stylesheet" type="text/css"/>
-
-<!-- for more dropdown -->
-<script type="text/javascript" src="<?=base_url()?>assets/java-script/dropdown.js"></script>
 <!-- video and greeting page side menu -->
-<link herf="<?=base_url()?>assets/css/video.css" rel="stylesheet" type="text/css"/>
-<link href="<?=base_url()?>assets/css/videomenu.css" rel="stylehett" type="text/css"/>
+	<link herf="<?=base_url()?>assets/css/video.css" rel="stylesheet" type="text/css"/>
+	<link href="<?=base_url()?>assets/css/videomenu.css" rel="stylehett" type="text/css"/>
 <!-- for tabs js ans css -->
 	<script src="<?=base_url();?>assets/jq.tabs/jquery-1.1.3.1.pack.js" type="text/javascript"></script>
 	<script src="<?=base_url();?>assets/jq.tabs/jquery.history_remote.pack.js" type="text/javascript"></script>
@@ -57,6 +72,7 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
                 $('#container-4').tabs({ remote: true ,fxShow: { height: 'show', opacity: 'show' }, fxSpeed: 'normal' });
 			});
 	</script>
+<!-- change theme colors js -->
 	<script type="text/javascript">
 				var csslink ="assets/css";
 				var styleurl = '';
@@ -102,6 +118,7 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
 				((expiredays==null) ? "" : ";expires="+exdate.toGMTString());
 				}
 		</script>
+<!--tabs css js -->
          <style type="text/css" media="screen, projection">
 
             /* Not required for Tabs, just to make this demo look better... */
@@ -136,53 +153,54 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
                 font-family: "Courier New", Courier, monospace;
             }
         </style> 
-        <style type="text/css">
-a.sample_attach, a.sample_attach:visited, div.sample_attach
-{
-  display: block;
-  width:150px;
-  border:  1px solid #FFF;
-  background: #1E637A;
-  text-decoration: none;
-  font-family: Verdana, Sans-Sherif;
-  font-size: 14px;
-  color:   #FFFFFF;
-}
-
-a.sample_attach, a.sample_attach:visited { border-bottom: none; }
-span#sample_attach_menu_child             { border-bottom: 1px solid #FFFFFF; }
-
-form.sample_attach
-{
-  position: absolute;
-  visibility: hidden;
-
-  border:  1px solid #FFFFFF;
-  padding: 0px 5px 2px 5px;
-
-  background: #FFFFEE;
-}
-
-form.sample_attach
-{
-  font-family: Verdana, Sans-Sherif;
-  font-size: 14px;
-}
-
-input.sample_attach { margin: 1px 0px; }
-
-</style>
-<script src="<?=base_url();?>assets/js/SpryDOMUtils.js"></script>
-<script src="<?=base_url();?>assets/js/tp_unobtrusive.js"></script>
-<script type="text/javascript" src="<?=base_url();?>assets/js/pollLoader.js"></script>
+<!-- main menu dropdown css and js -->
+	<script type="text/javascript" src="<?=base_url()?>assets/java-script/dropdown.js"></script>
+	<link herf="<?=base_url()?>assets/css/gre_css.css" rel="stylesheet" type="text/css"/>
+		<style type="text/css">
+		a.sample_attach, a.sample_attach:visited, div.sample_attach
+		{
+		  display: block;
+		  width:150px;
+		  border:  1px solid #FFF;
+		  background: #1E637A;
+		  text-decoration: none;
+		  font-family: Verdana, Sans-Sherif;
+		  font-size: 14px;
+		  color:   #FFFFFF;
+		}
+		
+		a.sample_attach, a.sample_attach:visited { border-bottom: none; }
+		span#sample_attach_menu_child             { border-bottom: 1px solid #FFFFFF; }
+		
+		form.sample_attach
+		{
+		  position: absolute;
+		  visibility: hidden;
+		
+		  border:  1px solid #FFFFFF;
+		  padding: 0px 5px 2px 5px;
+		
+		  background: #FFFFEE;
+		}
+		
+		form.sample_attach
+		{
+		  font-family: Verdana, Sans-Sherif;
+		  font-size: 14px;
+		}
+		input.sample_attach { margin: 1px 0px; }
+		</style>
+		<script src="<?=base_url();?>assets/js/SpryDOMUtils.js"></script>
+		<script src="<?=base_url();?>assets/js/tp_unobtrusive.js"></script>
+		<script type="text/javascript" src="<?=base_url();?>assets/js/pollLoader.js"></script>
 <script type="text/javascript" src="<?=base_url();?>assets/js/newsLoader.js"></script>
 <script type="text/javascript" src="<?=base_url();?>assets/js/mmenu.js"></script>
 <script type="text/javascript" src="<?=base_url()?>assets/js/feedback_validation.js"></script>
 <script type="text/javascript" src="<?=base_url()?>assets/js/validate_sendmail.js"></script>
 <!-- for telugu typeing -->
 <?php if(isset($telegu_typing)) { ?> 
-<script type="text/javascript" src="<?=base_url()?>assets/js/jsapi.js"></script>
-<script type="text/javascript" src="<?=base_url()?>assets/js/telugu.js"></script>
+	<script type="text/javascript" src="<?=base_url()?>assets/js/jsapi.js"></script>
+	<script type="text/javascript" src="<?=base_url()?>assets/js/telugu.js"></script>
 <?php } ?>
 <body onload="<? if(isset($onload)) echo $onload; ?>">
 <center>
@@ -392,7 +410,19 @@ document.write('</td></table>')
 	<div id="footer_menu" style="color:#fff">
 		<div id="footer_left"></div>	
 		<div id="footer_right"></div>
-		<div style="line-height:30px;">Home | Varthalu | Cinema | Video | Gallery | Greetings | Mahila | Sahithi | Sampradinchu | Feedback | Advertise</div>
+		<div style="line-height:30px;">
+			<a href="<?=base_url()?>">Home</a> |
+			<a href="<?=base_url()?>news"> Varthalu</a> |
+			<a href="<?=base_url()?>cinema">Cinema</a> |
+			<a href="<?=base_url()?>videos">Video</a> |
+			<a href="<?=base_url()?>gallery">Gallery</a> |
+			<a href="<?=base_url()?>greetings">Greetings</a> |
+			<a href="<?=base_url()?>mahila">Mahila</a> |
+			<a href="<?=base_url()?>sahithi">Sahithi</a> |
+			<a href="<?=base_url()?>contact" class="contact" title="Contact Us">Sampradinchu</a> |
+			<a class="feedback" href="<?=base_url()?>contact/feedback" title="Feedback">Feedback</a> |
+			<a href="<?=base_url()?>contact/advertise" class="advertise" title="Advertise With Us">Advertise</a>
+		</div>
 	</div>
 </div>
 </center>  

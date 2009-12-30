@@ -108,20 +108,19 @@ function delete($id)
 	}
 	function get_week_details($cat_id,$week,$id)
 	{
-		//$sql='SELECT * FROM astrolagy WHERE astrolagy_type='.$cat_id.' and week(display_date)='.$week;
-		$sql='SELECT * FROM `astrolagy` WHERE astrolagy_type='.$cat_id.'and astrolagy_cat='.$id.' and week(display_date)='.$week;
+		$sql='SELECT * FROM `astrolagy` WHERE astrolagy_type='.$cat_id.' and astrolagy_cat='.$id.'  and week(display_date)='.$week;
 		$result=$this->db->query($sql);
 		return $result->result();
 	}
 	function get_month_details($cat_id,$m,$id)
 	{
-		$sql='SELECT * FROM `astrolagy` WHERE astrolagy_type='.$cat_id.'and astrolagy_cat='.$id.' and month(display_date)='.$m;
+		$sql='SELECT * FROM `astrolagy` WHERE astrolagy_type='.$cat_id.' and astrolagy_cat='.$id.'  and month(display_date)='.$m;
 		$result=$this->db->query($sql);
 		return $result->result();
 	}
-	function get_year_details($cat_id,$m,$id)
+	function get_year_details($cat_id,$y,$id)
 	{
-		$sql='SELECT * FROM `astrolagy` WHERE astrolagy_type='.$cat_id.'and astrolagy_cat='.$id.' and month(display_date)='.$m;
+		$sql='SELECT * FROM `astrolagy` WHERE astrolagy_type='.$cat_id.' and astrolagy_cat='.$id.'  and year(display_date)='.$y;
 		$result=$this->db->query($sql);
 		return $result->result();
 	}

@@ -40,36 +40,44 @@ class Astrology_lib{
 		//loads necessary libraries
 		$this->CI->lang->load('telugu', 'telugu');
 	}
-	function astrology_block($cat_id)
+	function astrology_block()
 	{
-		$rasi_details=array();
 		$type=$this->get_astrolagytype();
-		$rasi=$this->get_rasi();
-		if($cat_id==0){
-		$temp=$this->get_today_rasi(1);
-		}
-		else{
-		
-			$day=$this->get_day_details($cat_id,1);
-			$month=$this->get_month_details($cat_id,3);
-			$week=$this->get_week_details($cat_id,2);
-			$year=$this->get_year_details($cat_id);
-			$rasi_details[0]->day=$day[0]->description;
-			$rasi_details[0]->month=$month[0]->description;
-			$rasi_details[0]->week=$week[0]->description;
-			$rasi_details[0]->year=$year[0]->description;
-				}
-		print_r($rasi_details);
+		$rasi=$this->get_rasi();	
+		$rasi_details=$this->get_today_rasi(1);
 		$data=array(
-				'types'		=>	$type,
-				'rasi'		=>	$rasi,
+				'types'			=>	$type,
+				'rasi'			=>	$rasi,
+				'rasi_details'  =>  $rasi_details
 		
 		);
 		return $this->CI->load->view('cinema/astrology_block',$data,TRUE);
 	}
+	function rasi_block($cat_id)
+	{
+		$rasi_details=array();
+		$type=$this->get_astrolagytype();
+		$rasi=$this->get_rasi();
+		print_r($rasi);
+			$day=$this->get_day_details($cat_id,1);
+			$month=$this->get_month_details($cat_id,3);
+			$week=$this->get_week_details($cat_id,2);
+			$year=$this->get_year_details($cat_id,4);
+			$rasi_details[0]->day=$day[0]->description;
+			$rasi_details[0]->month=$month[0]->description;
+			$rasi_details[0]->week=$week[0]->description;
+			$rasi_details[0]->year=$year[0]->description;
+			$data=array(
+				'types'			=>	$type,
+				'rasi'			=>	$rasi,
+				'rasi_details'  =>  $rasi_details,
+				'cat_id'		=>	$cat_id
+			);
+		return $this->CI->load->view('cinema/rasi_block',$data,TRUE);
+	}
 	function get_astrolagytype()
 	{
-		$details=$this->CI->Astrolagy_Model->get_astrolagytype();
+		$details=$this->CI->Astrolagy_Model->get_astrolagycat();
 		return $details;
 	}
 	function get_rasi()
@@ -100,7 +108,7 @@ class Astrology_lib{
 		$da="%d";
 		$d=mdate($da);
 		$date=mktime(0,0,0,$m,$d,$y);
-		echo $week = (int)date('W', $date);
+		$week = (int)date('W', $date);
 		$week1=$week-1;
 		$day_details=$this->CI->Astrolagy_Model->get_week_details($as_cat,$week1,$id);
 		return $day_details;

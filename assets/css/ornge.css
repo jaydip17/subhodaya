@@ -413,14 +413,15 @@ color: rgb(190, 191, 59);
 	margin-top: 4px;
 	}
 #bgslis{
-background-image:url(../image/bg.gif);
+background-image:url(../image/color2.gif);
 background-repeat:repeat-x;
 float:right; width:560px; height:28px; text-align:left;
 }
 #greet_font
 {
-	padding-left: 10px;font-size: 16px;
-	color:#FFFFFF;
+	padding-left: 10px;font-size: 15px;
+	color: #275666;
+	font-weight: bold;
 }
 
 .top-menu {
@@ -481,7 +482,7 @@ greet_menu ul {
 #greet_menu li a:link, #greet_menu li a:visited {
 	color: #225E73;
 	display: block;
-	background:url(../image/main.jpg);
+	background:url(../image/main3.jpg);
 	background-repeat:no-repeat;
 	padding:3px 0 0 30px;
 	text-align: left;
@@ -489,7 +490,7 @@ greet_menu ul {
 	
 #greet_menu li a:hover {
 	color: #000;
-	background: url(../image/hover.jpg);
+	background: url(../image/hover2.jpg);
 	background-repeat:no-repeat;
 	padding:3px 0 0 30px;
 	text-align: left;
@@ -539,7 +540,7 @@ greet_menu ul {
 	text-transform: none;
 }
 #categori{
-background-image:url(../image/categories.jpg);
+background-image:url(../image/categories3.jpg);
 width:145px;
 height:28px;
 background-repeat:no-repeat;
@@ -547,10 +548,13 @@ margin-top:2px;
 }
 #paginate_div
 {
-	float: right;width: 40%;text-align: right;padding-right: 5px;color: white;
+	float: right;width: 40%;text-align: right;padding-right: 5px;
+	color: #275666;
+	font-weight: bold;
 }
 #paginate_div a{
-	color: white;
+color: #275666;
+	font-weight: bold;
 }
 .pages {
 	font-weight: bold;
@@ -561,11 +565,15 @@ margin-top:2px;
 	height: 25px;
 	width:100%;
 	font-size: 13px;
+	margin-top: 3px;
 }
 .pages a{
 font-size: 13px;
+color: #275666;
+	font-weight: bold;
 }
 #main_gree_div
 {
-	width:560px;float:left; margin-left:5px;border:1px solid #cee2ec;
+	width:560px;float:left; margin-left:5px;border:1px solid #AD6693;
+	border-top: 0px;
 }

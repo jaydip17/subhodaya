@@ -9,7 +9,7 @@ class Videos extends Controller {
 	{
 		$newscss=array();
 		$video_cat= $this->Video_Model->getvideocategeories();
-		$latestvideos = $this->Video_Model->get_videos('latest',20);
+		$latestvideos = $this->Video_Model->get_videos('latest',24);
 		//print_r($latestvideos);
 		$data=array(
 			'newscss'		=>	$newscss,
@@ -27,7 +27,7 @@ class Videos extends Controller {
 		 $query=" from videos where video_cat_id=$id order by insert_date desc ";
 		 $a =base_url().'video/index/'.$id;
 		 $this->load->library('paginationnew');$this->paginationnew->start = ($this->uri->segment(4)) ? $this->uri->segment(4) : '0';
-    	 $this->paginationnew->limit =20;
+    	 $this->paginationnew->limit =24;
          $this->paginationnew->filePath ='javascript:loadNews(\''.$id.'\',\''.$a;
       
          $this->paginationnew->select_what = '*';
@@ -55,6 +55,7 @@ class Videos extends Controller {
 		$thisvideo=$this->Video_Model->getvideoname($id);
 		//print_r($thisvideo);
 		$video_cat= $this->Video_Model->getvideocategeories();
+		$more=$this->News_Model->more_news();
 		//video player
 		$this->load->library('flash_video');
 		$config['id'] = 'n0';
@@ -95,6 +96,7 @@ class Videos extends Controller {
 		$bread_crumb = $this->bread_crumb->get_code($segments);
 		
 		$data=array(
+		         'more'         =>  $more,
 				'newscss'		=>	$newscss,
 				'type'			=>	$video_cat,
 				'paginate'		=>	$paginate,

@@ -10,6 +10,7 @@ class Video_Model extends Model
 	{
   		
 		$query=$this->db->get('videos_categeory');
+		//print_r($query->result());
 		return $query->result();
 	}
 	

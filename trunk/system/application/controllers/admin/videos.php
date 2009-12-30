@@ -43,7 +43,7 @@ class Videos extends Controller
 		print_r($message);
 		$options = $this->Video_Model->getvideocategeories();
 		$videocategeories= array();
-		foreach($options->result() as $item)
+		foreach($options as $item)
 		{
 			$videocategeories[$item->id]=$item->name;
 		}
@@ -163,8 +163,8 @@ class Videos extends Controller
 	
   function categeories()
 	  {
-		$data['query'] = $this->Video_Model->getvideocategeories();
-		
+		$result = $this->Video_Model->getvideocategeories();
+		$data['query']=$result;
 	$this->load->view('admin/viewcategeories',$data);
 	 // print_r($data);
 	    

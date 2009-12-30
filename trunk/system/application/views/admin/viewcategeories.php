@@ -27,7 +27,7 @@ function fun1(){
 		<h2 style="color: black">Vidoes</h2>
 	</thead>
 	
-	<?php if($query->num_rows() > 0)
+	<?php if(!empty($query))
 {?>
 <tr>
 		<th></th>
@@ -45,7 +45,7 @@ $i=1;
 
 
  ?><?
-foreach ($query->result() as $item):
+foreach ($query as $item):
 echo  form_hidden('id',$item->id);
  ?>
  

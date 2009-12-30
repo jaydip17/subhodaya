@@ -16,19 +16,19 @@
 	</div>
 	<div style="width:560px; height:950px; float:left; margin-left:5px;border:0px solid #cee2ec;">
 		<div style="width:560px; height:68px; border:1px solid;"><img src="<?=base_url();?>assets/home_images/ads/video_add.jpg"/></div>
-		<div style=" width:560px; text-align:center;font-size:16px;color:red;text-align: left;padding:3px 0px 3px 2px;"><?=$thisvideo[0]->name?></div>
+		<div style=" width:560px; text-align:center;font-size:16px;color:red;text-align:center;padding:3px 0px 3px 2px;"><?=$thisvideo[0]->name?></div>
 		<div style="float:left; width:560px; height:350px; border:1px solid;"><?=$videoplay?></div>
-		<div style="float:left; width:560px; height:18px;"><div style="float: left;text-align: left;width: 50%;"><img src="<?=base_url();?>assets/stars/<?=$thisvideo[0]->rating?>rating.jpg" align="left"/><span>rating</span></div><div style="float: right;width: 40%;text-align: right;"><?=$thisvideo[0]->no_of_views?> views</div></div>
-		<div style="float:left; width:560px; height:28px;border:1px solid #CECECE; background-color:#EBEBEB;"><div style="float:left;padding-top:6px;padding-left:5px;font-size:14px;color:#812D00;font-weight:bold;"><img src="<?=base_url();?>assets/image/video.gif">Top Videos</div><div style="float:right;padding-top:4px;padding-right:5px;"><?=$paginate?></div></div>
+		<div style="float:left; width:560px; height:18px;"><div style="float: left;text-align: left;width: 50%;"><img src="<?=base_url();?>assets/stars/<?=$thisvideo[0]->rating?>rating.jpg" align="left"/><span><?=$more['36']->matter?></span></div><div style="float: right;width: 40%;text-align: right;"><?=$thisvideo[0]->no_of_views?> views</div></div>
+		<div style="float:left; width:560px; height:28px;border:1px solid #CECECE; background-color:#EBEBEB;margin-top:10px;"><div style="float:left;padding-top:6px;padding-left:5px;font-size:14px;color:#812D00;font-weight:bold;"><img src="<?=base_url();?>assets/image/video.gif"><?=$more['34']->matter?></div><div style="float:right;padding-top:4px;padding-right:5px;"><?=$paginate?></div></div>
 		 <div id="video_main">
 		 <?php $count=0; foreach ($topvideos as $video):?>
-			<div id="vi_d" style="float: left;padding: 0px 3px 0px 3px;">
-				<a href="<?=base_url()?>videos/playvideo/<?=$video->id?>/<?=$video->video_cat_id?>">
-				<span id="vi_div">Views:<?=$video->no_of_views?></span><br />
+			<div id="vi_d" style="float: left;padding: 0px 3px 0px 5px;margin-top:20px;">
+				<span id="vi_div"><a href="<?=base_url()?>videos/playvideo/<?=$video->id?>/<?=$video->video_cat_id?>">
+				Views:<?=$video->no_of_views?><br />
 				<div id="video_img"><img src="<?=base_url();?>assets/image/buttion.png" border="0"/></div>
 				<div id="video_time"><?=$video->time?></div>
 				<img src="<?=base_url();?>assets/videos/image_preview/image<?=$video->id?>_thumb.jpg" id="img2" height="88" width="126"/><br />
-				<span id="vi_div"><?=$video->name?></span></a>
+				<?=$video->name?></a></span>
 			</div> 
 			<?php if($count==4){?> 
 			</div><div id="video_main">

@@ -22,6 +22,13 @@ if(isset($message) && !is_array($message) ) echo($message);?>
 		<td>Heading</td>
 		<td><textarea rows="2" cols="40" name="heading" id="heading"></textarea></td>
 	</tr>
+	
+	<tr>
+		<td>English heading</td>
+		<td><textarea rows="2" cols="40" name="engheading" id="heading"></textarea></td>
+	</tr>
+	
+	
 	<tr>
 		<td>Summery</td>
 		<td style="text-align: left;">

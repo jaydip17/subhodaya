@@ -118,12 +118,11 @@ display:inline;
 </style>
 <div style="width: 100%">
 	<div style="float: left;width: 645px;text-align: left;margin-left: 6px;">
-		<div style="height: 35px">links</div>
-		<div style="height: 35px;"><span style="font-size: 17px;"></span></div>
-		<div style="height: 71px;border-top: 1px solid #cee2ed;border-bottom: 1px solid #cee2ed;">
-			<div style="padding-top: 8px;float: left;">
+		<div style="height: 40px;font-size: 23px;font-weight: normal;"><?=$cat_name?></div>
+		<div style="height: 60px;border-top: 1px solid #cee2ed;border-bottom: 1px solid #cee2ed;">
+			<div style="padding-top: 2px;float: left;">
 			<div style="height: 30px;padding-top: 4px;"><font id="headings" style="font-size: 18px;font-weight: bold;"><?=(isset($details[0]->heading)) ? $details[0]->heading : ''?></font></div>
-				<div style="float: left;width: 56px;margin-left: 15px;"><img src="<?=base_url()?>assets/image/email.jpg" style="float: left;">Email</div>
+				<div style="float: left;width: 56px;margin-left: 15px;"><a href="<?=base_url()?>contact/email_send" class="contact" title="Send Email" id="tweet_id"><img src="<?=base_url()?>assets/image/email.jpg" style="float: left;border: 0px;">Email</a></div>
 				<div style="float: left;width: 67px;"><a href="http://twitter.com/login" id="tweet_id"><img src="<?=base_url()?>assets/image/tweet.jpg" style="float: left;border: 0px;">twitter</a></div>
 				<div style="float: left;"><img src="<?=base_url()?>assets/image/face_bk.jpg" style="float: left;">Facebook</div>
 			</div>

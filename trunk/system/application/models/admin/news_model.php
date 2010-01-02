@@ -201,11 +201,13 @@ class News_Model extends Model
 			'type'			=>	$news_cat,
 		);
 		$this->db->order_by('views','desc');
-		$this->db->order_by('id','desc');
+		$this->db->order_by('news.id','desc');
 		$this->db->where($array);
 		$this->db->limit(15);
-		$result=$this->db->get('news');
-		return $result->result();
+		$this->db->from('news_types');
+		$this->db->join('news', 'news.type= news_types.id');
+		$query = $this->db->get_where();
+		return $query->result();
 	}
  	function get_views($id)
 	{

@@ -129,11 +129,13 @@ class Cinema_Model extends Model {
 			'type'			=>	$news_cat,
 		);
 		$this->db->order_by('views','desc');
-		$this->db->order_by('id','desc');
+		$this->db->order_by('cinema.id','desc');
 		$this->db->where($array);
 		$this->db->limit(15);
-		$result=$this->db->get('cinema');
-		return $result->result();
+		$this->db->from('cinema_cat');
+		$this->db->join('cinema', 'cinema.type= cinema_cat.id');
+		$query = $this->db->get_where();
+		return $query->result();
 	}
 	function reviews_rating($rat_id)
 	{

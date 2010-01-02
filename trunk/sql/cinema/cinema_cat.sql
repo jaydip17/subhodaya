@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 02, 2009 at 08:59 AM
+-- Generation Time: Jan 02, 2010 at 07:34 AM
 -- Server version: 5.1.32
 -- PHP Version: 5.2.9-1
 
@@ -25,12 +25,13 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- Table structure for table `cinema_cat`
 --
 
+DROP TABLE IF EXISTS `cinema_cat`;
 CREATE TABLE IF NOT EXISTS `cinema_cat` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `cinema_type` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `active` int(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
 --
 -- Dumping data for table `cinema_cat`
@@ -42,4 +43,5 @@ INSERT INTO `cinema_cat` (`id`, `cinema_type`, `active`) VALUES
 (3, 'మూవీ రివ్యూస్ ', 0),
 (4, 'మూవీ షెడ్యుల్ ', 0),
 (5, 'ఇంటర్వ్యూస్ ', 0),
-(6, 'తెర చాటు ', 0);
+(6, 'తెర చాటు ', 0),
+(7, 'శృంగారం  ', 0);

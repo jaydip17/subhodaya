@@ -170,11 +170,13 @@ class Sahithi_Model extends Model {
 			'cat_id'			=>	$cat_id,
 		);
 		$this->db->order_by('views','desc');
-		$this->db->order_by('id','desc');
+		$this->db->order_by('sahithi.id','desc');
 		$this->db->where($array);
 		$this->db->limit(15);
-		$result=$this->db->get('sahithi');
-		return $result->result();	
+		$this->db->from('sahithi_cat');
+		$this->db->join('sahithi', 'sahithi.cat_id= sahithi_cat.id');
+		$query = $this->db->get_where();
+		return $query->result();	
     }
     function sahithi_active_news($cat_id)
     {

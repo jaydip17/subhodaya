@@ -58,7 +58,7 @@ class Home{
 				 $image_link=base_url().'assets/news/news_img'.$temp[0]->id.'_thumb.jpg';
 				 $temp[0]->cat='news';
 				 $more_link=base_url().'news/details/'.$temp[0]->type;
-				 $link=base_url().'mahila/inner/';
+				 $link=base_url().'news/newsdetails/';
 				 $link_cate=$temp[0]->type;
 				break;
 			case $this->CI->lang->line('news_jathiyam'):
@@ -66,7 +66,7 @@ class Home{
 				 $image_link=base_url().'assets/news/news_img'.$temp[0]->id.'_thumb.jpg';
 				 $temp[0]->cat='news';
 				 $more_link=base_url().'news/details/'.$temp[0]->type;
-				 $link=base_url().'mahila/inner/';
+				 $link=base_url().'news/newsdetails/';
 				 $link_cate=$temp[0]->type;
 				break;
 			case $this->CI->lang->line('news_antharja'):
@@ -74,7 +74,7 @@ class Home{
 				 $image_link=base_url().'assets/news/news_img'.$temp[0]->id.'_thumb.jpg';
 				 $temp[0]->cat='news';
 				 $more_link=base_url().'news/details/'.$temp[0]->type;
-				 $link=base_url().'mahila/inner/';
+				 $link=base_url().'news/newsdetails/';
 				 $link_cate=$temp[0]->type;
 				break;
 			case $this->CI->lang->line('news_kridalu'):
@@ -82,7 +82,7 @@ class Home{
 				  $image_link=base_url().'assets/news/news_img'.$temp[0]->id.'_thumb.jpg';
 				  $temp[0]->cat='news';
 				  $more_link=base_url().'news/details/'.$temp[0]->type;
-				  $link=base_url().'news/inner/';
+				  $link=base_url().'news/newsdetails/';
 				  $link_cate=$temp[0]->type;
 				break;
 			case $this->CI->lang->line('cini_pukarlu'):
@@ -136,11 +136,11 @@ class Home{
 				$more_link=base_url().'news/details/'.$temp[0]->type;
 				break;			
 			case $this->CI->lang->line('srungaram'):
-				$temp=$this->get_srungaram();
-				$image_link=base_url().'assets/srungaram/news_img'.$temp[0]->id.'_home_thumb.jpg';
-				$link=base_url().'sex/inner/';
-				$more_link=base_url().'sex';
-				$cat_id=9;
+				$temp=$this->get_movie_reviews($cat_id=7,1);;
+				$image_link=base_url().'assets/cinema/news_img'.$temp[0]->id.'_home_thumb.jpg';
+				$link=base_url().'cinema/inner/';
+				$more_link=base_url().'cinema';
+				$cat_id=$temp[0]->type;
 				break;
 				
 		}
@@ -176,9 +176,9 @@ class Home{
 		$eenka=$this->CI->lang->line('enka_chavandi');
 		switch ($heading){
 			case $this->CI->lang->line('subh_spec'):
-				 $temp=$this->get_sub_special();
-				 $image_link=base_url().'assets/special_newsimg/news_img'.$temp[0]->id.'_thumb.jpg';
-				 $link=base_url().'special_sub/inner/'.$temp[0]->id.'/0';
+				 $temp=$this->get_news($cat_id=9);
+				 $image_link=base_url().'assets/news/news_img'.$temp[0]->id.'_thumb.jpg';
+				 $link=base_url().'news/newsdetails/'.$temp[0]->id.'/'.$temp[0]->type;
 				break;
 		}
 				$data = array(
@@ -308,14 +308,9 @@ class Home{
 		$details=$this->CI->News_Model->active_news($cat_id);
 		return $details;
 	}
-	function get_sub_special()
+	function get_news($cat_id)
 	{
-		$details=$this->CI->Subho_Model->get_home_stories(0);
-		return $details;
-	}
-	function get_srungaram()
-	{
-		$details=$this->CI->Srungaram_Model->active_srung(0);
+		$details=$this->CI->News_Model->get_newstype1($cat_id);
 		return $details;
 	}
 	function get_homepoll()

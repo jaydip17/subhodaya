@@ -6,6 +6,7 @@ class Subhodaya extends Controller {
 		parent::Controller();
 	}
 	function index(){
+		$tabscss=array();
 		//for telugu content
 			$more=$this->News_Model->more_news();
 		$cini_vishesm=$this->lang->line('cini_vishesm');
@@ -92,28 +93,8 @@ class Subhodaya extends Controller {
 	     $special_news=$this->News_Model->get_special_news();*/
 	    // print_r($special_news);
 	   // $tabs=array();
-		$data=array(/*'more'				=>	$more,
-		            'news_type7'		=>	$news_type7,
-					'news_type4'		=>	$news_type4,
-					'cinema_type2'		=>	$cinema_type2,
-					'cinema_type1'		=>	$cinema_type1,
-					'newspoll'			=>	$newspoll,
-					'yes_poll'			=>	$yes_poll,
-					'active_news'		=>	$active_news,
-		            'active_news1'		=>	$active_news1,
-		            'sahithi_details'	=>	$sahithi_details,
-		            'mahila_details'	=>	$mahila_details,
-					'greetings1'		=>	$greetings1,
-		            'home_stories' 		=>	$home_stories,
-					'images'			=>	$images,
-		            'video_result'      =>  $video_result,
-					'images'			=>	$images,
-					'activenews'		=>  $activenews,
-					'gall_topviews'		=>  $gall_topviews,
-					'mahila_details_yoga'	=>$mahila_details_yoga,
-					'tabs'				=>	$tabs,
-					'special_news'		=>  $special_news,*/
-		
+		$data=array(
+					'tabscss'			=>	$tabscss,
 					'Bhavisham_block'	=>	$Bhavisham_block,
 					'special_block'		=>  $special_block,
 					'middle_block'		=>	$middle_block,

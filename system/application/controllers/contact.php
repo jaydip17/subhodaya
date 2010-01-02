@@ -220,6 +220,11 @@ class contact extends Controller {
 				$this->session->set_flashdata('messagesent',$success);
 				redirect(base_url().'contact/message_sent');
 		}
+		function email_send()
+		{
+			
+			$this->load->view('email_view');
+		}
 	function send_mail($to,$subject,$message,$from,$from_name)
 	 {
 	 	$data = array (

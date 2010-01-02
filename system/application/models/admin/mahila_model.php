@@ -155,11 +155,13 @@ class Mahila_Model extends Model {
 			'cat_id'			=>	$mahila_cat,
 		);
 		$this->db->order_by('views','desc');
-		$this->db->order_by('id','desc');
+		$this->db->order_by('mahila.id','desc');
 		$this->db->where($array);
 		$this->db->limit(15);
-		$result=$this->db->get('mahila');
-		return $result->result();
+		$this->db->from('mahila_cat');
+		$this->db->join('mahila', 'mahila.cat_id= mahila_cat.id');
+		$query = $this->db->get_where();
+		return $query->result();
     }
     function mahila_active_news($mahil_cat){
     		$this->db->select('*');

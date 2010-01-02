@@ -20,22 +20,7 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
 <meta name="pragma" content="no-cache" />	
 <meta name="classification" content="Leaders In Telugu News, AP Politics On The Net " />
 
-<link REL="SHORTCUT ICON" HREF="<?=base_url();?>assets/favicon.ico">
-<!-- for rss feeds -->
-	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?=base_url()?>feeds/news" />
-	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?=base_url();?>feeds/news" />
-<!-- main style sheet -->
-<?php if(isset($newscss)){?>
-	<link href="<?=base_url();?>assets/css/news.css" rel="stylesheet" type="text/css" />
-	<?php }?>
-<?php if(isset($cinemacss)){?>
-	<link href="<?=base_url();?>assets/css/cinema.css" rel="stylesheet" type="text/css" />
-	<?php }?>
-    <link  href="<?=base_url();?>assets/css/black.css" rel="stylesheet" type="text/css" />
-	<link id="theme" href="<?=base_url();?>assets/css/blue.css" rel="stylesheet" type="text/css" /> 
-<?php if(isset($gallerycss)){?>
-	<link href="<?=base_url();?>assets/css/gallery.css" rel="stylesheet" type="text/css"/>
-<?php }?>
+
 <!-- color box js and css -->
 	<link href="<?=base_url();?>assets/css/colorbox.css" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="<?=base_url()?>assets/java-script/jquery.min.js"></script>
@@ -57,11 +42,27 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
 		</script>
 <!-- end color box js and css -->
 
+<link REL="SHORTCUT ICON" HREF="<?=base_url();?>assets/favicon.ico">
+<!-- for rss feeds -->
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?=base_url()?>feeds/news" />
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?=base_url();?>feeds/news" />
+<!-- main style sheet -->
+<?php if(isset($newscss)){?>
+	<link href="<?=base_url();?>assets/css/news.css" rel="stylesheet" type="text/css" />
+	<?php }?>
+<?php if(isset($cinemacss)){?>
+	<link href="<?=base_url();?>assets/css/cinema.css" rel="stylesheet" type="text/css" />
+	<?php }?>
+    <link  href="<?=base_url();?>assets/css/black.css" rel="stylesheet" type="text/css" />
+	<link id="theme" href="<?=base_url();?>assets/css/blue.css" rel="stylesheet" type="text/css" /> 
+<?php if(isset($gallerycss)){?>
+	<link href="<?=base_url();?>assets/css/gallery.css" rel="stylesheet" type="text/css"/>
+<?php }?>
 <!-- video and greeting page side menu -->
 	<link herf="<?=base_url()?>assets/css/video.css" rel="stylesheet" type="text/css"/>
 	<link href="<?=base_url()?>assets/css/videomenu.css" rel="stylehett" type="text/css"/>
 <!-- for tabs js ans css -->
-	<script src="<?=base_url();?>assets/jq.tabs/jquery-1.1.3.1.pack.js" type="text/javascript"></script>
+<?php if(isset($tabscss)){?>
 	<script src="<?=base_url();?>assets/jq.tabs/jquery.history_remote.pack.js" type="text/javascript"></script>
 	<script src="<?=base_url();?>assets/jq.tabs/jquery.tabs.pack.js" type="text/javascript"></script>
 	<script type="text/javascript">
@@ -72,6 +73,7 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
                 $('#container-4').tabs({ remote: true ,fxShow: { height: 'show', opacity: 'show' }, fxSpeed: 'normal' });
 			});
 	</script>
+	<?php }?>
 <!-- change theme colors js -->
 	<script type="text/javascript">
 				var csslink ="assets/css";
@@ -248,7 +250,7 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
         	<div style="width: 80px;float: left;">
         		<span id="sample_attach_menu_parent" class="sample_attach" style="color: #FFF;"><?=$this->lang->line('more');?> </span>
 				<span id="sample_attach_menu_child" style="font-size: 14px;">
-				<a class="sample_attach" href="<?=base_url()?>special_sub"><?=$this->lang->line('subh_spec');?></a>
+				<a class="sample_attach" href="<?=base_url()?>news/details/9"><?=$this->lang->line('subh_spec');?></a>
 				<a class="sample_attach" href="<?=base_url()?>sex"><?=$this->lang->line('srungaram');?></a>
 				<a class="sample_attach" href="<?=base_url()?>astrolagy"><?=$this->lang->line('bavishyam');?></a>
 				<a class="sample_attach" href=""><?=$this->lang->line('sangitham');?></a>

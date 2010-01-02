@@ -156,35 +156,14 @@ class News_lib{
 	}
 	function news_content($news_cat)
 	{
-		if($news_cat!=0 && $news_cat!=9){
+		
 			$more_news=$this->CI->lang->line('marinni_visheshalu');
 			$most_read_news=$this->most_read_news($news_cat);
 			$thaja_varhta=$this->thaja_vartha($news_cat);
 			$link=base_url()."news/newsdetails/";
 			$image_link=base_url().'assets/news/news_img'.$thaja_varhta[0]->id.'_thumb.jpg';
 			$list='newslist';
-		}else {
-			switch ($news_cat)
-			{
-				case 0:
-					$more_news=$this->CI->lang->line('marinni_visheshalu');
-					$most_read_news=$this->most_subho_news();
-					$thaja_varhta=$this->sub_thaja_vartha();
-					$image_link=base_url().'assets/special_newsimg/news_img'.$thaja_varhta[0]->id.'_thumb.jpg';
-					$link=base_url()."special_sub/inner/";
-					$list='newslist';
-					break;
-				case 9:
-					$more_news=$this->CI->lang->line('marinni_visheshalu');
-					$most_read_news=$this->most_sex_news();
-					$thaja_varhta=$this->sex_thaja_vartha();
-					$image_link=base_url().'assets/srungaram/news_img'.$thaja_varhta[0]->id.'_thumb.jpg';
-					$link=base_url()."sex/inner/";
-					$list='newslist';
-					$news_cat=0;
-					break;
-			}
-		}
+			$cat_name=$most_read_news[0]->news_cat;
 				$data = array(
 						'most_read_news'=>	$most_read_news ,
 						'thaja_varhta'	=>	$thaja_varhta,
@@ -192,7 +171,8 @@ class News_lib{
 						'link'			=>	$link,
 						'image_link'	=>	$image_link,
 						'list'			=>	$list,
-						'cat_id'		=>	$news_cat
+						'cat_id'		=>	$news_cat,
+						'cat_name'		=>	$cat_name
 		);
 		return $this->CI->load->view('news/news_content',$data,TRUE);
 	}
@@ -204,7 +184,7 @@ class News_lib{
 		$link=base_url()."cinema/inner/";
 		$image_link=base_url().'assets/cinema/ceni_img'.$thaja_varhta[0]->id.'_thumb.jpg';
 		$list='cinemalist';
-		
+		$cat_name=$most_read_news[0]->cinema_type;
 				$data = array(
 						'data' 			=> 'somtext',
 						'sub_heading'	=> $cine_cat,
@@ -214,7 +194,8 @@ class News_lib{
 						'link'			=>  $link,
 						'image_link'	=>  $image_link,
 						'list'			=>	$list,
-						'cat_id'		=>	$cine_cat
+						'cat_id'		=>	$cine_cat,
+						'cat_name'		=>	$cat_name
 		);
 		return $this->CI->load->view('news/news_content',$data,TRUE);
 	}
@@ -226,6 +207,7 @@ class News_lib{
 		$link=base_url()."mahila/mahiladetails/";
 		$image_link=base_url().'assets/mahila/ceni_img'.$thaja_varhta[0]->id.'_thumb.jpg';
 		$list='mahilalist';
+		$cat_name=$most_read_news[0]->cat_name;
 				$data = array(
 						'most_read_news'	=>	$most_read_news,
 						'thaja_varhta'	=>	$thaja_varhta,
@@ -233,7 +215,8 @@ class News_lib{
 						'link'			=>  $link,
 						'image_link'	=>  $image_link,
 						'list'			=>	$list,
-						'cat_id'		=>	$mahila_cat
+						'cat_id'		=>	$mahila_cat,
+						'cat_name'		=>	$cat_name
 		);
 		return $this->CI->load->view('news/news_content',$data,TRUE);
 	}
@@ -245,6 +228,7 @@ class News_lib{
 		$link=base_url()."sahithi/sahithidetails/";
 		$image_link=base_url().'assets/sahithi/ceni_img'.$thaja_varhta[0]->id.'_thumb.jpg';
 		$list='sahithilist';
+		$cat_name=$most_read_news[0]->cat_name;
 				$data = array(
 						'most_read_news'	=>	$most_read_news,
 						'thaja_varhta'	=>	$thaja_varhta,
@@ -252,7 +236,8 @@ class News_lib{
 						'link'			=>  $link,
 						'image_link'	=>  $image_link,
 						'list'			=>	$list,
-						'cat_id'		=>	$sahithi_cat
+						'cat_id'		=>	$sahithi_cat,
+						'cat_name'		=>	$cat_name
 		);
 		return $this->CI->load->view('news/news_content',$data,TRUE);
 	}
@@ -263,11 +248,13 @@ class News_lib{
 		$link=base_url()."assets/news/";
 		$this->insert_views($id);
 		$more_news=$this->more_news($cat_id);
+		$cat_name=$temp[0]->news_cat;
 		$data=array(
 			'details' => $temp,
 			'link'	  => $link,
 			'realtion'=> $realtion,
-			'morenews'=> $more_news
+			'morenews'=> $more_news,
+			'cat_name'=> $cat_name
 		);
 		return $this->CI->load->view('news/news_inner',$data,TRUE);
 	}
@@ -279,6 +266,7 @@ class News_lib{
 		$link=base_url()."assets/cinema/";
 		$more_news=$this->active_cinema_news($cat_id);
 		$this->CI->load->model('ratings_model', 'ratings');
+		$cat_name=$temp[0]->cinema_type;
 		if($cat_id==3){
 		$rating=1;
 		}else 
@@ -288,7 +276,8 @@ class News_lib{
 			'link'	  => $link,
 			'realtion'=> $realtion,
 			'morenews'=> $more_news,
-			'rating'  => $rating
+			'rating'  => $rating,
+			'cat_name'=> $cat_name
 		);
 		return $this->CI->load->view('news/news_inner',$data,TRUE);
 	}
@@ -299,11 +288,13 @@ class News_lib{
 		$realtion=$this->mahila_realtion_news($cat_id);
 		$link=base_url()."assets/mahila/";
 		$more_news=$this->mahila_active_news($cat_id);
+		$cat_name=$temp[0]->cat_name;
 		$data=array(
 			'details' => $temp,
 			'link'	  => $link,
 			'realtion'=> $realtion,
-			'morenews'=> $more_news
+			'morenews'=> $more_news,
+			'cat_name'=> $cat_name
 		);
 		return $this->CI->load->view('news/news_inner',$data,TRUE);
 	}
@@ -314,11 +305,13 @@ class News_lib{
 		$realtion=$this->sahithi_realtion_news($cat_id);
 		$link=base_url()."assets/sahithi/";
 		$more_news=$this->sahithi_active_news($cat_id);
+		$cat_name=$temp[0]->cat_name;
 		$data=array(
 			'details' => $temp,
 			'link'	  => $link,
 			'realtion'=> $realtion,
-			'morenews'=> $more_news
+			'morenews'=> $more_news,
+			'cat_name'=> $cat_name
 		);
 		return $this->CI->load->view('news/news_inner',$data,TRUE);
 	}
@@ -447,7 +440,7 @@ class News_lib{
 	}
 	function cinema_realtion_news($cat_id)
 	{
-	$details=$this->CI->Cinema_Model->get_cinematype($cat_id);
+	$details=$this->CI->Cinema_Model->get_cinematype($cat_id,0);
 	return $details;
 	}
 	function active_cinema_news($cat_id)

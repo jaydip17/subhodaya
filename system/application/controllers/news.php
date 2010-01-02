@@ -7,6 +7,7 @@ class News extends Controller {
 	}
 	function index()
 	{
+		//$keywords=$this->lang->line();
 		$photo_gallery = $this->home->photo_gallery('');
 		$videos= $this->home->video_block('');
 		$rasriyam= $this->news_lib->news_block($this->lang->line('news_rasriyam'));
@@ -18,8 +19,6 @@ class News extends Controller {
 		$main_news=$this->news_lib->news_main('');
 		$thaja_varhta=$this->News_Model->thaja_news();
 		$newscss=array();
-		//$current_url = current_url();
-		//$navigation = array ($current_url);
 		/*$segments = array(	'seg1' => $this->uri->segment(1,0),
 						   	'seg2' => $this->uri->segment(2,0),
 							'seg3' => $this->uri->segment(3,0),
@@ -48,13 +47,15 @@ class News extends Controller {
 	function details()
 	{
 		$newscss=array();
+		$more=$this->News_Model->more_news();
 		$type=$this->uri->segment(3);
+		$keywords=$this->lang->line('newscat'.$type);
 		//$setier=$this->news_lib->news_left($this->lang->line('news_setier'));
 		$news_content=$this->news_lib->news_content($type);
 		$onload = "loadNews('content','".base_url()."newslist/listview/".$type."')";
 		/*$type=$this->uri->segment(3);
 		$onload = "loadNews('content','".base_url()."newslist/listview/".$type."')";
-		$more=$this->News_Model->more_news();
+		
 		$type=$this->uri->segment(3,0);
 		$active_news=$this->News_Model->active_news1();
 		$totel_rows=$this->News_Model->get_news($type,$count=true,$limit=0);
@@ -70,7 +71,7 @@ class News extends Controller {
 		if(empty($news)){
 			redirect(base_url().'news');
 		}*/
-	/*	$segments = array(	'seg1' => $this->uri->segment(1,0),
+		$segments = array(	'seg1' => $this->uri->segment(1,0),
 						   	'seg2' => $this->uri->segment(2,0),
 							'seg3' => $this->uri->segment(3,0),
 							'seg4' => $this->uri->segment(4,0),
@@ -78,33 +79,25 @@ class News extends Controller {
 							'main' => $more['3']->matter,
 							'home' => $more['2']->matter
 		); 
-		$bread_crumb = $this->bread_crumb->get_code($segments);*/
-		//print_r($active_news4);
-		$data=array(	/*'news'  		   =>	$news,
-						'more'			   =>	$more,
-						'active_news'	   =>	$active_news,
-						'mahila_details'   =>   $mahila_details,
-						'mahila_details1'  =>   $mahila_details1,
-						'active_news1'     =>	$active_news1,
-						'active_news2'	   =>	$active_news2,
-						'active_news3'	   =>	$active_news3,
-						'active_news4'	   =>   $active_news4,
-						'mahila_details2'  =>	$mahila_details2,
-						'tabs'			   =>  $tabs*/
-						'newscss'		  	=> $newscss,
-						//'setier'			=> $setier,
-						'news_content'		=> $news_content,
-						'onload'    	   => 	$onload,	
-						
+		$bread_crumb = $this->bread_crumb->get_code($segments);
+		
+		$data=array(
+						'newscss'		  	=> 	$newscss,
+						'news_content'		=> 	$news_content,
+						'onload'    	   	=> 	$onload,	
+						'bread_crumb'		=>  $bread_crumb
 				);
 		$this->load->view("news_content",$data);
 	}
 	function newsdetails()
-	{   
+	{  
+		$more=$this->News_Model->more_news();
 		$id=$this->uri->segment(3,0);
 		$type=$this->uri->segment(4,0);
 		$news_inner=$this->news_lib->news_inner($id,$type);
 		$newscss=array();
+		$result=$this->News_Model->inner_news($id);
+		$heading=$result[0]->heading;
 		//for subhodaya special news
 	/*	$seg=$this->uri->segment(5,0);
 		if($seg==1){
@@ -112,10 +105,9 @@ class News extends Controller {
 		
 			$engheading=$result['0']->eng_heading;	
 			$image_path="assets/special_newsimg";
-			$heading=$result[0]->heading;
 		}else
 		{
-			$result=$this->News_Model->inner_news($id);
+			
 			if(empty($result))
 			{
 	   		redirect(base_url().'news');
@@ -162,27 +154,21 @@ class News extends Controller {
 		$bread_crumb = $this->bread_crumb->get_code($segments);*/
 		//print_r($segments);	
 		
-		
+		$segments = array(	'seg1' => $this->uri->segment(1,0),
+						   	'seg2' => $this->uri->segment(2,0),
+							'seg3' => $this->uri->segment(3,0),
+							'seg4' => $this->uri->segment(4,0),
+							'seg5' => $this->uri->segment(5,0),
+							'heading' => $heading,
+							'main' => $more['3']->matter,
+							'home' => $more['2']->matter,
+		); 		
+		$bread_crumb = $this->bread_crumb->get_code($segments);
 		
 		$data=array(
 				'news_inner'		=>	 $news_inner,
 				'newscss'			=>	 $newscss,
-				/*'result'   		=>   $result,
-					 'more'    		=>   $more,
-				'cinema_type1' 		=>   $cinema_type1,
-				'mahila_details'	=>	 $mahila_details,
-				'cinema_type5'		=>	 $cinema_type5,
-				'cinema_type3'		=>   $cinema_type3,
-				'news'				=>	 $news,
-				'news_cat'			=>	 $news_cat,
-		          'video_result'    => 	 $video_result,
 				'bread_crumb' 		=> 	 $bread_crumb,
-				'telegu_typing'		=>	 $telegu_typing,
-				'engheading'		=>	 $engheading,
-				'image_path'		=>	 $image_path,
-				'comments'			=>	 $comments,
-				'seg'				=>	 $seg,
-				'res'				=>   $res*/
 				);	
 		$this->load->view('news_inner',$data);
 	}

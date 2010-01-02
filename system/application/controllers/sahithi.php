@@ -69,9 +69,10 @@ class Sahithi extends Controller {
    }
    function sahithidetails()
    {
-   	
-  		 $id=$this->uri->segment(3,0);
+   		$more=$this->News_Model->more_news();
+  		$id=$this->uri->segment(3,0);
 		$type=$this->uri->segment(4,0);
+		$result=$this->Sahithi_Model->inner_sahithi($id);
 		$sahithi_inner=$this->news_lib->sahithi_inner($id,$type);
 		$newscss=array();
 		/*$cate=$this->db->get_where('sahithi_cat',array('id'=>$type));	
@@ -79,7 +80,7 @@ class Sahithi extends Controller {
 		if(empty($sahithicate)){
 			redirect(base_url().'sahithi');
 		}
-		$result=$this->Sahithi_Model->inner_sahithi($id);
+		
 		if(empty($result)){
 			redirect(base_url().'sahithi');
 		}
@@ -104,7 +105,10 @@ class Sahithi extends Controller {
 	     $videos=$this->Video_Model->get_videos('top',2);
 	   	  
 	     $video_result=$videos->result();
-	     $segments = array(	'seg1' => $this->uri->segment(1,0),
+	   
+		
+	    $telegu_typing=array();*/
+		  $segments = array('seg1' => $this->uri->segment(1,0),
 						   	'seg2' => $this->uri->segment(2,0),
 							'seg3' => $this->uri->segment(3,0),
 							'seg4' => $this->uri->segment(4,0),
@@ -114,22 +118,9 @@ class Sahithi extends Controller {
 	     				  'heading'=> $result[0]->heading
 		); 
 		$bread_crumb = $this->bread_crumb->get_code($segments);
-		
-	    $telegu_typing=array();*/
-	    $data=array(/*'result'   	=>  $result,
-					 'more'    	=>  $more,
-				'cinema_type1' 	=>  $cinema_type1,
-		        'details'   	=>  $details,
-		        'evenmore'  	=>	$evenmore,
-		        'details_more'  => 	$details_more,
-		         'type'			=>	'sahithi',
-		         'link' 		=>	'mahila',
-		          'video_result'=>  $video_result,
-	              'news_type2'  =>	$news_type2,
-	             'key'         	=>  $key,
-	    		'telegu_typing'	=>	$telegu_typing,
-	    		'bread_crumb'	=>	$bread_crumb*/
-	    		'news_inner' =>	$sahithi_inner,
+	    $data=array(
+	   			'bread_crumb' 	=>	$bread_crumb,
+	    		'news_inner' 	=>	$sahithi_inner,
 	    		'newscss'		=>	$newscss
 				);
 				
@@ -137,6 +128,7 @@ class Sahithi extends Controller {
 	}
    function details()
    {
+   	$more=$this->News_Model->more_news();
    	$type=$this->uri->segment(3,0);
    	$onload = "loadNews('content','".base_url()."sahithilist/listview/".$type."')";
    	$sahithi_content=$this->news_lib->sahithi_content($type);
@@ -163,7 +155,7 @@ class Sahithi extends Controller {
 			redirect(base_url().'sahithi');
 		}
 		$details_sahithi=$this->Sahithi_Model->get_sahithitype();
-		$tabs=array();
+		$tabs=array();*/
 		 $segments = array(	'seg1' => $this->uri->segment(1,0),
 						   	'seg2' => $this->uri->segment(2,0),
 							'seg3' => $this->uri->segment(3,0),
@@ -172,7 +164,7 @@ class Sahithi extends Controller {
 							'main' => $more['9']->matter,
 							'home' => $more['2']->matter,
 		); 
-		$bread_crumb = $this->bread_crumb->get_code($segments);*/
+		$bread_crumb = $this->bread_crumb->get_code($segments);
 		
 		$data=array(	/*'news'  	=>	$sahithi,
 						'more'		=>	$more,
@@ -184,8 +176,8 @@ class Sahithi extends Controller {
 		               'type'		=>	'sahithi',
 		              'cinemapoll'  =>  $cinemapoll,
 				'details_sahithi'	=>	$details_sahithi,
-				'tabs'             	=> 	$tabs,
-				'bread_crumb'		=>	$bread_crumb*/
+				'tabs'             	=> 	$tabs,*/
+				'bread_crumb'		=>	$bread_crumb,
 				      'onload' 		=>	$onload,
 				'news_content'		=>	$sahithi_content,
 				'newscss'			=>	$newscss

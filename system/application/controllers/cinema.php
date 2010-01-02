@@ -121,7 +121,7 @@ class Cinema extends Controller {
 		//print_r($sahithi);
 		$tabs=array();
 		//$current_url = current_url();
-		//$navigation = array ($current_url);
+		//$navigation = array ($current_url);*/
 		$segments = array(	'seg1' => $this->uri->segment(1,0),
 						   	'seg2' => $this->uri->segment(2,0),
 							'seg3' => $this->uri->segment(3,0),
@@ -130,26 +130,28 @@ class Cinema extends Controller {
 							'main' => $more['4']->matter,
 							'home' => $more['2']->matter,
 		); 
-		$bread_crumb = $this->bread_crumb->get_code($segments);*/
+		$bread_crumb = $this->bread_crumb->get_code($segments);
 		$data=array('more'			=>	$more,
 					'result'		=>	$result,
 					'onload' 		=> 	$onload,
 					'news_content'	=>	$cinema_content,
-					'newscss'		=>	$newscss
+					'newscss'		=>	$newscss,
+					'bread_crumb'	=>	$bread_crumb
 		);
 		$this->load->view('news_content',$data);
 	}
 	function inner()
 	{
+		$more=$this->News_Model->more_news();
 		$id=$this->uri->segment(3,0);
 		$type=$this->uri->segment(4,0);
 		$cinema_inner=$this->news_lib->cinema_inner($id,$type);
 		$newscss=array();
-		
-	/*	$more=$this->News_Model->more_news();
+		$result=$this->Cinema_Model->inner($id);
+	/*	
 		$news_type4=$this->News_Model->get_newstype1(4);
 		$result1=$this->Cinema_Model->get_all($type);
-		$result=$this->Cinema_Model->inner($id);
+		
 		if(empty($result)){
 			redirect(base_url().'cinema');
 		}
@@ -171,7 +173,7 @@ class Cinema extends Controller {
 		$cinemacate=$cate->result();
 		if(empty($cinemacate)){
 			redirect(base_url().'cinema');
-		}
+		}*/
 		$segments = array(	'seg1' => $this->uri->segment(1,0),
 						   	'seg2' => $this->uri->segment(2,0),
 							'seg3' => $this->uri->segment(3,0),
@@ -181,19 +183,9 @@ class Cinema extends Controller {
 							'main' => $more['4']->matter,
 							'home' => $more['2']->matter,
 		); 
-		$bread_crumb = $this->bread_crumb->get_code($segments);*/
-		$data=array(/*'more'   		 => $more,
-					'result' 		 => $result,
-					'news_type4'	 => $news_type4,
-					'mahila_details' =>	$mahila_details,
-					'cinema_cat'	 => $cinema_cat,
-					'news_type2'	 =>	$news_type2,
-					'mahila_details1'=>	$mahila_details1,
-					'result1'		 => $result1,
-		          'video_result'     =>  $video_result,
-					'telegu_typing'	 =>	$telegu_typing,
+		$bread_crumb = $this->bread_crumb->get_code($segments);
+		$data=array(
 					'bread_crumb'	 => $bread_crumb,
-					'engheading'	 => $engheading*/
 					'news_inner'	 =>	$cinema_inner,
 					'newscss'		 =>	$newscss,	
 					);

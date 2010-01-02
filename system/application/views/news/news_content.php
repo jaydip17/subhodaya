@@ -1,6 +1,6 @@
 <div>
 	<div style="width:641px ;height:77px;float: left;text-align: left;">
-		<div style="padding-left: 10px;">links</div>
+		<div style="padding-left: 10px;font-size:large"><?=$cat_name?></div>
 		<div style="padding-left: 10px;height: 20px;"><span style="font-size: 17px;"></span></div>
 		<div id="hr"><hr style="border: 1px solid #cee2ed;width: 95%" /></div>
 		<div>

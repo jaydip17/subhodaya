@@ -44,10 +44,12 @@ class Sahithi extends Controller {
 		}
 		$type=$this->input->post('type');
 		$heading=$this->input->post('heading');
+		$engheading=$this->input->post('engheading');
 		$summary=$this->input->post('summary');
 		$description=$this->input->post('description');
 		$data=array('cat_id'    => $type,
 					'heading' => $heading,
+		            'engheading' => $engheading,
 					'summary' => $summary,
 				'description' => $description,
 				'homepage'=> $homepage,

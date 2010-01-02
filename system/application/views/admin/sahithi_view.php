@@ -23,6 +23,13 @@ if(isset($message) && !is_array($message) ) echo($message);?>
 		<!--<td align="left"><?=form_input('heading') ?></td>-->
 		<td><textarea rows="2" cols="40" name="heading" id="heading"></textarea></td>
 	</tr>
+	
+	<tr>
+		<td>English heading</td>
+		
+		<td><textarea rows="2" cols="40" name="engheading" id="heading"></textarea></td>
+	</tr>
+	
 	<tr>
 		<td>Summary</td>
 		<td style="text-align: left;">

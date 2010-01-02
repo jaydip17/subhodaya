@@ -20,6 +20,15 @@ if(isset($message) && !is_array($message) ) echo($message);?>
 		<?=form_hidden('id',$edit['0']->id) ?>
 		<td align="left"><?=form_input('heading',$edit['0']->heading) ?></td>
 	</tr>
+	
+	<tr>
+		<td>English heading</td>
+		<?=form_hidden('cat_id',$edit['0']->cat_id) ?>
+		<?=form_hidden('id',$edit['0']->id) ?>
+		<td align="left"><?=form_input('engheading',$edit['0']->engheading) ?></td>
+	</tr>
+	
+	
 	<tr>
 		<td>Summary</td>
 		<td style="text-align: left;">

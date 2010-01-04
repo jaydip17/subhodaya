@@ -31,6 +31,13 @@ if(isset($message) && !is_array($message) ) echo($message);?>
 			<textarea rows="3" cols="60" id="description" name="description"><?=$edit['0']->description ?></textarea> 
 		</td>
 	</tr>
+	
+	<tr>
+		<td>Active</td>
+		<td align="left"><?=form_checkbox('active','1') ?></td>
+	</tr>
+		
+	
 	<tr>
 		<td colspan="2" align="right"><?=form_submit('save','Save') ?></td>
 	</tr>

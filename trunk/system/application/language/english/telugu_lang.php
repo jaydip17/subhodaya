@@ -70,7 +70,9 @@ $lang['sahi_kavithalu'] 			    	= 	"కవితలు";
 $lang['sahi_kavithm'] 			    		= 	"కవిత్వం";
 $lang['sahi_janapadam'] 			    	= 	"జానపదాలు";
 $lang['sahi_vyasam'] 			    		= 	"వ్యాసం";
-
+//email
+$lang['name']								=	"మీ పేరు";
+$lang['message']							=	"మీ మెసేజ్ ";
 
 
 

@@ -557,7 +557,7 @@ margin-top:2px;
 	color: #275666;
 	font-weight: bold;
 }
-.pages {
+.pages1 {
 	font-weight: bold;
 	text-align: left;
 	margin-right: 5px;
@@ -574,5 +574,22 @@ font-size: 13px;
 {
 	width:560px;float:left; margin-left:5px;border:1px solid #808080;
 	border-top: 0px;
+}
+#gree_td td
+{
+	border-top: 1px solid #808080;
+ 	border-right: 1px solid #808080;
+ 	padding-left: 10px;
+ 	height: 30px;
+	font-size: 12px;
+}
+#gree_td
+{
+	border-left: 1px solid #808080;
+	border-bottom: 1px solid #808080;
+}
+#gree_inner
+{
+float: left;text-align: center;width:650px;border: 1px solid #808080;margin-left: 5px;
 }
 

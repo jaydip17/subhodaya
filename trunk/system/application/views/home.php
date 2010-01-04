@@ -1,4 +1,4 @@
-<div  style="background-color:#fff; float:right; width:100%;">
+<div  style="background-color:#fff; float:left; width:100%;">
 					<div id="left_content" style="width:165px;margin-left:4px; float:left">
 						<?= (isset($special_block)) ? $special_block : '' ?>
 						<?= (isset($home_poll)) ? $home_poll : '' ?>

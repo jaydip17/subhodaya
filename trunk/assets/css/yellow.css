@@ -550,7 +550,7 @@ margin-top:2px;
 {
 	float: right;width: 40%;text-align: right;padding-right: 5px;
 }
-.pages {
+.pages1 {
 	font-weight: bold;
 	text-align: left;
 	margin-right: 5px;
@@ -571,5 +571,22 @@ font-size: 13px;
 #paginate_div a{
 	color:#205461;
 	font-weight: bold;
+}
+#gree_td td
+{
+	border-top: 1px solid #CFB811;
+ 	border-right: 1px solid #CFB811;
+ 	padding-left: 10px;
+ 	height: 30px;
+	font-size: 12px;
+}
+#gree_td
+{
+	border-left: 1px solid #CFB811;
+	border-bottom: 1px solid #CFB811;
+}
+#gree_inner
+{
+float: left;text-align: center;width:650px;border: 1px solid #CFB811;margin-left: 5px;
 }
 	

@@ -8,7 +8,7 @@ class Subhodaya extends Controller {
 	function index(){
 		$tabscss=array();
 		//for telugu content
-			$more=$this->News_Model->more_news();
+		$more=$this->News_Model->more_news();
 		$cini_vishesm=$this->lang->line('cini_vishesm');
 		$cini_pukarlu=$this->lang->line('cini_pukarlu');
 		//news
@@ -35,7 +35,7 @@ class Subhodaya extends Controller {
 		$reviews_block = $this->home->reviews_block($this->lang->line('reviews'));
 		$middle_block = $this->home->middle_block($this->lang->line('eenati_vishe'));
 		$home_poll = $this->home->home_poll($this->lang->line('homepoll'));
-		
+		$breaking=$this->News_Model->breaking_news1();
 		/*$news_type7=$this->News_Model->get_newstype1(7);
 		$active_news=$this->News_Model->active_news(2);
 		$active_news1=$this->News_Model->active_news(1);
@@ -122,6 +122,7 @@ class Subhodaya extends Controller {
 		//mahila
 					'mahila'			=>	$mahila,
 						'more'   	 	=>  $more,
+					'breaking'			=>	$breaking
 					
 					);
 		$this->load->view('home',$data);

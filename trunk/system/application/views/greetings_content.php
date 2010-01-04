@@ -180,15 +180,15 @@ else
 <?endforeach; ?>
 				-->
 	<div style="width:100%; float:left">
-					<div style="width:144px; height:350px; float:left;">
-					 <div id="greet_menu">
-		<ul style="list-style: none;padding: 0px;margin: 0px;">
-		    <li id="categori"></li>
-		    <?php foreach ($type as $cat):?>
-			<li id="gree_m"><a href="<?=base_url()?>greetings/content/<?=$cat->id?>"><?=$cat->gree_cat?></a></li>
-			<?php endforeach;?>
-		</ul>
-	</div>
+		<div style="width:144px; height:350px; float:left;">
+						<div id="greet_menu">
+							<ul style="list-style: none;padding: 0px;margin: 0px;">
+							    <li id="categori"></li>
+							    <?php foreach ($type as $cat):?>
+								<li id="gree_m"><a href="<?=base_url()?>greetings/content/<?=$cat->id?>"><?=$cat->gree_cat?></a></li>
+								<?php endforeach;?>
+							</ul>
+			</div>
 					</div>
 					 <div   style="float:right; height:100%;"><img src="<?=base_url()?>assets/home_images/ads/mahila_ad1.jpg" width="243" height="194" />
 					   <div   ><img src="<?=base_url()?>assets/home_images/ads/mahila_ad.jpg" width="243" height="487" /></div>

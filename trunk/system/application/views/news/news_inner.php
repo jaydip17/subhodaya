@@ -1,9 +1,8 @@
 <script type="text/javascript">
 function toggle(el)
 {
-	alert('hi');
-myEl = document.getElementById(el);
-myEl.style.display = (myEl.style.display == 'block') ? 'none' : 'block';
+	myEl = document.getElementById(el);
+	myEl.style.display = (myEl.style.display == 'block') ? 'none' : 'block';
 }
 function toggle1(el,ee)
 {
@@ -160,19 +159,19 @@ display:inline;
 			 if($count==1){$count++;continue;}
 			?>
 				<div style="float: left;width:151px;padding-top: 4px;text-align: center;margin: 1px 0px 2px 1px;">
-					<img src="<?=base_url()?>assets/news/news_img<?=$row->id?>_thumb.jpg" id="img"/><br>
-					<a href=""><?=$row->heading?></a>
+					<a href="<?=$hed_link?><?=$row->id?>/<?=$cat_id?>/<?=$row->eng_heading?>"><img src="<?=base_url()?>assets/news/news_img<?=$row->id?>_thumb.jpg" id="img" style="float: none"/></a></br>
+					<a style="font-size: 12px" href="<?=$hed_link?><?=$row->id?>/<?=$cat_id?>/<?=$row->eng_heading?>"><?=$row->heading?></a>
 				</div>	
 			<? if($count==3){break;}else{$count++;}endforeach; if($count==0){echo 'No data found';}?>
 			</div>
-			<div style="height: 24px;background-color: #6A90A5;color: #FFF;font-size: 15px;">User Comments</div>
+			<div style="height: 24px;background-color: #6A90A5;color: #FFF;font-size: 15px;text-align: left;">User Comments</div>
 			<div style="height: 26px;">
 				<div style="float: left;padding-left: 10px;">
 					<a href="javascript:void(0)" onclick="return toggle('b');">Post your Comment</a>
 				</div>
-				<div style="float: right;"><a href="javascript:void(0)" onclick="return toggle('b');">[View All Comments(0)]</a></div>
+				<div style="float: right;"><a href="javascript:void(0)" onclick="return toggle('a');">[View All Comments(<?=$total_com?>)]</a></div>
 			</div>
-			<div style="border: 1px solid gray;margin-top: 5px;display: none;" id='a'>
+			<div style="border: 1px solid gray;margin:5px 0px 5px 0px;display: none;" id='a'>
 						<?php if(!empty($comments)){
 							foreach ($comments as $comment){?>
 							<div style="border: 0px solid #B4DCE6;margin: 5px;background-color:#F9F8F3 ">
@@ -186,13 +185,18 @@ display:inline;
 							echo 'No Comments for this artical';
 						}
 						?>
-						
 			</div>
 			<div style="height: 153px;border: 1px solid #6A90A5;">
-				<form>
+				<form action="<?=base_url()?>news/comments" method="post">
 				<table width="90%" cellpadding="5">
-					<tr><td align="left" width="20%">name</td><td><input type="text" name="name"/></td></tr>
-					<tr><td align="left">name</td><td><textarea style="width: 220px;height: 65px"></textarea></td></tr>
+				<input type="hidden" name="type" value="<?=$type?>">
+				<input type="hidden" name="url" value="<?=current_url()?>">
+				<input type="hidden" name="newsid" value="<?=$details[0]->id?>">
+					<tr><td align="left" width="20%"><?=$this->lang->line('name')?></td><td><?=form_input('name')?></td></tr>
+					<?php $data=array('rows'=>2,
+									  'cols'=>30,
+									'name' =>'message')?>
+					<tr><td align="left"><?=$this->lang->line('message')?></td><td><?=form_textarea($data)?></td></tr>
 					<tr><td colspan="2" align="right"><input type="submit" name="submit" value="Submit"/><input type="reset" name="reset" value="Reset"/></td></tr>
 				</table>
 				</form>
@@ -205,7 +209,7 @@ display:inline;
 		<div style="text-align: left;">
 		<ul style="padding-top: 35px;">
 		<?php foreach ($morenews as $row):?>
-			<li><a href=""><?=$row->heading?></a></li>
+			<li><a href="<?=$hed_link?><?=$row->id?>/<?=$cat_id?>/<?=$row->eng_heading?>"><?=$row->heading?></a></li>
 			<?php endforeach;?>
 		</ul>
 		</div>

@@ -174,25 +174,24 @@ class News extends Controller {
 	}
 	function comments()
 	{
-			if(isset($_POST['email'])){
-			 $email=$_POST['email'];
-			 $name=$this->input->post('name');
-			 $message=$this->input->post('message');
-			 $newsid=$this->input->post('newsid');
+		
+			$name=$this->input->post('name');
+			$message=$this->input->post('message');
+			$newsid=$this->input->post('newsid');
 			$current_url=$this->input->post('url');
+			$type=$this->input->post('type');
 			 $data=array(
+			 		'news_type'	 => $type,
 			 		'newsid' => $newsid,
 			 		'name'   => $name,
-			 		'mailid'  => $email,
 			 		'comment'=> $message,
 			 		
 			 );
+			
 			$result=$this->db->insert('comments',$data);
 			if($result==1){
 				redirect($current_url);
 			}
-		}
-		
 	}
 }
 ?>

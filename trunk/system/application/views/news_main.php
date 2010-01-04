@@ -56,12 +56,12 @@
 					<div id="hr_div"><hr id="hrline"></hr></div>
 					<div id="rastiya">
 						<div id="gallery" style="padding-left:10px;">
-							<span>gallery</span>
+							<span><?=$this->lang->line('gallery')?></span>
 							<?= (isset($photo_gallery)) ? $photo_gallery : '' ?>
 							<div style="float:right;"><!--<img src="<?=base_url()?>assets/image/line.gif" height="165px;"/>--></div>
 							</div>
 						<div id="gallery" style="padding-left:10px;">
-							<span>videos</span>
+							<span><?=$this->lang->line('videos')?></span>
 							<?= (isset($videos)) ? $videos : '' ?>
 						</div>
 						</div>

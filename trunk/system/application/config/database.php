@@ -37,9 +37,9 @@
 $active_group = "default";
 $active_record = TRUE;
 $db['default']['hostname'] = "localhost";
-$db['default']['username'] = "root";
-$db['default']['password'] = "";
-$db['default']['database'] = "subhodaya";
+$db['default']['username'] = "techpund_subhoda";
+$db['default']['password'] = ";*.Q<6>:";
+$db['default']['database'] = "techpund_suhodaya";
 $db['default']['dbdriver'] = "mysql";
 $db['default']['dbprefix'] = "";
 $db['default']['pconnect'] = TRUE;

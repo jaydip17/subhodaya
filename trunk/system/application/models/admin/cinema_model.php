@@ -23,6 +23,7 @@ class Cinema_Model extends Model {
     	$data=array('heading'=>$_POST['heading'],
   					'summary'=>$_POST["summary"],
   					'description'=>$_POST["description"],
+    	             'active'   =>$_POST['active'],
   					);
   		$this->db->where('id',$id);	
   		$this->db->update('cinema',$data);		

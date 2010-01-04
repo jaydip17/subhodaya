@@ -122,7 +122,7 @@ class Greetings extends Controller {
   }
   function inner()
   {
-  	
+  	$cat=$this->Greeting_Model->get_type();
   	$id=$this->uri->segment(3,0);
   	$type=$this->uri->segment(4,0);
   	$this->Greeting_Model->get_views($id);
@@ -155,7 +155,8 @@ class Greetings extends Controller {
   	$data=array('more'			=>	$more,
   				'result'		=>	$result,
   				'telegu_typing'	=>	$telegu_typing,
-  				'bread_crumb'	=>  $bread_crumb
+  				'bread_crumb'	=>  $bread_crumb,
+  				'cat'			=>	$cat
   	);
   	$this->load->view('greetings_inner',$data);
   }

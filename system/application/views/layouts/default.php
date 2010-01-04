@@ -206,8 +206,8 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
 <?php } ?>
 <body onload="<? if(isset($onload)) echo $onload; ?>">
 <center>
-<div style="width:963px; background-color:#fff;border:0px dotted #000">
-	<div id="header" style="border:0px solid #ccc; margin-bottom:0px;float:left;background-color:#fff; width:100%">
+<div style="width:963px; background-color:#fff;border:0px dotted #000;">
+	<div id="header" style="border:0px solid #ccc; margin-bottom:0px;float:left;background-color:#fff; width:100%;float: left;">
 		<div id="change_lang" style="height:34px">
 			<div id="make_myhome" style="float:left;margin-top:5px;margin-bottom:5px;">
 				<a href="" style="color:#646464; margin-left:5px;font-size:13px">Make Subhodaya.com! my home page</a>
@@ -271,10 +271,10 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
             </div>
           	</div>
 		</div>
-		<div style="height:25px;background-color:#FDF7D5;margin-bottom:5px;">
-					<script language="JavaScript1.2">
+		<div style="float: left;width: 100%;text-align: left;height: 25px;background-color: #FDF7D5;margin-top: 0px; padding-top: 0px;">
+		<script language="JavaScript1.2">
 //Specify the marquee's width (in pixels)
-var marqueewidth = "930px"
+var marqueewidth = "960px"
 //Specify the marquee's height
 var marqueeheight="25px"
 //Specify the marquee's marquee speed (larger is faster 1-10)
@@ -287,7 +287,12 @@ var pauseit=1
 //Keep all content on ONE line, and backslash any single quotations (ie: that\'s great):
 
 var marqueecontent='<nobr><span style="font: bold 14px Verdana">';
-	marqueecontent+="<?php foreach ($activenews as $news){?>**<a href='<?=base_url();?>news/newsdetails/<?=$news->id?>/<?=$news->type?>'><?php echo $news->heading;?></a><?} ?>";
+	marqueecontent+="<?php $count=0; foreach ($breaking as $news){
+		if($count==0){
+			echo '';
+		}else echo '|';
+	?>
+	 <a href='<?=base_url();?>news/newsdetails/<?=$news->id?>/<?=$news->type?>'><?php echo $news->heading;?></a><? $count++;} ?>";
 	marqueecontent+="</span></nobr>";
 
 ////NO NEED TO EDIT BELOW THIS LINE////////////
@@ -352,7 +357,8 @@ document.write('</td></table>')
 }
 }
 </script>
-					</div>
+</div>
+		
 <?=(isset($bread_crumb)) ? $bread_crumb : '' ?>
 {yield}
 <div id="hr" style="background-color:#fff; float:left; width:100%">
@@ -426,6 +432,8 @@ document.write('</td></table>')
 			<a href="<?=base_url()?>contact/advertise" class="advertise" title="Advertise With Us">Advertise</a>
 		</div>
 	</div>
+</div>
+</div>
 </div>
 </center>  
 

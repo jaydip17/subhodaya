@@ -545,3 +545,20 @@ font-weight: bold;
 	width:560px;float:left; margin-left:5px;border:1px solid #6AB770;
 	border-top: 0px;
 }
+#gree_td td
+{
+	border-top: 1px solid #6AB770;
+ 	border-right: 1px solid #6AB770;
+ 	padding-left: 10px;
+ 	height: 30px;
+	font-size: 12px;
+}
+#gree_td
+{
+	border-left: 1px solid #6AB770;
+	border-bottom: 1px solid #6AB770;
+}
+#gree_inner
+{
+float: left;text-align: center;width:650px;border: 1px solid #6AB770;margin-left: 5px;
+}

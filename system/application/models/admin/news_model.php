@@ -154,14 +154,17 @@ class News_Model extends Model
     
     //comments news
  	
-    function get_comments($id){
-    	$this->db->where('newsid',$id);
+    function get_comments($type,$id){
+    	$arrary=array('newsid'=>$id,'news_type'=>$type);
+    	$this->db->where($arrary);
     	$this->db->limit(5);
     	$this->db->order_by('id','desc');
     	$result=$this->db->get('comments');
     	return $result->result();
     }
-	function count_comments($id){
+	function count_comments($type,$id){
+		$arrary=array('newsid'=>$id,'news_type'=>$type);
+		$this->db->where($arrary);
 		$this->db->like('newsid', $id);
 		$this->db->from('comments');
 		$res=$this->db->count_all_results();
@@ -180,6 +183,15 @@ class News_Model extends Model
 	function breaking_news($news_cat)
 	{
 		$array=array('breking_news'=>1,'type'=>$news_cat);
+		$this->db->where($array);
+		$this->db->order_by('id','desc');
+		$this->db->limit(8);
+		$query=$this->db->get('news');
+		return $query->result();	
+	}
+ 	function breaking_news1()
+	{
+		$array=array('breking_news'=>1);
 		$this->db->where($array);
 		$this->db->order_by('id','desc');
 		$this->db->limit(8);

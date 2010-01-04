@@ -249,12 +249,21 @@ class News_lib{
 		$this->insert_views($id);
 		$more_news=$this->more_news($cat_id);
 		$cat_name=$temp[0]->news_cat;
+		$type='news';
+		$comments=$this->get_comments($type,$id);
+		$total_com=$this->count_comments($type,$id);
+		$hed_link=base_url().'news/newsdetails/';
 		$data=array(
-			'details' => $temp,
-			'link'	  => $link,
-			'realtion'=> $realtion,
-			'morenews'=> $more_news,
-			'cat_name'=> $cat_name
+			'details' 	=> $temp,
+			'link'	  	=> $link,
+			'realtion'	=> $realtion,
+			'morenews'	=> $more_news,
+			'cat_name'	=> $cat_name,
+			'type'	 	=> $type,
+			'comments'	=> $comments,
+			'total_com'	=> $total_com,
+			'hed_link'	=> $hed_link,
+			'cat_id'    => $cat_id
 		);
 		return $this->CI->load->view('news/news_inner',$data,TRUE);
 	}
@@ -271,13 +280,22 @@ class News_lib{
 		$rating=1;
 		}else 
 		$rating=0;
+		$type='cinema';
+		$comments=$this->get_comments($type,$id);
+		$total_com=$this->count_comments($type,$id);
+		$hed_link=base_url().'cinema/inner/';
 		$data=array(
 			'details' => $temp,
 			'link'	  => $link,
 			'realtion'=> $realtion,
 			'morenews'=> $more_news,
 			'rating'  => $rating,
-			'cat_name'=> $cat_name
+			'cat_name'=> $cat_name,
+			'type'	  => $type,
+			'comments'=> $comments,
+			'total_com'=>$total_com,
+			'hed_link'=> $hed_link,
+			'cat_id'  => $cat_id
 		);
 		return $this->CI->load->view('news/news_inner',$data,TRUE);
 	}
@@ -289,12 +307,21 @@ class News_lib{
 		$link=base_url()."assets/mahila/";
 		$more_news=$this->mahila_active_news($cat_id);
 		$cat_name=$temp[0]->cat_name;
+		$type='mahila';
+		$comments=$this->get_comments($type,$id);
+		$total_com=$this->count_comments($type,$id);
+		$hed_link=base_url().'mahila/mahiladetails/';
 		$data=array(
 			'details' => $temp,
 			'link'	  => $link,
 			'realtion'=> $realtion,
 			'morenews'=> $more_news,
-			'cat_name'=> $cat_name
+			'cat_name'=> $cat_name,
+			'type'	  => $type,
+			'comments'=> $comments,
+			'total_com'=>$total_com,
+			'hed_link'=> $hed_link,
+			'cat_id'  => $cat_id
 		);
 		return $this->CI->load->view('news/news_inner',$data,TRUE);
 	}
@@ -306,26 +333,24 @@ class News_lib{
 		$link=base_url()."assets/sahithi/";
 		$more_news=$this->sahithi_active_news($cat_id);
 		$cat_name=$temp[0]->cat_name;
+		$type='sahithi';
+		$comments=$this->get_comments($type,$id);
+		$total_com=$this->count_comments($type,$id);
+		$hed_link=base_url().'sahithi/sahithidetails/';
 		$data=array(
 			'details' => $temp,
 			'link'	  => $link,
 			'realtion'=> $realtion,
 			'morenews'=> $more_news,
-			'cat_name'=> $cat_name
+			'cat_name'=> $cat_name,
+			'type'	  => $type,
+			'comments'=> $comments,
+			'total_com'=>$total_com,
+			'hed_link'=> $hed_link,
+			'cat_id'  => $cat_id
 		);
 		return $this->CI->load->view('news/news_inner',$data,TRUE);
-	}
-	function specila_inner()
-	{
-		$data=array();
-		return $this->CI->load->view('news/news_inner',$data,TRUE);
-	}
-	function srungaram_inner()
-	{
-		$data=array();
-		return $this->CI->load->view('news/news_inner',$data,TRUE);
-	}
-	
+	}	
 //news main page
 	function get_rastiya()
 	{
@@ -515,6 +540,17 @@ class News_lib{
 	function sex_thaja_vartha()
 	{
 		$details=$this->CI->Srungaram_Model->sex_thaja_vartha(0);
+		return $details;
+	}
+//get comments
+	function get_comments($type,$id)
+	{
+		$details=$this->CI->News_Model->get_comments($type,$id);
+		return $details;
+	}
+	function count_comments($type,$id)
+	{
+		$details=$this->CI->News_Model->count_comments($type,$id);
 		return $details;
 	}
 }

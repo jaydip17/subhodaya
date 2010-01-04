@@ -141,8 +141,6 @@ class contact extends Controller {
 			$this->session->set_flashdata('message1',$mess);
 			redirect(base_url().'contact');
 			}
-			
-			
 			if(isset($_POST['company'])){
 			$company=$_POST['company'];
 			$this->session->set_flashdata('comp',$company);
@@ -222,8 +220,13 @@ class contact extends Controller {
 		}
 		function email_send()
 		{
-			
-			$this->load->view('email_view');
+			$message = $this->session->flashdata('message');
+			$data=array('message'=>$message);
+			$this->load->view('email_view',$data);
+		}
+		function newsmail_send()
+		{
+			redirect(base_url().'contact/message_sent');
 		}
 	function send_mail($to,$subject,$message,$from,$from_name)
 	 {

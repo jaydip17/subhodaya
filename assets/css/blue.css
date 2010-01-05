@@ -267,7 +267,7 @@ padding: 0;
 float: left;
 font:  14px Arial;
 overflow: hidden;
-margin-bottom: 1em;
+margin-bottom: 0em;
 border-width: 0px 0;
 }
 
@@ -402,7 +402,6 @@ color: rgb(190, 191, 59);
     padding: 0 0 0 20px;
     background: url(../image/loading.gif) no-repeat 0 50%;
 }
-	
 #question{
 	background-image: url(../image/123.png);
 	background-repeat: no-repeat;
@@ -466,8 +465,6 @@ greet_menu ul {
 	border-size: 0px;
 	border-width: 0px;
 	padding-left: 2px;
-
-
 	}
 	
 #greet_menu li a {
@@ -587,3 +584,14 @@ font-size: 13px;
 {
 float: left;text-align: center;width:650px;border: 1px solid #cee2ec;margin-left: 5px;
 }
+#sc_div
+ {
+ float: left;width: 100%;text-align: left;height: 25px;background-color: #FDF7D5;margin-top: -5px; padding-top: -10px;
+ }
+ #sc_div a
+ {
+ font-size: 14px;
+ font-weight: normal;
+ color:#000000;
+ letter-spacing: 1px;
+ }

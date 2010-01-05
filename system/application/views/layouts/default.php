@@ -271,7 +271,7 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
             </div>
           	</div>
 		</div>
-		<div style="float: left;width: 100%;text-align: left;height: 25px;background-color: #FDF7D5;margin-top: 0px; padding-top: 0px;">
+		<div id="sc_div">
 		<script language="JavaScript1.2">
 //Specify the marquee's width (in pixels)
 var marqueewidth = "960px"

@@ -48,6 +48,7 @@ class Sahithi_Model extends Model {
     {
     	
     	$data=array('heading'=>$_POST['heading'],
+    	             'eng_heading'=>$_POST['engheading'],
   					'summary'=>$_POST["summary"],
   					'description'=>$_POST["description"],
   					'homepage'=>$homepage

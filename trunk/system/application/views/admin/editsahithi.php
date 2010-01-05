@@ -25,7 +25,7 @@ if(isset($message) && !is_array($message) ) echo($message);?>
 		<td>English heading</td>
 		<?=form_hidden('cat_id',$edit['0']->cat_id) ?>
 		<?=form_hidden('id',$edit['0']->id) ?>
-		<td align="left"><?=form_input('engheading',$edit['0']->engheading) ?></td>
+		<td align="left"><?=form_input('engheading',$edit['0']->eng_heading) ?></td>
 	</tr>
 	
 	

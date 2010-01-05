@@ -42,12 +42,12 @@ class Mahila extends Controller {
 		}
 		$cat_id=$this->input->post('cat_id');
 		$heading=$this->input->post('heading');
-		$engheading=$this->input->post('engheading');
+		$eng_heading=$this->input->post('engheading');
 		$summary=$this->input->post('summary');
 		$description=$this->input->post('description');
 		$data=array('cat_id'    => $cat_id,
 		            'heading' => $heading,
-					'engheading' => $engheading,
+					'eng_heading' => $eng_heading,
 					'summary' => $summary,
 				'description' => $description,
 				'homepage'=> $homepage,

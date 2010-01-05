@@ -122,7 +122,7 @@ class Subhodaya extends Controller {
 		//mahila
 					'mahila'			=>	$mahila,
 						'more'   	 	=>  $more,
-					'breaking'			=>	$breaking
+					'breaking'			=>	$breaking,
 					
 					);
 		$this->load->view('home',$data);

@@ -44,12 +44,12 @@ class Sahithi extends Controller {
 		}
 		$type=$this->input->post('type');
 		$heading=$this->input->post('heading');
-		$engheading=$this->input->post('engheading');
+		$eng_heading=$this->input->post('engheading');
 		$summary=$this->input->post('summary');
 		$description=$this->input->post('description');
 		$data=array('cat_id'    => $type,
 					'heading' => $heading,
-		            'engheading' => $engheading,
+		            'eng_heading' => $eng_heading,
 					'summary' => $summary,
 				'description' => $description,
 				'homepage'=> $homepage,
@@ -213,7 +213,7 @@ class Sahithi extends Controller {
 		$data=array(
 							'jslinks'   => $links,
 							'message'	=> $message,
-		                    'edit'      =>  $edit
+		                    'edit'      => $edit
 		);
 		$this->load->view('admin/editsahithi',$data);
 	}

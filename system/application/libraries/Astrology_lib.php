@@ -55,10 +55,11 @@ class Astrology_lib{
 	}
 	function rasi_block($cat_id)
 	{
+		
 		$rasi_details=array();
 		$type=$this->get_astrolagytype();
 		$rasi=$this->get_rasi();
-		print_r($rasi);
+		$rasi_in=$this->this_rasi($cat_id);
 			$day=$this->get_day_details($cat_id,1);
 			$month=$this->get_month_details($cat_id,3);
 			$week=$this->get_week_details($cat_id,2);
@@ -67,11 +68,13 @@ class Astrology_lib{
 			$rasi_details[0]->month=$month[0]->description;
 			$rasi_details[0]->week=$week[0]->description;
 			$rasi_details[0]->year=$year[0]->description;
+			//print_r($week);
 			$data=array(
 				'types'			=>	$type,
 				'rasi'			=>	$rasi,
 				'rasi_details'  =>  $rasi_details,
-				'cat_id'		=>	$cat_id
+				'cat_id'		=>	$cat_id,
+				'rasi_in'		=>	$rasi_in
 			);
 		return $this->CI->load->view('cinema/rasi_block',$data,TRUE);
 	}
@@ -109,7 +112,7 @@ class Astrology_lib{
 		$d=mdate($da);
 		$date=mktime(0,0,0,$m,$d,$y);
 		$week = (int)date('W', $date);
-		$week1=$week-1;
+		$week1=$week;
 		$day_details=$this->CI->Astrolagy_Model->get_week_details($as_cat,$week1,$id);
 		return $day_details;
 	}
@@ -126,6 +129,12 @@ class Astrology_lib{
 		$m=mdate($mo);
 		$month_details=$this->CI->Astrolagy_Model->get_year_details($cat_id,$m,$id);
 		return $month_details;
+	}
+	function this_rasi($cat_id)
+	{
+		$details=$this->CI->Astrolagy_Model->this_rasi($cat_id);
+		//print_r($details);
+		return $details;
 	}
 	
 }

@@ -7,20 +7,27 @@ class Videos extends Controller {
 	}
 	function index()
 	{
+		$breaking=$this->News_Model->breaking_news1();
 		$newscss=array();
+		$more=$this->News_Model->more_news();
 		$video_cat= $this->Video_Model->getvideocategeories();
 		$latestvideos = $this->Video_Model->get_videos('latest',24);
+		$title=$this->lang->line('video_title').$more['7']->matter;
+		$description=$this->lang->line('video_descrip');
 		//print_r($latestvideos);
 		$data=array(
 			'newscss'		=>	$newscss,
 			'type'			=>	$video_cat,
-			'latestvideos'	=>	$latestvideos
-		
+			'latestvideos'	=>	$latestvideos,
+			'title'			=>	$title,
+			'description'	=>	$description,
+			'breaking'		=>	$breaking
 		);
 		$this->load->view('video_view',$data);
 	}
 	function content()
 	{
+		$breaking=$this->News_Model->breaking_news1();
 		$newscss=array();
 		$video_cat= $this->Video_Model->getvideocategeories();
 		$id=$this->uri->segment(3,0);
@@ -42,13 +49,14 @@ class Videos extends Controller {
 			'newscss'		=>	$newscss,
 			'type'			=>	$video_cat,
 			'paginate'		=>	$paginate,
-		'latestvideos'		=>  $hotvideos
-		
+		'latestvideos'		=>  $hotvideos,
+			'breaking'		=>	$breaking
 		);
 		$this->load->view('video_view',$data);
 	}
 	function playvideo()
 	{
+		$breaking=$this->News_Model->breaking_news1();
 		$newscss=array();
 		$id=$this->uri->segment(3,0);
 		$cat_id=$this->uri->segment(4,0);
@@ -104,7 +112,8 @@ class Videos extends Controller {
 				'videoplay'		=>	$jslinks,
 				'topvideos' 	=>	$topvideos,
 				'thisvideo'		=>	$thisvideo,
-				'paginate'		=>	$paginate
+				'paginate'		=>	$paginate,
+				'breaking'		=>	$breaking
 		);
 		
 		 $this->load->view('video_play',$data);

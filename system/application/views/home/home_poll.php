@@ -25,14 +25,15 @@
 										<div id=""><a href="" style="color:#FF0000; text-decoration:none">Yesterday's Poll</a></div>
 									</div>
 									</div>
-									<div style="float:left;height:46px; width:47px">
+									<!--<div style="float:left;height:46px; width:47px">
 										<a href="#">
 											<img style="margin:0px 0px 0px 0px; " src="<?=base_url()?>assets/image/vote.png" border="0">
 										</a>
+									<a href="<?=base_url()?>home_poll/details">More</a>
 									</div>
+								--></div>
+								<div style="height: 15px;text-align: right;font-size: 11px;padding-right: 5px;"><a href="<?=base_url()?>home_poll/details">More</a></div>
 								</div>
-								<div style="height: 15px;text-align: right;font-size: 11px;padding-right: 5px;"><a href="<?=base_url()?>home_poll">More</a></div>
-							</div>
 							
 							<div id="news_window_footer" style="height:9px;width:100%" align="left">
 								

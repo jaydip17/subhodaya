@@ -12,8 +12,9 @@ class Poll_Model extends Model {
 		return $result->result();
 	}
 	function get_newspolls($type,$active){
-		if(empty($active)){
-		$active=0;
+		if(empty($active))
+		{
+			$active=0;
 		}
 		$datestring = " %Y-%m-%d ";
 		$today=mdate($datestring);
@@ -161,8 +162,9 @@ class Poll_Model extends Model {
 	{
 			if(isset($limit) && $limit>=0 )
   	   			{
-  	  				$this->db->limit(5,$limit);
+  	  				$this->db->limit(6,$limit);
   	    		}
+  	    $this->db->order_by("poll.id", "desc");
 		$result=$this->db->get('poll');
 		return $result->result();
 	}

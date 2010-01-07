@@ -2,11 +2,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-<title>Subhodaya.com | Leaders In Telugu News | AP Politics On The Net|<?php if(isset($engheading)){echo $engheading;}?></title>	
+<?php if(isset($title)){?>
+<title><?=$title?></title>	
+<?php }else{?>
+<title><?=$this->lang->line('home_title')?></title>	
+<?php }?>
+<?php if(isset($description)){?>
+<title><?=$description?></title>	
+<?php }else{?>
+<title><?=$this->lang->line('home_descrip')?></title>	
+<?php }?>
 <meta http-equiv=Content-Type content="text/html; charset=iso-8859-1">	
 <meta name=ROBOTS content="INDEX,FOLLOW">	
-<meta name="Description" content="Subhodaya.com, Leaders In Telugu News, AP Politics On The Net" />	
 <meta name="Keywords" content="subhodaya.com, leaders in telugu news, Latest Telugu News, Telugu News Website, Telugu Cinema News, Telugu Cinema Website, Telugu Mahila, Telugu Cinema Gallery, Telugu News On The Net,  Telugu Movie Trailers, Telugu Sahithi,
 The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting Cards" />	
 <meta name="copyright" content=" 2009 Subhodaya.com" />	
@@ -67,10 +74,15 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
 	<script src="<?=base_url();?>assets/jq.tabs/jquery.tabs.pack.js" type="text/javascript"></script>
 	<script type="text/javascript">
             $(function() {
-                $('#container-1').tabs({ remote: true ,fxShow: { height: 'show', opacity: 'show' }, 		fxSpeed: 'normal' });
+            	 $('#container-1').tabs({remote: true}); 
+            	 $('#container-2').tabs({remote: true}); 
+            	 $('#container-3').tabs({remote: true}); 
+            	 $('#container-4').tabs({remote: true}); 
+            	/* $('#container-1').tabs({remote: true}); 
+                $('#container-10').tabs({ remote: true ,fxShow: { height: 'show', opacity: 'show' }, fxSpeed: 'normal' });
                 $('#container-2').tabs({ remote: true ,fxShow: { height: 'show', opacity: 'show' }, fxSpeed: 'normal' });
                 $('#container-3').tabs({ remote: true ,fxShow: { height: 'show', opacity: 'show' }, fxSpeed: 'normal' });
-                $('#container-4').tabs({ remote: true ,fxShow: { height: 'show', opacity: 'show' }, fxSpeed: 'normal' });
+                $('#container-4').tabs({ remote: true ,fxShow: { height: 'show', opacity: 'show' }, fxSpeed: 'normal' });*/
 			});
 	</script>
 	<?php }?>
@@ -210,24 +222,26 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
 	<div id="header" style="border:0px solid #ccc; margin-bottom:0px;float:left;background-color:#fff; width:100%;float: left;">
 		<div id="change_lang" style="height:34px">
 			<div id="make_myhome" style="float:left;margin-top:5px;margin-bottom:5px;">
-				<a href="" style="color:#646464; margin-left:5px;font-size:13px">Make Subhodaya.com! my home page</a>
-			</div>
+			<a href="#" onClick="this.style.behavior='url(#default#homepage)'; this.setHomePage('http://www.subhodaya.com');" style="color:#646464; margin-left:5px;font-size:13px">Make 
+			<span style="color:#05AEF1;font-weight:bold">Subhodaya</span><span style="color:#FE0000; font-weight:bold">.</span><span style="color:#016CB4; font-weight:bold">com!</span>
+			 my home page</a>
+				<!--<a href="javascript:setasHome()" style="color:#646464; margin-left:5px;font-size:13px">Make Subhodaya.com! my home page</a>
+			--></div>
 			<div id="language" style="color:#3398FF;margin-top:5px;margin-right:5px;margin-bottom:5px; font-size:13px;float:right">
 				<font style="color:#646464">Change Language: </font>
-				<a href="http://english.subhodaya.com/" id="ln">English</a>|
-				<a href="http://hindi.subhodaya.com/" id="ln">Hindi</a>|
-				<a href="" id="ln">Tamil</a>|
-				<a href="" id="ln">Telugu</a>|
-				<a href="" id="ln">Unknown</a>|
-				<a href="" id="ln">Punjabi</a>|
-				<a href="" id="ln">Unknown</a>|
-				<a href="" id="ln">Kannada</a>|
-				<a href="" id="ln">Marati</a>|
+				<a href="http://english.subhodaya.com/" id="ln" target="_blank">English</a>|
+				<a href="http://hindhi.subhodaya.com/" id="ln" target="_blank"> हिन्दी </a>|
+				<a href="" id="ln">தமிழ்</a>|
+				<a href="" id="ln">ગુજરાતી </a>|
+				<a href="" id="ln"> ਪੰਜਾਬੀ </a>|
+				<a href="" id="ln"> తెలుగు </a>|
+				<a href="" id="ln">ಕನ್ನಡ</a>|
+				<a href="" id="ln">मराठी </a>|
 				<a href="" id="ln">Malayalam</a>
 			</div>
 		</div>
 		<div id="logo_add" style="height:80px; margin-left:5px;margin-bottom:5px">
-			<a href="#" style="float:left">
+			<a href="<?=base_url()?>" style="float:left">
 					<div id="logo"></div>
 			</a>
 			<a href="#" style="float:right; margin-right:5px;">
@@ -245,9 +259,12 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
             	<li><a href="<?=base_url()?>mahila"><?=$this->lang->line('mahila');?></a></li>
                 <li><a href="<?=base_url()?>sahithi"><?=$this->lang->line('sahithi');?></a></li>
                 <li><a href="<?=base_url()?>news/details/8"><?=$this->lang->line('news_kridalu');?></a></li>
+                <li><a href="<?=base_url()?>news/details/8"><?=$this->lang->line('srungaram');?></a></li>
+                <li><a href="<?=base_url()?>news/details/8"><?=$this->lang->line('sangitham');?></a></li>
+                <li><a href="<?=base_url()?>astrolagy" style="width: 50px;"><?=$this->lang->line('bavishyam');?></a></li>
            </ul>
         	<div id="ch_color">
-        	<div style="width: 80px;float: left;">
+        	<!--<div style="width: 80px;float: left;">
         		<span id="sample_attach_menu_parent" class="sample_attach" style="color: #FFF;"><?=$this->lang->line('more');?> </span>
 				<span id="sample_attach_menu_child" style="font-size: 14px;">
 				<a class="sample_attach" href="<?=base_url()?>news/details/9"><?=$this->lang->line('subh_spec');?></a>
@@ -260,7 +277,7 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
 				at_attach("sample_attach_menu_parent", "sample_attach_menu_child", "hover", "y", "pointer");
 				</script>
 			</div>
-			<div style="float: right;">
+			--><div style="float: right;">
               <span style="color:white;">Change color:</span>
               <span><img src="<?=base_url();?>assets/image/1cr.gif"  onclick="changeTheme('blue');" /></span>
               <span><img src="<?=base_url();?>assets/image/2cr.gif"  onclick="changeTheme('yellow');" /></span>
@@ -368,41 +385,41 @@ document.write('</td></table>')
 		</div>
 		<div style="width:100%; float:left">
 			<div id="" style="float:left; width:162px">
-				<span style="color:#FF0D16;font-size:16px"><u>News Partnars</u></span>
-				<div style="color:#0101FF;height:26px">Sakshi, Eenadu</div>
-				<div style="color:#0101FF;height:26px">Andhrajyothy,</div>
-				<div style="color:#0101FF;height:26px">Vaartha, Surya</div>
-				<div style="color:#0101FF;height:26px">Andhrabhoomi</div>
-				<div style="color:#0101FF;height:26px">Prajashakthi</div>
+				<span style="color:#FF0D16;font-size:16px"><b><?=$this->lang->line('news_partners')?></b></span>
+				<div style="color:#0101FF;height:26px;padding-top: 6px;"><?=$this->lang->line('sakshi')?>,<?=$this->lang->line('enadu')?></div>
+				<div style="color:#0101FF;height:24px"><?=$this->lang->line('andra_jothi')?></div>
+				<div style="color:#0101FF;height:24px"><?=$this->lang->line('vaartha')?>,<?=$this->lang->line('surya')?></div>
+				<div style="color:#0101FF;height:24px"><?=$this->lang->line('andra_bhomi')?></div>
+				<div style="color:#0101FF;height:24px"><?=$this->lang->line('praja_sakthi')?></div>
 			</div>
 			<div id="" style="float:left; width:200px">
-				<span style="color:#008000;font-size:16px"><u>TV Partnars</u></span>
-				<div style="color:#0101FF; height:26px">Sakshi, TV-9, NTV</div>
+				<span style="color:#008000;font-size:16px"><b><?=$this->lang->line('tv_partners')?></b></span>
+				<div style="color:#0101FF; height:26px;padding-top: 6px;"><?=$this->lang->line('sakshi')?>, TV-9, NTV</div>
 				<div style="color:#0101FF; height:26px">TV-5, i-NEWS	</div>
 				<div style="color:#0101FF; height:26px">ETV-2, HMTV</div>
 				<div style="color:#0101FF; height:26px">STUDIO N, TV-1</div>
-				<div style="color:#0101FF; height:26px">Maha TV, Z-24 Gantalu</div>
+				<div style="color:#0101FF; height:26px">Maha TV, Z-24 <?=$this->lang->line('hovers')?></div>
 			</div>
 			<div id="" style="float:left; width:220px">
-				<span style="color:#FF00FF; font-size:16px"><u>TV Programs</u></span>
-				<div style="color:#0101FF; line-height:25px">Sakshi, Gemini, ETV</div>
-				<div style="color:#0101FF;line-height:25px">Maa.TV, Z-Telugu</div>
-				<div style="color:#810081; margin-top:10px;font-size:16px"><u>Technical Partnars</u></div>
+				<span style="color:#FF00FF; font-size:16px;"><b><?=$this->lang->line('tv_programs')?></b></span>
+				<div style="color:#0101FF; line-height:25px;padding-top: 6px;"><?=$this->lang->line('sakshi')?></u>, <?=$this->lang->line('jemini')?></u>, <?=$this->lang->line('ee_tv')?></u></div>
+				<div style="color:#0101FF;line-height:25px"><?=$this->lang->line('maa_tv')?>, Z-<?=$this->lang->line('telugu')?></div>
+				<div style="color:#810081; margin:0px 0px 7px 0px;font-size:16px"><b><?=$this->lang->line('tech_partners')?></b></div>
 				<div style="margin-top:5px">
-					<a href="http://www.tech-pundits.com/">
+					<a href="http://www.tech-pundits.com/" target="_blank">
 						<img src="<?=base_url()?>assets/image/tech_pundits.jpg" border="0">
 					</a>
 				</div>
-				supports@tech-pundits.com
+				support@tech-pundits.com
 			</div>
 			<div id="" style="float:left;width:140px;">	
 				<div style="margin-top:10px; margin-bottom:10px">
 				<a href="#"><img src="<?=base_url()?>assets/image/facebook.jpg" border="0"></a>
 				</div>
-				<div><a href="#"><img src="<?=base_url()?>assets/image/rss.jpg" border="0"></a></div>
+				<div><a href="http://www.telugu.subhodaya.com/feeds/news" target="_blank"><img src="<?=base_url()?>assets/image/rss.jpg" border="0"></a></div>
 			</div>
 			<div id="" style="float:left;width:190px;">
-				<div><a href="#"><img src="<?=base_url()?>assets/image/twitter.jpg" border="0"></a></div>
+				<div><a href="http://teitter.com/login" target="_blank"><img src="<?=base_url()?>assets/image/twitter.jpg" border="0"></a></div>
 			</div>
 		</div>
 		<div id="" style="width:100%; float:left"><hr></hr></div>
@@ -411,7 +428,9 @@ document.write('</td></table>')
 <div id="footer" style="background-color:#fff;float:left; width:100%">
 	<div id="" style="color:#359BFF; height:25px">
 		<span style="color:#05AEF1;font-weight:bold">Subhodaya</span><span style="color:#FE0000; font-weight:bold">.</span><span style="color:#016CB4; font-weight:bold">com</span><span style="color:#2C5F96;font-weight:bold">! News In:</span>
-		English | Hindi | Tamil | Hujarathi | Punjabi | unknown | Kannada | Marati | Malayalam
+		<a href="http://english.subhodaya.com/" id="ln" target="_blank">English </a>|
+		<a href="http://hindhi.subhodaya.com/" id="ln" target="_blank"> हिन्दी |
+		 தமிழ் | ગુજરાતી | ਪੰਜਾਬੀ  | తెలుగు  | ಕನ್ನಡ | मराठी  | Malayalam
 	</div>
 	<div id="" style="color:#359BFF; height:25px">Sitemap | Feedback | Advertise With Us | Contact Us</div>
 	<div id="" style="color:#359BFF; height:25px">Copyright &copy; 2009. <span style="color:#05AEF1;font-weight:bold">Subhodaya</span><span style="color:#FE0000;font-weight:bold">.</span><span style="color:#016CB4;font-weight:bold">com</span> All rights reserved.</div>
@@ -419,17 +438,17 @@ document.write('</td></table>')
 		<div id="footer_left"></div>	
 		<div id="footer_right"></div>
 		<div style="line-height:30px;">
-			<a href="<?=base_url()?>">Home</a> |
-			<a href="<?=base_url()?>news"> Varthalu</a> |
-			<a href="<?=base_url()?>cinema">Cinema</a> |
-			<a href="<?=base_url()?>videos">Video</a> |
-			<a href="<?=base_url()?>gallery">Gallery</a> |
-			<a href="<?=base_url()?>greetings">Greetings</a> |
-			<a href="<?=base_url()?>mahila">Mahila</a> |
-			<a href="<?=base_url()?>sahithi">Sahithi</a> |
-			<a href="<?=base_url()?>contact" class="contact" title="Contact Us">Sampradinchu</a> |
-			<a class="feedback" href="<?=base_url()?>contact/feedback" title="Feedback">Feedback</a> |
-			<a href="<?=base_url()?>contact/advertise" class="advertise" title="Advertise With Us">Advertise</a>
+			<a href="<?=base_url()?>"><?=$this->lang->line('home')?></a> |
+			<a href="<?=base_url()?>news"><?=$this->lang->line('news')?></a> |
+			<a href="<?=base_url()?>cinema"><?=$this->lang->line('cinema')?></a> |
+			<a href="<?=base_url()?>videos"><?=$this->lang->line('videos')?></a> |
+			<a href="<?=base_url()?>gallery"><?=$this->lang->line('gallery')?></a> |
+			<a href="<?=base_url()?>greetings"><?=$this->lang->line('greetings')?></a> |
+			<a href="<?=base_url()?>mahila"><?=$this->lang->line('mahila')?></a> |
+			<a href="<?=base_url()?>sahithi"><?=$this->lang->line('sahithi')?></a> |
+			<a href="<?=base_url()?>contact" class="contact" title="Contact Us"><?=$this->lang->line('contact')?></a> |
+			<a class="feedback" href="<?=base_url()?>contact/feedback" title="Feedback"><?=$this->lang->line('feed_back')?></a> |
+			<a href="<?=base_url()?>contact/advertise" class="advertise" title="Advertise With Us"><?=$this->lang->line('advertise')?></a>
 		</div>
 	</div>
 </div>

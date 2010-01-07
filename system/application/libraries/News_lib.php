@@ -400,7 +400,7 @@ class News_lib{
 	}
 	function thaja_vartha($news_cat)
 	{
-		$details=$this->CI->News_Model->breaking_news($news_cat);
+		$details=$this->CI->News_Model->breaking_news($news_cat,8);
 		return $details;
 	}
 //cinema content
@@ -427,7 +427,7 @@ class News_lib{
 	}
 	function more_news($cat_id)
 	{
-		$details=$this->CI->News_Model->breaking_news($cat_id);
+		$details=$this->CI->News_Model->breaking_news($cat_id,15);
 		return $details;	
 	}
 	function insert_views($id)
@@ -470,7 +470,7 @@ class News_lib{
 	}
 	function active_cinema_news($cat_id)
 	{
-		$details=$this->CI->Cinema_Model->get_activenews1($cat_id);
+		$details=$this->CI->Cinema_Model->get_activenews1($cat_id,15);
 		return $details;
 	}
 	function insert_cinema_views($id)

@@ -88,7 +88,6 @@ function delete($id)
 	{
 		$array=array('display_date'=>$date,'astrolagy_cat'=>$astrolagy_cat);
 		$this->db->where($array);
-		//$this->db->select('description','astrolagy.id','astrolagy_types.id');
 		$this->db->from('astrolagy');
 		$this->db->join('astrolagy_types', 'astrolagy_types.id = astrolagy.astrolagy_type');
 		$query = $this->db->get();
@@ -124,7 +123,12 @@ function delete($id)
 		$result=$this->db->query($sql);
 		return $result->result();
 	}
-
+	function this_rasi($cat_id)
+	{
+		$this->db->where('id',$cat_id);
+		$query=$this->db->get('astrolagy_types');
+		return $query->result();
+	}
 	
 
  }

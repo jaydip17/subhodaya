@@ -44,9 +44,14 @@
 	<div style="float: left;width: 50%;height: 35px;">
 		<div style="text-align: left;padding-left: 25px;"><span style="font-size: 17px;"><?=$this->lang->line('marinni_visheshalu');?></span></div>
 	</div>
-	<div style="float: right;width: 50%;height: 35px;"><span>view</span>
+	<!--<div style="float: right;width: 50%;height: 35px;"><span>view</span>
 	<img src="<?=base_url();?>assets/imgs/LIN.png" style="cursor: pointer"onclick="loadNews('content','<?=base_url()?><?=$list?>/listview/<?=$cat_id?>')" />
     <img style="cursor: pointer; " src="<?=base_url();?>assets/imgs/FUL.png" onclick="loadNews('content','<?=base_url()?><?=$list?>/thumbview/<?=$cat_id?>')" />
+	</div>
+	-->
+	<div style="float: right;width: 50%;height: 35px;"><span>view</span>
+	<a href="javascript:loadNews('content','<?=base_url()?><?=$list?>/listview/<?=$cat_id?>')" style="cursor: pointer;border: 1px solid gray;color: gray;" >&nbsp;List&nbsp;</a>
+    <a href="javascript:loadNews('content','<?=base_url()?><?=$list?>/thumbview/<?=$cat_id?>')" style="cursor: pointer;border: 1px solid gray;color: gray;" >&nbsp;Gird&nbsp;</a>
 	</div>
 	<div id="divcontent">
 		<div style="margin: 200px 0px 0px 80px;border: 1px solid silver;height: 41px;width: 216px;">

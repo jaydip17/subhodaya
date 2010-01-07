@@ -274,7 +274,7 @@ border-width: 0px 0;
 .solidblockmenu li{
 display: inline;
 color: #FFF;
-width: 100px;
+width: 60px;
 }
 
 .solidblockmenu li a{
@@ -286,7 +286,7 @@ height:26px;
 color: #FFF;
 margin-top:7px;
 text-align: center;
-width: 45px;
+width: 42px;
 }
 
 .solidblockmenu li a:visited{
@@ -300,7 +300,7 @@ color: rgb(190, 191, 59);
 	margin-top:5px;
 	padding-right:4px;
 	color:#FFF;
-	width:400px;
+	width:200px;
 }
 /* newspage */
 /* Caution! Ensure accessibility in print and other media types... */
@@ -309,14 +309,12 @@ color: rgb(190, 191, 59);
         display: none;
     }
 }
-
 /* Hide useless elements in print layouts... */
 @media print {
     .tabs-nav {
         display: none;
     }
 }
-
 /* Skin */
 .tabs-nav {
     list-style: none;
@@ -423,7 +421,6 @@ float:right; width:560px; height:28px; text-align:left;
 	color: #275666;
 	font-weight: bold;
 }
-
 .top-menu {
 	font-family: Geneva, Arial, Helvetica, sans-serif;
 	font-size: 14px;
@@ -452,7 +449,6 @@ float:right; width:560px; height:28px; text-align:left;
 	float: left;
 	width: 174px;
 }
-
 greet_menu ul {
 	list-style: none;
 	margin: 0;
@@ -467,10 +463,7 @@ greet_menu ul {
 	border-size: 0px;
 	border-width: 0px;
 	padding-left: 2px;
-
-
 	}
-	
 #greet_menu li a {
 	height: 21px;
   	voice-family: "\"}\""; 
@@ -478,7 +471,6 @@ greet_menu ul {
 	text-decoration: none;
 	text-align: left;
 	}	
-	
 #greet_menu li a:link, #greet_menu li a:visited {
 	color: #225E73;
 	display: block;
@@ -486,8 +478,7 @@ greet_menu ul {
 	background-repeat:no-repeat;
 	padding:3px 0 0 30px;
 	text-align: left;
-	}
-	
+	}	
 #greet_menu li a:hover {
 	color: #000;
 	background: url(../image/hover2.jpg);
@@ -495,14 +486,12 @@ greet_menu ul {
 	padding:3px 0 0 30px;
 	text-align: left;
 	}
-	
 #greet_menu li a:active {
 	color: #26370A;
 	background: url(../image/li-img2.gif) repeat-x;
 	padding: 4px 0 0 30px;
 	text-align: left;
 	}
-
 .content #info3 #Left-footer {
 	background-image: url(../image/left-footer.jpg);
 	background-repeat: no-repeat;
@@ -525,8 +514,6 @@ greet_menu ul {
 	margin-bottom: auto;
 	margin-left: 10px;
 }
-
-
 .blood-header {
 	float: right;
 	padding-top: 2px;
@@ -594,3 +581,14 @@ color: #275666;
 {
 float: left;text-align: center;width:650px;border: 1px solid #AD6693;margin-left: 5px;
 }
+#sc_div
+ {
+ float: left;width: 100%;text-align: left;height: 25px;background-color: #FDF7D5;margin-top: -16px; padding-top: -10px;
+ }
+  #sc_div a
+ {
+ font-size: 14px;
+ font-weight: normal;
+ color:#000000;
+ letter-spacing: 1px;
+ }

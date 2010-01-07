@@ -344,11 +344,11 @@ $.fn.tabs = function(initial, settings) {
         if (settings.fxSlide || settings.fxFade) {
             if (settings.fxSlide) {
                 showAnim['height'] = 'show';
-                hideAnim['height'] = 'hide';
+                hideAnim['height'] = 'show';
             }
             if (settings.fxFade) {
                 showAnim['opacity'] = 'show';
-                hideAnim['opacity'] = 'hide';
+                hideAnim['opacity'] = 'show';
             }
         } else {
             if (settings.fxShow) {

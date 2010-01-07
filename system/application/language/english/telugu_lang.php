@@ -42,6 +42,7 @@ $lang['homepoll'] 			    			= 	"మీ అభిప్రాయం";
 $lang['yes'] 			    				= 	"అవును";
 $lang['no'] 			    				= 	"కాదు";
 $lang['yes_no'] 			    			= 	"చెప్పలేం";
+$lang['polls']								=	" పొల్ల్స్ ";
 //gallery
 $lang['photo_gallery'] 			    		= 	"ఫోటో గ్యాలరీ";
 $lang['gallery'] 			    			= 	"గ్యాలరీ";
@@ -73,9 +74,29 @@ $lang['sahi_vyasam'] 			    		= 	"వ్యాసం";
 //email
 $lang['name']								=	"మీ పేరు";
 $lang['message']							=	"మీ మెసేజ్ ";
-
-
-
+//footer
+$lang['contact']							=	"సంప్రదించు";
+$lang['feed_back']							=	"ఫీడ్ బ్యాక్ ";
+$lang['advertise']							=	"అడ్వర్ టైస్";
+//footer news partners
+$lang['news_partners']						=	"న్యూస్ పార్ట్ నర్స్";
+$lang['sakshi']								=	"సాక్షి";
+$lang['enadu']								=	"ఈనాడు";
+$lang['andra_jothi']						=	"ఆంధ్రజ్యోతి";
+$lang['vaartha']							=	"వార్త ";
+$lang['surya']								=	"సూర్య ";
+$lang['andra_bhomi']						=	"ఆంధ్రభూమి ";
+$lang['praja_sakthi']						=	"ప్రజా శక్తి";
+//footer tv partners
+$lang['tv_partners']						=	"టి.వి పార్ట్ నర్స్ ";
+$lang['hovers']								=	"గంటలు";
+// tv programers
+$lang['jemini']								=	"జెమిని ";
+$lang['ee_tv']								=	"ఈ టి.వి ";
+$lang['maa_tv']								=	"మా టి.వి ";
+$lang['tv_programs']						=	"టి.వి ప్రోగ్రాములు";
+$lang['tech_partners']						=	"టెక్నికల్ పార్ట్ నర్స్ ";
+$lang['telugu']								=	"తెలుగు";
 //heading for mails sending
 $lang['galley_mail_succ'] 					= 	"మెసేజ్ పంపబడింది ";
 $lang['gretting_mail_succ'] 				= 	"మెసేజ్ పంపబడింది";

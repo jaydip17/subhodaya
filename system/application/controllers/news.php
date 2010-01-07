@@ -7,7 +7,9 @@ class News extends Controller {
 	}
 	function index()
 	{
-		//$keywords=$this->lang->line();
+		$more=$this->News_Model->more_news();
+		$title=$this->lang->line('news_title').$more['3']->matter;
+		$description=$this->lang->line('news_descrip'); 
 		$photo_gallery = $this->home->photo_gallery('');
 		$videos= $this->home->video_block('');
 		$rasriyam= $this->news_lib->news_block($this->lang->line('news_rasriyam'));
@@ -19,6 +21,7 @@ class News extends Controller {
 		$main_news=$this->news_lib->news_main('');
 		$thaja_varhta=$this->News_Model->thaja_news();
 		$newscss=array();
+		$breaking=$this->News_Model->breaking_news1();
 		/*$segments = array(	'seg1' => $this->uri->segment(1,0),
 						   	'seg2' => $this->uri->segment(2,0),
 							'seg3' => $this->uri->segment(3,0),
@@ -40,16 +43,20 @@ class News extends Controller {
 					'ardikam'		  	=> $ardikam,
 					'setier'		 	=> $setier,
 					'main_news'			=> $main_news,
-					'thaja_varhta'		=> $thaja_varhta	
+					'thaja_varhta'		=> $thaja_varhta,
+					'title'				=> $title,
+					'description'		=> $description,
+					'breaking'			=>	$breaking
 		);
 		$this->load->view("news_main",$data);
 	}
 	function details()
 	{
 		$newscss=array();
+		$breaking=$this->News_Model->breaking_news1();
 		$more=$this->News_Model->more_news();
 		$type=$this->uri->segment(3);
-		$keywords=$this->lang->line('newscat'.$type);
+		$title=$this->lang->line('newscat'.$type);
 		//$setier=$this->news_lib->news_left($this->lang->line('news_setier'));
 		$news_content=$this->news_lib->news_content($type);
 		$onload = "loadNews('content','".base_url()."newslist/listview/".$type."')";
@@ -85,12 +92,15 @@ class News extends Controller {
 						'newscss'		  	=> 	$newscss,
 						'news_content'		=> 	$news_content,
 						'onload'    	   	=> 	$onload,	
-						'bread_crumb'		=>  $bread_crumb
+						'bread_crumb'		=>  $bread_crumb,
+						'title'				=>	$title,
+						'breaking'			=>	$breaking
 				);
 		$this->load->view("news_content",$data);
 	}
 	function newsdetails()
-	{  
+	{ 
+		$breaking=$this->News_Model->breaking_news1(); 
 		$more=$this->News_Model->more_news();
 		$id=$this->uri->segment(3,0);
 		$type=$this->uri->segment(4,0);
@@ -153,7 +163,7 @@ class News extends Controller {
 		); 		
 		$bread_crumb = $this->bread_crumb->get_code($segments);*/
 		//print_r($segments);	
-		
+		$keywords=$result[0]->eng_heading. ' | '.$heading;
 		$segments = array(	'seg1' => $this->uri->segment(1,0),
 						   	'seg2' => $this->uri->segment(2,0),
 							'seg3' => $this->uri->segment(3,0),
@@ -169,6 +179,8 @@ class News extends Controller {
 				'news_inner'		=>	 $news_inner,
 				'newscss'			=>	 $newscss,
 				'bread_crumb' 		=> 	 $bread_crumb,
+				'keywords'			=>	$keywords,
+				'breaking'			=>	$breaking
 				);	
 		$this->load->view('news_inner',$data);
 	}

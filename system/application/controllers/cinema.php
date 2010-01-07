@@ -7,6 +7,10 @@ class Cinema extends Controller {
 	}
 	function index()
 	{
+		$breaking=$this->News_Model->breaking_news1();
+		$more=$this->News_Model->more_news();
+		$title=$this->lang->line('cinema_title').$more['4']->matter;
+		$description=$this->lang->line('cinema_descrip'); 
 		$query=$this->Flash_model->get_flash_images();
 		$img=$query->result();
 		$newscss=array();
@@ -87,13 +91,17 @@ class Cinema extends Controller {
 						'cin_interviews'=>	$cin_interviews,
 						'cin_therachatu'=>	$cin_therachatu,
 						'cine_news'		=>	$cine_news,
-						'cinemapoll'	=>	$cinemapoll
+						'cinemapoll'	=>	$cinemapoll,
+						'title'			=>	$title,
+						'description'	=>	$description,
+						'breaking'		=>	$breaking
 						//'bread_crumb'  => $bread_crumb 
 		);
 		$this->load->view('cinema_view',$data);
 	}
 	function details()
 	{
+		$breaking=$this->News_Model->breaking_news1();
 		$newscss=array();
 		$type=$this->uri->segment(3);
 		$onload = "loadNews('content','".base_url()."cinemalist/listview/".$type."')";
@@ -104,6 +112,7 @@ class Cinema extends Controller {
 			redirect(base_url().'cinema');
 		}
 		$cinema_content=$this->news_lib->cinema_content($type);
+		$title=$this->lang->line('cine_cat'.$type);
 		/*//active news for side heaidngs
 		$active_news=$this->Cinema_Model->get_activenews();
 		//active news for tabs
@@ -136,12 +145,15 @@ class Cinema extends Controller {
 					'onload' 		=> 	$onload,
 					'news_content'	=>	$cinema_content,
 					'newscss'		=>	$newscss,
-					'bread_crumb'	=>	$bread_crumb
+					'bread_crumb'	=>	$bread_crumb,
+					'title'			=>	$title,
+					'breaking'		=>	$breaking
 		);
 		$this->load->view('news_content',$data);
 	}
 	function inner()
 	{
+		$breaking=$this->News_Model->breaking_news1();
 		$more=$this->News_Model->more_news();
 		$id=$this->uri->segment(3,0);
 		$type=$this->uri->segment(4,0);
@@ -174,6 +186,7 @@ class Cinema extends Controller {
 		if(empty($cinemacate)){
 			redirect(base_url().'cinema');
 		}*/
+		$title=$result[0]->eng_heading. ' | '. $result[0]->heading;
 		$segments = array(	'seg1' => $this->uri->segment(1,0),
 						   	'seg2' => $this->uri->segment(2,0),
 							'seg3' => $this->uri->segment(3,0),
@@ -187,7 +200,9 @@ class Cinema extends Controller {
 		$data=array(
 					'bread_crumb'	 => $bread_crumb,
 					'news_inner'	 =>	$cinema_inner,
-					'newscss'		 =>	$newscss,	
+					'newscss'		 =>	$newscss,
+					'title'			=>	$title,	
+					'breaking'		=>	$breaking
 					);
 		$this->load->view('news_inner',$data);
 	}

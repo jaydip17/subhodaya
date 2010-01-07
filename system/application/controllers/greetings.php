@@ -15,6 +15,8 @@ class Greetings extends Controller {
 		$greetings2=$this->Greeting_Model->get_main_greetings($type[15]->id,8);
 		$greetings3=$this->Greeting_Model->get_main_greetings($type[16]->id,8);
 		$more=$this->News_Model->more_news();
+		$title=$this->lang->line('gree_title').$more['4']->matter;
+		$description=$this->lang->line('gree_descrip');
 		//print_r($cat_id);
 		/*$greetings1=$this->Greeting_Model->get_main_greetings(1);
 		$greetings2=$this->Greeting_Model->get_main_greetings(2);
@@ -42,26 +44,17 @@ class Greetings extends Controller {
 		); 
 		$bread_crumb = $this->bread_crumb->get_code($segments);
 		
-		$data=array(/*'greetings1' 	=> 	$greetings1,
-					'greetings2' 	=> 	$greetings2,
-					'greetings12'	=> 	$greetings12,
-					'greetings10'	=> 	$greetings10,
-					'greetings9' 	=> 	$greetings9,
-					'greetings8' 	=> 	$greetings8,
-					'greetings4'	=> 	$greetings4,
-					'greetings6'	=>	$greetings6,
-					'greetings7'	=>	$greetings7,
-					'more'       	=> 	$more,
-					'type'       	=> 	$type,
+		$data=array(/*
 					'onload' 		=> 	"display_text_1()",
-					'query'         => $query,
 					'tabs'			=> $tabs,*/
 					'newscss'		=>	$newscss,
 					'greetings1'	=>	$greetings1,
 					'greetings3'	=>	$greetings3,
 					'greetings2'	=>	$greetings2,
 					'type'			=>	$type,
-					'bread_crumb'   => $bread_crumb
+					'bread_crumb'   =>  $bread_crumb,
+					'title'			=>	$title,
+					'description'	=>	$description
 			);
 		$this->load->view('greetings_content',$data);
   }
@@ -71,6 +64,7 @@ class Greetings extends Controller {
   	$cat=$this->Greeting_Model->get_type();
   	$more=$this->News_Model->more_news();
   	$type=$this->uri->segment(3,0);
+  	$title=$this->lang->line('gree_cat1').$more['4']->matter;
   	$greet_cat=$this->Greeting_Model->get_gre_type($type);
   	//$greetings1=$this->Greeting_Model->get_main_greetings($type,8);
   	$greetings=$this->Greeting_Model->get_greetings($type);
@@ -115,8 +109,9 @@ class Greetings extends Controller {
   				'pagination'   		=>  $paginate,
   	    		'bread_crumb'		=>  $bread_crumb,
   	    		'type'				=>	$cat,
-  	    		'newscss'		=>	$newscss,
-  	    		'greet_cat'		=>	$greet_cat
+  	    		'newscss'			=>	$newscss,
+  	    		'greet_cat'			=>	$greet_cat,
+  	    		'title'				=>	$title
   	    );
   	$this->load->view('greetings_view',$data);
   }

@@ -10,6 +10,8 @@ class Gallery extends Controller {
 	{
 		$gallerycss=array();
 		$more=$this->News_Model->more_news();
+		$title=$this->lang->line('gallery_title').$more['6']->matter;
+		$description=$this->lang->line('gallery_descrip'); 
 		$result=$this->Gallery_Model->get_categeory(0);
 		$details=array();
 		//print_r($result);
@@ -64,7 +66,9 @@ class Gallery extends Controller {
 					'result' 		=> $result,
 					'images' 		=> $images,
 					'cats'   		=> $cats,
-					'bread_crumb'  => $bread_crumb
+					'bread_crumb'   => $bread_crumb,
+					'title'			=> $title,
+					'description'	=> $description
 					);
 		$this->load->view('gallery_view',$data);
   	}
@@ -117,7 +121,7 @@ class Gallery extends Controller {
 					'cate' 			=> $result,
 					'result'		=> $images,
 		            'paginate' 		=> $paginate,
-					'bread_crumb'	=> $bread_crumb
+					'bread_crumb'	=> $bread_crumb,
 					);
 		$this->load->view('gallery_subcat',$data);
   	}
@@ -214,7 +218,7 @@ class Gallery extends Controller {
   					'result'=> $result1,
   					'links' => $links,
   			'telegu_typing' => $telegu_typing,
-  			'bread_crumb'   => $bread_crumb
+  			'bread_crumb'   => $bread_crumb,
   		);
   		$this->load->view('gallery_content',$data);
   		

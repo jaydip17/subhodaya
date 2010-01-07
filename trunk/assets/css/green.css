@@ -242,7 +242,7 @@ border-width: 0px 0;
 .solidblockmenu li{
 display: inline;
 color: #FFF;
-width: 100px;
+width: 60px;
 }
 
 .solidblockmenu li a{
@@ -254,7 +254,7 @@ height:26px;
 color: #FFF;
 margin-top:7px;
 text-align: center;
-width: 45px;
+width: 42px;
 }
 
 .solidblockmenu li a:visited{
@@ -268,7 +268,7 @@ color: rgb(190, 191, 59);
 	margin-top:5px;
 	padding-right:4px;
 	color:#FFF;
-	width:400px;
+	width:200px;
 }
 /* newspage */
 /* Caution! Ensure accessibility in print and other media types... */
@@ -562,3 +562,14 @@ font-weight: bold;
 {
 float: left;text-align: center;width:650px;border: 1px solid #6AB770;margin-left: 5px;
 }
+#sc_div
+ {
+ float: left;width: 100%;text-align: left;height: 25px;background-color: #FDF7D5;margin-top: -16px; padding-top: -10px;
+ }
+  #sc_div a
+ {
+ font-size: 14px;
+ font-weight: normal;
+ color:#000000;
+ letter-spacing: 1px;
+ }

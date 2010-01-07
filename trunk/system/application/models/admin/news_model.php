@@ -180,12 +180,12 @@ class News_Model extends Model
 		return $query->result();
 	}
 	//breaking news
-	function breaking_news($news_cat)
+	function breaking_news($news_cat,$limit)
 	{
 		$array=array('breking_news'=>1,'type'=>$news_cat);
 		$this->db->where($array);
 		$this->db->order_by('id','desc');
-		$this->db->limit(8);
+		$this->db->limit($limit);
 		$query=$this->db->get('news');
 		return $query->result();	
 	}

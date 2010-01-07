@@ -10,6 +10,7 @@ class Sahithi extends Controller {
 	}
 	function index()
 	{
+		$breaking=$this->News_Model->breaking_news1();
 		$newscss=array();
 		$sahi_festiva=$this->cinema_lib->mahila_block($this->lang->line('sahi_festiva'));
 		$sahi_kathalu=$this->cinema_lib->mahila_block($this->lang->line('sahi_kathalu'));
@@ -19,6 +20,9 @@ class Sahithi extends Controller {
 		$sahi_kavithm=$this->cinema_lib->mahila_block($this->lang->line('sahi_kavithm'));
 		$sahi_janapadam=$this->cinema_lib->mahila_block($this->lang->line('sahi_janapadam'));
 		$sahi_vyasam=$this->cinema_lib->mahila_block($this->lang->line('sahi_vyasam'));
+		$more=$this->News_Model->more_news();
+		$title=$this->lang->line('sahithi_title').$more['9']->matter;
+		$description=$this->lang->line('sahithi_descrip');
 		/*$this->load->model('admin/mahila_Model');
 		$more=$this->News_Model->more_news();
 		$details=$this->Sahithi_Model->get_sahithitype();
@@ -45,14 +49,7 @@ class Sahithi extends Controller {
 		); 
 		$bread_crumb = $this->bread_crumb->get_code($segments);*/
 		
-		$data=array(/*'more'      		=> $more,
-		            'details'  			=> $details,
-		            'details_more' 		=> $details_more,
-		             'types'        	=> $types,        
-		          'details_more_mahila' => $details_more_mahila,
-		             'details_mahila'   => $details_mahila,
-		             'types_mahila'  	=> $types_mahila,
-						'bread_crumb'	=> $bread_crumb*/
+		$data=array(
 					'newscss'			=>	$newscss,
 					'sahi_festiva'		=>	$sahi_festiva,
 					'sahi_kathalu'		=>	$sahi_kathalu,
@@ -61,7 +58,10 @@ class Sahithi extends Controller {
 					'sahi_kavithalu'	=>	$sahi_kavithalu,
 					'sahi_kavithm'		=>	$sahi_kavithm,
 					'sahi_janapadam'	=>	$sahi_janapadam,
-					'sahi_vyasam'		=>	$sahi_vyasam
+					'sahi_vyasam'		=>	$sahi_vyasam,
+					'title'				=>	$title,
+					'description'		=>	$description,
+					'breaking'		=>	$breaking
 					
 		);
 		
@@ -69,12 +69,14 @@ class Sahithi extends Controller {
    }
    function sahithidetails()
    {
+   	$breaking=$this->News_Model->breaking_news1();
    		$more=$this->News_Model->more_news();
   		$id=$this->uri->segment(3,0);
 		$type=$this->uri->segment(4,0);
 		$result=$this->Sahithi_Model->inner_sahithi($id);
 		$sahithi_inner=$this->news_lib->sahithi_inner($id,$type);
 		$newscss=array();
+		$title=$result[0]->eng_heading. '|' .$result[0]->heading;
 		/*$cate=$this->db->get_where('sahithi_cat',array('id'=>$type));	
 		$sahithicate=$cate->result();
 		if(empty($sahithicate)){
@@ -121,18 +123,22 @@ class Sahithi extends Controller {
 	    $data=array(
 	   			'bread_crumb' 	=>	$bread_crumb,
 	    		'news_inner' 	=>	$sahithi_inner,
-	    		'newscss'		=>	$newscss
+	    		'newscss'		=>	$newscss,
+	    		'title'			=>	$title,
+	    		'breaking'		=>	$breaking
 				);
 				
 		$this->load->view('news_inner',$data);
 	}
    function details()
    {
+   	$breaking=$this->News_Model->breaking_news1();
    	$more=$this->News_Model->more_news();
    	$type=$this->uri->segment(3,0);
    	$onload = "loadNews('content','".base_url()."sahithilist/listview/".$type."')";
    	$sahithi_content=$this->news_lib->sahithi_content($type);
    	$newscss=array();
+   	$title=$this->lang->line('sahithi_cat1'.$type);
    	   /*	$this->load->model('admin/Poll_Model');
    	 	$newspoll=$this->Poll_Model->get_newspolls($type=4);
    	 	$cinemapoll=$this->Poll_Model->get_newspolls($type=5);
@@ -166,21 +172,13 @@ class Sahithi extends Controller {
 		); 
 		$bread_crumb = $this->bread_crumb->get_code($segments);
 		
-		$data=array(	/*'news'  	=>	$sahithi,
-						'more'		=>	$more,
-					'pagination'	=>	$pagination,
-				     'newspoll'    	=>  $newspoll,
-				      'yes_poll'    =>  $yes_poll,
-		             'details' 		=>	$details,
-		             'details_more' =>	$details_more,
-		               'type'		=>	'sahithi',
-		              'cinemapoll'  =>  $cinemapoll,
-				'details_sahithi'	=>	$details_sahithi,
-				'tabs'             	=> 	$tabs,*/
+		$data=array(
 				'bread_crumb'		=>	$bread_crumb,
 				      'onload' 		=>	$onload,
 				'news_content'		=>	$sahithi_content,
-				'newscss'			=>	$newscss
+				'newscss'			=>	$newscss,
+				'title'				=>	$title,
+				'breaking'		=>	$breaking
 		             );
 		$this->load->view("news_content",$data);
 	}

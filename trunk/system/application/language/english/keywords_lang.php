@@ -1,12 +1,33 @@
 <?php
+//home title
+$lang['home_title']			=	"Telugu | Telugu News | Telugu Songs | Telugu Movie | Telugu Actress | Telugu Videos | Telugu Cinema";
+//home descrip
+$lang['home_descrip']		=	"No.1 Telugu News and Entertainment Portal. Telugu, Telugu News, Telugu Songs, Telugu Movies, Telugu Actress, Telugu Videos, Tollywood, Telugu Cinema.";
+// main page titles
 $lang['news_title']			=	"Telugu | Telugu News | AP Politics | Andhra News | Telangana News | Political Leaders in AP | Telugu News Online | ";
+$lang['cinema_title']		=	"Telugu Movies | Tollywood News | Telugu Movie Reviews | Telugu Videos | Telugu Cinema News | Telugu Film News |  ";
+$lang['gree_title']			=	"Telugu | Telugu Greetings | Greetings In Telugu | Pongal Greetings | Telugu Festival Greetings | Telugu Ugadi Greetings | ";
+$lang['gallery_title']		=	"Telugu | Telugu Actress | Telugu Actress Gallery | Telugu Hot Gallery | Masala Pics Of Telgu Actress | Telugu Hot Actress | ";
+$lang['video_title']		=	"Telugu | Telugu Videos | Telugu Movie | Telugu Video Songs | Telugu Songs | Telugu Movie Downloads | Telugu Movie Trailers | ";
+$lang['mahila_title']		=	"Telugu | Telugu Mahila | Telugu Ladies Special | Telugu Dishes | Beauty and Fashion Tips | Telugu Women | ";
+$lang['sahithi_title']		=	"Sahiti | Kathalu | Telugu Sahiti | Telugu Kathalu | Telugu Stories | Telugu Novels | Telugu Festivals | ";
+//main page descrip
 $lang['news_descrip']		=	"No.1 Telugu News and Entertainment Portal. Telugu News, AP Politics, Andhra News, Telangana News, Political Leaders in AP, Telugu News Online, AP Politics On The Net.";
-$lang['newscat1']			=	"State News";
-$lang['newscat2']			=	"National News";
-$lang['newscat3']			=	"International News";
+$lang['cinema_descrip']		=	"No.1 Telugu News and Entertainment Portal. Telugu Movies, Telugu Cinema News, Hero Telugu Heroes, Telugu Actress Gossips, Telugu Videos, Telugu Cinema News.";
+$lang['gallery_descrip']	=	"No.1 Telugu News and Entertainment Portal. Telugu Actress, Telugu Actress Gallery, Telugu Hot Gallery, Masala Pics of Telugu Actress, Telugu Masala Pictures, Telugu Hot Actress.";
+$lang['gree_descrip']		=	"No.1 Telugu News and Entertainment Portal. Telugu Greetings, Greetings In Telugu, Pongal Greetings, Telugu Festival Greetings, Telugu Ugadi Greetings, Telugu Greeting Cards.";
+$lang['video_descrip']		=	"No.1 Telugu News and Entertainment Portal. Telugu Videos, Telugu Movie, Telugu Video Songs Download, Telugu Movie Download, Telugu Movie Trailers, Telugu Video.";
+$lang['mahila_descrip']		=	"No.1 Telugu News and Entertainment Portal. Telugu Women, Telugu Mahila, Beauty and Fashion Tips, Telugu Fashion, Telugu Ladies Special, Telugu Dishes, Telugu Womens";
+$lang['sahithi_descrip']	=	"No.1 Telugu News and Entertainment Portal. Sahiti, Kathalu, Telugu Sahiti, Telugu Kathalu, Telugu Stories, Telugu Novels, Telugu Festivals, Telugu kavithalu, Telugu Padyalu.";
+//news cate
+$lang['newscat1']			=	"State News | రాష్ట్రీయ   వార్తలు ";
+$lang['newscat2']			=	"National News | జాతీయ  వార్తలు ";
+$lang['newscat3']			=	"International News | ";
 $lang['newscat4']			=	"Sports News";
 $lang['newscat5']			=	"Financial News";
 $lang['newscat6']			=	"Setair News";
+$lang['newscat7']			=	"Sports";
+$lang['newscat8']			=	"Subhodaya Special";
 //cinema cat
 $lang['cine_cat1']			=	"Cine News | Cinema News";
 $lang['cine_cat2']			=	"Cine Gossips";
@@ -14,6 +35,7 @@ $lang['cine_cat3']			=	"Movie Reviews";
 $lang['cine_cat4']			=	"Movie Shedule";
 $lang['cine_cat5']			=	"Interviews";
 $lang['cine_cat6']			=	"Teracharu News";
+$lang['cine_cat7']			=	"Sex";
 //mahila cat
 $lang['mahila_cat1']			=	"Womens Special";
 $lang['mahila_cat2']			=	"Home & Carrier";
@@ -48,5 +70,5 @@ $lang['gree_cat12']				=	"Miss You Greetings | Telugu Miss You Cards";
 $lang['gree_cat13']				=	"Telugu Sorry Greetings | Telugu Sorry Cards | Sorry Telugu Greetings";
 $lang['gree_cat14']				=	"Welcome Greetings | Telugu Welcome Cards";
 $lang['gree_cat15']				=	"Congratulation Greetings | Congratulation Greeting Cards";
-
+//gallery cat
 ?>

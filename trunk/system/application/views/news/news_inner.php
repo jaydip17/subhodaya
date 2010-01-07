@@ -146,8 +146,8 @@ display:inline;
 			<div style="height: 24px;border-top: 1px solid #cee2ed;border-bottom: 1px solid #cee2ed;margin-top: 5px;">
 			        <div style="padding-left: 20px;color: #375B71">
 			        	<a href="">Comment</a>&nbsp;&nbsp;&nbsp;|&nbsp;
-			        	<a href="">Email</a>&nbsp;&nbsp;&nbsp;  |&nbsp;
-			        	<a href="http://twitter.com/login">Tweet it</a>&nbsp;&nbsp;&nbsp;  |&nbsp;
+			        	<a href="<?=base_url()?>contact/email_send" class="contact" title="Send Email" >Email</a>&nbsp;&nbsp;&nbsp;  |&nbsp;
+			        	<a href="http://twitter.com/login" title="Tweet it">Tweet it</a>&nbsp;&nbsp;&nbsp;  |&nbsp;
 			        	<a href="">Share in Facebook</a> 
 			        </div> 
 			</div>
@@ -164,12 +164,24 @@ display:inline;
 				</div>	
 			<? if($count==3){break;}else{$count++;}endforeach; if($count==0){echo 'No data found';}?>
 			</div>
-			<div style="height: 24px;background-color: #6A90A5;color: #FFF;font-size: 15px;text-align: left;">User Comments</div>
-			<div style="height: 26px;">
-				<div style="float: left;padding-left: 10px;">
-					<a href="javascript:void(0)" onclick="return toggle('b');">Post your Comment</a>
-				</div>
-				<div style="float: right;"><a href="javascript:void(0)" onclick="return toggle('a');">[View All Comments(<?=$total_com?>)]</a></div>
+			<div style="height: 24px;background-color: #6A90A5;color: #FFF;font-size: 12px;text-align: left;font-weight: bold;">
+			<div style="float: left;width: 20%;padding-left: 4px;">User Comments</div>
+			<div style="float: right;padding-right: 2px;"><a href="javascript:void(0)" onclick="return toggle('a');" style="color: #FFF;">[View All Comments(<?=$total_com?>)]</a></div>
+			</div>
+			<div style="border: 1px solid gray;margin:5px 0px 5px 0px;">
+						<?php if(!empty($comments)){
+							foreach ($comments as $comment){?>
+							<div style="border: 0px solid #B4DCE6;margin: 5px;background-color:#F9F8F3 ">
+								<table cellspacing="7" width="100%">
+								<tr><td width="50%" align="left" style="font-weight: bold;"><?=$comment->name?></td><td align="right"><?=$comment->insert_date?></td></tr>
+								<tr><td colspan="2" align="left"><?=$comment->comment?></td></tr>
+								</table>
+							</div>
+							<?php }
+						}else{
+							echo 'No Comments for this artical';
+						}
+						?>
 			</div>
 			<div style="border: 1px solid gray;margin:5px 0px 5px 0px;display: none;" id='a'>
 						<?php if(!empty($comments)){

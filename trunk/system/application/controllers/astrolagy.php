@@ -2,32 +2,36 @@
 class  Astrolagy extends Controller
 {
 	 var $layout='default';
-     function astrolagy()
+     function Astrolagy()
      {
      	parent::Controller();
      }
 	 function index()
 	 {
+	 	$breaking=$this->News_Model->breaking_news1();
+	 	//print_r($breaking);
 	 	$newscss=array();
 	 	//$types=$this->Astrolagy_Model->get_astrolagycat();
 	 	$astrology=$this->astrology_lib->astrology_block(0);
 	 	$data=array(
 	 			//'types' 	=> $types,
 	 			'newscss'	=>	$newscss,
-	 			'tabs_block'=>	$astrology
+	 			'tabs_block'=>	$astrology,
+	 			'breaking'	=>	$breaking
 	 	);
 	 	$this->load->view('tab_view',$data);
 	 }
 	 function details()
 	 {
+	 	$breaking=$this->News_Model->breaking_news1();
 	 	$newscss=array();
 		$cat_id=$this->uri->segment(3,0);
-		
 	 	$astrology=$this->astrology_lib->rasi_block($cat_id);
 	 	$data=array(
 	 			//'types' 	=> $types,
 	 			'newscss'	=>	$newscss,
-	 			'tabs_block'=>	$astrology
+	 			'tabs_block'=>	$astrology,
+	 			'breaking'	=>	$breaking
 	 	);
 	 	$this->load->view('tab_view',$data);	
 	 }

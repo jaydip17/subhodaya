@@ -7,6 +7,7 @@ class Mahila extends Controller {
 	}
 	function index()
 	{
+		$breaking=$this->News_Model->breaking_news1();
 		$newscss=array();
 		$ma_special=$this->cinema_lib->mahila_block($this->lang->line('mahila_spec'));
 		$home_carer=$this->cinema_lib->mahila_block($this->lang->line('home_carer'));
@@ -16,6 +17,9 @@ class Mahila extends Controller {
 		$mahila_mehandi=$this->cinema_lib->mahila_block($this->lang->line('mahila_mehandi'));
 		$mahi_buty=$this->cinema_lib->mahila_block($this->lang->line('mahi_buty'));
 		$mahila_food=$this->cinema_lib->mahila_block($this->lang->line('mahila_food'));
+		$more=$this->News_Model->more_news();
+		$title=$this->lang->line('mahila_title').$more['8']->matter;
+		$description=$this->lang->line('mahila_descrip');
 		/*$more=$this->News_Model->more_news();
 		$details=$this->Mahila_Model->get_Mahilatype();
 		//print_r($details);
@@ -39,7 +43,6 @@ class Mahila extends Controller {
 							'home' => $more['2']->matter,
 		); 
 		$bread_crumb = $this->bread_crumb->get_code($segments);*/
-		
 		$data=array(/*'more'      	=>	$more,
 				'bread_crumb'		=>	$bread_crumb*/
 					'newscss'		=>	$newscss,
@@ -50,18 +53,23 @@ class Mahila extends Controller {
 					'dite_helth'	=>  $dite_helth,
 					'mahila_mehandi'=>	$mahila_mehandi,
 					'mahi_buty'		=>	$mahi_buty,
-					'mahila_food'	=>	$mahila_food
+					'mahila_food'	=>	$mahila_food,
+					'title'			=>	$title,
+					'description'   =>  $description,
+					'breaking'		=>	$breaking
 		             );
 		$this->load->view('mahila_view',$data);
   }
     function mahiladetails()
     {
+    	$breaking=$this->News_Model->breaking_news1();
     	$more=$this->News_Model->more_news();
     	$id=$this->uri->segment(3,0);
 		$type=$this->uri->segment(4,0);
 		$newscss=array();
 		$mahila_inner=$this->news_lib->mahila_inner($id,$type);
 		$result=$this->Mahila_Model->inner_mahila($id);
+		$title=$result[0]->eng_heading. '|' .$result[0]->heading;
 	/*	$cate=$this->db->get_where('mahila_cat',array('id'=>$type));
 		$mahilacate=$cate->result();
 		if(empty($mahilacate)){
@@ -101,30 +109,23 @@ class Mahila extends Controller {
 		); 
 		$bread_crumb = $this->bread_crumb->get_code($segments);
 		
-		$data=array(/*'result'   =>   $result,
-					 'more'    =>   $more,
-				'cinema_type1' =>   $cinema_type1,
-		         'evenmore'    =>   $evenmore,
-		        'details'      =>   $details,
-		        'details_more' =>   $details_more,
-		            'type'     =>   'mahila',
-		            'link'     =>   'sahithi',
-		    'video_result'     =>  $video_result,
-	              'news_type2' =>	$news_type2,
-	                 'key'     =>  $key,
-				'telegu_typing'=>  $telegu_typing,*/
+		$data=array(
 				'bread_crumb'  =>	$bread_crumb,
 				'newscss'	   =>	$newscss,
-				'news_inner' =>	$mahila_inner
+				'news_inner'   =>	$mahila_inner,
+				'title' 	   =>	$title,
+				'breaking'		=>	$breaking
 		     	);
 				
 		$this->load->view('news_inner',$data);
 	}
     function details()
     {
+    	$breaking=$this->News_Model->breaking_news1();
     	$newscss=array();
     	$more=$this->News_Model->more_news();
     	$type=$this->uri->segment(3,0);
+    	$title=$this->lang->line('mahila_cat'.$type);
     	$mahila_content=$this->news_lib->mahila_content($type);
     	$onload = "loadNews('content','".base_url()."mahilalist/listview/".$type."')";
    	 /*   $this->load->model('admin/Poll_Model');
@@ -161,7 +162,9 @@ class Mahila extends Controller {
 				'bread_crumb'	=>	$bread_crumb,
 				'news_content'	=>	$mahila_content,
 					 'onload' 	=>	$onload,
-					'newscss'	=>	$newscss
+					'newscss'	=>	$newscss,
+					'title'     =>	$title,
+					'breaking'	=>	$breaking
 		);
 		$this->load->view("news_content",$data);
 	}

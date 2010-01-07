@@ -88,21 +88,23 @@ class Cinema_Model extends Model {
 		$query = $this->db->get_where();
 		return $query->result();
     }
-    function get_activenews()
+    function get_activenews($limit)
     {
    		$this->db->select('*');
     	$this->db->where('cinema.active',1);
+    	$this->db->limit($limit);
     	$this->db->order_by("cinema.insert_date", "desc");
 		$this->db->from('cinema_cat');
 		$this->db->join('cinema', 'cinema.type= cinema_cat.id');
 		$query = $this->db->get_where();
 		return $query->result();
     }
-    function get_activenews1($type)
+    function get_activenews1($type,$limit)
     {
    		$this->db->select('*');
    		$array=array('cinema.type'=>$type,'cinema.active'=>1);
     	$this->db->where($array);
+    	$this->db->limit($limit);
     	$this->db->order_by("cinema.insert_date", "desc");
 		$this->db->from('cinema_cat');
 		$this->db->join('cinema', 'cinema.type= cinema_cat.id');

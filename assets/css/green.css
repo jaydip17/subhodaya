@@ -6,7 +6,7 @@ body {
 	color: #000;
 	margin: 0px;
 	padding: 0px;
-	background-color:#C0B5B5;
+	background-color:#595959;
 	line-height: 17px;
 	
 }
@@ -42,9 +42,10 @@ li{
 	color:#3398FF; font-size:13px; text-decoration:none;
 }
 #logo{
-	background-image:url(../image/logo.png);
-	height:62px;
-	width:263px;
+	background-image:url(../image/logo_v1.png);
+	background-repeat:no-repeat;
+	height:60px;
+	width:240px;
 }
 #img{
 	border: 1px solid gray;
@@ -564,7 +565,7 @@ float: left;text-align: center;width:650px;border: 1px solid #6AB770;margin-left
 }
 #sc_div
  {
- float: left;width: 100%;text-align: left;height: 25px;background-color: #FDF7D5;margin-top: -16px; padding-top: -10px;
+ float: left;width: 100%;text-align: left;height: 25px;background-color: #FDF7D5;margin-top: -1px; padding-top: -10px;
  }
   #sc_div a
  {
@@ -573,3 +574,7 @@ float: left;text-align: center;width:650px;border: 1px solid #6AB770;margin-left
  color:#000000;
  letter-spacing: 1px;
  }
+ 	.ch{
+			border:1px solid;
+			cursor:pointer;
+			}

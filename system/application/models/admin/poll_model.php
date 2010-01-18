@@ -16,9 +16,10 @@ class Poll_Model extends Model {
 		{
 			$active=0;
 		}
-		$datestring = " %Y-%m-%d ";
-		$today=mdate($datestring);
-		$array=array('cat_id'=>$type,'displaydate'=>$today,'active'=>$active);
+		//$datestring = " %Y-%m-%d ";
+		//$today=mdate($datestring);
+		$array=array('cat_id'=>$type,'active'=>$active);
+		$this->db->order_by('id','desc');
 		$this->db->limit(1);
 		$this->db->where($array);
 		$result=$this->db->get('poll');
@@ -53,17 +54,16 @@ class Poll_Model extends Model {
 	}
 	function insert_home($poll_id = '',$answer = ''){		
 		if($answer !='')
-		{
+		{	
 			$Percentages=$this->update_poll_result($answer,$poll_id);
 		}
-
 		return $Percentages;
 	}
 	function update_poll_result($option = '',$poll_id = 0)
 	{
 		if($poll_id != 0)
 		{
-			
+			//echo $poll_id;
 			$this->db->where('id',$poll_id);
 			$result_set = $this->db->get('poll');
 			$result  = $result_set->result_array();
@@ -87,7 +87,6 @@ class Poll_Model extends Model {
 			$this->db->where($array);
 			$ip_result=$this->db->get('ipaddress');
 			$ip_result_set=$ip_result->result_array();
-			
 			if($ip_result_set){
 				$per=$this->poll_result($poll_id);
 				return $per;

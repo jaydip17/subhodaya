@@ -163,7 +163,7 @@ class News extends Controller {
 		); 		
 		$bread_crumb = $this->bread_crumb->get_code($segments);*/
 		//print_r($segments);	
-		$keywords=$result[0]->eng_heading. ' | '.$heading;
+		$title=$result[0]->eng_heading. ' | '.$heading;
 		$segments = array(	'seg1' => $this->uri->segment(1,0),
 						   	'seg2' => $this->uri->segment(2,0),
 							'seg3' => $this->uri->segment(3,0),
@@ -179,7 +179,7 @@ class News extends Controller {
 				'news_inner'		=>	 $news_inner,
 				'newscss'			=>	 $newscss,
 				'bread_crumb' 		=> 	 $bread_crumb,
-				'keywords'			=>	$keywords,
+				'title'				=>	$title,
 				'breaking'			=>	$breaking
 				);	
 		$this->load->view('news_inner',$data);

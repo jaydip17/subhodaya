@@ -139,8 +139,9 @@ class Home{
 				$temp=$this->get_movie_reviews($cat_id=7,1);;
 				$image_link=base_url().'assets/cinema/news_img'.$temp[0]->id.'_home_thumb.jpg';
 				$link=base_url().'cinema/inner/';
-				$more_link=base_url().'cinema';
 				$cat_id=$temp[0]->type;
+				$more_link=base_url().'cinema/details/'.$cat_id;
+				
 				break;
 				
 		}
@@ -251,6 +252,7 @@ class Home{
 		switch ($heading){
 			case $homepoll:
 				$temp=$this->get_homepoll();
+				//$yes_poll=get_yes_poll(4);
 				break;
 		}
 				$data = array(
@@ -259,7 +261,8 @@ class Home{
 						'details'		=>	$temp,
 						'yes'			=>	$yes,
 						'no'			=>  $no,
-						'yes_no'		=>  $yes_no
+						'yes_no'		=>  $yes_no,
+						//'yes_poll'		=>	$yes_poll
 		);
 		return $this->CI->load->view('home/home_poll',$data,TRUE);
 	}
@@ -315,7 +318,7 @@ class Home{
 	}
 	function get_homepoll()
 	{
-		$details=$this->CI->Poll_Model->get_newspolls(4,1);
+		$details=$this->CI->Poll_Model->get_newspolls(4,0);
 		return $details;
 	}
 	function active_news()
@@ -387,5 +390,10 @@ class Home{
    {
    	$details=$this->CI->Astrolagy_Model->get_astrolagytype();
 	return $details;
+   }
+   function get_yes_poll($type)
+   {
+   	$details=$this->CI->Poll_Model->get_yes_newspoll($type);
+   	return $details;
    }
 }

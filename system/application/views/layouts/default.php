@@ -8,14 +8,12 @@
 <title><?=$this->lang->line('home_title')?></title>	
 <?php }?>
 <?php if(isset($description)){?>
-<title><?=$description?></title>	
+<meta name="Description" content="<?=$description?>" />
 <?php }else{?>
-<title><?=$this->lang->line('home_descrip')?></title>	
+<meta name="Description" content="<?=$this->lang->line('home_descrip')?>" />
 <?php }?>
-<meta http-equiv=Content-Type content="text/html; charset=iso-8859-1">	
-<meta name=ROBOTS content="INDEX,FOLLOW">	
-<meta name="Keywords" content="subhodaya.com, leaders in telugu news, Latest Telugu News, Telugu News Website, Telugu Cinema News, Telugu Cinema Website, Telugu Mahila, Telugu Cinema Gallery, Telugu News On The Net,  Telugu Movie Trailers, Telugu Sahithi,
-The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting Cards" />	
+<meta http-equiv=Content-Type content="text/html; charset=iso-8859-1"/>	
+<meta name=ROBOTS content="INDEX,FOLLOW"/>	
 <meta name="copyright" content=" 2009 Subhodaya.com" />	
 <meta name="content-language" content="EN" />	
 <meta name="author" content="www.subhodaya.com" />	
@@ -230,7 +228,7 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
 			<div id="language" style="color:#3398FF;margin-top:5px;margin-right:5px;margin-bottom:5px; font-size:13px;float:right">
 				<font style="color:#646464">Change Language: </font>
 				<a href="http://english.subhodaya.com/" id="ln" target="_blank">English</a>|
-				<a href="http://hindhi.subhodaya.com/" id="ln" target="_blank"> हिन्दी </a>|
+				<a href="http://hindi.subhodaya.com/" id="ln" target="_blank"> हिन्दी </a>|
 				<a href="" id="ln">தமிழ்</a>|
 				<a href="" id="ln">ગુજરાતી </a>|
 				<a href="" id="ln"> ਪੰਜਾਬੀ </a>|
@@ -242,7 +240,7 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
 		</div>
 		<div id="logo_add" style="height:80px; margin-left:5px;margin-bottom:5px">
 			<a href="<?=base_url()?>" style="float:left">
-					<div id="logo"></div>
+					<div id="logo" title="Happy Holidays From Subhodaya.com!"></div>
 			</a>
 			<a href="#" style="float:right; margin-right:5px;">
 				<img src="<?=base_url()?>assets/home_images/ads/header_ad.jpg" border="0">
@@ -259,7 +257,7 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
             	<li><a href="<?=base_url()?>mahila"><?=$this->lang->line('mahila');?></a></li>
                 <li><a href="<?=base_url()?>sahithi"><?=$this->lang->line('sahithi');?></a></li>
                 <li><a href="<?=base_url()?>news/details/8"><?=$this->lang->line('news_kridalu');?></a></li>
-                <li><a href="<?=base_url()?>news/details/8"><?=$this->lang->line('srungaram');?></a></li>
+                <li><a href="<?=base_url()?>cinema/details/7"><?=$this->lang->line('srungaram');?></a></li>
                 <li><a href="<?=base_url()?>news/details/8"><?=$this->lang->line('sangitham');?></a></li>
                 <li><a href="<?=base_url()?>astrolagy" style="width: 50px;"><?=$this->lang->line('bavishyam');?></a></li>
            </ul>
@@ -277,14 +275,34 @@ The First Google Indic Transliteration Telugu Website Forever, Telugu Greeting C
 				at_attach("sample_attach_menu_parent", "sample_attach_menu_child", "hover", "y", "pointer");
 				</script>
 			</div>
-			--><div style="float: right;">
+			-->
+			<script type="text/javascript">
+			<!--
+								
+			$(document).ready(function(){
+				   $("#change").hover(function () {
+					      $(this).addClass("ch");
+					    });
+
+					//alert(theme);
+					
+					});
+			//-->
+			</script>
+			<style type="text/css">
+			.ch{
+			border:1px solid;
+			cursor:pointer;
+			}
+			</style>
+			<div style="float: right;">
               <span style="color:white;">Change color:</span>
-              <span><img src="<?=base_url();?>assets/image/1cr.gif"  onclick="changeTheme('blue');" /></span>
-              <span><img src="<?=base_url();?>assets/image/2cr.gif"  onclick="changeTheme('yellow');" /></span>
-              <span><img src="<?=base_url();?>assets/image/3cr.gif"  onclick="changeTheme('ornge');" /></span>
-              <span><img src="<?=base_url();?>assets/image/4cr.gif"  onclick="changeTheme('green');" /></span>
-              <span><img src="<?=base_url();?>assets/image/5cr.gif"  onclick="changeTheme('red');" /></span>
-              <span><img src="<?=base_url();?>assets/image/6cr.gif"  onclick="changeTheme('black');" /></span>
+              <span><img title="blue" src="<?=base_url();?>assets/image/2.png"    id="change" onclick="changeTheme('blue');"  /></span>
+              <span><img title="yellow" src="<?=base_url();?>assets/image/1.png"   id="change" onclick="changeTheme('yellow');" /></span>
+              <span><img title="ornge" src="<?=base_url();?>assets/image/3.png"   id="change" onclick="changeTheme('ornge');" /></span>
+              <span><img title="green" src="<?=base_url();?>assets/image/4.png"    id="change" onclick="changeTheme('green');" /></span>
+              <span><img title="red" src="<?=base_url();?>assets/image/5.png"     id="change" onclick="changeTheme('red');" /></span>
+              <span><img title="black" src="<?=base_url();?>assets/image/6.png"   id="change" onclick="changeTheme('black');" /></span>
             </div>
           	</div>
 		</div>
@@ -388,8 +406,8 @@ document.write('</td></table>')
 				<span style="color:#FF0D16;font-size:16px"><b><?=$this->lang->line('news_partners')?></b></span>
 				<div style="color:#0101FF;height:26px;padding-top: 6px;"><?=$this->lang->line('sakshi')?>,<?=$this->lang->line('enadu')?></div>
 				<div style="color:#0101FF;height:24px"><?=$this->lang->line('andra_jothi')?></div>
-				<div style="color:#0101FF;height:24px"><?=$this->lang->line('vaartha')?>,<?=$this->lang->line('surya')?></div>
-				<div style="color:#0101FF;height:24px"><?=$this->lang->line('andra_bhomi')?></div>
+				<div style="color:#0101FF;height:24px"><?=$this->lang->line('andra_prabha')?>,<?=$this->lang->line('vaartha')?></div>
+				<div style="color:#0101FF;height:24px"><?=$this->lang->line('andra_bhomi')?>,<?=$this->lang->line('surya')?></div>
 				<div style="color:#0101FF;height:24px"><?=$this->lang->line('praja_sakthi')?></div>
 			</div>
 			<div id="" style="float:left; width:200px">
@@ -429,7 +447,7 @@ document.write('</td></table>')
 	<div id="" style="color:#359BFF; height:25px">
 		<span style="color:#05AEF1;font-weight:bold">Subhodaya</span><span style="color:#FE0000; font-weight:bold">.</span><span style="color:#016CB4; font-weight:bold">com</span><span style="color:#2C5F96;font-weight:bold">! News In:</span>
 		<a href="http://english.subhodaya.com/" id="ln" target="_blank">English </a>|
-		<a href="http://hindhi.subhodaya.com/" id="ln" target="_blank"> हिन्दी |
+		<a href="http://hindi.subhodaya.com/" id="ln" target="_blank"> हिन्दी |   </a>
 		 தமிழ் | ગુજરાતી | ਪੰਜਾਬੀ  | తెలుగు  | ಕನ್ನಡ | मराठी  | Malayalam
 	</div>
 	<div id="" style="color:#359BFF; height:25px">Sitemap | Feedback | Advertise With Us | Contact Us</div>

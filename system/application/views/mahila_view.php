@@ -1,4 +1,4 @@
-<script>
+<!--<script>
 menu[2] = {  // REQUIRED!!  This menu explicitly declares all available options even if they are the same as the defaults
 id:'menu2', //use unique quoted id (quoted) REQUIRED!!
 /////////////////////////////////////
@@ -71,7 +71,7 @@ menuItems:[
 ]}; // REQUIRED!! do not edit or remove
 make_menus();
 </script>
-<div style="width:100%; height:100%px; float:left">
+--><div style="width:100%; height:100%px; float:left">
 	<div style="width: 700px; height:100%;float: left;">
 	<div style="width: 700px;float: left;padding-left: 10px;">
 			<div style="float:left;">

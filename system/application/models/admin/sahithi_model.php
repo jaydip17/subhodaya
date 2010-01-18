@@ -95,7 +95,7 @@ class Sahithi_Model extends Model {
     {   
  		$this->db->select('*');
  		$this->db->order_by("sahithi.insert_date", "desc");
- 		$array=array('cat_id'=>$type,'sahithi.active'=>0);
+ 		$array=array('cat_id'=>$type);
     	$this->db->where($array);
 		$this->db->from('sahithi_cat');
 		$this->db->join('sahithi', 'sahithi.cat_id= sahithi_cat.id');

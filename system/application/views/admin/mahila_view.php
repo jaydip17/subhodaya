@@ -25,7 +25,7 @@ if(isset($message) && !is_array($message) ) echo($message);?>
 	
 	<tr>
 		<td>English heading</td>
-		<td><textarea rows="2" cols="40" name="engheading" id="heading"></textarea></td>
+		<td><textarea rows="2" cols="40" name="engheading" id="engheading"></textarea></td>
 	</tr>
 	
 	
@@ -42,7 +42,7 @@ if(isset($message) && !is_array($message) ) echo($message);?>
 		</td>
 	</tr>
 	<tr>
-		<td>Image(square shape)</td>
+		<td>Image(245 X 184)</td>
 		<td align="left"><?=form_upload('image') ?></td>
 	</tr>
 	<tr>

@@ -124,6 +124,7 @@ class Greeting_Model extends Model {
 	function get_active()
 	{
 		$this->db->select('*');
+		$this->db->order_by("greetings.id", "desc");
    		$this->db->order_by("greetings.insert_date", "desc");
    		$array=array('greetings.active'=>1);
    		$this->db->where($array);

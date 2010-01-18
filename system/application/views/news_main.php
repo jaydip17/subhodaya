@@ -1,5 +1,5 @@
 <div id="news_content">
-						<div id="main_news"><span id="main_news_font">Today Main News</span></div>
+						<div id="main_news" style="padding-top:15px;font-weight: bold;"><div style="margin: 10px;text-align: center;"><span id="main_news_font"><?=$this->lang->line('neti_thaja')?></span></div></div>
 						<?= (isset($main_news)) ? $main_news : '' ?>
 
 </div>

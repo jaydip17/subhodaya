@@ -107,10 +107,11 @@ class Cinema extends Controller {
 		$onload = "loadNews('content','".base_url()."cinemalist/listview/".$type."')";
 		$more=$this->News_Model->more_news();
 		$id=$this->uri->segment(3,0);
+	
 		$result=$this->Cinema_Model->get_all($id);
-		if(empty($result)){
+	/*	if(empty($result)){
 			redirect(base_url().'cinema');
-		}
+		}*/
 		$cinema_content=$this->news_lib->cinema_content($type);
 		$title=$this->lang->line('cine_cat'.$type);
 		/*//active news for side heaidngs

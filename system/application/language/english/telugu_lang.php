@@ -26,6 +26,7 @@ $lang['thaja_vartha']						=	"తాజా వార్త ";
 $lang['marinni_visheshalu']					=	"మరిన్ని వార్తా విశేషాలు ";
 $lang['sambanditha']						=	"సంబందిత వార్తలు";
 $lang['evikuda_read']						=	"ఇవి కూడా చదవండి ";
+$lang['neti_thaja']							=	"నేటి తాజా వార్తలు";
 // cinema page
 $lang['cinema']								=	"సినిమా ";
 $lang['reviews'] 			    			= 	"మూవీ రివ్యూస్";
@@ -84,6 +85,7 @@ $lang['sakshi']								=	"సాక్షి";
 $lang['enadu']								=	"ఈనాడు";
 $lang['andra_jothi']						=	"ఆంధ్రజ్యోతి";
 $lang['vaartha']							=	"వార్త ";
+$lang['andra_prabha']                       =   "ఆంధ్రప్రభ ";
 $lang['surya']								=	"సూర్య ";
 $lang['andra_bhomi']						=	"ఆంధ్రభూమి ";
 $lang['praja_sakthi']						=	"ప్రజా శక్తి";

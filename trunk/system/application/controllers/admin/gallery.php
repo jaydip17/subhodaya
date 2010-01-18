@@ -7,7 +7,7 @@
 		$this->load->model('admin/Gallery_model');
 		$this->load->helper(array('form','url','file','date'));
 		//if not logged in go to login page
-	   $this->Login_Model->login_validate();
+	   //$this->Login_Model->login_validate();
 	}
     //displaying root categeories from database	
    function categeory1()

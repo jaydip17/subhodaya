@@ -14,7 +14,7 @@ class Cinemalist extends Controller {
     	$this->load->library('paginationnew');
     	
     	$this->paginationnew->start = ($this->uri->segment(4)) ? $this->uri->segment(4) : '0';
-    	$this->paginationnew->limit =30;
+    	$this->paginationnew->limit =24;
         $this->paginationnew->filePath ='javascript:loadNews(\'content\',\''.$a.'';
       
         $this->paginationnew->select_what = '*';
@@ -41,7 +41,7 @@ class Cinemalist extends Controller {
     	$this->load->library('paginationnew');
     	
     	$this->paginationnew->start = ($this->uri->segment(4)) ? $this->uri->segment(4) : '0';
-    	$this->paginationnew->limit =4;
+    	$this->paginationnew->limit =14;
         $this->paginationnew->filePath ='javascript:loadNews(\'content\',\''.$a.'';
       
         $this->paginationnew->select_what = '*';

@@ -175,7 +175,7 @@ class News_Model extends Model
 	{
 		$this->db->where('active',1);
 		$this->db->order_by('id','desc');
-		$this->db->limit(8);
+		$this->db->limit(10);
 		$query=$this->db->get('news');
 		return $query->result();
 	}

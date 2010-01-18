@@ -23,27 +23,30 @@ class Newsletter extends Controller {
 	}
 	function subscribe()
 	{	
-		$email = $this->input->get_post('email', TRUE);
-		$name=$this->input->get_post('name', TRUE);
+		$email=$this->uri->segment(3,0);
+
+		//$email = $this->input->get_post('email', TRUE);
+		//$name=$this->input->get_post('name', TRUE);
 		$validate = $this->Newsletter_model->check_email_address($email);
 		if($validate==TRUE)
 		{
 			$count = $this->Newsletter_model->check_newsletter_email($email);
 			if($count<1)
 			{
+				echo $email;
 				$data = array(
 	               'email' => $email ,
 	                     );
 				if($this->db->insert('newsletter', $data))
 				{
-					$messa='Thankyou for subscribing with us.';
-					$messagesent='Thankyou for subscribing with us</br>.Have a great day!!!';
-					$this->session->set_flashdata('messagesent',$messagesent); 
+					echo $messa='Thankyou for subscribing with us.';
+					//$messagesent='Thankyou for subscribing with us</br>.Have a great day!!!';
+					//$this->session->set_flashdata('messagesent',$messagesent); 
 					
 					 $to=$email;
 					 $subject='Subhodaya Newsletter';
 					 $from='dontreply@subhodaya.com';
-					 $from_name=$name;
+					 $from_name='Subhodaya';
 					 $this->send_mail($to,$subject,$messa,$from,$from_name);
 							//echo "&nbsp;&nbsp;&nbsp;&nbsp;Successful";
 				}

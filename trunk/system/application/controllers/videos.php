@@ -12,7 +12,7 @@ class Videos extends Controller {
 		$more=$this->News_Model->more_news();
 		$video_cat= $this->Video_Model->getvideocategeories();
 		$latestvideos = $this->Video_Model->get_videos('latest',24);
-		$title=$this->lang->line('video_title').$more['7']->matter;
+		$title=$this->lang->line('video_title').$more['5']->matter;
 		$description=$this->lang->line('video_descrip');
 		//print_r($latestvideos);
 		$data=array(

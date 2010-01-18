@@ -159,7 +159,7 @@ display:inline;
 			 if($count==1){$count++;continue;}
 			?>
 				<div style="float: left;width:151px;padding-top: 4px;text-align: center;margin: 1px 0px 2px 1px;">
-					<a href="<?=$hed_link?><?=$row->id?>/<?=$cat_id?>/<?=$row->eng_heading?>"><img src="<?=base_url()?>assets/news/news_img<?=$row->id?>_thumb.jpg" id="img" style="float: none"/></a></br>
+					<a href="<?=$hed_link?><?=$row->id?>/<?=$cat_id?>/<?=$row->eng_heading?>"><img src="<?=$link?>news_img<?=$row->id?>_thumb.jpg" id="img" style="float: none"/></a><br>
 					<a style="font-size: 12px" href="<?=$hed_link?><?=$row->id?>/<?=$cat_id?>/<?=$row->eng_heading?>"><?=$row->heading?></a>
 				</div>	
 			<? if($count==3){break;}else{$count++;}endforeach; if($count==0){echo 'No data found';}?>
@@ -168,21 +168,20 @@ display:inline;
 			<div style="float: left;width: 20%;padding-left: 4px;">User Comments</div>
 			<div style="float: right;padding-right: 2px;"><a href="javascript:void(0)" onclick="return toggle('a');" style="color: #FFF;">[View All Comments(<?=$total_com?>)]</a></div>
 			</div>
-			<div style="border: 1px solid gray;margin:5px 0px 5px 0px;">
 						<?php if(!empty($comments)){
 							foreach ($comments as $comment){?>
+							<div style="border: 1px solid gray;margin:5px 0px 5px 0px;">
 							<div style="border: 0px solid #B4DCE6;margin: 5px;background-color:#F9F8F3 ">
 								<table cellspacing="7" width="100%">
 								<tr><td width="50%" align="left" style="font-weight: bold;"><?=$comment->name?></td><td align="right"><?=$comment->insert_date?></td></tr>
 								<tr><td colspan="2" align="left"><?=$comment->comment?></td></tr>
 								</table>
 							</div>
+							</div>
 							<?php }
-						}else{
-							echo 'No Comments for this artical';
 						}
 						?>
-			</div>
+			
 			<div style="border: 1px solid gray;margin:5px 0px 5px 0px;display: none;" id='a'>
 						<?php if(!empty($comments)){
 							foreach ($comments as $comment){?>

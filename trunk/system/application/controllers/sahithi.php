@@ -125,7 +125,7 @@ class Sahithi extends Controller {
 	    		'news_inner' 	=>	$sahithi_inner,
 	    		'newscss'		=>	$newscss,
 	    		'title'			=>	$title,
-	    		'breaking'		=>	$breaking
+	    		'breaking'		=>	$breaking,
 				);
 				
 		$this->load->view('news_inner',$data);
@@ -138,7 +138,7 @@ class Sahithi extends Controller {
    	$onload = "loadNews('content','".base_url()."sahithilist/listview/".$type."')";
    	$sahithi_content=$this->news_lib->sahithi_content($type);
    	$newscss=array();
-   	$title=$this->lang->line('sahithi_cat1'.$type);
+   	$title=$this->lang->line('sahithi_cat'.$type);
    	   /*	$this->load->model('admin/Poll_Model');
    	 	$newspoll=$this->Poll_Model->get_newspolls($type=4);
    	 	$cinemapoll=$this->Poll_Model->get_newspolls($type=5);

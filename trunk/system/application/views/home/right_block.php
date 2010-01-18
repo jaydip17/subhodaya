@@ -25,7 +25,7 @@
 											<li style="color:#228BEE;" >
 												<a href="<?=$link?><?=$row->id?>/<?=$cat_id?>" style="color:#228BEE; font-size:12px; text-decoration:none"><?=$row->heading?></a>
 											</li>
-											<? if($count==2){
+											<? if($count==3){
 							         					break;
 							          					}else{
 							          						$count++;

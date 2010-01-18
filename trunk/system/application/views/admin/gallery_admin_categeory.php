@@ -1,11 +1,8 @@
-
 <?
 if (isset ( $cat )) {
 	?>
 <h2>your categeory added successfully..
 <h2>add another one</h2>
-
-
 <?
 }
 ?>

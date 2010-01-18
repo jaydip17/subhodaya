@@ -1,3 +1,21 @@
+<script language="JavaScript" type="text/javascript">
+<!--
+
+function support()
+{
+	alert('hi');
+	 var x=document.getElementById("email").value;
+
+	 if(x=="")
+	 {
+		 alert('Enter Your Email-id');
+	 }else{
+		 window.location ='newsletter/subscribe/'+x;
+	 } 
+}
+-->
+</script> 
+
 <div  style="background-color:#fff; float:left; width:100%;">
 					<div id="left_content" style="width:165px;margin-left:4px; float:left">
 						<?= (isset($special_block)) ? $special_block : '' ?>
@@ -8,9 +26,9 @@
 									Subhodaya Newsletter
 								</div>
 								<div id="movie" style="width:100%" >
-									<input type="text" name="news_email">
+									<input type="text" name="news_email" id="email">
 								</div>
-								<img style="margin:10px 0px 5px 0px; " src="<?=base_url()?>assets/image/submit.jpg">
+								<img style="margin:10px 0px 5px 0px; " src="<?=base_url()?>assets/image/submit.jpg " onclick="support()">
 							</div>
 						</div>
 						<?= (isset($reviews_block)) ? $reviews_block : '' ?>

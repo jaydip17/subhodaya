@@ -15,7 +15,7 @@ class Greetings extends Controller {
 		$greetings2=$this->Greeting_Model->get_main_greetings($type[15]->id,8);
 		$greetings3=$this->Greeting_Model->get_main_greetings($type[16]->id,8);
 		$more=$this->News_Model->more_news();
-		$title=$this->lang->line('gree_title').$more['4']->matter;
+		$title=$this->lang->line('gree_title').$more['7']->matter;
 		$description=$this->lang->line('gree_descrip');
 		//print_r($cat_id);
 		/*$greetings1=$this->Greeting_Model->get_main_greetings(1);

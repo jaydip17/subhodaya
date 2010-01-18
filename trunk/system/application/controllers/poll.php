@@ -31,6 +31,29 @@ class Poll extends Controller {
 		//$this->load->view('poll_result',$data);
 		$this->load->view('pre_result.html',$data);
 	}
+	function insert()
+	{
+		echo $poll_id = $this->uri->segment(3);
+		echo  $answer_id = $this->uri->segment(4);
+		exit;
+		if($answer_id==0){
+			$answer='a';
+		}
+		if($answer_id==1){
+			 $answer='b';
+		}
+		if($answer_id==2){
+			 $answer='c';
+		}
+		$result=$this->Poll_Model->insert_home($poll_id,$answer);
+		if(!empty($result)){
+			redirect(base_url());
+		}
+	}
+	function cine_insert()
+	{
+		
+	}
 
 	
 }

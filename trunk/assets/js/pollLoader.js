@@ -2,6 +2,7 @@ var xmlhttp;
 var loding;
 function loadPoll(url,somevalue,imgurl)
 {
+alert(url);
 loading = "<img style='padding:20px 0px 20px 50px;' src='"+imgurl+"' align='lodingimage'> ";
 
 document.getElementById('home_poll').innerHTML=loading;

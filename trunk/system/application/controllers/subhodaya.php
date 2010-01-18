@@ -6,6 +6,8 @@ class Subhodaya extends Controller {
 		parent::Controller();
 	}
 	function index(){
+		$newspoll=$this->Poll_Model->get_newspolls($type=4,1);
+		print_r($newspoll);
 		$tabscss=array();
 		//for telugu content
 		$more=$this->News_Model->more_news();

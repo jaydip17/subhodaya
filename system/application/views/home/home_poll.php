@@ -6,13 +6,14 @@ function loadPoll()
 	var error=false;
 	var e=document.getElementsByName("answer");
 	var h=document.orderform.qid.value;
+	var cid=document.orderform.catid.value;
 	for (var i=0; i < e.length; i++)
 	   {
 		if(document.orderform.answer[i].checked)
 			{
 			error=true;
 			found_it = document.orderform.answer[i].value
-			window.location ='poll/insert/'+h+'/'+i;
+			window.location ='poll/insert/'+h+'/'+i+'/'+cid;
 			}
 	   }
 	   if(error==false){
@@ -39,6 +40,7 @@ function loadPoll()
 							
 											<?php if(isset($details[0]->id)){?>
 											<input type="hidden" name="qid" value="<?=$details[0]->id?>"/>
+											<input type="hidden" name="catid" value="<?=$details[0]->cat_id?>"/>
 											<?php }?>
 										<?=form_radio('answer','a',FALSE) ?><?=(isset($yes)) ? $yes : ''?>
 											<br />

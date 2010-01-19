@@ -1,23 +1,26 @@
 <script language="JavaScript" type="text/javascript">
 <!--
+
 function loadPoll()
 {
 	var found_it;
-	//var error=false;
+	var error=false;
 	var e=document.getElementsByName("answer");
 	var h=document.orderform.qid.value;
+	var cid=document.orderform.catid.value;
 	for (var i=0; i < e.length; i++)
 	   {
+
 		if(document.orderform.answer[i].checked)
 			{
-			//error=true;
+			error=true;
 			found_it = document.orderform.answer[i].value;
-			window.location='poll/insert/'+h+'/'+i;
+			window.location='poll/insert/'+h+'/'+i+'/'+cid;
 			}
 	   }
-	   //if(error==false){
-		 //  alert('Please Select Your Option Before Voteing');
-	   //}
+	   if(error==false){
+		  alert('Please Select Your Option Before Voteing');
+	   }
 }
 -->
 </script>
@@ -150,15 +153,15 @@ else
 		<div style="height: 218px;width: 212px;">
 			<span style="font-size: 16px;"><?=$this->lang->line('homepoll')?></span>
 			<div style="font-size: 14px;color: #0066C9;line-height: 25px;"><?=$cinemapoll[0]->question?></div>
-			<form method="post" name="orderform" action="<?=base_url()?>poll/cine_insert">
+			<form name="orderform">
 			<input type="hidden" name="qid" value="<?=$cinemapoll[0]->id?>"/>
+			<input type="hidden" name="catid" value="<?=$cinemapoll[0]->cat_id?>"/>
 			<div style="padding:1px 0px 2px 35px;font-size: 12px;"><?=form_radio('answer','a',FALSE) ?><?=$this->lang->line('yes')?></div>
 			<div style="padding:1px 0px 2px 35px;font-size: 12px;"><?=form_radio('answer','b',FALSE) ?><?=$this->lang->line('no')?></div>
 			<div style="padding:1px 0px 2px 35px;font-size: 12px;"><?=form_radio('answer','c',FALSE) ?><?=$this->lang->line('yes_no')?></div>
-			<div style="padding-left: 10px;"><input type="submit" name="Vote" value="Vote"/></div>
-			</form>
+			<div style="padding-left: 10px;"><img src="<?=base_url()?>assets/image/vote1.jpg" onclick="loadPoll()"/></div>
 			<div id=""><a HREF="javascript:void(0)" onclick="window.open('<?=base_url();?>poll/yes_result/<? if(isset($cinemapoll['0'])){echo $cinemapoll['0']->id;}?>', 'welcome','width=300,height=200')" style="color: red;">View Result</a></div>
-			<div style="text-align: right;"><a href="<?=base_url()?>poll/allpolls"><?=$this->lang->line('other_poll')?></a></div>
+			<div style="text-align: right;"><a href="<?=base_url()?>home_poll/details"><?=$this->lang->line('other_poll')?></a></div>
 		</div>
 		<div><img src="<?=base_url()?>assets/home_images/ads/ads.jpg" width="204" height="531" /></div>
 	</div>

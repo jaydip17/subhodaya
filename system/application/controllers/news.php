@@ -197,9 +197,7 @@ class News extends Controller {
 			 		'newsid' => $newsid,
 			 		'name'   => $name,
 			 		'comment'=> $message,
-			 		
 			 );
-			
 			$result=$this->db->insert('comments',$data);
 			if($result==1){
 				redirect($current_url);

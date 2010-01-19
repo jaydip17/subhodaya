@@ -326,17 +326,17 @@ text-align:left;
  color:#FFFFFFF;
  }
  
- #alink:hover:{
+ #alink:hover{
  font-size:14px;
  color:red;
  
  }
- #alink link:{
+ #alink link{
  font-size:14px;
  color:#FFFFFFF;
  }
  
- #alink active:{
+ #alink active{
  font-size:14px;
  color:#FFFFFFF;
  }

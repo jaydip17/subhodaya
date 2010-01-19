@@ -44,6 +44,7 @@ class News_Model extends Model
    		$active=$_POST['active'];
    	}
     	$data=array('heading'=>$_POST['heading'],
+    				'eng_heading'=>$_POST['eng_heading'],
   					'summary'=>$_POST["summary"],
   					'description'=>$_POST["description"],
   					'breking_news'=>$breaking,
@@ -62,7 +63,7 @@ class News_Model extends Model
     {
     	$this->db->select('*');
     	$this->db->order_by("news.insert_date", "desc");
-    	$array=array('type'=>$type,'news.active'=>0,'news.breking_news'=>0);
+    	$array=array('type'=>$type,'news.breking_news'=>0);
     	$this->db->where($array);
     	$this->db->limit(8);
 		$this->db->from('news_types');

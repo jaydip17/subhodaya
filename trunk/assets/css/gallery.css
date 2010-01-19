@@ -4,10 +4,20 @@ height:90%;
 float:left;
 width:72%;
 }
+
+#galleryinner{
+padding-left:10px;
+height:90%;
+float:left;
+width:100%;
+
+}
+
 #img4{
 float:left;
 padding-left:8px;
 padding-top:8px;
+
 }
 
 #cr{
@@ -28,26 +38,26 @@ height:100px;
 #img3{
 border:2px solid #767676;
 }
-#anchor{
+#anc{
 	font-size:14px;
 	color:#000000;
 	
 }
-a:visited{
+#anc:visited{
 	font-size:14px;
-	color:#000000;
+	
 	}
-a:link{
+#anc:link{
 	text-decoration:none;
 	font-size:14px;
-	color:#000000;
+	
 }
-a:hover{
+#anc:hover{
 	text-decoration:none;
 	font-size:14px;
 	color:red;
 }
-a:active{
+#anc:active{
 	text-decoration:none;
 	font-size:14px;
 	color:#000000;

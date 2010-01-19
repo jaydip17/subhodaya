@@ -30,7 +30,7 @@
 						       <? $count1=1;
 						         foreach ($sub['subcats'] as $img){
 						       ?>
-					            <div id="img4"><a href="<?=base_url()?>gallery/inner/<?=$img['id']?>"><img src="<?=base_url()?>assets/gallery/thumimg<?=$img['imageid']?>.jpg" id="img3"></a><div style="height:36px; width:128px;background-color:#f7f7f7; border:1px solid #dcdcdc;"><span id="anchor"><a href="<?=base_url()?>gallery/inner/<?=$img['id']?>"><?=$img['imagename']?></span></a><br /> <?=$img['date']?></div>
+					            <div id="img4"><a href="<?=base_url()?>gallery/inner/<?=$img['id']?>"><img src="<?=base_url()?>assets/gallery/thumimg<?=$img['imageid']?>.jpg" id="img3"></a><div style="height:36px; width:128px;background-color:#f7f7f7; border:1px solid #dcdcdc;"><span id="anc"><a href="<?=base_url()?>gallery/inner/<?=$img['id']?>"><?=$img['imagename']?></span></a><br /> <?=$img['date']?></div>
 							    </div>
 							   <? if($count1==4){
 							          $count1 = 0;

@@ -61,7 +61,7 @@ class Gallery extends Controller {
 		$bread_crumb = $this->bread_crumb->get_code($segments);
 	
 		$data=array(
-					'gallerycss'	=>	$gallerycss,
+					'gallerycss'	=> $gallerycss,
 					'more'   		=> $more,
 					'result' 		=> $result,
 					'images' 		=> $images,
@@ -74,6 +74,7 @@ class Gallery extends Controller {
   	}
   	function categeory()
   	{
+  		$gallerycss=array();
   		$type=$this->uri->segment(3,0);
   		$more=$this->News_Model->more_news();
 		$details=$this->Gallery_Model->get_cateimage($type,$limit="");
@@ -117,15 +118,18 @@ class Gallery extends Controller {
 		//print_r($segments);
 		$bread_crumb = $this->bread_crumb->get_code($segments);
 		$data=array(
+		            'gallerycss'    =>$gallerycss,
 					'more'   		=> $more,
 					'cate' 			=> $result,
 					'result'		=> $images,
 		            'paginate' 		=> $paginate,
-					'bread_crumb'	=> $bread_crumb,
+		            'catname'       =>  $result,
+					'bread_crumb'	=> $bread_crumb
 					);
 		$this->load->view('gallery_subcat',$data);
   	}
   	function inner(){
+  		$gallerycss=array();
   		$type=$this->uri->segment(3,0);
   		if($type==0){
   			redirect(base_url()."gallery");
@@ -171,6 +175,7 @@ class Gallery extends Controller {
 		$bread_crumb = $this->bread_crumb->get_code($segments);
 
   		$data=array(
+  		            'gallerycss'=>$gallerycss,
   					'more'		 =>	$more,
   					'cate'		 =>	$cate,
   					'result'	 =>	$details,
@@ -181,6 +186,7 @@ class Gallery extends Controller {
   	}
   	function content()
   	{
+  		$gallerycss=array();
   		$this->load->model('ratings_model', 'ratings');
   		$id=$this->uri->segment(3,0);
   		$parentid=$this->uri->segment(4,0);
@@ -213,12 +219,14 @@ class Gallery extends Controller {
 		//print_r($segments);
 		$bread_crumb = $this->bread_crumb->get_code($segments);
 		
-  		$data=array('more'  => $more,
+  		$data=array(
+                     'gallerycss'=>$gallerycss,
+  		            'more'  => $more,
   					'image' => $image,
   					'result'=> $result1,
   					'links' => $links,
   			'telegu_typing' => $telegu_typing,
-  			'bread_crumb'   => $bread_crumb,
+  			'bread_crumb'   => $bread_crumb
   		);
   		$this->load->view('gallery_content',$data);
   		

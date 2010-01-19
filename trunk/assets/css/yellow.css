@@ -300,7 +300,7 @@ color: rgb(190, 191, 59);
 	margin-top:5px;
 	padding-right:4px;
 	color:#FFF;
-	width:200px;
+	width:220px;
 }
 /* newspage */
 /* Caution! Ensure accessibility in print and other media types... */
@@ -589,7 +589,7 @@ float: left;text-align: center;width:650px;border: 1px solid #CFB811;margin-left
 }
 #sc_div
  {
- float: left;width: 100%;text-align: left;height: 25px;background-color: #FDF7D5;margin-top: 0px; padding-top: 10px;
+ float: left;width: 100%;text-align: left;background-color: #FDF7D5;margin-top: -1px; padding-top: -10px;
  }
   #sc_div a
  {
@@ -598,7 +598,3 @@ float: left;text-align: center;width:650px;border: 1px solid #CFB811;margin-left
  color:#000000;
  letter-spacing: 1px;
  }
- 	.ch{
-			border:1px solid;
-			cursor:pointer;
-			}

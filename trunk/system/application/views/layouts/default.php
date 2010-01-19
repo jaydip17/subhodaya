@@ -280,8 +280,10 @@
 			<!--
 								
 			$(document).ready(function(){
-				   $("#change").hover(function () {
+				   $(".change").hover(function () {
 					      $(this).addClass("ch");
+					    },function (){
+						    $(this).removeClass('ch');
 					    });
 
 					//alert(theme);
@@ -291,18 +293,21 @@
 			</script>
 			<style type="text/css">
 			.ch{
-			border:1px solid;
+			border-color:red;
 			cursor:pointer;
+			}
+			.change{
+			border:1px solid #FFFFFF;
 			}
 			</style>
 			<div style="float: right;">
               <span style="color:white;">Change color:</span>
-              <span><img title="blue" src="<?=base_url();?>assets/image/2.png"    id="change" onclick="changeTheme('blue');"  /></span>
-              <span><img title="yellow" src="<?=base_url();?>assets/image/1.png"   id="change" onclick="changeTheme('yellow');" /></span>
-              <span><img title="ornge" src="<?=base_url();?>assets/image/3.png"   id="change" onclick="changeTheme('ornge');" /></span>
-              <span><img title="green" src="<?=base_url();?>assets/image/4.png"    id="change" onclick="changeTheme('green');" /></span>
-              <span><img title="red" src="<?=base_url();?>assets/image/5.png"     id="change" onclick="changeTheme('red');" /></span>
-              <span><img title="black" src="<?=base_url();?>assets/image/6.png"   id="change" onclick="changeTheme('black');" /></span>
+              <span><img title="blue" src="<?=base_url();?>assets/image/2.png"    class="change" onclick="changeTheme('blue');"  /></span>
+              <span><img title="yellow" src="<?=base_url();?>assets/image/1.png"   class="change" onclick="changeTheme('yellow');" /></span>
+              <span><img title="ornge" src="<?=base_url();?>assets/image/3.png"   class="change" onclick="changeTheme('ornge');" /></span>
+              <span><img title="green" src="<?=base_url();?>assets/image/4.png"    class="change" onclick="changeTheme('green');" /></span>
+              <span><img title="red" src="<?=base_url();?>assets/image/5.png"     class="change" onclick="changeTheme('red');" /></span>
+              <span><img title="black" src="<?=base_url();?>assets/image/6.png"   class="change" onclick="changeTheme('black');" /></span>
             </div>
           	</div>
 		</div>

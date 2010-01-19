@@ -20,6 +20,10 @@ if(isset($message) && !is_array($message) ) echo($message);?>
 		<td align="left"><?=form_input('heading',$edit['0']->heading) ?></td>
 	</tr>
 	<tr>
+		<td>Eng_Heading</td>
+		<td align="left"><?=form_input('eng_heading',$edit['0']->eng_heading) ?></td>
+	</tr>
+	<tr>
 		<td>Summery</td>
 		<td style="text-align: left;">
 			<textarea rows="3" cols="50" name="summary" id="summary"><?=$edit['0']->summary ?></textarea> 

@@ -301,7 +301,7 @@ color: rgb(190, 191, 59);
 	margin-top:5px;
 	padding-right:4px;
 	color:#FFF;
-	width:200px;
+	width:220px;
 }
 /* newspage */
 /* Caution! Ensure accessibility in print and other media types... */
@@ -605,7 +605,3 @@ float: left;text-align: center;width:650px;border: 1px solid #B57171;margin-left
  color:#000000;
  letter-spacing: 1px;
  }
- 	.ch{
-			border:1px solid;
-			cursor:pointer;
-			}

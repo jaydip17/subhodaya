@@ -147,7 +147,8 @@ class News extends Controller {
 			redirect(base_url().'admin/news',$message);
 		}
 	}
-	function getnews(){
+	function getnews()
+	{
 		$id=$this->uri->segment(4,0);
 		//$details=$this->News_Model->getnews_details($type);
 		
@@ -175,7 +176,8 @@ class News extends Controller {
 		);
 		$this->load->view('admin/news_edit',$data);
 	}
-	function delete(){
+	function delete()
+	{
 	$this->load->model('admin/News_Model');
 	$id=$this->uri->segment(4,0);
 	$result=$this->News_Model->delete($id);

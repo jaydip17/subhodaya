@@ -128,7 +128,7 @@ class Greeting_Model extends Model {
    		$this->db->order_by("greetings.insert_date", "desc");
    		$array=array('greetings.active'=>1);
    		$this->db->where($array);
-   		$this->db->limit(3);
+   		$this->db->limit(4);
 		$this->db->from('greeting_cat');
 		$this->db->join('greetings','greetings.type=greeting_cat.id');
 		$details = $this->db->get_where();

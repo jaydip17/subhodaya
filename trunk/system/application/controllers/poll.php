@@ -33,9 +33,10 @@ class Poll extends Controller {
 	}
 	function insert()
 	{
-		echo $poll_id = $this->uri->segment(3);
-		echo  $answer_id = $this->uri->segment(4);
-		exit;
+		$poll_id = $this->uri->segment(3);
+		$answer_id = $this->uri->segment(4);
+		$cat_id = $this->uri->segment(5);
+
 		if($answer_id==0){
 			$answer='a';
 		}
@@ -47,12 +48,12 @@ class Poll extends Controller {
 		}
 		$result=$this->Poll_Model->insert_home($poll_id,$answer);
 		if(!empty($result)){
+			if($cat_id==4){
 			redirect(base_url());
+			}else{
+				redirect(base_url().'cinema');
+			}
 		}
-	}
-	function cine_insert()
-	{
-		
 	}
 
 	

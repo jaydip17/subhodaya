@@ -153,7 +153,7 @@ li{
 }
 #newslet_left{
 	background-image:url(../image/news_letter.png);
-	background-repeat:none;
+	background-repeat:no-repeat;
 	background-position:0px -0px;
 	height:81px;
 	width:5px;
@@ -169,7 +169,7 @@ li{
 }
 #newslet_right{
 	background-image:url(../image/news_letter.png);
-	background-repeat:none;
+	background-repeat:no-repeat;
 	background-position:0px -212px;
 	height:81px;
 	width:5px;
@@ -177,14 +177,14 @@ li{
 }
 #top_img{
 	background-image:url(../image/news_que.png);
-	background-repeat:none;
+	background-repeat:no-repeat;
 	background-position:0px 0px;
 	height:6px;
 	width:100%;
 }
 #bot_img{
 	background-image:url(../image/news_que.png);
-	background-repeat:none;
+	background-repeat:no-repeat;
 	background-position:0px -7px;
 	height:6px;
 	width:100%;
@@ -302,7 +302,7 @@ width: 42px;
 	margin-top:5px;
 	padding-right:4px;
 	color:#FFF;
-	width:200px;
+	width:223px;
 }
 /* newspage */
 /* Caution! Ensure accessibility in print and other media types... */
@@ -467,7 +467,7 @@ greet_menu ul {
 	font-family:"Trebuchet MS";
 	font-size:13px;
 	border-color: #979797;
-	border-size: 0px;
+	border: 0px solid;
 	border-width: 0px;
 	padding-left: 2px;
 
@@ -595,7 +595,7 @@ float: left;text-align: center;width:650px;border: 1px solid #808080;margin-left
 }
 #sc_div
  {
- float: left;width: 100%;text-align: left;height: 25px;background-color: #FDF7D5;margin-top: -1px; padding-top: -10px; 
+ float: left;width: 100%;text-align: left;height: 25px;background-color: #FDF7D5;margin-top: -1px;  
  }
   #sc_div a
  {
@@ -604,7 +604,3 @@ float: left;text-align: center;width:650px;border: 1px solid #808080;margin-left
  color:#000000;
  letter-spacing: 1px;
  }
-	.ch{
-			border:1px solid;
-			cursor:pointer;
-			}

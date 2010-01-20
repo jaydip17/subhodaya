@@ -72,6 +72,7 @@ class Videos extends Controller
 			$result=$this->db->insert('videos',$data);
 			$i=$this->db->insert_id();
 		}
+		
 		if($result==1)
 		{
 		$dir =  './assets/videos';   
@@ -82,9 +83,11 @@ class Videos extends Controller
 		$this->load->library('upload',$config);
 		if (!$this->upload->do_upload('video'))
 		{
+			
 			$error = array('error' => $this->upload->display_errors());
 			$this->db->where('id',$i);
 			$this->db->delete('videos');
+			$message = 'error';
 			$this->session->set_flashdata('message',$error);
 		}	
 		else
@@ -156,7 +159,8 @@ class Videos extends Controller
 		}
 	 }
 	}
-		redirect(base_url()."admin/videos/viewaddvideo",$message);
+		
+	redirect(base_url()."admin/videos/viewaddvideo",$message);
 		
 		
 	}

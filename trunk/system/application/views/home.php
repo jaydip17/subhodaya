@@ -10,11 +10,17 @@ function support()
 	 {
 		 alert('Enter Your Email-id');
 	 }else{
-		 window.location ='newsletter/subscribe/'+x;
+		 alert('hi');
 	 } 
 }
 -->
 </script> 
+<style type='text/css'>
+#demo { width:350px; }
+#demo .yui-content { padding:20px; } /* pad content container */
+#demo img { margin-right:20px; }
+#tabone, #tabtwo, #tabthree { height:80px; }
+</style>
 
 <div  style="background-color:#fff; float:left; width:100%;">
 					<div id="left_content" style="width:165px;margin-left:4px; float:left">
@@ -22,13 +28,18 @@ function support()
 						<?= (isset($home_poll)) ? $home_poll : '' ?>
 						<div id="news_letter">
 							<div  class="newsletter">
-								<div id="movie" style="width:100%; height:25px; padding-top:4px" >
-									Subhodaya Newsletter
+								<div id="ne_formdiv">
+									<div id="movie" style="width:100%; height:25px; padding-top:4px" >
+										Subhodaya Newsletter
+									</div>
+									<div id="movie" style="width:100%" >
+										<input type="text" name="news_email" id="email">
+									</div>
+									<img style="margin:10px 0px 5px 0px; " src="<?=base_url()?>assets/image/submit.jpg " onclick="support()">
 								</div>
-								<div id="movie" style="width:100%" >
-									<input type="text" name="news_email" id="email">
+								<div id="succdiv" style="display: none;">
+									Thankyou for subscribing with us.
 								</div>
-								<img style="margin:10px 0px 5px 0px; " src="<?=base_url()?>assets/image/submit.jpg " onclick="support()">
 							</div>
 						</div>
 						<?= (isset($reviews_block)) ? $reviews_block : '' ?>
@@ -36,34 +47,32 @@ function support()
 					</div>
 					<div id="middle_content" style="width:479px;margin-left:3px; float:left">
 						<?= (isset($middle_block)) ? $middle_block : '' ?>
-						<div id="container-1" align="left">
-            				<ul>
-				                <li><a href="<?=base_url()?>tabs/rastriya"><span><?= (isset($news_rasriyam)) ? $news_rasriyam : '' ?></span></a></li>
-				                <li><a href="<?=base_url()?>tabs/jathiyam"><span><?= (isset($news_jathiyam)) ? $news_jathiyam : '' ?></span></a></li>
-				                <li><a href="<?=base_url()?>tabs/antharja"><span><?= (isset($news_antharja)) ? $news_antharja : '' ?></span></a></li>
-								<li><a href="<?=base_url()?>tabs/kridalu"><span><?= (isset($news_kridalu)) ? $news_kridalu : '' ?></span></a></li>
-            				</ul>
-        				</div>
-						<div id="container-2" align="left">
-				            <ul>
-				                <li><a href="<?=base_url()?>tabs/cini_pukarlu"><span><?= (isset($cini_pukarlu)) ? $cini_pukarlu : '' ?></span></a></li>
-				                <li><a href="<?=base_url()?>tabs/cini_varthalu"><span><?= (isset($cini_vishesm)) ? $cini_vishesm : '' ?></span></a></li>
-				            </ul>
-				            
-				        </div>
-						<div id="container-3" align="left">
-				            <ul>
-				                <li><a href="<?=base_url()?>tabs/photo_gallery"><span><?= (isset($photo_gallery)) ? $photo_gallery : '' ?></span></a></li>
-				                <li><a href="<?=base_url()?>tabs/video_home"><span><?= (isset($videos)) ? $videos : '' ?></span></a></li>
-				                <li><a href="<?=base_url()?>tabs/greetings_home"><span><?= (isset($greetings)) ? $greetings : '' ?></span></a></li>
-				            </ul>
-				        </div>
-						<div id="container-4" align="left">
-				           <ul>
-				                <li><a href="<?=base_url()?>tabs"><span><?= (isset($mahila)) ? $mahila : '' ?></span></a></li>
-				                <li><a href="<?=base_url()?>tabs/sahithi"><span><?= (isset($sahithi)) ? $sahithi : '' ?></span></a></li>
-				          </ul>
-				        </div>	
+					<div class="yui-skin-sam">
+					<div id='demo' class='yui-navset' style="margin-left:10px;">
+						<ul class='yui-nav'>
+							<li class='selected style1' id='tabOneLabel'><a href='#tabone'><em>Tab On<span class="style1"></span>e</em></a></li>
+							<li id='tabTwoLabel'><a href='#tabtwo'><em>Tab Two</em></a></li>
+							<li id='tabThreeLabel'><a href='#tabthree'><em>Tab Three</em></a></li>
+						</ul>
+						<div class='yui-content'>
+							<div id='tabone'>
+								<img id='imgOne' src='http://developer.yahoo.com/yui/docs/assets/examples/exampleimages/small/museum.jpg' />
+							</div>
+							<div id='tabtwo'>
+								tab two
+							</div>
+							<div id='tabthree'>
+								tabthree
+							</div>
+						</div>
+					</div>
+					</div>
+				<script>
+				var tabView = new YAHOO.widget.TabView('demo');
+				</script>
+					
+					
+							
 					</div>
 					<div id="right_content" style="width:302px;margin-left:2px; float:left">
 						<div id="right_ad1">

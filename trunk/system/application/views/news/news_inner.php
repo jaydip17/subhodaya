@@ -154,7 +154,7 @@ display:inline;
 			<div style="height: 24px;border-top: 1px solid #cee2ed;border-bottom: 1px solid #cee2ed;margin-top: 5px;font-size: 16px;color: maroon;">
 			<?=$this->lang->line('sambanditha');?>
 			</div>
-			<div style="height: 140px;">
+			<div style="height: 150px;">
 			<?php $count=0; foreach ($realtion as $row):
 			 if($count==1){$count++;continue;}
 			?>

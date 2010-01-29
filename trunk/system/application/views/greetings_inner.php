@@ -21,7 +21,7 @@
 		<hr>
 		<div style="text-align: center;">
 		 <b> Personalize your free greeting by filling out the form below!</b>
-			<?=form_open('subhodaya/sendmail','name="telugu_send"') ?>
+			<?=form_open('index.php/subhodaya/sendmail','name="telugu_send"') ?>
 						<span style="color: red;font-weight: bold;"><?=$this->session->flashdata('yourname')?></span>
 						<table align="center" width="600px"  cellpadding="0" cellspacing="0" id="gree_td">
 							<tr>

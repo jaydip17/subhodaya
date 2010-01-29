@@ -311,113 +311,13 @@ color: rgb(190, 191, 59);
 #ch_color a:HOVER{
 	border: 1px solid;
 	}
-/* Caution! Ensure accessibility in print and other media types... */
-@media projection, screen { /* Use class for showing/hiding tab content, so that visibility can be better controlled in different media types... */
-    .tabs-hide {
-        display: none;
-    }
-}
-
-/* Hide useless elements in print layouts... */
-@media print {
-    .tabs-nav {
-        display: none;
-    }
-}
-
-/* Skin */
-.tabs-nav {
-    list-style: none;
-    margin: 0;
-    padding: 0 0 0 0;
-}
-.tabs-nav:after { /* clearing without presentational markup, IE gets extra treatment */
-    display: block;
-    clear: both;
-    content: " ";
-}
-.tabs-nav li {
-    float: left;
-    margin: 0 0 0 0;
-    min-width: 84px; /* be nice to Opera */
-}
-.tabs-nav a, .tabs-nav a span {
-    display: block;
-    padding: 0px 10px;
-    background: url(../image/tab_6.png) no-repeat;
-}
-.tabs-nav a {
-    position: relative;
-    top: 1px;
-    z-index: 2;
-    padding-left: 0;
-    color: #27537a;
-    font-size: 12px;
-    font-weight: bold;
-    line-height: 1.2;
-    text-align: center;
-    text-decoration: none;
-    white-space: nowrap; /* required in IE 6 */    
-}
-.tabs-nav .tabs-selected a {
-    color: #E82020;
-}
-.tabs-nav .tabs-selected a, .tabs-nav a:hover, .tabs-nav a:focus, .tabs-nav a:active {
-    background-position: 100% -127px;
-    outline: 0; /* prevent dotted border in Firefox */
-}
-.tabs-nav a, .tabs-nav .tabs-disabled a:hover, .tabs-nav .tabs-disabled a:focus, .tabs-nav .tabs-disabled a:active {
-    background-position: 100% -100px;
-}
-.tabs-nav a span {
-    width: 60px; /* IE 6 treats width as min-width */
-    min-width: 64px;
-    height: 18px; /* IE 6 treats height as min-height */
-    min-height: 18px;
-    padding-top: 6px;
-    padding-right: 0;
-}
-*>.tabs-nav a span { /* hide from IE 6 */
-    width: auto;
-    height: auto;
-}
-.tabs-nav .tabs-selected a span {
-    padding-top: 7px;
-}
-.tabs-nav .tabs-selected a span, .tabs-nav a:hover span, .tabs-nav a:focus span, .tabs-nav a:active span {
-    background-position: 0px -27px;
-}
-.tabs-nav a span, .tabs-nav .tabs-disabled a:hover span, .tabs-nav .tabs-disabled a:focus span, .tabs-nav .tabs-disabled a:active span {
-    background-position: 0 0;
-}
-.tabs-nav .tabs-selected a:link, .tabs-nav .tabs-selected a:visited, .tabs-nav .tabs-disabled a:link, .tabs-nav .tabs-disabled a:visited { /* @ Opera, use pseudo classes otherwise it confuses cursor... */
-    cursor: text;
-}
-.tabs-nav a:hover, .tabs-nav a:focus, .tabs-nav a:active { /* @ Opera, we need to be explicit again here now... */
-    cursor: pointer;
-}
-.tabs-nav .tabs-disabled {
-    opacity: .4;
-}
-.tabs-container {
-	text-align:left;
-	width:97%;
-	float:left;
-    border: 1px solid #ABCCDF;
-    padding: 8px 4px 8px 8px;
-    background: #fff; /* declare background color for container to avoid distorted fonts in IE while fading */
-}
-.tabs-loading em {
-    padding: 0 0 0 20px;
-    background: url(../image/loading.gif) no-repeat 0 50%;
-}
 #question{
 	background: url(../image/123.png);
 	background-repeat:no-repeat;
 	height: 50px;
 	font-size: 12px;color: black;
 	text-align: center;
-	width: 160px;
+	width: 150px;
 	color:yellow;
 	margin-top: 4px;
 	}
@@ -608,4 +508,272 @@ float: left;text-align: center;width:650px;border: 1px solid #cee2ec;margin-left
  #change a{
  border:0px;
  }
+ /*
+Copyright (c) 2009, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.7.0
+*/
+.yui-navset .yui-nav li,.yui-navset .yui-navset-top .yui-nav li,.yui-navset .yui-navset-bottom .yui-nav li
+{
+	margin:0 .0em 0 0;
+}
+.yui-navset-left .yui-nav li,.yui-navset-right .yui-nav li
+{
+	margin:0 0 .0em;
+}
+.yui-navset .yui-content .yui-hidden
+{
+	position:absolute;
+	left:-999999px;
+	visibility:hidden;
+}
+.yui-navset .yui-navset-left .yui-nav,.yui-navset .yui-navset-right .yui-nav,.yui-navset-left .yui-nav,.yui-navset-right .yui-nav
+{
+	width:6em;
+}
+.yui-navset-top .yui-nav,.yui-navset-bottom .yui-nav
+{
+	width:auto;
+}
+.yui-navset .yui-navset-left,.yui-navset-left
+{
+	padding:0 0 0 6em;
+}
+.yui-navset-right
+{
+	padding:0 6em 0 0;
+}
+.yui-navset-top,.yui-navset-bottom
+{
+	padding:auto;
+}
+.yui-nav,.yui-nav li
+{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.yui-navset li em
+{
+	font-style:normal;
+}
+.yui-navset
+{
+	position:relative;
+	zoom:1;
+}
+.yui-navset .yui-content,.yui-navset .yui-content div
+{
+	zoom:1;
+}
+.yui-navset .yui-content:after
+{
+	content:'';
+	display:block;
+	clear:both;
+}
+.yui-navset .yui-nav li,.yui-navset .yui-navset-top .yui-nav li,.yui-navset .yui-navset-bottom .yui-nav li
+{
+	display:inline-block;
+	display:-moz-inline-stack;
+	*display:inline;
+	vertical-align:bottom;
+	cursor:pointer;
+	zoom:1;
+}
+.yui-navset-left .yui-nav li,.yui-navset-right .yui-nav li
+{
+	display:block;
+}
+.yui-navset .yui-nav a
+{
+	position:relative;
+}
+.yui-navset .yui-nav li a,.yui-navset-top .yui-nav li a,.yui-navset-bottom .yui-nav li a
+{
+	display:block;
+	display:inline-block;
+	vertical-align:bottom;
+	zoom:1;
+}
+.yui-navset-left .yui-nav li a,.yui-navset-right .yui-nav li a
+{
+	display:block;
+}
+.yui-navset-bottom .yui-nav li a
+{
+	vertical-align:text-top;
+}
+.yui-navset .yui-nav li a em,.yui-navset-top .yui-nav li a em,.yui-navset-bottom .yui-nav li a em{display:block;}.yui-navset .yui-navset-left .yui-nav,.yui-navset .yui-navset-right .yui-nav,.yui-navset-left .yui-nav,.yui-navset-right .yui-nav
+{
+	position:absolute;
+	z-index:1;
+}
+.yui-navset-top .yui-nav,.yui-navset-bottom .yui-nav
+{
+	position:static;
+}
+.yui-navset .yui-navset-left .yui-nav,.yui-navset-left .yui-nav
+{
+	left:0;
+	right:auto;
+}
+.yui-navset .yui-navset-right .yui-nav,.yui-navset-right .yui-nav
+{
+	right:0;
+	left:auto;
+}
+.yui-skin-sam .yui-navset .yui-nav,.yui-skin-sam .yui-navset .yui-navset-top .yui-nav
+{
+	border:solid #ffffff;
+	border-width:0 0 1px;
+	zoom:1px;
+}
+.yui-skin-sam .yui-navset .yui-nav li,.yui-skin-sam .yui-navset .yui-navset-top .yui-nav li
+{
+	margin:0 .16em 0 0;
+	padding:1px 0 0;
+	zoom:1;
+}
+.yui-skin-sam .yui-navset .yui-nav .selected,.yui-skin-sam .yui-navset .yui-navset-top .yui-nav .selected
+{
+	margin:0 .16em -1px 0;
+}
+.yui-skin-sam .yui-navset .yui-nav a,.yui-skin-sam .yui-navset .yui-navset-top .yui-nav a
+{
+	background:#d8d8d8 url(../image/hover3.png) repeat-x;
+	border:solid #a3a3a3;
+	border-width:0 1px;
+	color:#000;
+	position:relative;
+	text-decoration:none;
+}
+.yui-skin-sam .yui-navset .yui-nav a em,.yui-skin-sam .yui-navset .yui-navset-top .yui-nav a em
+{
+	border:solid #a3a3a3;
+	border-width:1px 0 0;
+	cursor:hand;
+	padding:.25em .75em;
+	left:0;
+	right:0;
+	bottom:0;
+	top:-1px;
+	position:relative;
+}
+.yui-skin-sam .yui-navset .yui-nav .selected a,.yui-skin-sam .yui-navset .yui-nav .selected a:focus,.yui-skin-sam .yui-navset .yui-nav .selected a:hover
+{
+	background:#ffffff url(sprite.png) repeat-x left -1400px;
+	color:#000;
+	height: 20px;
+}
+.yui-skin-sam .yui-navset .yui-nav a:hover,.yui-skin-sam .yui-navset .yui-nav a:focus
+{
+	background:url(../image/hover3.png) repeat-x;
+	outline:0;
+}
+.yui-skin-sam .yui-navset .yui-nav .selected a em
+{
+	padding:.25em .65em;
+}
+.yui-skin-sam .yui-navset .yui-nav .selected a,.yui-skin-sam .yui-navset .yui-nav .selected a em
+{
+	border-color:#a3a3a3;
+}
+.yui-skin-sam .yui-navset .yui-content
+{
+	background:#edf5ff;
+}
+.yui-skin-sam .yui-navset .yui-content,.yui-skin-sam .yui-navset .yui-navset-top .yui-content
+{
+	border:1px solid #808080;
+	border-top-color:#a3a3a3;
+	padding:.25em .5em;
+}
+.yui-skin-sam .yui-navset-left .yui-nav,.yui-skin-sam .yui-navset .yui-navset-left .yui-nav,.yui-skin-sam .yui-navset .yui-navset-right .yui-nav,.yui-skin-sam .yui-navset-right .yui-nav
+{
+	border-width:0 5px 0 0;
+	Xposition:absolute;
+	top:0;
+	bottom:0;
+}
+.yui-skin-sam .yui-navset .yui-navset-right .yui-nav,.yui-skin-sam .yui-navset-right .yui-nav
+{
+	border-width:0 0 0 5px;
+}
+.yui-skin-sam .yui-navset-left .yui-nav li,.yui-skin-sam .yui-navset .yui-navset-left .yui-nav li,.yui-skin-sam .yui-navset-right .yui-nav li
+{
+	margin:0 0 .16em;
+	padding:0 0 0 1px;
+}
+.yui-skin-sam .yui-navset-right .yui-nav li
+{
+	padding:0 1px 0 0;
+}
+.yui-skin-sam .yui-navset-left .yui-nav .selected,.yui-skin-sam .yui-navset .yui-navset-left .yui-nav .selected
+{
+	margin:0 -1px .16em 0;
+}
+.yui-skin-sam .yui-navset-right .yui-nav .selected
+{
+	margin:0 0 .16em -1px;
+}
+.yui-skin-sam .yui-navset-left .yui-nav a,.yui-skin-sam .yui-navset-right .yui-nav a
+{
+	border-width:1px 0;
+}
+.yui-skin-sam .yui-navset-left .yui-nav a em,.yui-skin-sam .yui-navset .yui-navset-left .yui-nav a em,.yui-skin-sam .yui-navset-right .yui-nav a em
+{
+	border-width:0 0 0 1px;
+	padding:.2em .75em;
+	top:auto;
+	left:-1px;
+}
+.yui-skin-sam .yui-navset-right .yui-nav a em
+{
+	border-width:0 1px 0 0;
+	left:auto;
+	right:-1px;
+}
+.yui-skin-sam .yui-navset-left .yui-nav a,.yui-skin-sam 
+.yui-navset-left .yui-nav .selected a,.yui-skin-sam
+ .yui-navset-left .yui-nav a:hover,.yui-skin-sam 
+ .yui-navset-right .yui-nav a,.yui-skin-sam .yui-navset-right
+  .yui-nav .selected a,.yui-skin-sam .yui-navset-right
+.yui-nav a:hover,.yui-skin-sam .yui-navset-bottom .yui-nav a,
+.yui-skin-sam .yui-navset-bottom .yui-nav 
+.selected a,.yui-skin-sam .yui-navset-bottom .yui-nav a:hover
+{
+	background-image:none;
+}
+.yui-skin-sam .yui-navset-left .yui-content
+{
+	border:1px solid #a3a3a3;
+	border-left-color:#243356;
+}
+.yui-skin-sam .yui-navset-bottom .yui-nav,.yui-skin-sam .yui-navset .yui-navset-bottom .yui-nav
+{
+	border-width:5px 0 0;
+}
+.yui-skin-sam .yui-navset .yui-navset-bottom .yui-nav .selected,.yui-skin-sam .yui-navset-bottom .yui-nav .selected
+{
+	margin:-1px .16em 0 0;
+}
+.yui-skin-sam .yui-navset .yui-navset-bottom .yui-nav li,.yui-skin-sam .yui-navset-bottom .yui-nav li
+{
+	padding:0 0 1px 0;
+	vertical-align:top;
+}
+.yui-skin-sam .yui-navset .yui-navset-bottom .yui-nav a em,.yui-skin-sam .yui-navset-bottom .yui-nav a em
+{
+	border-width:0 0 1px;
+	top:auto;
+	bottom:-1px;
+}
+.yui-skin-sam .yui-navset-bottom .yui-content,.yui-skin-sam .yui-navset .yui-navset-bottom .yui-content
+{
+	border:1px solid #a3a3a3;
+	border-bottom-color:#a3a3a3;
+}
+ 
  

@@ -314,7 +314,7 @@ class Cinema_lib{
 // cinema pages
 	function cine_news($cat_id)
 	{
-		$details=$this->CI->Cinema_Model->get_cinematype($cat_id,0);
+		$details=$this->CI->Cinema_Model->get_cinematype($cat_id);
 		return $details;
 	}
 // mahila pages

@@ -8,6 +8,7 @@ class Gallery extends Controller {
 	}
 	function index()
 	{
+		$breaking=$this->News_Model->breaking_news1();
 		$gallerycss=array();
 		$more=$this->News_Model->more_news();
 		$title=$this->lang->line('gallery_title').$more['6']->matter;
@@ -68,12 +69,14 @@ class Gallery extends Controller {
 					'cats'   		=> $cats,
 					'bread_crumb'   => $bread_crumb,
 					'title'			=> $title,
-					'description'	=> $description
+					'description'	=> $description,
+					'breaking'		=>	$breaking
 					);
 		$this->load->view('gallery_view',$data);
   	}
   	function categeory()
   	{
+  		$breaking=$this->News_Model->breaking_news1();
   		$gallerycss=array();
   		$type=$this->uri->segment(3,0);
   		$more=$this->News_Model->more_news();
@@ -124,11 +127,13 @@ class Gallery extends Controller {
 					'result'		=> $images,
 		            'paginate' 		=> $paginate,
 		            'catname'       =>  $result,
-					'bread_crumb'	=> $bread_crumb
+					'bread_crumb'	=> $bread_crumb,
+					'breaking'		=>	$breaking
 					);
 		$this->load->view('gallery_subcat',$data);
   	}
   	function inner(){
+  		$breaking=$this->News_Model->breaking_news1();
   		$gallerycss=array();
   		$type=$this->uri->segment(3,0);
   		if($type==0){
@@ -180,12 +185,14 @@ class Gallery extends Controller {
   					'cate'		 =>	$cate,
   					'result'	 =>	$details,
   					'paginate'	 =>	$paginate,
-  					'bread_crumb'=> $bread_crumb
+  					'bread_crumb'=> $bread_crumb,
+  					'breaking'		=>	$breaking
   		);
   		$this->load->view('gallery_inner',$data);
   	}
   	function content()
   	{
+  		$breaking=$this->News_Model->breaking_news1();
   		$gallerycss=array();
   		$this->load->model('ratings_model', 'ratings');
   		$id=$this->uri->segment(3,0);
@@ -226,7 +233,8 @@ class Gallery extends Controller {
   					'result'=> $result1,
   					'links' => $links,
   			'telegu_typing' => $telegu_typing,
-  			'bread_crumb'   => $bread_crumb
+  			'bread_crumb'   => $bread_crumb,
+  			'breaking'		=>	$breaking
   		);
   		$this->load->view('gallery_content',$data);
   		

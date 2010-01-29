@@ -59,7 +59,7 @@ class News extends Controller {
 		$title=$this->lang->line('newscat'.$type);
 		//$setier=$this->news_lib->news_left($this->lang->line('news_setier'));
 		$news_content=$this->news_lib->news_content($type);
-		$onload = "loadNews('content','".base_url()."newslist/listview/".$type."')";
+		
 		/*$type=$this->uri->segment(3);
 		$onload = "loadNews('content','".base_url()."newslist/listview/".$type."')";
 		
@@ -91,7 +91,6 @@ class News extends Controller {
 		$data=array(
 						'newscss'		  	=> 	$newscss,
 						'news_content'		=> 	$news_content,
-						'onload'    	   	=> 	$onload,	
 						'bread_crumb'		=>  $bread_crumb,
 						'title'				=>	$title,
 						'breaking'			=>	$breaking
@@ -202,6 +201,38 @@ class News extends Controller {
 			if($result==1){
 				redirect($current_url);
 			}
+	}
+	function statenews()
+	{ 
+		$breaking=$this->News_Model->breaking_news1(); 
+		$more=$this->News_Model->more_news();
+		$id=$this->uri->segment(3,0);
+		$type=$this->uri->segment(4,0);
+		$news_inner=$this->news_lib->state_inner($id,$type);
+		$newscss=array();
+		$result=$this->News_Model->state_inner($id);
+		//print_r($result);
+		$heading=$result[0]->heading;	
+		$title=$result[0]->eng_heading. ' | '.$heading;
+		$segments = array(	'seg1' => $this->uri->segment(1,0),
+						   	'seg2' => $this->uri->segment(2,0),
+							'seg3' => $this->uri->segment(3,0),
+							'seg4' => $this->uri->segment(4,0),
+							'seg5' => $this->uri->segment(5,0),
+							'heading' => $heading,
+							'main' => $this->lang->line('nagaram'),
+							'home' => $more['2']->matter,
+		); 		
+		$bread_crumb = $this->bread_crumb->get_code($segments);
+		
+		$data=array(
+				'news_inner'		=>	 $news_inner,
+				'newscss'			=>	 $newscss,
+				'bread_crumb' 		=> 	 $bread_crumb,
+				'title'				=>	$title,
+				'breaking'			=>	$breaking
+				);	
+		$this->load->view('news_inner',$data);
 	}
 }
 ?>

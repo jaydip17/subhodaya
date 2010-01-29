@@ -135,7 +135,6 @@ class Sahithi extends Controller {
    	$breaking=$this->News_Model->breaking_news1();
    	$more=$this->News_Model->more_news();
    	$type=$this->uri->segment(3,0);
-   	$onload = "loadNews('content','".base_url()."sahithilist/listview/".$type."')";
    	$sahithi_content=$this->news_lib->sahithi_content($type);
    	$newscss=array();
    	$title=$this->lang->line('sahithi_cat'.$type);
@@ -174,7 +173,6 @@ class Sahithi extends Controller {
 		
 		$data=array(
 				'bread_crumb'		=>	$bread_crumb,
-				      'onload' 		=>	$onload,
 				'news_content'		=>	$sahithi_content,
 				'newscss'			=>	$newscss,
 				'title'				=>	$title,

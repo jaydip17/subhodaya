@@ -127,7 +127,7 @@ class Mahila extends Controller {
     	$type=$this->uri->segment(3,0);
     	$title=$this->lang->line('mahila_cat'.$type);
     	$mahila_content=$this->news_lib->mahila_content($type);
-    	$onload = "loadNews('content','".base_url()."mahilalist/listview/".$type."')";
+    	
    	 /*   $this->load->model('admin/Poll_Model');
    	    $details_sahithi=$this->Sahithi_Model->get_sahithitype();
    	    $sahithi_details=$this->Sahithi_Model->active_sahithi(3,$type='home');
@@ -161,7 +161,6 @@ class Mahila extends Controller {
 		$data=array(	
 				'bread_crumb'	=>	$bread_crumb,
 				'news_content'	=>	$mahila_content,
-					 'onload' 	=>	$onload,
 					'newscss'	=>	$newscss,
 					'title'     =>	$title,
 					'breaking'	=>	$breaking

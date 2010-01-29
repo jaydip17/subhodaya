@@ -7,11 +7,20 @@ class News extends Controller {
 	}
 	function index(){
 		$message = $this->session->flashdata('message');
-		$details=$this->News_Model->get_newstype();
+		$details=$this->News_Model->get_newstype(1);
+		$districs=$this->News_Model->get_newstype(0);
+		//print_r($districs);
+		foreach ($districs as $dis)
+				{
+					$disoption[0]='Select Districts';
+					$disoption[$dis->id]=$dis->news_cat;
+				}
 		foreach ($details as $res )
 				{
+					$options[0] = 'Select news';
 					$options[$res->id] = $res->news_cat;
 				}
+				//print_r($options);
 		$this->load->model('admin/Openwysiwyg_Model');
 		$textarea[]= array('textarea' => 'description',
 						   'skin'	  => 'full');
@@ -23,8 +32,10 @@ class News extends Controller {
 		$data=array(
 							'jslinks'   => $links,
 							'message'	=> $message,
-							'options'   => $options
+							'options'   => $options,
+							'disoption'	=>	$disoption
 		);
+		//print_r($disoption);
 		$this->load->view('admin/news_view',$data);
 	}
 	function insert(){
@@ -42,25 +53,44 @@ class News extends Controller {
 			$active=$_POST['active'];
 		}
 		$type=$this->input->post('type');
+		$distr=$this->input->post('distr');
 		$heading=$this->input->post('heading');
 		$summery=$this->input->post('summary');
 		$description=$this->input->post('description');
 		$eng_heading=$this->input->post('engheading');
-		$data=array('type'    => $type,
+		if($type!=0){
+			$news='news';
+		$data=array(
+					'type'    => $type,
 					'heading' => $heading,
 					'summary' => $summery,
 				'description' => $description,
 				'breking_news'=> $breaking_news,
-				'active'      =>$active,
-				'eng_heading' =>$eng_heading
-		);
+				'active'      => $active,
+				'eng_heading' => $eng_heading
+			);
 		if(!empty($data))
 		{
 		$result=$this->db->insert('news',$data);
 		$id=$this->db->insert_id();
 		}
+		}else{
+			$news='districts';
+			$data1=array(
+					'dist_id'  => $distr,
+					'heading' => $heading,
+					'summary' => $summery,
+				'description' => $description,
+				'eng_heading' => $eng_heading
+			);
+			if(!empty($data1))
+			{
+			$result=$this->db->insert('districts_news',$data1);
+			$id=$this->db->insert_id();
+			}
+		}
 		if($result==1){
-		$config['upload_path'] ='assets/news/';
+		$config['upload_path'] ='assets/'.$news.'/';
 		$config['allowed_types'] = 'gif|jpg|png';
 		$config['max_size']	= '2000';
 		$config['max_width']  = '1024';
@@ -78,8 +108,8 @@ class News extends Controller {
 		else
 		{
 			$data = array('upload_data' => $this->upload->data());
-			$oldname='assets/news/'.$data['upload_data']['file_name'];
-			rename($oldname,'assets/news/news_img_main'.$id.'.jpg');
+			$oldname='assets/'.$news.'/'.$data['upload_data']['file_name'];
+			rename($oldname,'assets/'.$news.'/news_img_main'.$id.'.jpg');
 			$message='News Added Successfully';
 			$this->session->set_flashdata('message',$message);
 			$aspect_ratio = $data['upload_data']['image_height'] / $data['upload_data']['image_width'];
@@ -88,7 +118,7 @@ class News extends Controller {
 		if($data['upload_data']['image_width'] >300 && $data['upload_data']['image_height'] > 300)
 		  {
 		  	$filename = 'news_img_main'.$id.'.jpg';
-			$image_path='assets/news/';
+			$image_path='assets/'.$news.'/';
 			$config['new_image'] = 'news_img_temp'.$id.'.jpg';
 	    	$config['image_library'] = 'gd2';
 	        $config['source_image'] = $image_path.$filename;
@@ -102,17 +132,17 @@ class News extends Controller {
 	    	{
 	    		$error = array('error' => $this->image_lib->display_errors());	
 	    	}
-	    	rename('assets/news/news_img_temp'.$id.'_thumb.jpg','assets/news/news_img'.$id.'.jpg');
-	    	unlink('assets/news/news_img_main'.$id.'.jpg');
+	    	rename('assets/'.$news.'/news_img_temp'.$id.'_thumb.jpg','assets/'.$news.'/news_img'.$id.'.jpg');
+	    	unlink('assets/'.$news.'/news_img_main'.$id.'.jpg');
 			$this->image_lib->clear();	
 			}
 		  else 
-		  rename('assets/news/news_img_main'.$id.'.jpg','assets/news/news_img'.$id.'.jpg');	
+		  rename('assets/'.$news.'/news_img_main'.$id.'.jpg','assets/'.$news.'/news_img'.$id.'.jpg');	
 			
 	    	
 			$height=$aspect_ratio * 100;
 			$filename = 'news_img'.$id.'.jpg';
-			$image_path='assets/news/';
+			$image_path='assets/'.$news.'/';
 	    	$config2['image_library'] = 'gd2';
 	    	$config2['source_image'] = $image_path.$filename;
 			$config2['create_thumb'] = TRUE;
@@ -214,7 +244,7 @@ class News extends Controller {
    	redirect(base_url().'admin/news/getnewstypes');
    }
    function getnewstypes(){
-   $details=$this->News_Model->get_newstype();
+   $details=$this->News_Model->get_newstypes();
 	$data=array('details'=>$details);
 		$this->load->view('admin/getnewstypes',$data);
    }

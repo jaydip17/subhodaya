@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>ImageLoader with TabView</title>
+
+<style type="text/css">
+/*margin and padding on body element
+  can introduce errors in determining
+  element position and are not recommended;
+  we turn them off as a foundation for YUI
+  CSS treatments. */
+body {
+	margin:0;
+	padding:0;
+}
+</style>
+
+<link rel="stylesheet" type="text/css" href="fonts-min.css" />
+<link rel="stylesheet" type="text/css" href="tabview.css" />
+<script type="text/javascript" src="yahoo-dom-event.js"></script>
+<script type="text/javascript" src="imageloader-min.js"></script>
+<script type="text/javascript" src="element-min.js"></script>
+<script type="text/javascript" src="tabview-min.js"></script>
+
+<!--there is no custom header content for this example-->
+
+
+</head>
+
+<body class="yui-skin-sam">
+
+<br/><br/><br/><br/><br/><br/><br/>
+<!--BEGIN SOURCE CODE FOR EXAMPLE =============================== -->
+
+<html>
+
+<!-- optional skin for border tabs --> 
+
+
+<style type='text/css'>
+#demo { width:350px; }
+#demo .yui-content { padding:20px; } /* pad content container */
+#demo img { margin-right:20px; }
+#tabone, #tabtwo, #tabthree { height:80px; }
+</style>
+
+
+<div id='demo' class='yui-navset' style="margin-left:10px;">
+	<ul class='yui-nav'>
+		<li class='selected style1' id='tabOneLabel'><a href='#tabone'><em>Tab On<span class="style1"></span>e</em></a></li>
+		<li id='tabTwoLabel'><a href='#tabtwo'><em>Tab Two</em></a></li>
+		<li id='tabThreeLabel'><a href='#tabthree'><em>Tab Three</em></a></li>
+	</ul>
+	<div class='yui-content'>
+		<div id='tabone'>
+			<img id='imgOne' src='http://developer.yahoo.com/yui/docs/assets/examples/exampleimages/small/museum.jpg' />
+		</div>
+		<div id='tabtwo'>
+			tab two
+		</div>
+		<div id='tabthree'>
+			tabthree
+		</div>
+	</div>
+</div>
+<div id='demo1' class='yui-navset' style="margin-left:10px;">
+	<ul class='yui-nav'>
+		<li class='selected style1' id='tabOneLabel'><a href='#tabone'><em>Tab On<span class="style1"></span>e</em></a></li>
+		<li id='tabTwoLabel'><a href='#tabtwo'><em>Tab Two</em></a></li>
+		<li id='tabThreeLabel'><a href='#tabthree'><em>Tab Three</em></a></li>
+	</ul>
+	<div class='yui-content' style="width: 300px;">
+		<div id='tabone'>
+			<a href="www.telugu.subhodaya.com">telugu</a>
+		</div>
+		<div id='tabtwo'>
+			<a href="www.english.subhodaya.com">english</a>
+		</div>
+		<div id='tabthree'>
+			<a href="www.hindi.subhodaya.com">hindi</a>
+		</div>
+	</div>
+</div>
+
+
+
+<script>
+var tabView = new YAHOO.widget.TabView('demo');
+var tabView = new YAHOO.widget.TabView('demo1');
+</script>
+
+</html>
+
+
+</body>
+</html>
+

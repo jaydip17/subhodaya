@@ -4,8 +4,6 @@ class Greetings extends Controller {
 	function greetings()
 	{
 		parent::Controller();
-		$this->load->model('admin/Flash_model');
-		$this->lang->load('telugu', 'telugu');
 	}
 	function index()
 	{
@@ -17,6 +15,7 @@ class Greetings extends Controller {
 		$more=$this->News_Model->more_news();
 		$title=$this->lang->line('gree_title').$more['7']->matter;
 		$description=$this->lang->line('gree_descrip');
+		$breaking=$this->News_Model->breaking_news1();
 		//print_r($cat_id);
 		/*$greetings1=$this->Greeting_Model->get_main_greetings(1);
 		$greetings2=$this->Greeting_Model->get_main_greetings(2);
@@ -54,12 +53,14 @@ class Greetings extends Controller {
 					'type'			=>	$type,
 					'bread_crumb'   =>  $bread_crumb,
 					'title'			=>	$title,
-					'description'	=>	$description
+					'description'	=>	$description,
+					'breaking'		=>	$breaking
 			);
 		$this->load->view('greetings_content',$data);
   }
   function content()
   {
+  	$breaking=$this->News_Model->breaking_news1();
   	$newscss=array();
   	$cat=$this->Greeting_Model->get_type();
   	$more=$this->News_Model->more_news();
@@ -111,12 +112,14 @@ class Greetings extends Controller {
   	    		'type'				=>	$cat,
   	    		'newscss'			=>	$newscss,
   	    		'greet_cat'			=>	$greet_cat,
-  	    		'title'				=>	$title
+  	    		'title'				=>	$title,
+  	    		'breaking'			=>	$breaking
   	    );
   	$this->load->view('greetings_view',$data);
   }
   function inner()
   {
+  	$breaking=$this->News_Model->breaking_news1();
   	$cat=$this->Greeting_Model->get_type();
   	$id=$this->uri->segment(3,0);
   	$type=$this->uri->segment(4,0);
@@ -151,7 +154,8 @@ class Greetings extends Controller {
   				'result'		=>	$result,
   				'telegu_typing'	=>	$telegu_typing,
   				'bread_crumb'	=>  $bread_crumb,
-  				'cat'			=>	$cat
+  				'cat'			=>	$cat,
+  				'breaking'		=>	$breaking
   	);
   	$this->load->view('greetings_inner',$data);
   }

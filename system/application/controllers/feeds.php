@@ -17,8 +17,8 @@ class Feeds extends Controller {
                     <title>Subhodaya.com</title>
                     <url>'.base_url().'assets/imgs/logo128 x 31.jpg</url>
                </image>';
-    $output .= '<title>About Rss Feed</title>';
-    $output .= '<description>Explaining about RSS Feeds</description>';
+    $output .= '<title>subhodaya special news</title>';
+    $output .= '<description>Latest news in suhodaya</description>';
     $output .= '<link>http://www.subhodaya.com/news</link>';
     $output .= '<copyright>CopyRight 2008-2009</copyright>';
 foreach($query->result() as $row)

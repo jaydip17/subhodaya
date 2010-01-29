@@ -1,4 +1,6 @@
 <?php
+//districts
+$lang['nagaram']							=	"మీ నగరం";
 //home page
 $lang['home']								=	"హొమ్";
 $lang['subh_spec'] 			    			= 	"శుభోదయ. కామ్ ప్రత్యేకం"; 

@@ -45,10 +45,10 @@ class Cinema_Model extends Model {
     		unlink('./assets/cinema/news_img'.$item.'_thumb.jpg');
     	}
 	}
-    function get_cinematype($type="",$active){
+    function get_cinematype($type=""){
    		$this->db->select('*');
    		$this->db->order_by("cinema.insert_date", "desc");
-   		$array=array('type'=>$type,'cinema.active'=>$active);
+   		$array=array('type'=>$type);
     	$this->db->where($array);
    		$this->db->limit(8);
 		$this->db->from('cinema_cat');
@@ -115,7 +115,9 @@ class Cinema_Model extends Model {
     {
     	$this->db->where('id',$id);
     	$rs = $this->db->get('cinema_cat');
+    	//print_r($rs);
     	$result = $rs->row();
+    	//print_r($result);
     	return $result->cinema_type;
     }
     function breaking_news($news_cat)

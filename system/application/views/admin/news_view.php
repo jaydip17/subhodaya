@@ -18,6 +18,10 @@ if(isset($message) && !is_array($message) ) echo($message);?>
 		<td><?=form_dropdown('type',$options)?></td>
 	</tr>
 	<tr>
+		<td>Districs</td>
+		<td><?=form_dropdown('distr',$disoption)?></td>
+	</tr>
+	<tr>
 		<td>Heading</td>
 		<!--<td align="left"><?=form_input('heading') ?></td>-->
 		<td><textarea rows="2" cols="40" name="heading" id="heading"></textarea></td>

@@ -104,7 +104,6 @@ class Cinema extends Controller {
 		$breaking=$this->News_Model->breaking_news1();
 		$newscss=array();
 		$type=$this->uri->segment(3);
-		$onload = "loadNews('content','".base_url()."cinemalist/listview/".$type."')";
 		$more=$this->News_Model->more_news();
 		$id=$this->uri->segment(3,0);
 	
@@ -143,7 +142,6 @@ class Cinema extends Controller {
 		$bread_crumb = $this->bread_crumb->get_code($segments);
 		$data=array('more'			=>	$more,
 					'result'		=>	$result,
-					'onload' 		=> 	$onload,
 					'news_content'	=>	$cinema_content,
 					'newscss'		=>	$newscss,
 					'bread_crumb'	=>	$bread_crumb,

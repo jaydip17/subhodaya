@@ -164,6 +164,7 @@ class News_lib{
 			$image_link=base_url().'assets/news/news_img'.$thaja_varhta[0]->id.'_thumb.jpg';
 			$list='newslist';
 			$cat_name=$most_read_news[0]->news_cat;
+			$onload = "loadNews('content','".base_url()."newslist/listview/".$news_cat."')";
 				$data = array(
 						'most_read_news'=>	$most_read_news ,
 						'thaja_varhta'	=>	$thaja_varhta,
@@ -172,7 +173,8 @@ class News_lib{
 						'image_link'	=>	$image_link,
 						'list'			=>	$list,
 						'cat_id'		=>	$news_cat,
-						'cat_name'		=>	$cat_name
+						'cat_name'		=>	$cat_name,
+						'loadnews'		=>	$onload
 		);
 		return $this->CI->load->view('news/news_content',$data,TRUE);
 	}
@@ -182,9 +184,12 @@ class News_lib{
 		$most_read_news=$this->most_read_cini_news($cine_cat);
 		$thaja_varhta=$this->cine_thaja_vartha($cine_cat);
 		$link=base_url()."cinema/inner/";
-		$image_link=base_url().'assets/cinema/ceni_img'.$thaja_varhta[0]->id.'_thumb.jpg';
+		$image_link=base_url().'assets/cinema/news_img'.$thaja_varhta[0]->id.'_thumb.jpg';
 		$list='cinemalist';
 		$cat_name=$most_read_news[0]->cinema_type;
+		$onload = "loadNews('content','".base_url()."cinemalist/listview/".$cine_cat."')";
+								
+			
 				$data = array(
 						'data' 			=> 'somtext',
 						'sub_heading'	=> $cine_cat,
@@ -195,7 +200,8 @@ class News_lib{
 						'image_link'	=>  $image_link,
 						'list'			=>	$list,
 						'cat_id'		=>	$cine_cat,
-						'cat_name'		=>	$cat_name
+						'cat_name'		=>	$cat_name,
+						'loadnews'		=>	$onload
 		);
 		return $this->CI->load->view('news/news_content',$data,TRUE);
 	}
@@ -208,6 +214,7 @@ class News_lib{
 		$image_link=base_url().'assets/mahila/ceni_img'.$thaja_varhta[0]->id.'_thumb.jpg';
 		$list='mahilalist';
 		$cat_name=$most_read_news[0]->cat_name;
+		$onload = "loadNews('content','".base_url()."mahilalist/listview/".$mahila_cat."')";
 				$data = array(
 						'most_read_news'	=>	$most_read_news,
 						'thaja_varhta'	=>	$thaja_varhta,
@@ -216,7 +223,8 @@ class News_lib{
 						'image_link'	=>  $image_link,
 						'list'			=>	$list,
 						'cat_id'		=>	$mahila_cat,
-						'cat_name'		=>	$cat_name
+						'cat_name'		=>	$cat_name,
+						'loadnews'		=>	$onload
 		);
 		return $this->CI->load->view('news/news_content',$data,TRUE);
 	}
@@ -229,6 +237,7 @@ class News_lib{
 		$image_link=base_url().'assets/sahithi/ceni_img'.$thaja_varhta[0]->id.'_thumb.jpg';
 		$list='sahithilist';
 		$cat_name=$most_read_news[0]->cat_name;
+		$onload = "loadNews('content','".base_url()."sahithilist/listview/".$sahithi_cat."')";
 				$data = array(
 						'most_read_news'	=>	$most_read_news,
 						'thaja_varhta'	=>	$thaja_varhta,
@@ -237,7 +246,8 @@ class News_lib{
 						'image_link'	=>  $image_link,
 						'list'			=>	$list,
 						'cat_id'		=>	$sahithi_cat,
-						'cat_name'		=>	$cat_name
+						'cat_name'		=>	$cat_name,
+						'loadnews'		=>	$onload
 		);
 		return $this->CI->load->view('news/news_content',$data,TRUE);
 	}
@@ -253,6 +263,34 @@ class News_lib{
 		$comments=$this->get_comments($type,$id);
 		$total_com=$this->count_comments($type,$id);
 		$hed_link=base_url().'news/newsdetails/';
+		$data=array(
+			'details' 	=> $temp,
+			'link'	  	=> $link,
+			'realtion'	=> $realtion,
+			'morenews'	=> $more_news,
+			'cat_name'	=> $cat_name,
+			'type'	 	=> $type,
+			'comments'	=> $comments,
+			'total_com'	=> $total_com,
+			'hed_link'	=> $hed_link,
+			'cat_id'    => $cat_id
+		);
+		return $this->CI->load->view('news/news_inner',$data,TRUE);
+	}
+	function state_inner($id,$cat_id)
+	{
+		$comments=array();
+		$total_com=array();
+		$temp=$this->get_state_news($id);
+		$realtion=$this->state_realtion_news($cat_id);
+		$link=base_url()."assets/districts/";
+		$this->insert_views($id);
+		$more_news=$this->more_state_news($cat_id);
+		$cat_name=$temp[0]->news_cat;
+		$type='statenews';
+		$comments=$this->get_comments($type,$id);
+		$total_com=$this->count_comments($type,$id);
+		$hed_link=base_url().'news/statenews/';
 		$data=array(
 			'details' 	=> $temp,
 			'link'	  	=> $link,
@@ -552,5 +590,22 @@ class News_lib{
 	{
 		$details=$this->CI->News_Model->count_comments($type,$id);
 		return $details;
+	}
+//state news
+	function get_state_news($id)
+	{
+		$details=$this->CI->News_Model->state_inner($id);
+		//print_r($details);
+		return 	$details;
+	}
+	function state_realtion_news($cat_id)
+	{
+		$details=$this->CI->News_Model->state_realtion_news($cat_id);
+		return 	$details;
+	}
+	function more_state_news($cat_id)
+	{
+		$details=$this->CI->News_Model->more_state_news($cat_id);
+		return 	$details;	
 	}
 }

@@ -53,11 +53,18 @@ class News_Model extends Model
   		$this->db->where('id',$id);	
   		$this->db->update('news',$data);		
     }
-    function get_newstype()
+    function get_newstype($active)
     {
     	$this->db->select('id,news_cat');
+    	$this->db->where('active',$active);
     	$result=$this->db->get('news_types');
     	return $result->result();
+    }
+    function get_newstypes()
+    {
+   		 $this->db->select('id,news_cat');
+    	$result=$this->db->get('news_types');
+    	return $result->result();	
     }
     function get_newstype1($type)
     {
@@ -65,7 +72,7 @@ class News_Model extends Model
     	$this->db->order_by("news.insert_date", "desc");
     	$array=array('type'=>$type,'news.breking_news'=>0);
     	$this->db->where($array);
-    	$this->db->limit(8);
+    	$this->db->limit(6);
 		$this->db->from('news_types');
 		$this->db->join('news', 'news.type= news_types.id');
 		$query = $this->db->get_where();
@@ -224,13 +231,16 @@ class News_Model extends Model
 	}
  	function get_views($id)
 	{
+		$pre_views=0;
 		$this->db->where('id',$id);
   		$this->db->select('id, views');
   		$query=$this->db->get_where('news');
   		$result=$query->result();
 		//print_r($result);
+		if(!empty($result)){
 		 $pre_views=$result['0']->views;
 				 $id=$result['0']->id;
+		}
 		$this->insert_views($id,$pre_views);
 	
 	}
@@ -243,6 +253,39 @@ class News_Model extends Model
 			);
 		$this->db->update('news', $data);
 	}
+	function get_districs()
+	{
+		$query=$this->db->get('districts');
+		return $query->result();
+	}
+	function state_inner($id)
+	{
+		$this->db->where('districts_news.id',$id);
+		$this->db->from('news_types');
+		$this->db->join('districts_news', 'districts_news.dist_id= news_types.id');
+		$query = $this->db->get_where();
+		return $query->result();
+	}
+	function state_realtion_news($cat)
+	{
+		$this->db->where('dist_id',$cat);
+		$query=$this->db->get('districts_news');
+		return $query->result();
+	}
+	function more_state_news($cat)
+	{
+		$this->db->where('dist_id',$cat);
+		$query=$this->db->get('districts_news');
+		return $query->result();	
+	}
+	function get_statenews($cat)
+	{
+		$this->db->where('dist_id',$cat);
+		$this->db->order_by('id','desc');
+		$query=$this->db->get('districts_news');
+		return $query->result();
+	}
+	
 }
 
 ?>

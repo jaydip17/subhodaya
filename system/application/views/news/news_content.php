@@ -1,16 +1,25 @@
+
 <div>
+<script type="text/javascript">
+<!--
+$(document).ready(function(){
+	<?php echo $loadnews;?>
+});
+//-->
+</script>
+
 	<div style="width:641px ;height:77px;float: left;text-align: left;">
 		<div style="padding-left: 10px;font-size:large"><?=$cat_name?></div>
 		<div style="padding-left: 10px;height: 20px;"><span style="font-size: 17px;"></span></div>
 		<div id="hr"><hr style="border: 1px solid #cee2ed;width: 95%" /></div>
 		<div>
-				<div id="thaja_vartha" style="width:395px;">
+				<div id="thaja_vartha" style="width:345px;">
 							<div><span style="font-size: 18px;"><?=$this->lang->line('thaja_vartha');?></span></div>
 							<a href="<?=$link?><?=$thaja_varhta[0]->id?>/<?=$cat_id?>"><img src="<?=(isset($image_link)) ? $image_link : ''?>" style="float: left;"/></a>
 							<span id="headings"><a href="<?=$link?><?=$thaja_varhta[0]->id?>/<?=$cat_id?>"><?=$thaja_varhta[0]->heading?></a></span><br/>
                             <span id="summery"><?=$thaja_varhta[0]->summary?></span>    
 				</div>
-				<div id="side_add" style="width:225px;">
+				<div id="side_add" style="width:245px;">
 						<div>
 							<ul>
 							<? $count=0; foreach($thaja_varhta as $row):

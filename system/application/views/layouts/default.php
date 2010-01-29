@@ -24,8 +24,6 @@
 <meta name="rating" content="general" />	
 <meta name="pragma" content="no-cache" />	
 <meta name="classification" content="Leaders In Telugu News, AP Politics On The Net " />
-
-
 <!-- color box js and css -->
 	<link href="<?=base_url();?>assets/css/colorbox.css" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="<?=base_url()?>assets/java-script/jquery.min.js"></script>
@@ -68,21 +66,10 @@
 	<link href="<?=base_url()?>assets/css/videomenu.css" rel="stylehett" type="text/css"/>
 <!-- for tabs js ans css -->
 <?php if(isset($tabscss)){?>
-	<script src="<?=base_url();?>assets/jq.tabs/jquery.history_remote.pack.js" type="text/javascript"></script>
-	<script src="<?=base_url();?>assets/jq.tabs/jquery.tabs.pack.js" type="text/javascript"></script>
-	<script type="text/javascript">
-            $(function() {
-            	 $('#container-1').tabs({remote: true}); 
-            	 $('#container-2').tabs({remote: true}); 
-            	 $('#container-3').tabs({remote: true}); 
-            	 $('#container-4').tabs({remote: true}); 
-            	/* $('#container-1').tabs({remote: true}); 
-                $('#container-10').tabs({ remote: true ,fxShow: { height: 'show', opacity: 'show' }, fxSpeed: 'normal' });
-                $('#container-2').tabs({ remote: true ,fxShow: { height: 'show', opacity: 'show' }, fxSpeed: 'normal' });
-                $('#container-3').tabs({ remote: true ,fxShow: { height: 'show', opacity: 'show' }, fxSpeed: 'normal' });
-                $('#container-4').tabs({ remote: true ,fxShow: { height: 'show', opacity: 'show' }, fxSpeed: 'normal' });*/
-			});
-	</script>
+<script type="text/javascript" src="<?=base_url()?>assets/tabs/yahoo-dom-event.js"></script>
+<script type="text/javascript" src="<?=base_url()?>assets/tabs/imageloader-min.js"></script>
+<script type="text/javascript" src="<?=base_url()?>assets/tabs/element-min.js"></script>
+<script type="text/javascript" src="<?=base_url()?>assets/tabs/tabview-min.js"></script>
 	<?php }?>
 <!-- change theme colors js -->
 	<script type="text/javascript">
@@ -91,6 +78,7 @@
 				function checkCookie()
 				{
 					 sthemetype = getCookie('theme');
+					// alert(sthemetype);
 					 if (sthemetype!=null && sthemetype!="")
 					   {
 						 changeTheme(sthemetype);
@@ -129,42 +117,8 @@
 				document.cookie=c_name+ "=" +escape(value)+
 				((expiredays==null) ? "" : ";expires="+exdate.toGMTString());
 				}
+				checkCookie();
 		</script>
-<!--tabs css js -->
-         <style type="text/css" media="screen, projection">
-
-            /* Not required for Tabs, just to make this demo look better... */
-            body {
-                font-size: 16px; /* @ EOMB */
-            }
-            * html body {
-                font-size: 100%; /* @ IE */
-            }
-            body * {
-                font-size: 87.5%;
-                font-family: "Trebuchet MS", Trebuchet, Verdana, Helvetica, Arial, sans-serif;
-            }
-            body * * {
-                font-size: 100%;
-            }
-            h1 {
-                margin: 1em 0 1.5em;
-                font-size: 18px;
-            }
-            h2 {
-                margin: 2em 0 1.5em;
-                font-size: 16px;
-            }
-            p {
-                margin: 0;
-            }
-            pre, pre+p, p+p {
-                margin: 1em 0 0;
-            }
-            code {
-                font-family: "Courier New", Courier, monospace;
-            }
-        </style> 
 <!-- main menu dropdown css and js -->
 	<script type="text/javascript" src="<?=base_url()?>assets/java-script/dropdown.js"></script>
 	<link herf="<?=base_url()?>assets/css/gre_css.css" rel="stylesheet" type="text/css"/>
@@ -214,7 +168,7 @@
 	<script type="text/javascript" src="<?=base_url()?>assets/js/jsapi.js"></script>
 	<script type="text/javascript" src="<?=base_url()?>assets/js/telugu.js"></script>
 <?php } ?>
-<body onload="<? if(isset($onload)) echo $onload; ?>">
+<body >
 <center>
 <div style="width:963px; background-color:#fff;border:0px dotted #000;">
 	<div id="header" style="border:0px solid #ccc; margin-bottom:0px;float:left;background-color:#fff; width:100%;float: left;">
@@ -278,18 +232,14 @@
 			-->
 			<script type="text/javascript">
 			<!--
-								
 			$(document).ready(function(){
 				   $(".change").hover(function () {
 					      $(this).addClass("ch");
 					    },function (){
 						    $(this).removeClass('ch');
-					    });
-
-					//alert(theme);
-					
+					    });					
 					});
-			//-->
+			-->
 			</script>
 			<style type="text/css">
 			.ch{
@@ -313,27 +263,25 @@
 		</div>
 		<div id="sc_div">
 		<script language="JavaScript1.2">
+		<!--
 //Specify the marquee's width (in pixels)
-var marqueewidth = "960px"
+var marqueewidth = "960px";
 //Specify the marquee's height
-var marqueeheight="25px"
+var marqueeheight="25px";
 //Specify the marquee's marquee speed (larger is faster 1-10)
-var marqueespeed=2
+var marqueespeed=1;
 //configure background color:
-var marqueebgcolor=""
+var marqueebgcolor="";
 //Pause marquee onMousever (0=no. 1=yes)?
-var pauseit=1
+var pauseit=1;
 //Specify the marquee's content (don't delete <nobr> tag)
 //Keep all content on ONE line, and backslash any single quotations (ie: that\'s great):
 
-var marqueecontent='<nobr><span style="font: bold 14px Verdana">';
-	marqueecontent+="<?php $count=0; foreach ($breaking as $news){
-		if($count==0){
-			echo '';
-		}else echo '|';
-	?>
-	 <a href='<?=base_url();?>news/newsdetails/<?=$news->id?>/<?=$news->type?>'><?php echo $news->heading;?></a><? $count++;} ?>";
-	marqueecontent+="</span></nobr>";
+var marqueecontent= "<nobr><span style=\"font: bold 14px Verdana\">";
+<?php foreach ($breaking as $news){?>
+	marqueecontent += "<a href='<?=base_url();?>news/newsdetails/<?=$news->id?>/<?=$news->type?>'><?php echo strip_tags(trim(nl2br(str_replace('\n','',$news->heading))));?></a> | ";
+<? } ?>
+	marqueecontent += "</span></nobr>";
 
 ////NO NEED TO EDIT BELOW THIS LINE////////////
 marqueespeed=(document.all)? marqueespeed : Math.max(1, marqueespeed-1) //slow speed down by 1 for NS
@@ -342,7 +290,7 @@ var pausespeed=(pauseit==0)? copyspeed: 0
 var iedom=document.all||document.getElementById
 if (iedom)
 document.write('<span id="temp" style="visibility:hidden;position:absolute;top:-100px;left:-9000px">'+marqueecontent+'</span>')
-var actualwidth=''
+var actualwidth='';
 var cross_marquee, ns_marquee
 
 function populate(){
@@ -396,6 +344,7 @@ write('</ilayer>')
 document.write('</td></table>')
 }
 }
+-->
 </script>
 </div>
 		

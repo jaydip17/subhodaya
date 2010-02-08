@@ -1,78 +1,101 @@
 <script language="JavaScript" type="text/javascript">
 <!--
-
-function support()
+var siteurl = "<?=base_url()?>";
+function newsletter()
 {
-	alert('hi');
 	 var x=document.getElementById("email").value;
-
 	 if(x=="")
 	 {
 		 alert('Enter Your Email-id');
+
 	 }else{
-		 alert('hi');
+		$.post(""+siteurl+"newsletter/subscribe/"+x+"",
+				function(data){
+			//alert(data);
+			$(".succdiv").replaceWith(data);
+			$(".succdiv").slideDown("slow");
+	      });
 	 } 
 }
+
 -->
 </script> 
-<style type='text/css'>
-#demo { width:350px; }
-#demo .yui-content { padding:20px; } /* pad content container */
-#demo img { margin-right:20px; }
-#tabone, #tabtwo, #tabthree { height:80px; }
-</style>
-
+<script type="text/javascript" src="<?=base_url()?>assets/java-script/subtabs.js"></script>
+	<link href="<?=base_url()?>assets/java-script/example.css" rel="stylehett" type="text/css"/>
+	<style type='text/css'>	
+	</style>
 <div  style="background-color:#fff; float:left; width:100%;">
 					<div id="left_content" style="width:165px;margin-left:4px; float:left">
 						<?= (isset($special_block)) ? $special_block : '' ?>
 						<?= (isset($home_poll)) ? $home_poll : '' ?>
 						<div id="news_letter">
 							<div  class="newsletter">
-								<div id="ne_formdiv">
-									<div id="movie" style="width:100%; height:25px; padding-top:4px" >
+								<div id="ne_formdiv"  >
+									<div id="movie" style="width:100%; height:25px; padding-top:4px;font-size: 11px;" >
 										Subhodaya Newsletter
 									</div>
 									<div id="movie" style="width:100%" >
-										<input type="text" name="news_email" id="email">
+										<input type="text" name="news_email" id="email" value="Enter Your Email-id" onclick="this.value='';" onfocus="this.select()" onblur="this.value=!this.value?'Enter Your Email-id':this.value;" style="color: gray;">
 									</div>
-									<img style="margin:10px 0px 5px 0px; " src="<?=base_url()?>assets/image/submit.jpg " onclick="support()">
+									<div class="succdiv" style="width: 100%;"></div>
+								<div style="width: 100%;"><a href="javascript:void(0)" onclick="newsletter()" style="outline-style: none;"><img style="margin:10px 0px 5px 0px;border: 0px;" src="<?=base_url()?>assets/image/submit.jpg"></a></div>
 								</div>
-								<div id="succdiv" style="display: none;">
-									Thankyou for subscribing with us.
-								</div>
+								
+								
 							</div>
 						</div>
 						<?= (isset($reviews_block)) ? $reviews_block : '' ?>
 						<?= (isset($songs_block)) ? $songs_block: '' ?>
 					</div>
+					
 					<div id="middle_content" style="width:479px;margin-left:3px; float:left">
 						<?= (isset($middle_block)) ? $middle_block : '' ?>
-					<div class="yui-skin-sam">
-					<div id='demo' class='yui-navset' style="margin-left:10px;">
-						<ul class='yui-nav'>
-							<li class='selected style1' id='tabOneLabel'><a href='#tabone'><em>Tab On<span class="style1"></span>e</em></a></li>
-							<li id='tabTwoLabel'><a href='#tabtwo'><em>Tab Two</em></a></li>
-							<li id='tabThreeLabel'><a href='#tabthree'><em>Tab Three</em></a></li>
-						</ul>
-						<div class='yui-content'>
-							<div id='tabone'>
-								<img id='imgOne' src='http://developer.yahoo.com/yui/docs/assets/examples/exampleimages/small/museum.jpg' />
+						<div id="tabber" class="tabber">
+
+							<div class="tabbertab" title="<?=$this->lang->line('news_rasriyam')?>" style="text-align: left;">
+								<?= (isset($rasriyam_block)) ? $rasriyam_block : '' ?>
 							</div>
-							<div id='tabtwo'>
-								tab two
+							
+							<div class="tabbertab" title="<?=$this->lang->line('news_jathiyam')?>" style="text-align: left;">
+								<?= (isset($jathiyam_block)) ? $jathiyam_block : '' ?>
 							</div>
-							<div id='tabthree'>
-								tabthree
+							
+							<div class="tabbertab" title="<?=$this->lang->line('news_antharja')?>" style="text-align: left;">
+							<?= (isset($antharja_block)) ? $antharja_block : '' ?>
+							</div>
+							<div class="tabbertab" title="<?=$this->lang->line('news_kridalu')?>" style="text-align: left;">
+							<?= (isset($kridalu_block)) ? $kridalu_block : '' ?>
 							</div>
 						</div>
-					</div>
-					</div>
-				<script>
-				var tabView = new YAHOO.widget.TabView('demo');
-				</script>
-					
-					
+						<div id="tabber" class="tabber">
+							<div class="tabbertab" title="<?=$this->lang->line('cini_pukarlu')?>" style="text-align: left;">
+								<?= (isset($pukarlu_block)) ? $pukarlu_block : '' ?>
+							</div>
+							<div class="tabbertab" title="<?=$this->lang->line('cini_vishesm')?>" style="text-align: left;">
+								<?= (isset($vishesm_block)) ? $vishesm_block : '' ?>
+							</div>
+						</div>	
+						<div id="tabber" class="tabber">
+
+							<div class="tabbertab" title="<?=$this->lang->line('photo_gallery')?>" style="text-align: left;">
+								<?= (isset($gallery_block)) ? $gallery_block : '' ?>
+							</div>
 							
+							<div class="tabbertab" title="<?=$this->lang->line('videos')?>" style="text-align: left;">
+								<?= (isset($videos_block)) ? $videos_block : '' ?>
+							</div>
+							<div class="tabbertab" title="<?=$this->lang->line('greetings')?>" style="text-align: left;">
+							<?= (isset($greetings_block)) ? $greetings_block : '' ?>
+							</div>
+						</div>
+						<div id="tabber" class="tabber">
+							<div class="tabbertab" title="<?=$this->lang->line('mahila')?>" style="text-align: left;">
+								<?= (isset($mahila_block)) ? $mahila_block : '' ?>
+							</div>
+							<div class="tabbertab" title="<?=$this->lang->line('sahithi')?>" style="text-align: left;">
+								<?= (isset($sahithi_block)) ? $sahithi_block : '' ?>
+							</div>
+						</div>			
 					</div>
 					<div id="right_content" style="width:302px;margin-left:2px; float:left">
 						<div id="right_ad1">

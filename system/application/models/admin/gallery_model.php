@@ -235,9 +235,9 @@
 		$this->db->order_by('id','desc');
 		//$this->db->select('id,title','parentid');
 		$this->db->limit(1);
-		$array=array('parentid'=>$parentid);
+		$array=array('cat_id'=>$parentid);
 		$this->db->where($array);
-		$query=$this->db->get('gallery_images');
+		$query=$this->db->get('gall_image_path');
 		return $query->row();
 	}
   	function get_subcate()
@@ -290,10 +290,11 @@
 		//$this->db->select('id,title','parentid');
 		$this->db->limit(4);
 		$array=array(
-			'active'	=>	1
+			'image_path'	=>	1
 		 );
 		$this->db->where($array);
-		$query=$this->db->get('gallery_images');
+		$query=$this->db->get('gall_image_path');
+		//print_r($query->result_array());
 		return $query->result_array();
 	}
  	function gallery_pagi($type)

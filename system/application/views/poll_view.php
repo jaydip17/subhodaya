@@ -1,13 +1,13 @@
 <div style="width: 100%">
 <div style="float: left;width: 640px;">
-	<div id="poll_div" style="height:27px;"><a href="<?=base_url()?>"><?=$this->lang->line('home')?></a> >> <?=$this->lang->line('polls')?></div>
+	<div id="poll_div" style="height:27px;font-size: 14px;"><a href="<?=base_url()?>" style="font-size: 14px;"><?=$this->lang->line('home')?></a> >> <?=$this->lang->line('polls')?></div>
 	<?php $count=1; foreach ($poll as $question):?>
 	<div id="poll_div" style="height: 160px;font-size: 13px;">
 		<div style="padding-left: 20px;"><!--
 		<div style="color: #BEBFB8;padding-left: 10px;">
 		<?echo  $question->date = date("l, F, d, Y");?></div>
 			--><table cellspacing="8">
-				<tr><td colspan="3" style="color: #483D8B"><?=$count?>.&nbsp;&nbsp;<?=$question->question?>&nbsp;&nbsp;<span>Total views:</span><span style="color: #000;"><?=$question->views ?></span></td></tr>
+				<tr><td colspan="3" style="color: #483D8B"><?=$count?>.&nbsp;&nbsp;<?=$question->question?>&nbsp;&nbsp;<span>Total votes:</span><span style="color: #000;"><?=$question->views ?></span></td></tr>
 				<tr>
 					<td width="86px"><?=$this->lang->line('yes')?></td>
 					<td width="200px">

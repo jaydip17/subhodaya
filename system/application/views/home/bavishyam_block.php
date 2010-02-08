@@ -12,6 +12,7 @@ function getsupport()
 		 window.location ='astrolagy/details/'+x;
 	 } 
 }
+
 -->
 </script> 
 	<div id="ardhikam" align="left">

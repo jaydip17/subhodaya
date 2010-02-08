@@ -23,8 +23,7 @@ class Newsletter extends Controller {
 	}
 	function subscribe()
 	{	
-		$email=$this->uri->segment(3,0);
-
+	  $email=$this->uri->segment(3,0);
 		//$email = $this->input->get_post('email', TRUE);
 		//$name=$this->input->get_post('name', TRUE);
 		$validate = $this->Newsletter_model->check_email_address($email);
@@ -33,43 +32,39 @@ class Newsletter extends Controller {
 			$count = $this->Newsletter_model->check_newsletter_email($email);
 			if($count<1)
 			{
-				echo $email;
+				 $email;
 				$data = array(
 	               'email' => $email ,
 	                     );
 				if($this->db->insert('newsletter', $data))
 				{
-					echo $messa='Thankyou for subscribing with us.';
-					//$messagesent='Thankyou for subscribing with us</br>.Have a great day!!!';
+					
+					$messagesent='Thankyou for subscribing with us</br>.Have a great day!!!';
 					//$this->session->set_flashdata('messagesent',$messagesent); 
 					
 					 $to=$email;
 					 $subject='Subhodaya Newsletter';
 					 $from='dontreply@subhodaya.com';
 					 $from_name='Subhodaya';
-					 $this->send_mail($to,$subject,$messa,$from,$from_name);
-							//echo "&nbsp;&nbsp;&nbsp;&nbsp;Successful";
+					 $this->send_mail($to,$subject,$messagesent,$from,$from_name);
+							echo 'Thankyou for subscribing with us.';
 				}
 				else
-					$messagesent="&nbsp;&nbsp;&nbsp;&nbsp;System Error";
-					$this->session->set_flashdata('messagesent',$messagesent);
+				echo "&nbsp;&nbsp;&nbsp;&nbsp;System Error";
 			}
 			 else 
-			 $messagesent="&nbsp;&nbsp;&nbsp;&nbsp;Email Exists";
-			 $this->session->set_flashdata('messagesent',$messagesent);
-				//echo $stuats;exit;
+			echo "&nbsp;&nbsp;&nbsp;&nbsp;Email Exists";
 		}
 		else
-		 $messagesent="&nbsp;&nbsp;&nbsp;&nbsp;Invalid Email";
-		
-		$this->session->set_flashdata('messagesent',$messagesent);
-				redirect(base_url().'newsletter/subscribed');
-		
+		 echo "&nbsp;&nbsp;&nbsp;&nbsp;Invalid Email";		
 	}
     function subscribed(){
+		
+    	 echo $email=$this->uri->segment(3,0);
+    	 return $email;
 		$message= $this->session->flashdata('message');
 		$this->session->flashdata('messagesent',$message);
-		$this->load->view('newsletter_subscribed');
+		//$this->load->view('newsletter_subscribed');
 		
 	}
 	 function send_mail($to,$subject,$messa,$from,$from_name)
@@ -94,6 +89,14 @@ class Newsletter extends Controller {
 		$this->email->send();
 		//echo $this->email->print_debugger();
 		return true;
+	 }
+	 function gallery(){
+	 	$folder_path=$this->uri->segment(3,0);
+	 	$image_path=$this->uri->segment(4,0);
+	 	$data=array('folder'=>$folder_path,
+	 			   'image'=>$image_path
+	 );
+	 	$this->load->view('gallery',$data);
 	 }
 	
 }

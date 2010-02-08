@@ -43,9 +43,8 @@
 				});
 			});
 		</script>
-<!-- end color box js and css -->
-
-<link REL="SHORTCUT ICON" HREF="<?=base_url();?>assets/favicon.ico">
+<!-- end color box js and css --> 
+<link REL="SHORTCUT ICON" HREF="<?=base_url();?>assets/image/favicon.png">
 <!-- for rss feeds -->
 	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?=base_url()?>feeds/news" />
 	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?=base_url();?>feeds/news" />
@@ -62,14 +61,12 @@
 	<link href="<?=base_url();?>assets/css/gallery.css" rel="stylesheet" type="text/css"/>
 <?php }?>
 <!-- video and greeting page side menu -->
-	<link herf="<?=base_url()?>assets/css/video.css" rel="stylesheet" type="text/css"/>
+	<link href="<?=base_url()?>assets/css/video.css" rel="stylesheet" type="text/css"/>
 	<link href="<?=base_url()?>assets/css/videomenu.css" rel="stylehett" type="text/css"/>
 <!-- for tabs js ans css -->
 <?php if(isset($tabscss)){?>
-<script type="text/javascript" src="<?=base_url()?>assets/tabs/yahoo-dom-event.js"></script>
-<script type="text/javascript" src="<?=base_url()?>assets/tabs/imageloader-min.js"></script>
-<script type="text/javascript" src="<?=base_url()?>assets/tabs/element-min.js"></script>
-<script type="text/javascript" src="<?=base_url()?>assets/tabs/tabview-min.js"></script>
+	<script type="text/javascript" src="<?=base_url()?>assets/java-script/subtabs.js"></script>
+	<link href="<?=base_url()?>assets/java-script/example.css" rel="stylehett" type="text/css"/>
 	<?php }?>
 <!-- change theme colors js -->
 	<script type="text/javascript">
@@ -92,7 +89,6 @@
 					 setCookie('theme',themename,365);
 					styleurl = csslink+'/'+themename+'.css';
 					document.getElementById('theme').href = styleurl;
-
 				}
 				function getCookie(c_name)
 				{
@@ -109,7 +105,6 @@
 				  }
 				return "";
 				}
-
 				function setCookie(c_name,value,expiredays)
 				{
 				var exdate=new Date();
@@ -180,7 +175,7 @@
 				<!--<a href="javascript:setasHome()" style="color:#646464; margin-left:5px;font-size:13px">Make Subhodaya.com! my home page</a>
 			--></div>
 			<div id="language" style="color:#3398FF;margin-top:5px;margin-right:5px;margin-bottom:5px; font-size:13px;float:right">
-				<font style="color:#646464">Change Language: </font>
+				<font style="color:#646464;font-size: 12px;">Change Language: </font>
 				<a href="http://english.subhodaya.com/" id="ln" target="_blank">English</a>|
 				<a href="http://hindi.subhodaya.com/" id="ln" target="_blank"> हिन्दी </a>|
 				<a href="" id="ln">தமிழ்</a>|
@@ -192,8 +187,8 @@
 				<a href="" id="ln">Malayalam</a>
 			</div>
 		</div>
-		<div id="logo_add" style="height:80px; margin-left:5px;margin-bottom:5px">
-			<a href="<?=base_url()?>" style="float:left">
+		<div id="logo_add" style="height:80px; margin-left:5px;margin-bottom:5px;">
+			<a href="<?=base_url()?>" style="float:left;outline-style: none;">
 					<div id="logo" title="Happy Holidays From Subhodaya.com!"></div>
 			</a>
 			<a href="#" style="float:right; margin-right:5px;">
@@ -202,18 +197,18 @@
 		</div>
 		<div id="menu">
         	<ul class="solidblockmenu">
-                <li><a href="<?=base_url();?>" class="current"><?=$this->lang->line('home');?></a></li>
-                <li><a href="<?=base_url()?>news" ><?=$this->lang->line('news');?></a></li>
-                <li><a href="<?=base_url()?>cinema"><?=$this->lang->line('cinema');?></a></li>
-                <li><a href="<?=base_url()?>videos"><?=$this->lang->line('video');?></a></li>
-                <li><a href="<?=base_url()?>gallery"><?=$this->lang->line('gallery');?></a></li>
-                <li><a href="<?=base_url()?>greetings"><?=$this->lang->line('greetings');?></a></li>
-            	<li><a href="<?=base_url()?>mahila"><?=$this->lang->line('mahila');?></a></li>
-                <li><a href="<?=base_url()?>sahithi"><?=$this->lang->line('sahithi');?></a></li>
-                <li><a href="<?=base_url()?>news/details/8"><?=$this->lang->line('news_kridalu');?></a></li>
-                <li><a href="<?=base_url()?>cinema/details/7"><?=$this->lang->line('srungaram');?></a></li>
-                <li><a href="<?=base_url()?>news/details/8"><?=$this->lang->line('sangitham');?></a></li>
-                <li><a href="<?=base_url()?>astrolagy" style="width: 50px;"><?=$this->lang->line('bavishyam');?></a></li>
+                <li><a href="<?=base_url();?>" class="current" style="outline-style: none;"><?=$this->lang->line('home');?></a></li>
+                <li><a href="<?=base_url()?>news" style="outline-style: none;"><?=$this->lang->line('news');?></a></li>
+                <li><a href="<?=base_url()?>cinema" style="outline-style: none;"><?=$this->lang->line('cinema');?></a></li>
+                <li><a href="<?=base_url()?>videos" style="outline-style: none;"><?=$this->lang->line('video');?></a></li>
+                <li><a href="<?=base_url()?>gallery" style="outline-style: none;"><?=$this->lang->line('gallery');?></a></li>
+                <li><a href="<?=base_url()?>greetings" style="outline-style: none;"><?=$this->lang->line('greetings');?></a></li>
+            	<li><a href="<?=base_url()?>mahila" style="outline-style: none;"><?=$this->lang->line('mahila');?></a></li>
+                <li><a href="<?=base_url()?>sahithi" style="outline-style: none;"><?=$this->lang->line('sahithi');?></a></li>
+                <li><a href="<?=base_url()?>news/details/8" style="outline-style: none;"><?=$this->lang->line('news_kridalu');?></a></li>
+                <li><a href="<?=base_url()?>cinema/details/7" style="outline-style: none;"><?=$this->lang->line('srungaram');?></a></li>
+                <li><a href="<?=base_url()?>news/details/8" style="outline-style: none;"><?=$this->lang->line('sangitham');?></a></li>
+                <li><a href="<?=base_url()?>astrolagy" style="width: 50px;outline-style: none;"><?=$this->lang->line('bavishyam');?></a></li>
            </ul>
         	<div id="ch_color">
         	<!--<div style="width: 80px;float: left;">
@@ -251,7 +246,7 @@
 			}
 			</style>
 			<div style="float: right;">
-              <span style="color:white;">Change color:</span>
+              <font style="color:white;">Change color:</font>
               <span><img title="blue" src="<?=base_url();?>assets/image/2.png"    class="change" onclick="changeTheme('blue');"  /></span>
               <span><img title="yellow" src="<?=base_url();?>assets/image/1.png"   class="change" onclick="changeTheme('yellow');" /></span>
               <span><img title="ornge" src="<?=base_url();?>assets/image/3.png"   class="change" onclick="changeTheme('ornge');" /></span>
@@ -350,7 +345,7 @@ document.write('</td></table>')
 		
 <?=(isset($bread_crumb)) ? $bread_crumb : '' ?>
 {yield}
-<div id="hr" style="background-color:#fff; float:left; width:100%">
+<div id="hr1" style="background-color:#fff; float:left; width:100%">
 	<div style="width:95%">
 		<div id="" style="width:100%; float:left">
 			<hr></hr>
@@ -378,7 +373,7 @@ document.write('</td></table>')
 				<div style="color:#0101FF;line-height:25px"><?=$this->lang->line('maa_tv')?>, Z-<?=$this->lang->line('telugu')?></div>
 				<div style="color:#810081; margin:0px 0px 7px 0px;font-size:16px"><b><?=$this->lang->line('tech_partners')?></b></div>
 				<div style="margin-top:5px">
-					<a href="http://www.tech-pundits.com/" target="_blank">
+					<a href="http://www.tech-pundits.com/" target="_blank" style="outline-style: none;">
 						<img src="<?=base_url()?>assets/image/tech_pundits.jpg" border="0">
 					</a>
 				</div>
@@ -386,41 +381,41 @@ document.write('</td></table>')
 			</div>
 			<div id="" style="float:left;width:140px;">	
 				<div style="margin-top:10px; margin-bottom:10px">
-				<a href="#"><img src="<?=base_url()?>assets/image/facebook.jpg" border="0"></a>
+				<a href="#" style="outline-style: none;"><img src="<?=base_url()?>assets/image/facebook.jpg" border="0"></a>
 				</div>
-				<div><a href="http://www.telugu.subhodaya.com/feeds/news" target="_blank"><img src="<?=base_url()?>assets/image/rss.jpg" border="0"></a></div>
+				<div><a href="http://www.telugu.subhodaya.com/feeds/news" target="_blank" style="outline-style: none;"><img src="<?=base_url()?>assets/image/rss.jpg" border="0"></a></div>
 			</div>
 			<div id="" style="float:left;width:190px;">
-				<div><a href="http://teitter.com/login" target="_blank"><img src="<?=base_url()?>assets/image/twitter.jpg" border="0"></a></div>
+				<div><a href="http://twitter.com/login" target="_blank" style="outline-style: none;"><img src="<?=base_url()?>assets/image/twitter.jpg" border="0"></a></div>
 			</div>
 		</div>
 		<div id="" style="width:100%; float:left"><hr></hr></div>
 	</div>
 </div>
 <div id="footer" style="background-color:#fff;float:left; width:100%">
-	<div id="" style="color:#359BFF; height:25px">
+	<div id="hr1" style="color:#359BFF; height:25px">
 		<span style="color:#05AEF1;font-weight:bold">Subhodaya</span><span style="color:#FE0000; font-weight:bold">.</span><span style="color:#016CB4; font-weight:bold">com</span><span style="color:#2C5F96;font-weight:bold">! News In:</span>
-		<a href="http://english.subhodaya.com/" id="ln" target="_blank">English </a>|
-		<a href="http://hindi.subhodaya.com/" id="ln" target="_blank"> हिन्दी |   </a>
+		<a href="http://english.subhodaya.com/" id="ln" target="_blank" style="outline-style: none;">English </a>|
+		<a href="http://hindi.subhodaya.com/" id="ln" target="_blank" style="outline-style: none;"> हिन्दी |   </a>
 		 தமிழ் | ગુજરાતી | ਪੰਜਾਬੀ  | తెలుగు  | ಕನ್ನಡ | मराठी  | Malayalam
 	</div>
-	<div id="" style="color:#359BFF; height:25px">Sitemap | Feedback | Advertise With Us | Contact Us</div>
-	<div id="" style="color:#359BFF; height:25px">Copyright &copy; 2009. <span style="color:#05AEF1;font-weight:bold">Subhodaya</span><span style="color:#FE0000;font-weight:bold">.</span><span style="color:#016CB4;font-weight:bold">com</span> All rights reserved.</div>
+	<div id="hr1" style="color:#359BFF; height:25px">Sitemap | Feedback | Advertise With Us | Contact Us</div>
+	<div id="hr1" style="color:#359BFF; height:25px">Copyright &copy; 2009. <span style="color:#05AEF1;font-weight:bold">Subhodaya</span><span style="color:#FE0000;font-weight:bold">.</span><span style="color:#016CB4;font-weight:bold">com</span> All rights reserved.</div>
 	<div id="footer_menu" style="color:#fff">
 		<div id="footer_left"></div>	
 		<div id="footer_right"></div>
 		<div style="line-height:30px;">
-			<a href="<?=base_url()?>"><?=$this->lang->line('home')?></a> |
-			<a href="<?=base_url()?>news"><?=$this->lang->line('news')?></a> |
-			<a href="<?=base_url()?>cinema"><?=$this->lang->line('cinema')?></a> |
-			<a href="<?=base_url()?>videos"><?=$this->lang->line('videos')?></a> |
-			<a href="<?=base_url()?>gallery"><?=$this->lang->line('gallery')?></a> |
-			<a href="<?=base_url()?>greetings"><?=$this->lang->line('greetings')?></a> |
-			<a href="<?=base_url()?>mahila"><?=$this->lang->line('mahila')?></a> |
-			<a href="<?=base_url()?>sahithi"><?=$this->lang->line('sahithi')?></a> |
-			<a href="<?=base_url()?>contact" class="contact" title="Contact Us"><?=$this->lang->line('contact')?></a> |
-			<a class="feedback" href="<?=base_url()?>contact/feedback" title="Feedback"><?=$this->lang->line('feed_back')?></a> |
-			<a href="<?=base_url()?>contact/advertise" class="advertise" title="Advertise With Us"><?=$this->lang->line('advertise')?></a>
+			<a href="<?=base_url()?>" style="outline-style: none;"><?=$this->lang->line('home')?></a> |
+			<a href="<?=base_url()?>news" style="outline-style: none;"><?=$this->lang->line('news')?></a> |
+			<a href="<?=base_url()?>cinema" style="outline-style: none;"><?=$this->lang->line('cinema')?></a> |
+			<a href="<?=base_url()?>videos" style="outline-style: none;"><?=$this->lang->line('videos')?></a> |
+			<a href="<?=base_url()?>gallery" style="outline-style: none;"><?=$this->lang->line('gallery')?></a> |
+			<a href="<?=base_url()?>greetings" style="outline-style: none;"><?=$this->lang->line('greetings')?></a> |
+			<a href="<?=base_url()?>mahila" style="outline-style: none;"><?=$this->lang->line('mahila')?></a> |
+			<a href="<?=base_url()?>sahithi" style="outline-style: none;"><?=$this->lang->line('sahithi')?></a> |
+			<a href="<?=base_url()?>contact" class="contact" title="Contact Us" style="outline-style: none;"><?=$this->lang->line('contact')?></a> |
+			<a class="feedback" href="<?=base_url()?>contact/feedback" title="Feedback" style="outline-style: none;"><?=$this->lang->line('feed_back')?></a> |
+			<a href="<?=base_url()?>contact/advertise" class="advertise" title="Advertise With Us" style="outline-style: none;"><?=$this->lang->line('advertise')?></a>
 		</div>
 	</div>
 </div>

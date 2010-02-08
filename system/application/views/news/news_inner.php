@@ -165,8 +165,8 @@ display:inline;
 			<? if($count==3){break;}else{$count++;}endforeach; if($count==0){echo 'No data found';}?>
 			</div>
 			<div style="height: 24px;background-color: #6A90A5;color: #FFF;font-size: 12px;text-align: left;font-weight: bold;">
-			<div style="float: left;width: 20%;padding-left: 4px;">User Comments</div>
-			<div style="float: right;padding-right: 2px;"><a href="javascript:void(0)" onclick="return toggle('a');" style="color: #FFF;">[View All Comments(<?=$total_com?>)]</a></div>
+			<div style="float: left;width: 30%;padding-left: 4px;">User Comments</div>
+			<div style="float: right;padding-right: 2px;"><a href="javascript:void(0)" onclick="return toggle('');" style="color: #FFF;">[View All Comments(<?=$total_com?>)]</a></div>
 			</div>
 						<?php if(!empty($comments)){
 							foreach ($comments as $comment){?>
@@ -181,7 +181,6 @@ display:inline;
 							<?php }
 						}
 						?>
-			
 			<div style="border: 1px solid gray;margin:5px 0px 5px 0px;display: none;" id='a'>
 						<?php if(!empty($comments)){
 							foreach ($comments as $comment){?>

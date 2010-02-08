@@ -50,7 +50,7 @@ class Cinema_Model extends Model {
    		$this->db->order_by("cinema.insert_date", "desc");
    		$array=array('type'=>$type);
     	$this->db->where($array);
-   		$this->db->limit(8);
+   		$this->db->limit(6);
 		$this->db->from('cinema_cat');
 		$this->db->join('cinema','cinema.type=cinema_cat.id');
 		$details = $this->db->get_where();

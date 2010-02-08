@@ -11,23 +11,9 @@ class Subhodaya extends Controller {
 		$tabscss=array();
 		//for telugu content
 		$more=$this->News_Model->more_news();
-		$cini_vishesm=$this->lang->line('cini_vishesm');
-		$cini_pukarlu=$this->lang->line('cini_pukarlu');
-		//news
-		$news_rasriyam=$this->lang->line('news_rasriyam');
-		$news_jathiyam=$this->lang->line('news_jathiyam');
-		$news_antharja=$this->lang->line('news_antharja');
-		$news_kridalu=$this->lang->line('news_kridalu');
-		//videos
-		$videos=$this->lang->line('videos');
-		//greetings
-		$greetings=$this->lang->line('greetings');
 		//gallery
 		$photo_gallery=$this->lang->line('photo_gallery');
-		//mahila
-		$mahila=$this->lang->line('mahila');
-		//sahithi
-		$sahithi=$this->lang->line('sahithi');
+	
 		//home_blocks
 		$ardikam_block = $this->home->right_block($this->lang->line('news_ardikam'));
 		$Bhavisham_block = $this->home->bavishyam_block($this->lang->line('bavishyam'));
@@ -38,94 +24,42 @@ class Subhodaya extends Controller {
 		$middle_block = $this->home->middle_block($this->lang->line('eenati_vishe'));
 		$home_poll = $this->home->home_poll($this->lang->line('homepoll'));
 		$breaking=$this->News_Model->breaking_news1();
-		/*$news_type7=$this->News_Model->get_newstype1(7);
-		$active_news=$this->News_Model->active_news(2);
-		$active_news1=$this->News_Model->active_news(1);
-		$news_type4=$this->News_Model->get_newstype1(4);
-		$cinema_type2=$this->Cinema_Model->get_activenews1(2);
-		$cinema_type1=$this->Cinema_Model->get_activenews1(1);
-		$more=$this->News_Model->more_news();
-		$yes_poll=$this->Poll_Model->get_yes_newspoll($type=4);
-		$newspoll=$this->Poll_Model->get_newspolls($type=4);
-		$sahithi_details=$this->Sahithi_Model->active_sahithi(1,$type='home');
-		$mahila_details=$this->Mahila_Model->active_mahila(1,$type='home');
-		$mahila_details_yoga=$this->Mahila_Model->active_mahila(4,$type='home');
-
-	    $greetings1=$this->Greeting_Model->get_main_greetings(1);
-		$greetings1=$this->Greeting_Model->get_main_greetings(1);
-        $home_stories=$this->Sahithi_Model->get_home_stories($type=2);
-		$images=array();
-		$gallery_maincategeories = $this->Gallery_Model->get_categeory($active=1);
-
-		
-		if(!empty($gallery_maincategeories))//if atleast one main categeory exists..
-		{
-			
-		  foreach($gallery_maincategeories as $item)
-		  {
-			$subcategeories[$item->id]=$this->Gallery_Model->subcat($item->id);
-		  }
-		 	$count = 1;
-	       foreach($subcategeories as $item)
-	       {  
-	       	$eachone=$item->result();
-	    	if(!empty($eachone))
-	    	{
-	    		foreach ($eachone as $row)
-	    		{
-	 				$images[$row->id]=$this->Gallery_Model->getimage1($row->id);
-	    		}
-	    	}
-	    	if($count>=3)
-	 				break;
-	    	$count++;
-		   }
-	    }
-	    	
-		$activenews=$this->News_Model->active_news1();
-		$gall_topviews=$this->Gallery_Model->top_views();
- 
-	    //home page 3 videos from three recent categeories
-	    $this->load->Model('Video_Model');
-	   
-	     $videos=$this->Video_Model->get_videos('active',2);
-	   	  
-	     $video_result=$videos->result();
-	     // subhodaya special news
-	     $special_news=$this->News_Model->get_special_news();*/
-	    // print_r($special_news);
-	   // $tabs=array();
+		$rasriyam_block= $this->home->tabs_block($this->lang->line('news_rasriyam'));
+		$jathiyam_block= $this->home->tabs_block($this->lang->line('news_jathiyam'));
+		$antharja_block= $this->home->tabs_block($this->lang->line('news_antharja'));
+		$kridalu_block= $this->home->tabs_block($this->lang->line('news_kridalu'));
+		$pukarlu_block= $this->home->tabs_block($this->lang->line('cini_pukarlu'));
+		$vishesm_block= $this->home->tabs_block($this->lang->line('cini_vishesm'));
+		$gallery_block= $this->home->photo_gallery($this->lang->line('photo_gallery'));
+		$videos_block= $this->home->video_block($this->lang->line('videos'));
+		$greetings_block= $this->home->greeting_block($this->lang->line('greetings'));
+		$mahila_block= $this->home->tabs_block($this->lang->line('mahila'));
+		$sahithi_block= $this->home->tabs_block($this->lang->line('sahithi'));
 		$data=array(
 					'tabscss'			=>	$tabscss,
 					'Bhavisham_block'	=>	$Bhavisham_block,
 					'special_block'		=>  $special_block,
 					'middle_block'		=>	$middle_block,
 					'home_poll'			=>	$home_poll,
-		//news
-					'news_kridalu'		=>	$news_kridalu,
-					'news_antharja'		=>  $news_antharja,
-					'news_jathiyam'		=> 	$news_jathiyam,
-					'news_rasriyam'		=>	$news_rasriyam,
-					'ardikam_block'		=>  $ardikam_block,
 		//cinema
 					'srugaram_block'	=>	$srugaram_block,
 					'songs_block'		=>	$songs_block,
 					'reviews_block'		=>	$reviews_block,	
-					'cini_pukarlu'		=>	$cini_pukarlu,
-					'cini_vishesm'		=>	$cini_vishesm,
-		//vidos
-					'videos'			=>	$videos,
-		//greetings
-					'greetings'			=>	$greetings,
-		//gallry
-					'photo_gallery'		=>	$photo_gallery,
-		//sahithi
-					'sahithi'			=>	$sahithi,
-		//mahila
-					'mahila'			=>	$mahila,
+
 						'more'   	 	=>  $more,
 					'breaking'			=>	$breaking,
-					
+					'rasriyam_block'	=>	$rasriyam_block,
+					'jathiyam_block'	=>	$jathiyam_block,
+					'antharja_block'	=>	$antharja_block,
+					'kridalu_block'     =>  $kridalu_block,
+					'pukarlu_block'		=>	$pukarlu_block,
+					'vishesm_block'		=>  $vishesm_block,
+					'gallery_block'		=>  $gallery_block,
+					'videos_block'		=>	$videos_block,
+					'greetings_block'	=>	$greetings_block,
+					'mahila_block'		=>	$mahila_block,
+					'sahithi_block'		=>	$sahithi_block,
+					'ardikam_block'		=>	$ardikam_block,
 					);
 		$this->load->view('home',$data);
 	}

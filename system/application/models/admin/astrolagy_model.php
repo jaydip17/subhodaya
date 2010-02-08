@@ -19,7 +19,6 @@ class Astrolagy_Model extends Model
   	  $this->db->select('id,astrolagy_type');
    	  $query=$this->db->get('astrolagy_types');
    	  return $query->result();
-   
    }
  	
   function getastrolagy_details($id){

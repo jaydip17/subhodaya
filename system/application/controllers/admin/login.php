@@ -5,9 +5,11 @@ class Login extends Controller {
  	function __construct()
 	  {
 	    parent::Controller();
+	   
 	  }
 	
 	function index(){
+		$this->Login_Model->login_validate();
 		echo $this->uri->segment(4);
 		$session = $this->session->userdata('uname');
 		
@@ -25,6 +27,7 @@ class Login extends Controller {
 	}
 	function  error()
 	{
+		 
 			if($this->uri->segment(4)==1)
 			{
 				$data = array(

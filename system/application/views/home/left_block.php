@@ -15,7 +15,7 @@
 									<?=$details['0']->summary?>
 								</div>
 								<div id="" align="right" style="font-size: 12px;">
-									<a href="<?=(isset($link)) ? $link : ''?>" style="color:red; text-decoration:none;margin-right:4px;"><?=(isset($eenka)) ? $eenka : ''?></a>
+									<a href="<?=(isset($link)) ? $link : ''?>" style="color:red; text-decoration:none;margin-right:4px;outline-style: none;"><?=(isset($eenka)) ? $eenka : ''?></a>
 								</div>
 							</div>
 							<div id="sub_window_footer">

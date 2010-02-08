@@ -48,9 +48,12 @@ class Poll extends Controller {
 		}
 		$result=$this->Poll_Model->insert_home($poll_id,$answer);
 		if(!empty($result)){
-			if($cat_id==4){
+			if($cat_id==4)
+			{
+				echo 'thanks for your vote';	
 			redirect(base_url());
 			}else{
+					echo 'thanks for your vote';
 				redirect(base_url().'cinema');
 			}
 		}

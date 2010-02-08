@@ -40,10 +40,9 @@
        
        if($this->input->post('parentid'))
        {
-       $parentid = $this->input->post('parentid');
-        $options= $this->Gallery_model->Categeory($this->input->post('parentid'));
-       $parentid= $parentid;
-       
+	       $parentid = $this->input->post('parentid');
+	       $options= $this->Gallery_model->Categeory($this->input->post('parentid'));
+	       $parentid= $parentid;
        }
        $data=array('jslinks'   => $links,
        				'message '  => $message,
@@ -84,7 +83,8 @@
 	 //print_r($title);
 		
 	  $this->Gallery_model->addImage($title,$_POST['parentid1'],$active);
-	   redirect('admin/gallery/root_forimages');
+	  
+	   redirect('admin/gall/root_forimages');
 	}
 	
 	//displaying categeories and sub categeories
@@ -95,7 +95,7 @@
     	$this->load->library('paginationnew');
     	$this->paginationnew->start = ($this->uri->segment(5)) ? $this->uri->segment(5) : '0';
     	$this->paginationnew->limit =10;
-   $this->paginationnew->filePath = base_url().'admin/Gallery/categeoryview/'.$this->uri->segment(4);
+   $this->paginationnew->filePath = base_url().'admin/gallery/categeoryview/'.$this->uri->segment(4);
    $this->paginationnew->select_what = '*';
    
    //$this->paginationnew->the_table = 'gallery_categeory';

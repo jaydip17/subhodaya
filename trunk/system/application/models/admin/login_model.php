@@ -20,7 +20,7 @@
   		if(intval($count)>0 )
 		{
 			$this->session->set_userdata($data);
-			redirect('admin/home');
+			redirect('admin/adminhome');
 		}
 		else 
 		{

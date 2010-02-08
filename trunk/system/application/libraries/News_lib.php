@@ -211,7 +211,7 @@ class News_lib{
 		$most_read_news=$this->most_read_mahila_news($mahila_cat);
 		$thaja_varhta=$this->mahila_thaja_vartha($mahila_cat);
 		$link=base_url()."mahila/mahiladetails/";
-		$image_link=base_url().'assets/mahila/ceni_img'.$thaja_varhta[0]->id.'_thumb.jpg';
+		$image_link=base_url().'assets/mahila/news_img'.$thaja_varhta[0]->id.'_thumb.jpg';
 		$list='mahilalist';
 		$cat_name=$most_read_news[0]->cat_name;
 		$onload = "loadNews('content','".base_url()."mahilalist/listview/".$mahila_cat."')";
@@ -234,7 +234,7 @@ class News_lib{
 		$most_read_news=$this->most_read_sahithi_news($sahithi_cat);
 		$thaja_varhta=$this->sahithi_thaja_vartha($sahithi_cat);
 		$link=base_url()."sahithi/sahithidetails/";
-		$image_link=base_url().'assets/sahithi/ceni_img'.$thaja_varhta[0]->id.'_thumb.jpg';
+		$image_link=base_url().'assets/sahithi/news_img'.$thaja_varhta[0]->id.'_thumb.jpg';
 		$list='sahithilist';
 		$cat_name=$most_read_news[0]->cat_name;
 		$onload = "loadNews('content','".base_url()."sahithilist/listview/".$sahithi_cat."')";

@@ -159,6 +159,13 @@ else
 			<div style="padding:1px 0px 2px 35px;font-size: 12px;"><?=form_radio('answer','a',FALSE) ?><?=$this->lang->line('yes')?></div>
 			<div style="padding:1px 0px 2px 35px;font-size: 12px;"><?=form_radio('answer','b',FALSE) ?><?=$this->lang->line('no')?></div>
 			<div style="padding:1px 0px 2px 35px;font-size: 12px;"><?=form_radio('answer','c',FALSE) ?><?=$this->lang->line('yes_no')?></div>
+				<?php  if(isset($_GET["psucc"])){
+									$succ=$_GET["psucc"];
+								}
+								if(!empty($succ)){?>
+									<font style="color: black;">successfully vote.</font>
+								<?}
+								?>
 			<div style="padding-left: 10px;"><img src="<?=base_url()?>assets/image/vote1.jpg" onclick="loadPoll()"/></div>
 			<div id=""><a HREF="javascript:void(0)" onclick="window.open('<?=base_url();?>poll/yes_result/<? if(isset($cinemapoll['0'])){echo $cinemapoll['0']->id;}?>', 'welcome','width=300,height=200')" style="color: red;">View Result</a></div>
 			<div style="text-align: right;"><a href="<?=base_url()?>home_poll/details"><?=$this->lang->line('other_poll')?></a></div>

@@ -1,4 +1,4 @@
-<?echo form_open(base_url().'admin/gallery/deletecategeory/');?>
+<?echo form_open(base_url().'admin/gall/deletecategeory/');?>
  <script type="javascript">
 function fun()
 { var i;
@@ -37,7 +37,6 @@ View Images
 		Edit
 		</th>
 	</tr>
-
 <? $i=1;
 foreach ($query->result() as $item):
 echo  form_hidden('parentid',$item->parentid);
@@ -49,15 +48,15 @@ echo  form_hidden('parentid',$item->parentid);
 
 </td>
 		<td>
-<?php if(!isset($sub)){ echo anchor('admin/gallery/categeoryview/'.$item->id,'view all');?>
+<?php if(!isset($sub)){ echo anchor('admin/gall/categeoryview/'.$item->id,'view all');?>
     
-      <?php  } else{echo anchor('admin/gallery/image_view/'.$item->id,'view images');}?>
+      <?php  } else{echo anchor('admin/gall/image_view/'.$item->id,'view images');}?>
       </td>
 		<td><a
-			href="<?=base_url()?>admin/gallery/deletecategeory/<?=$item->id?>/<?=$item->parentid?>"
+			href="<?=base_url()?>admin/gall/deletecategeory/<?=$item->id?>/<?=$item->parentid?>"
 			onclick='return confirm("are you sure want to delete");'><img
 			src="<?=base_url();?>assets/imgs/delete.png" border='0' /></a></td>
-		<td><a href="<?=base_url()?>admin/gallery/catedit/<?=$item->id?>"><img
+		<td><a href="<?=base_url()?>admin/gall/catedit/<?=$item->id?>"><img
 			src="<?=base_url();?>assets/imgs/edit.png" border='0' /></a></td>
 	</tr>
 

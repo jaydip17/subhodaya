@@ -51,9 +51,9 @@ $lang['photo_gallery'] 			    		= 	"ఫోటో గ్యాలరీ";
 $lang['gallery'] 			    			= 	"గ్యాలరీ";
 //videos
 $lang['videos'] 			    			= 	"వీడియోస్";
-$lang['video'] 			    				= 	"వీడియో";
+$lang['video'] 			    				= 	"వీడియో ";
 //greeings
-$lang['greetings'] 			    			= 	"గ్రీటింగ్స్";
+$lang['greetings'] 			    			= 	"  గ్రీటింగ్స్";
 //mahila
 $lang['mahila'] 			    			= 	"మహిళా";
 $lang['mahi_buty'] 			    			= 	"బ్యుటి టిప్స్ ";

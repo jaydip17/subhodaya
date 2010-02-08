@@ -82,13 +82,20 @@ ddsmoothmenu.init({
 				<li><a href="<?=base_url();?>admin/sahithi">Add</a></li>
 <li><a href="<?=base_url();?>admin/sahithi/getsahithitype">Edit</a></li>
 			</ul>
-			</li>
+			</li><!--
 			<li><a href="#">Gallery</a>
-			 <ul>
- 		 		<li><a href="<?=base_url()."admin/" ?>gallery/categeory1">Add Categeory</a></li>
-				<li><a href="<?=base_url()."admin/" ?>gallery/root_forimages">Add Gallery</a></li>
-				<li><a href="<?=base_url()."admin/" ?>gallery/categeoryview/0">View/Edit Categeories</a></li>
-  			</ul>
+				 <ul>
+	 		 		<li><a href="<?=base_url()."admin/" ?>gallery/categeory1">Add Categeory</a></li>
+					<li><a href="<?=base_url()."admin/" ?>gallery/root_forimages">Add Gallery</a></li>
+					<li><a href="<?=base_url()."admin/" ?>gallery/categeoryview/0">View/Edit Categeories</a></li>
+	  			</ul>
+			</li>
+			--><li><a href="#">Gall</a>
+				 <ul>
+	 		 		<li><a href="<?=base_url()."admin/" ?>gall/categeory1">Add Categeory</a></li>
+					<li><a href="<?=base_url()."admin/" ?>gall/root_forimages">Add Gallery</a></li>
+					<li><a href="<?=base_url()."admin/" ?>gall/categeoryview/0">View/Edit Categeories</a></li>
+	  			</ul>
 			</li>
 			<li><a href="#">Poll</a>
 			<ul>

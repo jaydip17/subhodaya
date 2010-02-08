@@ -56,6 +56,7 @@ class Astrology_lib{
 	function rasi_block($cat_id)
 	{
 		$week=array();
+		$month=array();
 		$rasi_details=array();
 		$type=$this->get_astrolagytype();
 		$rasi=$this->get_rasi();
@@ -65,7 +66,9 @@ class Astrology_lib{
 			$week=$this->get_week_details($cat_id,2);
 			$year=$this->get_year_details($cat_id,4);
 			$rasi_details[0]->day=$day[0]->description;
-			$rasi_details[0]->month=$month[0]->description;
+			if(!empty($month)){
+				$rasi_details[0]->month=$month[0]->description;
+			}
 			if(!empty($week)){
 				$rasi_details[0]->week=$week[0]->description;
 			}
@@ -114,7 +117,7 @@ class Astrology_lib{
 		$d=mdate($da);
 		$date=mktime(0,0,0,$m,$d,$y);
 		$week = (int)date('W', $date);
-		$week1=$week+1;
+		$week1=$week;
 		$day_details=$this->CI->Astrolagy_Model->get_week_details($as_cat,$week1,$id);
 		return $day_details;
 	}

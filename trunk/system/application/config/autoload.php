@@ -39,7 +39,7 @@
 |	$autoload['libraries'] = array('database', 'session', 'xmlrpc');
 */
 
-$autoload['libraries'] = array('database', 'session','bread_crumb','home','news_lib','cinema_lib','astrology_lib');
+$autoload['libraries'] = array('database', 'session','bread_crumb','home','news_lib','cinema_lib','astrology_lib','unzip');
 
 
 /*
@@ -118,7 +118,8 @@ $autoload['model'] = array('admin/Login_Model',
 							'admin/Greeting_Model',
 							'admin/Video_Model',
 							'admin/Flash_model',
-							'admin/Astrolagy_Model'
+							'admin/Astrolagy_Model',
+							'admin/Gall_model'
                            	);
 
 

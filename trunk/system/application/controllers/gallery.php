@@ -8,29 +8,31 @@ class Gallery extends Controller {
 	}
 	function index()
 	{
-		$breaking=$this->News_Model->breaking_news1();
+	$breaking=$this->News_Model->breaking_news1();
 		$gallerycss=array();
 		$more=$this->News_Model->more_news();
 		$title=$this->lang->line('gallery_title').$more['6']->matter;
 		$description=$this->lang->line('gallery_descrip'); 
 		$result=$this->Gallery_Model->get_categeory(0);
 		$details=array();
+	
 		//print_r($result);
 		foreach ($result as $cate)
 		{
 			$subcats=$this->Gallery_Model->get_cateimage($cate->id,$limit="5");
-			
 			foreach ($subcats as $sub_cat)
 			{
 				$ss = $this->Gallery_Model->getimage($sub_cat->id);
+				//print_r($ss);
 				$sub_cats[] = array(
 									'date'=>(isset($ss->insert_date)) ? $ss->insert_date : 0,
 									'id' => $sub_cat->id,
+									'folder_path'=>(isset($ss->folder_path)) ? $ss->folder_path: 0,
+									'cat_id'=>(isset($ss->cat_id)) ? $ss->cat_id: 0,
 									'catname'	=> $sub_cat->catname,
-									'imageid'  => (isset($ss->id)) ? $ss->id : 0,
-									'imagename'  => (isset($ss->title)) ? $ss->title : 0, 
-									); 
-									  
+									'imageid'  => (isset($ss->image_path)) ? $ss->image_path: 0,
+									//'imagename'  => (isset($ss->title)) ? $ss->title : 0, 
+									); 				  
 			}
 			$cats[] = array (
 							'id' => $cate->id,
@@ -39,16 +41,18 @@ class Gallery extends Controller {
 							);
 			$sub_cats=array();
 		}
+	//print_r($cats);
 		$images=array();
 		foreach($details as $item)
 		{
 			foreach ($item as $sub)
 			{
+
 				$images[$sub->id]=$this->Gallery_Model->getimage($sub->id);
 			}
 			
 		}
-		
+		//print_r($images);
 		//$current_url = current_url();
 		//$navigation = array ($current_url);
 		$segments = array(	'seg1' => $this->uri->segment(1,0),
@@ -67,7 +71,7 @@ class Gallery extends Controller {
 					'result' 		=> $result,
 					'images' 		=> $images,
 					'cats'   		=> $cats,
-					'bread_crumb'   => $bread_crumb,
+					//'bread_crumb'   => $bread_crumb,
 					'title'			=> $title,
 					'description'	=> $description,
 					'breaking'		=>	$breaking
@@ -80,10 +84,11 @@ class Gallery extends Controller {
   		$gallerycss=array();
   		$type=$this->uri->segment(3,0);
   		$more=$this->News_Model->more_news();
-		$details=$this->Gallery_Model->get_cateimage($type,$limit="");
+		$details=$this->Gall_model->get_cateimage($type,$limit="");
+		
 		$a =base_url().'gallery/categeory/'.$type;
 	  	$query= "from gallery_categeory where parentid = $type";
-		 $total_count=$this->Gallery_Model->count1($type);
+		 $total_count=$this->Gall_model->count1($type);
 		 
     	$this->load->library('paginationnew');
     	$this->paginationnew->start = ($this->uri->segment(4)) ? $this->uri->segment(4) : '0';
@@ -101,12 +106,12 @@ class Gallery extends Controller {
    		
 		foreach($details as $item)
 		{
-			$images[$item->id]=$this->Gallery_Model->getimage($item->id);
+			$images[$item->id]=$this->Gall_model->getimage($item->id);
 		}
 		if(empty($images)){
 			redirect(base_url().'gallery');
 		}
-		$result=$this->Gallery_Model->get_categeory(0);
+		$result=$this->Gall_model->get_categeory(0);
 		   		
 		//$current_url = current_url();
 		//$navigation = array ($current_url);
@@ -127,7 +132,7 @@ class Gallery extends Controller {
 					'result'		=> $images,
 		            'paginate' 		=> $paginate,
 		            'catname'       =>  $result,
-					'bread_crumb'	=> $bread_crumb,
+					//'bread_crumb'	=> $bread_crumb,
 					'breaking'		=>	$breaking
 					);
 		$this->load->view('gallery_subcat',$data);
@@ -136,22 +141,24 @@ class Gallery extends Controller {
   		$breaking=$this->News_Model->breaking_news1();
   		$gallerycss=array();
   		$type=$this->uri->segment(3,0);
-  		if($type==0){
+  		if($type==0)
+  		{
   			redirect(base_url()."gallery");
   		}
-  		$cate=$this->Gallery_Model->get_categeory(0);
-  		//print_r($cate);
+  		$cate=$this->Gall_model->get_categeory(0);
+		$cat_tit=$this->Gall_model->get_cat_title($type);
+		//print_r($cat_tit);
   		$more=$this->News_Model->more_news();
-  		$result=$this->Gallery_Model->get_gallery($type);
-  		$total_count=$this->Gallery_Model->count($type);
-  		$query=$this->Gallery_Model->gallery_pagi($type);
-  		//pagination
+  		$result=$this->Gall_model->get_gallery($type);
+  		$total_count=$this->Gall_model->count($type);
+  		$query=$this->Gall_model->gallery_pagi($type);
+  		//print_r($query);
   		$a =base_url().'gallery/inner/'.$type;
 		 //pagination
     	$this->load->library('paginationnew');
     	
     	$this->paginationnew->start = ($this->uri->segment(4)) ? $this->uri->segment(4) : '0';
-    	$this->paginationnew->limit =20;
+    	$this->paginationnew->limit =25;
         $this->paginationnew->filePath =$a;
       
         $this->paginationnew->select_what = '*';
@@ -160,9 +167,10 @@ class Gallery extends Controller {
         
    		$result = $this->paginationnew->getQuery(TRUE);
    		$details=$result->result();
+   		//print_r($details);
   	    $paginate = $this->paginationnew->paginate1();
 		//print_r($details);
-		if(empty($details)){
+	if(empty($details)){
 			redirect(base_url().'gallery');
 		}
 		$segments = array(	'seg1' => $this->uri->segment(1,0),
@@ -185,8 +193,9 @@ class Gallery extends Controller {
   					'cate'		 =>	$cate,
   					'result'	 =>	$details,
   					'paginate'	 =>	$paginate,
-  					'bread_crumb'=> $bread_crumb,
-  					'breaking'		=>	$breaking
+  					//'bread_crumb'=> $bread_crumb,
+  					'breaking'	=>	$breaking,
+  					'cat_tit'	=>	$cat_tit
   		);
   		$this->load->view('gallery_inner',$data);
   	}

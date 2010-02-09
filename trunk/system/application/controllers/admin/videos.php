@@ -1,5 +1,4 @@
-              <?php
-
+ <?php
 class Videos extends Controller 
 {
 	var $layout='admin';
@@ -59,136 +58,6 @@ function viewaddvideo()
 		
 	}
       
-/*function addvideo()
-
-	{
-		$title=$this->input->post('title');
-		$video_id=$this->input->post('video_id');
-		$hero_name=$this->input->post('hero_name');
-		$description=$this->input->post('description');
-		$duration=$this->input->post('duration');
-		$date_created=$this->input->post('date_created');
-		$created_date=$this->input->post('created_date');
-		$user_id=$this->input->post('user_id');
-		$banned=$this->input->post('banned');
-		$video_cat_id=$this->input->post('video_cat_id');
-		$no_of_views=$this->input->post('no_of_views');
-		//$video_cat_id=$this->input->post('video_cat_id');
-		//$youtube_url=$this->input->Post('youtube_url');
-		//$rating=$this->input->post('rating');
-		//$date=$this->input->post('insert_date');
-		
-		$data=array('title'			=>	$title,
-					'no_of_views'	=>	$no_of_views,
-					'video_cat_id'  =>	$video_cat_id,
-		             'video_id'     =>  $video_id,
-		              'hero_name'   =>  $hero_name,
-		              'description' =>  $description,
-		               'duration'   =>  $duration,
-		              'date_created'=>  $date_created,
-		              'created_date'=>  $created_date,
-		              'user_id'     =>  $user_id,
-		               'banned'     =>  $banned,
-		               'no_of_views'=> $no_of_views,
-		             );
-		if(!empty($data))
-		{
-			$result=$this->db->insert('fa_videos_list',$data);
-			$i=$this->db->insert_id();
-		}
-		
-		/*if($result==1)
-		{
-		$dir =  './assets/videos';   
-	    $config['upload_path'] =$dir;
-		$config['allowed_types'] = 'flv|wmp';
-		$config['max_size']	= '90000000';		
-		
-		$this->load->library('upload',$config);
-		if (!$this->upload->do_upload('video'))
-		{
-			
-			$error = array('error' => $this->upload->display_errors());
-			$this->db->where('id',$i);
-			$this->db->delete('videos');
-			$message = 'error';
-			$this->session->set_flashdata('message',$error);
-		}	
-		else
-		{
-		   $data = array('upload_data' => $this->upload->data());
-	       $filepath = $data['upload_data']['file_name'];
-	       rename($dir.'/'.$filepath , $dir.'/video'.$i.'.flv');
-	       $this->db->where('id',$i);
-	       $this->db->update('videos',array('video_uploaded'=>'1'));
-	       $message='Video Added Successfully';
-		
-			$dir1 =  './assets/videos/image_preview';   
-		    $config1['upload_path'] = $dir1;
-			$config1['allowed_types'] = 'gif|jpg|png';
-			$config1['max_size']	= '100000';
-			$config1['max_width']  = '1024';
-			$config1['max_height']  = '768';
-  
-	       $this->upload->initialize($config1);
-			if (!$this->upload->do_upload('image'))
-			{
-				$error = array('error' => $this->upload->display_errors());
-				$this->session->set_flashdata('message',$error);
-				print_r($error);
-			}	
-			else
-			{
-			   $data = array('upload_data' => $this->upload->data());
-		       $filepath = $data['upload_data']['file_name'];
-		       rename($dir1.'/'.$filepath , $dir1.'/image'.$i.'.jpg');	
-		      
- 	    	   	$filename = 'image'.$i.'.jpg';
-	    	
-		    	$config4['image_library'] = 'gd2';
-		        $config4['source_image'] = $dir1.'/'.$filename;
-		        $config4['new_image'] = 'home_image'.$i.'.jpg';
-		      	$config4['create_thumb'] = TRUE;
-				$config4['maintain_ratio'] = TRUE;     
-				$config4['width'] = 122;
-				$config4['height'] = 89;
-	    	
-	    	   $this->load->library('image_lib');
-	    	   $this->image_lib->initialize($config4);
-	    	
-	    	if(!$this->image_lib->resize())
-	    	{
-	    		$error = array('error' => $this->image_lib->display_errors());
-	    		$this->session->set_flashdata('message',$error);
-	    	}
-	    	$this->image_lib->clear();
-    	
-    	$filename = 'image'.$i.'.jpg';
-    	
-    	$config3['image_library'] = 'gd2';
-        $config3['source_image'] = $dir1.'/'.$filename;
-      	$config3['create_thumb'] = TRUE;
-		$config3['maintain_ratio'] = TRUE;
-		$config3['width'] = 102;
-		$config3['height'] =72;
-    	
-    	$this->load->library('image_lib'); 
-    	$this->image_lib->initialize($config3);
-    	
-    	if(!$this->image_lib->resize())
-    	{
-    		$error = array('error' => $this->image_lib->display_errors());
-    		$this->session->set_flashdata('message',$error);
-    	}
-		}
-	 }
-	}
-		
-	//redirect(base_url()."admin/videos/viewaddvideo",$message);
-		
-		
-	}*/
-	
  function add_url()
     {
     	$url=$this->input->post('youtube_url');
@@ -306,13 +175,11 @@ function editcategeory()
 		}
 	}
 	
-	
 function deletecategeory()
 	    {
 		$id=$this->uri->segment(4);
 		$this->Videos_Model->deletecategeory($id);
 		redirect(base_url().'admin/videos/categeories');
-	}
-	
+	}	
 }
 ?>

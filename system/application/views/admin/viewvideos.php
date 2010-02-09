@@ -32,14 +32,10 @@ function fun1(){
 {?>
    <tr>
 		<th></th>
-		<th>Name</th>
+		<th>Movie Name</th>
 		
-		<th>Number Of Views</th>
-		
-		<th>Rating</th>
-		
-		<th>Video</th>
-		
+		<th>Title</th>
+		<th>Youtube Url Id</th>			
 		<th>Delete</th>
 		
 		<th>Edit</th>
@@ -56,16 +52,17 @@ echo form_open(base_url().'admin/videos/deletevideo/');?>
 
 <tr>
 		<td><input type="checkbox" id='c<?=$i?>' name="removeid1[]" value=<?=$item->id?>></td>
-		<td><?=$item->name?>
+		<td><?=$item->video_name?>
     </td>
-		<td><?=$item->no_of_views?>
+		<td><?=$item->title?>
     </td>
-    <td><?=$item->rating?>
+     <td align="center"><?=$item->video_id?>
     </td>
     
-    <td><a href="<?=base_url();?>admin/videos/getvideos<?=$item->id?>/<?=$catid?>"> <img
+    
+    <!-- <td><a href="<?=base_url();?>admin/videos/getvideos<?=$item->id?>/<?=$catid?>"> <img
 			src="<?=base_url()?>assets/videos/image_preview/image<?=$item->id?>_thumb.jpg"
-			alt="img"></td>
+			alt="img"></td>-->
 			
 	<td><a
 			href="<?=base_url()?>admin/videos/deletevideo/<?=$item->id?>/<?=$catid?>"

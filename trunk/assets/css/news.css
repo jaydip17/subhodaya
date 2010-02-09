@@ -310,6 +310,12 @@ height:130px;
 text-align:left;
 
 }
+/*#vi_d{
+	float:left;
+	width:200px;
+	height:200px;
+	border:1px solid #000;
+}*/
 #alink{
 	border-bottom: 1px solid #FFFFFF; 
 	line-height: 30px;

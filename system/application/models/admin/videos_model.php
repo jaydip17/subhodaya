@@ -334,7 +334,6 @@ class Videos_Model extends Model
     	$this->db->order_by('videos_list.id','desc');
 		$query=$this->db->get('videos_list');
 		return $query->result();
-    	
     }
     
  function more_video(){

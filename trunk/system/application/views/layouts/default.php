@@ -10,7 +10,7 @@
 <?php if(isset($description)){?>
 <meta name="Description" content="<?=$description?>" />
 <?php }else{?>
-<meta name="Description" content="<?=$this->lang->line('home_descrip')?>" />
+<meta name="Description" content="<?=$this->lang->line('home_descrip')?>"/>
 <?php }?>
 <meta http-equiv=Content-Type content="text/html; charset=iso-8859-1"/>	
 <meta name=ROBOTS content="INDEX,FOLLOW"/>	

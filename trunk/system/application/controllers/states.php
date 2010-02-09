@@ -28,7 +28,7 @@ class States extends Controller {
 	{
 		$rs=$this->News_Model->get_statenews(14);
 		$image_link=base_url().'assets/districts/news_img'.$rs[0]->id.'_thumb.jpg';
-		$type=10;
+		$type=14;
 		$data=array('details'	=> $rs,
 					'image_link'=> $image_link,
 					'type'		=>	$type);
@@ -38,7 +38,7 @@ class States extends Controller {
 	{
 		$rs=$this->News_Model->get_statenews(13);
 		$image_link=base_url().'assets/districts/news_img'.$rs[0]->id.'_thumb.jpg';
-		$type=10;
+		$type=13;
 		$data=array('details'	=> $rs,
 					'image_link'=> $image_link,
 					'type'		=>	$type);
@@ -48,7 +48,7 @@ class States extends Controller {
 	{
 		$rs=$this->News_Model->get_statenews(12);
 		$image_link=base_url().'assets/districts/news_img'.$rs[0]->id.'_thumb.jpg';
-		$type=10;
+		$type=12;
 		$data=array('details'	=> $rs,
 					'image_link'=> $image_link,
 					'type'		=>	$type);
@@ -58,7 +58,7 @@ class States extends Controller {
 	{
 		$rs=$this->News_Model->get_statenews(15);
 		$image_link=base_url().'assets/districts/news_img'.$rs[0]->id.'_thumb.jpg';
-		$type=10;
+		$type=15;
 		$data=array('details'	=> $rs,
 					'image_link'=> $image_link,
 					'type'		=>	$type);
@@ -68,7 +68,7 @@ class States extends Controller {
 	{
 		$rs=$this->News_Model->get_statenews(16);
 		$image_link=base_url().'assets/districts/news_img'.$rs[0]->id.'_thumb.jpg';
-		$type=10;
+		$type=16;
 		$data=array('details'	=> $rs,
 					'image_link'=> $image_link,
 					'type'		=>	$type);
@@ -78,7 +78,7 @@ class States extends Controller {
 	{
 		$rs=$this->News_Model->get_statenews(17);
 		$image_link=base_url().'assets/districts/news_img'.$rs[0]->id.'_thumb.jpg';
-		$type=10;
+		$type=17;
 		$data=array('details'	=> $rs,
 					'image_link'=> $image_link,
 					'type'		=>	$type);
@@ -88,7 +88,7 @@ class States extends Controller {
 	{
 		$rs=$this->News_Model->get_statenews(18);
 		$image_link=base_url().'assets/districts/news_img'.$rs[0]->id.'_thumb.jpg';
-		$type=10;
+		$type=18;
 		$data=array('details'	=> $rs,
 					'image_link'=> $image_link,
 					'type'		=>	$type);
@@ -98,7 +98,7 @@ class States extends Controller {
 	{
 		$rs=$this->News_Model->get_statenews(19);
 		$image_link=base_url().'assets/districts/news_img'.$rs[0]->id.'_thumb.jpg';
-		$type=10;
+		$type=19;
 		$data=array('details'	=> $rs,
 					'image_link'=> $image_link,
 					'type'		=>	$type);
@@ -108,7 +108,7 @@ class States extends Controller {
 	{
 		$rs=$this->News_Model->get_statenews(20);
 		$image_link=base_url().'assets/districts/news_img'.$rs[0]->id.'_thumb.jpg';
-		$type=10;
+		$type=20;
 		$data=array('details'	=> $rs,
 					'image_link'=> $image_link,
 					'type'		=>	$type);
@@ -118,7 +118,7 @@ class States extends Controller {
 	{
 		$rs=$this->News_Model->get_statenews(21);
 		$image_link=base_url().'assets/districts/news_img'.$rs[0]->id.'_thumb.jpg';
-		$type=10;
+		$type=21;
 		$data=array('details'	=> $rs,
 					'image_link'=> $image_link,
 					'type'		=>	$type);
@@ -128,7 +128,7 @@ class States extends Controller {
 	{
 		$rs=$this->News_Model->get_statenews(22);
 		$image_link=base_url().'assets/districts/news_img'.$rs[0]->id.'_thumb.jpg';
-		$type=10;
+		$type=22;
 		$data=array('details'	=> $rs,
 					'image_link'=> $image_link,
 					'type'		=>	$type);
@@ -138,7 +138,7 @@ class States extends Controller {
 	{
 		$rs=$this->News_Model->get_statenews(23);
 		$image_link=base_url().'assets/districts/news_img'.$rs[0]->id.'_thumb.jpg';
-		$type=10;
+		$type=23;
 		$data=array('details'	=> $rs,
 					'image_link'=> $image_link,
 					'type'		=>	$type);
@@ -148,7 +148,7 @@ class States extends Controller {
 	{
 		$rs=$this->News_Model->get_statenews(24);
 		$image_link=base_url().'assets/districts/news_img'.$rs[0]->id.'_thumb.jpg';
-		$type=10;
+		$type=24;
 		$data=array('details'	=> $rs,
 					'image_link'=> $image_link,
 					'type'		=>	$type);
@@ -158,7 +158,7 @@ class States extends Controller {
 	{
 		$rs=$this->News_Model->get_statenews(25);
 		$image_link=base_url().'assets/districts/news_img'.$rs[0]->id.'_thumb.jpg';
-		$type=10;
+		$type=25;
 		$data=array('details'	=> $rs,
 					'image_link'=> $image_link,
 					'type'		=>	$type);
@@ -168,7 +168,7 @@ class States extends Controller {
 	{
 		$rs=$this->News_Model->get_statenews(26);
 		$image_link=base_url().'assets/districts/news_img'.$rs[0]->id.'_thumb.jpg';
-		$type=10;
+		$type=26;
 		$data=array('details'	=> $rs,
 					'image_link'=> $image_link,
 					'type'		=>	$type);
@@ -178,7 +178,7 @@ class States extends Controller {
 	{
 		$rs=$this->News_Model->get_statenews(27);
 		$image_link=base_url().'assets/districts/news_img'.$rs[0]->id.'_thumb.jpg';
-		$type=10;
+		$type=27;
 		$data=array('details'	=> $rs,
 					'image_link'=> $image_link,
 					'type'		=>	$type);
@@ -188,7 +188,7 @@ class States extends Controller {
 	{
 		$rs=$this->News_Model->get_statenews(28);
 		$image_link=base_url().'assets/districts/news_img'.$rs[0]->id.'_thumb.jpg';
-		$type=10;
+		$type=28;
 		$data=array('details'	=> $rs,
 					'image_link'=> $image_link,
 					'type'		=>	$type);
@@ -198,7 +198,7 @@ class States extends Controller {
 	{
 		$rs=$this->News_Model->get_statenews(29);
 		$image_link=base_url().'assets/districts/news_img'.$rs[0]->id.'_thumb.jpg';
-		$type=10;
+		$type=29;
 		$data=array('details'	=> $rs,
 					'image_link'=> $image_link,
 					'type'		=>	$type);
@@ -208,7 +208,7 @@ class States extends Controller {
 	{
 		$rs=$this->News_Model->get_statenews(30);
 		$image_link=base_url().'assets/districts/news_img'.$rs[0]->id.'_thumb.jpg';
-		$type=10;
+		$type=30;
 		$data=array('details'	=> $rs,
 					'image_link'=> $image_link,
 					'type'		=>	$type);
@@ -216,9 +216,9 @@ class States extends Controller {
 	}
 	function nizamabad()
 	{
-		$rs=$this->News_Model->get_statenews(10);
+		$rs=$this->News_Model->get_statenews(31);
 		$image_link=base_url().'assets/districts/news_img'.$rs[0]->id.'_thumb.jpg';
-		$type=10;
+		$type=31;
 		$data=array('details'	=> $rs,
 					'image_link'=> $image_link,
 					'type'		=>	$type);
@@ -226,9 +226,9 @@ class States extends Controller {
 	}
 	function adilabad()
 	{
-		$rs=$this->News_Model->get_statenews(10);
+		$rs=$this->News_Model->get_statenews(32);
 		$image_link=base_url().'assets/districts/news_img'.$rs[0]->id.'_thumb.jpg';
-		$type=10;
+		$type=32;
 		$data=array('details'	=> $rs,
 					'image_link'=> $image_link,
 					'type'		=>	$type);

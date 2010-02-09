@@ -279,11 +279,32 @@ class Home{
 	function video_block($heading)
 	{
 		$temp=$this->get_home_videos();
+	//print_r($temp);
+		$re_res=array();
+		foreach ($temp as $row)
+			{
+				//echo $row->video_id;
+				$config['id'] = $row->video_id;
+				$this->CI->youtube->initialize($config);
+				$re_res[] = array(	'image' 		=> $this->CI->youtube->getImage(),
+									'title'			=> $row->title,
+				                    'video_name'	=> $row->video_name,
+									'cat_id'		=> $row->video_cat_id,
+									'no_of_views'	=> $row->no_of_views,
+									'id'			=> $row->id,
+									'yt_id'			=> $row->video_id,
+									);
+			}
+	//print_r($re_res);
 				$data = array(
 						'data' 			=> 'somtext',
 						'sub_heading'	=> $heading,
-						'details'		=> $temp
+						//'details'		=> $temp,
+					    're_res'		=> $re_res
+						
+
 		);
+		
 		return $this->CI->load->view('home/video_block',$data,TRUE);
 	}
 	function greeting_block($heading)
@@ -378,7 +399,8 @@ class Home{
    }
    function get_home_videos()
    {
-   		$details=$this->CI->Video_Model->active();
+   		$details=$this->CI->Videos_Model->active();
+   		//print_r($details);
    		return $details;
    }
    function get_gallry()

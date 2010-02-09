@@ -33,9 +33,14 @@ class Poll extends Controller {
 	}
 	function insert()
 	{
-		$poll_id = $this->uri->segment(3);
-		$answer_id = $this->uri->segment(4);
-		$cat_id = $this->uri->segment(5);
+		if(isset($_POST)){
+		$poll_id=$_POST['qid'];
+		$answer_id=$_POST['ans'];
+		$cat_id=$_POST['cid'];
+		}
+		//$poll_id = $this->uri->segment(3);
+		//$answer_id = $this->uri->segment(4);
+		//$cat_id = $this->uri->segment(5);
 
 		if($answer_id==0){
 			$answer='a';
@@ -51,10 +56,10 @@ class Poll extends Controller {
 			if($cat_id==4)
 			{
 				echo 'thanks for your vote';	
-			redirect(base_url());
+			//redirect(base_url());
 			}else{
 					echo 'thanks for your vote';
-				redirect(base_url().'cinema');
+				//redirect(base_url().'cinema');
 			}
 		}
 	}

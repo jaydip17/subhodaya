@@ -136,7 +136,9 @@ display:inline;
 		<?php }}?>
 		</div>
 		<div style="width: 645px;padding-top: 7px;" >
+										<? if(file_exists("./assets/news/news_img".$details[0]->id."_thumb.jpg")){ ?>
 			<img src="<?=$link?>news_img<?=$details[0]->id?>.jpg" style="float: left;margin: 2px 5px 2px 1px;" id="img">
+			
 			<font id="summery" style="font-size: 14px;line-height: 24px;"><?=(isset($details[0]->description)) ? $details[0]->description : ''?></font>
 		</div>
 		<div style="float: left;width: 183px;">

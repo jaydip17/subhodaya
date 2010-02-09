@@ -171,7 +171,8 @@ class News extends Controller {
 							'heading' => $heading,
 							'main' => $more['3']->matter,
 							'home' => $more['2']->matter,
-		); 		
+		); 	
+		//print_r($segments);	
 		$bread_crumb = $this->bread_crumb->get_code($segments);
 		
 		$data=array(
@@ -223,8 +224,9 @@ class News extends Controller {
 							'main' => $this->lang->line('nagaram'),
 							'home' => $more['2']->matter,
 		); 		
+		//print_r($segments);
 		$bread_crumb = $this->bread_crumb->get_code($segments);
-		
+		//print_r($bread_crumb);
 		$data=array(
 				'news_inner'		=>	 $news_inner,
 				'newscss'			=>	 $newscss,

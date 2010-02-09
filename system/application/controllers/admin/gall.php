@@ -273,6 +273,7 @@
 				}
 				$d->close();
 				rmdir($mydir);
+				//unlink()
 	         }
 	      }
 				  redirect('admin/gall/image_view');

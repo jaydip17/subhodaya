@@ -330,13 +330,9 @@ class Videos_Model extends Model
    	}   
  function active()
     {
-    	$array=array('videos_list.active'=>1,'video_id'=>0);
-    	$this->db->where($array);
-    	$this->db->limit(4);
+    	$this->db->limit(3);
     	$this->db->order_by('videos_list.id','desc');
-    	$this->db->order_by('no_of_views','desc');
 		$query=$this->db->get('videos_list');
-		//print_r($query->result());
 		return $query->result();
     	
     }

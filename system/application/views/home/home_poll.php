@@ -1,29 +1,36 @@
 <script language="JavaScript" type="text/javascript">
 <!--
-function loadPoll()
-{
-	var siteurl = "<?=base_url()?>";
-	var found_it;
-	var error=false;
-	var e=document.getElementsByName("answer");
-	var h=document.orderform.qid.value;
-	var cid=document.orderform.catid.value;
-	for (var i=0; i < e.length; i++)
-	   {
-		if(document.orderform.answer[i].checked)
-			{
-				error=true;
-				found_it = document.orderform.answer[i].value
-				/*$.post(""+siteurl+"poll/insert/"+h+"/"+i+"/"+cid+"", function(data)){
-					alert(data);
-				});*/
-			window.location ='poll/insert/'+h+'/'+i+'/'+cid;
+var siteurl = "<?=base_url()?>";
+var h;
+var cid;
+var errormsg_poll = "Please Select Your Option Before Voteing";
+$(document).ready(function(){
+	h=$("#qid").val();
+	cid=$("#catid").val();
+	$(".pollanswer").click(function(){
+		var poll_ans = $(this).val();
+		 $("#pollanswer").val(poll_ans);
+		});
+	$("#insertpoll").click(function(){
+		
+		var pollans = $("#pollanswer").val();
+		if(pollans!='')
+		{
+			//alert(h,cid,pollans);
+			$.post(""+siteurl+"poll/insert",{ qid: h, cid: cid, ans:pollans },function(data){
+				//alert(data);
+				$(".result").replaceWith(data);
+				$(".result").slideDown("slow");
+				});
+		}
+		else
+		{
+			alert(errormsg_poll);
 			}
-	   }
-	   if(error==false){
-		   alert('Please Select Your Option Before Voteing');
-	   }
-}
+	});
+	
+	});
+
 -->
 </script>
 <div id="news_poll">
@@ -41,25 +48,39 @@ function loadPoll()
 								</div>
 								
 								<div id="options" align="left" style="font-size:12px; margin-left:10px">
-									<form method="post" name="orderform">
 											<?php if(isset($details[0]->id)){?>
-											<input type="hidden" name="qid" value="<?=$details[0]->id?>"/>
-											<input type="hidden" name="catid" value="<?=$details[0]->cat_id?>"/>
-											<?php }?>
-										<?=form_radio('answer','a',FALSE) ?><?=(isset($yes)) ? $yes : ''?>
+											<input type="hidden" id="qid" name="qid" value="<?=$details[0]->id?>"/>
+											<input type="hidden" id="catid" name="catid" value="<?=$details[0]->cat_id?>"/>
+											<input type="hidden" id="pollanswer" name="pollanswer" value=""/>
+											<?php }
+											$data1 = array(
+												'name'	=> 'answer',
+												'value'	=>	'a',
+												'checked'     => FALSE,
+												'class'	=>	'pollanswer',
+											);
+											$data2 = array(
+												'name'	=> 'answer',
+												'value'	=>	'b',
+												'checked'     => FALSE,
+												'class'	=>	'pollanswer',
+											);
+											$data3 = array(
+												'name'	=> 'answer',
+												'value'	=>	'c',
+												'checked'     => FALSE,
+												'class'	=>	'pollanswer',
+											);
+											?>
+										<?=form_radio($data1) ?><?=(isset($yes)) ? $yes : ''?>
 											<br />
-										<?=form_radio('answer','b',FALSE) ?><?=(isset($no)) ? $no : ''?>
+										<?=form_radio($data2) ?><?=(isset($no)) ? $no : ''?>
 										<br />
-										<?=form_radio('answer','c',FALSE) ?><?=(isset($yes_no)) ? $yes_no : ''?>
+										<?=form_radio($data3) ?><?=(isset($yes_no)) ? $yes_no : ''?>
 								</div>
-								<?php  if(isset($_GET["psucc"])){
-									$succ=$_GET["psucc"];
-								}
-								if(!empty($succ)){?>
-									<font style="color: black;">successfully vote.</font>
-								<?}
-								?>
+								<div class="result" style="font-size: 10px;color: black;"></div>
 								<div style="width:100%; height:40px; ">
+								
 									<div style="float:left; height:46px;margin-left:5px;margin-top:0px; width:100px;font-size:11px;color:#FF0000" align="left">
 										<div style="margin-top:5px">
 										<div id=""><a HREF="javascript:void(0)" onclick="window.open('<?=base_url();?>poll/yes_result/<? if(isset($details['0'])){echo $details['0']->id;}?>', 'welcome','width=300,height=200')" style="color: red;">View Result</a></div>
@@ -67,10 +88,10 @@ function loadPoll()
 									--></div>
 									</div>
 									<div style="float:left;height:46px; width:47px">
-											<a href="" style="outline-style: none;"><img style="margin:0px 0px 0px 0px;" src="<?=base_url()?>assets/image/vote.png" border="0" onclick="loadPoll()"></a>
+											<img style="margin:0px 0px 0px 0px;cursor: pointer;" src="<?=base_url()?>assets/image/vote.png" border="0" id="insertpoll">
 									</div>
 								</div>
-								<?=form_close()?>
+								
 								<div style="height: 15px;text-align: right;font-size: 11px;padding-right: 5px;"><a href="<?=base_url()?>home_poll/details">More</a></div>
 								</div>
 							

@@ -1,27 +1,35 @@
+
 <script language="JavaScript" type="text/javascript">
 <!--
-
-function loadPoll()
-{
-	var found_it;
-	var error=false;
-	var e=document.getElementsByName("answer");
-	var h=document.orderform.qid.value;
-	var cid=document.orderform.catid.value;
-	for (var i=0; i < e.length; i++)
-	   {
-
-		if(document.orderform.answer[i].checked)
-			{
-			error=true;
-			found_it = document.orderform.answer[i].value;
-			window.location='poll/insert/'+h+'/'+i+'/'+cid;
+var siteurl = "<?=base_url()?>";
+var h;
+var cid;
+var errormsg_poll = "Please Select Your Option Before Voteing";
+$(document).ready(function(){
+	h=$("#qid").val();
+	cid=$("#catid").val();
+	$(".pollanswer").click(function(){
+		var poll_ans = $(this).val();
+		 $("#pollanswer").val(poll_ans);
+		});
+	$("#insertpoll").click(function(){
+		var pollans = $("#pollanswer").val();
+		if(pollans!='')
+		{
+			$.post(""+siteurl+"poll/insert",{ qid: h, cid: cid, ans:pollans },function(data){
+				//alert(data);
+				$(".result").replaceWith(data);
+				$(".result").slideDown("slow");
+				});
+		}
+		else
+		{
+			alert(errormsg_poll);
 			}
-	   }
-	   if(error==false){
-		  alert('Please Select Your Option Before Voteing');
-	   }
-}
+	});
+	
+	});
+
 -->
 </script>
 
@@ -153,20 +161,35 @@ else
 		<div style="height: 218px;width: 212px;">
 			<span style="font-size: 16px;"><?=$this->lang->line('homepoll')?></span>
 			<div style="font-size: 14px;color: #0066C9;line-height: 25px;"><?=$cinemapoll[0]->question?></div>
-			<form name="orderform">
-			<input type="hidden" name="qid" value="<?=$cinemapoll[0]->id?>"/>
-			<input type="hidden" name="catid" value="<?=$cinemapoll[0]->cat_id?>"/>
-			<div style="padding:1px 0px 2px 35px;font-size: 12px;"><?=form_radio('answer','a',FALSE) ?><?=$this->lang->line('yes')?></div>
-			<div style="padding:1px 0px 2px 35px;font-size: 12px;"><?=form_radio('answer','b',FALSE) ?><?=$this->lang->line('no')?></div>
-			<div style="padding:1px 0px 2px 35px;font-size: 12px;"><?=form_radio('answer','c',FALSE) ?><?=$this->lang->line('yes_no')?></div>
-				<?php  if(isset($_GET["psucc"])){
-									$succ=$_GET["psucc"];
-								}
-								if(!empty($succ)){?>
-									<font style="color: black;">successfully vote.</font>
-								<?}
+
+			<input type="hidden" id="qid" name="qid" value="<?=$cinemapoll[0]->id?>"/>
+			<input type="hidden" id="catid" name="catid" value="<?=$cinemapoll[0]->cat_id?>"/>
+			<input type="hidden" id="pollanswer" name="pollanswer" value=""/>
+							<?php 
+											$data1 = array(
+												'name'	=> 'answer',
+												'value'	=>	'a',
+												'checked'     => FALSE,
+												'class'	=>	'pollanswer',
+											);
+											$data2 = array(
+												'name'	=> 'answer',
+												'value'	=>	'b',
+												'checked'     => FALSE,
+												'class'	=>	'pollanswer',
+											);
+											$data3 = array(
+												'name'	=> 'answer',
+												'value'	=>	'c',
+												'checked'     => FALSE,
+												'class'	=>	'pollanswer',
+											);									
 								?>
-			<div style="padding-left: 10px;"><img src="<?=base_url()?>assets/image/vote1.jpg" onclick="loadPoll()"/></div>
+			<div style="padding:1px 0px 2px 35px;font-size: 12px;"><?=form_radio($data1) ?><?=$this->lang->line('yes')?></div>
+			<div style="padding:1px 0px 2px 35px;font-size: 12px;"><?=form_radio($data2) ?><?=$this->lang->line('no')?></div>
+			<div style="padding:1px 0px 2px 35px;font-size: 12px;"><?=form_radio($data3) ?><?=$this->lang->line('yes_no')?></div>
+					<div class="result" style="font-size: 10px;color: black;"></div>
+			<div style="padding-left: 10px;cursor: pointer;"><img src="<?=base_url()?>assets/image/vote1.jpg" id="insertpoll"/></div>
 			<div id=""><a HREF="javascript:void(0)" onclick="window.open('<?=base_url();?>poll/yes_result/<? if(isset($cinemapoll['0'])){echo $cinemapoll['0']->id;}?>', 'welcome','width=300,height=200')" style="color: red;">View Result</a></div>
 			<div style="text-align: right;"><a href="<?=base_url()?>home_poll/details"><?=$this->lang->line('other_poll')?></a></div>
 		</div>

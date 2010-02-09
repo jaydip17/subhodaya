@@ -71,24 +71,8 @@ class News extends Controller {
 			);
 		if(!empty($data))
 		{
-		$result=$this->db->insert('news',$data);
-		$id=$this->db->insert_id();
-		}
-		}else{
-			$news='districts';
-			$data1=array(
-					'dist_id'  => $distr,
-					'heading' => $heading,
-					'summary' => $summery,
-				'description' => $description,
-				'eng_heading' => $eng_heading
-			);
-			if(!empty($data1))
-			{
-			$result=$this->db->insert('districts_news',$data1);
+			$result=$this->db->insert('news',$data);
 			$id=$this->db->insert_id();
-			}
-		}
 		if($result==1){
 		$config['upload_path'] ='assets/'.$news.'/';
 		$config['allowed_types'] = 'gif|jpg|png';
@@ -176,6 +160,30 @@ class News extends Controller {
 	    	$this->image_lib->clear();
 			redirect(base_url().'admin/news',$message);
 		}
+		
+		
+		}
+		}else{
+			$news='districts';
+			$data1=array(
+					'dist_id'  => $distr,
+					'heading' => $heading,
+					'summary' => $summery,
+				'description' => $description,
+				'eng_heading' => $eng_heading
+			);
+			if(!empty($data1))
+			{
+			$result=$this->db->insert('districts_news',$data1);
+			$id=$this->db->insert_id();
+			}
+			if($result==1){
+				$message='District news add successfully';
+				redirect(base_url().'admin/news',$message);
+			}
+			
+		}
+		
 	}
 	function getnews()
 	{

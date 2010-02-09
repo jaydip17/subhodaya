@@ -121,7 +121,7 @@ class Bread_crumb{
 							$this->CI->load->model("admin/Gallery_Model");
 							$second = $segments['title_cat'];
 							$second_id = $segments['title_id'];
-							//$second = $this->CI->Gallery_Model->get_root_cat_by_id($root_cat_id);
+						  // $second = $this->CI->Gallery_Model->get_root_cat_by_id($root_cat_id);
 							$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$second_id,$second);
 						 $seg2 = 'inner';
 								$segments['heading'] = $this->CI->Gallery_Model->get_root_cat_by_id($root_cat_id);

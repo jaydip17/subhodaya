@@ -10,7 +10,7 @@
 	</div>
 					</div>
 					 <div   style="float:right; height:100%;"><img src="<?=base_url()?>assets/home_images/ads/mahila_ad1.jpg" width="243" height="194" />
-					   <div   ><img src="<?=base_url()?>assets/home_images/ads/mahila_ad.jpg" width="243" height="487" /></div>
+					   <div><img src="<?=base_url()?>assets/home_images/ads/mahila_ad.jpg" width="243" height="487" /></div>
 					   <div style="border:1px #000 solid;"><img src="<?=base_url()?>assets/home_images/ads/mahila_ad1.jpg" width="243" height="268" /></div>
 				      </div>
 				      <div style="width:560px; height:900px; float:left; margin-left:5px;border:1px solid #cee2ec;">
@@ -30,16 +30,16 @@
 							        </div>
 							  </div>
 							  </div>
-							   <div style="float:right;width:560px;height:20px;text-align:right;margin-top:10px;">Prev | Next</div>
+							   <div style="float:right;width:560px;height:20px;text-align:right;margin-top:10px;"><!--  <?=$paginate?>--></div>
 							   <div id="video_main">
-							   <?php $count=1; foreach ($latestvideos as $video):?>
+							   <?php $count=1; foreach ($re_res as $video):?>
 										 <div id="vi_d" style="float: left;padding: 0px 3px 0px 5px;margin-top:10px;">
-										<span id="vi_div"><a href="<?=base_url()?>videos/playvideo/<?=$video->id?>/<?=$video->video_cat_id?>">
-										 	Views:<?=$video->no_of_views?><br />
+										<span id="vi_div"><a href="<?=base_url()?>videos/playvideo/<?=$video['cat_id']?>/<?=$video['id']?>">
+										 	Views:<?=$video['no_of_views']?><br />
 										 	<div id="video_img"><img src="<?=base_url();?>assets/image/buttion.png" border="0"/></div>
-										 	<div id="video_time"><?=$video->time?></div>
-										 	<img src="<?=base_url();?>assets/videos/image_preview/image<?=$video->id?>_thumb.jpg" id="img2" height="88" width="126"/><br />
-										 	<?=$video->name?></a></span>
+										 	<div id="video_time"><?=$video['duration']?></div>
+										 	<?=$video['image']?><br/>
+										 	<?=$video['video_name']?></a></span>
 										 </div> 
 										 <?php if($count==4){ ?>
 										 	 </div><div style="height:150px;" id="video_main">

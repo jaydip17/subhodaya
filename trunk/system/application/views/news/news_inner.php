@@ -136,9 +136,9 @@ display:inline;
 		<?php }}?>
 		</div>
 		<div style="width: 645px;padding-top: 7px;" >
-										<? if(file_exists("./assets/news/news_img".$details[0]->id."_thumb.jpg")){ ?>
+			<? if(file_exists("./assets/".$type."/news_img".$details[0]->id."_thumb.jpg")){ ?>
 			<img src="<?=$link?>news_img<?=$details[0]->id?>.jpg" style="float: left;margin: 2px 5px 2px 1px;" id="img">
-			
+			<?php }?>
 			<font id="summery" style="font-size: 14px;line-height: 24px;"><?=(isset($details[0]->description)) ? $details[0]->description : ''?></font>
 		</div>
 		<div style="float: left;width: 183px;">
@@ -161,7 +161,11 @@ display:inline;
 			 if($count==1){$count++;continue;}
 			?>
 				<div style="float: left;width:151px;padding-top: 4px;text-align: center;margin: 1px 0px 2px 1px;">
-					<a href="<?=$hed_link?><?=$row->id?>/<?=$cat_id?>/<?=$row->eng_heading?>"><img src="<?=$link?>news_img<?=$row->id?>_thumb.jpg" id="img" style="float: none"/></a><br>
+					<a href="<?=$hed_link?><?=$row->id?>/<?=$cat_id?>/<?=$row->eng_heading?>">
+					<? if(file_exists("./assets/".$type."/news_img".$row->id."_thumb.jpg")){ ?>
+					<img src="<?=$link?>news_img<?=$row->id?>_thumb.jpg" id="img" style="float: none"/>
+					<?php }?>
+					</a><br>
 					<a style="font-size: 12px" href="<?=$hed_link?><?=$row->id?>/<?=$cat_id?>/<?=$row->eng_heading?>"><?=$row->heading?></a>
 				</div>	
 			<? if($count==3){break;}else{$count++;}endforeach; if($count==0){echo 'No data found';}?>

@@ -1,18 +1,22 @@
-<?php
+              <?php
+
 class Videos extends Controller 
 {
 	var $layout='admin';
 	function Videos()
 	{
 		parent::Controller();
-		$this->load->model('admin/Video_Model');
+		//$this->load->model('Videos_Model');
+		$this->load->model('Videos_Model');
 	}
-	function index()
+	
+	
+function index()
 	{
 		
 	    $catid =$this->uri->segment(5);
 		$id=$this->uri->segment(4);
-		$this->load->library('flash_video');
+		$this->load->library('youtube');
 		$config['id'] = 'n0';
 		$config['autostart'] = 'true';
 		$config['height'] = '360';
@@ -20,28 +24,30 @@ class Videos extends Controller
 		$config['file'] = 'http://localhost/subhodaya/assets/videos/video'.$id.'.flv';//file full path
 		$config['skin'] = 'swift'; 
 		$config['previewimage']	='http://localhost/subhodaya/assets/videos/image_preview/image'.$id.'.jpg';
-		$this->flash_video->initialize($config);
-		$jslinks = $this->flash_video->getcode();
-		$data = array('videoplayer' => $jslinks, 'catid'=>$catid ); 
-		$this->load->view('admin/addvideocategeory.php',$data);       
+		$this->youtube->initialize($config);
+		//$jslinks = $this->youtube->getYoutubeData();
+		//$data = array('videoplayer' => $jslinks, 'catid'=>$catid ); 
+		$this->load->view('admin/addvideocategeory.php');       
 			 
 		
 	}
-	function addcategeory()
+	
+	
+function addcategeory()
 	 {
 		if (isset($_POST['submit']))
 		{
-		$this->Video_Model->addcategeory();       
+		$this->Videos_Model->addcategeory();       
 		}
 	    $this->load->view('admin/addvideocategeory');
 	}
-
-	 
-	function viewaddvideo()
+	
+	
+function viewaddvideo()
 	 {
 		$message = $this->session->flashdata('message');
 		print_r($message);
-		$options = $this->Video_Model->getvideocategeories();
+		$options = $this->Videos_Model->getvideocategeories();
 		$videocategeories= array();
 		foreach($options as $item)
 		{
@@ -52,28 +58,46 @@ class Videos extends Controller
        	$this->load->view('admin/video_view',$data);
 		
 	}
-	function addvideo()
+      
+/*function addvideo()
+
 	{
-		$name=$this->input->post('name');
-		$time=$this->input->post('time');
-		$no_of_views=$this->input->post('no_of_views');
+		$title=$this->input->post('title');
+		$video_id=$this->input->post('video_id');
+		$hero_name=$this->input->post('hero_name');
+		$description=$this->input->post('description');
+		$duration=$this->input->post('duration');
+		$date_created=$this->input->post('date_created');
+		$created_date=$this->input->post('created_date');
+		$user_id=$this->input->post('user_id');
+		$banned=$this->input->post('banned');
 		$video_cat_id=$this->input->post('video_cat_id');
-		$rating=$this->input->post('rating');
-		$date=$this->input->post('insert_date');
+		$no_of_views=$this->input->post('no_of_views');
+		//$video_cat_id=$this->input->post('video_cat_id');
+		//$youtube_url=$this->input->Post('youtube_url');
+		//$rating=$this->input->post('rating');
+		//$date=$this->input->post('insert_date');
 		
-		$data=array('name'			=>	$name,
-					'time'			=>	$time,
+		$data=array('title'			=>	$title,
 					'no_of_views'	=>	$no_of_views,
 					'video_cat_id'  =>	$video_cat_id,
-					'rating'		=>  $rating,
-					'insert_date'	=>	$date);
+		             'video_id'     =>  $video_id,
+		              'hero_name'   =>  $hero_name,
+		              'description' =>  $description,
+		               'duration'   =>  $duration,
+		              'date_created'=>  $date_created,
+		              'created_date'=>  $created_date,
+		              'user_id'     =>  $user_id,
+		               'banned'     =>  $banned,
+		               'no_of_views'=> $no_of_views,
+		             );
 		if(!empty($data))
 		{
-			$result=$this->db->insert('videos',$data);
+			$result=$this->db->insert('fa_videos_list',$data);
 			$i=$this->db->insert_id();
 		}
 		
-		if($result==1)
+		/*if($result==1)
 		{
 		$dir =  './assets/videos';   
 	    $config['upload_path'] =$dir;
@@ -160,81 +184,134 @@ class Videos extends Controller
 	 }
 	}
 		
-	redirect(base_url()."admin/videos/viewaddvideo",$message);
+	//redirect(base_url()."admin/videos/viewaddvideo",$message);
 		
 		
-	}
+	}*/
 	
-  function categeories()
+ function add_url()
+    {
+    	$url=$this->input->post('youtube_url');
+    	if($url!='')
+    	{
+			$id = explode('?v=',$url);
+			
+			if(!empty($id) && isset($id[1]))
+			$id = explode('&',$id[1]);
+			else
+			{
+				
+    			header('Location: '.site_url().'/videos');
+			}
+			$y_id = $id[0];
+			$this->load->library('Youtube', 'youtube');
+    		$config['id'] = $y_id;
+    		$this->youtube->initialize($config);
+    		$data_youtube = $this->youtube->getYoutubeData();
+    		$this->load->helper('date');
+    	    $video_cat_id=$this->input->post('video_cat_id');
+    		 $video_name=$this->input->post('video_name');
+    		 $no_of_views=$this->input->post('no_of_views');
+    		$data = array(  
+    		                 //'youtube_url'  =>$url,
+    		                 'video_cat_id'  => $video_cat_id,
+    		                  'no_of_views'=>  $no_of_views,
+    	                      'video_name'=>$video_name,
+    						'video_id'		=> $y_id,
+    						'title'			=> $data_youtube['title'],
+    						'description'	=> $data_youtube['description'],
+    						'duration'		=> $data_youtube['duration'],
+    						'created_date'	=> now(),
+    						//'user_id'		=> getUserId(),
+    						);
+    						//print_r($data);
+    					 
+    		$this->Videos_Model->add($data);
+    	//	print_r($data);
+    		//exit;
+    		//$msg = 'Video Added Successfully';
+			//flashMsg($msg);
+    		//redirect('admin/videos/add_url');
+
+    	}
+    	else
+    	{
+    		
+    		header('Location: '.site_url().'/admin/videos/add_url');
+    	}
+    }
+	
+    
+function categeories()
 	  {
-		$result = $this->Video_Model->getvideocategeories();
+		$result = $this->Videos_Model->getvideocategeories();
 		$data['query']=$result;
-	$this->load->view('admin/viewcategeories',$data);
+	   $this->load->view('admin/viewcategeories',$data);
 	 // print_r($data);
 	    
 	  }
-
 	
-   function getvideos()
+ function getvideos()
 	 {
 		$id = $this->uri->segment(4);
-		$data['query'] = $this->Video_Model->getvideos($id,'videos');
+		$data['query'] = $this->Videos_Model->getvideos($id,'videos_list');
 		$data['catid']=$id;
 	    $this->load->view('admin/viewvideos',$data);
+       // print_r($data);
 	 }
- 
-   function deletevideo()
-	  {
-		
-		$id=$this->uri->segment(4);
-		$catid= $this->uri->segment(5);
-		$this->Video_Model->deletevideo($id);
-		redirect(base_url().'admin/videos/getvideos/'.$catid);
-	} 
-	 
-	 
-    function editvideo()
+	  
+function editvideo()
 	    {
 		if(isset($_POST['edit']))
 		{
 			$id=$_POST['id'];
-			$this->Video_Model->editvideo($id); 
+			$this->Videos_Model->editvideo($id); 
 			$catid= $_POST['video_cat_id'];
 		    redirect(base_url().'admin/videos/getvideos/'.$catid);
 		}
 		else {
 			
 			$id=$this->uri->segment(4);
-			$data['videos']=$this->Video_Model->getvideodetails($id);
+			$data['videos_list']=$this->Videos_Model->getvideodetails($id);
 			
 			$this->load->view('admin/editvideos',$data);
 			
 		}
 			
 	}
-	
-     function deletecategeory()
-	    {
+	 
+ function deletevideo()
+	  {
+		
 		$id=$this->uri->segment(4);
-		$this->Video_Model->deletecategeory($id);
-		redirect(base_url().'admin/videos/categeories');
-	}
-	
-     function editcategeory()
+		$catid= $this->uri->segment(5);
+		$this->Videos_Model->deletevideo($id);
+		redirect(base_url().'admin/videos/getvideos/'.$catid);
+	}  
+	 
+function editcategeory()
 	 {
 		if (isset($_POST['edit']))
 		{
 			
-			$this->Video_Model->editcategeory();
+			$this->Videos_Model->editcategeory();
 			$this->categeories();
 		}
 		else{
 			
 		
 		$id=$this->uri->segment(4);
-		$data['details'] = $this->Video_Model->getcategeorydetails($id);
+		$data['details'] = $this->Videos_Model->getcategeorydetails($id);
 		$this->load->view('admin/editvideocategeory',$data);
 		}
+	}
+	
+	
+function deletecategeory()
+	    {
+		$id=$this->uri->segment(4);
+		$this->Videos_Model->deletecategeory($id);
+		redirect(base_url().'admin/videos/categeories');
 	}
 	
 }

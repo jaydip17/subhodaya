@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 21, 2008 at 09:18 AM
+-- Generation Time: Feb 09, 2010 at 08:17 AM
 -- Server version: 5.1.32
 -- PHP Version: 5.2.9-1
 
@@ -31,13 +31,15 @@ CREATE TABLE IF NOT EXISTS `videos_categeory` (
   `insert_date` date NOT NULL,
   `active` int(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
 
 --
 -- Dumping data for table `videos_categeory`
 --
 
 INSERT INTO `videos_categeory` (`id`, `name`, `insert_date`, `active`) VALUES
-(1, 'కామెడి వీడియోస్', '0000-00-00', 0),
-(2, 'మూవీస్ మరియు ఫిలిం మేకేర్స్  వీడియోస్', '0000-00-00', 0),
-(3, 'మ్యూజిక్  వీడియోస్  ', '0000-00-00', 0);
+(14, 'సినిమా  ట్రైలర్స్ ', '0000-00-00', 0),
+(15, 'కామెడి వీడియోస్', '0000-00-00', 0),
+(16, 'బ్లాగ్ వీడియోస్', '0000-00-00', 0),
+(20, 'మూవీ  సీన్స్', '0000-00-00', 0),
+(21, 'మూవీ ఇంటర్వ్యూలు', '0000-00-00', 0);

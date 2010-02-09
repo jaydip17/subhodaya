@@ -7,8 +7,27 @@ if(isset($message) && !is_array($message) ) echo($message);
 			}
 		}?>
 		</center>
-<?=form_open_multipart('admin/videos/addvideo')?>
-<table>
+		<div id="video_url_form">
+  
+  <div id="right">
+
+  	<span> Paste <a href="http://www.youtube.com" target="_blank">Youtube</a> url below</span><br/> 
+    <div>
+   
+    <?php if(!isset($disable_form)) 
+    		{	?> 
+    <?=form_open('admin/videos/add_url','name=""');
+    		}
+    	
+    $y_url = array(
+    				'name'	=> 'youtube_url',
+    				'id'	=> 'y_url',
+    				'value' => '',
+                    
+    				);
+    ?>
+	
+    <table>
 	<tr>
 		<th colspan='2' style="font-size: 16px">Videos</th>
 	</tr>
@@ -23,50 +42,55 @@ if(isset($message) && !is_array($message) ) echo($message);
 	
 	<tr>
 		<td>Video_Name</td>
-		<td><?=form_input('name');?></td>
+		<td><?=form_input('video_name');?></td>
 	</tr> 
-	<tr>
-		<td>Video_Duration</td>
-		<td><?=form_input('time');?></td>
-	</tr>
-	 
 	 <tr>
 		<td>Number_of_Views</td>
 		<td><?=form_input('no_of_views');?></td>
 	</tr>
-	 
-	 <tr>
-		<td>Rating</td>
-		<td><?=form_input('rating');?></td>
-	</tr>
-	 
-	 <tr>
-		<td>Insert_date</td>
-		<td><?=form_input('insert_date');?></td>
-	</tr>
-	 
-	<tr>
-		<td>Video</td>
-		<td><?=form_upload('video');?></td>
-	</tr>
-	<tr>
-		<td>Preview_Image</td>
-		<td><?=form_upload('image');?></td>
-		<td>preferably 600 x 400</td>
-	</tr>
 	
+	   	
 	<tr>
 		<td>Active</td>
 		<td align="left"><?=form_checkbox('active','1') ?></td>
 	</tr>
 	
-	<tr>
-		<td colspan="2" align="center">
-		<? echo form_submit('submit','submit');?>
-		</td>
-	</tr>
 	
 	
 	
 </table>
+     
+	 <p><label for="video_cat">Paste You-Tube URL:</label>
+	<?			
+    echo form_input($y_url);
+    	$submit['value'] = 'Add';
+    	$submit['id'] = 'button';
+    	if(isset($disable_form)) 
+    		{
+    $data = array(
+              'name'        => 'event_id',
+              'id'          => 'event_id',
+              'value'       => $this->uri->segment(3),
+    		  'type'		=> 'hidden',
+              
+            );?>
+			</p>
+			
+			<?
+
+echo form_input($data);
+    	$submit['onclick'] = 'add_event_video()';
+    	$submit['name'] = 'add_video';
+    		}
+    echo form_submit($submit);
+    if(!isset($disable_form)) 
+    		{
+    echo form_close() ;
+    		}?>
+    		<span id="loading_img2" class="ajaxloading_icon1" style="float:left;margin: 2px 0px 0px 5px;"></span>
+    </div>
+  </div>
+</div>
+
+
 <?=form_close() ?>

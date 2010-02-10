@@ -30,7 +30,7 @@
 							        </div>
 							  </div>
 							  </div>
-							   <div style="float:right;width:560px;height:20px;text-align:right;margin-top:10px;"><!--  <?=$paginate?>--></div>
+							   <div style="float:right;width:560px;height:20px;text-align:right;margin-top:10px;"> <?=$paginate?> </div>
 							   <div id="video_main">
 							   <?php $count=1; foreach ($re_res as $video):?>
 										 <div id="vi_d" style="float: left;padding: 0px 3px 0px 5px;margin-top:10px;">

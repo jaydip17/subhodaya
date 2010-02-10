@@ -11,7 +11,7 @@ if(isset($message) && !is_array($message) ) echo($message);
   
   <div id="right">
 
-  	<span> Paste <a href="http://www.youtube.com" target="_blank">Youtube</a> url below</span><br/> 
+  	 
     <div>
    
     <?php if(!isset($disable_form)) 
@@ -50,10 +50,10 @@ if(isset($message) && !is_array($message) ) echo($message);
 	</tr>
 	
 	   	
-	<tr>
+	<!--  <tr>
 		<td>Active</td>
 		<td align="left"><?=form_checkbox('active','1') ?></td>
-	</tr>
+	</tr>-->
 	
 	
 	

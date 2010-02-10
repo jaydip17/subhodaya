@@ -27,8 +27,7 @@ function index()
 		//$jslinks = $this->youtube->getYoutubeData();
 		//$data = array('videoplayer' => $jslinks, 'catid'=>$catid ); 
 		$this->load->view('admin/addvideocategeory.php');       
-			 
-		
+			 	
 	}
 	
 	
@@ -40,7 +39,6 @@ function addcategeory()
 		}
 	    $this->load->view('admin/addvideocategeory');
 	}
-	
 	
 function viewaddvideo()
 	 {

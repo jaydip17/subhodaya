@@ -55,16 +55,8 @@ ddsmoothmenu.init({
 				<li><a href="<?=base_url();?>admin/cinema/getcinematype">Edit Cinema</a></li>
 			</ul>
 			</li>
-			<!--  <li><a href="#">Video</a>
-			<ul>
-				<li><a href="<?=base_url();?>admin/videos">Add
-				Categeory</a></li>
-				<li><a href="<?=base_url();?>admin/videos/viewaddvideo">Add Video</a></li>
-				<li><a href="<?=base_url();?>admin/videos/categeories">View/Edit Video</a></li>
-			</ul>
-			</li>-->
 			
-			  <li><a href="#">youtubeVideo</a>
+			  <li><a href="#">Videos</a>
 			<ul>
 			    <li><a href="<?=base_url();?>admin/videos">AddCategeory</a>
 				</li>

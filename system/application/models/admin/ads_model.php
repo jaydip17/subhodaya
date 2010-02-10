@@ -15,5 +15,6 @@ class Ads_Model extends Model {
   	$result=rename($oldname,$rename_to);
   	return $result;
   	}
+  	
 }
 ?>

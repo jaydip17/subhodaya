@@ -9,8 +9,8 @@ class Greetings extends Controller {
 	{
 		$type=$this->Greeting_Model->get_type();
 		$newscss=array();
-		$greetings1=$this->Greeting_Model->get_main_greetings($type[8]->id,8);
-		$greetings2=$this->Greeting_Model->get_main_greetings($type[15]->id,8);
+		$greetings1=$this->Greeting_Model->get_main_greetings($type[1]->id,8);
+		$greetings2=$this->Greeting_Model->get_main_greetings($type[17]->id,8);
 		$greetings3=$this->Greeting_Model->get_main_greetings($type[16]->id,8);
 		$more=$this->News_Model->more_news();
 		$title=$this->lang->line('gree_title').$more['7']->matter;
@@ -65,7 +65,7 @@ class Greetings extends Controller {
   	$cat=$this->Greeting_Model->get_type();
   	$more=$this->News_Model->more_news();
   	$type=$this->uri->segment(3,0);
-  	$title=$this->lang->line('gree_cat1').$more['4']->matter;
+  	$title=$this->lang->line('gree_cat'.$type);
   	$greet_cat=$this->Greeting_Model->get_gre_type($type);
   	//$greetings1=$this->Greeting_Model->get_main_greetings($type,8);
   	$greetings=$this->Greeting_Model->get_greetings($type);
@@ -81,7 +81,7 @@ class Greetings extends Controller {
     	$this->load->library('paginationnew');
     	
     	$this->paginationnew->start = ($this->uri->segment(4)) ? $this->uri->segment(4) : '0';
-    	$this->paginationnew->limit =9;
+    	$this->paginationnew->limit =20;
         $this->paginationnew->filePath =$a;
       
         $this->paginationnew->select_what = '*';
@@ -98,11 +98,12 @@ class Greetings extends Controller {
 		$segments = array(	'seg1' => $this->uri->segment(1,0),
 						   	'seg2' => $this->uri->segment(2,0),
 							'seg3' => $this->uri->segment(3,0),
-							'seg4' => $this->uri->segment(4,0),
+							'seg4' => $this->uri->segment(3,0),
 							'seg5' => $this->uri->segment(5,0),
 							'main' => $more['7']->matter,
 							'home' => $more['2']->matter,
 		); 
+		//print_r($segments);
 		$bread_crumb = $this->bread_crumb->get_code($segments);
 		//print_r($details);
   	    $data=array('greetings'  	=>  $details,

@@ -35,7 +35,9 @@
 											  	<div style="float: right;width: 40%;text-align: right;padding-right: 3px;color: gray;"></div>
 											</div>
 										  	<div style="padding: 5px;line-height: 22px;">
+										  	<?php if(!empty($rasi_details[0]->day)){?>
 										  		<?=$rasi_details[0]->day?>
+										  		<?php }else {echo 'day details not avaliable';}?>
 										  	</div>
 									  </div>
 									   <div id="main_rasi_div">

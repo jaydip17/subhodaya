@@ -14,6 +14,7 @@ class Cinema extends Controller {
 		$query=$this->Flash_model->get_flash_images();
 		$img=$query->result();
 		$newscss=array();
+		$cinemarss=array();
 		$cine_news=$this->cinema_lib->cinema_block($this->lang->line('cini_news'));
 		$cin_pukarlu=$this->cinema_lib->cinema_block($this->lang->line('cini_pukarlu'));
 		$cin_riviews=$this->cinema_lib->cinema_block($this->lang->line('reviews'));
@@ -94,7 +95,8 @@ class Cinema extends Controller {
 						'cinemapoll'	=>	$cinemapoll,
 						'title'			=>	$title,
 						'description'	=>	$description,
-						'breaking'		=>	$breaking
+						'breaking'		=>	$breaking,
+						'cinemarss'		=>	$cinemarss
 						//'bread_crumb'  => $bread_crumb 
 		);
 		$this->load->view('cinema_view',$data);
@@ -108,11 +110,12 @@ class Cinema extends Controller {
 		$id=$this->uri->segment(3,0);
 	
 		$result=$this->Cinema_Model->get_all($id);
-	/*	if(empty($result)){
+		if(empty($result)){
 			redirect(base_url().'cinema');
-		}*/
+		}
 		$cinema_content=$this->news_lib->cinema_content($type);
 		$title=$this->lang->line('cine_cat'.$type);
+		$cinemarss=array();
 		/*//active news for side heaidngs
 		$active_news=$this->Cinema_Model->get_activenews();
 		//active news for tabs
@@ -146,7 +149,8 @@ class Cinema extends Controller {
 					'newscss'		=>	$newscss,
 					'bread_crumb'	=>	$bread_crumb,
 					'title'			=>	$title,
-					'breaking'		=>	$breaking
+					'breaking'		=>	$breaking,
+					'cinemarss'		=>	$cinemarss
 		);
 		$this->load->view('news_content',$data);
 	}
@@ -159,6 +163,7 @@ class Cinema extends Controller {
 		$cinema_inner=$this->news_lib->cinema_inner($id,$type);
 		$newscss=array();
 		$result=$this->Cinema_Model->inner($id);
+		$cinemarss=array();
 	/*	
 		$news_type4=$this->News_Model->get_newstype1(4);
 		$result1=$this->Cinema_Model->get_all($type);
@@ -200,8 +205,9 @@ class Cinema extends Controller {
 					'bread_crumb'	 => $bread_crumb,
 					'news_inner'	 =>	$cinema_inner,
 					'newscss'		 =>	$newscss,
-					'title'			=>	$title,	
-					'breaking'		=>	$breaking
+					'title'			 =>	$title,	
+					'breaking'		 =>	$breaking,
+					'cinemarss'		 =>	$cinemarss
 					);
 		$this->load->view('news_inner',$data);
 	}

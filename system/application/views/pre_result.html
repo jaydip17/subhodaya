@@ -1,13 +1,21 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html;charset= UTF-8">
+<title><?=$newspoll['0']->question?></title>
 </head>
-<body>
-<div><?=$newspoll['0']->question ?></div>
-<table width="100%">
+<body style="text-align: center;background-color: #F6F6EE;">
+<div style="width: 100%;background-color: #FFF;height: 200px;border: 1px solid gray;"><img src="<?=base_url()?>assets/home_images/ads/mahila_ad1.jpg"</div>
+<div style="text-align: center;font-size: 14px;color: red;margin-top: 10px;"><span style="border: 1px solid gray;background-color: #EEE8AA;">&nbsp;&nbsp;&nbsp;<?=$this->lang->line('result')?>&nbsp;&nbsp;&nbsp;</span></div>
+<div style="border: 1px solid gray;background-color: #F0F8FF;text-align: left;font-size: 13px;margin-top: 5px;margin-bottom: 5px;">
+	<img src="<?=base_url()?>assets/image/ques1.gif" float='left' align="middle" style="margin-left:2px;"/>&nbsp;&nbsp;<?=$newspoll['0']->question ?>
+</div>
+<div style="border: 1px solid gray;">
+
+<table width="100%" style="background-color: #FFF;font-size: 13px;">
 	<tr>
 		<td align="left" width="20%"><?=$more['18']->matter ?></td>
-		<td align="left" width="75%">
+		<td align="left" width="20%"><?=number_format($result['yes'], 2, '.', '');?>%</td>
+		<td align="left" width="50%">
 		<? for($i=0;$i<=$result['yes'];$i++){ ?>
 		<img src="<?=base_url()?>assets/imgs/result4.jpg" border="0" vspace="0" hspace="0" align="left" style="float:left;padding:0px;margin:0px;">
 		<? } ?>
@@ -15,18 +23,24 @@
 	</tr>
 	<tr>
 		<td align="left"><?=$more['19']->matter ?></td>
+		<td align="left" width="20%"><?=number_format($result['no'], 2, '.', '');?>%</td>
 		<td align="left">
 		<? for($i=0;$i<=$result['no'];$i++){ ?>
 		<img src="<?=base_url()?>assets/imgs/result4.jpg" border="0" vspace="0" hspace="0" align="left" style="float:left;padding:0px;margin:0px;">
 		<? } ?>
+		</td>
 	</tr>
 	<tr>
-		<td align="left"><?=$more['20']->matter ?></td>
+		<td align="left"><?=$this->lang->line('yes_no');?></td>
+		<td align="left" width="20%"><?=number_format($result['yn'], 2, '.', '');?>%</td>
 		<td align="left">
 		<? for($i=0;$i<=$result['yn'];$i++){ ?>
 		<img src="<?=base_url()?>assets/imgs/result4.jpg" border="0" vspace="0" hspace="0" align="left" style="float:left;padding:0px;margin:0px;">
 		<? } ?>
+		</td>
 	</tr>
 </table>
+</div>
+<div style="text-align: center;margin-top: 10px;margin-bottom: 10px;"><input type="button" value="Close"  onclick="javascript:window.close();" /></div>
 </body>
 </html>

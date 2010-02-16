@@ -25,8 +25,8 @@
 								        <img src="<?=base_url()?>assets/image/gemini.png" />
 								        <img src="<?=base_url()?>assets/image/maa.png" />
 								        <img src="<?=base_url()?>assets/image/inews.png" />
-								        <img src="<?=base_url()?>assets/image/vissa.png" />
-								        <img src="<?=base_url()?>assets/image/ztelugu.png" />
+								        <img src="<?=base_url()?>assets/image/vissa.png" width="56"/>
+								        <img src="<?=base_url()?>assets/image/ztelugu.png" width="30"/>
 							        </div>
 							  </div>
 							  </div>

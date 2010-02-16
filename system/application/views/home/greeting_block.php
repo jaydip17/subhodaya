@@ -1,4 +1,4 @@
-<div style="width:100%;height:148px; border:0px solid #000">
+<div style="width:100%;height:148px; border:0px solid #000;font-size: 13px;">
 <?php foreach ($details as $row):?>
 	<div id="" style="float:left; width:110px;">
 		<div id="hr" style="width:110px;height:70px;text-align:center;">

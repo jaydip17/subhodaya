@@ -13,7 +13,8 @@ class Subhodaya extends Controller {
 		$more=$this->News_Model->more_news();
 		//gallery
 		$photo_gallery=$this->lang->line('photo_gallery');
-	
+		/*$tamil=$this->News_Model->tamil_table();
+		print_r($tamil);*/
 		//home_blocks
 		$ardikam_block = $this->home->right_block($this->lang->line('news_ardikam'));
 		$Bhavisham_block = $this->home->bavishyam_block($this->lang->line('bavishyam'));

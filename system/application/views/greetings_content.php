@@ -196,14 +196,14 @@ else
 				      </div>
 					    <div id="main_gree_div">
 						      <div style="width:560px; height:28px;" id="bgsonelis">
-						          <div id="bgslis"><div id="greet_font" style="float: left;width: 50%"><?=$greetings3['0']->gree_cat?></div>
-						          <div id="paginate_div" style="font-size: 12px;"><a href="<?=base_url()?>greetings/content/<?=$greetings3['0']->type?>"><?=$this->lang->line('more');?></a></div></div>
+						          <div id="bgslis"><div id="greet_font" style="float: left;width: 50%"><?=$greetings1['0']->gree_cat?>(Valentines day)</div>
+						          <div id="paginate_div" style="font-size: 12px;"><a href="<?=base_url()?>greetings/content/<?=$greetings1['0']->type?>"><?=$this->lang->line('more');?></a></div></div>
 							  </div>
 						      	<div id="gree_div">
 									<table align="center">
 										<tr>
 										<?php $count=0;
-										foreach ($greetings3 as $row):?>
+										foreach ($greetings1 as $row):?>
 										<td align="center">
 											<div id="gree_img_div"><a href="<?=base_url()?>greetings/inner/<?=$row->id?>/<?=$row->type?>"><img src="<?=base_url()?>assets/greetings/gree_img<?=$row->id?>_thumb.jpg" width="118" height="93"/></a>
 												<div id="gree_bottom">
@@ -250,14 +250,14 @@ else
 									</table>
                          		</div>
                          		<div id="bgslis">
-									<div id="greet_font" style="float: left;width: 50%"><?=$greetings1['0']->gree_cat?></div>
-							          <div id="paginate_div" style="font-size: 12px;"><a href="<?=base_url()?>greetings/content/<?=$greetings1['0']->type?>"><?=$this->lang->line('more');?></a></div>
+									<div id="greet_font" style="float: left;width: 50%"><?=$greetings3['0']->gree_cat?></div>
+							          <div id="paginate_div" style="font-size: 12px;"><a href="<?=base_url()?>greetings/content/<?=$greetings3['0']->type?>"><?=$this->lang->line('more');?></a></div>
 						          </div>
                          		<div id="gree_div">
 									<table align="center">
 										<tr>
 										<?php $count=0;
-										foreach ($greetings1 as $row):?>
+										foreach ($greetings3 as $row):?>
 										<td align="center">
 											<div id="gree_img_div"><a href="<?=base_url()?>greetings/inner/<?=$row->id?>/<?=$row->type?>"><img src="<?=base_url()?>assets/greetings/gree_img<?=$row->id?>_thumb.jpg" width="118" height="93"/></a>
 											<div id="gree_bottom">

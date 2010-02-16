@@ -46,8 +46,11 @@
 <!-- end color box js and css --> 
 <link REL="SHORTCUT ICON" HREF="<?=base_url();?>assets/image/favicon.png">
 <!-- for rss feeds -->
+<?php if(isset($cinemarss)){?>
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?=base_url()?>feeds/cinema" />
+<?php }else{?>
 	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?=base_url()?>feeds/news" />
-	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?=base_url();?>feeds/news" />
+	<?php }?>
 <!-- main style sheet -->
 <?php if(isset($newscss)){?>
 	<link href="<?=base_url();?>assets/css/news.css" rel="stylesheet" type="text/css" />
@@ -168,10 +171,9 @@
 <div style="width:963px; background-color:#fff;border:0px dotted #000;">
 	<div id="header" style="border:0px solid #ccc; margin-bottom:0px;float:left;background-color:#fff; width:100%;float: left;">
 		<div id="change_lang" style="height:34px">
-			<div id="make_myhome" style="float:left;margin-top:5px;margin-bottom:5px;">
-			<a href="#" onClick="this.style.behavior='url(#default#homepage)'; this.setHomePage('http://www.subhodaya.com');" style="color:#646464; margin-left:5px;font-size:13px">Make 
-			<span style="color:#05AEF1;font-weight:bold">Subhodaya</span><span style="color:#FE0000; font-weight:bold">.</span><span style="color:#016CB4; font-weight:bold">com!</span>
-			 my home page</a>
+			<div  style="float:left;margin-top:5px;margin-bottom:5px;font-size: 12px;">Make 
+			<font style="color:#05AEF1;font-weight:bold">Subhodaya</font><font style="color:#FE0000; font-weight:bold">.</font><font style="color:#016CB4; font-weight:bold">com!</font>
+			 my home page
 				<!--<a href="javascript:setasHome()" style="color:#646464; margin-left:5px;font-size:13px">Make Subhodaya.com! my home page</a>
 			--></div>
 			<div id="language" style="color:#3398FF;margin-top:5px;margin-right:5px;margin-bottom:5px; font-size:13px;float:right">
@@ -189,7 +191,7 @@
 		</div>
 		<div id="logo_add" style="height:80px; margin-left:5px;margin-bottom:5px;">
 			<a href="<?=base_url()?>" style="float:left;outline-style: none;">
-					<div id="logo" title="Happy Holidays From Subhodaya.com!"></div>
+					<div id="logo" title="Telugu Subhodaya.com"></div>
 			</a>
 			<a href="#" style="float:right; margin-right:5px;">
 				<img src="<?=base_url()?>assets/home_images/ads/header_ad.jpg" border="0">

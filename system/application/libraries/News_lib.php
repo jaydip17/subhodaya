@@ -388,7 +388,17 @@ class News_lib{
 			'cat_id'  => $cat_id
 		);
 		return $this->CI->load->view('news/news_inner',$data,TRUE);
-	}	
+	}
+	function states_block()
+	{
+		$temp=$this->get_states();
+		print_r($temp);
+		$data=array
+		(
+			'details' => $temp
+		);
+	return $this->CI->load->view('news/news_states',$data,TRUE);		
+	}
 //news main page
 	function get_rastiya()
 	{
@@ -607,5 +617,10 @@ class News_lib{
 	{
 		$details=$this->CI->News_Model->more_state_news($cat_id);
 		return 	$details;	
+	}
+	function get_states()
+	{
+		$details=$this->CI->News_Model->get_newstype(0);
+		return 	$details;
 	}
 }

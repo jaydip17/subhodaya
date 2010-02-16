@@ -190,7 +190,7 @@ else
 			<div style="padding:1px 0px 2px 35px;font-size: 12px;"><?=form_radio($data3) ?><?=$this->lang->line('yes_no')?></div>
 					<div class="result" style="font-size: 10px;color: black;"></div>
 			<div style="padding-left: 10px;cursor: pointer;"><img src="<?=base_url()?>assets/image/vote1.jpg" id="insertpoll"/></div>
-			<div id=""><a HREF="javascript:void(0)" onclick="window.open('<?=base_url();?>poll/yes_result/<? if(isset($cinemapoll['0'])){echo $cinemapoll['0']->id;}?>', 'welcome','width=300,height=200')" style="color: red;">View Result</a></div>
+			<div id=""><a HREF="javascript:void(0)" onclick="window.open('<?=base_url();?>poll/yes_result/<? if(isset($cinemapoll['0'])){echo $cinemapoll['0']->id;}?>', 'welcome','width=450,height=500,left=250,top=70')" style="color: red;">View Result</a></div>
 			<div style="text-align: right;"><a href="<?=base_url()?>home_poll/details"><?=$this->lang->line('other_poll')?></a></div>
 		</div>
 		<div><img src="<?=base_url()?>assets/home_images/ads/ads.jpg" width="204" height="531" /></div>

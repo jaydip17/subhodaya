@@ -115,7 +115,7 @@ class Gallery extends Controller {
 		   		
 		//$current_url = current_url();
 		//$navigation = array ($current_url);
-		$segments = array(	'seg1' => $this->uri->segment(1,0),
+	/*	$segments = array(	'seg1' => $this->uri->segment(1,0),
 						   	'seg2' => $this->uri->segment(2,0),
 							'seg3' => $this->uri->segment(3,0),
 							'seg4' => $this->uri->segment(4,0),
@@ -124,7 +124,7 @@ class Gallery extends Controller {
 							'home' => $more['2']->matter,
 		); 
 		//print_r($segments);
-		$bread_crumb = $this->bread_crumb->get_code($segments);
+		$bread_crumb = $this->bread_crumb->get_code($segments);*/
 		$data=array(
 		            'gallerycss'    =>$gallerycss,
 					'more'   		=> $more,

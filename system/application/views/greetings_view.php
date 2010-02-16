@@ -1,4 +1,4 @@
-	<div style="width:100%; height:900px; float:left">
+	<div style="width:100%; height:780px; float:left">
 					<div style="width:144px; height:350px; float:left; border:0px solid #979797;">
 					<div id="greet_menu" >
 		<ul style="list-style: none;padding: 0px;margin: 0px;">
@@ -9,7 +9,7 @@
 		</ul>
 	</div>
 					</div>
-					  <div   style="float:right; height:100%;"><img src="<?=base_url()?>assets/home_images/ads/mahila_ad1.jpg" width="243" height="194" />
+					  <div   style="float:right; ">
 					   <div   ><img src="<?=base_url()?>assets/home_images/ads/mahila_ad.jpg" width="243" height="487" /></div>
 					   <div style="border:1px #000 solid;"><img src="<?=base_url()?>assets/home_images/ads/mahila_ad1.jpg" width="243" height="268" /></div>
 				      </div>

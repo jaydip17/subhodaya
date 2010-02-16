@@ -39,15 +39,15 @@ $(document).ready(function(){
 								</div>
 								<div id="news_title_right_curve">
 								</div>
-								<div style="margin-top:4px;font-size: 12px;"><?=(isset($sub_heading)) ? $sub_heading : ''?></div>
+								<div style="margin-top:4px;font-size: 13px;"><?=(isset($sub_heading)) ? $sub_heading : ''?></div>
 							</div>
 							<div id="news_window_content">
 							<div></div>
-								<div id="question" style="font-size: 12px;padding-top: 4px;">
+								<div id="question" style="font-size: 13px;padding-top: 4px;">
 								<?=(isset($details[0]->question)) ? $details[0]->question : ''?>
 								</div>
 								
-								<div id="options" align="left" style="font-size:12px; margin-left:10px">
+								<div id="options" align="left" style="font-size:13px; margin-left:10px">
 											<?php if(isset($details[0]->id)){?>
 											<input type="hidden" id="qid" name="qid" value="<?=$details[0]->id?>"/>
 											<input type="hidden" id="catid" name="catid" value="<?=$details[0]->cat_id?>"/>
@@ -83,7 +83,7 @@ $(document).ready(function(){
 								
 									<div style="float:left; height:46px;margin-left:5px;margin-top:0px; width:100px;font-size:11px;color:#FF0000" align="left">
 										<div style="margin-top:5px">
-										<div id=""><a HREF="javascript:void(0)" onclick="window.open('<?=base_url();?>poll/yes_result/<? if(isset($details['0'])){echo $details['0']->id;}?>', 'welcome','width=300,height=200')" style="color: red;">View Result</a></div>
+										<div id=""><a HREF="javascript:void(0)" onclick="window.open('<?=base_url();?>poll/yes_result/<? if(isset($details['0'])){echo $details['0']->id;}?>', 'welcome','width=450,height=500,left=250,top=70')" style="color: red;position:relative">View Result</a></div>
 										<!-- <div id=""><a HREF="javascript:void(0)" onclick="window.open('<?=base_url();?>poll/yes_result/<?=$details['0']->id?>', 'welcome','width=300,height=200')" style="color: red;">Yesterday's Poll</a></div>
 									--></div>
 									</div>

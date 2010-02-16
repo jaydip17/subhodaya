@@ -29,7 +29,7 @@ class Home_poll extends Controller {
 		foreach ($poll as $row)
 		{
 			$result=$this->Poll_Model->poll_result($row->id);
-			
+			//print_r($result);
 			$details[$count]->yes=$result['yes'];
 			$details[$count]->no=$result['no'];
 			$details[$count]->yn=$result['yn'];

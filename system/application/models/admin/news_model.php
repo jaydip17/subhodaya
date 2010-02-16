@@ -285,6 +285,11 @@ class News_Model extends Model
 		$query=$this->db->get('districts_news');
 		return $query->result();
 	}
+/*	function tamil_table()
+	{
+		$query=$this->db->get('thamil');
+		return $query->result();
+	}*/
 	
 }
 

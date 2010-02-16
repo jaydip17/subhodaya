@@ -1,7 +1,7 @@
 @charset "utf-8";
 body {
 	font-family: Verdana, Geneva, sans-serif;
-	font-size: 10px;
+	font-size: 13px;
 	font-style: normal;
 	color: #000;
 	margin: 0px;
@@ -10,6 +10,7 @@ body {
 	line-height: 17px;
 	
 }
+
 #header
 {
 	border:1px solid #ccc; 
@@ -272,7 +273,7 @@ color: rgb(190, 191, 59);
 	margin-top:5px;
 	padding-right:4px;
 	color:#FFF;
-	width:220px;
+	width:225px;
 }
 /* newspage */
 #question{

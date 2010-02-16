@@ -215,7 +215,7 @@ display:inline;
 						<?if(isset($links['prev'])){ ?>
 						<a href="<?=base_url();?>gallery/content/<?=$links['prev']?>/<?=$image['0']->parentid?>">Next</a>						
 					<?}endif; ?>
-					</div>
+     		</div>
 	</td>
 	<td valign="bottom" width="2px;"><img src="<?=base_url()?>assets/imgs/body-bottomRight.jpg"></td>
 </tr>

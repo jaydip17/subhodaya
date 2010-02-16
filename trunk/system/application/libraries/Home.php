@@ -410,12 +410,12 @@ class Home{
    }
    function get_rasi()
    {
-   	$details=$this->CI->Astrolagy_Model->get_astrolagytype();
-	return $details;
+	   	$details=$this->CI->Astrolagy_Model->get_astrolagytype();
+		return $details;
    }
    function get_yes_poll($type)
    {
-   	$details=$this->CI->Poll_Model->get_yes_newspoll($type);
-   	return $details;
+	   	$details=$this->CI->Poll_Model->get_yes_newspoll($type);
+	   	return $details;
    }
 }

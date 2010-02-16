@@ -22,6 +22,7 @@
 		  <div style="float:left; width:560px; height:18px;"><div style="float: left;text-align: left;width: 50%;"><!--<img src="<?=base_url();?>assets/stars/<?=$thisvideo[0]->rating?>rating.jpg" align="left"/><span><?=$more['36']->matter?>--></span></div><div style="float: right;width: 40%;text-align: right;"><?=$thisvideo[0]->no_of_views?> views</div></div>
 		
 		<div style="float:left; width:560px; height:28px;border:1px solid #CECECE; background-color:#EBEBEB;margin-top:10px;"><div style="float:left;padding-top:6px;padding-left:5px;font-size:14px;color:#812D00;font-weight:bold;"><img src="<?=base_url();?>assets/image/video.gif"><?=$more['34']->matter?></div><div style="float:right;padding-top:4px;padding-right:5px;"><?=$paginate?></div></div>
+
 		 
 		 <div id="video_main" >
 		 <?php $count=0; foreach ($top_viewed as $video):?>

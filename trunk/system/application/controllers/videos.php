@@ -22,9 +22,9 @@ function index()
 		//print_r($latestvideos);
 		$id=$this->uri->segment(3,0);
 		
-		//$this->Videos_Model->increase_viewcount($id);
-		/*$query=" from videos where id=$id order by insert_date desc ";
-		 $a =base_url().'video/index/'.$id;
+		$this->Videos_Model->increase_viewcount($id);
+		$query=" from videos_list where id=$id order by date_created desc ";
+		 $a =base_url().'videos/index/'.$id;
 		 $this->load->library('paginationnew');$this->paginationnew->start = ($this->uri->segment(4)) ? $this->uri->segment(4) : '0';
     	 $this->paginationnew->limit =24;
          $this->paginationnew->filePath ='javascript:loadNews(\''.$id.'\',\''.$a;
@@ -35,7 +35,7 @@ function index()
             
    		 $result = $this->paginationnew->getQuery(TRUE);
    		 $hotvideos=$result->result();
-   		 $paginate = $this->paginationnew->paginate();*/
+   		 $paginate = $this->paginationnew->paginate();
 		
 		//$relist = $this->Videos_model->get_vlist($video_cat_id,null);
 		$re_list = $latestvideos;
@@ -68,7 +68,7 @@ function index()
 			'title'			=>	$title,
 			'description'	=>	$description,
 			'breaking'		=>	$breaking,
-		   //  'paginate'   =>  $paginate
+		     'paginate'   =>  $paginate,
 		   're_res' 		    => $re_res,
 		);
 		
@@ -116,10 +116,10 @@ function content()
 		
 		
 		
-		/*$id=$this->uri->segment(3,0);
-		 $query=" from videos_list where video_cat_id=$id order by insert_date desc ";
-		 $a =base_url().'video/index/'.$id;
-		 $this->load->library('paginationnew');$this->paginationnew->start = ($this->uri->segment(4)) ? $this->uri->segment(4) : '0';
+		$id=$this->uri->segment(3,0);
+		 $query=" from videos_list where video_cat_id=$id order by date_created desc ";
+		 $a =base_url().'videos/content/'.$id;
+         $this->load->library('paginationnew');$this->paginationnew->start = ($this->uri->segment(4)) ? $this->uri->segment(4) : '0';
     	 $this->paginationnew->limit =24;
          $this->paginationnew->filePath ='javascript:loadNews(\''.$id.'\',\''.$a;
       
@@ -127,15 +127,16 @@ function content()
          $this->paginationnew->nbItems = $this->Videos_Model->count_videos($id);
          $this->paginationnew->add_query = $query;
             
-   		 $result = $this->paginationnew->getQuery(TRUE);*/
-   		// $hotvideos=$result->result();
-   		 //$paginate = $this->paginationnew->paginate();
-   		// print_r($hotvideos);
+   		 $result = $this->paginationnew->getQuery(TRUE);
+   		// $details=$result->result();
+   		 $paginate = $this->paginationnew->paginate();
+   		 //print_r($paginate);
 		$data=array(
 			'newscss'		=>	$newscss,
 			'type'			=>	$video_cat,
-			//'paginate'		=>	$paginate,
-		//'latestvideos'		=>  $c_list,
+			'paginate'		=>	$paginate,
+			 // 'details'      =>$details,
+		//'latestvideos'		=>  $re_res,
 			'breaking'		=>	$breaking,
 		    're_res'        =>$re_res
 		);
@@ -248,9 +249,9 @@ function playvideo()
 		$more=$this->News_Model->more_news();
 		
 		 
-		 $query=" from videos_list where video_cat_id=$cat_id order by no_of_views desc ";
-		 $a =base_url().'video/playvideo/'.$id.'/'.$cat_id;
-		 $this->load->library('paginationnew');$this->paginationnew->start = ($this->uri->segment(5)) ? $this->uri->segment(5) : '0';
+		 $query=" from videos_list where video_cat_id=$id order by no_of_views desc ";
+		 $a =base_url().'videos/playvideo/'.$cat_id.'/'.$id;
+		 $this->load->library('paginationnew');$this->paginationnew->start = ($this->uri->segment(4)) ? $this->uri->segment(4) : '0';
     	 $this->paginationnew->limit =12;
          $this->paginationnew->select_what = '*';
          $this->paginationnew->nbItems = $this->Videos_Model->count_videos($cat_id);
@@ -258,10 +259,10 @@ function playvideo()
          $this->paginationnew->filePath ='javascript:loadNews(\''.$cat_id.'\',\''.$a;   
    		 $result = $this->paginationnew->getQuery(TRUE);
    		
-   		 $topvideos=$result->result();
+   		// $topvideos=$result->result();
    		 $paginate = $this->paginationnew->paginate();
    		//print_r( $hotvideos);
-   		 $paginate = $this->paginationnew->paginate(); 
+   		  
 	 	//bread_crumb
 	 	
 		$segments = array(	'seg1' => $this->uri->segment(1,0),
@@ -280,18 +281,14 @@ function playvideo()
 				'type'			=>	$video_cat,
 				'paginate'		=>	$paginate,
 				'bread_crumb'	=>	$bread_crumb,
-				//'videoplay'		=>	$jslinks,
+				//'videoplay'	=>	$jslinks,
 				//'topvideos' 	=>	$top_videos
 				'thisvideo'		=>	$thisvideo,
-				'paginate'		=>	$paginate,
 				'breaking'		=>	$breaking,
 				'top_viewed' 	=>	$cat_res,	
 		);
 		
 		 $this->load->view('video_play',$data);
 	}
-	
-	
 }
-
 ?>

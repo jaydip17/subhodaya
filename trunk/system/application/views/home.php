@@ -31,7 +31,7 @@ function newsletter()
 						<div id="news_letter">
 							<div  class="newsletter">
 								<div id="ne_formdiv"  >
-									<div id="movie" style="width:100%; height:25px; padding-top:4px;font-size: 11px;" >
+									<div id="movie" style="width:100%; height:25px; padding-top:4px;font-size: 12px;" >
 										Subhodaya Newsletter
 									</div>
 									<div id="movie" style="width:100%" >
@@ -40,8 +40,6 @@ function newsletter()
 									<div class="succdiv" style="width: 100%;"></div>
 								<div style="width: 100%;"><a href="javascript:void(0)" onclick="newsletter()" style="outline-style: none;"><img style="margin:10px 0px 5px 0px;border: 0px;" src="<?=base_url()?>assets/image/submit.jpg"></a></div>
 								</div>
-								
-								
 							</div>
 						</div>
 						<?= (isset($reviews_block)) ? $reviews_block : '' ?>

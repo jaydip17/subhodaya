@@ -230,11 +230,31 @@ class News extends Controller {
 		$data=array(
 				'news_inner'		=>	 $news_inner,
 				'newscss'			=>	 $newscss,
-				'bread_crumb' 		=> 	 $bread_crumb,
+				//'bread_crumb' 		=> 	 $bread_crumb,
 				'title'				=>	$title,
 				'breaking'			=>	$breaking
 				);	
 		$this->load->view('news_inner',$data);
+	}
+	function states()
+	{
+		
+		$tabs_block=$this->news_lib->states_block();
+			$segments = array(	'seg1' => $this->uri->segment(1,0),
+						   	'seg2' => $this->uri->segment(2,0),
+							'seg3' => $this->uri->segment(3,0),
+							'seg4' => $this->uri->segment(4,0),
+							'seg5' => $this->uri->segment(5,0),
+							//'main' => $more['3']->matter,
+							//'home' => $more['2']->matter,
+		); 
+		$bread_crumb = $this->bread_crumb->get_code($segments);
+		$data=array(
+			'tabs_block' =>$tabs_block,
+			'bread_crumb'=>$bread_crumb
+		);
+		
+		$this->load->view('tab_view',$data);	
 	}
 }
 ?>

@@ -44,7 +44,7 @@ class Bread_crumb{
 	function get_code($segments)
 	{ 
 		
-		$bread_crum = '<div style="float:left" class="pages1"  >&nbsp;'.anchor('',$segments['home']);
+		$bread_crum = '<div style="float:left;" class="pages1"  >&nbsp;'.anchor('',$segments['home']);
 		if($segments['seg1']!='' || $segments['seg1']!=0)
 		{
 
@@ -107,13 +107,13 @@ class Bread_crumb{
 							$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$seg3,$second);
 							break;
 				case 'gallery': 
-					if($segments['seg2']=='categeory')
+				/*	if($segments['seg2']=='categeory')
 					{
 						$seg2='categeory';
 							$this->CI->load->model("admin/Gallery_Model");
 							$second = $this->CI->Gallery_Model->get_root_cat_by_id($root_cat_id);
 							$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$seg3,$second);
-					}else 
+					}else*/ 
 					if($segments['seg2']=='inner')
 					{
 						$seg2='categeory';
@@ -152,12 +152,24 @@ class Bread_crumb{
 		}
 	if(($segments['seg4']!='' || $segments['seg4']!=0))
 		{
+			//print_r($segments);
 		switch($segments['seg1'])
 			{
-				case 'news': 
-							$seg2 = 'newsdetails';
-							(isset($segments['heading'])) ? $segments['heading']!='' ? $heading = $segments['heading'] : '' : '';
-							$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$segments['seg3'].'/'.$segments['seg4'],strip_tags($heading));
+				case 'news':
+					switch ($segments['seg2']) 
+					{
+						case 'newsdetails';
+								$seg2 = 'newsdetails';
+								(isset($segments['heading'])) ? $segments['heading']!='' ? $heading = $segments['heading'] : '' : '';
+								$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$segments['seg3'].'/'.$segments['seg4'],strip_tags($heading));
+								break;
+					   case 'statenews';
+								$seg2 = 'statenews';
+								(isset($segments['heading'])) ? $segments['heading']!='' ? $heading = $segments['heading'] : '' : '';
+								$bread_crum .= '&nbsp;&raquo;&nbsp;'.anchor($segments['seg1'].'/'.$seg2.'/'.$segments['seg3'].'/'.$segments['seg4'],strip_tags($heading));
+								break;
+					}
+							
 							break;
 				case 'cinema': 
 							$seg2 = 'inner';

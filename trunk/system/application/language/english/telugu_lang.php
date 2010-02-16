@@ -46,6 +46,7 @@ $lang['yes'] 			    				= 	"అవును";
 $lang['no'] 			    				= 	"కాదు";
 $lang['yes_no'] 			    			= 	"చెప్పలేం";
 $lang['polls']								=	" పొల్ల్స్ ";
+$lang['result']								=	"ఫలితం";
 //gallery
 $lang['photo_gallery'] 			    		= 	"ఫోటో గ్యాలరీ";
 $lang['gallery'] 			    			= 	"గ్యాలరీ";

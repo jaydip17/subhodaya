@@ -11,5 +11,12 @@ class Feeds_model extends Model {
 		
 		return $query;
 	}
+	function cinema()
+	{
+		$this->db->order_by("insert_date", "desc");
+		$query=$this->db->get('cinema',10);
+		
+		return $query;	
+	}
 }
 ?>

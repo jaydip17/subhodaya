@@ -104,8 +104,9 @@
         $this->paginationnew->filePath = base_url().'admin/gallery/image_view/'.$this->uri->segment(4);
 		$this->paginationnew->select_what = '*';
         $this->paginationnew->add_query = 'from gallery_images1 WHERE categoryid = '.$parentid.' order by id desc';
-       	$data['query'] = $this->paginationnew->getQuery(TRUE);
+        $query = $this->paginationnew->getQuery(TRUE);
 		$data['paginate'] = $this->paginationnew->paginate1(); 
+		print_r($query->result());
     	$this->load->view('admin/gallery_image-view',$data);
      }
     

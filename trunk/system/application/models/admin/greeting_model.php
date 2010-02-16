@@ -97,6 +97,7 @@ class Greeting_Model extends Model {
     {
     	$this->db->where('id',$id);
     	$rs = $this->db->get('greeting_cat');
+    	print_r($rs->result());
     	$result = $rs->row();
     	return $result->gree_cat;
     }

@@ -26,8 +26,9 @@ $lang['newscat3']			=	"International News | ";
 $lang['newscat4']			=	"Sports News";
 $lang['newscat5']			=	"Financial News";
 $lang['newscat6']			=	"Setair News";
-$lang['newscat7']			=	"Sports";
-$lang['newscat8']			=	"Subhodaya Special";
+//$lang['newscat7']			=	"Sports";
+$lang['newscat8']			=	"Sports News | Latest Sports news | Indian Cricket News | Breaking Sports News | Live Sports News";
+$lang['newscat9']			=	"Subhodaya Special | Special News | Latest News |Subhodaya Hot News ";
 //cinema cat
 $lang['cine_cat1']			=	"Cine News | Cinema News";
 $lang['cine_cat2']			=	"Cine Gossips";
@@ -56,7 +57,7 @@ $lang['sahithi_cat7']			=	"Folks";
 $lang['sahithi_cat8']			=	"Essays | Essay";
 //greetings cat
 $lang['gree_cat1']				=	"Birthday Greetings";
-$lang['gree_cat2']				=	"Love Greetings";
+$lang['gree_cat2']				=	"Love Greetings | Valentine's Day Greetings | Valentine's Day | Love | Premikula Roju";
 $lang['gree_cat3']				=	"Mothers Day Greetings";
 $lang['gree_cat4']				=	"Friendship Greetings | Friendship Day Greetings";
 $lang['gree_cat5']				=	"Gandhi janthi Greetings";
@@ -70,5 +71,11 @@ $lang['gree_cat12']				=	"Miss You Greetings | Telugu Miss You Cards";
 $lang['gree_cat13']				=	"Telugu Sorry Greetings | Telugu Sorry Cards | Sorry Telugu Greetings";
 $lang['gree_cat14']				=	"Welcome Greetings | Telugu Welcome Cards";
 $lang['gree_cat15']				=	"Congratulation Greetings | Congratulation Greeting Cards";
-//gallery cat
+$lang['gree_cat16']				=	"Sankranti 2010 Greetings | Sankranti Greetings | Makara Sankranti 2010 | Telugu Sankranti Festival | Sankranti | kanuma Sankranti Greetings | Sankranthi Special";
+$lang['gree_cat17']				=	"Christmas | Christmas Greetings | Christmas Tree | Love Christmas | Christmas Special | Top Christmas Greetings";
+$lang['gree_cat18']             =	"Mahashivaratri 2010 | Shivaratri Greetings | Maha shivaratri Special | Shivaratri Pictures";
+//Astrology 
+$lang['astrology'] 				=	"Astrology 2010 | Hindu Astrology | Vedic Astrology 2010 | Horoscope 2010 | Daily Horoscope | Latest 2010 Astrology";
+$lang['day_details']						=	"Daily Horoscope | Weekly Horoscope | Monthly Horoscope | Yearly Horoscope";
+
 ?>

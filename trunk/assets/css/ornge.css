@@ -1,7 +1,7 @@
 @charset "utf-8";
 body {
 	font-family: Verdana, Geneva, sans-serif;
-	font-size: 10px;
+	font-size: 13px;
 	font-style: normal;
 	color: #000;
 	margin: 0px;
@@ -52,7 +52,7 @@ li{
 	background-image:url(../image/logo_v1.png);
 	background-repeat:no-repeat;
 	height:62px;
-	width:263px;
+	width:240px;
 }
 #menu{
 	background-image:url(../image/img2.gif);
@@ -305,7 +305,7 @@ color: rgb(190, 191, 59);
 	margin-top:5px;
 	padding-right:4px;
 	color:#FFF;
-	width:220px;
+	width:225px;
 }
 /* newspage */
 #question{

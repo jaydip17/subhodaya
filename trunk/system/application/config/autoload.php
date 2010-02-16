@@ -95,7 +95,7 @@ $autoload['config'] = array('ratings');
 |
 */
 
-$autoload['language'] = array('telugu','keywords');
+$autoload['language'] = array('telugu','keywords','thamil');
 
 
 /*

@@ -1,0 +1,1 @@
+<img src="<?=base_url()?>assets/gallery/<?=$folder?>/<?=$image?>.jpg"/>

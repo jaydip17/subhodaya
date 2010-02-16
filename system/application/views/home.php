@@ -49,7 +49,6 @@ function newsletter()
 					<div id="middle_content" style="width:479px;margin-left:3px; float:left">
 						<?= (isset($middle_block)) ? $middle_block : '' ?>
 						<div id="tabber" class="tabber">
-
 							<div class="tabbertab" title="<?=$this->lang->line('news_rasriyam')?>" style="text-align: left;">
 								<?= (isset($rasriyam_block)) ? $rasriyam_block : '' ?>
 							</div>
@@ -74,7 +73,6 @@ function newsletter()
 							</div>
 						</div>	
 						<div id="tabber" class="tabber">
-
 							<div class="tabbertab" title="<?=$this->lang->line('photo_gallery')?>" style="text-align: left;">
 								<?= (isset($gallery_block)) ? $gallery_block : '' ?>
 							</div>

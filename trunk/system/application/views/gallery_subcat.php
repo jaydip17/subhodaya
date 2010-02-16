@@ -30,6 +30,5 @@
 						  <div  style="float:left;height:25px; width:700px; background-color:#EFE1E1; text-align:left; padding-top:4px; padding-left:5px; border-top:1px solid #999;"><?echo $paginate; ?> </div>
 					   </div>
 				  </div>
-			</div>
-										
+			</div>									
 		</div>

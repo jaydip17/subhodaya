@@ -1,4 +1,3 @@
-
 <div style="width:963px; background-color:#fff;border:0px dotted #000">
 		 <div id="header" style="border:1px solid #ccc; margin-bottom:0px;float:left;background-color:#fff; width:100%">
 				<div style="width:100%; height:100%;float:left;">
@@ -20,8 +19,8 @@
 						       
 					            <div id="img4">
 					            	<a href="<?=base_url()?>gallery/inner/<?=$img['id']?>">
-					            		<img src="<?=base_url()?>assets/gallery/thumbnail_images/<?=$img['folder_path']?>/<?=$img['imageid']?>_thumb.jpg" id="img3"></a>
-					            		<div style="height:36px; width:128px;background-color:#f7f7f7; border:1px solid #dcdcdc;"><span id="anc"><a href="<?=base_url()?>gallery/inner/<?=$img['id']?>"><?=$img['catname']?></span></a><br /> <?=$img['date']?></div>
+					            		<img src="<?=base_url()?>assets/gallery/thumbnail_images/<?=$img['folder_path']?>/<?=$img['imageid']?>.jpg" id="img" style="padding: 2px;"></a>
+					            		<div style="height:26px;background-color:#f7f7f7; border:1px solid #dcdcdc;"><span id="anc"><a href="<?=base_url()?>gallery/inner/<?=$img['id']?>"><?=$img['catname']?></span></a></div>
 							    </div>
 							   <? if($count1==4){
 							          $count1 = 0;

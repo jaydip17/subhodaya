@@ -14,17 +14,15 @@
  * - PHP 4.1.x or later
  * - openWYSIWYG v1.4.6 or later
  ********************************************************************/
- 
 /*
  * Path to a directory which holds the images.
  */
 $imagebasedir = '../../uploads';
-
 /*
  * An absolute or relative URL to the image folder.
  * This url is used to generate the source of the image.
  */
-$imagebaseurl = 'http://localhost/subhodaya/assets/openwysiwyg/uploads';
+$imagebaseurl = 'http://telugu.subhodaya.com/assets/openwysiwyg/uploads';
 
 /*
  * Allow your users to browse the subdir of the defined basedir.

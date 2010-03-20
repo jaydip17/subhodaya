@@ -70,9 +70,9 @@ class News_Model extends Model
     {
     	$this->db->select('*');
     	$this->db->order_by("news.insert_date", "desc");
-    	$array=array('type'=>$type,'news.breking_news'=>0);
+    	$array=array('type'=>$type);
     	$this->db->where($array);
-    	$this->db->limit(6);
+    	$this->db->limit(7);
 		$this->db->from('news_types');
 		$this->db->join('news', 'news.type= news_types.id');
 		$query = $this->db->get_where();
@@ -281,6 +281,7 @@ class News_Model extends Model
 	function get_statenews($cat)
 	{
 		$this->db->where('dist_id',$cat);
+		$this->db->limit(10);
 		$this->db->order_by('id','desc');
 		$query=$this->db->get('districts_news');
 		return $query->result();

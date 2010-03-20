@@ -4,6 +4,7 @@ class Sahithi extends Controller {
 	function Sahithi(){
 		parent::Controller();
 		$this->load->model('admin/Sahithi_Model');
+		$this->Login_Model->login_validate();
 	}
 	function index(){
 			$message = $this->session->flashdata('message');

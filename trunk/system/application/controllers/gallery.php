@@ -87,7 +87,7 @@ class Gallery extends Controller {
 		$details=$this->Gall_model->get_cateimage($type,$limit="");
 		
 		$a =base_url().'gallery/categeory/'.$type;
-	  	$query= "from gallery_categeory where parentid = $type";
+	  	$query= "from gallery_categeory where parentid = $type ORDER BY id DESC ";
 		 $total_count=$this->Gall_model->count1($type);
 		 
     	$this->load->library('paginationnew');

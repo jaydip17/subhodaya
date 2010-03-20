@@ -3,6 +3,7 @@ class Cinema extends Controller {
 	var $layout='admin';
 	function Cinema(){
 		parent::Controller();
+		$this->Login_Model->login_validate();
 		$this->load->helper(array('form','url','file'));
 		$this->load->model('admin/Cinema_Model');
 	}

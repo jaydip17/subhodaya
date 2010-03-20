@@ -2,6 +2,7 @@
 class Flash_greet extends Controller {
 	var $layout='admin';
 	function Flash_greet(){
+		$this->Login_Model->login_validate();
 		parent::Controller();
 	}
 	function index(){

@@ -4,6 +4,7 @@ class Mahila extends Controller {
 	function Mahila(){
 		parent::Controller();
 		$this->load->model("admin/Mahila_Model");
+		$this->Login_Model->login_validate();
 	}
 	function index(){
 		$message = $this->session->flashdata('message');

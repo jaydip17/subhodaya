@@ -4,6 +4,7 @@ class Astrolagy extends Controller {
 	var $layout = 'admin'; 
 	function Astrolagy(){
 		parent::Controller();
+		$this->Login_Model->login_validate();
 		$this->load->model('admin/Astrolagy_Model');
 	  }	  
 	 function index(){

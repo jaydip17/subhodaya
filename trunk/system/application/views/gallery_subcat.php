@@ -13,9 +13,9 @@
 					      	<?php $count=1;
 					      	 foreach ($result as $row):?>
 					      		<td><a href="<?=base_url()?>gallery/inner/<?=$row->cat_id?>" class="pagelink">
-					      		<img src="<?=base_url()?>assets/gallery/thumbnail_images/<?=$row->folder_path?>/<?=$row->image_path?>_thumb.jpg" id="img3" style="margin-bottom: -2px;">
+					      		<img src="<?=base_url()?>assets/gallery/thumbnail_images/<?=$row->folder_path?>/<?=$row->image_path?>.jpg" id="img" style="margin-bottom: -2px;padding:2px;">
 					      		</a>
-					      		<div style="height:36px; width:128px;background-color:#f7f7f7; border:1px solid #dcdcdc;text-align: center;"><span id="anc"><a href="<?=base_url()?>gallery/inner/<?=$row->cat_id?>"><?=$row->catname?></span></a><br /> <?=$row->insert_date?></div>
+					      		<div style="height:26px;background-color:#f7f7f7; border:1px solid #dcdcdc;text-align: center;"><span id="anc"><a href="<?=base_url()?>gallery/inner/<?=$row->cat_id?>"><?=$row->catname?></span></a></div>
 					      		</td>
 					      		<?php if($count==5){
 					      			$count=0;

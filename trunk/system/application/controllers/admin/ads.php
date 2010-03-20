@@ -5,7 +5,7 @@ class Ads extends Controller {
 	{
 		parent::Controller();
 		$this->base_uri = base_url()."admin/adds/add_change";
-		//$this->Login_Model->login_validate();
+		$this->Login_Model->login_validate();
 		$this->load->model('admin/Ads_Model');
 	}
 	function index()

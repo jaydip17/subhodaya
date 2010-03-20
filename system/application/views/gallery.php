@@ -1,1 +1,1 @@
-<img src="<?=base_url()?>assets/gallery/<?=$folder?>/<?=$image?>.jpg"/>
+<img src="<?=base_url()?>assets/gallery/watermark_images/<?=$folder?>/<?=$image?>.jpg"/>

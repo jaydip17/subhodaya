@@ -196,7 +196,7 @@ else
 				      </div>
 					    <div id="main_gree_div">
 						      <div style="width:560px; height:28px;" id="bgsonelis">
-						          <div id="bgslis"><div id="greet_font" style="float: left;width: 50%"><?=$greetings1['0']->gree_cat?>(Valentines day)</div>
+						          <div id="bgslis"><div id="greet_font" style="float: left;width: 50%"><?=$greetings1['0']->gree_cat?></div>
 						          <div id="paginate_div" style="font-size: 12px;"><a href="<?=base_url()?>greetings/content/<?=$greetings1['0']->type?>"><?=$this->lang->line('more');?></a></div></div>
 							  </div>
 						      	<div id="gree_div">

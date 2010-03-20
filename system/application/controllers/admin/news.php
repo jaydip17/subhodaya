@@ -4,6 +4,7 @@ class News extends Controller {
 	function News(){
 		parent::Controller();
 		$this->load->model('admin/News_Model');
+		$this->Login_Model->login_validate();
 	}
 	function index(){
 		$message = $this->session->flashdata('message');

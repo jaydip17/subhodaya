@@ -18,7 +18,7 @@
 					      	<?php $count=1;
 					      	 foreach ($result as $row):?>
 					      		<td><a href="<?=base_url()?>newsletter/gallery/<?=$row->folder_path?>/<?=$row->image_path?>" class="pagelink" target="_blank">
-					      		<img src="<?=base_url()?>assets/gallery/thumbnail_images/<?=$row->folder_path?>/<?=$row->image_path?>_thumb.jpg" id="img3" >
+					      		<img src="<?=base_url()?>assets/gallery/thumbnail_images/<?=$row->folder_path?>/<?=$row->image_path?>.jpg" id="img3" >
 					      		</a>
 					      		</td>
 					      		<?php if($count==5){

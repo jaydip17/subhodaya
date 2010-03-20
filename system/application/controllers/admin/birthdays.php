@@ -3,6 +3,7 @@ class Birthdays extends Controller {
 	var $layout='admin';
 	function Birthdays(){
 		parent::Controller();
+		$this->Login_Model->login_validate();
 		$this->load->model('admin/Birthday_Model');
 	}
 	function index(){

@@ -51,7 +51,7 @@ class Mahila_Model extends Model {
     	            'eng_heading'=>$_POST['engheading'],
   					'summary'=>$_POST["summary"],
   					'description'=>$_POST["description"],
-  					'homepage'=>$homepage
+  					'active'=>$homepage
   					);
   				
   		$this->db->where('id',$id);	

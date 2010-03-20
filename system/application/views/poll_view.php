@@ -46,8 +46,9 @@
 	<div style="text-align: left;margin-right: 40px;"><div id="content_left"><?=$this->lang->line('cini_news')?></div></div>
 		<div style="text-align: left;">
 		<ul style="padding-top: 35px;">
+		
 		<?php foreach ($active_news as $row):?>
-			<li><a href=""><?=$row->heading?></a></li>
+			<li><a href="<?=base_url()?>cinema/inner/<?=$row->id?>/<?=$row->type?>"><?=$row->heading?></a></li>
 			<?php endforeach;?>
 		</ul>
 		</div>

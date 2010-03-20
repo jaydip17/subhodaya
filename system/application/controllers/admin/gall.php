@@ -6,10 +6,11 @@
 	{
 		parent::Controller();
 		$this->load->model('admin/Gall_model');
+		$this->Login_Model->login_validate();
 		$this->load->helper(array('form','url','file','date'));
 	}
     function categeory1()
-	{  	 
+	{  	
 	$message = $this->session->flashdata('message');
 		$this->load->model('admin/Openwysiwyg_Model');
 		$textarea[]= array('textarea' => 'id',
@@ -63,7 +64,8 @@
 	}
 	 //adding images into the categeory
 	function addImage()
-	{ 
+	{
+		
 	    $title =$this->input->post('title');
 		$parentid=$this->input->post('parentid1');
 		if(!isset($_POST['active']))

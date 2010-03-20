@@ -4,6 +4,7 @@ class  Poll extends Controller {
 	function Poll(){
 		parent::Controller();
 		$this->load->model('admin/Poll_Model');
+		$this->Login_Model->login_validate();
 	}
 	function index(){
 		$message = $this->session->flashdata('message');

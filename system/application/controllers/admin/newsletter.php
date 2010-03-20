@@ -5,7 +5,7 @@ class Newsletter extends Controller {
 	{
 		parent::Controller();
 		$this->load->model('Newsletter_Model');
-		$this->lang->load('telugu', 'telugu');
+		$this->Login_Model->login_validate();
 	}
 	function index()
 	{

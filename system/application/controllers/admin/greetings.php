@@ -4,6 +4,7 @@ class Greetings extends Controller {
 	function Greetings(){
 		parent::Controller();
 		$this->load->model('admin/Greeting_Model');
+		$this->Login_Model->login_validate();
 	}
 	function index(){
 		$message = $this->session->flashdata('message');

@@ -7,6 +7,7 @@ class Videos extends Controller
 		parent::Controller();
 		//$this->load->model('Videos_Model');
 		$this->load->model('Videos_Model');
+		$this->Login_Model->login_validate();
 	}
 	
 	

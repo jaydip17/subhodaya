@@ -6,6 +6,7 @@ class Slideimages extends Controller {
 	{
 		parent::Controller();
 		$this->load->model('admin/Slideimages_model');
+		$this->Login_Model->login_validate();
 	}
 	function flashimages()
 	{

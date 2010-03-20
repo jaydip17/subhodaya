@@ -4,8 +4,7 @@ class Contacts extends Controller {
 	function Contacts()
 	{
 		parent::Controller();
-		$this->load->helper('email');
-		$this->lang->load('telugu', 'telugu');
+		$this->Login_Model->login_validate();
 		$this->load->model('Newsletter_Model');
 	}
 	function index()

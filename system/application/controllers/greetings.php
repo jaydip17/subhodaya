@@ -9,7 +9,7 @@ class Greetings extends Controller {
 	{
 		$type=$this->Greeting_Model->get_type();
 		$newscss=array();
-		$greetings1=$this->Greeting_Model->get_main_greetings($type[1]->id,8);
+		$greetings1=$this->Greeting_Model->get_main_greetings($type[9]->id,8);
 		$greetings2=$this->Greeting_Model->get_main_greetings($type[17]->id,8);
 		$greetings3=$this->Greeting_Model->get_main_greetings($type[16]->id,8);
 		$more=$this->News_Model->more_news();

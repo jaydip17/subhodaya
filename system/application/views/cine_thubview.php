@@ -3,7 +3,7 @@
 
 <div id="leftdiv">
 <a href="<?=base_url()?>cinema/inner/<?=$row->id?>/<?=$row->type?>"><img src="<?=base_url();?>assets/cinema/news_img<?=$row->id ?>_home_thumb.jpg" border="0" style="margin: 2px;"  align="middle" height="49px" width="49px"></img></a>
-<span><a href="<?=base_url()?>cinema/inner/<?=$row->id?>"><? echo $row->heading; ?></a></span>
+<span><a href="<?=base_url()?>cinema/inner/<?=$row->id?>/<?=$row->type?>"><? echo $row->heading; ?></a></span>
 </div>
 <?
 endforeach; ?>

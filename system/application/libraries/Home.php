@@ -38,11 +38,11 @@ class Home{
 	function Home(){
 		$this->CI = &get_instance();
 		//loads necessary libraries
-		$this->CI->lang->load('telugu', 'telugu');
 	}
 	function tabs_block($tab)
 	{
 		$more=$this->CI->lang->line('more');
+			
 		 $link_cate='';
 		switch ($tab)
 		{

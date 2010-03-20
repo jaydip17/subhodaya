@@ -36,6 +36,7 @@ class Subhodaya extends Controller {
 		$greetings_block= $this->home->greeting_block($this->lang->line('greetings'));
 		$mahila_block= $this->home->tabs_block($this->lang->line('mahila'));
 		$sahithi_block= $this->home->tabs_block($this->lang->line('sahithi'));
+		//print_r($rasriyam_block);
 		$data=array(
 					'tabscss'			=>	$tabscss,
 					'Bhavisham_block'	=>	$Bhavisham_block,

@@ -158,7 +158,11 @@
 				$this->load->helper('directory');
 				$map = directory_map($targetdir);
 				$count = 1;
-							
+				foreach ($map as $imagename):
+				$this->watermark_creation($foldername,$imagename,$count);
+				$count++;
+				endforeach;
+						
 				foreach ($map as $imagename):
 				$this->thumbnail_creation($foldername,$imagename,$count);
 				$count++;
@@ -168,6 +172,39 @@
 		echo $this->unzip->display_errors(2);
         echo $this->unzip->display_errors(1);
     }
+ 	function watermark_creation($foldername,$filename,$count)
+	{
+			//$this->load->helper('date');
+			//$foldername = now();
+			if(file_exists("./assets/gallery/watermark_images/".$foldername))
+			{
+				echo "";
+			}
+			else 
+			{
+				if(!mkdir("./assets/gallery/watermark_images/".$foldername,0777))
+				echo $message = "Unable to create dir ".$foldername;
+			}
+			$this->load->library('image_lib');
+			$config['image_library']='gd2';
+			$config['source_image'] = './assets/gallery/'.trim($foldername).'/'.$filename;
+			$config['new_image'] = './assets/gallery/watermark_images/'.trim($foldername).'/'.$filename;
+			$config['wm_type'] = 'overlay';
+			$config['wm_overlay_path'] = './assets/image/logo-s.png';
+			$config['wm_opacity'] = '100';
+			$config['quality'] = '90%';
+			$config['wm_shadow_color'] = 'None';
+			$config['wm_shadow_distance']='30';
+			$config['wm_vrt_alignment'] = 'top';
+			$config['wm_hor_alignment'] = 'right';
+			$config['wm_padding'] = '5';
+			$config['wm_hor_offset'] = '10';
+			$config['wm_vrt_offset'] = '0';
+			$this->image_lib->initialize($config);
+			$this->image_lib->watermark();
+			$this->image_lib->clear();
+				
+		}
 	function thumbnail_creation($foldername,$filename,$count)
 	{
 		//echo $foldername;

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.2.4
+-- version 3.1.3
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jan 28, 2010 at 01:50 AM
--- Server version: 5.1.42
--- PHP Version: 5.2.9
+-- Generation Time: Mar 21, 2010 at 03:49 AM
+-- Server version: 5.1.32
+-- PHP Version: 5.2.9-1
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
@@ -16,7 +16,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `techpund_suhodaya`
+-- Database: `subhodaya`
 --
 
 -- --------------------------------------------------------
@@ -25,6 +25,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- Table structure for table `news_types`
 --
 
+DROP TABLE IF EXISTS `news_types`;
 CREATE TABLE IF NOT EXISTS `news_types` (
   `id` int(1) NOT NULL AUTO_INCREMENT,
   `news_cat` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,

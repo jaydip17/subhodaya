@@ -199,18 +199,20 @@
 		</div>
 		<div id="menu">
         	<ul class="solidblockmenu">
-                <li><a href="<?=base_url();?>" class="current" style="outline-style: none;"><?=$this->lang->line('home');?></a></li>
-                <li><a href="<?=base_url()?>news" style="outline-style: none;"><?=$this->lang->line('news');?></a></li>
-                <li><a href="<?=base_url()?>cinema" style="outline-style: none;"><?=$this->lang->line('cinema');?></a></li>
-                <li><a href="<?=base_url()?>videos" style="outline-style: none;"><?=$this->lang->line('video');?></a></li>
-                <li><a href="<?=base_url()?>gallery" style="outline-style: none;"><?=$this->lang->line('gallery');?></a></li>
-                <li><a href="<?=base_url()?>greetings" style="outline-style: none;"><?=$this->lang->line('greetings');?></a></li>
-            	<li><a href="<?=base_url()?>mahila" style="outline-style: none;"><?=$this->lang->line('mahila');?></a></li>
-                <li><a href="<?=base_url()?>sahithi" style="outline-style: none;"><?=$this->lang->line('sahithi');?></a></li>
-                <li><a href="<?=base_url()?>news/details/8" style="outline-style: none;"><?=$this->lang->line('news_kridalu');?></a></li>
-                <li><a href="<?=base_url()?>cinema/details/7" style="outline-style: none;"><?=$this->lang->line('srungaram');?></a></li>
-                <li><a href="<?=base_url()?>news/details/8" style="outline-style: none;"><?=$this->lang->line('sangitham');?></a></li>
-                <li><a href="<?=base_url()?>astrolagy" style="width: 50px;outline-style: none;"><?=$this->lang->line('bavishyam');?></a></li>
+                <li><a href="<?=base_url();?>" class="current" style="font-size:12px;outline-style: none;"><?=$this->lang->line('home');?></a></li>
+                <li><a href="<?=base_url()?>news" style="font-size:12px;outline-style: none;"><?=$this->lang->line('news');?></a></li>
+                <li><a href="<?=base_url()?>cinema" style="font-size:12px;outline-style: none;"><?=$this->lang->line('cinema');?></a></li>
+                <li><a href="<?=base_url()?>videos" style="font-size:12px;outline-style: none;"><?=$this->lang->line('video');?></a></li>
+                <li><a href="<?=base_url()?>gallery" style="font-size:12px;outline-style: none;"><?=$this->lang->line('gallery');?></a></li>
+                <li><a href="<?=base_url()?>greetings" style="font-size:12px;outline-style: none;"><?=$this->lang->line('greetings');?></a></li>
+            	<li><a href="<?=base_url()?>mahila" style="font-size:12px;outline-style: none;"><?=$this->lang->line('mahila');?></a></li>
+                <li><a href="<?=base_url()?>sahithi" style="font-size:12px;outline-style: none;"><?=$this->lang->line('sahithi');?></a></li>
+                <!-- 
+                <li><a href="<?=base_url()?>news/details/8" style="font-size:12px;outline-style: none;"><?=$this->lang->line('news_kridalu');?></a></li>
+                 -->
+                <li><a href="<?=base_url()?>cinema/details/7" style="font-size:12px;outline-style: none;"><?=$this->lang->line('srungaram');?></a></li>
+                <li><a href="<?=base_url()?>news/details/8" style="font-size:12px;outline-style: none;"><?=$this->lang->line('sangitham');?></a></li>
+                <li><a href="<?=base_url()?>astrolagy" style="font-size:12px;width: 50px;outline-style: none;"><?=$this->lang->line('bavishyam');?></a></li>
            </ul>
         	<div id="ch_color">
         	<!--<div style="width: 80px;float: left;">
@@ -248,7 +250,7 @@
 			}
 			</style>
 			<div style="float: right;">
-              <font style="color:white;">Change color:</font>
+              <font style="color:white;">Themes:</font>
               <span><img title="blue" src="<?=base_url();?>assets/image/2.png"    class="change" onclick="changeTheme('blue');"  /></span>
               <span><img title="yellow" src="<?=base_url();?>assets/image/1.png"   class="change" onclick="changeTheme('yellow');" /></span>
               <span><img title="ornge" src="<?=base_url();?>assets/image/3.png"   class="change" onclick="changeTheme('ornge');" /></span>
@@ -363,16 +365,16 @@ document.write('</td></table>')
 			</div>
 			<div id="" style="float:left; width:200px">
 				<span style="color:#008000;font-size:16px"><b><?=$this->lang->line('tv_partners')?></b></span>
-				<div style="color:#0101FF; height:26px;padding-top: 6px;"><?=$this->lang->line('sakshi')?>, TV-9, NTV</div>
-				<div style="color:#0101FF; height:26px">TV-5, i-NEWS	</div>
-				<div style="color:#0101FF; height:26px">ETV-2, HMTV</div>
-				<div style="color:#0101FF; height:26px">STUDIO N, TV-1</div>
-				<div style="color:#0101FF; height:26px">Maha TV, Z-24 <?=$this->lang->line('hovers')?></div>
+				<div style="color:#0101FF; height:26px;padding-top: 6px;">SUN NEWS, JAYA PLUS</div>
+				<div style="color:#0101FF; height:26px">Kalaingar NEWS</div>
+				<div style="color:#0101FF; height:26px">Podhigai NEWS</div>
+				<div style="color:#0101FF; height:26px">MEHA NEWS</div>
+				<div style="color:#0101FF; height:26px">RAJ NEWS</div>
 			</div>
 			<div id="" style="float:left; width:220px">
 				<span style="color:#FF00FF; font-size:16px;"><b><?=$this->lang->line('tv_programs')?></b></span>
-				<div style="color:#0101FF; line-height:25px;padding-top: 6px;"><?=$this->lang->line('sakshi')?></u>, <?=$this->lang->line('jemini')?></u>, <?=$this->lang->line('ee_tv')?></u></div>
-				<div style="color:#0101FF;line-height:25px"><?=$this->lang->line('maa_tv')?>, Z-<?=$this->lang->line('telugu')?></div>
+				<div style="color:#0101FF; line-height:25px;padding-top: 6px;"><?=$this->lang->line('sun_tv')?></u>, <?=$this->lang->line('kal_tv')?></u></div>
+				<div style="color:#0101FF;line-height:25px"><?=$this->lang->line('jaya_tv')?>, <?=$this->lang->line('k_tv')?></div>
 				<div style="color:#810081; margin:0px 0px 7px 0px;font-size:16px"><b><?=$this->lang->line('tech_partners')?></b></div>
 				<div style="margin-top:5px">
 					<a href="http://www.tech-pundits.com/" target="_blank" style="outline-style: none;">

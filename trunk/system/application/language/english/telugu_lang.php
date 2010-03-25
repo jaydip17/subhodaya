@@ -1,106 +1,107 @@
 <?php
 //districts
-$lang['nagaram']							=	"మీ నగరం";
+$lang['nagaram']							=	"உங்கள் நகரம்";
 //home page
-$lang['home']								=	"హొమ్";
-$lang['subh_spec'] 			    			= 	"శుభోదయ. కామ్ ప్రత్యేకం"; 
-$lang['bavishyam'] 			    			= 	"భవిష్యవాణి";
-$lang['srungaram'] 			    			= 	"శృంగారం";
-$lang['eenati_vishe'] 			    		= 	"ఈనాటి విశేషాలు";
-$lang['enka_chavandi'] 			    		= 	"ఇంక చదవండి";
-$lang['more'] 			    				= 	"మరిన్ని";
-$lang['select_rasi']						=	"రాశి సెలెక్ట్ చేసి ఆప్షన్ క్లిక్ చేయండి";
-$lang['day']								=	"దినము";
-$lang['week']								=	"వారము";
-$lang['month']								=	"మాసము ";
-$lang['year']								=	"సంవస్తారం";
-$lang['rasi_palam']							=	"మీ రాసి పలం";
+$lang['home']								=	"ஹோம்";
+$lang['subh_spec'] 			    			= 	"ஷுப்ஹோடைய  சிறப்பு"; 
+$lang['bavishyam'] 			    			= 	"ஜோதிடம்";
+$lang['srungaram'] 			    			= 	"காதல் தேசம்";
+$lang['eenati_vishe'] 			    		= 	"இன்றைய நிகழ்ச்சிகள்";
+$lang['enka_chavandi'] 			    		= 	"மேலும் படிக்க";
+$lang['more'] 			    				= 	"மேலும்";
+$lang['select_rasi']						=	"ராசியை தேர்ந்தெடுத்து கிளிக் செய்க";
+$lang['day']								=	"தினம்";
+$lang['week']								=	"வாரம்";
+$lang['month']								=	"மாதம் ";
+$lang['year']								=	"வருடம் ";
+$lang['rasi_palam']							=	"உங்கள் ராசிபலன்";
 //for news
-$lang['news']								=	"వార్తలు";
-$lang['news_ardikam'] 			    		= 	"ఆర్దికం";
-$lang['news_rasriyam'] 			    		= 	"రాష్ట్రీయం";
-$lang['news_jathiyam'] 			    		= 	"జాతీయం";
-$lang['news_antharja'] 			    		= 	"అంతర్జాతీయం";
-$lang['news_kridalu'] 			    		= 	"క్రీడలు";
+$lang['news']								=	"செய்திகள்";
+$lang['news_ardikam'] 			    		= 	"வ‌ணிக‌ம்";
+$lang['news_rasriyam'] 			    		= 	"மாநிலம்";
+$lang['news_jathiyam'] 			    		= 	"தேசியம்";
+$lang['news_antharja'] 			    		= 	"சர்வதேசம்";
+$lang['news_kridalu'] 			    		= 	"விளையாட்டு";
 $lang['news_setier'] 			    		= 	"సెటైర్";
-$lang['state_news'] 			    		= 	"జిల్లా వార్తలు";
-$lang['thaja_vartha']						=	"తాజా వార్త ";
-$lang['marinni_visheshalu']					=	"మరిన్ని వార్తా విశేషాలు ";
-$lang['sambanditha']						=	"సంబందిత వార్తలు";
-$lang['evikuda_read']						=	"ఇవి కూడా చదవండి ";
-$lang['neti_thaja']							=	"నేటి తాజా వార్తలు";
+$lang['state_news'] 			    		= 	"மாவட்ட செய்திகள்";
+$lang['thaja_vartha']						=	"புதிய செய்தி";
+$lang['marinni_visheshalu']					=	"மேலும் செய்திகள்";
+$lang['sambanditha']						=	"தொடர்புடைய செய்திகள்";
+$lang['evikuda_read']						=	"இதையும் படியுங்கள்";
+$lang['neti_thaja']							=	"இன்றைய புதிய செய்திகள்";
 // cinema page
-$lang['cinema']								=	"సినిమా ";
-$lang['reviews'] 			    			= 	"మూవీ రివ్యూస్";
-$lang['sangitham'] 			    			= 	"సంగీతం";
-$lang['cini_vishesm'] 			    		= 	"సిని విశేషాలు";
-$lang['cini_pukarlu'] 			    		= 	"సినీ పుకార్లు";
-$lang['cini_news'] 			    			= 	"సినీ వార్తలు";
-$lang['cini_shedul'] 			    		= 	"మూవీ షెడ్యుల్ ";
-$lang['interviews'] 			    		= 	"ఇంటర్వ్యూలు ";
-$lang['therachatu'] 			    		= 	"తేరచాటు ";
+$lang['cinema']								=	"சினிமா ";
+$lang['reviews'] 			    			= 	"திரை விமர்சனம்";
+$lang['sangitham'] 			    			= 	"இசை";
+$lang['cini_vishesm'] 			    		= 	"சினி நிகழ்ச்சிகள்";
+$lang['cini_pukarlu'] 			    		= 	"சினி அரட்டைகள்";
+$lang['cini_news'] 			    			= 	"சினி செய்திகள்";
+$lang['cini_shedul'] 			    		= 	"மூவி ஷெட்யூல்";
+$lang['interviews'] 			    		= 	"பேட்டிகள்";
+$lang['therachatu'] 			    		= 	"திரைக்கு பின்னால் ";
 $lang['other_poll']							=	"అథర్ పొల్ల్స్ ";
 // poll
-$lang['homepoll'] 			    			= 	"మీ అభిప్రాయం";
-$lang['yes'] 			    				= 	"అవును";
-$lang['no'] 			    				= 	"కాదు";
-$lang['yes_no'] 			    			= 	"చెప్పలేం";
-$lang['polls']								=	" పొల్ల్స్ ";
+$lang['homepoll'] 			    			= 	"உங்கள் கருத்து";
+$lang['yes'] 			    				= 	"ஆம்";
+$lang['no'] 			    				= 	"இல்லை";
+$lang['yes_no'] 			    			= 	"தெரியாது";
+$lang['polls']								=	"போல்ஸ்";
 $lang['result']								=	"ఫలితం";
 //gallery
-$lang['photo_gallery'] 			    		= 	"ఫోటో గ్యాలరీ";
-$lang['gallery'] 			    			= 	"గ్యాలరీ";
+$lang['photo_gallery'] 			    		= 	"புகைப்படங்கள்";
+$lang['gallery'] 			    			= 	"கேலரி";
 //videos
-$lang['videos'] 			    			= 	"వీడియోస్";
-$lang['video'] 			    				= 	"వీడియో ";
+$lang['videos'] 			    			= 	"வீடியோ";
+$lang['video'] 			    				= 	"வீடியோ ";
 //greeings
-$lang['greetings'] 			    			= 	"  గ్రీటింగ్స్";
+$lang['greetings'] 			    			= 	"க்ரீடிங்க்ஸ்";
 //mahila
-$lang['mahila'] 			    			= 	"మహిళా";
-$lang['mahi_buty'] 			    			= 	"బ్యుటి టిప్స్ ";
-$lang['mahila_spec'] 			    		= 	"ఆడవాళ్ళ ప్రత్యేకం";
+$lang['mahila'] 			    			= 	"மங்கை";
+$lang['mahi_buty'] 			    			= 	"ப்யூட்டி டிப்ஸ் ";
+$lang['mahila_spec'] 			    		= 	"மகளிர் ஸ்பெஷல்";
 $lang['home_carer'] 			    		= 	"హోం & కరీర్ ";
 $lang['mahila_fashon'] 			    		= 	"ఫ్యాషన్";
-$lang['mahila_yoga'] 			    		= 	"యోగ";
-$lang['mahila_food'] 			    		= 	"ఆహారం";
+$lang['mahila_yoga'] 			    		= 	"யோகா";
+$lang['mahila_food'] 			    		= 	"உணவு";
 $lang['dite_helth'] 			    		= 	"డైట్ & హెల్త్ ";
-$lang['mahila_mehandi'] 			    	= 	"మెహంది ";
+$lang['mahila_mehandi'] 			    	= 	"மெஹெந்தி";
 //sahithi
-$lang['sahithi'] 			    			= 	"సాహితి";
-$lang['sahi_festiva'] 			    		= 	"పండుగలు";
-$lang['sahi_kathalu'] 			    		= 	"కథలు";
-$lang['matru_basha'] 			    		= 	"మాతృ భాష";
+$lang['sahithi'] 			    			= 	"விஷேசங்கள்";
+$lang['sahi_festiva'] 			    		= 	"பண்டிகை";
+$lang['sahi_kathalu'] 			    		= 	"கதைகள்";
+$lang['matru_basha'] 			    		= 	"தாய் மொழி";
 $lang['sahi_sametha'] 			    		= 	"సామెతలు";
-$lang['sahi_kavithalu'] 			    	= 	"కవితలు";
+$lang['sahi_kavithalu'] 			    	= 	"கவிதைகள்";
 $lang['sahi_kavithm'] 			    		= 	"కవిత్వం";
 $lang['sahi_janapadam'] 			    	= 	"జానపదాలు";
-$lang['sahi_vyasam'] 			    		= 	"వ్యాసం";
+$lang['sahi_vyasam'] 			    		= 	"கட்டுரை";
 //email
-$lang['name']								=	"మీ పేరు";
-$lang['message']							=	"మీ మెసేజ్ ";
+$lang['name']								=	"உங்கள் பெயர்";
+$lang['message']							=	"உங்கள் தகவல்";
 //footer
-$lang['contact']							=	"సంప్రదించు";
+$lang['contact']							=	"தொடர்புக்கு";
 $lang['feed_back']							=	"ఫీడ్ బ్యాక్ ";
-$lang['advertise']							=	"అడ్వర్ టైస్";
+$lang['advertise']							=	"விளம்பரம்";
 //footer news partners
-$lang['news_partners']						=	"న్యూస్ పార్ట్ నర్స్";
-$lang['sakshi']								=	"సాక్షి";
-$lang['enadu']								=	"ఈనాడు";
-$lang['andra_jothi']						=	"ఆంధ్రజ్యోతి";
-$lang['vaartha']							=	"వార్త ";
-$lang['andra_prabha']                       =   "ఆంధ్రప్రభ ";
-$lang['surya']								=	"సూర్య ";
-$lang['andra_bhomi']						=	"ఆంధ్రభూమి ";
-$lang['praja_sakthi']						=	"ప్రజా శక్తి";
+$lang['news_partners']						=	"ந்யூஸ் பார்ட்னர்ஸ்";
+$lang['sakshi']								=	"தினமலர்";
+$lang['enadu']								=	"தினத்தந்தி";
+$lang['andra_jothi']						=	"தினகரன்";
+$lang['vaartha']							=	"தினமணி";
+$lang['andra_prabha']                       =   "மாலைமலர்";
+$lang['surya']								=	"தமிழ் முரசு";
+$lang['andra_bhomi']						=	"மலை முரசு";
+$lang['praja_sakthi']						=	"முரசொலி";
 //footer tv partners
-$lang['tv_partners']						=	"టి.వి పార్ట్ నర్స్ ";
+$lang['tv_partners']						=	"டி.வி பார்ட்னர்ஸ்";
 $lang['hovers']								=	"గంటలు";
 // tv programers
-$lang['jemini']								=	"జెమిని ";
-$lang['ee_tv']								=	"ఈ టి.వి ";
-$lang['maa_tv']								=	"మా టి.వి ";
-$lang['tv_programs']						=	"టి.వి ప్రోగ్రాములు";
-$lang['tech_partners']						=	"టెక్నికల్ పార్ట్ నర్స్ ";
+$lang['sun_tv']								=	"சன் டி.வி ";
+$lang['kal_tv']								=	"கலைஞர் டி.வி";
+$lang['jaya_tv']							=	"ஜெயா டி.வி ";
+$lang['k_tv']								=	"கே டி.வி";
+$lang['tv_programs']						=	"டி.வி நிகழ்ச்சிகள்";
+$lang['tech_partners']						=	"டெக்னிகல் பார்ட்னர்ஸ்";
 $lang['telugu']								=	"తెలుగు";
 //heading for mails sending
 $lang['galley_mail_succ'] 					= 	"మెసేజ్ పంపబడింది ";

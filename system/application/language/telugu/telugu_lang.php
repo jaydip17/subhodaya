@@ -1,6 +1,6 @@
 <?php
 //home page
-$lang['home']								=	"ஹோம்";
+$lang['home']								=	"முகப்பு";
 $lang['subh_spec'] 			    			= 	"శుభోదయ. కామ్ ప్రత్యేకం"; 
 $lang['bavishyam'] 			    			= 	"asdas";
 $lang['srungaram'] 			    			= 	"காதல் தேசம்";

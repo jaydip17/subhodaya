@@ -291,7 +291,8 @@ height:26px;
 color: #FFF;
 margin-top:7px;
 text-align: center;
-width: 42px;
+
+/*width: 42px;*/
 }
 
 .solidblockmenu li a:visited{
@@ -305,7 +306,7 @@ width: 42px;
 	margin-top:5px;
 	padding-right:4px;
 	color:#FFF;
-	width:225px;
+	width:190px;
 }
 /* newspage */
 #question{

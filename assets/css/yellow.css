@@ -271,6 +271,7 @@ padding: 0;
 float: left;
 font:  14px Arial;
 overflow: hidden;
+
 margin-bottom: 1em;
 border-width: 0px 0;
 }
@@ -290,7 +291,9 @@ height:26px;
 color: #FFF;
 margin-top:7px;
 text-align: center;
-width: 42px;
+/*width: 42px;*/
+border:0px solid #fff;
+outline-style: none;
 }
 
 .solidblockmenu li a:visited{
@@ -304,8 +307,16 @@ color: rgb(190, 191, 59);
 	margin-top:5px;
 	padding-right:4px;
 	color:#FFF;
-	width:225px;
+	width:190px;
+	
 }
+#ch_color a{
+	border: 0px;
+	}
+#ch_color a:HOVER{
+	border: 1px solid;
+	}
+
 /* newspage */
 #question{
 	background-image: url(../image/123.png);

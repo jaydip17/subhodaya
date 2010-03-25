@@ -2,7 +2,7 @@
 //districts
 $lang['nagaram']							=	"உங்கள் நகரம்";
 //home page
-$lang['home']								=	"ஹோம்";
+$lang['home']								=	"முகப்பு";
 $lang['subh_spec'] 			    			= 	"ஷுப்ஹோடைய  சிறப்பு"; 
 $lang['bavishyam'] 			    			= 	"ஜோதிடம்";
 $lang['srungaram'] 			    			= 	"காதல் தேசம்";

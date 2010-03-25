@@ -140,10 +140,8 @@
 		{
 		  position: absolute;
 		  visibility: hidden;
-		
 		  border:  1px solid #FFFFFF;
 		  padding: 0px 5px 2px 5px;
-		
 		  background: #FFFFEE;
 		}
 		
@@ -200,19 +198,19 @@
 		<div id="menu">
         	<ul class="solidblockmenu">
                 <li><a href="<?=base_url();?>" class="current" style="font-size:12px;outline-style: none;"><?=$this->lang->line('home');?></a></li>
-                <li><a href="<?=base_url()?>news" style="font-size:12px;outline-style: none;"><?=$this->lang->line('news');?></a></li>
+                <li><a href="<?=base_url()?>news" style="width:60px;font-size:12px;outline-style: none;"><?=$this->lang->line('news');?></a></li>
                 <li><a href="<?=base_url()?>cinema" style="font-size:12px;outline-style: none;"><?=$this->lang->line('cinema');?></a></li>
-                <li><a href="<?=base_url()?>videos" style="font-size:12px;outline-style: none;"><?=$this->lang->line('video');?></a></li>
-                <li><a href="<?=base_url()?>gallery" style="font-size:12px;outline-style: none;"><?=$this->lang->line('gallery');?></a></li>
-                <li><a href="<?=base_url()?>greetings" style="font-size:12px;outline-style: none;"><?=$this->lang->line('greetings');?></a></li>
+                <li><a href="<?=base_url()?>videos" style="font-size:12px;width:46px;outline-style: none;"><?=$this->lang->line('video');?></a></li>
+                <li><a href="<?=base_url()?>gallery" style="font-size:12px;width:36px;outline-style: none;"><?=$this->lang->line('gallery');?></a></li>
+                <li><a href="<?=base_url()?>greetings" style="width:65px;font-size:12px;outline-style: none;"><?=$this->lang->line('greetings');?></a></li>
             	<li><a href="<?=base_url()?>mahila" style="font-size:12px;outline-style: none;"><?=$this->lang->line('mahila');?></a></li>
-                <li><a href="<?=base_url()?>sahithi" style="font-size:12px;outline-style: none;"><?=$this->lang->line('sahithi');?></a></li>
+                <li><a href="<?=base_url()?>sahithi" style="width:80px;font-size:12px;outline-style: none;"><?=$this->lang->line('sahithi');?></a></li>
                 <!-- 
                 <li><a href="<?=base_url()?>news/details/8" style="font-size:12px;outline-style: none;"><?=$this->lang->line('news_kridalu');?></a></li>
                  -->
-                <li><a href="<?=base_url()?>cinema/details/7" style="font-size:12px;outline-style: none;"><?=$this->lang->line('srungaram');?></a></li>
-                <li><a href="<?=base_url()?>news/details/8" style="font-size:12px;outline-style: none;"><?=$this->lang->line('sangitham');?></a></li>
-                <li><a href="<?=base_url()?>astrolagy" style="font-size:12px;width: 50px;outline-style: none;"><?=$this->lang->line('bavishyam');?></a></li>
+                <li><a href="<?=base_url()?>cinema/details/7" style="font-size:12px;width:83px;outline-style: none;"><?=$this->lang->line('srungaram');?></a></li>
+                <li><a href="<?=base_url()?>news/details/8" style="font-size:12px;width:30px;outline-style: none;"><?=$this->lang->line('sangitham');?></a></li>
+                <li><a href="<?=base_url()?>astrolagy" style="font-size:12px;width:60px;outline-style: none;"><?=$this->lang->line('bavishyam');?></a></li>
            </ul>
         	<div id="ch_color">
         	<!--<div style="width: 80px;float: left;">
@@ -355,16 +353,16 @@ document.write('</td></table>')
 			<hr></hr>
 		</div>
 		<div style="width:100%; float:left">
-			<div id="" style="float:left; width:162px">
-				<span style="color:#FF0D16;font-size:16px"><b><?=$this->lang->line('news_partners')?></b></span>
-				<div style="color:#0101FF;height:26px;padding-top: 6px;"><?=$this->lang->line('sakshi')?>,<?=$this->lang->line('enadu')?></div>
-				<div style="color:#0101FF;height:24px"><?=$this->lang->line('andra_jothi')?></div>
-				<div style="color:#0101FF;height:24px"><?=$this->lang->line('andra_prabha')?>,<?=$this->lang->line('vaartha')?></div>
-				<div style="color:#0101FF;height:24px"><?=$this->lang->line('andra_bhomi')?>,<?=$this->lang->line('surya')?></div>
+			<div id="" style="float:left; width:180px;">
+				<span style="color:#FF0D16;font-size:14px"><b><?=$this->lang->line('news_partners')?></b></span>
+				<div style="color:#0101FF;height:26px;padding-top: 6px;"><?=$this->lang->line('sakshi')?>, <?=$this->lang->line('enadu')?></div>
+				<div style="color:#0101FF;height:24px"> <?=$this->lang->line('surya')?>, <?=$this->lang->line('vaartha')?></div>
+				<div style="color:#0101FF;height:24px"><?=$this->lang->line('andra_prabha')?>, <?=$this->lang->line('andra_jothi')?></div>
+				<div style="color:#0101FF;height:24px"><?=$this->lang->line('andra_bhomi')?></div>
 				<div style="color:#0101FF;height:24px"><?=$this->lang->line('praja_sakthi')?></div>
 			</div>
-			<div id="" style="float:left; width:200px">
-				<span style="color:#008000;font-size:16px"><b><?=$this->lang->line('tv_partners')?></b></span>
+			<div id="" style="float:left; width:180px;">
+				<span style="color:#008000;font-size:14px"><b><?=$this->lang->line('tv_partners')?></b></span>
 				<div style="color:#0101FF; height:26px;padding-top: 6px;">SUN NEWS, JAYA PLUS</div>
 				<div style="color:#0101FF; height:26px">Kalaingar NEWS</div>
 				<div style="color:#0101FF; height:26px">Podhigai NEWS</div>
@@ -372,10 +370,10 @@ document.write('</td></table>')
 				<div style="color:#0101FF; height:26px">RAJ NEWS</div>
 			</div>
 			<div id="" style="float:left; width:220px">
-				<span style="color:#FF00FF; font-size:16px;"><b><?=$this->lang->line('tv_programs')?></b></span>
+				<span style="color:#FF00FF; font-size:14px;"><b><?=$this->lang->line('tv_programs')?></b></span>
 				<div style="color:#0101FF; line-height:25px;padding-top: 6px;"><?=$this->lang->line('sun_tv')?></u>, <?=$this->lang->line('kal_tv')?></u></div>
 				<div style="color:#0101FF;line-height:25px"><?=$this->lang->line('jaya_tv')?>, <?=$this->lang->line('k_tv')?></div>
-				<div style="color:#810081; margin:0px 0px 7px 0px;font-size:16px"><b><?=$this->lang->line('tech_partners')?></b></div>
+				<div style="color:#810081; margin:0px 0px 7px 0px;font-size:14px"><b><?=$this->lang->line('tech_partners')?></b></div>
 				<div style="margin-top:5px">
 					<a href="http://www.tech-pundits.com/" target="_blank" style="outline-style: none;">
 						<img src="<?=base_url()?>assets/image/tech_pundits.jpg" border="0">

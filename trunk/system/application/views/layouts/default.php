@@ -197,7 +197,7 @@
 		</div>
 		<div id="menu">
         	<ul class="solidblockmenu">
-                <li><a href="<?=base_url();?>" class="current" style="font-size:12px;outline-style: none;"><?=$this->lang->line('home');?></a></li>
+                <li><a href="<?=base_url();?>" class="current" style="width:35px;font-size:12px;outline-style: none;"><?=$this->lang->line('home');?></a></li>
                 <li><a href="<?=base_url()?>news" style="width:60px;font-size:12px;outline-style: none;"><?=$this->lang->line('news');?></a></li>
                 <li><a href="<?=base_url()?>cinema" style="font-size:12px;outline-style: none;"><?=$this->lang->line('cinema');?></a></li>
                 <li><a href="<?=base_url()?>videos" style="font-size:12px;width:46px;outline-style: none;"><?=$this->lang->line('video');?></a></li>

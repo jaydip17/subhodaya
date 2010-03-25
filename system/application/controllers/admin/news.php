@@ -10,7 +10,6 @@ class News extends Controller {
 		$message = $this->session->flashdata('message');
 		$details=$this->News_Model->get_newstype(1);
 		$districs=$this->News_Model->get_newstype(0);
-		//print_r($districs);
 		foreach ($districs as $dis)
 				{
 					$disoption[0]='Select Districts';

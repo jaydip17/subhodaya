@@ -3,7 +3,7 @@
 $lang['nagaram']							=	"உங்கள் நகரம்";
 //home page
 $lang['home']								=	"முகப்பு";
-$lang['subh_spec'] 			    			= 	"ஷுப்ஹோடைய  சிறப்பு"; 
+$lang['subh_spec'] 			    			= 	"சுப்ஹோதயா சிறப்பு"; 
 $lang['bavishyam'] 			    			= 	"ஜோதிடம்";
 $lang['srungaram'] 			    			= 	"காதல் தேசம்";
 $lang['eenati_vishe'] 			    		= 	"இன்றைய நிகழ்ச்சிகள்";

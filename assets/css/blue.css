@@ -30,7 +30,7 @@ li{
 	line-height: 17px;
 }
 a{
-color:#228BEE; font-size:0.8pc; text-decoration:none;outline-style: none;
+color:#228BEE; font-size:10px;/*0.8px*/ text-decoration:none;outline-style: none;
 }
 #ln{
 	color:#3398FF; font-size:0.8pc; text-decoration:none;
@@ -230,6 +230,7 @@ border-top:1px solid #BAD6E5;border-left:1px solid #BAD6E5;border-right:1px soli
 	color:#FFFFFF;
 	font-size: 13px;
 	outline-style: none;
+	
 	}
 #footer_right{
 	background-image:url(../image/footer.png);
@@ -239,13 +240,15 @@ border-top:1px solid #BAD6E5;border-left:1px solid #BAD6E5;border-right:1px soli
 	float:right;
 }
 #enati_vishe{
-color:#F10000; font-size:14px; line-height:29px;
+color:#F10000; font-size:12px;/*14px*/
+line-height:29px;
 text-align:left;
-font-weight:600;
+font-weight:600;/*600*/
+border: 1px solid #ccc;
 }
 #special{
 color:#F10000; 
-font-size:14px;
+font-size:12px;
 line-height:30px;
 }
 #sangeetham {
@@ -255,14 +258,14 @@ line-height:30px;
 #news_more
 {
 color:#AEAEAE;
-font-size:12px;
+font-size:10px;/*12px*/
 text-align:right;
 margin-right:4px;
 }
 #news_more a
 {
 color:#AEAEAE;
-font-size:12px;
+font-size:10px;/*12px*/
 text-align:right;
 margin-right:4px;
 text-decoration:none;
@@ -510,7 +513,7 @@ float: left;text-align: center;width:650px;border: 1px solid #cee2ec;margin-left
  }
  #sc_div a
  {
- font-size: 14px;
+ font-size: 12px;
  font-weight: normal;
  color:#000000;
  letter-spacing: 1px;

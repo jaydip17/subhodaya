@@ -189,7 +189,7 @@
 		</div>
 		<div id="logo_add" style="height:80px; margin-left:5px;margin-bottom:5px;">
 			<a href="<?=base_url()?>" style="float:left;outline-style: none;">
-					<div id="logo" title="Telugu Subhodaya.com"></div>
+					<div id="logo" title="Tamil Subhodaya.com"></div>
 			</a>
 			<a href="#" style="float:right; margin-right:5px;">
 				<img src="<?=base_url()?>assets/home_images/ads/header_ad.jpg" border="0">

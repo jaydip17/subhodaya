@@ -13,7 +13,7 @@
 									<?php $count=1;
 									foreach ($details as $row):
 									?>
-											<li style="font-size: 13px;line-height: 20px;padding-right: 5px;"><a href="<?=base_url()?>cinema/inner/<?=$row->id?>/<?=$row->cat_id?>" style="outline-style: none;"><?=$row->heading?></a>
+											<li style="font-size: 11px;line-height: 20px;padding-right: 5px;"><a href="<?=base_url()?>cinema/inner/<?=$row->id?>/<?=$row->cat_id?>" style="outline-style: none;"><?=$row->heading?></a>
 											<img src="<?=base_url();?>assets/stars/<?=$row->rating?>rating.jpg" align="middle" style="width: 60px;"/>
 											</li>
 											<?php 

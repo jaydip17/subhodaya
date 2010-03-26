@@ -120,7 +120,7 @@ display:inline;
 		<div style="height: 40px;font-size: 23px;font-weight: normal;"><?=$cat_name?></div>
 		<div style="height: 60px;border-top: 1px solid #cee2ed;border-bottom: 1px solid #cee2ed;">
 			<div style="padding-top: 2px;float: left;">
-			<div style="height: 30px;padding-top: 4px;"><font id="headings" style="font-size: 18px;font-weight: bold;"><?=(isset($details[0]->heading)) ? $details[0]->heading : ''?></font></div>
+			<div style="height: 30px;padding-top: 4px;"><font id="headings" style="font-size: 16px;font-weight: bold;"><?=(isset($details[0]->heading)) ? $details[0]->heading : ''?></font></div>
 				<div style="float: left;width: 56px;margin-left: 15px;"><a href="<?=base_url()?>contact/email_send" class="contact" title="Send Email" id="tweet_id"><img src="<?=base_url()?>assets/image/email.jpg" style="float: left;border: 0px;">Email</a></div>
 				<div style="float: left;width: 67px;"><a href="http://twitter.com/login" id="tweet_id"><img src="<?=base_url()?>assets/image/tweet.jpg" style="float: left;border: 0px;">twitter</a></div>
 				<div style="float: left;"><img src="<?=base_url()?>assets/image/face_bk.jpg" style="float: left;">Facebook</div>
@@ -139,7 +139,7 @@ display:inline;
 			<? if(file_exists("./assets/".$type."/news_img".$details[0]->id."_thumb.jpg")){ ?>
 			<img src="<?=$link?>news_img<?=$details[0]->id?>.jpg" style="float: left;margin: 2px 5px 2px 1px;" id="img">
 			<?php }?>
-			<font id="summery" style="font-size: 14px;line-height: 24px;"><?=(isset($details[0]->description)) ? $details[0]->description : ''?></font>
+			<font id="summery" style="font-size: 12px;line-height: 24px;"><?=(isset($details[0]->description)) ? $details[0]->description : ''?></font>
 		</div>
 		<div style="float: left;width: 183px;">
 			<img src="<?=base_url()?>assets/home_images/ads/inner_ad.jpg">

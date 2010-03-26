@@ -1,24 +1,24 @@
 <?php
 //home title
-$lang['home_title']			=	"Telugu | Telugu News | Telugu Songs | Telugu Movie | Telugu Actress | Telugu Videos | Telugu Cinema";
+$lang['home_title']			=	"Tamil | Tamil News | Tamil Songs | Tamil Movie | Tamil Actress | Tamil Videos | Tamil Cinema";
 //home descrip
-$lang['home_descrip']		=	"No.1 Telugu News and Entertainment Portal. Telugu, Telugu News, Telugu Songs, Telugu Movies, Telugu Actress, Telugu Videos, Tollywood, Telugu Cinema.";
+$lang['home_descrip']		=	"No.1 Tamil News and Entertainment Portal. Tamil, Tamil News, Tamil Songs, Tamil Movies, Tamil Actress, Tamil Videos, Tollywood, Tamil Cinema.";
 // main page titles
-$lang['news_title']			=	"Telugu | Telugu News | AP Politics | Andhra News | Telangana News | Political Leaders in AP | Telugu News Online | ";
-$lang['cinema_title']		=	"Telugu Movies | Tollywood News | Telugu Movie Reviews | Telugu Videos | Telugu Cinema News | Telugu Film News |  ";
-$lang['gree_title']			=	"Telugu | Telugu Greetings | Greetings In Telugu | Pongal Greetings | Telugu Festival Greetings | Telugu Ugadi Greetings | ";
-$lang['gallery_title']		=	"Telugu | Telugu Actress | Telugu Actress Gallery | Telugu Hot Gallery | Masala Pics Of Telgu Actress | Telugu Hot Actress | ";
-$lang['video_title']		=	"Telugu | Telugu Videos | Telugu Movie | Telugu Video Songs | Telugu Songs | Telugu Movie Downloads | Telugu Movie Trailers | ";
-$lang['mahila_title']		=	"Telugu | Telugu Mahila | Telugu Ladies Special | Telugu Dishes | Beauty and Fashion Tips | Telugu Women | ";
-$lang['sahithi_title']		=	"Sahiti | Kathalu | Telugu Sahiti | Telugu Kathalu | Telugu Stories | Telugu Novels | Telugu Festivals | ";
+$lang['news_title']			=	"Tamil | Tamil News | AP Politics | Andhra News | Telangana News | Political Leaders in AP | Tamil News Online | ";
+$lang['cinema_title']		=	"Tamil Movies | Tollywood News | Tamil Movie Reviews | Tamil Videos | Tamil Cinema News | Tamil Film News |  ";
+$lang['gree_title']			=	"Tamil | Tamil Greetings | Greetings In Tamil | Pongal Greetings | Tamil Festival Greetings | Tamil Ugadi Greetings | ";
+$lang['gallery_title']		=	"Tamil | Tamil Actress | Tamil Actress Gallery | Tamil Hot Gallery | Masala Pics Of Telgu Actress | Tamil Hot Actress | ";
+$lang['video_title']		=	"Tamil | Tamil Videos | Tamil Movie | Tamil Video Songs | Tamil Songs | Tamil Movie Downloads | Tamil Movie Trailers | ";
+$lang['mahila_title']		=	"Tamil | Tamil Mahila | Tamil Ladies Special | Tamil Dishes | Beauty and Fashion Tips | Tamil Women | ";
+$lang['sahithi_title']		=	"Sahiti | Kathalu | Tamil Sahiti | Tamil Kathalu | Tamil Stories | Tamil Novels | Tamil Festivals | ";
 //main page descrip
-$lang['news_descrip']		=	"No.1 Telugu News and Entertainment Portal. Telugu News, AP Politics, Andhra News, Telangana News, Political Leaders in AP, Telugu News Online, AP Politics On The Net.";
-$lang['cinema_descrip']		=	"No.1 Telugu News and Entertainment Portal. Telugu Movies, Telugu Cinema News, Hero Telugu Heroes, Telugu Actress Gossips, Telugu Videos, Telugu Cinema News.";
-$lang['gallery_descrip']	=	"No.1 Telugu News and Entertainment Portal. Telugu Actress, Telugu Actress Gallery, Telugu Hot Gallery, Masala Pics of Telugu Actress, Telugu Masala Pictures, Telugu Hot Actress.";
-$lang['gree_descrip']		=	"No.1 Telugu News and Entertainment Portal. Telugu Greetings, Greetings In Telugu, Pongal Greetings, Telugu Festival Greetings, Telugu Ugadi Greetings, Telugu Greeting Cards.";
-$lang['video_descrip']		=	"No.1 Telugu News and Entertainment Portal. Telugu Videos, Telugu Movie, Telugu Video Songs Download, Telugu Movie Download, Telugu Movie Trailers, Telugu Video.";
-$lang['mahila_descrip']		=	"No.1 Telugu News and Entertainment Portal. Telugu Women, Telugu Mahila, Beauty and Fashion Tips, Telugu Fashion, Telugu Ladies Special, Telugu Dishes, Telugu Womens";
-$lang['sahithi_descrip']	=	"No.1 Telugu News and Entertainment Portal. Sahiti, Kathalu, Telugu Sahiti, Telugu Kathalu, Telugu Stories, Telugu Novels, Telugu Festivals, Telugu kavithalu, Telugu Padyalu.";
+$lang['news_descrip']		=	"No.1 Tamil News and Entertainment Portal. Tamil News, AP Politics, Andhra News, Telangana News, Political Leaders in AP, Tamil News Online, AP Politics On The Net.";
+$lang['cinema_descrip']		=	"No.1 Tamil News and Entertainment Portal. Tamil Movies, Tamil Cinema News, Hero Tamil Heroes, Tamil Actress Gossips, Tamil Videos, Tamil Cinema News.";
+$lang['gallery_descrip']	=	"No.1 Tamil News and Entertainment Portal. Tamil Actress, Tamil Actress Gallery, Tamil Hot Gallery, Masala Pics of Tamil Actress, Tamil Masala Pictures, Tamil Hot Actress.";
+$lang['gree_descrip']		=	"No.1 Tamil News and Entertainment Portal. Tamil Greetings, Greetings In Tamil, Pongal Greetings, Tamil Festival Greetings, Tamil Ugadi Greetings, Tamil Greeting Cards.";
+$lang['video_descrip']		=	"No.1 Tamil News and Entertainment Portal. Tamil Videos, Tamil Movie, Tamil Video Songs Download, Tamil Movie Download, Tamil Movie Trailers, Tamil Video.";
+$lang['mahila_descrip']		=	"No.1 Tamil News and Entertainment Portal. Tamil Women, Tamil Mahila, Beauty and Fashion Tips, Tamil Fashion, Tamil Ladies Special, Tamil Dishes, Tamil Womens";
+$lang['sahithi_descrip']	=	"No.1 Tamil News and Entertainment Portal. Sahiti, Kathalu, Tamil Sahiti, Tamil Kathalu, Tamil Stories, Tamil Novels, Tamil Festivals, Tamil kavithalu, Tamil Padyalu.";
 //news cate
 $lang['newscat1']			=	"State News | రాష్ట్రీయ   వార్తలు ";
 $lang['newscat2']			=	"National News | జాతీయ  వార్తలు ";
@@ -64,14 +64,14 @@ $lang['gree_cat5']				=	"Gandhi janthi Greetings";
 $lang['gree_cat6']				=	"Marriage Day Greetings";
 $lang['gree_cat7']				=	"Independence Day Greetings | Independence Day Cards";
 $lang['gree_cat8']				=	"Thank You Greetings | Thank You Cards";
-$lang['gree_cat9']				=	"Telugu New Year Greetings | New Year Cards | New Year 2010 ";
+$lang['gree_cat9']				=	"Tamil New Year Greetings | New Year Cards | New Year 2010 ";
 $lang['gree_cat10']				=	"Ugadi Greetings | Ugadi Festival Greetings | Ugadi 2010 Greetings ";
 $lang['gree_cat11']				=	"All The Best Greetings | All The Best Greeting Cards";
-$lang['gree_cat12']				=	"Miss You Greetings | Telugu Miss You Cards";
-$lang['gree_cat13']				=	"Telugu Sorry Greetings | Telugu Sorry Cards | Sorry Telugu Greetings";
-$lang['gree_cat14']				=	"Welcome Greetings | Telugu Welcome Cards";
+$lang['gree_cat12']				=	"Miss You Greetings | Tamil Miss You Cards";
+$lang['gree_cat13']				=	"Tamil Sorry Greetings | Tamil Sorry Cards | Sorry Tamil Greetings";
+$lang['gree_cat14']				=	"Welcome Greetings | Tamil Welcome Cards";
 $lang['gree_cat15']				=	"Congratulation Greetings | Congratulation Greeting Cards";
-$lang['gree_cat16']				=	"Sankranti 2010 Greetings | Sankranti Greetings | Makara Sankranti 2010 | Telugu Sankranti Festival | Sankranti | kanuma Sankranti Greetings | Sankranthi Special";
+$lang['gree_cat16']				=	"Sankranti 2010 Greetings | Sankranti Greetings | Makara Sankranti 2010 | Tamil Sankranti Festival | Sankranti | kanuma Sankranti Greetings | Sankranthi Special";
 $lang['gree_cat17']				=	"Christmas | Christmas Greetings | Christmas Tree | Love Christmas | Christmas Special | Top Christmas Greetings";
 $lang['gree_cat18']             =	"Mahashivaratri 2010 | Shivaratri Greetings | Maha shivaratri Special | Shivaratri Pictures";
 //Astrology 

@@ -14,7 +14,7 @@
 										<ul style="padding-top:5px; padding-left:25px;">
 										<?php foreach ($details as $row):?>
 											<li style="line-height: 19px;">
-												<a href="<?=base_url()?>news/newsdetails/<?=$row->id?>/<?=$row->type?>" style="font-size:0.8pc;margin-top: 5px; outline-style: none;">
+												<a href="<?=base_url()?>news/newsdetails/<?=$row->id?>/<?=$row->type?>" style="font-size:11px ;margin-top: 5px; outline-style: none;">
 													<?=$row->heading?>
 												</a>
 											</li>

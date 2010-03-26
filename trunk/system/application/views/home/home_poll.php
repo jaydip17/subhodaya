@@ -39,15 +39,15 @@ $(document).ready(function(){
 								</div>
 								<div id="news_title_right_curve">
 								</div>
-								<div style="margin-top:4px;font-size: 13px;"><?=(isset($sub_heading)) ? $sub_heading : ''?></div>
+								<div style="margin-top:4px;font-size: 12px;"><?=(isset($sub_heading)) ? $sub_heading : ''?></div>
 							</div>
 							<div id="news_window_content">
 							<div></div>
-								<div id="question" style="font-size: 13px;padding-top: 4px;">
+								<div id="question" style="font-size: 11px;padding-top: 4px;">
 								<?=(isset($details[0]->question)) ? $details[0]->question : ''?>
 								</div>
 								
-								<div id="options" align="left" style="font-size:13px; margin-left:10px">
+								<div id="options" align="left" style="font-size:11px; margin-left:10px">
 											<?php if(isset($details[0]->id)){?>
 											<input type="hidden" id="qid" name="qid" value="<?=$details[0]->id?>"/>
 											<input type="hidden" id="catid" name="catid" value="<?=$details[0]->cat_id?>"/>

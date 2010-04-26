@@ -62,11 +62,9 @@ ddsmoothmenu.init({
 				</li>
 				<li><a href="<?=base_url();?>admin/videos/viewaddvideo">Add video
 				</a></li>
-				<li><a href="<?=base_url();?>admin/videos/categeories">Edit Video</a></li>
-				
+				<li><a href="<?=base_url();?>admin/videos/categeories">Edit Video</a></li>		
 			</ul>
 			</li>
-			
 			<li><a href="#">Greetings</a>
 			<ul>
 				<li><a href="<?=base_url();?>admin/greetings">Insert</a></li>
@@ -158,15 +156,23 @@ ddsmoothmenu.init({
 	</li>
 	
 	    <li> <a href="#">Astrolagy</a>
-	     <ul>
-			<li><a href="<?=base_url();?>admin/astrolagy/index">Add Astrolagy</a>
-			</li>
-			<li><a href="<?=base_url();?>admin/astrolagy/getastrolagycats">Edit/Delete</a>
-			</li>
-		</ul>
-	</li>
+		     <ul>
+				<li><a href="<?=base_url();?>admin/astrolagy/index">Add Astrolagy</a>
+				</li>
+				<li><a href="<?=base_url();?>admin/astrolagy/getastrolagycats">Edit/Delete</a>
+				</li>
 			</ul>
-			</li>
+		</li>
+		  <li> <a href="#">Classifides</a>
+		     <ul>
+				<li><a href="<?=base_url();?>admin/classifides/index">Add classifides</a>
+				</li>
+				<li><a href="<?=base_url();?>admin/classifides/getastrolagycats">Edit/Delete</a>
+				</li>
+			</ul>
+		</li>
+	 </ul>
+	</li>
 			<!--<li><a href="#">Other</a>
 <ul>
 <li><a href="#">Poll</a>

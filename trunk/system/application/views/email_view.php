@@ -1,4 +1,4 @@
-<?=form_open('subhodaya/sendmail','name="telugu_send"') ?>
+<form action="<?=base_url()?>subhodaya/sendmail" name="">
 <table width="100%" height="80%" border="0" cellspacing="2" cellpadding="0" style="font-size: 13px;border: 1px solid rgb(55, 137, 195);" align="center">
     <tr>
         <td colspan="3" align="center">Please Enter all the details marked <span style="color:red">*</span> </td>
@@ -25,4 +25,4 @@
 		<td colspan='3' align="center"><input id="importcontacts" type="submit" name="submit" value="submit"></td>
 	</tr>
 </table>
-<?=form_close()?>
+</form>

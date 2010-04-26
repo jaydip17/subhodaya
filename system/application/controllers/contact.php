@@ -221,7 +221,11 @@ class contact extends Controller {
 		function email_send()
 		{
 			$message = $this->session->flashdata('message');
-			$data=array('message'=>$message);
+			
+			$data=array(
+			'message'=>$message,
+			'action'=>'index.php/subhodaya/sendmail',
+			);
 			$this->load->view('email_view',$data);
 		}
 		function newsmail_send()
@@ -243,6 +247,7 @@ class contact extends Controller {
 		$this->email->subject($subject);
 		$this->email->message($html_message);
 		$this->email->send();
+		
 		return true;
 	 }
 

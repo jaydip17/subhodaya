@@ -36,22 +36,12 @@ class Poll extends Controller {
 	{
 		if(isset($_POST)){
 		$poll_id=$_POST['qid'];
-		$answer_id=$_POST['ans'];
+		$answer=$_POST['ans'];
 		$cat_id=$_POST['cid'];
 		}
 		//$poll_id = $this->uri->segment(3);
 		//$answer_id = $this->uri->segment(4);
 		//$cat_id = $this->uri->segment(5);
-
-		if($answer_id==0){
-			$answer='a';
-		}
-		if($answer_id==1){
-			 $answer='b';
-		}
-		if($answer_id==2){
-			 $answer='c';
-		}
 		$result=$this->Poll_Model->insert_home($poll_id,$answer);
 		if(!empty($result)){
 			if($cat_id==4)

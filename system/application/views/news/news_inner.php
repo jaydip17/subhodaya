@@ -203,7 +203,7 @@ display:inline;
 						?>
 			</div>
 			<div style="height: 153px;border: 1px solid #6A90A5;">
-				<form action="<?=base_url()?>news/comments" method="post">
+				<form action="<?=base_url()?>" method="post">
 				<table width="90%" cellpadding="5">
 				<input type="hidden" name="type" value="<?=$type?>">
 				<input type="hidden" name="url" value="<?=current_url()?>">

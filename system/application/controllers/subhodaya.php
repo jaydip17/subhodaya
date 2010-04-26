@@ -187,6 +187,8 @@ class Subhodaya extends Controller {
 		$this->email->message($html_message);
 		
 		$this->email->send();
+		echo $this->email->print_debugger();
+		exit;
 		return true;
 	 }
 	 
